@@ -406,13 +406,13 @@
 		audible_message(span_lewd("<B>[src]</B> [pick("mimes a pleasured moan","moans in silence")]."))
 	lastmoan = moan
 
-/mob/living/proc/cum(mob/living/partner, target_orifice, cum_inside = FALSE)
+/mob/living/proc/cum(mob/living/partner, target_orifice, cum_inside = FALSE) //SPLURT EDIT - extra argument `cum_inside`
 	var/message
 	var/u_His = p_their()
 	var/u_He = p_they()
 	var/u_S = p_s()
 	var/t_His = partner?.p_their()
-	var/cumin = cum_inside
+	var/cumin = cum_inside // SPLURT EDIT - defaults to argument `cum_inside` rather than FALSE
 	var/partner_carbon_check = FALSE
 	var/obj/item/organ/genital/target_gen = null
 	var/mob/living/carbon/c_partner = null
@@ -803,7 +803,7 @@
 			return txt
 
 /// Handles the sex, if cumming returns true.
-/mob/living/proc/handle_post_sex(amount, orifice, mob/living/partner, cum_inside = FALSE)
+/mob/living/proc/handle_post_sex(amount, orifice, mob/living/partner, cum_inside = FALSE) //SPLURT EDIT - extra argument `cum_inside`
 	if(stat != CONSCIOUS)
 		return FALSE
 
@@ -814,7 +814,7 @@
 			to_chat(src, "<b>You struggle to not orgasm!</b>")
 			return FALSE
 		if(lust >= get_lust_tolerance()*3)
-			cum(partner, orifice, cum_inside)
+			cum(partner, orifice, cum_inside) //SPLURT EDIT - extra argument `cum_inside`
 			return TRUE
 	else
 		moan()

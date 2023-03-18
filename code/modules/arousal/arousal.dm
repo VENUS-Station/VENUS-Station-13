@@ -105,21 +105,38 @@
 	to_chat(src, span_userlove("You climax[isturf(loc) ? " onto [loc]" : ""] with your [G.name]."))
 	do_climax(fluid_source, loc, G)
 
-/mob/living/carbon/human/proc/mob_climax_partner(obj/item/organ/genital/G, mob/living/L, spillage = TRUE, mb_time = 30, obj/item/organ/genital/Lgen = null) //Used for climaxing with any living thing
+/mob/living/carbon/human/proc/mob_climax_partner(obj/item/organ/genital/G, mob/living/L, spillage = TRUE, mb_time = 30, obj/item/organ/genital/Lgen = null, forced = FALSE, anonymous = FALSE) //Used for climaxing with any living thing
 	var/datum/reagents/fluid_source = G.climaxable(src)
 	if(!fluid_source)
 		return
+	var/user_name
+	var/user_p_their
+	var/target_name
+	var/target_p_their
+	var/target_p_them
+	if(anonymous)
+		user_name = "Someone"
+		target_name = "someone"
+		user_p_their = "their"
+		target_p_their = "their"
+		target_p_them = "them"
+	else
+		user_name = "[src]"
+		target_name = "[L]"
+		user_p_their = p_their()
+		target_p_their = L.p_their()
+		target_p_them = L.p_them()
 	if(mb_time) //Skip warning if this is an instant climax.
-		to_chat(src, span_userlove("You're about to climax [(Lgen) ? "in [L]'s [Lgen.name]" : "with [L]"]!"))
-		to_chat(L, span_userlove("[src] is about to climax [(Lgen) ? "in your [Lgen.name]" : "with you"]!"))
+		to_chat(src, span_userlove("You're about to climax [(Lgen) ? "in [target_name]'s [Lgen.name]" : "with [L]"]!"))
+		to_chat(L, span_userlove("[user_name] is about to climax [(Lgen) ? "in your [Lgen.name]" : "with you"]!"))
 		if(!do_after(src, mb_time, target = src) || !in_range(src, L) || !G.climaxable(src, TRUE))
 			return
 	if(spillage)
-		to_chat(src, span_userlove("You orgasm with [L], spilling out of [(Lgen) ? "[L.p_their()] [Lgen.name]" : "[L.p_them()]"], using your [G.name]."))
-		to_chat(L, span_userlove("[src] climaxes [(Lgen) ? "in your [Lgen.name]" : "with you"], overflowing and spilling, using [p_their()] [G.name]!"))
+		to_chat(src, span_userlove("You orgasm with [target_name], spilling out of [(Lgen) ? "[target_p_their] [Lgen.name]" : "[target_p_them]"], using your [G.name]."))
+		to_chat(L, span_userlove("[user_name] climaxes [(Lgen) ? "in your [Lgen.name]" : "with you"], overflowing and spilling, using [user_p_their] [G.name]!"))
 	else //knots and other non-spilling orgasms
-		to_chat(src, span_userlove("You climax [(Lgen) ? "in [L]'s [Lgen.name]" : "with [L]"], your [G.name] spilling nothing."))
-		to_chat(L, span_userlove("[src] climaxes [(Lgen) ? "in your [Lgen.name]" : "with you"], [p_their()] [G.name] spilling nothing!"))
+		to_chat(src, span_userlove("You climax [(Lgen) ? "in [target_name]'s [Lgen.name]" : "with [target_name]"], your [G.name] spilling nothing."))
+		to_chat(L, span_userlove("[user_name] climaxes [(Lgen) ? "in your [Lgen.name]" : "with you"], [user_p_their] [G.name] spilling nothing!"))
 	//SEND_SIGNAL(L, COMSIG_ADD_MOOD_EVENT, "orgasm", /datum/mood_event/orgasm) //Sandstorm edit
 	do_climax(fluid_source, spillage ? loc : L, G, spillage,, Lgen)
 	//L.receive_climax(src, Lgen, G, spillage)
@@ -215,7 +232,7 @@
 
 //Here's the main proc itself
 //skyrat edit - forced partner and spillage
-/mob/living/carbon/human/proc/mob_climax(forced_climax=FALSE,cause = "", var/mob/living/forced_partner = null, var/forced_spillage = TRUE, var/obj/item/organ/genital/forced_receiving_genital = null) //Forced is instead of the other proc, makes you cum if you have the tools for it, ignoring restraints
+/mob/living/carbon/human/proc/mob_climax(forced_climax=FALSE,cause = "", var/mob/living/forced_partner = null, var/forced_spillage = TRUE, var/obj/item/organ/genital/forced_receiving_genital = null, anonymous = FALSE) //Forced is instead of the other proc, makes you cum if you have the tools for it, ignoring restraints
 	set waitfor = FALSE
 	if(mb_cd_timer > world.time)
 		if(!forced_climax) //Don't spam the message to the victim if forced to come too fast
@@ -261,7 +278,7 @@
 				//
 				if(partner) //Did they pass the clothing checks?
 					//skyrat edit
-					mob_climax_partner(G, partner, spillage = forced_spillage, mb_time = 0, Lgen = forced_receiving_genital, forced = forced_climax) //Instant climax due to forced
+					mob_climax_partner(G, partner, forced_spillage, 0, forced_receiving_genital, forced_climax, anonymous) //Instant climax due to forced
 					//
 					continue //You've climaxed once with this organ, continue on
 			//not exposed OR if no partner was found while exposed, climax alone

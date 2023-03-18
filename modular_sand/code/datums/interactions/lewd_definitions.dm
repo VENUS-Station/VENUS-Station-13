@@ -813,7 +813,7 @@
 			return txt
 
 /// Handles the sex, if cumming returns true.
-/mob/living/proc/handle_post_sex(amount, orifice, mob/living/partner, cum_inside = FALSE, anonymous = FALSE) //SPLURT EDIT - extra argument `cum_inside`
+/mob/living/proc/handle_post_sex(amount, orifice, mob/living/partner, cum_inside = FALSE, anonymous = FALSE) //SPLURT EDIT - extra argument `cum_inside` and `anonymous`
 	if(stat != CONSCIOUS)
 		return FALSE
 
@@ -824,7 +824,7 @@
 			to_chat(src, "<b>You struggle to not orgasm!</b>")
 			return FALSE
 		if(lust >= get_lust_tolerance()*3)
-			cum(partner, orifice, cum_inside, anonymous) //SPLURT EDIT - extra argument `cum_inside`
+			cum(partner, orifice, cum_inside, anonymous) //SPLURT EDIT - extra argument `cum_inside` and `anonymous`
 			return TRUE
 	else
 		moan()

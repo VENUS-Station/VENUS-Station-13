@@ -917,7 +917,7 @@
 
 /obj/item/gripper/mining
 	name = "mining gripper" // Original name = "shelter capsule deployer"
-	desc = "A simple grasping tool for carrying and deploying shelter capsules. Also you can carry regenerative cores and medipens to use it on your fellow miners."
+	desc = "A simple grasping tool for carrying and deploying shelter capsules. You can also carry and use regenerative cores and survival medipens on your fellow miners."
 	icon_state = "gripper_mining"
 	can_hold = list(
 		/obj/item/survivalcapsule

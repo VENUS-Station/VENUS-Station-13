@@ -920,9 +920,9 @@
 	desc = "A simple grasping tool for carrying and deploying shelter capsules. You can also carry and use regenerative cores and survival medipens on your fellow miners."
 	icon_state = "gripper_mining"
 	can_hold = list(
-		/obj/item/survivalcapsule
-		/obj/item/hivelordstabilizer
-		/obj/item/organ/regenerative_core
+		/obj/item/survivalcapsule,
+		/obj/item/hivelordstabilizer,
+		/obj/item/organ/regenerative_core,
 		/obj/item/reagent_containers/hypospray/medipen/survival
 		)
 

@@ -451,8 +451,6 @@
 							message = "cums on [partner_name]'s face."
 					if(CUM_TARGET_VAGINA)
 						if(partner.has_vagina(REQUIRE_EXPOSED))
-							if(partner_carbon_check)
-								target_gen = c_partner.getorganslot(ORGAN_SLOT_VAGINA)
 							message = "cums in [partner_name]'s pussy."
 							cumin = TRUE
 						else
@@ -760,6 +758,18 @@
 					message = pick("orgasms violently!", "twists in orgasm.")
 	else //todo: better self cum messages
 		message = "cums all over themselves!"
+	
+	if(partner_carbon_check && cumin)
+		switch(target_orifice)
+			if(CUM_TARGET_VAGINA)
+				target_gen = c_partner.getorganslot(ORGAN_SLOT_VAGINA)
+			if(CUM_TARGET_ANUS)
+				target_gen = c_partner.getorganslot(ORGAN_SLOT_ANUS)
+			if(CUM_TARGET_BREASTS)
+				target_gen = c_partner.getorganslot(ORGAN_SLOT_BREASTS)
+			if(CUM_TARGET_PENIS)
+				target_gen = c_partner.getorganslot(ORGAN_SLOT_PENIS)
+
 	if(gender == MALE)
 		playlewdinteractionsound(loc, pick('modular_sand/sound/interactions/final_m1.ogg',
 							'modular_sand/sound/interactions/final_m2.ogg',

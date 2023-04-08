@@ -174,3 +174,5 @@
 	var/stamina_buffer_regen_last = 0
 	/// Last time we used stamina buffer
 	var/stamina_buffer_last_use = 0
+	//BLUEMON ADD - FUZZY
+	var/fuzzy = FALSE

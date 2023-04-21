@@ -64,18 +64,18 @@
 	if(!. && !silent)
 		to_chat(H, "<span class='warning'>Your [name] is unable to produce it's own fluids, it's missing the organs for it.</span>")
 
-/mob/living/carbon/human/proc/do_climax(datum/reagents/R, atom/target, obj/item/organ/genital/G, spill = TRUE)
-	if(!G)
+/mob/living/carbon/human/proc/do_climax(datum/reagents/R, atom/target, obj/item/organ/genital/sender, spill, cover = FALSE, obj/item/organ/genital/receiver, anonymous = FALSE)
+	if(!sender)
 		return
 	if(!target || !R)
 		return
 	var/turfing = isturf(target)
 	var/condomning
-	if(istype(G, /obj/item/organ/genital/penis))
-		var/obj/item/organ/genital/penis/P = G
+	if(istype(sender, /obj/item/organ/genital/penis))
+		var/obj/item/organ/genital/penis/P = sender
 		condomning = locate(/obj/item/genital_equipment/condom) in P.contents
-	G.generate_fluid(R)
-	log_message("Climaxed using [G] with [target]", LOG_EMOTE)
+	sender.generate_fluid(R)
+	log_message("Climaxed using [sender] with [target]", LOG_EMOTE)
 	if(condomning)
 		to_chat(src, "<span class='userlove'>You feel the condom bubble outwards and fill up with your spunk</span>")
 		R.trans_to(condomclimax(), R.total_volume)
@@ -83,8 +83,8 @@
 		if(spill && R.total_volume >= 5)
 			R.reaction(turfing ? target : target.loc, TOUCH, 1, 0)
 		if(!turfing)
-			R.trans_to(target, R.total_volume * (spill ? G.fluid_transfer_factor : 1), log = TRUE)
-	G.last_orgasmed = world.time
+			R.trans_to(target, R.total_volume * (spill ? sender.fluid_transfer_factor : 1), log = TRUE)
+	sender.last_orgasmed = world.time
 	R.clear_reagents()
 	//skyrat edit - chock i am going to beat you to death
 	//this is not a joke i am actually going to break your
@@ -138,7 +138,7 @@
 		to_chat(src, span_userlove("You climax [(Lgen) ? "in [target_name]'s [Lgen.name]" : "with [target_name]"], your [G.name] spilling nothing."))
 		to_chat(L, span_userlove("[user_name] climaxes [(Lgen) ? "in your [Lgen.name]" : "with you"], [user_p_their] [G.name] spilling nothing!"))
 	//SEND_SIGNAL(L, COMSIG_ADD_MOOD_EVENT, "orgasm", /datum/mood_event/orgasm) //Sandstorm edit
-	do_climax(fluid_source, spillage ? loc : L, G, spillage,, Lgen)
+	do_climax(fluid_source, spillage ? loc : L, G, spillage, FALSE, Lgen, anonymous)
 	//L.receive_climax(src, Lgen, G, spillage)
 
 /mob/living/carbon/human/proc/mob_fill_container(obj/item/organ/genital/G, obj/item/reagent_containers/container, mb_time = 30) //For beaker-filling, beware the bartender
@@ -254,7 +254,7 @@
 			var/check_target
 			var/list/worn_stuff = get_equipped_items()
 
-			if(G.is_exposed(worn_stuff))
+			if(forced_receiving_genital || G.is_exposed(worn_stuff))
 				if(pulling) //Are we pulling someone? Priority target, we can't be making option menus for this, has to be quick
 					if(isliving(pulling)) //Don't fuck objects
 						check_target = pulling

@@ -420,7 +420,7 @@
 	if(user_message)
 		if(portal_target && (portal_target?.client?.prefs.toggles & VERB_CONSENT || !portal_target.ckey))
 			user.visible_message("<span class='lewd'>[user] [user_message].</span>")
-			if(M.can_penetrating_genital_cum() && M.handle_post_sex(user_lust_amt, target, portal_target, TRUE, TRUE))
+			if(M.can_penetrating_genital_cum() && M.handle_post_sex(user_lust_amt, portalunderwear.targetting, portal_target, TRUE, TRUE))
 				switch(target)
 					if(CUM_TARGET_PENIS)
 						switch(portalunderwear.targetting)

@@ -43,13 +43,13 @@
 		eggo.forceMove(container)
 		eggo.AddComponent(/datum/component/pregnancy, src, partner, baby_type)
 
-/mob/living/carbon/human/do_climax(datum/reagents/R, atom/target, obj/item/organ/genital/sender, spill, cover = FALSE, obj/item/organ/genital/receiver)
+/mob/living/carbon/human/do_climax(datum/reagents/R, atom/target, obj/item/organ/genital/sender, spill, cover = FALSE, obj/item/organ/genital/receiver, anonymous = FALSE)
 	if(!sender)
 		return
 	if(!target || !R)
 		return
 
-	if(SEND_SIGNAL(src, COMSIG_MOB_CLIMAX, R, target, sender, receiver, spill))
+	if(SEND_SIGNAL(src, COMSIG_MOB_CLIMAX, R, target, sender, receiver, spill, anonymous))
 		return
 
 	var/cached_fluid

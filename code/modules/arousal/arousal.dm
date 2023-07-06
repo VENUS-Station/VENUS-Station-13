@@ -99,7 +99,8 @@
 				// Nope, on the mouth doesn't count.
 				if(!(istype(last_lewd_datum, /datum/interaction/lewd/facefuck) || istype(last_lewd_datum, /datum/interaction/lewd/throatfuck)))
 					var/datum/reagent/consumable/semen/salty_drink = target.reagents.get_reagent(/datum/reagent/consumable/semen)
-					salty_drink.amount_to_drip += amount_to_transfer
+					if(salty_drink != null)
+						salty_drink.amount_to_drip += amount_to_transfer
 			//
 	sender.last_orgasmed = world.time
 	R.clear_reagents()

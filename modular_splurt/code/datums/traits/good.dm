@@ -267,11 +267,11 @@
 /datum/quirk/vacuum_resistance/add()
 	. = ..()
 	var/mob/living/carbon/human/H = quirk_holder
-	for(var/A = 1, A <= perks.len, A++)
-		ADD_TRAIT(H, perks[A], ROUNDSTART_TRAIT)
+	for(var/perk in perks)
+		ADD_TRAIT(H, perk, ROUNDSTART_TRAIT)
 
 /datum/quirk/vacuum_resistance/remove()
 	. = ..()
 	var/mob/living/carbon/human/H = quirk_holder
-	for(var/A = 1, A <= perks.len, A++)
-		REMOVE_TRAIT(H, perks[A], ROUNDSTART_TRAIT)
+	for(var/perk in perks)
+		REMOVE_TRAIT(H, perk, ROUNDSTART_TRAIT)

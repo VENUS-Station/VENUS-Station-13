@@ -116,6 +116,8 @@
 	updatesleeve()
 
 /obj/item/portallight/attack(mob/living/carbon/human/M, mob/living/carbon/human/user)
+	if(portalunderwear == null)
+		return
 	var/user_message = ""
 	var/target_message = ""
 	var/user_lust_amt = NONE

@@ -23512,7 +23512,7 @@
 /turf/open/floor/carpet,
 /area/medical/psychology)
 "idb" = (
-/turf/closed/mineral/silver/ice/icemoon{
+/turf/closed/mineral/snowmountain{
 	icon_state = "icerock"
 	},
 /area/icemoon/surface/outdoors)

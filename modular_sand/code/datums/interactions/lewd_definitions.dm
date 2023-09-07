@@ -460,8 +460,6 @@
 								message = "cums on [partner_name]'s face."
 						if(CUM_TARGET_VAGINA)
 							if(partner.has_vagina(REQUIRE_EXPOSED))
-								if(partner_carbon_check)
-									target_gen = c_partner.getorganslot(ORGAN_SLOT_VAGINA)
 								message = "cums in [partner_name]'s pussy."
 								cumin = TRUE
 							else
@@ -625,8 +623,6 @@
 									message = "cums on \the <b>[partner_name]</b>'s face."
 							if(CUM_TARGET_VAGINA)
 								if(partner.has_vagina(REQUIRE_EXPOSED))
-									if(partner_carbon_check)
-										target_gen = c_partner.getorganslot(ORGAN_SLOT_VAGINA)
 									message = "cums in \the <b>[partner_name]</b>'s pussy."
 									cumin = TRUE
 								else

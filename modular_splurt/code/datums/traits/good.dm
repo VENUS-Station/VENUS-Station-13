@@ -262,7 +262,7 @@
     value = 3
     gain_text = span_notice("Your physique attunes to the silence of space, now able to operate in zero pressure.")
     lose_text = span_notice("Your physiology reverts as your spacefaring gifts lay dormant once more.")
-    var/list/perks = list(TRAIT_RESISTCOLD, TRAIT_RESISTLOWPRESSURE)
+    var/list/perks = list(TRAIT_RESISTCOLD, TRAIT_RESISTLOWPRESSURE, TRAIT_LOWPRESSURECOOLING)
 
 /datum/quirk/vacuum_resistance/add()
 	. = ..()

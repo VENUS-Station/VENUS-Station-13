@@ -167,7 +167,7 @@
 	icon_state = "blushsmall"
 	covered_limbs = list("Head" = MATRIX_BLUE)
 
-/datum/sprite_accessory/mam_body_markings/blushsmall
+/datum/sprite_accessory/mam_body_markings/blushsmallALT
 	name = "Blush - Small (Alt)"
 	icon = 'modular_splurt/icons/mob/mam_markings.dmi'
 	icon_state = "blushsmallALT"

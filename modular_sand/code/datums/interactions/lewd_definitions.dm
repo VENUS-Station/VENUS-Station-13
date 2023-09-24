@@ -411,6 +411,8 @@
 /mob/living/proc/cum(mob/living/partner, target_orifice, cum_inside = FALSE, anonymous = FALSE) //SPLURT EDIT - extra argument `cum_inside` and 'anonymous'
 	if(HAS_TRAIT(src, TRAIT_NEVERBONER))
 		return FALSE
+	if(SEND_SIGNAL(src, COMSIG_MOB_PRE_CAME, target_orifice, partner))
+		return FALSE
 	var/message
 	var/u_His = p_their()
 	var/u_He = p_they()
@@ -813,7 +815,8 @@
 			else
 				H.mob_climax(TRUE, "sex", partner, !cumin, target_gen, anonymous)
 	set_lust(0)
-	SEND_SIGNAL(src, COMSIG_MOB_CAME, target_orifice, partner, cumin, last_genital)
+
+	SEND_SIGNAL(src, COMSIG_MOB_POST_CAME, target_orifice, partner, cumin, last_genital)
 
 	return TRUE
 
@@ -866,12 +869,11 @@
 	if(lust >= lust_tolerance)
 		if(prob(10))
 			to_chat(src, "<b>You struggle to not orgasm!</b>")
+			moan()
 			return FALSE
 		if(lust >= (lust_tolerance * 3))
-			cum(partner, orifice, cum_inside, anonymous) //SPLURT EDIT - extra argument `cum_inside` and `anonymous`
-			return TRUE
-	else
-		moan()
+			if(cum(partner, orifice, cum_inside, anonymous)) //SPLURT EDIT - extra argument `cum_inside` and `anonymous`
+				return TRUE
 	return FALSE
 
 /mob/living/proc/get_unconsenting(extreme = FALSE, list/ignored_mobs)

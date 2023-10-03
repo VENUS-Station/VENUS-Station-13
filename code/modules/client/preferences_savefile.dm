@@ -877,7 +877,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["body_size"] >> features["body_size"]
 	S["age"] >> age
 	S["hair_color"] >> hair_color
-	S["facial_hairf_color"] >> facial_hair_color
+	S["facial_hair_color"] >> facial_hair_color
 	S["eye_type"] >> eye_type
 	S["left_eye_color"] >> left_eye_color
 	S["right_eye_color"] >> right_eye_color

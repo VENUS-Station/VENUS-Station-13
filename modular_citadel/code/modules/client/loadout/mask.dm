@@ -29,7 +29,7 @@
 	name = "Gas Mask"
 	path = /obj/item/clothing/mask/gas
 	cost = 2
-
+	restricted_roles = list("Chief Engineer", "Atmospheric Technician", "Station Engineer") //*shrug
 /datum/gear/mask/sterile
 	name = "Aesthetic sterile mask"
 	path = /obj/item/clothing/mask/surgical/aesthetic

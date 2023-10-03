@@ -1,5 +1,0 @@
-author: BongaTheProto
-delete-after: true
-changes:
-  - rscadd: adds a sharp/fuzzy scaling toggle and verb to make macro characters not
-      look awful

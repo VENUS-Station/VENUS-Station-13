@@ -136,5 +136,5 @@
 	desc = "It's a ninja mask! But this one seems like it's breathable."
 	icon_state = "s-ninja"
 	item_state = "s-ninja_mask"
-	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
+	flags_inv = HIDEEYES|HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
 	flags_cover = MASKCOVERSEYES | MASKCOVERSMOUTH

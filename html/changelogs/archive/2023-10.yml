@@ -7,6 +7,7 @@
   BongaTheProto:
   - rscadd: adds a sharp/fuzzy scaling toggle and verb to make macro characters not
       look awful
+  - rscadd: Adds a ninja mask replica to the tier 2 donator loadout
   K4rlox:
   - rscdel: removes wall
   - tweak: makes the gas mask in loadouts no longer restricted

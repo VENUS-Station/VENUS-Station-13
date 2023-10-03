@@ -4807,6 +4807,7 @@
 #include "modular_splurt\code\modules\mob\living\logout.dm"
 #include "modular_splurt\code\modules\mob\living\navigation.dm"
 #include "modular_splurt\code\modules\mob\living\say.dm"
+#include "modular_splurt\code\modules\mob\living\update_icons.dm"
 #include "modular_splurt\code\modules\mob\living\brain\brain_item.dm"
 #include "modular_splurt\code\modules\mob\living\carbon\carbon.dm"
 #include "modular_splurt\code\modules\mob\living\carbon\carbon_defense.dm"

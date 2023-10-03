@@ -17,7 +17,7 @@
 	directory_erptag		= sanitize_inlist(directory_erptag, GLOB.char_directory_erptags, initial(directory_erptag))
 	directory_ad			= strip_html_simple(directory_ad, MAX_FLAVOR_LEN)
 	stomppref				= sanitize_integer(stomppref, 0, 1, initial(stomppref))
-	fuzzy = sanitize_integer(fuzzy, 0, 1, initial(fuzzy))
+	fuzzy 					= sanitize_integer(fuzzy, 0, 1, initial(fuzzy))
 
 /datum/preferences/proc/splurt_character_pref_save(savefile/S) //TODO: modularize our other savefile edits... maybe?
 	//Character directory

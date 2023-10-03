@@ -3,4 +3,3 @@
 	if(fuzzy)
 		appearance_flags &= ~PIXEL_SCALE
 	. = ..()
-

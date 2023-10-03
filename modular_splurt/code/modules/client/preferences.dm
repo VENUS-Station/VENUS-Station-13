@@ -40,7 +40,6 @@
 	character.fuzzy = fuzzy
 	. = ..()
 
-
 /datum/preferences/ShowChoices(mob/user)
 	//check if the player wants to use the new character creation menu
 	if(new_character_creator)

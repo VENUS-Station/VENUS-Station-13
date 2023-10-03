@@ -244,8 +244,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 "meat_type" = "Mammalian",
 "body_model" = MALE,
 "body_size" = RESIZE_DEFAULT_SIZE,
-"fuzzy" = FALSE,
 "color_scheme" = OLD_CHARACTER_COLORING,
+
 "neckfire" = FALSE,
 "neckfire_color" = "ffffff"
 )

@@ -846,6 +846,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 "body_model" = MALE,
 "body_size" = RESIZE_DEFAULT_SIZE,
 "color_scheme" = OLD_CHARACTER_COLORING,
+
 "neckfire" = FALSE,
 "neckfire_color" = "ffffff"
 )

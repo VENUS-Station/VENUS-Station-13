@@ -23,7 +23,7 @@
 /datum/action/innate/ability/humanoid_customization/proc/change_form()
 	var/mob/living/carbon/human/H = owner
 
-	var/select_alteration = input(owner, "Select what part of your form to alter", "Form Alteration", "cancel") in list("Body Color", "Eye Color","Hair Style", "Genitals", "Tail", "Snout", "Wings", "Markings", "Ears", "Taur body", "Penis", "Vagina", "Penis Length", "Breast Size", "Breast Shape", "Butt Size", "Belly Size", "Body Size", "Genital Color", "Horns", "Hair Color", "Cancel")
+	var/select_alteration = input(owner, "Select what part of your form to alter", "Form Alteration", "cancel") in list("Body Color", "Eye Color","Hair Style", "Genitals", "Tail", "Snout", "Wings", "Markings", "Ears", "Taur body", "Penis", "Vagina", "Penis Length", "Breast Size", "Breast Shape", "Butt Size", "Belly Size", "Body Size", "Genital Color", "Horns", "Hair Color", "Skin Tone (Non-Mutant)", "Cancel")
 
 	if(select_alteration == "Body Color")
 		var/new_color = input(owner, "Choose your skin color:", "Race change","#"+H.dna.features["mcolor"]) as color|null
@@ -340,6 +340,26 @@
 		if (new_hair_color)
 			H.hair_color = sanitize_hexcolor(new_hair_color, 6)
 		H.update_hair()
+
+	else if("Skin Tone (Non-Mutant)") // Skin tone, different than mutant color
+		var/list/choices = GLOB.skin_tones - GLOB.nonstandard_skin_tones
+		if(CONFIG_GET(flag/allow_custom_skintones))
+			choices += "custom"
+		var/new_s_tone = input(owner, "Choose your character's skin tone: (This is different than the Body Color option, which changes your character's mutant colors)", "Character Preference")  as null|anything in choices
+		if(new_s_tone)
+			if(new_s_tone == "custom")
+				var/default = H.skin_tone
+				var/custom_tone = input(owner, "Choose your character's skin tone: (This is different than the Body Color option, which changes your character's mutant colors)", "Character Preference", default) as color|null
+				if(custom_tone)
+					var/temp_hsv = RGBtoHSV(custom_tone)
+					if(ReadHSV(temp_hsv)[3] < ReadHSV("#333333")[3] && CONFIG_GET(flag/character_color_limits)) // rgb(50,50,50) //SPLURT EDIT
+						to_chat(owner,"<span class='danger'>Invalid color. Your color is not bright enough.</span>")
+					else
+						H.skin_tone = custom_tone
+			else
+				H.skin_tone = new_s_tone
+
+		H.update_body()		
 
 /// SPLURT EDIT END
 	else

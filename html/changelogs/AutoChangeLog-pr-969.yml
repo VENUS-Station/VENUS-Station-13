@@ -1,0 +1,5 @@
+author: Anonymous
+delete-after: true
+changes:
+  - bugfix: Fixes Bane Syndrome quirk overwriting loadout's masks. Now the mask from
+      the quirk will be dropped onto floor if you use loadout one.

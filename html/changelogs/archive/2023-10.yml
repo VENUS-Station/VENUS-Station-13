@@ -23,3 +23,6 @@
   Anonymous:
   - bugfix: Fixes Bane Syndrome quirk overwriting loadout's masks. Now the mask from
       the quirk will be dropped onto floor if you use loadout one.
+2023-10-08:
+  SandPoot:
+  - bugfix: Fixes the bug of assistants not receiving backpack donator items

@@ -842,6 +842,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 "vag_accessible" = FALSE,
 "butt_accessible" = FALSE,
 "anus_accessible" = FALSE,
+"belly_accessible" = FALSE,
 "inert_eggs" = FALSE,
 "ipc_screen" = "Sunburst",
 "ipc_antenna" = "None",
@@ -1042,6 +1043,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["feature_belly_size"] >> features["belly_size"]
 	S["feature_belly_color"] >> features["belly_color"]
 	S["feature_belly_visibility"] >> features["belly_visibility"]
+	S["feature_belly_accessible"] >> features["belly_accessible"]
 	//anus features
 	S["feature_has_anus"] >> features["has_anus"]
 	S["feature_anus_color"] >> features["anus_color"]
@@ -1456,6 +1458,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["feature_belly_size"], features["belly_size"])
 	WRITE_FILE(S["feature_belly_visibility"], features["belly_visibility"])
 	WRITE_FILE(S["feature_belly_stuffing"], features["belly_stuffing"])
+	WRITE_FILE(S["feature_belly_accessible"], features["belly_accessible"])
 
 	WRITE_FILE(S["feature_has_anus"], features["has_anus"])
 	WRITE_FILE(S["feature_anus_color"], features["anus_color"])

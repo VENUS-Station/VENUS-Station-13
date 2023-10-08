@@ -233,6 +233,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 "vag_accessible" = FALSE,
 "butt_accessible" = FALSE,
 "anus_accessible" = FALSE,
+"belly_accessible" = FALSE,
 "cock_stuffing" = FALSE,
 "balls_stuffing" = FALSE,
 "vag_stuffing" = FALSE,
@@ -995,6 +996,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							dat += "<b>Min Size:</b><a style='display:block;width:50px' href='?_src_=prefs;preference=belly_min_size;task=input'>[features["belly_min_size"] ? features["belly_min_size"] : "Disabled" ]</a>"
 							dat += "<b>Belly Visibility:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=belly_visibility;task=input'>[features["belly_visibility"]]</a>"
 							dat += "<b>Egg Stuffing:</b><a style='display:block;width:50px' href='?_src_=prefs;preference=belly_stuffing'>[features["belly_stuffing"] == TRUE ? "Yes" : "No"]</a>"
+							dat += "<b>Belly Always Accessible:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=belly_accessible'>[features["belly_accessible"] ? "Yes" : "No"]</a>"
 						dat += "</td>"
 						if(all_quirks.Find("Dullahan"))
 							dat += APPEARANCE_CATEGORY_COLUMN
@@ -3452,6 +3454,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					features["butt_accessible"] = !features["butt_accessible"]
 				if("anus_accessible")
 					features["anus_accessible"] = !features["anus_accessible"]
+				if("belly_accessible")
+					features["belly_accessible"] = !features["belly_accessible"]
 				if("widescreenpref")
 					widescreenpref = !widescreenpref
 					user.client.view_size.setDefault(getScreenSize(widescreenpref))

@@ -253,6 +253,7 @@
 		"vag_accessible" = FALSE,
 		"butt_accessible" = FALSE,
 		"anus_accessible" = FALSE,
+		"belly_accessible" = FALSE,
 
 		"ipc_screen"		= snowflake_ipc_antenna_list ? pick(snowflake_ipc_antenna_list) : "None",
 		"ipc_antenna"		= "None",

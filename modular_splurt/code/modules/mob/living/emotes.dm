@@ -763,6 +763,14 @@
 	emote_sound = 'modular_splurt/sound/voice/yap.ogg'
 	emote_cooldown = 0.28 SECONDS
 
+/datum/emote/living/audio/yip
+	key = "yip"
+	key_third_person = "yips"
+	message = "yips!"
+	message_mime = "acts out a yip!"
+	emote_sound = 'modular_splurt/sound/voice/yip.ogg'
+	emote_cooldown = 0.2 SECONDS
+
 /datum/emote/living/audio/bork
 	key = "bork"
 	key_third_person = "borks"

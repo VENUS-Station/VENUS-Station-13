@@ -341,7 +341,7 @@
 			H.hair_color = sanitize_hexcolor(new_hair_color, 6)
 		H.update_hair()
 
-	else if("Skin Tone (Non-Mutant)") // Skin tone, different than mutant color
+	else if(select_alteration == "Skin Tone (Non-Mutant)") // Skin tone, different than mutant color
 		var/list/choices = GLOB.skin_tones - GLOB.nonstandard_skin_tones
 		if(CONFIG_GET(flag/allow_custom_skintones))
 			choices += "custom"

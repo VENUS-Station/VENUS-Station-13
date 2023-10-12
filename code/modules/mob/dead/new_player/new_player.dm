@@ -544,7 +544,7 @@
 
 	if(humanc && CONFIG_GET(flag/roundstart_traits))
 		SSquirks.AssignQuirks(humanc, humanc.client, TRUE, FALSE, job, FALSE)
-	//skyrat change
+	//sandstorm change
 	if(humanc)
 		SSlanguage.AssignLanguage(humanc, humanc.client, TRUE, FALSE, job, FALSE)
 

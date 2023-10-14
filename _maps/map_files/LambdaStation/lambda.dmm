@@ -65065,6 +65065,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/engineering/break_room)
+"gSX" = (
+/obj/structure/sign/xenobio_guide,
+/turf/closed/wall/r_wall,
+/area/science/xenobiology)
 "gSZ" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/visible,
 /obj/effect/turf_decal/trimline/neutral/filled/line,
@@ -96958,7 +96962,7 @@ aeG
 abY
 aaA
 aaA
-ahd
+gSX
 alw
 akk
 alx

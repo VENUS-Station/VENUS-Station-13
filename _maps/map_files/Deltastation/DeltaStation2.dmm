@@ -73637,6 +73637,10 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/command/bridge)
+"foH" = (
+/obj/structure/sign/xenobio_guide,
+/turf/closed/wall,
+/area/science/xenobiology)
 "foM" = (
 /obj/structure/cable/white{
 	icon_state = "1-2"
@@ -161665,7 +161669,7 @@ cLJ
 cNh
 cNh
 cNh
-cNc
+foH
 cTU
 cVS
 cXl

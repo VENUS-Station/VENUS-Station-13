@@ -41888,6 +41888,10 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/engineering/gravity_generator)
+"wME" = (
+/obj/structure/sign/xenobio_guide,
+/turf/closed/wall/r_wall,
+/area/science/xenobiology)
 "wOe" = (
 /obj/machinery/door/firedoor/heavy,
 /obj/structure/cable/white{
@@ -86523,7 +86527,7 @@ ibv
 biW
 exb
 bhN
-bfP
+wME
 bfP
 hfm
 aad

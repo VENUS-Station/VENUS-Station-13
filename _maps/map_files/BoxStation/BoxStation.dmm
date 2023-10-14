@@ -63651,6 +63651,10 @@
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/service/kitchen)
+"uKk" = (
+/obj/structure/sign/xenobio_guide,
+/turf/closed/wall,
+/area/science/xenobiology)
 "uMb" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
@@ -112171,7 +112175,7 @@ bFI
 bHe
 bIz
 bIz
-bJN
+uKk
 bMl
 bIv
 bIR

@@ -30812,6 +30812,10 @@
 	},
 /turf/open/floor/plasteel/checker,
 /area/security/prison/mess)
+"kJa" = (
+/obj/structure/sign/xenobio_guide,
+/turf/closed/wall/r_wall,
+/area/science/xenobiology)
 "kJc" = (
 /obj/structure/filingcabinet/chestdrawer{
 	pixel_y = 2
@@ -104893,7 +104897,7 @@ mxU
 mxU
 mxU
 mxU
-mxU
+kJa
 mxU
 mxU
 mxU

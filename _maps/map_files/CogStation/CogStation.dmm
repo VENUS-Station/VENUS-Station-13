@@ -70147,6 +70147,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/tcommsat/computer)
+"wwC" = (
+/obj/structure/sign/xenobio_guide,
+/turf/closed/wall/r_wall,
+/area/science/xenobiology)
 "wyk" = (
 /obj/structure/disposalpipe/segment{
 	dir = 9
@@ -88934,7 +88938,7 @@ aaa
 aaU
 aaa
 aaa
-bxT
+wwC
 bFo
 bHV
 bYz

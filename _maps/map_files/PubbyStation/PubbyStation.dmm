@@ -52851,6 +52851,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/carpet,
 /area/service/library/lounge)
+"fWx" = (
+/obj/structure/sign/xenobio_guide,
+/turf/closed/wall/r_wall,
+/area/science/xenobiology)
 "fXV" = (
 /obj/machinery/conveyor{
 	dir = 8;
@@ -109198,7 +109202,7 @@ bkF
 bkF
 bkF
 bkF
-bkF
+fWx
 bkF
 bkF
 ume

@@ -31710,6 +31710,10 @@
 /obj/effect/decal/cleanable/oil,
 /turf/open/floor/plasteel,
 /area/commons/dorms)
+"qwd" = (
+/obj/structure/sign/xenobio_guide,
+/turf/closed/wall/r_wall,
+/area/science/xenobiology)
 "qwv" = (
 /obj/machinery/pool/filter{
 	pixel_y = 16
@@ -94911,7 +94915,7 @@ fgX
 aGc
 sIR
 nGx
-xET
+qwd
 bUa
 iDo
 biC

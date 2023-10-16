@@ -1,0 +1,6 @@
+author: Zattarra
+delete-after: true
+changes:
+  - rscadd: Adds holo HUD sunglasses to the game, invisible versions of normal HUD
+      sunglasses.
+  - rscadd: Implements holo HUD sunglasses to the loadout screen.

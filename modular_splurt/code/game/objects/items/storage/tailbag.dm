@@ -113,7 +113,7 @@
 	name = "XL Tailbag"
 	desc = "A larger tail bag for larger creatures"
 	icon = 'modular_splurt/icons/obj/storage.dmi'
-	icon_state = tailbag_xl
+	icon_state = "tailbag_xl"
 
 /obj/item/storage/tailbag/xtralg/ComponentInitialize()
 	. = ..()

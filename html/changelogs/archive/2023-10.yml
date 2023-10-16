@@ -34,3 +34,7 @@
 2023-10-16:
   AshTheDerg:
   - rscadd: Added tailbags
+  Zattarra:
+  - rscadd: Adds holo HUD sunglasses to the game, invisible versions of normal HUD
+      sunglasses.
+  - rscadd: Implements holo HUD sunglasses to the loadout screen.

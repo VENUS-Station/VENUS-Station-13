@@ -7,5 +7,5 @@
 /datum/gear/hands/tailbag
 	name = "Tailbag"
 	description = "A bag for holding small personal items, which fastens around the base of the tail."
-	path = /obj/item/tailbag
+	path = /obj/item/storage/tailbag
 	cost = 1

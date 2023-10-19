@@ -28,3 +28,15 @@
   - bugfix: Fixes the bug of assistants not receiving backpack donator items
   yip:
   - rscadd: yip
+2023-10-12:
+  Kuki-kono:
+  - bugfix: Gladiator no longer stays invincible
+2023-10-16:
+  AshTheDerg:
+  - rscadd: Added tailbags
+  MysteryMan21333:
+  - code_imp: Small changes to naming.
+  Zattarra:
+  - rscadd: Adds holo HUD sunglasses to the game, invisible versions of normal HUD
+      sunglasses.
+  - rscadd: Implements holo HUD sunglasses to the loadout screen.

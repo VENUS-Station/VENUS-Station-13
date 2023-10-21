@@ -40,3 +40,7 @@
   - rscadd: Adds holo HUD sunglasses to the game, invisible versions of normal HUD
       sunglasses.
   - rscadd: Implements holo HUD sunglasses to the loadout screen.
+2023-10-20:
+  SmiLeYre and SandPoot.:
+  - rscadd: Silicons can choose their lawset if allowed by the server host (enabled
+      in configs).

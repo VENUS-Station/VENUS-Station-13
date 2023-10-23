@@ -1,12 +1,3 @@
-//Main code edits
-/obj/item/clothing/mask/muzzle/attack_hand(mob/user, act_intent, attackchain_flags)
-	if(iscarbon(user))
-		var/mob/living/carbon/C = user
-		if(src == C.wear_mask)
-			to_chat(user, span_warning("You need help taking this off!"))
-			return
-	..()
-
 //Own stuff
 
 /* I'm sorry nuke but cit added their own

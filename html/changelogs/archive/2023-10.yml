@@ -44,3 +44,10 @@
   SmiLeYre and SandPoot.:
   - rscadd: Silicons can choose their lawset if allowed by the server host (enabled
       in configs).
+2023-10-24:
+  ariaworld:
+  - rscadd: Vacuum resistance quirk.
+  - rscadd: Various head markings.
+  - rscadd: Haydee head (Snout).
+  - rscadd: 'Body Morpher expansion: Body size, genital color, hair color, horns.'
+  - bugfix: Teshari eyes being one pixel to the left.

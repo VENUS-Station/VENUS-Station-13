@@ -51,4 +51,4 @@
 /datum/gear/hands/cigar
 	name = "Cigar"
 	path = /obj/item/clothing/mask/cigarette/cigar
-	cost = 4 //smoking is bad mkay
+	cost = 2 //smoking is bad mkay

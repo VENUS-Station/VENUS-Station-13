@@ -120,7 +120,7 @@
 	name = "Toy Katana"
 	path = /obj/item/toy/katana
 	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_TOYS
-	cost = 3
+	cost = 2
 
 /datum/gear/backpack/tapeplayer
 	name = "Taperecorder"
@@ -151,12 +151,12 @@
 /datum/gear/backpack/modular_tablet
 	name = "A modular tablet"
 	path = /obj/item/modular_computer/tablet/preset/cheap/
-	cost = 4
+	cost = 3
 
 /datum/gear/backpack/modular_laptop
 	name = "A modular laptop"
 	path = /obj/item/modular_computer/laptop/preset/civilian
-	cost = 7
+	cost = 3
 
 /datum/gear/backpack/ringbox_gold
 	name = "A gold ring box"

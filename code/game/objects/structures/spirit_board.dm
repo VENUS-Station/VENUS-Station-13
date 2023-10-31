@@ -50,13 +50,24 @@
 	if(next_use - bonus > world.time )
 		return 0 //No feedback here, hiding the cooldown a little makes it harder to tell who's really picking letters.
 
+	// Add bonus for lit candles in range (SPLURT EDIT)
+	var/candle_bonus = 0
+	for(var/obj/item/candle/C in orange(3,src))
+		if(C.lit) // Check if the candle is lit
+			candle_bonus += 1 // Increase the bonus for each lit candle
+			if(candle_bonus >= 2) // Break the loop if candle_bonus reaches 2
+				break
+
+	//The bonus reduces the cooldown:
+	next_use -= candle_bonus * 5 // This will reduce the cooldown by 5 seconds for each lit candle
+
 	//lighting check
 	var/light_amount = 0
 	var/turf/T = get_turf(src)
 	light_amount = T.get_lumcount()
 
 
-	if(light_amount > 0.2)
+	if(light_amount > 0.5)
 		to_chat(M, "<span class='warning'>It's too bright here to use [src.name]!</span>")
 		return 0
 
@@ -69,7 +80,7 @@
 			else
 				users_in_range++
 
-	if(users_in_range < 2)
+	if(users_in_range < 1) // SPLURT EDIT: 1 is the minimum number of people in range
 		to_chat(M, "<span class='warning'>There aren't enough people to use the [src.name]!</span>")
 		return 0
 

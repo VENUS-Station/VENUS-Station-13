@@ -173,14 +173,12 @@
 /datum/gear/uniform/pants/polypants
 	name = "Polychromic Pants"
 	path = /obj/item/clothing/under/pants/polypants
-	cost = 2
 	loadout_flags = LOADOUT_CAN_NAME | LOADOUT_CAN_DESCRIPTION | LOADOUT_CAN_COLOR_POLYCHROMIC
 	loadout_initial_colors = list("#75634F", "#3D3D3D", "#575757")
 
 /datum/gear/uniform/pants/workout
 	name = "Polychromatic Workout Shorts"
 	path = /obj/item/clothing/under/shorts/polychromic/polyworkout
-	cost = 2
 	loadout_flags = LOADOUT_CAN_NAME | LOADOUT_CAN_DESCRIPTION | LOADOUT_CAN_COLOR_POLYCHROMIC
 	loadout_initial_colors = list("#323232", "#FFFFFF")
 
@@ -266,42 +264,36 @@
 /datum/gear/uniform/polyjump
 	name = "Polychromic Jumpsuit"
 	path = /obj/item/clothing/under/misc/polyjumpsuit
-	cost = 2
 	loadout_flags = LOADOUT_CAN_NAME | LOADOUT_CAN_DESCRIPTION | LOADOUT_CAN_COLOR_POLYCHROMIC
 	loadout_initial_colors = list("#FFFFFF", "#808080", "#353535")
 
 /datum/gear/uniform/skirt/poly
 	name = "Polychromic Jumpskirt"
 	path = /obj/item/clothing/under/dress/skirt/polychromic
-	cost = 2
 	loadout_flags = LOADOUT_CAN_NAME | LOADOUT_CAN_DESCRIPTION | LOADOUT_CAN_COLOR_POLYCHROMIC
 	loadout_initial_colors = list("#FFFFFF", "#F08080", "#808080")
 
 /datum/gear/uniform/suit/poly
 	name = "Polychromic Button-up Shirt"
 	path = /obj/item/clothing/under/misc/poly_shirt
-	cost = 2
 	loadout_flags = LOADOUT_CAN_NAME | LOADOUT_CAN_DESCRIPTION | LOADOUT_CAN_COLOR_POLYCHROMIC
 	loadout_initial_colors = list("#FFFFFF", "#353535", "#353535")
 
 /datum/gear/uniform/skirt/poly/pleated
 	name = "Polychromic Pleated Sweaterskirt"
 	path = /obj/item/clothing/under/dress/skirt/polychromic/pleated
-	cost = 2
 	loadout_flags = LOADOUT_CAN_NAME | LOADOUT_CAN_DESCRIPTION | LOADOUT_CAN_COLOR_POLYCHROMIC
 	loadout_initial_colors = list("#8CC6FF", "#808080", "#FF3535")
 
 /datum/gear/uniform/polykilt
 	name = "Polychromic Kilt"
 	path = /obj/item/clothing/under/costume/kilt/polychromic
-	cost = 2
 	loadout_flags = LOADOUT_CAN_NAME | LOADOUT_CAN_DESCRIPTION | LOADOUT_CAN_COLOR_POLYCHROMIC
 	loadout_initial_colors = list("#FFFFFF", "#F08080")
 
 /datum/gear/uniform/shorts/poly
 	name = "Polychromic Shorts"
 	path = /obj/item/clothing/under/misc/polyshorts
-	cost = 2
 	loadout_flags = LOADOUT_CAN_NAME | LOADOUT_CAN_DESCRIPTION | LOADOUT_CAN_COLOR_POLYCHROMIC
 	loadout_initial_colors = list("#353535", "#808080", "#808080")
 
@@ -658,54 +650,45 @@
 	name = "Green Feminine Christmas Suit"
 	category = ITEM_SLOT_ICLOTHING
 	path = /obj/item/clothing/under/costume/christmas/croptop/green
-
+*/
 /datum/gear/uniform/pinkstripper
 	name = "Pink stripper outfit"
 	category = ITEM_SLOT_ICLOTHING
 	path = /obj/item/clothing/under/misc/stripper
-	cost = 3
-*/
 
 /datum/gear/uniform/greenstripper
 	name = "Green stripper outfit"
 	path = /obj/item/clothing/under/misc/stripper/green
-	cost = 3
 
 /datum/gear/uniform/qipao
 	name = "Qipao, Black"
 	path = /obj/item/clothing/under/costume/qipao
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_DRESSES
-	cost = 3
 
 /datum/gear/uniform/qipao/white
 	name = "Qipao, White"
 	path = /obj/item/clothing/under/costume/qipao/white
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_DRESSES
-	cost = 3
 
 /datum/gear/uniform/qipao/red
 	name = "Qipao, Red"
 	path = /obj/item/clothing/under/costume/qipao/red
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_DRESSES
-	cost = 3
 
 /datum/gear/uniform/cheongsam
 	name = "Cheongsam, Black"
 	path = /obj/item/clothing/under/costume/cheongsam
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_DRESSES
-	cost = 3
 
 /datum/gear/uniform/cheongsam/white
 	name = "Cheongsam, White"
 	path = /obj/item/clothing/under/costume/cheongsam/white
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_DRESSES
-	cost = 3
 
 /datum/gear/uniform/cheongsam/red
 	name = "Cheongsam, Red"
 	path = /obj/item/clothing/under/costume/cheongsam/red
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_DRESSES
-	cost = 3
 
 /datum/gear/uniform/dress/black
 	name = "Black dress"

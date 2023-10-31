@@ -40,6 +40,18 @@
 	name = "Performers one piece"
 	path = /obj/item/clothing/under/performer
 
+/datum/gear/uniform/blackstripper
+	name = "Black stripper outfit"
+	path = /obj/item/clothing/under/misc/stripper/black
+
+/datum/gear/uniform/pentatop
+	name = "Pentagram crop top"
+	path = /obj/item/clothing/under/pentatop
+
+/datum/gear/uniform/lewdmaid
+	name = "Lewd maid uniform"
+	path = /obj/item/clothing/under/misc/lewdmaid
+
 // Suggestion #151
 /datum/gear/uniform/waiter
 	name = "waiter's outfit"

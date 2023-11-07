@@ -1267,6 +1267,7 @@
 		"(Service) Meka" = image(icon = 'modular_splurt/icons/mob/robots_32x64.dmi', icon_state = "mekaserve"), // SPLURT Addon
 		"(Service) Feline" = image(icon = 'modular_splurt/icons/mob/widerobot.dmi', icon_state = "vixserv-b"), // SPLURT Addon (ChompS Port)
 		"(Service) Raptor V-4" = image(icon = 'modular_splurt/icons/mob/robots_64x45.dmi', icon_state = "serviraptor-b"), // SPLURT Addon (ChompS Port)
+		"(Fancy) Raptor V-4" = image(icon = 'modular_splurt/icons/mob/robots_64x45.dmi', icon_state = "fancyraptor-b"), // SPLURT Addon (ChompS Port)
 		"(Janitor) Default" = image(icon = 'icons/mob/robots.dmi', icon_state = "janitor"),
 		"(Janitor) Marina" = image(icon = 'modular_citadel/icons/mob/robots.dmi', icon_state = "marinajan"),
 		"(Janitor) Sleek" = image(icon = 'modular_citadel/icons/mob/robots.dmi', icon_state = "sleekjan"),
@@ -1401,6 +1402,11 @@
 			cyborg_base_icon = "serviraptor"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots_64x45.dmi'
 			sleeper_overlay = "serviraptor-sleeper"
+			dogborg = TRUE
+		if("(Fancy) Raptor V-4") // SPLURT Addon (ChompS Port)
+			cyborg_base_icon = "fancyraptor"
+			cyborg_icon_override = 'modular_splurt/icons/mob/robots_64x45.dmi'
+			sleeper_overlay = "fancyraptor-sleeper"
 			dogborg = TRUE
 		if("(Janitor) Default")
 			cyborg_base_icon = "janitor"

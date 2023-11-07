@@ -1,7 +1,0 @@
-author: Anonymous
-delete-after: true
-changes:
-  - rscadd: Added fancy variant of service raptorborgs. I forgot to include it in
-      the OG PR.
-  - rscadd: Repurposes ported sciraptor and sci-catborg sprites to be an alternative
-      service (janitor) module.

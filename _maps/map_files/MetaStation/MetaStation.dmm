@@ -43275,11 +43275,11 @@
 /turf/open/floor/plasteel,
 /area/science/xenobiology)
 "cSk" = (
-/obj/machinery/atmospherics/pipe/manifold/general/visible{
-	dir = 1
-	},
 /obj/effect/turf_decal/stripes/corner{
 	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/general/visible{
+	dir = 10
 	},
 /turf/open/floor/plasteel/white,
 /area/science/xenobiology)
@@ -43686,20 +43686,7 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/science/xenobiology)
-"cSX" = (
-/obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/simple/general/visible{
-	dir = 4
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/turf/open/floor/plasteel/white,
-/area/science/xenobiology)
 "cSZ" = (
-/obj/machinery/atmospherics/components/binary/pump{
-	dir = 8
-	},
 /obj/machinery/firealarm{
 	pixel_y = 26
 	},
@@ -43707,14 +43694,18 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/machinery/atmospherics/components/binary/pump{
+	dir = 4;
+	name = "input port pump"
+	},
 /turf/open/floor/plasteel/white,
 /area/science/xenobiology)
 "cTa" = (
-/obj/machinery/atmospherics/pipe/simple/general/visible{
-	dir = 4
-	},
 /obj/effect/turf_decal/stripes/corner{
 	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/general/visible{
+	dir = 6
 	},
 /turf/open/floor/plasteel/white,
 /area/science/xenobiology)
@@ -43880,6 +43871,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
 	},
+/obj/machinery/atmospherics/pipe/simple/general/visible,
 /turf/open/floor/plasteel,
 /area/science/xenobiology)
 "cTt" = (
@@ -44505,6 +44497,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/simple/general/visible,
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "daE" = (
@@ -44912,6 +44905,9 @@
 	},
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
+	},
+/obj/structure/sign/xenobio_guide{
+	pixel_y = 32
 	},
 /turf/open/floor/plasteel/white,
 /area/science/xenobiology)
@@ -45598,6 +45594,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/turf_decal/stripes/line,
+/obj/machinery/atmospherics/pipe/simple/general/visible,
 /turf/open/floor/plasteel/white,
 /area/science/xenobiology)
 "ddo" = (
@@ -45660,6 +45657,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/atmospherics/pipe/simple/general/visible,
 /turf/open/floor/plating,
 /area/science/xenobiology)
 "ddv" = (
@@ -54240,8 +54238,10 @@
 /turf/closed/wall/r_wall,
 /area/maintenance/disposal/incinerator)
 "gYr" = (
-/obj/structure/sign/xenobio_guide,
-/turf/closed/wall/r_wall,
+/obj/machinery/atmospherics/components/unary/vent_pump/siphon/on{
+	dir = 1
+	},
+/turf/open/floor/engine,
 /area/science/xenobiology)
 "gZf" = (
 /obj/structure/table,
@@ -118635,7 +118635,7 @@ aaf
 aaf
 cRe
 cZa
-cRe
+cSt
 cRi
 dbX
 dcg
@@ -120454,13 +120454,13 @@ nBJ
 uiZ
 cSV
 cSJ
-cSX
+cSJ
 ddm
 cTt
 daA
 cSn
 cSn
-cSn
+daH
 daL
 cRi
 daQ
@@ -120716,8 +120716,8 @@ ddn
 cTs
 ddu
 daD
-cSn
-daH
+daB
+gYr
 daK
 cRi
 bIv
@@ -121720,7 +121720,7 @@ aaa
 aaa
 aaa
 aaa
-gYr
+cRi
 dce
 cSt
 ggU

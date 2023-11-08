@@ -73636,10 +73636,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/engineering/atmos)
-"cqw" = (
-/obj/structure/sign/xenobio_guide,
-/turf/closed/wall,
-/area/science/xenobiology)
 "cqx" = (
 /obj/structure/disposalpipe/trunk,
 /obj/machinery/disposal/bin{
@@ -123185,7 +123181,7 @@ aWR
 acw
 bgn
 bgB
-cqw
+aWR
 bgM
 bgn
 bVA

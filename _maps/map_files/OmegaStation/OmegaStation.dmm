@@ -31305,6 +31305,9 @@
 /area/science/xenobiology)
 "bgd" = (
 /obj/structure/closet/l3closet/scientist,
+/obj/structure/sign/xenobio_guide{
+	pixel_x = -32
+	},
 /turf/open/floor/plasteel/dark/side{
 	dir = 8
 	},
@@ -41888,10 +41891,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/engineering/gravity_generator)
-"wME" = (
-/obj/structure/sign/xenobio_guide,
-/turf/closed/wall/r_wall,
-/area/science/xenobiology)
 "wOe" = (
 /obj/machinery/door/firedoor/heavy,
 /obj/structure/cable/white{
@@ -86527,7 +86526,7 @@ ibv
 biW
 exb
 bhN
-wME
+bfP
 bfP
 hfm
 aad

@@ -4,7 +4,7 @@
 	icon = 'modular_splurt/icons/mobs/werewolf.dmi'
 	icon_state = "Ice_Wolf_idle"
 	icon_living = "Ice_Wolf_idle"
-	icon_dead = "Werewolf_dead"
+	icon_dead = "Ice_Wolf_dead"
 	icon_gib = "syndicate_gib"
 	pixel_x = -16
 	gender = MALE

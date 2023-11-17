@@ -653,7 +653,6 @@
 */
 /datum/gear/uniform/pinkstripper
 	name = "Pink stripper outfit"
-	category = ITEM_SLOT_ICLOTHING
 	path = /obj/item/clothing/under/misc/stripper
 
 /datum/gear/uniform/greenstripper

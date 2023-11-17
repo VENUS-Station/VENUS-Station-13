@@ -681,7 +681,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 					dat += "<h2>Body</h2>"
 					dat += "<b>Gender:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=gender;task=input'>[gender == MALE ? "Male" : (gender == FEMALE ? "Female" : (gender == PLURAL ? "Non-binary" : "Object"))]</a><BR>"
-					if(gender != NEUTER && pref_species.sexes)
+					if(pref_species.sexes)
 						dat += "<b>Body Model:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=body_model'>[features["body_model"] == MALE ? "Masculine" : "Feminine"]</a><BR>"
 					dat += "<b>Limb Modification:</b><BR>"
 					dat += "<a href='?_src_=prefs;preference=modify_limbs;task=input'>Modify Limbs</a><BR>"
@@ -1272,7 +1272,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 										extra_loadout_data += "<BR><a href='?_src_=prefs;preference=gear;loadout_color_polychromic=1;loadout_gear_name=[html_encode(gear.name)];'>Color</a>"			
 										for(var/loadout_color in loadout_item[LOADOUT_COLOR])
 											extra_loadout_data += "<span style='border: 1px solid #161616; background-color: [loadout_color];'><font color='[color_hex2num(loadout_color) < 200 ? "FFFFFF" : "000000"]'>[loadout_color]</font></span>"
-										extra_loadout_data += "<BR><a href='?_src_=prefs;preference=gear;loadout_color_HSV=1;loadout_gear_name=[html_encode(gear.name)];'>HSV Color</a>" // SPLURT EDIT
 									else
 										var/loadout_color_non_poly = "#FFFFFF"
 										if(length(loadout_item[LOADOUT_COLOR]))

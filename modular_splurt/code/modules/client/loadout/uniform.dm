@@ -44,13 +44,13 @@
 	name = "Black stripper outfit"
 	path = /obj/item/clothing/under/misc/stripper/black
 
-/datum/gear/uniform/pentatop
-	name = "Pentagram crop top"
-	path = /obj/item/clothing/under/pentatop
+/datum/gear/uniform/whitestripper
+	name = "White stripper outfit"
+	path = /obj/item/clothing/under/misc/stripper/white
 
 /datum/gear/uniform/lewdmaid
 	name = "Lewd maid uniform"
-	path = /obj/item/clothing/under/misc/lewdmaid
+	path = /obj/item/clothing/under/lewdmaid
 
 // Suggestion #151
 /datum/gear/uniform/waiter

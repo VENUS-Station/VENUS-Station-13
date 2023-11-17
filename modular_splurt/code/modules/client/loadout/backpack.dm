@@ -7,7 +7,6 @@
 /datum/gear/backpack/condom_box
 	name = "Box of Condoms"
 	path = /obj/item/storage/box/bulk_condoms
-	cost = 2
 
 /datum/gear/backpack/sounding
 	name = "Sounding rod"
@@ -112,14 +111,19 @@
 /datum/gear/backpack/metal_chastity_box
 	name = "Metal Chastity Box"
 	path = /obj/item/storage/box/chastity_cage/metal
-	cost = 2
 
 /datum/gear/backpack/belt_chastity_box
 	name = "Chastity Belt Box"
 	path = /obj/item/storage/box/chastity_cage/belt
-	cost = 3
 
 /datum/gear/backpack/estim_chastity_box
 	name = "E-Stim Chastity Box"
 	path = /obj/item/storage/box/chastity_cage/estim
-	cost = 4
+
+/datum/gear/backpack/chastity_hypno/magazine
+	name = "Hypnotic Chastity Magazine"
+	path = /obj/item/chastity_hypno/magazine
+
+/datum/gear/backpack/chastity_hypno/watch
+	name = "Hypnotic Chastity Watch"
+	path = /obj/item/chastity_hypno/watch

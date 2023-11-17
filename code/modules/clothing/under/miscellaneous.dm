@@ -234,6 +234,24 @@
 	icon_state = "stripper_g"
 	item_state = "stripper_g"
 
+/obj/item/clothing/under/misc/stripper/black
+	name = "black stripper outfit"
+	icon = 'modular_splurt/icons/obj/clothing/uniforms.dmi'
+	mob_overlay_icon= 'modular_splurt/icons/mob/clothing/uniform.dmi'
+	icon_state = "syclothing"
+	item_state = "syclothing"
+	can_adjust = FALSE
+	body_parts_covered = CHEST
+
+/obj/item/clothing/under/misc/stripper/white
+	name = "white stripper outfit"
+	icon = 'modular_splurt/icons/mob/clothing/lewd_clothing/uniform/lewd_uniform.dmi'
+	mob_overlay_icon = 'modular_splurt/icons/mob/clothing/lewd_clothing/uniform/lewd_uniform.dmi'
+	icon_state = "stripper_white"
+	item_state = "stripper_white_obj"
+	can_adjust = FALSE
+	body_parts_covered = CHEST
+
 /obj/item/clothing/under/misc/stripper/mankini
 	name = "pink mankini"
 	icon_state = "mankini"

@@ -31,7 +31,7 @@
 		virgin = 0
 		notify_ghosts("Someone has begun playing with a [src.name] in [get_area(src)]!", source = src)
 
-	planchette = input("Choose the letter.", "Seance!") as null|anything in list("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z")
+	planchette = input("Choose the letter.", "Seance!") as null|anything in list("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z", "YES", "NO" ,"GOOD BYE")
 	if(!planchette || !Adjacent(M) || next_use > world.time)
 		return
 	M.log_message("picked a letter on [src], which was \"[planchette]\".")
@@ -50,25 +50,14 @@
 	if(next_use - bonus > world.time )
 		return 0 //No feedback here, hiding the cooldown a little makes it harder to tell who's really picking letters.
 
-	// Add bonus for lit candles in range (SPLURT EDIT)
-	var/candle_bonus = 0
-	for(var/obj/item/candle/C in orange(3,src))
-		if(C.lit) // Check if the candle is lit
-			candle_bonus += 1 // Increase the bonus for each lit candle
-			if(candle_bonus >= 2) // Break the loop if candle_bonus reaches 2
-				break
-
-	//The bonus reduces the cooldown:
-	next_use -= candle_bonus * 5 // This will reduce the cooldown by 5 seconds for each lit candle
-
 	//lighting check
 	var/light_amount = 0
 	var/turf/T = get_turf(src)
 	light_amount = T.get_lumcount()
 
 
-	if(light_amount > 0.5)
-		to_chat(M, "<span class='warning'>It's too bright here to use [src.name]!</span>")
+	if(light_amount > 0.3) // Splurt edit, from 0.2 to 0.3
+		to_chat(M, "<span class='warning'>It's too bright here to use the [src.name]!</span>")
 		return 0
 
 	//mobs in range check

@@ -41,12 +41,10 @@
 /datum/gear/backpack/tennis/tri
 	name = "Tri-color Polychromic Tennis Ball"
 	path = /obj/item/toy/fluff/tennis_poly/tri
-	cost = 3
 
 /datum/gear/backpack/tennis/tri/squeak
 	name = "Squeakable Tri-color Polychromic Tennis Ball"
 	path = /obj/item/toy/fluff/tennis_poly/tri/squeak
-	cost = 6
 
 /datum/gear/backpack/bone
 	name = "Polychromic Bone"
@@ -80,7 +78,6 @@
 /datum/gear/backpack/bone/squeak
 	name = "Squeakable Polychromic Bone"
 	path = /obj/item/toy/fluff/bone_poly/squeak
-	cost = 6
 
 /datum/gear/backpack/frisbee
 	name = "Polychromic Frisbee"
@@ -120,7 +117,6 @@
 	name = "Toy Katana"
 	path = /obj/item/toy/katana
 	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_TOYS
-	cost = 2
 
 /datum/gear/backpack/tapeplayer
 	name = "Taperecorder"
@@ -161,7 +157,7 @@
 /datum/gear/backpack/ringbox_gold
 	name = "A gold ring box"
 	path = /obj/item/storage/fancy/ringbox
-	cost = 3
+	cost = 2
 
 /datum/gear/backpack/ringbox_silver
 	name = "A silver ring box"
@@ -171,7 +167,7 @@
 /datum/gear/backpack/ringbox_diamond
 	name = "A diamond ring box"
 	path = /obj/item/storage/fancy/ringbox/diamond
-	cost = 5
+	cost = 4
 
 // Moved here from quirks
 /datum/gear/backpack/dyespray

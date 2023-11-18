@@ -659,6 +659,14 @@
 	name = "Green stripper outfit"
 	path = /obj/item/clothing/under/misc/stripper/green
 
+/datum/gear/uniform/blackstripper
+	name = "Black stripper outfit"
+	path = /obj/item/clothing/under/misc/stripper/black
+
+/datum/gear/uniform/whitestripper
+	name = "White stripper outfit"
+	path = /obj/item/clothing/under/misc/stripper/white
+
 /datum/gear/uniform/qipao
 	name = "Qipao, Black"
 	path = /obj/item/clothing/under/costume/qipao

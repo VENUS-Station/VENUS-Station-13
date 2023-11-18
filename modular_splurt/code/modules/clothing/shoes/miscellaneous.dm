@@ -12,6 +12,14 @@
 		)
 	)
 
+/obj/item/clothing/shoes/clown_shoes/clussy_heels
+	name = "Clussy heels"
+	desc = "The silliest footjob of all time."
+	icon = 'modular_splurt/icons/obj/clothing/shoes.dmi'
+	mob_overlay_icon = 'modular_splurt/icons/mob/clothing/shoes.dmi'
+	icon_state = "clussy_heels"
+	mutantrace_variation = STYLE_DIGITIGRADE | STYLE_NO_ANTHRO_ICON
+
 /obj/item/clothing/shoes/footwraps
 	name = "cloth footwraps"
 	desc = "A roll of treated canvas used for wrapping claws or paws."

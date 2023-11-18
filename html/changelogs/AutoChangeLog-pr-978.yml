@@ -1,0 +1,7 @@
+author: MysteryMan21333
+delete-after: true
+changes:
+  - balance: reworks magic carp for xenobiology, reworks monkey processors, & improved
+      code for xenobiology.
+  - bugfix: prevents bluespace anomalies from shitting on cameras & logging for sentience
+      potion on admin side.

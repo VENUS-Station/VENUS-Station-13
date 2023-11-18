@@ -40,14 +40,6 @@
 	name = "Performers one piece"
 	path = /obj/item/clothing/under/performer
 
-/datum/gear/uniform/blackstripper
-	name = "Black stripper outfit"
-	path = /obj/item/clothing/under/misc/stripper/black
-
-/datum/gear/uniform/whitestripper
-	name = "White stripper outfit"
-	path = /obj/item/clothing/under/misc/stripper/white
-
 /datum/gear/uniform/lewdmaid
 	name = "Lewd maid uniform"
 	path = /obj/item/clothing/under/lewdmaid

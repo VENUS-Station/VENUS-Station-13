@@ -26,8 +26,6 @@
 		qdel(C)
 	update_icon()
 
-	return TRUE
-
 /obj/effect/decal/cleanable/semendrip/update_icon()
 	. = ..()
 	add_atom_colour(mix_color_from_reagents(reagents.reagent_list), FIXED_COLOUR_PRIORITY)

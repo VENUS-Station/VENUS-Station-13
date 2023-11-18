@@ -1253,51 +1253,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							dat += "</b></center></td></tr>"
 
 							var/even = FALSE
-							for(var/name in GLOB.loadout_items[gear_category][gear_subcategory])
-								var/datum/gear/gear = GLOB.loadout_items[gear_category][gear_subcategory][name]
-								var/donoritem = gear.donoritem
-								if(donoritem && !gear.donator_ckey_check(user.ckey))
-									continue
-								var/background_cl = "#23273C"
-								if(even)
-									background_cl = "#17191C"
-								even = !even
-								var/class_link = ""
-								var/list/loadout_item = has_loadout_gear(loadout_slot, "[gear.type]")
-								var/extra_loadout_data = ""
-								if(loadout_item)
-									class_link = "style='white-space:normal;' class='linkOn' href='?_src_=prefs;preference=gear;toggle_gear_path=[html_encode(name)];toggle_gear=0'"
-									if(gear.loadout_flags & LOADOUT_CAN_COLOR_POLYCHROMIC)
-										extra_loadout_data += "<BR><a href='?_src_=prefs;preference=gear;loadout_color_polychromic=1;loadout_gear_name=[html_encode(gear.name)];'>Color</a>"			
-										for(var/loadout_color in loadout_item[LOADOUT_COLOR])
-											extra_loadout_data += "<span style='border: 1px solid #161616; background-color: [loadout_color];'><font color='[color_hex2num(loadout_color) < 200 ? "FFFFFF" : "000000"]'>[loadout_color]</font></span>"
-									else
-										var/loadout_color_non_poly = "#FFFFFF"
-										if(length(loadout_item[LOADOUT_COLOR]))
-											loadout_color_non_poly = loadout_item[LOADOUT_COLOR][1]
-										extra_loadout_data += "<BR><a href='?_src_=prefs;preference=gear;loadout_color=1;loadout_gear_name=[html_encode(gear.name)];'>Color</a>"
-										extra_loadout_data += "<span style='border: 1px solid #161616; background-color: [loadout_color_non_poly];'><font color='[color_hex2num(loadout_color_non_poly) < 200 ? "FFFFFF" : "000000"]'>[loadout_color_non_poly]</font></span>"
-										extra_loadout_data += "<BR><a href='?_src_=prefs;preference=gear;loadout_color_HSV=1;loadout_gear_name=[html_encode(gear.name)];'>HSV Color</a>" // SPLURT EDIT
-									if(gear.loadout_flags & LOADOUT_CAN_NAME)
-										extra_loadout_data += "<BR><a href='?_src_=prefs;preference=gear;loadout_rename=1;loadout_gear_name=[html_encode(gear.name)];'>Name</a> [loadout_item[LOADOUT_CUSTOM_NAME] ? loadout_item[LOADOUT_CUSTOM_NAME] : "N/A"]"
-									if(gear.loadout_flags & LOADOUT_CAN_DESCRIPTION)
-										extra_loadout_data += "<BR><a href='?_src_=prefs;preference=gear;loadout_redescribe=1;loadout_gear_name=[html_encode(gear.name)];'>Description</a>"
-								else if((gear_points - gear.cost) < 0)
-									class_link = "style='white-space:normal;' class='linkOff'"
-								else if(donoritem)
-									class_link = "style='white-space:normal;background:#ebc42e;' href='?_src_=prefs;preference=gear;toggle_gear_path=[html_encode(name)];toggle_gear=1'"
-								else if(!istype(gear, /datum/gear/unlockable) || can_use_unlockable(gear))
-									class_link = "style='white-space:normal;' href='?_src_=prefs;preference=gear;toggle_gear_path=[html_encode(name)];toggle_gear=1'"
-								else
-									class_link = "style='white-space:normal;background:#eb2e2e;' class='linkOff'"
-								dat += "<tr style='vertical-align:top; background-color: [background_cl];'><td width=15%><a [class_link]>[name]</a>[extra_loadout_data]</td>"
-								dat += "<td width = 5% style='vertical-align:top'>[gear.cost]</td><td>"
-								if(islist(gear.restricted_roles))
-									if(gear.restricted_roles.len)
-										if(gear.restricted_desc)
-											dat += "<font size=2>"
-											dat += gear.restricted_desc
-											dat += "</font>"
 							if(gear_category != LOADOUT_CATEGORY_ERROR)
 								dat += "<table align='center'; width='100%'; height='100%'; style='background-color:#13171C'>"
 								dat += "<center>"
@@ -1331,6 +1286,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 												loadout_color_non_poly = loadout_item[LOADOUT_COLOR][1]
 											extra_loadout_data += "<BR><a href='?_src_=prefs;preference=gear;loadout_color=1;loadout_gear_name=[html_encode(gear.name)];'>Color</a>"
 											extra_loadout_data += "<span style='border: 1px solid #161616; background-color: [loadout_color_non_poly];'><font color='[color_hex2num(loadout_color_non_poly) < 200 ? "FFFFFF" : "000000"]'>[loadout_color_non_poly]</font></span>"
+											extra_loadout_data += "<BR><a href='?_src_=prefs;preference=gear;loadout_color_HSV=1;loadout_gear_name=[html_encode(gear.name)];'>HSV Color</a>" // SPLURT EDIT
 										if(gear.loadout_flags & LOADOUT_CAN_NAME)
 											extra_loadout_data += "<BR><a href='?_src_=prefs;preference=gear;loadout_rename=1;loadout_gear_name=[html_encode(gear.name)];'>Name</a> [loadout_item[LOADOUT_CUSTOM_NAME] ? loadout_item[LOADOUT_CUSTOM_NAME] : "N/A"]"
 										if(gear.loadout_flags & LOADOUT_CAN_DESCRIPTION)

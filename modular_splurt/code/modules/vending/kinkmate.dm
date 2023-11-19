@@ -36,6 +36,7 @@
 		/obj/item/clothing/shoes/highheel_sandals = 3,
 		/obj/item/clothing/neck/petcollar/poly = 5,
 		/obj/item/clothing/under/misc/stripper/black = 3,
+		/obj/item/clothing/under/misc/stripper/white = 3,
 		/obj/item/clothing/under/lewdmaid = 5,
 	)
 	var/list/extra_contraband = list(

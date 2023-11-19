@@ -758,9 +758,9 @@
 
 	if(target.is_fucking(src, CUM_TARGET_THIGHS))
 		lines = list(
-			"grinds and presses [u_His] thighs [pick("deeply ", "")] against \the <b>[target]</b>'s [genital_name], massaging it all over with [u_His] thighs.",
-			"squeezes \the <b>[target]</b>'s [genital_name] between [u_His] supple thighs, smothering it deep under [u_His] crotch.",
-			"rides \the <b>[target]</b>'s [genital_name] with [u_His] [pick("pudgy ", "soft ", "")]thighs, [t_He] can feel [u_His] flesh smothering it down."
+			"grinds and presses [u_His] thighs [pick("deeply ", "")] against \the <b>[target]</b>'s [genital_name], massaging it all over with [u_His] thighs",
+			"squeezes \the <b>[target]</b>'s [genital_name] between [u_His] supple thighs, smothering it deep under [u_His] crotch",
+			"rides \the <b>[target]</b>'s [genital_name] with [u_His] [pick("pudgy ", "soft ", "")]thighs, [t_He] can feel [u_His] flesh smothering it down"
 		)
 	else
 		lines = list(

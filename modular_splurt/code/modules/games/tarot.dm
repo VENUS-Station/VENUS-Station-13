@@ -25,4 +25,3 @@
 		var/matrix/M = matrix()
 		M.Turn(180)
 		C.transform = M
-

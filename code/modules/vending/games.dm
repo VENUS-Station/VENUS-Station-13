@@ -8,7 +8,6 @@
 		            /obj/item/toy/cards/deck/cas = 3,
 		            /obj/item/toy/cards/deck/cas/black = 3,
 					/obj/item/toy/cards/deck/unum = 3,
-					/obj/item/toy/cards/deck/tarot = 3,
 					/obj/item/camera = 3,
 					/obj/item/cardpack/series_one = 10,
 					/obj/item/tcgcard_binder = 5,

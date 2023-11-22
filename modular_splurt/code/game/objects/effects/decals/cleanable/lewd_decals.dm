@@ -21,7 +21,7 @@
 	random_icon_states = list("milk1", "milk2", "milk3", "milk4")
 
 /obj/effect/decal/cleanable/milk/New()
-	..()
+	. = ..()
 	dir = pick(1,2,4,8)
 	add_blood_DNA(list("Non-human DNA" = "A+"))
 

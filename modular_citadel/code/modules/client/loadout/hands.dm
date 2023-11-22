@@ -41,6 +41,7 @@
 /datum/gear/hands/flask
 	name = "Flask"
 	path = /obj/item/reagent_containers/food/drinks/flask
+	cost = 2
 
 /datum/gear/hands/zippolighter
 	name = "Zippo Lighter"
@@ -50,4 +51,4 @@
 /datum/gear/hands/cigar
 	name = "Cigar"
 	path = /obj/item/clothing/mask/cigarette/cigar
-	cost = 2 //smoking is bad mkay
+	cost = 4 //smoking is bad mkay

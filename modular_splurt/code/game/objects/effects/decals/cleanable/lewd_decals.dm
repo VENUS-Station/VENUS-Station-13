@@ -7,8 +7,6 @@
 	var/obj/effect/decal/cleanable/milk/S = locate() in T
 	if(!S)
 		S = new(T)
-	if(data["blood_DNA"])
-		S.add_blood_DNA(list(data["blood_DNA"] = data["blood_type"]))
 
 /obj/effect/decal/cleanable/milk
 	name = "milk"

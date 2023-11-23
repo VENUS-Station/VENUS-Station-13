@@ -672,38 +672,38 @@
 /datum/gear/uniform/qipao
 	name = "Qipao, Black"
 	path = /obj/item/clothing/under/costume/qipao
-	cost = 3
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_DRESSES
+	cost = 3
 
 /datum/gear/uniform/qipao/white
 	name = "Qipao, White"
 	path = /obj/item/clothing/under/costume/qipao/white
-	cost = 3
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_DRESSES
+	cost = 3
 
 /datum/gear/uniform/qipao/red
 	name = "Qipao, Red"
 	path = /obj/item/clothing/under/costume/qipao/red
-	cost = 3
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_DRESSES
+	cost = 3
 
 /datum/gear/uniform/cheongsam
 	name = "Cheongsam, Black"
 	path = /obj/item/clothing/under/costume/cheongsam
-	cost = 3
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_DRESSES
+	cost = 3
 
 /datum/gear/uniform/cheongsam/white
 	name = "Cheongsam, White"
 	path = /obj/item/clothing/under/costume/cheongsam/white
-	cost = 3
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_DRESSES
+	cost = 3
 
 /datum/gear/uniform/cheongsam/red
 	name = "Cheongsam, Red"
 	path = /obj/item/clothing/under/costume/cheongsam/red
-	cost = 3
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_DRESSES
+	cost = 3
 
 /datum/gear/uniform/dress/black
 	name = "Black dress"

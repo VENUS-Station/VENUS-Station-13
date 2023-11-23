@@ -127,3 +127,28 @@
 /datum/gear/backpack/chastity_hypno/watch
 	name = "Hypnotic Chastity Watch"
 	path = /obj/item/chastity_hypno/watch
+
+//MODIFIED COSTS - MODULAR SPLURT
+/datum/gear/backpack/tennis/tri
+	cost = 1
+
+/datum/gear/backpack/tennis/tri/squeak
+	cost = 1
+
+/datum/gear/backpack/bone/squeak
+	cost = 1
+
+/datum/gear/backpack/toykatana
+	cost = 1
+
+/datum/gear/backpack/modular_tablet
+	cost = 3
+
+/datum/gear/backpack/modular_laptop
+	cost = 3
+
+/datum/gear/backpack/ringbox_gold
+	cost = 2
+
+/datum/gear/backpack/ringbox_diamond
+	cost = 4

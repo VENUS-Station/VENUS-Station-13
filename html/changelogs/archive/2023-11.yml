@@ -48,3 +48,11 @@
       code for xenobiology.
   - bugfix: prevents bluespace anomalies from shitting on cameras & logging for sentience
       potion on admin side.
+2023-11-23:
+  Anonymous:
+  - rscadd: Added glass gas mask into loadout.
+  - tweak: 'Renames trencher gas masks around: "trencher gas mask" -> "operative trencher
+      gas mask" and "stripped trencher gas mask" -> "trencher gas mask", also modifies
+      description. Otherwise, values are unchanged.'
+  - rscadd: With that said, added trencher gas mask into loadout. You can still acquire
+      it in-round by hacking Clothesmate as usual.

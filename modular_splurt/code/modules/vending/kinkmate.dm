@@ -29,6 +29,8 @@
 		/obj/item/restraints/bondage_rope = 5,
 		/obj/item/clothing/under/domina = 5,
 		/obj/item/clothing/under/performer = 3,
+		/obj/item/clothing/under/bunnysuit = 3,
+		/obj/item/clothing/under/bunnysuit/white = 3,
 		/obj/item/storage/box/chastity_cage = 6,
 		/obj/item/storage/box/chastity_cage/metal = 3,
 		/obj/item/storage/box/chastity_cage/belt = 2,

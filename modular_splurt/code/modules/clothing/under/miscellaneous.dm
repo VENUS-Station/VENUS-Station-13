@@ -50,7 +50,7 @@
 	icon = 'modular_splurt/icons/obj/clothing/uniforms.dmi'
 	mob_overlay_icon = 'modular_splurt/icons/mob/clothing/uniform.dmi'
 	icon_state = "bunnysuit"
-	can_adjust = FALSE
+	can_adjust = TRUE
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 	body_parts_covered = CHEST|GROIN
 

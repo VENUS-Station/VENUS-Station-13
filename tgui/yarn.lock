@@ -5542,7 +5542,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:^13.19.0":
+"globals@npm:^13.19.0, globals@npm:^13.23.0":
   version: 13.23.0
   resolution: "globals@npm:13.23.0"
   dependencies:
@@ -9753,6 +9753,7 @@ __metadata:
     eslint-plugin-radar: ^0.2.1
     eslint-plugin-react: ^7.33.2
     eslint-plugin-unused-imports: ^3.0.0
+    globals: ^13.23.0
     inferno: ^8.2.2
     jest: ^28.1.3
     jest-circus: ^28.1.3

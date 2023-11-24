@@ -4679,6 +4679,7 @@
 #include "modular_splurt\code\modules\clothing\glasses\_glasses.dm"
 #include "modular_splurt\code\modules\clothing\glasses\hud.dm"
 #include "modular_splurt\code\modules\clothing\gloves\_gloves.dm"
+#include "modular_splurt\code\modules\clothing\gloves\miscellaneous.dm"
 #include "modular_splurt\code\modules\clothing\head\_head.dm"
 #include "modular_splurt\code\modules\clothing\head\hardhat.dm"
 #include "modular_splurt\code\modules\clothing\head\helmet.dm"

@@ -56,3 +56,6 @@
       description. Otherwise, values are unchanged.'
   - rscadd: With that said, added trencher gas mask into loadout. You can still acquire
       it in-round by hacking Clothesmate as usual.
+2023-11-24:
+  BongaTheProto:
+  - code_imp: Fixes tgui dependencies

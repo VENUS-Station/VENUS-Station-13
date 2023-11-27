@@ -1,0 +1,5 @@
+author: Satile1
+delete-after: true
+changes:
+  - rscadd: Nitrogen internals. They're red.
+  - tweak: Vox now breathe nitrogen instead of plasma

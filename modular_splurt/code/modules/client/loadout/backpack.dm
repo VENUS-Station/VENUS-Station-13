@@ -127,6 +127,19 @@
 /datum/gear/backpack/chastity_hypno/watch
 	name = "Hypnotic Chastity Watch"
 	path = /obj/item/chastity_hypno/watch
+	desc = "An elaborate pocketwatch, with a captivating silver etching and an enchanting face..."
+
+/datum/gear/backpack/electropack/vibrator
+	name = "Remote Vibrator"
+	path = /obj/item/electropack/vibrator
+
+/datum/gear/backpack/electropack/vibrator/small
+	name = "Small Vibrator"
+	path = /obj/item/electropack/vibrator/small
+
+/datum/gear/backpack/strapon_strap
+	name = "Strapon Strap"
+	path = /obj/item/strapon_strap
 
 //MODIFIED COSTS - MODULAR SPLURT
 /datum/gear/backpack/tennis/tri

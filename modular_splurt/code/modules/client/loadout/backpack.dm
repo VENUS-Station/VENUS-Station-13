@@ -127,7 +127,6 @@
 /datum/gear/backpack/chastity_hypno/watch
 	name = "Hypnotic Chastity Watch"
 	path = /obj/item/chastity_hypno/watch
-	desc = "An elaborate pocketwatch, with a captivating silver etching and an enchanting face..."
 
 /datum/gear/backpack/electropack/vibrator
 	name = "Remote Vibrator"

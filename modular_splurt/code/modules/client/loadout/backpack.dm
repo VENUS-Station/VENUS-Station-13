@@ -133,7 +133,7 @@
 	path = /obj/item/electropack/vibrator
 
 /datum/gear/backpack/electropack/vibrator/small
-	name = "Small Vibrator"
+	name = "Small Remote Vibrator"
 	path = /obj/item/electropack/vibrator/small
 
 /datum/gear/backpack/strapon_strap

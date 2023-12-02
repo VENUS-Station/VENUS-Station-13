@@ -4730,6 +4730,8 @@
 #include "modular_splurt\code\modules\clothing\underwear\boxers.dm"
 #include "modular_splurt\code\modules\clothing\underwear\shirts.dm"
 #include "modular_splurt\code\modules\clothing\underwear\socks.dm"
+#include "modular_splurt\code\modules\clothing\wrists\_wrists.dm"
+#include "modular_splurt\code\modules\clothing\wrists\miscellaneous.dm"
 #include "modular_splurt\code\modules\crafting\eyepatchhud.dm"
 #include "modular_splurt\code\modules\custom_loadout\first_tier.dm"
 #include "modular_splurt\code\modules\discord\accountlink.dm"

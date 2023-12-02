@@ -1,3 +1,4 @@
+// Sprites by Keila
 /obj/item/clothing/wrists/armwarmer
 	name = "Arm Warmers"
 	desc = "A pair of arm warmers."

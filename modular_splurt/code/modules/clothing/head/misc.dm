@@ -132,3 +132,4 @@
 	icon_state = "hoodcowl"
 	item_state = "hoodcowl"
 	flags_inv = HIDEHAIR
+	dynamic_hair_suffix = ""

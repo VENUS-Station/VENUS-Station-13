@@ -46,7 +46,7 @@
 	var/sentence_length = input(user, "Please input the length of their sentence in minutes (0 for perma).", "Sentence Length", registered_id.sentence) as num|null
 	if(sentence_length == null | !user.Adjacent(src))
 		return FALSE
-	var/crimes = sanitize(input(user, "Please input their crimes.", "Crimes", registered_id.crime)) as text|null
+	var/crimes = sanitize(input(user, "Please input their crimes.", "Crimes", registered_id.crime) as text|null) 
 	if(crimes == null | !user.Adjacent(src))
 		return FALSE
 

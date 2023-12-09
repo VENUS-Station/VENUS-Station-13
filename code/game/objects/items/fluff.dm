@@ -123,6 +123,7 @@
 /obj/item/toy/fluff/bone_poly/squeak
 	name = "polychromic bone"
 	desc = "A polychromic chew bone. Makes a small squeak when squeezed."
+	actions_types = list(/datum/action/item_action/squeeze)
 
 /obj/item/toy/fluff/bone_poly/squeak/Initialize(mapload)
 	. = ..()

@@ -4494,6 +4494,7 @@
 #include "modular_splurt\code\game\machinery\limbgrower.dm"
 #include "modular_splurt\code\game\machinery\research_table.dm"
 #include "modular_splurt\code\game\machinery\computer\slavery.dm"
+#include "modular_splurt\code\game\machinery\computer\arcade\tetris.dm"
 #include "modular_splurt\code\game\machinery\doors\brigdoors.dm"
 #include "modular_splurt\code\game\machinery\doors\poddoor.dm"
 #include "modular_splurt\code\game\machinery\doors\shutters.dm"

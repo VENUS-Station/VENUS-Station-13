@@ -669,7 +669,7 @@
 	else
 		lines = list(
 			"'s tip gently smooches \the <b>[target]</b>'s, right before forcing its way right down [t_His] dickhole.",
-			"grinds [u_His] tip against \the <b>[target]</b>'s [t_genital_name], only to slide [u_His] whole [ui_ai_alerts] all the way down to [t_His] base.",
+			"grinds [u_His] tip against \the <b>[target]</b>'s [t_genital_name], only to slide [u_His] whole [u_genital_name] all the way down to [t_His] base.",
 			"makes \the <b>[target]</b>'s fat [t_genital_name] stretch and throb as the size of [u_His] [u_genital_name] makes its way right in."
 		)
 		set_is_fucking(target, CUM_TARGET_URETHRA, getorganslot(ORGAN_SLOT_PENIS))
@@ -758,9 +758,9 @@
 
 	if(target.is_fucking(src, CUM_TARGET_THIGHS))
 		lines = list(
-			"grinds and presses [u_His] thighs [pick("deeply ", "")] against \the <b>[target]</b>'s [genital_name], massaging it all over with [u_His] thighs.",
-			"squeezes \the <b>[target]</b>'s [genital_name] between [u_His] supple thighs, smothering it deep under [u_His] crotch.",
-			"rides \the <b>[target]</b>'s [genital_name] with [u_His] [pick("pudgy ", "soft ", "")]thighs, [t_He] can feel [u_His] flesh smothering it down."
+			"grinds and presses [u_His] thighs [pick("deeply ", "")] against \the <b>[target]</b>'s [genital_name], massaging it all over with [u_His] thighs",
+			"squeezes \the <b>[target]</b>'s [genital_name] between [u_His] supple thighs, smothering it deep under [u_His] crotch",
+			"rides \the <b>[target]</b>'s [genital_name] with [u_His] [pick("pudgy ", "soft ", "")]thighs, [t_He] can feel [u_His] flesh smothering it down"
 		)
 	else
 		lines = list(

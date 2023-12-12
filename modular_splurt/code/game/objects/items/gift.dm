@@ -16,6 +16,7 @@ GLOBAL_LIST_INIT(gift_item_blacklist_balanced, list(
     name = "christmas gift"
     desc = "It could be (almost) anything!"
 
+// Also excludes items from the non-modular blacklist (GLOB.gift_item_blacklist)
 /obj/item/a_gift/balanced/get_gift_type()
     if(!GLOB.possible_gifts.len)
         var/list/gift_types_list = subtypesof(/obj/item)

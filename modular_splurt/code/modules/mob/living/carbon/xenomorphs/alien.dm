@@ -16,7 +16,7 @@
 
 /mob/living/carbon/alien/humanoid/royal/queen/create_internal_organs()
 	if(!eggsac)
-		internal_organs -= new /obj/item/organ/alien/eggsac
+		internal_organs -=  /obj/item/organ/alien/eggsac
 	..()
 
 /mob/living/carbon/alien/humanoid/royal/queen/station

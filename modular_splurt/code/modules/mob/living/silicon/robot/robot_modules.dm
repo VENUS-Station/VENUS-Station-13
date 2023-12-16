@@ -188,6 +188,7 @@
 		"Drake" = image(icon = 'modular_splurt/icons/mob/widerobots_cargo.dmi', icon_state = "drakecargo"),
 		"Assaultron" = image(icon = 'modular_splurt/icons/mob/robots_cargo.dmi', icon_state = "assaultron_cargo"),
 		"Meka" = image(icon = 'modular_splurt/icons/mob/robots_32x64.dmi', icon_state = "mekacargo"), // SPLURT Addon
+		"Raptor V-4" = image(icon = 'modular_splurt/icons/mob/robots_64x45.dmi', icon_state = "caraptor-b") // ChompS Port (base); Additional spriting by @ertyuk421
 		)
 		var/list/L = list("Cargohound" = "cargohound", "Cargohound Dark" = "cargohounddark", "Vale" = "valecargo", "Feline" = "vixcargo")
 		for(var/a in L)
@@ -242,6 +243,11 @@
 			cyborg_base_icon = "vixcargo"
 			cyborg_icon_override = 'modular_splurt/icons/mob/widerobots_cargo.dmi'
 			sleeper_overlay = "vixcargo-sleeper"
+			dogborg = TRUE
+		if("Raptor V-4") // ChompS Port (base); Additional spriting by @ertyuk421
+			cyborg_base_icon = "caraptor"
+			cyborg_icon_override = 'modular_splurt/icons/mob/robots_64x45.dmi'
+			sleeper_overlay = "caraptor-sleeper"
 			dogborg = TRUE
 		else
 			return FALSE

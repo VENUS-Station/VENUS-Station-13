@@ -9,6 +9,8 @@ GLOBAL_LIST_INIT(gift_item_blacklist_balanced, list(
     /obj/item/nuke_core,
     /obj/item/bombcore,
     /obj/item/projectile,
+	/obj/item/chrono_eraser,
+	/obj/item/gun/energy/chrono_gun,
 	/obj/item/stack/tile
 ))
 

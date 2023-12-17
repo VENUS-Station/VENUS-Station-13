@@ -8,7 +8,8 @@ GLOBAL_LIST_INIT(gift_item_blacklist_balanced, list(
     /obj/item/cartridge/virus/syndicate,
     /obj/item/nuke_core,
     /obj/item/bombcore,
-    /obj/item/projectile
+    /obj/item/projectile,
+	/obj/item/stack/tile
 ))
 
 // New subtype of a_gift

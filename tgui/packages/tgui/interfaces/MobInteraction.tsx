@@ -85,7 +85,7 @@ type ContentPrefsInfo = {
 const INTERACTION_NORMAL = 0;
 const INTERACTION_LEWD = 1;
 const INTERACTION_EXTREME = 2;
-const INTERACTION_UNHOLY = 3; //SPLURT EDIT
+const INTERACTION_UNHOLY = 3; // SPLURT EDIT
 
 const INTERACTION_FLAG_ADJACENT = (1<<0);
 const INTERACTION_FLAG_EXTREME_CONTENT = (1<<1);
@@ -314,8 +314,9 @@ export const sortInteractions = (interactions, searchText = '', data) => {
       (interaction.type === INTERACTION_NORMAL ? true
         // Lewd interaction
         : interaction.type === INTERACTION_LEWD ? verb_consent
-          //Unholy interaction
-          : interaction.type === INTERACTION_UNHOLY ? verb_consent && unholy_pref
+          // Unholy interaction
+          : interaction.type === INTERACTION_UNHOLY
+            ? verb_consent && unholy_pref
             // Extreme interaction
             : verb_consent && extreme_pref)),
 
@@ -327,10 +328,11 @@ export const sortInteractions = (interactions, searchText = '', data) => {
         : interaction.type === INTERACTION_NORMAL ? true
           // Lewd interaction
           : interaction.type === INTERACTION_LEWD ? theyAllowLewd
-            //Unholy interaction
-            : interaction.type === INTERACTION_UNHOLY ? theyAllowLewd && theyAllowUnholy
+            // Unholy interaction
+            : interaction.type === INTERACTION_UNHOLY
+              ? theyAllowLewd && theyAllowUnholy
               // Extreme interaction
-                : theyAllowLewd && theyAllowExtreme)),
+              : theyAllowLewd && theyAllowExtreme)),
 
     // Is self
     filter(interaction =>
@@ -404,9 +406,10 @@ export const sortInteractions = (interactions, searchText = '', data) => {
     filter(interaction => interaction.target_num_feet
       ? (interaction.target_num_feet <= target_num_feet) : true),
 
-    //SPLURT EDIT - Target requires bondage
-    filter(interaction => interaction.interactionFlags & INTERACTION_FLAG_REQUIRE_BONDAGE
-      ? interaction.theyHaveBondage : true),
+    // SPLURT EDIT - Target requires bondage
+    filter(interaction =>
+      interaction.interactionFlags & INTERACTION_FLAG_REQUIRE_BONDAGE
+        ? interaction.theyHaveBondage : true),
 
     // Searching by "desc"
     sortBy(interaction => interaction.desc),

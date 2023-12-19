@@ -85,6 +85,7 @@ type ContentPrefsInfo = {
 const INTERACTION_NORMAL = 0;
 const INTERACTION_LEWD = 1;
 const INTERACTION_EXTREME = 2;
+const INTERACTION_UNHOLY = 3; //SPLURT EDIT
 
 const INTERACTION_FLAG_ADJACENT = (1<<0);
 const INTERACTION_FLAG_EXTREME_CONTENT = (1<<1);
@@ -92,6 +93,8 @@ const INTERACTION_FLAG_OOC_CONSENT = (1<<2);
 const INTERACTION_FLAG_TARGET_NOT_TIRED = (1<<3);
 const INTERACTION_FLAG_USER_IS_TARGET = (1<<4);
 const INTERACTION_FLAG_USER_NOT_TIRED = (1<<5);
+const INTERACTION_FLAG_UNHOLY_CONTENT = (1<<6);
+const INTERACTION_FLAG_REQUIRE_BONDAGE = (1<<7);
 
 export const MobInteraction = (props, context) => {
   const { act, data } = useBackend<HeaderInfo>(context);
@@ -274,11 +277,14 @@ export const sortInteractions = (interactions, searchText = '', data) => {
     interaction => interaction.desc);
   const {
     extreme_pref,
+    unholy_pref,
     isTargetSelf,
     target_has_active_player,
     target_is_blacklisted,
     theyAllowExtreme,
     theyAllowLewd,
+    theyAllowUnholy,
+    theyHaveBondage,
     user_is_blacklisted,
     verb_consent,
 
@@ -308,8 +314,10 @@ export const sortInteractions = (interactions, searchText = '', data) => {
       (interaction.type === INTERACTION_NORMAL ? true
         // Lewd interaction
         : interaction.type === INTERACTION_LEWD ? verb_consent
-          // Extreme interaction
-          : verb_consent && extreme_pref)),
+          //Unholy interaction
+          : interaction.type === INTERACTION_UNHOLY ? verb_consent && unholy_pref
+            // Extreme interaction
+            : verb_consent && extreme_pref)),
 
     // Filter off interactions depending on target's pref
     filter(interaction =>
@@ -319,8 +327,10 @@ export const sortInteractions = (interactions, searchText = '', data) => {
         : interaction.type === INTERACTION_NORMAL ? true
           // Lewd interaction
           : interaction.type === INTERACTION_LEWD ? theyAllowLewd
-          // Extreme interaction
-            : theyAllowLewd && theyAllowExtreme)),
+            //Unholy interaction
+            : interaction.type === INTERACTION_UNHOLY ? theyAllowLewd && theyAllowUnholy
+              // Extreme interaction
+                : theyAllowLewd && theyAllowExtreme)),
 
     // Is self
     filter(interaction =>
@@ -393,6 +403,10 @@ export const sortInteractions = (interactions, searchText = '', data) => {
     // Target required feet amount
     filter(interaction => interaction.target_num_feet
       ? (interaction.target_num_feet <= target_num_feet) : true),
+
+    //SPLURT EDIT - Target requires bondage
+    filter(interaction => interaction.interactionFlags & INTERACTION_FLAG_REQUIRE_BONDAGE
+      ? interaction.theyHaveBondage : true),
 
     // Searching by "desc"
     sortBy(interaction => interaction.desc),

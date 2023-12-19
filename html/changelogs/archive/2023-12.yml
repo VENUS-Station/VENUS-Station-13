@@ -66,3 +66,7 @@
   SandPoot:
   - bugfix: required_from_user & target variables should check your requirements and
       the interaction's reqs more precisely.
+2023-12-19:
+  Anonymous:
+  - rscadd: Added action button to squeak the toy bone (like squeak-able balls have).
+  - soundadd: There's 1% chance of Tetris arcade machine being haunted by Swedish.

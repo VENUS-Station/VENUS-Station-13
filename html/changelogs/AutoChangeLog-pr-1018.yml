@@ -1,0 +1,5 @@
+author: Fabian272
+delete-after: true
+changes:
+  - tweak: Biogenerator no longer triggers my undiagnosed OCD.
+  - bugfix: Fixes a scrubber in Boxstation's security.

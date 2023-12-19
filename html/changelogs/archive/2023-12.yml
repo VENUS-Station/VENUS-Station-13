@@ -34,3 +34,44 @@
   - refactor: Small refactor of card code.
   - balance: Decreased cost of clothing items in loadout menu, certain items like
       modular computers and laptops, and some accessories.
+2023-12-10:
+  SandPoot:
+  - refactor: Optimizes interaction code.
+  - rscadd: Added a print button to the communication console's messages, disabled
+      auto-print as well.
+2023-12-11:
+  SandPoot:
+  - rscadd: Interaction subsystem reports initialized interactions during init.
+  - rscadd: Interaction subsystem shows some info at the MC tab.
+2023-12-13:
+  SandPoot:
+  - tweak: Changed some interaction requirements to make more sense.
+2023-12-14:
+  Anonymous:
+  - imageadd: 'Added new emojis for the PDA/OOC: clueless, dawgnotdoin, ratdoin, kisser,
+      painb (pain but larger), listening, ebin (:DD), fun, wew, eyebrow, terror, affliction,
+      payne, weh, wehh (larger), squeep, mosqueep, mosblep, malceiling.'
+  CEO of Mememotes:
+  - rscdel: my will to be productive and handle real problems
+  Yawet330:
+  - bugfix: 'EZfix: Sanitises prisoner names on old lockers.'
+2023-12-16:
+  Anonymous:
+  - rscadd: 'Added ERP Tags for Character Directory: "Top-Pref", "Bottom-Pref", "Submissive
+      Top", "Dominant Bottom".'
+  SandPoot:
+  - bugfix: Interactions that allow both exposed and unexposed can be done once again.
+  - code_imp: There are now unit tests for creating interactions incorrectly.
+2023-12-17:
+  SandPoot:
+  - bugfix: required_from_user & target variables should check your requirements and
+      the interaction's reqs more precisely.
+2023-12-19:
+  Anonymous:
+  - rscadd: Added action button to squeak the toy bone (like squeak-able balls have).
+  - soundadd: There's 1% chance of Tetris arcade machine being haunted by Swedish.
+  - tweak: Trencher uniform reskinned to be identical color of trencher coat.
+  - rscadd: New vocal barks for all that Attorney of the Ace talk.
+  Fabian272:
+  - tweak: Biogenerator no longer triggers my undiagnosed OCD.
+  - bugfix: Fixes a scrubber in Boxstation's security.

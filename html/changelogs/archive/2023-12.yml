@@ -59,3 +59,19 @@
   Anonymous:
   - rscadd: 'Added ERP Tags for Character Directory: "Top-Pref", "Bottom-Pref", "Submissive
       Top", "Dominant Bottom".'
+  SandPoot:
+  - bugfix: Interactions that allow both exposed and unexposed can be done once again.
+  - code_imp: There are now unit tests for creating interactions incorrectly.
+2023-12-17:
+  SandPoot:
+  - bugfix: required_from_user & target variables should check your requirements and
+      the interaction's reqs more precisely.
+2023-12-19:
+  Anonymous:
+  - rscadd: Added action button to squeak the toy bone (like squeak-able balls have).
+  - soundadd: There's 1% chance of Tetris arcade machine being haunted by Swedish.
+  - tweak: Trencher uniform reskinned to be identical color of trencher coat.
+  - rscadd: New vocal barks for all that Attorney of the Ace talk.
+  Fabian272:
+  - tweak: Biogenerator no longer triggers my undiagnosed OCD.
+  - bugfix: Fixes a scrubber in Boxstation's security.

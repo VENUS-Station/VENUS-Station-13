@@ -206,6 +206,18 @@
 			if(HAS_UNEXPOSED_GENITAL)
 				required_from_user_unexposed |= INTERACTION_REQUIRE_EYESOCKETS
 
+	//SPLURT EDIT
+	var/user_has_belly = self.has_belly()
+	switch(user_has_belly)
+		if(HAS_EXPOSED_GENITAL)
+			required_from_user_exposed |= INTERACTION_REQUIRE_BELLY
+		if(HAS_UNEXPOSED_GENITAL)
+			required_from_user_unexposed |= INTERACTION_REQUIRE_BELLY
+		if(TRUE)
+			required_from_user_exposed |= INTERACTION_REQUIRE_BELLY
+			required_from_user_unexposed |= INTERACTION_REQUIRE_BELLY
+	//SPLURT EDIT END
+
 	.["required_from_user_exposed"] = required_from_user_exposed
 	.["required_from_user_unexposed"] = required_from_user_unexposed
 	.["user_num_feet"] = self.get_num_feet()

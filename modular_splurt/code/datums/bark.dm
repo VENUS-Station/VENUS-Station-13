@@ -487,3 +487,8 @@
 	soundpath = 'modular_splurt/sound/voice/barks/ace_attorney/aa_blip_typewriter.ogg'
 	minspeed = 4
 	minvariance = 0
+
+/datum/bark/nomi
+	name = "Nomi"
+	id = "nomi"
+	soundpath = 'modular_splurt/sound/voice/barks/nomi.ogg'

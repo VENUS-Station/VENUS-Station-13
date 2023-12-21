@@ -1,0 +1,7 @@
+author: BongaTheProto
+delete-after: true
+changes:
+  - rscadd: Braixen plushie
+  - rscadd: A new vocal bark ;3
+  - bugfix: fixes belly related interactions
+  - rscdel: removes the undead quirk for now

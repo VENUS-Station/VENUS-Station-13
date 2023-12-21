@@ -75,3 +75,6 @@
   Fabian272:
   - tweak: Biogenerator no longer triggers my undiagnosed OCD.
   - bugfix: Fixes a scrubber in Boxstation's security.
+2023-12-21:
+  Fabian272:
+  - spellcheck: Fixed wrong brackets in enforcer mag names.

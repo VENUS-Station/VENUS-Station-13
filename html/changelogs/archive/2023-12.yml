@@ -76,5 +76,10 @@
   - tweak: Biogenerator no longer triggers my undiagnosed OCD.
   - bugfix: Fixes a scrubber in Boxstation's security.
 2023-12-21:
+  BongaTheProto:
+  - rscadd: Braixen plushie
+  - rscadd: A new vocal bark ;3
+  - bugfix: fixes belly related interactions
+  - rscdel: removes the undead quirk for now
   Fabian272:
   - spellcheck: Fixed wrong brackets in enforcer mag names.

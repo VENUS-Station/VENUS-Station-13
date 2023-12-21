@@ -219,7 +219,7 @@
 	else
 		refractory_period = world.time + rand(300, 900) - get_sexual_potency()
 		// set_drugginess(rand(5, 10))
-	if(get_sexual_potency() == -1 || multiorgasms < get_sexual_potency()) // Climax limit | SPLURT EDIT: -1 sexual potency = no limit		if(ishuman(src))
+	if(get_sexual_potency() == -1 || multiorgasms < get_sexual_potency()) // Climax limit | SPLURT EDIT: -1 sexual potency = no limit
 		if(ishuman(src))
 			var/mob/living/carbon/human/H = src
 			if(!partner)

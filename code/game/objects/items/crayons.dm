@@ -62,6 +62,13 @@
 	// If the user can toggle the colour, a la vanilla spraycan
 	var/can_change_colour = FALSE
 
+	//SPLURT EDIT START
+
+	var/can_change_light_color = FALSE // If item can change light color of target item
+	var/toggle_change_light_color = FALSE // Toggled by user on item that CAN change light color
+
+	//SPLURT EDIT END
+
 	var/has_cap = FALSE
 	var/is_capped = FALSE
 
@@ -237,6 +244,9 @@
 	.["min_offset"] = -world.icon_size/2
 	.["max_offset"] = world.icon_size/2
 
+	.["can_change_light_color"] = can_change_light_color //SPLURT EDIT
+	.["toggle_change_light_color"] = toggle_change_light_color //SPLURT EDIT
+
 /obj/item/toy/crayon/ui_act(action, list/params)
 	if(..())
 		return
@@ -258,6 +268,11 @@
 				paint_mode = PAINT_NORMAL
 		if("select_colour")
 			. = can_change_colour && select_colour(usr)
+		//SPLURT EDIT START
+		if("toggle_change_light_color")
+			toggle_change_light_color = !toggle_change_light_color
+			. = TRUE
+		//SPLURT EDIT END
 		if("enter_text")
 			var/txt = stripped_input(usr,"Choose what to write.",
 				"Scribbles",default = text_buffer)
@@ -293,6 +308,12 @@
 	. = ..()
 	if(!proximity || !check_allowed_items(target))
 		return
+	//SPLURT EDIT START
+	if(toggle_change_light_color && !istype(target, /turf)) //Avoid changing turf light colors
+		target.set_light_color(paint_color)
+		target.update_light()
+		to_chat(user,"<span class='notice'>You have successfully changed the innate light color of [target].</span>")
+	//SPLURT EDIT END 
 	draw_on(target, user, proximity, params)
 
 /obj/item/toy/crayon/proc/draw_on(atom/target, mob/user, proximity, params)

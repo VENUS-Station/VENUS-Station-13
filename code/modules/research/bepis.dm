@@ -39,6 +39,15 @@
 		/obj/item/pen/survival,
 		/obj/item/circuitboard/machine/sleeper/party,
 		/obj/item/toy/sprayoncan,
+		//SPLURT EDIT START
+		/obj/item/multitool/advanced,
+		/obj/item/crowbar/advanced,
+		/obj/item/wirecutters/advanced,
+		/obj/item/wrench/advanced,
+		/obj/item/weldingtool/advanced,
+		/obj/effect/spawner/lootdrop/alien_glands/single,
+		/obj/effect/spawner/lootdrop/maintenance
+		//SPLURT EDIT END
 	)
 	var/static/list/item_list = list()
 

@@ -3,7 +3,6 @@
 	var/list/extra_designs = list(
 		"rld",
 		"flashdark",
-		"glowstick",
 		"spraycan_bluespace"
 	)
 	LAZYADD(design_ids, extra_designs)

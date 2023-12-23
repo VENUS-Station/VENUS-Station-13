@@ -8,6 +8,10 @@
 	departmental_flags |= DEPARTMENTAL_FLAG_SCIENCE
 	. = ..()
 
+/datum/design/jackhammer/New()
+	departmental_flags |= DEPARTMENTAL_FLAG_SCIENCE
+	. = ..()
+
 /datum/design/plasmacutter/New()
 	departmental_flags |= DEPARTMENTAL_FLAG_SCIENCE
 	. = ..()

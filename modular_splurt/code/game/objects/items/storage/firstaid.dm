@@ -75,7 +75,7 @@
 	name = "vaginal vigour pill bottle"
 	desc = "Increase the pleasure!"
 
-/obj/item/storage/pill_bottle/vaginal_pop/PopulateContents()
+/obj/item/storage/pill_bottle/vaginal_vigour/PopulateContents()
 	for(var/i in 1 to 10)
 		new /obj/item/reagent_containers/pill/vaginal_vigour(src)
 

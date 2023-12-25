@@ -84,5 +84,9 @@
   Fabian272:
   - spellcheck: Fixed wrong brackets in enforcer mag names.
 2023-12-25:
+  Yawet330:
+  - rscdel: Code that prevented specific mobs from being unable to be admin-assigned
+      languages w/o varedits (fuck you)
+  - rscadd: Flavortext by default to Xenomorphs, OOC notes to xenomorphs
   ariaworld:
   - rscadd: 'Body morpher quirk: Gender and body model change option.'

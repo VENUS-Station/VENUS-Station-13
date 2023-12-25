@@ -1,6 +1,0 @@
-author: Yawet330
-delete-after: true
-changes:
-  - rscdel: Code that prevented specific mobs from being unable to be admin-assigned
-      languages w/o varedits (fuck you)
-  - rscadd: Flavortext by default to Xenomorphs, OOC notes to xenomorphs

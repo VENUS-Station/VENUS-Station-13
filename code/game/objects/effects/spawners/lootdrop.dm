@@ -278,7 +278,7 @@
 		/obj/item/clothing/mask/gas/cyborg = 25,
 		"" = 75)
 
-/obj/effect/spawner/lootdrop/aimodule_harmless // These shouldn't allow the AI to start butchering people
+/obj/effect/spawner/lootdrop/ai_module_harmless // These shouldn't allow the AI to start butchering people
 	name = "harmless AI module spawner"
 	loot = list(
 				/obj/item/ai_module/core/full/asimov,
@@ -288,7 +288,7 @@
 				/obj/item/ai_module/core/full/paladin
 				)
 
-/obj/effect/spawner/lootdrop/aimodule_neutral // These shouldn't allow the AI to start butchering people without reason
+/obj/effect/spawner/lootdrop/ai_module_neutral // These shouldn't allow the AI to start butchering people without reason
 	name = "neutral AI module spawner"
 	loot = list(
 				/obj/item/ai_module/core/full/corp,
@@ -301,7 +301,7 @@
 				/obj/item/ai_module/core/full/hulkamania
 				)
 
-/obj/effect/spawner/lootdrop/aimodule_harmful // These will get the shuttle called
+/obj/effect/spawner/lootdrop/ai_module_harmful // These will get the shuttle called
 	name = "harmful AI module spawner"
 	loot = list(
 				/obj/item/ai_module/core/full/antimov,

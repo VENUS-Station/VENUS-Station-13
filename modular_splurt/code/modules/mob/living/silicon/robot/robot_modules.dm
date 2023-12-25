@@ -24,7 +24,7 @@
 			"Robo-Brain" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "robobrain"),
 			"Cyclone" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "cyclone")
 			)
-		stand_icons = sortList(stand_icons)
+		stand_icons = sort_list(stand_icons)
 	var/stand_borg_icon = show_radial_menu(R, R , stand_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
 	if(!stand_borg_icon)
 		return
@@ -106,7 +106,7 @@
 			"BootyM" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "bootystandardM"),
 			"BootyS" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "bootystandardS")
 		)
-		clown_icons = sortList(clown_icons)
+		clown_icons = sort_list(clown_icons)
 	var/clown_borg_icon = show_radial_menu(R, R , clown_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
 	if(!clown_borg_icon)
 		return

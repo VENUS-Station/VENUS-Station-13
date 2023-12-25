@@ -13322,7 +13322,7 @@
 	name = "Core Modules";
 	req_access_txt = "20"
 	},
-/obj/effect/spawner/lootdrop/aimodule_harmful{
+/obj/effect/spawner/lootdrop/ai_module_harmful{
 	fan_out_items = 1;
 	lootcount = 2;
 	lootdoubles = 0
@@ -30881,7 +30881,7 @@
 /area/ai_monitored/turret_protected/ai_upload)
 "clQ" = (
 /obj/structure/table/reinforced,
-/obj/effect/spawner/lootdrop/aimodule_neutral{
+/obj/effect/spawner/lootdrop/ai_module_neutral{
 	fan_out_items = 1;
 	lootcount = 3;
 	lootdoubles = 0
@@ -100603,12 +100603,12 @@
 	name = "Core Modules";
 	req_access_txt = "20"
 	},
-/obj/effect/spawner/lootdrop/aimodule_harmless{
+/obj/effect/spawner/lootdrop/ai_module_harmless{
 	fan_out_items = 1;
 	lootcount = 3;
 	lootdoubles = 0
 	},
-/obj/effect/spawner/lootdrop/aimodule_lewd{
+/obj/effect/spawner/lootdrop/ai_module_lewd{
 	fan_out_items = 1;
 	lootcount = 3;
 	lootdoubles = 0

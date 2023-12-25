@@ -83,3 +83,6 @@
   - rscdel: removes the undead quirk for now
   Fabian272:
   - spellcheck: Fixed wrong brackets in enforcer mag names.
+2023-12-25:
+  ariaworld:
+  - rscadd: 'Body morpher quirk: Gender and body model change option.'

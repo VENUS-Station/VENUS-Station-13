@@ -263,7 +263,7 @@
 
 /datum/quirk/healing_factor
 	name = "Healing Factor"
-	desc = "Your body possesses a differentiated reconstutitive ability, allowing you to slowly heal from injuries. Note, however, that critical injuries and wounds or genetic damage will still require medical attention."
+	desc = "Your body possesses a differentiated reconstutitive ability, allowing you to slowly heal from injuries. Note, however, that critical injuries, wounds or genetic damage will still require medical attention."
 	value = 2
 	mob_trait = TRAIT_HEALING_FACTOR
 	gain_text = span_notice("You feel a surge of reconstutitive vitality coursing through your body.")

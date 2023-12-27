@@ -47,3 +47,4 @@
 #define TRAIT_BODY_MORPHER		"body_morpher"
 #define TRAIT_HALLOWED			"hallowed"
 #define TRAIT_MESSY				"messy"
+#define TRAIT_HEALING_FACTOR    "healing_factor"

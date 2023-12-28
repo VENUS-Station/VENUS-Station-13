@@ -39,7 +39,7 @@
 
 /datum/design/spraycan_bluespace
 	name = "Bluespace Spray Can"
-	desc= "A spray can infused with bluespace technology that can change the color of the sprayed object's innate light."
+	desc= "A spray can infused with bluespace technology, that is also able to change the color of the sprayed object's innate light emissions."
 	id = "spraycan_bluespace"
 	build_type = PROTOLATHE
 	materials = list(/datum/material/iron = 2250, /datum/material/glass = 2250, /datum/material/bluespace = 500)

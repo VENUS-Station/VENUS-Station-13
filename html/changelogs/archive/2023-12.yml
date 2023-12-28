@@ -103,3 +103,7 @@
   SandPoot:
   - tweak: Adds some shiny buttons to admin select equipment.
   - rscdel: Removes old quick spawn.
+2023-12-28:
+  battlestar-gafraktika:
+  - rscadd: New Silver Love Co. Shock Collar Kit Box.
+  - rscadd: The above is also in the loadout screen.

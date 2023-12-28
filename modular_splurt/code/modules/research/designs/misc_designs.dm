@@ -38,7 +38,7 @@
 	departmental_flags = DEPARTMENTAL_FLAG_CARGO | DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
 
 /datum/design/spraycan_bluespace
-	name = "Bluespace Spraycan"
+	name = "Bluespace Spray Can"
 	desc= "A spray can infused with bluespace technology that can change the color of the sprayed object's innate light."
 	id = "spraycan_bluespace"
 	build_type = PROTOLATHE

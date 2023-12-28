@@ -99,3 +99,7 @@
   - rscadd: Flavortext by default to Xenomorphs, OOC notes to xenomorphs
   ariaworld:
   - rscadd: 'Body morpher quirk: Gender and body model change option.'
+2023-12-27:
+  SandPoot:
+  - tweak: Adds some shiny buttons to admin select equipment.
+  - rscdel: Removes old quick spawn.

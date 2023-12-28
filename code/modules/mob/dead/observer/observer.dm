@@ -840,7 +840,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 	update_icon()
 
-/mob/dead/observer/canUseTopic(atom/movable/M, be_close=FALSE, no_dextery=FALSE, no_tk=FALSE)
+/mob/dead/observer/canUseTopic(atom/movable/M, be_close=FALSE, no_dextery=FALSE, no_tk=FALSE, check_resting=FALSE)
 	return IsAdminGhost(usr)
 
 /mob/dead/observer/is_literate()
@@ -917,6 +917,14 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		SSpai.recruitWindow(src)
 	else
 		to_chat(usr, "Can't become a pAI candidate while not dead!")
+
+/* So long, Mafia mode, disabled for now
+/mob/dead/observer/verb/mafia_game_signup()
+	set category = "Ghost"
+	set name = "Signup for Mafia"
+	set desc = "Sign up for a game of Mafia to pass the time while dead."
+	mafia_signup()
+*/
 
 /mob/dead/observer/verb/mafia_game_signup()
 	set category = "Ghost"

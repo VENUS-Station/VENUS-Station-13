@@ -33,6 +33,12 @@
 #define CAN_CUM_INTO 			(1<<12) //Sandstorm change
 #define HAS_EQUIPMENT			(1<<13) //nother sandstorm change
 #define GENITAL_CAN_STUFF       (1<<14) //Splurt edit, used for pregnancy
+#define GENITAL_CHASTENED		(1<<15) //SPLURT edit
+#define GENITAL_IMPOTENT		(1<<16) //SPLURT edit
+#define GENITAL_EDGINGONLY		(1<<17) //SPLURT edit
+#define GENITAL_DISAPPOINTING	(1<<18)	//SPLURT edit
+#define GENITAL_OVERSTIM		(1<<19) //SPLURT edit
+#define GENITAL_HYPERSENS		(1<<20) //SPLURT edit
 
 
 #define DEF_VAGINA_SHAPE	"Human"
@@ -99,11 +105,6 @@
 
 #define CITADEL_MENTOR_OOC_COLOUR "#224724"
 
-//xenobio console upgrade stuff
-#define XENOBIO_UPGRADE_MONKEYS				1
-#define XENOBIO_UPGRADE_SLIMEBASIC			2
-#define XENOBIO_UPGRADE_SLIMEADV			4
-
 //Citadel toggles because bitflag memes
 #define MEDIHOUND_SLEEPER	(1<<0)
 #define EATING_NOISES		(1<<1)
@@ -123,6 +124,10 @@
 #define TRASH_FORCEFEED		(1<<15)
 #define BUTT_ENLARGEMENT	(1<<16)
 #define BELLY_INFLATION		(1<<17)
+#define CHASTITY			(1<<18)
+#define STIMULATION			(1<<19)
+#define EDGING				(1<<20)
+#define CUM_ONTO			(1<<21)
 //Note: reminder, if you're a coder adding more bitflags here in the event we add more horny things, the maximum is (1<<23).
 #define TOGGLES_CITADEL 0
 

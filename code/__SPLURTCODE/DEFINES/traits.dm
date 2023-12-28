@@ -7,12 +7,22 @@
 // Trait types
 #define SLAVER_TRAIT			"slaver"
 #define PREGNANCY_TRAIT			"pregnancy"
+#define DUMB_CUM_TRAIT			"dumb4cum"
 
 // Quirk traits
 #define TRAIT_HYPNOTIC_GAZE		"hypnotic_gaze"
 #define TRAIT_GFLUID_DETECT		"genital_fluid_detect"
 #define TRAIT_ASHRESISTANCE		"ash_resistance"
-#define TRAIT_PHARMA			"hepatic_pharmacokinesis"
+
+#define TRAIT_CHASTENED_ANUS "chastened_anus"
+#define TRAIT_IMPOTENT_ANUS "impotent_anus"
+#define TRAIT_EDGINGONLY_ANUS "edgingonly_anus"
+#define TRAIT_DISAPPOINTING_ANUS "disappointing_anus"
+#define TRAIT_OVERSTIM_ANUS "overstim_anus"
+#define TRAIT_HYPERSENS_ANUS "hypersens_anus"
+
+// Hyperstation traits
+#define TRAIT_PHARMA            "hepatic_pharmacokinesis"
 #define TRAIT_CHOKE_SLUT		"choke_slut"
 #define TRAIT_BLOODFLEDGE		"bloodfledge"
 #define TRAIT_INCUBUS			"incubus"
@@ -29,4 +39,11 @@
 #define TRAIT_DISTANT			"headpat_hater"
 #define TRAIT_ILLITERATE		"illiterate"
 #define TRAIT_HIDE_BACKPACK		"hide_backpack"
-#define TRAIT_DUMB4CUM			"dumb4cum"
+#define TRAIT_DUMB_CUM			"dumb_for_cum_base"
+#define TRAIT_DUMB_CUM_CRAVE	"dumb_for_cum_need"
+#define TRAIT_RAD_FIEND     	"RadFiend"
+#define TRAIT_UNDEAD			"Undead"
+#define TRAIT_COSGLOW			"cosmetic_glow"
+#define TRAIT_BODY_MORPHER		"body_morpher"
+#define TRAIT_HALLOWED			"hallowed"
+#define TRAIT_MESSY				"messy"

@@ -112,7 +112,6 @@
 	value_multiplier = new_value
 
 /datum/reagents/Destroy()
-	. = ..()
 	//We're about to delete all reagents, so lets cleanup
 	addiction_list.Cut()
 	var/list/cached_reagents = reagent_list
@@ -124,6 +123,7 @@
 	if(my_atom && my_atom.reagents == src)
 		my_atom.reagents = null
 	my_atom = null
+	return ..()
 
 // Used in attack logs for reagents in pills and such
 /datum/reagents/proc/log_list()
@@ -890,6 +890,7 @@
 				R.reaction_turf(A, R.volume * volume_modifier, show_message, from_gas)
 			if("OBJ")
 				R.reaction_obj(A, R.volume * volume_modifier, show_message)
+	SEND_SIGNAL(A, COMSIG_ATOM_EXPOSE_REAGENTS, cached_reagents, src, method, volume_modifier, show_message, from_gas)
 
 /datum/reagents/proc/holder_full()
 	if(total_volume >= maximum_volume)

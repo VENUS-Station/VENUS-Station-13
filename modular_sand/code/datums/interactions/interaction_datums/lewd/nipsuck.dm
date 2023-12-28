@@ -1,11 +1,10 @@
 /datum/interaction/lewd/nipsuck
 	description = "Suck their nipples."
-	require_target_breasts = REQUIRE_EXPOSED
-	require_user_mouth = TRUE
+	required_from_user = INTERACTION_REQUIRE_MOUTH
+	required_from_target_exposed = INTERACTION_REQUIRE_BREASTS
 	write_log_user = "sucked nipples"
 	write_log_target = "had their nipples sucked by"
 	interaction_sound = null
-	max_distance = 1
 
 /datum/interaction/lewd/nipsuck/display_interaction(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	if((user.a_intent == INTENT_HELP) || (user.a_intent == INTENT_DISARM))
@@ -13,7 +12,8 @@
 				pick(span_lewd("\The <b>[user]</b> gently sucks on \the <b>[target]</b>'s [pick("nipple", "nipples")]."),
 					span_lewd("\The <b>[user]</b> gently nibs \the <b>[target]</b>'s [pick("nipple", "nipples")]."),
 					span_lewd("\The <b>[user]</b> licks \the <b>[target]</b>'s [pick("nipple", "nipples")].")))
-		if(target.has_breasts(REQUIRE_EXPOSED))
+		var/has_breasts = target.has_breasts()
+		if(has_breasts == TRUE || has_breasts == HAS_EXPOSED_GENITAL)
 			var/modifier = 1
 			var/obj/item/organ/genital/breasts/B = target.getorganslot(ORGAN_SLOT_BREASTS)
 			switch(B.size)
@@ -22,18 +22,19 @@
 				if("f", "g", "h")
 					modifier = 3
 				else
-					if(B.size in B.breast_values)
-						modifier = clamp(B.breast_values[B.size] - 5, 0, INFINITY)
+					if(B.size in GLOB.breast_values)
+						modifier = clamp(GLOB.breast_values[B.size] - 5, 0, INFINITY)
 					else
 						modifier = 1
 			if(B.fluid_id)
-				user.reagents.add_reagent(B.fluid_id, rand(1,2 * modifier))
+				user.reagents.add_reagent(B.fluid_id, rand(1,2 * modifier) * user.get_fluid_mod(B)) //SPLURT edit
 
 	if(user.a_intent == INTENT_HARM)
 		user.visible_message(
 				pick(span_lewd("\The <b>[user]</b> bites \the <b>[target]</b>'s [pick("nipple", "nipples")]."),
 					span_lewd("\The <b>[user]</b> aggressively sucks \the <b>[target]</b>'s [pick("nipple", "nipples")].")))
-		if(target.has_breasts(REQUIRE_EXPOSED))
+		var/has_breasts = target.has_breasts()
+		if(has_breasts == TRUE || has_breasts == HAS_EXPOSED_GENITAL)
 			var/modifier = 1
 			var/obj/item/organ/genital/breasts/B = target.getorganslot(ORGAN_SLOT_BREASTS)
 			switch(B.size)
@@ -42,8 +43,8 @@
 				if("f", "g", "h")
 					modifier = 3
 				else
-					if(B.size in B.breast_values)
-						modifier = clamp(B.breast_values[B.size] - 5, 0, INFINITY)
+					if(B.size in GLOB.breast_values)
+						modifier = clamp(GLOB.breast_values[B.size] - 5, 0, INFINITY)
 					else
 						modifier = 1
 			if(B.fluid_id)
@@ -54,7 +55,8 @@
 				pick(span_lewd("\The <b>[user]</b> sucks \the <b>[target]</b>'s [pick("nipple", "nipples")] intently."),
 					span_lewd("\The <b>[user]</b> feasts \the <b>[target]</b>'s [pick("nipple", "nipples")]."),
 					span_lewd("\The <b>[user]</b> glomps \the <b>[target]</b>'s [pick("nipple", "nipples")].")))
-		if(target.has_breasts(REQUIRE_EXPOSED))
+		var/has_breasts = target.has_breasts()
+		if(has_breasts == TRUE || has_breasts == HAS_EXPOSED_GENITAL)
 			var/modifier = 1
 			var/obj/item/organ/genital/breasts/B = target.getorganslot(ORGAN_SLOT_BREASTS)
 			switch(B.size)
@@ -63,8 +65,8 @@
 				if("f", "g", "h")
 					modifier = 3
 				else
-					if(B.size in B.breast_values)
-						modifier = clamp(B.breast_values[B.size] - 5, 0, INFINITY)
+					if(B.size in GLOB.breast_values)
+						modifier = clamp(GLOB.breast_values[B.size] - 5, 0, INFINITY)
 					else
 						modifier = 1
 			if(B.fluid_id)
@@ -90,7 +92,7 @@
 						span_lewd("\The <b>[target]</b> trembles as their breasts get molested."),
 						span_lewd("\The <b>[target]</b> quivers in arousal as \the <b>[user]</b> delights themselves on their milk.")))
 			if(target.get_lust() < 5)
-				target.set_lust(5)
+				target.handle_post_sex(5, CUM_TARGET_MOUTH, user, ORGAN_SLOT_BREASTS) //SPLURT edit
 		if(target.a_intent == INTENT_DISARM)
 			if (target.restrained())
 				if(!target.has_breasts())
@@ -120,7 +122,7 @@
 							span_lewd("\The <b>[target]</b> teasingly caresses \the <b>[user]</b>'s neck."),
 							span_lewd("\The <b>[target]</b> rubs their breasts against \the <b>[user]</b>'s head.")))
 			if(target.get_lust() < 10)
-				target.add_lust(1)
+				target.handle_post_sex(NORMAL_LUST, CUM_TARGET_MOUTH, user, ORGAN_SLOT_BREASTS) //SPLURT edit
 	if(target.a_intent == INTENT_GRAB)
 		user.visible_message(
 				pick(span_lewd("\The <b>[target]</b> grips \the <b>[user]</b>'s head tight."),

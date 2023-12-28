@@ -92,6 +92,8 @@
 
 /obj/item/paper/contract/infernal/New(atom/loc, mob/living/nTarget, datum/mind/nOwner)
 	..()
+	if(!nOwner || !nTarget)
+		return
 	owner = nOwner
 	devil_datum = owner.has_antag_datum(/datum/antagonist/devil)
 	target = nTarget
@@ -190,9 +192,6 @@
 	if(!user.IsAdvancedToolUser() || !user.is_literate())
 		to_chat(user, "<span class='notice'>You don't know how to read or write.</span>")
 		return 0
-	if(HAS_TRAIT(user, TRAIT_DUMB4CUM))
-		to_chat(user, "<span class='love'>You can't think of anything but cum right now.</span>")
-		return
 	if(user.mind != target)
 		to_chat(user, "<span class='notice'>Your signature simply slides off the sheet, it seems this contract is not meant for you to sign.</span>")
 		return 0

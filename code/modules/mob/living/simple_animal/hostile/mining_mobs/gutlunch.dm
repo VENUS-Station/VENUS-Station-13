@@ -10,7 +10,7 @@
 	speak_emote = list("warbles", "quavers")
 	emote_hear = list("trills.")
 	emote_see = list("sniffs.", "burps.")
-	weather_immunities = list("lava","ash")
+	weather_immunities = list(TRAIT_LAVA_IMMUNE, TRAIT_ASHSTORM_IMMUNE)
 	faction = list("mining", "ashwalker")
 	density = FALSE
 	speak_chance = 1
@@ -129,11 +129,6 @@
 //Gutlunch udder
 /obj/item/udder/gutlunch
 	name = "nutrient sac"
-
-/obj/item/udder/gutlunch/Initialize(mapload)
-	. = ..()
-	reagents = new(50)
-	reagents.my_atom = src
 
 /obj/item/udder/gutlunch/generateMilk()
 	if(prob(60))

@@ -13,6 +13,18 @@
 	ckeywhitelist = list()
 	donator_group_id = DONATOR_GROUP_TIER_1
 
+/datum/gear/donator/uniform/chameleon
+	name = "Chameleon suit"
+	path = /obj/item/clothing/under/chameleon
+	ckeywhitelist = list()
+	donator_group_id = DONATOR_GROUP_TIER_1
+
+/datum/gear/donator/uniform/victorian_purple
+	name = "Purple Victorian Suit"
+	path = /obj/item/clothing/under/rank/civilian/victorian_purple
+	ckeywhitelist = list()
+	donator_group_id = DONATOR_GROUP_TIER_1
+
 //Head
 /datum/gear/donator/head/crown/fancy
 	name = "magnificent crown"
@@ -49,5 +61,29 @@
 /datum/gear/donator/backpack/bellypen
 	name = "Belladine nectar autoinjector"
 	path = /obj/item/reagent_containers/hypospray/medipen/bellygrowth
+	ckeywhitelist = list()
+	donator_group_id = DONATOR_GROUP_TIER_1
+
+/datum/gear/donator/backpack/plushbox/deluxe
+	name = "Deluxe Plushie Choice Box"
+	path = /obj/item/choice_beacon/box/plushie/deluxe
+	ckeywhitelist = list()
+	donator_group_id = DONATOR_GROUP_TIER_1
+
+/datum/gear/donator/uniform/jester_suit
+	name = "Jester Suit"
+	path = /obj/item/clothing/under/rank/civilian/clown/jester
+	ckeywhitelist = list()
+	donator_group_id = DONATOR_GROUP_TIER_1
+
+/datum/gear/donator/head/jester_hat
+	name = "Jester Hat"
+	path = /obj/item/clothing/head/jester
+	ckeywhitelist = list()
+	donator_group_id = DONATOR_GROUP_TIER_1
+
+/datum/gear/donator/shoes/jester_shoes
+	name = "Jester Shoes"
+	path = /obj/item/clothing/shoes/clown_shoes/jester
 	ckeywhitelist = list()
 	donator_group_id = DONATOR_GROUP_TIER_1

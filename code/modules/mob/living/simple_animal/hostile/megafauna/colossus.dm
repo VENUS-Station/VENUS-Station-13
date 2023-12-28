@@ -43,7 +43,12 @@ Difficulty: Very Hard
 	move_to_delay = 10
 	ranged = 1
 	pixel_x = -32
-	del_on_death = 1
+	maptext_height = 96
+	maptext_width = 96
+	del_on_death = TRUE
+	achievement_type = /datum/award/achievement/boss/colossus_kill
+	crusher_achievement_type = /datum/award/achievement/boss/colossus_crusher
+	score_achievement_type = /datum/award/score/colussus_score
 	crusher_loot = list(/obj/structure/closet/crate/necropolis/colossus/crusher)
 	loot = list(/obj/structure/closet/crate/necropolis/colossus)
 	butcher_results = list(/obj/item/stack/ore/diamond = 5, /obj/item/stack/sheet/sinew = 5, /obj/item/stack/sheet/animalhide/ashdrake = 10, /obj/item/stack/sheet/bone = 30)
@@ -244,6 +249,8 @@ Difficulty: Very Hard
 	var/list/stored_items = list()
 	var/list/blacklist = list()
 
+GLOBAL_VAR(blackbox_smartfridge)
+
 /obj/machinery/smartfridge/black_box/ComponentInitialize()
 	. = ..()
 	AddElement(/datum/element/update_icon_blocker)
@@ -258,11 +265,10 @@ Difficulty: Very Hard
 
 /obj/machinery/smartfridge/black_box/Initialize()
 	. = ..()
-	var/static/obj/machinery/smartfridge/black_box/current
-	if(current && current != src)
+	if(GLOB.blackbox_smartfridge && GLOB.blackbox_smartfridge != src)
 		qdel(src, force=TRUE)
 		return
-	current = src
+	GLOB.blackbox_smartfridge = src
 	ReadMemory()
 
 /obj/machinery/smartfridge/black_box/process()
@@ -309,6 +315,8 @@ Difficulty: Very Hard
 	if(force)
 		for(var/thing in src)
 			qdel(thing)
+		if(GLOB.blackbox_smartfridge == src)
+			GLOB.blackbox_smartfridge = null
 		return ..()
 	else
 		return QDEL_HINT_LETMELIVE

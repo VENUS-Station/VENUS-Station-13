@@ -1,17 +1,15 @@
 /datum/interaction/lewd/oral
 	description = "Go down on them."
-	require_user_mouth = TRUE
-	require_target_vagina = REQUIRE_EXPOSED
+	required_from_user = INTERACTION_REQUIRE_MOUTH
+	required_from_target_exposed = INTERACTION_REQUIRE_VAGINA
 	write_log_user = "gave head to"
 	write_log_target = "was given head by"
 	interaction_sound = null
-	max_distance = 1
 	var/fucktarget = "vagina"
 
 /datum/interaction/lewd/oral/blowjob
 	description = "Suck them off."
-	require_target_vagina = null
-	require_target_penis = REQUIRE_EXPOSED
+	required_from_target_exposed = INTERACTION_REQUIRE_PENIS
 	fucktarget = "penis"
 
 /datum/interaction/lewd/oral/display_interaction(mob/living/user, mob/living/partner)
@@ -125,4 +123,4 @@
 									'modular_sand/sound/interactions/bj11.ogg'), 50, 1, -1)
 	user.visible_message(span_lewd("<b>\The [user]</b> [message]"), ignored_mobs = user.get_unconsenting())
 	if(fucktarget != "penis" || partner.can_penetrating_genital_cum())
-		partner.handle_post_sex(lust_increase, CUM_TARGET_MOUTH, user)
+		partner.handle_post_sex(lust_increase, CUM_TARGET_MOUTH, user, ORGAN_SLOT_PENIS) //SPLURT edit

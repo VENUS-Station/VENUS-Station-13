@@ -253,3 +253,30 @@
 	// Set flavor text
 	name = "broken hand mirror"
 	desc = "You won\'t get much use out of it."
+
+/obj/item/choice_beacon/box/plushie/deluxe
+	name = "Deluxe choice box (plushie)"
+	desc =  "Using the power of quantum entanglement, this box contains five times every plush, until the moment it is opened!"
+	var/uses = 5
+
+/obj/item/choice_beacon/box/plushie/deluxe/spawn_option(choice, mob/living/M)
+	//I don't wanna recode two different procs just for it to do the same as doing this
+	if(uses > 1)
+		var/obj/item/choice_beacon/box/plushie/deluxe/replace = new
+		replace.uses = uses - 1
+		M.put_in_hands(replace)
+	. = ..()
+
+/obj/item/choice_beacon/ouija
+	name = "spirit board delivery beacon"
+	desc = "Ghost communication on demand! It is unclear how this thing is still operational."
+
+/obj/item/choice_beacon/ouija/generate_display_names()
+	var/static/list/ouija_spaghetti_list
+	if(!ouija_spaghetti_list)
+		ouija_spaghetti_list = list()
+		var/list/templist = list(/obj/structure/spirit_board)
+		for(var/V in templist)
+			var/atom/A = V
+			ouija_spaghetti_list[initial(A.name)] = A
+	return ouija_spaghetti_list

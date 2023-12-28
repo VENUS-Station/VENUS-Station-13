@@ -58,6 +58,8 @@
 								"Exosuit Equipment",
 								"Exosuit Ammunition",
 								"Cyborg Upgrade Modules",
+								"MODsuit Chassis",
+								"MODsuit Modules",
 								"Cybernetics",
 								"Implants",
 								"Control Interfaces",
@@ -69,6 +71,11 @@
 	rmat = AddComponent(/datum/component/remote_materials, "mechfab", mapload && link_on_init, _after_insert=CALLBACK(src, .proc/AfterMaterialInsert))
 
 	RefreshParts() //Recalculating local material sizes if the fab isn't linked
+	return ..()
+
+/obj/machinery/mecha_part_fabricator/Destroy()
+	QDEL_NULL(stored_research)
+	rmat = null
 	return ..()
 
 /obj/machinery/mecha_part_fabricator/RefreshParts()

@@ -3,6 +3,20 @@
 	icon = 'modular_splurt/icons/obj/clothing/head.dmi'
 	mob_overlay_icon = 'modular_splurt/icons/mob/clothing/head.dmi'
 
+/obj/item/clothing/head/jester
+	unique_reskin = list(
+		"Original" = list(
+			"icon_state" = "jester_hat",
+			"icon" = 'icons/obj/clothing/hats.dmi',
+			"mob_overlay_icon" = null,
+		),
+		"Stripped" = list(
+			"icon_state" = "striped_jester_hat",
+			"icon" = 'modular_splurt/icons/obj/clothing/head.dmi',
+			"mob_overlay_icon" = 'modular_splurt/icons/mob/clothing/head.dmi',
+		)
+	)
+
 /obj/item/clothing/head/bridgeofficer
 	name = "bridge officer cap"
 	desc = "A generic blue cap for the back ground officer"
@@ -92,3 +106,30 @@
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
+/obj/item/clothing/head/invisihat
+	name = "invisifiber hat"
+	desc = "A hat made of transparent fibers, often used with reinforcement kits."
+	icon = 'modular_splurt/icons/obj/clothing/head.dmi'
+	// No overlay, because they're invisible!
+	icon_state = "hat_transparent"
+	// Makes the invisible hat not screw up hair.
+	dynamic_hair_suffix = ""
+
+/obj/item/clothing/head/clussy_wig
+	name = "Clussy wig"
+	desc = "Wearing this will certainly make your pussy honk..."
+	icon = 'modular_splurt/icons/obj/clothing/head.dmi'
+	mob_overlay_icon = 'modular_splurt/icons/mob/clothing/head.dmi'
+	icon_state = "clussy_wig"
+	item_state = "clussy_wig"
+	flags_inv = HIDEHAIR
+
+/obj/item/clothing/head/hoodcowl
+	name = "Hood cowl"
+	desc = "A dirty, worn-down rag with crudely cut-out eyeholes that barely qualifies as clothing."
+	icon = 'modular_splurt/icons/obj/clothing/head.dmi'
+	mob_overlay_icon = 'modular_splurt/icons/mob/clothing/head.dmi'
+	icon_state = "hoodcowl"
+	item_state = "hoodcowl"
+	flags_inv = HIDEHAIR
+	dynamic_hair_suffix = ""

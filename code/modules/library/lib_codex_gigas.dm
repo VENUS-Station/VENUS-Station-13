@@ -27,9 +27,6 @@
 	if(!user.is_literate())
 		to_chat(user, "<span class='notice'>You skim through the book but can't comprehend any of it.</span>")
 		return
-	if(HAS_TRAIT(user, TRAIT_DUMB4CUM))
-		to_chat(user, "<span class='love'>You can't think of anything but cum right now.</span>")
-		return
 	if(inUse)
 		to_chat(user, "<span class='notice'>Someone else is reading it.</span>")
 	if(ishuman(user))
@@ -55,7 +52,7 @@
 			correctness = 100
 		correctness -= U.getOrganLoss(ORGAN_SLOT_BRAIN) * 0.5 //Brain damage makes researching hard.
 		speed += U.getOrganLoss(ORGAN_SLOT_BRAIN) * 3
-	if(do_after(user, speed, 0, user))
+	if(do_after(user, speed, user))
 		var/usedName = devilName
 		if(!prob(correctness))
 			usedName += "x"

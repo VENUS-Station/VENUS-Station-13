@@ -588,7 +588,7 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 
 //Can the mob see reagents inside of containers?
 /mob/proc/can_see_reagents()
-	return stat == DEAD || silicon_privileges //Dead guys and silicons can always see reagents
+	return stat == DEAD || silicon_privileges || HAS_TRAIT(src, TRAIT_REAGENT_SCANNER) //Dead guys and silicons can always see reagents
 
 /mob/proc/is_blind()
 	SHOULD_BE_PURE(TRUE)
@@ -600,9 +600,6 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 		return
 	if(!is_literate())
 		to_chat(src, "<span class='notice'>You try to read [O], but can't comprehend any of it.</span>")
-		return
-	if(HAS_TRAIT(src, TRAIT_DUMB4CUM))
-		to_chat(src, "<span class='love'>You try reading [O] but only warm seed comes to your mind.</span>")
 		return
 	return TRUE
 

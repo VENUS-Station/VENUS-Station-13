@@ -34,6 +34,7 @@
 	var/list/extra_titles = list(
 		"Security Commander",
 		"Head of Slutcurity",
+		"Head of Studcurity",
 		"Commissar"
 	)
 	if(SSevents.holidays && SSevents.holidays[HALLOWEEN])
@@ -60,7 +61,8 @@
 	alt_titles = list(
 		"Medical Director",
 		"Medical Administrator",
-		"Chief Heal Slut"
+		"Chief Heal Slut",
+		"Chief Heal Stud"
 	) // Sandcode do not have alt titles for CMO at the moment.
 
 
@@ -120,15 +122,24 @@
 	LAZYADD(alt_titles, extra_titles)
 	. = ..()
 
-/datum/job/janitor/New()
+/datum/job/janitor/New() // "Custodian" is formally an ERT Janitor's job title. It causes conflict with ID and manifest. Yell at upstream maintainer(s).
+	var/list/rem_titles = list(
+		"Custodian"
+	)
 	var/list/extra_titles = list(
+		"Custodial Technician",
 		"Slutty Maid"
 	)
+	LAZYREMOVE(alt_titles, rem_titles)
 	LAZYADD(alt_titles, extra_titles)
 	. = ..()
 
 /datum/job/chaplain/New() // Yell at upstream maintainer(s) to fix "Bichop" title.
+	var/list/rem_titles = list(
+		"Bichop"
+	)
 	var/list/extra_titles = list(
+		"Bishop",
 		"Priestess",
 		"Prior",
 		"Monk",
@@ -136,6 +147,7 @@
 		"Counselor"
 	)
 	LAZYADD(alt_titles, extra_titles)
+	LAZYREMOVE(alt_titles, rem_titles)
 	. = ..()
 
 /datum/job/clown // Sorry, but no TWO entertainer titles.
@@ -199,14 +211,18 @@
 		"Toxins Researcher",
 		"Research Intern",
 		"Junior Scientist",
-		"Rack Researcher"
+		"Rack Researcher",
+		"Nanite Programmer",
+		"Tetromino Researcher",
+		"Xenoarchaeologist"
 	)
 	LAZYADD(alt_titles, extra_titles)
 	. = ..()
 
 /datum/job/roboticist/New()
 	var/list/extra_titles = list(
-		"Ripperdoc"
+		"Ripperdoc",
+		"MOD Mechanic"
 	)
 	LAZYADD(alt_titles, extra_titles)
 	. = ..()
@@ -218,7 +234,8 @@
 		"Alchemist",
 		"Apothecarist",
 		"Chemical Plumber",
-		"Chemi-Slut"
+		"Chemi-Slut",
+		"Chemi-Stud"
 	)
 	LAZYADD(alt_titles, extra_titles)
 	. = ..()
@@ -229,7 +246,8 @@
 		"Medical Intern",
 		"Medical Resident",
 		"Medtech",
-		"Medi-Slut"
+		"Medi-Slut",
+		"Medi-Stud"
 	)
 	LAZYADD(alt_titles, extra_titles)
 	. = ..()
@@ -244,7 +262,9 @@
 		"Sex Educator",
 		"Rental Mommy",
 		"Rental Daddy",
-		"Psycholo-Slut"
+		"Psycholo-Slut",
+		"Psycholo-Stud",
+		"Sexual Advisor"
 	)
 	LAZYADD(alt_titles, extra_titles)
 	. = ..()
@@ -252,7 +272,8 @@
 /datum/job/geneticist/New()
 	var/list/extra_titles = list(
 		"Genetics Researcher",
-		"Gene-Slut"
+		"Gene-Slut",
+		"Gene-Stud"
 	)
 	LAZYADD(alt_titles, extra_titles)
 	. = ..()
@@ -260,7 +281,8 @@
 /datum/job/paramedic/New()
 	var/list/extra_titles = list(
 		"Trauma Team",
-		"Para-Slut"
+		"Para-Slut",
+		"Para-Stud"
 	)
 	LAZYADD(alt_titles, extra_titles)
 	. = ..()
@@ -269,7 +291,8 @@
 	var/list/extra_titles = list(
 		"Microbiologist",
 		"Biochemist",
-		"Viro-Slut"
+		"Viro-Slut",
+		"Viro-Stud"
 	)
 	LAZYADD(alt_titles, extra_titles)
 	. = ..()
@@ -280,6 +303,7 @@
 	var/list/extra_titles = list(
 		"Gumshoe",
 		"Slutective",
+		"Studective",
 		"Van Dorn Agent",
 		"Forensic Investigator",
 		"Cinder Dick",
@@ -296,11 +320,16 @@
 		"Probation Officer",
 		"Guardsman",
 		"Police Officer",
-		"Slutcurity Officer"
+		"Slutcurity Officer",
+		"Studcurity Officer"
+	)
+	var/list/rem_titles = list(
+		"Peacekeeper"
 	)
 	if(SSevents.holidays && SSevents.holidays[HALLOWEEN])
 		LAZYADD(extra_titles, "Spookcurity Officer")
 	LAZYADD(alt_titles, extra_titles)
+	LAZYREMOVE(alt_titles, rem_titles)
 	. = ..()
 
 /datum/job/warden/New()
@@ -325,7 +354,8 @@
 		"Mail Man",
 		"Mail Woman",
 		"Mailroom Technician",
-		"Logistics Technician"
+		"Logistics Technician",
+		"Cryptocurrency Technician"
 	)
 	LAZYADD(alt_titles, extra_titles)
 	. = ..()
@@ -338,6 +368,20 @@
 		"Ashwalker Sex Slave",
 		"Ashwalker Breeder",
 		"Slayer"
+	)
+	LAZYADD(alt_titles, extra_titles)
+	. = ..()
+
+// Prisoner
+/datum/job/prisoner/New()
+	var/list/extra_titles = list(
+		"Low Security Prisoner",
+		"Medium Security Prisoner",
+		"Maximum Security Prisoner",
+		"Supermax Prisoner",
+		"Protective Custody Prisoner",
+		"Prison Slut",
+		"Prison Stud"
 	)
 	LAZYADD(alt_titles, extra_titles)
 	. = ..()

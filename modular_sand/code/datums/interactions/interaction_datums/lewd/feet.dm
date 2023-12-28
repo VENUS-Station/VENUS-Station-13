@@ -1,10 +1,10 @@
 /datum/interaction/lewd/grindface
 	description = "Feet grind their face."
 	interaction_sound = null
-	require_target_mouth = TRUE
+	required_from_user_exposed = INTERACTION_REQUIRE_FEET
+	required_from_user_unexposed = INTERACTION_REQUIRE_FEET
 	require_user_num_feet = 1
-	require_user_feet = REQUIRE_ANY
-	max_distance = 1
+	required_from_target = INTERACTION_REQUIRE_MOUTH
 
 /datum/interaction/lewd/grindface/display_interaction(mob/living/user, mob/living/partner)
 	var/message
@@ -56,10 +56,10 @@
 /datum/interaction/lewd/grindmouth
 	description = "Feet grind their mouth."
 	interaction_sound = null
-	require_target_mouth = TRUE
+	required_from_user_exposed = INTERACTION_REQUIRE_FEET
+	required_from_user_unexposed = INTERACTION_REQUIRE_FEET
 	require_user_num_feet = 1
-	require_user_feet = REQUIRE_ANY
-	max_distance = 1
+	required_from_target = INTERACTION_REQUIRE_MOUTH
 
 /datum/interaction/lewd/grindmouth/display_interaction(mob/living/user, mob/living/partner)
 	var/message
@@ -111,10 +111,10 @@
 /datum/interaction/lewd/footjob
 	description = "Jerk them off with your foot."
 	interaction_sound = null
+	required_from_user_exposed = INTERACTION_REQUIRE_FEET
+	required_from_user_unexposed = INTERACTION_REQUIRE_FEET
 	require_user_num_feet = 1
-	require_user_feet = REQUIRE_ANY
-	require_target_penis = REQUIRE_EXPOSED
-	max_distance = 1
+	required_from_target_exposed = INTERACTION_REQUIRE_PENIS
 
 /datum/interaction/lewd/footjob/display_interaction(mob/living/user, mob/living/partner)
 	var/message
@@ -137,7 +137,7 @@
 						'modular_sand/sound/interactions/foot_wet2.ogg'), 70, 1, -1)
 	user.visible_message(message = span_lewd("<b>\The [user]</b> [message]"), ignored_mobs = user.get_unconsenting())
 	if(partner.can_penetrating_genital_cum())
-		partner.handle_post_sex(NORMAL_LUST, CUM_TARGET_FEET, user)
+		partner.handle_post_sex(NORMAL_LUST, CUM_TARGET_FEET, user, ORGAN_SLOT_PENIS) //SPLURT edit
 
 /datum/interaction/lewd/footjob/double
 	description = "Jerk them off with both of your feet."
@@ -165,12 +165,11 @@
 						'modular_sand/sound/interactions/foot_wet2.ogg'), 70, 1, -1)
 	user.visible_message(message = span_lewd("<b>\The [user]</b> [message]"), ignored_mobs = user.get_unconsenting())
 	if(partner.can_penetrating_genital_cum())
-		partner.handle_post_sex(NORMAL_LUST, CUM_TARGET_FEET, user)
+		partner.handle_post_sex(NORMAL_LUST, CUM_TARGET_FEET, user, ORGAN_SLOT_PENIS) //SPLURT edit
 
 /datum/interaction/lewd/footjob/vagina
 	description = "Rub their vagina with your foot."
-	require_target_vagina = REQUIRE_EXPOSED
-	require_target_penis = null
+	required_from_target_exposed = INTERACTION_REQUIRE_VAGINA
 
 /datum/interaction/lewd/footjob/vagina/display_interaction(mob/living/user, mob/living/partner)
 	var/message
@@ -194,4 +193,4 @@
 						'modular_sand/sound/interactions/foot_wet1.ogg',
 						'modular_sand/sound/interactions/foot_wet2.ogg'), 70, 1, -1)
 	user.visible_message(message = span_lewd("<b>\The [user]</b> [message]"), ignored_mobs = user.get_unconsenting())
-	partner.handle_post_sex(NORMAL_LUST, CUM_TARGET_FEET, user)
+	partner.handle_post_sex(NORMAL_LUST, CUM_TARGET_FEET, user, ORGAN_SLOT_VAGINA) //SPLURT edit

@@ -6,7 +6,6 @@
 	pass_flags = PASSTABLE | PASSMOB
 	mob_size = MOB_SIZE_TINY
 	desc = "A generic pAI mobile hard-light holographics emitter. It seems to be deactivated."
-	weather_immunities = list("ash")
 	health = 500
 	maxHealth = 500
 	layer = BELOW_MOB_LAYER
@@ -86,12 +85,15 @@
 	var/icon/custom_holoform_icon
 
 /mob/living/silicon/pai/Destroy()
+	QDEL_NULL(signaler)
+	QDEL_NULL(pda)
 	QDEL_NULL(internal_instrument)
 	if (loc != card)
 		card.forceMove(drop_location())
 	card.pai = null
 	card.cut_overlays()
 	card.add_overlay("pai-off")
+	card = null
 	GLOB.pai_list -= src
 	return ..()
 
@@ -112,10 +114,9 @@
 
 	//PDA
 	pda = new(src)
-	spawn(5)
-		pda.ownjob = "pAI Messenger"
-		pda.owner = text("[]", src)
-		pda.name = pda.owner + " (" + pda.ownjob + ")"
+	pda.ownjob = "pAI Messenger"
+	pda.owner = text("[]", src)
+	pda.name = pda.owner + " (" + pda.ownjob + ")"
 
 	possible_chassis = typelist(NAMEOF(src, possible_chassis), list("cat" = TRUE, "mouse" = TRUE, "monkey" = TRUE, "corgi" = FALSE,
 									"fox" = FALSE, "repairbot" = TRUE, "rabbit" = TRUE, "borgi" = FALSE ,
@@ -200,9 +201,16 @@
 /mob/living/silicon/pai/restrained(ignore_grab)
 	. = FALSE
 
+/mob/living/silicon/pai/can_interact_with(atom/target)
+	if(istype(target, /obj/item/mod/control)) // A poor workaround for enabling MODsuit control
+		var/obj/item/mod/control/C = target
+		if(C.ai == src)
+			return TRUE
+	return ..()
+
 // See software.dm for Topic()
 
-/mob/living/silicon/pai/canUseTopic(atom/movable/M, be_close=FALSE, no_dextery=FALSE, no_tk=FALSE)
+/mob/living/silicon/pai/canUseTopic(atom/movable/M, be_close=FALSE, no_dextery=FALSE, no_tk=FALSE, check_resting=FALSE)
 	if(be_close && !in_range(M, src))
 		to_chat(src, "<span class='warning'>You are too far away!</span>")
 		return FALSE

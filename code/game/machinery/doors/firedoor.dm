@@ -26,6 +26,7 @@
 	air_tight = TRUE
 	attack_hand_is_action = TRUE
 	attack_hand_speed = CLICK_CD_MELEE
+	can_open_with_hands = FALSE
 	var/emergency_close_timer = 0
 	var/nextstate = null
 	var/boltslocked = TRUE
@@ -34,6 +35,8 @@
 /obj/machinery/door/firedoor/Initialize(mapload)
 	. = ..()
 	CalculateAffectingAreas()
+	UpdateAdjacencyFlags()
+
 
 /obj/machinery/door/firedoor/examine(mob/user)
 	. = ..()
@@ -81,6 +84,24 @@
 		var/area/A = I
 		LAZYADD(A.firedoors, src)
 
+/obj/machinery/door/firedoor/proc/UpdateAdjacencyFlags()
+	var/turf/T = get_turf(src)
+	if(flags_1 & ON_BORDER_1)
+		for(var/t in T.atmos_adjacent_turfs)
+			if(get_dir(loc, t) == dir)
+				var/turf/open/T2 = t
+				if(T2 in T.atmos_adjacent_turfs)
+					T.atmos_adjacent_turfs[T2] |= ATMOS_ADJACENT_FIRELOCK
+				if(T in T2.atmos_adjacent_turfs)
+					T2.atmos_adjacent_turfs[T] |= ATMOS_ADJACENT_FIRELOCK
+	else
+		for(var/t in T.atmos_adjacent_turfs)
+			var/turf/open/T2 = t
+			if(T2 in T.atmos_adjacent_turfs)
+				T.atmos_adjacent_turfs[T2] |= ATMOS_ADJACENT_FIRELOCK
+			if(T in T2.atmos_adjacent_turfs)
+				T2.atmos_adjacent_turfs[T] |= ATMOS_ADJACENT_FIRELOCK
+
 /obj/machinery/door/firedoor/closed
 	icon_state = "door_closed"
 	opacity = TRUE
@@ -107,7 +128,7 @@
 /obj/machinery/door/firedoor/power_change()
 	if(powered(power_channel))
 		stat &= ~NOPOWER
-		latetoggle()
+		INVOKE_ASYNC(src, .proc/latetoggle)
 	else
 		stat |= NOPOWER
 
@@ -170,7 +191,7 @@
 		if(is_holding_pressure())
 			// tell the user that this is a bad idea, and have a do_after as well
 			to_chat(user, "<span class='warning'>As you begin crowbarring \the [src] a gush of air blows in your face... maybe you should reconsider?</span>")
-			if(!do_after(user, 15, TRUE, src)) // give them a few seconds to reconsider their decision.
+			if(!do_after(user, 1.5 SECONDS, src)) // give them a few seconds to reconsider their decision.
 				return
 			log_game("[key_name_admin(user)] has opened a firelock with a pressure difference at [AREACOORD(loc)]") // there bibby I made it logged just for you. Enjoy.
 			// since we have high-pressure-ness, close all other firedoors on the tile

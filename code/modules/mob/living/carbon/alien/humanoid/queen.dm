@@ -4,6 +4,8 @@
 	status_flags = 0
 	unique_name = 0
 	pixel_x = -16
+	maptext_height = 64
+	maptext_width = 64
 	bubble_icon = "alienroyal"
 	mob_size = MOB_SIZE_LARGE
 	layer = LARGE_MOB_LAYER //above most mobs, but below speechbubbles
@@ -27,6 +29,7 @@
 	health = 400
 	icon_state = "alienq"
 	var/datum/action/small_sprite/smallsprite = new/datum/action/small_sprite/queen()
+	var/obj/effect/proc_holder/alien/royal/queen/promote/promote
 
 /mob/living/carbon/alien/humanoid/royal/queen/Initialize(mapload)
 	//there should only be one queen
@@ -42,8 +45,15 @@
 	real_name = src.name
 
 	AddSpell(new /obj/effect/proc_holder/spell/aoe_turf/repulse/xeno(src))
-	AddAbility(new/obj/effect/proc_holder/alien/royal/queen/promote())
+	promote = new(null)
+	AddAbility(promote)
 	smallsprite.Grant(src)
+	return ..()
+
+/mob/living/carbon/alien/humanoid/royal/queen/Destroy()
+	RemoveAbility(promote)
+	QDEL_NULL(promote)
+	QDEL_NULL(small_sprite)
 	return ..()
 
 /mob/living/carbon/alien/humanoid/royal/queen/create_internal_organs()

@@ -340,12 +340,12 @@ SLEEPER CODE IS IN game/objects/items/devices/dogborg_sleeper.dm !
 
 	else
 		leaping = 1
-		weather_immunities += "lava"
+		//weather_immunities += "lava"
 		pixel_y = 10
 		update_icons()
 		throw_at(A, MAX_K9_LEAP_DIST, 1, spin=0, diagonals_first = 1)
 		cell.use(750) //Less than a stunbaton since stunbatons hit everytime.
-		weather_immunities -= "lava"
+		//weather_immunities -= "lava"
 
 /mob/living/silicon/robot/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 
@@ -483,7 +483,7 @@ SLEEPER CODE IS IN game/objects/items/devices/dogborg_sleeper.dm !
 			//TODO: add only the parts that the target actually has to the radial menu
 			//		add color to images and make them correspond with the type that the target user has
 			//		make it so that if a covered up part is chosen - it licks the outside (the clothes). (apply this to the mouth interaction)
-			var/static/list/possible_choices = sortList(list(
+			var/static/list/possible_choices = sort_list(list(
 				"Penis" = image(icon = 'icons/obj/genitals/penis.dmi', icon_state = "penis"),
 				"Testicles" = image(icon= 'icons/obj/genitals/testicles.dmi', icon_state = "testicles"),
 				"Vagina" = image(icon= 'icons/obj/genitals/vagina.dmi', icon_state = "vagina"),

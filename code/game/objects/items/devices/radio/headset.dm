@@ -10,6 +10,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	RADIO_CHANNEL_SYNDICATE = RADIO_TOKEN_SYNDICATE,
 	RADIO_CHANNEL_SUPPLY = RADIO_TOKEN_SUPPLY,
 	RADIO_CHANNEL_SERVICE = RADIO_TOKEN_SERVICE,
+	RADIO_CHANNEL_HOTEL = RADIO_TOKEN_HOTEL, //SPLURT EDIT ADDITION
 	MODE_BINARY = MODE_TOKEN_BINARY,
 	RADIO_CHANNEL_AI_PRIVATE = RADIO_TOKEN_AI_PRIVATE
 ))
@@ -268,10 +269,6 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 /obj/item/radio/headset/silicon/pai
 	name = "\proper mini Integrated Subspace Transceiver "
 	subspace_transmission = FALSE
-
-/obj/item/radio/headset/silicon/pai/ComponentInitialize()
-	. = ..()
-	AddElement(/datum/element/empprotection, EMP_PROTECT_WIRES)
 
 /obj/item/radio/headset/silicon/pai/emp_act(severity)
 	. = ..()

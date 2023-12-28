@@ -50,7 +50,7 @@
 	icon = 'modular_splurt/icons/obj/clothing/uniforms.dmi'
 	mob_overlay_icon = 'modular_splurt/icons/mob/clothing/uniform.dmi'
 	icon_state = "bunnysuit"
-	can_adjust = FALSE
+	can_adjust = TRUE
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 	body_parts_covered = CHEST|GROIN
 
@@ -87,6 +87,17 @@
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 	body_parts_covered = CHEST
 
+/obj/item/clothing/under/blutigen_undergarment
+	name = "Blutigen Undergarments"
+	desc = "It'd barely cover your chest and groin."
+	icon = 'modular_splurt/icons/obj/clothing/uniforms.dmi'
+	mob_overlay_icon = 'modular_splurt/icons/mob/clothing/uniform.dmi'
+	icon_state = "blutigen_undergarment"
+	item_state = "blutigen_undergarment"
+	can_adjust = FALSE
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
+	body_parts_covered = CHEST
+
 /obj/item/clothing/under/bunnysuit/white
 	name = "white bunny outfit"
 	desc = "A simple white bunny outfit."
@@ -94,6 +105,16 @@
 	mob_overlay_icon = 'modular_splurt/icons/mob/clothing/uniform.dmi'
 	icon_state = "whitebunnysuit"
 	body_parts_covered = CHEST|GROIN|ARMS
+
+/obj/item/clothing/under/lewdmaid
+	name = "lewd maid outfit"
+	desc = "For all your lewd maid needs."
+	icon = 'modular_splurt/icons/mob/clothing/lewd_clothing/uniform/lewd_uniform.dmi'
+	mob_overlay_icon = 'modular_splurt/icons/mob/clothing/lewd_clothing/uniform/lewd_uniform.dmi'
+	icon_state = "lewdmaid"
+	item_state = "lewdmaid_obj"
+	can_adjust = FALSE
+	body_parts_covered = CHEST
 
 /obj/item/clothing/under/rank/security/skirt/slut
 	name = "slutty security jumpskirt"
@@ -123,7 +144,7 @@
 	item_state = "secstripper"
 	can_adjust = FALSE
 	mob_overlay_icon = 'modular_splurt/icons/mob/clothing/uniform.dmi'
-	mutantrace_variation = NONE
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 
 /obj/item/clothing/under/rank/brigdoc
 	name = "brig physician outfit"
@@ -333,3 +354,59 @@
 /obj/item/clothing/under/performer/polychromic/ComponentInitialize()
 	. = ..()
 	AddElement(/datum/element/polychromic, list("#ffffff"), 1)
+
+/obj/item/clothing/under/rank/cargo/miner/lavaland/stripper
+	name = "explorer stripper outfit"
+	desc = "This can't be dress code compliant, can it?"
+	icon = 'modular_splurt/icons/obj/clothing/uniforms.dmi'
+	icon_state = "explorerstripper"
+	mob_overlay_icon = 'modular_splurt/icons/mob/clothing/uniform.dmi'
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
+
+/obj/item/clothing/under/misc/stripper/black
+	name = "black stripper outfit"
+	icon = 'modular_splurt/icons/obj/clothing/uniforms.dmi'
+	mob_overlay_icon= 'modular_splurt/icons/mob/clothing/uniform.dmi'
+	icon_state = "syclothing"
+	item_state = "syclothing"
+	can_adjust = FALSE
+	body_parts_covered = CHEST
+
+/obj/item/clothing/under/misc/stripper/white
+	name = "white stripper outfit"
+	icon = 'modular_splurt/icons/mob/clothing/lewd_clothing/uniform/lewd_uniform.dmi'
+	mob_overlay_icon = 'modular_splurt/icons/mob/clothing/lewd_clothing/uniform/lewd_uniform.dmi'
+	icon_state = "stripper_white"
+	item_state = "stripper_white_obj"
+	can_adjust = FALSE
+	body_parts_covered = CHEST
+
+// Prison Jumpsuit/Jumpskirt override to allow reskins
+/obj/item/clothing/under/rank/prisoner
+	reskin_binding = COMSIG_CLICK_CTRL
+	unique_reskin = list(
+		"max-sec"			= list("icon_state" = "maxprisoner", "icon" = 'modular_splurt/icons/obj/clothing/uniforms.dmi', "mob_overlay_icon" = 'modular_splurt/icons/mobs/clothing/uniform.dmi', "anthro_mob_worn_overlay" = 'modular_splurt/icons/mobs/clothing/uniform_digi.dmi'),
+		"high-sec"			= list("icon_state" = "highprisoner", "icon" = 'modular_splurt/icons/obj/clothing/uniforms.dmi', "mob_overlay_icon" = 'modular_splurt/icons/mobs/clothing/uniform.dmi', "anthro_mob_worn_overlay" = 'modular_splurt/icons/mobs/clothing/uniform_digi.dmi'),
+		"med-sec"			= list("icon_state" = "prisoner", "icon" = 'icons/obj/clothing/uniforms.dmi', "mob_overlay_icon" = null, "anthro_mob_worn_overlay" = null),
+		"low-sec"			= list("icon_state" = "lowprisoner", "icon" = 'modular_splurt/icons/obj/clothing/uniforms.dmi', "mob_overlay_icon" = 'modular_splurt/icons/mobs/clothing/uniform.dmi', "anthro_mob_worn_overlay" = 'modular_splurt/icons/mobs/clothing/uniform_digi.dmi'),
+		"prot-sec"			= list("icon_state" = "protprisoner", "icon" = 'modular_splurt/icons/obj/clothing/uniforms.dmi', "mob_overlay_icon" = 'modular_splurt/icons/mobs/clothing/uniform.dmi', "anthro_mob_worn_overlay" = 'modular_splurt/icons/mobs/clothing/uniform_digi.dmi'),
+		"vampire"			= list("icon_state" = "blackprisoner", "icon" = 'modular_splurt/icons/obj/clothing/uniforms.dmi', "mob_overlay_icon" = 'modular_splurt/icons/mobs/clothing/uniform.dmi', "anthro_mob_worn_overlay" = 'modular_splurt/icons/mobs/clothing/uniform_digi.dmi')
+	)
+
+/obj/item/clothing/under/rank/prisoner/reskin_obj(mob/M)
+	. = ..()
+	name = "prison [current_skin] jumpsuit"
+
+/obj/item/clothing/under/rank/prisoner/skirt
+	unique_reskin = list(
+		"max-sec"			= list("icon_state" = "maxprisoner_skirt", "icon" = 'modular_splurt/icons/obj/clothing/uniforms.dmi', "mob_overlay_icon" = 'modular_splurt/icons/mobs/clothing/uniform.dmi'),
+		"high-sec"			= list("icon_state" = "highprisoner_skirt", "icon" = 'modular_splurt/icons/obj/clothing/uniforms.dmi', "mob_overlay_icon" = 'modular_splurt/icons/mobs/clothing/uniform.dmi'),
+		"med-sec"			= list("icon_state" = "prisoner_skirt",  "icon" = 'icons/obj/clothing/uniforms.dmi', "mob_overlay_icon" = null),
+		"low-sec"			= list("icon_state" = "lowprisoner_skirt", "icon" = 'modular_splurt/icons/obj/clothing/uniforms.dmi', "mob_overlay_icon" = 'modular_splurt/icons/mobs/clothing/uniform.dmi'),
+		"prot-sec"			= list("icon_state" = "protprisoner_skirt", "icon" = 'modular_splurt/icons/obj/clothing/uniforms.dmi', "mob_overlay_icon" = 'modular_splurt/icons/mobs/clothing/uniform.dmi'),
+		"vampire"			= list("icon_state" = "blackprisoner_skirt", "icon" = 'modular_splurt/icons/obj/clothing/uniforms.dmi', "mob_overlay_icon" = 'modular_splurt/icons/mobs/clothing/uniform.dmi')
+	)
+
+/obj/item/clothing/under/rank/prisoner/skirt/reskin_obj(mob/M)
+	. = ..()
+	name = "prison [current_skin] jumpskirt"

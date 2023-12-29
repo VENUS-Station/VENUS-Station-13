@@ -52677,7 +52677,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
@@ -53055,7 +53055,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /turf/open/floor/plasteel,
 /area/security/courtroom)
 "gyQ" = (
@@ -56524,7 +56524,7 @@
 /area/science/xenobiology)
 "lCQ" = (
 /obj/structure/table/wood,
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/item/pen/fountain,
 /obj/item/stamp/law,
 /turf/open/floor/carpet,
@@ -58247,7 +58247,7 @@
 /area/maintenance/department/cargo)
 "nZZ" = (
 /obj/structure/table,
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /turf/open/floor/plasteel/dark,
 /area/security/courtroom)
 "obj" = (
@@ -59672,7 +59672,7 @@
 /area/service/chapel/main/monastery)
 "qgg" = (
 /obj/structure/table,
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/machinery/camera{
 	c_tag = "Engineering Security Post";
 	dir = 4
@@ -61650,7 +61650,7 @@
 /area/medical/medbay/central)
 "tjp" = (
 /obj/structure/table/wood,
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /turf/open/floor/carpet,
 /area/command/heads_quarters/hos)
 "tkL" = (
@@ -63913,7 +63913,7 @@
 /area/maintenance/department/crew_quarters/bar)
 "wxX" = (
 /obj/structure/table,
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
 	dir = 4
@@ -64977,7 +64977,7 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "xOW" = (
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/item/clothing/ears/earmuffs,
 /obj/item/clothing/glasses/sunglasses,
 /obj/structure/table/reinforced,
@@ -65020,7 +65020,7 @@
 	dir = 4;
 	network = list("ss13","rd")
 	},
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},

@@ -52554,7 +52554,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /turf/open/floor/carpet/black,
 /area/command/heads_quarters/hos)
 "sgk" = (

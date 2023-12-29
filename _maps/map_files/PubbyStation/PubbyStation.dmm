@@ -6238,7 +6238,9 @@
 	receive_ore_updates = 1
 	},
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "atv" = (
 /obj/machinery/door/window/brigdoor/security/cell{
 	id = "Cell 3";
@@ -47626,7 +47628,9 @@
 	dir = 9
 	},
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "cZl" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 1
@@ -47829,7 +47833,9 @@
 	pixel_y = -17
 	},
 /turf/open/floor/festive/wooden/wooden2,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "dmP" = (
 /obj/structure/chair{
 	dir = 8
@@ -47937,7 +47943,9 @@
 /area/cargo/qm)
 "dpS" = (
 /turf/closed/wall,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "dqd" = (
 /obj/structure/table/wood,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -48336,7 +48344,9 @@
 	dir = 1
 	},
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "dLY" = (
 /obj/structure/table,
 /obj/item/assembly/igniter,
@@ -48556,7 +48566,9 @@
 	dir = 4
 	},
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "ebD" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
@@ -48788,7 +48800,9 @@
 	},
 /obj/effect/landmark/start/assistant,
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "elW" = (
 /obj/structure/closet/secure_closet/freezer/cream_pie,
 /obj/item/grown/bananapeel,
@@ -48817,14 +48831,18 @@
 /obj/item/stack/sheet/mineral/wood/fifty,
 /obj/structure/closet/crate,
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "epg" = (
 /obj/structure/chair/stool/bar,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "epV" = (
 /obj/structure/chair,
 /obj/effect/turf_decal/stripes/corner,
@@ -48911,7 +48929,9 @@
 	dir = 8
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "eyj" = (
 /obj/effect/spawner/structure/window/plasma/reinforced,
 /turf/open/floor/plating,
@@ -49315,7 +49335,9 @@
 	anchored = 1
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "eWi" = (
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -49600,7 +49622,9 @@
 	icon_state = "0-2"
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "flH" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/effect/turf_decal/tile/neutral{
@@ -49914,7 +49938,9 @@
 	dir = 8
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "fDt" = (
 /obj/machinery/computer/shuttle/monastery_shuttle,
 /obj/effect/turf_decal/stripes/line{
@@ -50242,7 +50268,9 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "get" = (
 /obj/structure/reagent_dispensers/keg/semen,
 /turf/open/floor/plating,
@@ -50492,7 +50520,9 @@
 	dir = 4
 	},
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "gmm" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -50600,7 +50630,9 @@
 	dir = 8
 	},
 /turf/open/floor/festive/wooden/wooden1,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "gtG" = (
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -50751,7 +50783,9 @@
 /obj/item/clothing/shoes/sandal,
 /obj/item/clothing/shoes/sandal,
 /turf/open/floor/festive/wooden/wooden2,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "gCr" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -50933,7 +50967,9 @@
 "gIL" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "gJN" = (
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for watching the monastery.";
@@ -51099,7 +51135,9 @@
 	dir = 4
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "gSH" = (
 /turf/closed/wall,
 /area/service/lawoffice)
@@ -51213,16 +51251,16 @@
 /area/maintenance/disposal/incinerator)
 "hcG" = (
 /obj/structure/table,
-/obj/item/aiModule/supplied/oxygen,
-/obj/item/aiModule/zeroth/oneHuman,
+/obj/item/ai_module/supplied/oxygen,
+/obj/item/ai_module/zeroth/oneHuman,
 /obj/machinery/door/window{
 	dir = 8;
 	name = "High-Risk Modules";
 	req_access_txt = "20"
 	},
-/obj/item/aiModule/reset/purge,
-/obj/effect/spawner/lootdrop/aimodule_harmful,
-/obj/item/aiModule/supplied/protectStation,
+/obj/item/ai_module/reset/purge,
+/obj/effect/spawner/lootdrop/ai_module_harmful,
+/obj/item/ai_module/supplied/protectStation,
 /obj/structure/window/reinforced{
 	dir = 1;
 	pixel_y = 1
@@ -51862,7 +51900,9 @@
 	dir = 8
 	},
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "hSC" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/visible,
 /obj/structure/cable/yellow{
@@ -51944,7 +51984,9 @@
 /area/maintenance/department/science)
 "hXz" = (
 /turf/open/floor/festive/wooden/wooden1,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "hXJ" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 1
@@ -51954,7 +51996,9 @@
 /obj/item/bouquet/poppy,
 /obj/item/bouquet/rose,
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "hXK" = (
 /obj/structure/chair/office/dark{
 	dir = 4
@@ -52044,7 +52088,9 @@
 	dir = 9
 	},
 /turf/open/pool,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "idM" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 1
@@ -52062,7 +52108,9 @@
 /area/engineering/main)
 "ifp" = (
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "ifJ" = (
 /obj/structure/closet/wardrobe/black,
 /obj/item/clothing/shoes/jackboots,
@@ -52295,7 +52343,9 @@
 	},
 /obj/item/stack/spacecash/c10,
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "ioF" = (
 /obj/structure/closet/secure_closet/engineering_electrical,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -52436,7 +52486,7 @@
 /area/security/office)
 "iwc" = (
 /turf/closed/wall,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz)
 "iwe" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
 /obj/effect/turf_decal/tile/blue{
@@ -52911,7 +52961,9 @@
 	dir = 6
 	},
 /turf/open/floor/festive/wooden/wooden1,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "iUy" = (
 /obj/structure/window/reinforced{
 	dir = 1;
@@ -52949,7 +53001,9 @@
 /obj/machinery/vending/clothing,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on,
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "iYQ" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -52992,7 +53046,9 @@
 	dir = 8
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "jcn" = (
 /obj/item/milking_machine/penis,
 /turf/open/floor/plating,
@@ -53183,7 +53239,9 @@
 	dir = 8
 	},
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "jmt" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Brig Desk";
@@ -53239,7 +53297,9 @@
 /area/service/library/lounge)
 "joZ" = (
 /turf/closed/wall/mineral/wood,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "jpe" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/disposalpipe/segment{
@@ -53353,7 +53413,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/festive/wooden/wooden1,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "jtf" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -53463,7 +53525,9 @@
 	anchored = 1
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "jyt" = (
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel,
@@ -53579,7 +53643,9 @@
 "jFL" = (
 /obj/machinery/vending/boozeomat,
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "jFO" = (
 /obj/machinery/door/airlock/security{
 	name = "Brig Control";
@@ -53624,7 +53690,9 @@
 	dir = 4
 	},
 /turf/closed/wall,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "jOo" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -53719,7 +53787,9 @@
 "jUk" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/closed/wall,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "jUV" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -53800,7 +53870,9 @@
 "jYw" = (
 /obj/machinery/pool/drain,
 /turf/open/pool,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "jYO" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 8
@@ -53920,7 +53992,9 @@
 	dir = 4
 	},
 /turf/open/floor/festive/wooden/wooden2,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "kdS" = (
 /obj/machinery/light,
 /obj/structure/cable{
@@ -53930,7 +54004,9 @@
 	dir = 4
 	},
 /turf/open/floor/festive/wooden/wooden2,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "keh" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass{
@@ -53982,7 +54058,7 @@
 /area/security/courtroom)
 "kjJ" = (
 /obj/structure/table,
-/obj/item/aiModule/supplied/freeform,
+/obj/item/ai_module/supplied/freeform,
 /obj/machinery/camera/motion{
 	c_tag = "AI Upload Starboard";
 	dir = 8;
@@ -54030,7 +54106,9 @@
 	anchored = 1
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "kkQ" = (
 /obj/machinery/vending/cola/pwr_game,
 /turf/open/floor/plating{
@@ -54118,7 +54196,9 @@
 	dir = 8
 	},
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "kqF" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -54468,7 +54548,9 @@
 "kHt" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "kIo" = (
 /obj/structure/table,
 /obj/item/paper_bin{
@@ -54512,7 +54594,9 @@
 	dir = 4
 	},
 /turf/open/floor/festive/wooden/wooden1,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "kKI" = (
 /obj/effect/spawner/lootdrop/maintenance,
 /obj/structure/closet,
@@ -54730,7 +54814,9 @@
 	anchored = 1
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "kTH" = (
 /obj/machinery/light/small,
 /obj/structure/disposalpipe/segment{
@@ -54832,14 +54918,18 @@
 	name = "Bar"
 	},
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "kZD" = (
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc/auto_name/north,
 /turf/open/floor/festive/wooden/wooden2,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "kZF" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/disposalpipe/segment,
@@ -54889,7 +54979,9 @@
 	pixel_y = 26
 	},
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "ldL" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -54990,7 +55082,9 @@
 "lmP" = (
 /obj/structure/chair/stool/bar,
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "lnj" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/cable{
@@ -55122,7 +55216,9 @@
 	pixel_x = 9
 	},
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "lxI" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plating,
@@ -55356,7 +55452,9 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/festive/wooden/wooden1,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "lRx" = (
 /obj/structure/railing{
 	dir = 8
@@ -55373,7 +55471,9 @@
 	pixel_y = -22
 	},
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "lRP" = (
 /obj/machinery/door/airlock/command{
 	name = "Blueshield's Quarters";
@@ -55609,7 +55709,9 @@
 	dir = 4
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "mdv" = (
 /obj/structure/table/wood,
 /obj/item/storage/secure/briefcase/permits,
@@ -55661,7 +55763,9 @@
 "mes" = (
 /obj/effect/turf_decal/trimline/brown/filled/line,
 /turf/open/pool,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "meF" = (
 /obj/machinery/status_display/evac,
 /turf/closed/wall/r_wall,
@@ -55882,7 +55986,9 @@
 	icon_state = "2-8"
 	},
 /turf/open/floor/festive/wooden/wooden2,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "msX" = (
 /obj/structure/table,
 /obj/item/paper,
@@ -55953,7 +56059,9 @@
 /obj/item/clothing/under/misc/stripper,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on,
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "muy" = (
 /obj/structure/rack,
 /obj/item/gun/ballistic/shotgun/riot{
@@ -56356,7 +56464,9 @@
 	anchored = 1
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "mMz" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
@@ -56374,18 +56484,24 @@
 	dir = 5
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "mOS" = (
 /obj/structure/table/wood/fancy/monochrome,
 /obj/effect/landmark/start/assistant,
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "mQf" = (
 /obj/structure/sign/poster/contraband/busty_backdoor_xeno_babes_6{
 	pixel_y = 32
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "mQm" = (
 /obj/structure/chair/office/light{
 	dir = 1
@@ -56397,7 +56513,9 @@
 	dir = 8
 	},
 /turf/open/pool,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "mQB" = (
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -56427,7 +56545,9 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "mTo" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -56496,7 +56616,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "mZE" = (
 /turf/open/space/basic,
 /area/space/nearstation)
@@ -56730,7 +56852,9 @@
 	dir = 8
 	},
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "noM" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
@@ -56780,6 +56904,11 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on,
 /turf/open/floor/plasteel,
 /area/commons/dorms)
+"nsj" = (
+/turf/closed/wall,
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "nso" = (
 /obj/structure/girder,
 /turf/open/floor/plating,
@@ -56858,7 +56987,9 @@
 	dir = 4
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "nvF" = (
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
@@ -56905,7 +57036,9 @@
 "nxs" = (
 /obj/machinery/vending/kink,
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "nxx" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/brigdoor{
@@ -56973,7 +57106,9 @@
 	dir = 8
 	},
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "nAs" = (
 /obj/machinery/door/airlock/engineering/glass{
 	name = "Supermatter Engine";
@@ -57146,7 +57281,9 @@
 	dir = 4
 	},
 /turf/open/pool,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "nHH" = (
 /obj/machinery/light{
 	dir = 1;
@@ -57183,7 +57320,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "nIU" = (
 /obj/structure/disposalpipe/segment{
 	dir = 9
@@ -57453,7 +57592,9 @@
 "nSX" = (
 /obj/machinery/vending/autodrobe,
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "nTr" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -57562,7 +57703,9 @@
 	anchored = 1
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "nZw" = (
 /obj/machinery/door/airlock/abandoned{
 	name = "Backup Laboratory"
@@ -57575,7 +57718,9 @@
 	dir = 4
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "oay" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/light{
@@ -57720,7 +57865,9 @@
 	},
 /obj/structure/chair/stool/bar,
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "opr" = (
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
@@ -58004,7 +58151,9 @@
 	dir = 8
 	},
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "oCn" = (
 /obj/structure/chair/office/dark{
 	dir = 1
@@ -58291,7 +58440,9 @@
 	dir = 8
 	},
 /turf/open/floor/festive/wooden/wooden1,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "oRG" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -58525,7 +58676,7 @@
 	pixel_x = -26
 	},
 /obj/item/aicard,
-/obj/item/aiModule/reset,
+/obj/item/ai_module/reset,
 /obj/item/assembly/flash/handheld,
 /obj/effect/turf_decal/tile/green{
 	dir = 1
@@ -58638,7 +58789,9 @@
 	name = "VIP Seat"
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "phJ" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -58736,7 +58889,9 @@
 "pnf" = (
 /obj/structure/bed,
 /turf/open/floor/festive/wooden/wooden2,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "pnG" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/cable{
@@ -58788,7 +58943,9 @@
 /obj/structure/rack,
 /obj/item/clothing/under/misc/stripper/green,
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "pqR" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable{
@@ -58891,7 +59048,9 @@
 	anchored = 1
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "pwS" = (
 /obj/structure/lattice,
 /obj/structure/disposalpipe/segment{
@@ -58967,13 +59126,17 @@
 	},
 /obj/structure/closet/secure_closet/personal,
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "pCj" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 10
 	},
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "pCF" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 1
@@ -59091,7 +59254,9 @@
 	dir = 8
 	},
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "pGe" = (
 /obj/structure/chair{
 	dir = 1
@@ -59170,7 +59335,9 @@
 	pixel_y = 3
 	},
 /turf/open/floor/festive/wooden/wooden2,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "pKU" = (
 /obj/machinery/power/emitter/anchored{
 	dir = 8;
@@ -59249,7 +59416,9 @@
 	dir = 4
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "pQw" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -59538,7 +59707,9 @@
 /obj/item/lighter/gold,
 /obj/item/stack/spacecash/c100,
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "qjx" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/effect/turf_decal/stripes/line,
@@ -59575,7 +59746,9 @@
 	},
 /obj/structure/chair/stool/bar,
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "qmP" = (
 /obj/structure/chair,
 /turf/open/floor/plasteel,
@@ -59734,7 +59907,9 @@
 "quO" = (
 /obj/structure/closet/secure_closet/personal,
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "quY" = (
 /obj/machinery/computer/secure_data,
 /obj/machinery/button/door{
@@ -59895,7 +60070,9 @@
 	anchored = 1
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "qGf" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -59914,7 +60091,9 @@
 	anchored = 1
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "qGu" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -60088,7 +60267,9 @@
 "qNR" = (
 /obj/structure/table/wood/fancy/monochrome,
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "qOo" = (
 /turf/open/floor/plasteel,
 /area/maintenance/department/cargo)
@@ -60611,7 +60792,9 @@
 /area/service/chapel/main/monastery)
 "rpb" = (
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "rpP" = (
 /obj/structure/chair/wood/normal{
 	dir = 4
@@ -60653,7 +60836,9 @@
 	dir = 1
 	},
 /turf/open/floor/festive/wooden/wooden2,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "rsQ" = (
 /obj/machinery/light{
 	dir = 1
@@ -60707,7 +60892,9 @@
 	dir = 9
 	},
 /turf/open/floor/festive/wooden/wooden1,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "ruh" = (
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "Dorm2Shutters";
@@ -60787,7 +60974,9 @@
 	dir = 8
 	},
 /turf/closed/wall,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "rzm" = (
 /obj/structure/table/wood,
 /obj/item/stack/packageWrap,
@@ -60829,7 +61018,9 @@
 	dir = 4
 	},
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "rDh" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
@@ -61162,7 +61353,9 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "rXD" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -61201,7 +61394,9 @@
 	dir = 1
 	},
 /turf/open/pool,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "sal" = (
 /obj/structure/lattice,
 /turf/closed/wall,
@@ -61243,7 +61438,9 @@
 	dir = 1
 	},
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "sbY" = (
 /obj/machinery/vending/coffee,
 /turf/open/floor/wood,
@@ -61295,7 +61492,9 @@
 	anchored = 1
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "seG" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/machinery/door/airlock/security/glass{
@@ -61494,7 +61693,9 @@
 	pixel_y = 32
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "stQ" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -61642,7 +61843,9 @@
 	dir = 1
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "sEB" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/disposalpipe/segment,
@@ -61669,7 +61872,9 @@
 	pixel_x = 23
 	},
 /turf/open/floor/festive/wooden/wooden2,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "sGd" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -61871,7 +62076,9 @@
 	dir = 5
 	},
 /turf/open/pool,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "sQt" = (
 /obj/machinery/door/airlock/external{
 	name = "Supply Dock Airlock";
@@ -62538,7 +62745,9 @@
 	name = "Changing Room"
 	},
 /turf/open/floor/festive/wooden/wooden1,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "tBM" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 4
@@ -62711,7 +62920,9 @@
 "tLz" = (
 /obj/structure/lattice/catwalk,
 /turf/closed/wall,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "tLP" = (
 /obj/machinery/status_display/supply,
 /turf/closed/wall,
@@ -62880,7 +63091,9 @@
 	pixel_y = -24
 	},
 /turf/open/pool,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "tXn" = (
 /obj/structure/sink{
 	dir = 4;
@@ -62910,7 +63123,9 @@
 	dir = 4
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "tYu" = (
 /obj/item/reagent_containers/food/snacks/donut,
 /turf/open/floor/plating{
@@ -62940,7 +63155,9 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "uaO" = (
 /obj/machinery/atmospherics/pipe/heat_exchanging/simple{
 	dir = 6
@@ -63367,13 +63584,17 @@
 /area/maintenance/department/science)
 "uvI" = (
 /turf/open/pool,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "uvP" = (
 /obj/structure/chair/sofa/corp/left{
 	dir = 4
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "uwb" = (
 /obj/machinery/atmospherics/pipe/manifold/general/visible{
 	dir = 1
@@ -63423,7 +63644,9 @@
 	name = "Lapdance Room"
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "uxP" = (
 /obj/structure/disposalpipe/segment{
 	dir = 9
@@ -63473,7 +63696,9 @@
 	dir = 4
 	},
 /turf/open/floor/festive/wooden/wooden2,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "uzn" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
 /obj/structure/cable{
@@ -63560,14 +63785,18 @@
 "uEJ" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /turf/open/floor/festive/wooden/wooden1,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "uFh" = (
 /obj/structure/table/wood,
 /obj/machinery/chem_dispenser/drinks{
 	dir = 8
 	},
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "uFz" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 10
@@ -63788,10 +64017,10 @@
 /area/service/library)
 "uUi" = (
 /obj/structure/table,
-/obj/item/aiModule/core/full/asimov,
-/obj/effect/spawner/lootdrop/aimodule_harmless,
-/obj/effect/spawner/lootdrop/aimodule_lewd,
-/obj/item/aiModule/core/freeformcore,
+/obj/item/ai_module/core/full/asimov,
+/obj/effect/spawner/lootdrop/ai_module_harmless,
+/obj/effect/spawner/lootdrop/ai_module_lewd,
+/obj/item/ai_module/core/freeformcore,
 /obj/machinery/door/window{
 	base_state = "right";
 	dir = 4;
@@ -63799,8 +64028,39 @@
 	name = "Core Modules";
 	req_access_txt = "20"
 	},
-/obj/effect/spawner/lootdrop/aimodule_neutral,
-/obj/item/aiModule/core/full/custom,
+/obj/effect/spawner/lootdrop/ai_module_neutral,
+/obj/item/ai_module/core/full/custom,
+/obj/structure/window/reinforced{
+	dir = 1;
+	pixel_y = 1
+	},
+/obj/machinery/flasher{
+	id = "brigentry";
+	pixel_x = -28
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/blue,
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/obj{
+	name = "---Merge conflict marker---"
+	},
+/obj/structure/table,
+/obj/item/ai_module/core/full/asimov,
+/obj/effect/spawner/lootdrop/ai_module_harmless,
+/obj/item/ai_module/core/freeformcore,
+/obj/machinery/door/window{
+	base_state = "right";
+	dir = 4;
+	icon_state = "right";
+	name = "Core Modules";
+	req_access_txt = "20"
+	},
+/obj/effect/spawner/lootdrop/ai_module_neutral,
+/obj/item/ai_module/core/full/custom,
 /obj/structure/window/reinforced{
 	dir = 1;
 	pixel_y = 1
@@ -63859,7 +64119,9 @@
 	dir = 10
 	},
 /turf/open/pool,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "uWT" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /obj/machinery/airalarm{
@@ -63941,7 +64203,9 @@
 "uZZ" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "vaw" = (
 /obj/machinery/camera{
 	c_tag = "Sauna Room";
@@ -63949,7 +64213,9 @@
 	},
 /obj/structure/closet/athletic_mixed,
 /turf/open/floor/festive/wooden/wooden2,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "vay" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -64021,13 +64287,17 @@
 "vfW" = (
 /obj/structure/closet/athletic_mixed,
 /turf/open/floor/festive/wooden/wooden2,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "vgf" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
 /turf/open/floor/festive/wooden/wooden1,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "vgg" = (
 /obj/structure/table/wood,
 /obj/item/barcodescanner,
@@ -64191,7 +64461,9 @@
 	dir = 9
 	},
 /turf/open/floor/festive/wooden/wooden2,
-/area/commons/fitness/cogpool)
+/area/commons/fitness/recreation{
+	name = "Sauna"
+	})
 "vnI" = (
 /obj/structure/bed,
 /obj/machinery/flasher{
@@ -64607,7 +64879,9 @@
 	name = "VIP Seat"
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "vGg" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 9
@@ -64926,7 +65200,9 @@
 	dir = 4
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "vYN" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 8;
@@ -65099,7 +65375,9 @@
 	dir = 10
 	},
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "wkC" = (
 /obj/structure/window/reinforced{
 	dir = 1;
@@ -65280,7 +65558,9 @@
 	dir = 4
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "wua" = (
 /obj/structure/table/wood,
 /obj/item/book/manual/splurt_space_law,
@@ -65633,7 +65913,9 @@
 	name = "Strip Club"
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "wPk" = (
 /obj/machinery/door/airlock/external{
 	name = "Labor Camp Shuttle Airlock";
@@ -65671,7 +65953,9 @@
 "wQW" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "wRk" = (
 /obj/structure/rack,
 /obj/item/wrench,
@@ -65921,7 +66205,9 @@
 	dir = 4
 	},
 /turf/open/floor/carpet/royalblack,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "xcw" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -66301,7 +66587,9 @@
 	dir = 6
 	},
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "xzp" = (
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
@@ -66478,7 +66766,9 @@
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /turf/open/floor/wood/wood_diagonal,
-/area/maintenance/department/crew_quarters/dorms)
+/area/commons/lounge/jazz{
+	name = "Strip Club"
+	})
 "xJy" = (
 /obj/structure/chair/comfy/black,
 /obj/structure/sign/plaques/kiddie{
@@ -66693,13 +66983,13 @@
 /area/service/library)
 "xUt" = (
 /obj/structure/table,
-/obj/item/aiModule/supplied/quarantine,
+/obj/item/ai_module/supplied/quarantine,
 /obj/machinery/camera/motion{
 	c_tag = "AI Upload Port";
 	dir = 4;
 	network = list("aiupload")
 	},
-/obj/item/aiModule/reset,
+/obj/item/ai_module/reset,
 /obj/machinery/flasher{
 	id = "brigentry";
 	pixel_x = -28
@@ -111730,17 +112020,17 @@ aAO
 iMH
 ygk
 ays
-iwc
-iwc
-iwc
-iwc
-iwc
-iwc
-iwc
+nsj
+nsj
+nsj
+nsj
+nsj
+nsj
+nsj
 gee
 wPd
-iwc
-iwc
+nsj
+nsj
 iwc
 iwc
 aMC
@@ -111987,11 +112277,11 @@ apX
 apX
 uNj
 cJC
-iwc
+nsj
 nxs
 pFK
 eaj
-iwc
+nsj
 phm
 vFp
 uaF
@@ -111999,7 +112289,7 @@ pPn
 fDc
 uxA
 elQ
-iwc
+nsj
 aMD
 nJV
 gOP
@@ -112244,7 +112534,7 @@ aur
 ash
 kyO
 aIh
-iwc
+nsj
 sbN
 rpb
 hXJ
@@ -112254,9 +112544,9 @@ rXm
 eVO
 mSI
 mdk
-iwc
-iwc
-iwc
+nsj
+nsj
+nsj
 aFi
 aEj
 aEj
@@ -112501,7 +112791,7 @@ aur
 ash
 kyO
 aIh
-iwc
+nsj
 ooj
 rpb
 glr
@@ -112513,7 +112803,7 @@ xbM
 mdk
 uvP
 qGh
-iwc
+nsj
 aFi
 aEj
 nPv
@@ -112758,7 +113048,7 @@ aur
 ash
 kyO
 aIh
-iwc
+nsj
 ooj
 rpb
 glr
@@ -112770,7 +113060,7 @@ seD
 mdk
 qNR
 sEo
-iwc
+nsj
 aFi
 aEj
 mfM
@@ -113015,7 +113305,7 @@ aur
 ash
 kyO
 aIh
-iwc
+nsj
 qmp
 rpb
 glr
@@ -113027,7 +113317,7 @@ xbM
 mdk
 jbB
 mLL
-iwc
+nsj
 aFi
 aEj
 tMs
@@ -113272,7 +113562,7 @@ aur
 ash
 kyO
 aIh
-iwc
+nsj
 xJa
 kHt
 nIT
@@ -113282,9 +113572,9 @@ tYt
 kTs
 mYW
 mNs
-iwc
-iwc
-iwc
+nsj
+nsj
+nsj
 aFi
 aEj
 iMN
@@ -113533,7 +113823,7 @@ tLz
 nSX
 rpb
 rBF
-iwc
+nsj
 mQf
 ifp
 ifp
@@ -113541,7 +113831,7 @@ vYI
 wtY
 uxA
 nYY
-iwc
+nsj
 aFi
 ofA
 emD
@@ -113786,19 +114076,19 @@ cYr
 nrs
 coc
 com
-iwc
+nsj
 iYD
 rpb
 eoK
-iwc
+nsj
 stD
 lmP
 lmP
 epg
 nuO
-iwc
-iwc
-iwc
+nsj
+nsj
+nsj
 aFi
 aLm
 aLm
@@ -114043,19 +114333,19 @@ ffY
 ffY
 gZU
 com
-iwc
+nsj
 mtL
 wQW
 cYH
-iwc
+nsj
 ldb
 jlK
 jlK
 kqC
 lRx
-iwc
-iwc
-iwc
+nsj
+nsj
+nsj
 aFi
 aLm
 aNV
@@ -114300,11 +114590,11 @@ auj
 oay
 woV
 aIh
-iwc
+nsj
 pqQ
 rpb
 rpb
-iwc
+nsj
 rpb
 rpb
 rpb
@@ -114312,7 +114602,7 @@ rBF
 wko
 gIL
 nAf
-iwc
+nsj
 aFi
 aLm
 aNV
@@ -114557,7 +114847,7 @@ dpS
 mZW
 azA
 aIh
-iwc
+nsj
 rpb
 rpb
 rpb
@@ -114569,7 +114859,7 @@ cYH
 pCj
 kHt
 dLX
-iwc
+nsj
 aFi
 aLm
 aNV
@@ -114814,11 +115104,11 @@ dpS
 mZW
 azA
 aIh
-iwc
+nsj
 quO
 pCb
 quO
-iwc
+nsj
 atm
 hSx
 uFh
@@ -114826,7 +115116,7 @@ lwV
 qiR
 nmJ
 jFL
-iwc
+nsj
 aFi
 aLm
 aNV
@@ -115071,19 +115361,19 @@ dpS
 mZW
 azA
 aIh
-iwc
-iwc
-iwc
-iwc
-iwc
-iwc
-iwc
-iwc
-iwc
-iwc
-iwc
-iwc
-iwc
+nsj
+nsj
+nsj
+nsj
+nsj
+nsj
+nsj
+nsj
+nsj
+nsj
+nsj
+nsj
+nsj
 bfu
 aLm
 aNV

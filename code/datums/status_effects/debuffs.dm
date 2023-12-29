@@ -91,9 +91,9 @@
 			healing -= 0.0025
 		if(locate(/obj/item/bedsheet) in owner.loc)
 			healing -= 0.005	
-		if(health_ratio > 0.65) // Only heal when above 65% health
-			owner.adjustBruteLoss(healing, only_organic = FALSE) //only_organic = FALSE for robotic species/limbs
-			owner.adjustFireLoss(healing, only_organic = FALSE)
+		if(health_ratio > 0.75) // Only heal when above 75% health
+			owner.adjustBruteLoss(healing)
+			owner.adjustFireLoss(healing)
 			owner.adjustToxLoss(healing * 0.5, forced = TRUE)
 		owner.adjustStaminaLoss(healing)
 	if(human_owner && human_owner.drunkenness)

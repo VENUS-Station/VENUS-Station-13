@@ -104,6 +104,12 @@
 	name = "Towel"
 	path = /obj/item/reagent_containers/rag/towel
 
+/datum/gear/backpack/shockcollar
+	name = "Shock Collar Kit"
+	path = /obj/item/storage/box/shockcollar
+	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_TOYS
+	cost = 3
+	
 /datum/gear/backpack/standard_chastity_box
 	name = "Chastity Box"
 	path = /obj/item/storage/box/chastity_cage

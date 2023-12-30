@@ -107,3 +107,6 @@
   battlestar-gafraktika:
   - rscadd: New Silver Love Co. Shock Collar Kit Box.
   - rscadd: The above is also in the loadout screen.
+2023-12-30:
+  ariaworld:
+  - bugfix: Wrong icon state triggering annoying errors in pull requests.

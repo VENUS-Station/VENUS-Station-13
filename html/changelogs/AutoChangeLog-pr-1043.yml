@@ -1,4 +1,0 @@
-author: ariaworld
-delete-after: true
-changes:
-  - bugfix: Wrong icon state triggering annoying errors in pull requests.

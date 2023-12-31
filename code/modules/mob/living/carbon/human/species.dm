@@ -1602,6 +1602,8 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			//
 			H.update_inv_wear_suit()
 	else
+		if(HAS_TRAIT(H, TRAIT_INCUBUS || TRAIT_SUCCUBUS))
+			return //SPLURT EDIT: Avoid incubi and succubi don't get fat drawbacks (but can still be seen on examine)
 		if(H.overeatduration >= 100)
 			to_chat(H, "<span class='danger'>You suddenly feel blubbery!</span>")
 			ADD_TRAIT(H, TRAIT_FAT, OBESITY)

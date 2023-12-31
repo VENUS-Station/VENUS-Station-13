@@ -1,7 +1,7 @@
 #define MOB_LAYER_SHIFT_INCREMENT	0.01
-#define MOB_LAYER_SHIFT_MIN 		3.84 // Adjusted for -16
+#define MOB_LAYER_SHIFT_MIN 		3.74 // SPLURT Adjusted for -26 (from 3.95)
 //#define MOB_LAYER 				4   // This is a byond standard define
-#define MOB_LAYER_SHIFT_MAX   		4.16 // Adjusted for +16
+#define MOB_LAYER_SHIFT_MAX   		4.26 // SPLURT Adjusted for +26 (from 4.05)
 
 /mob/living/verb/layershift_up()
 	set name = "Shift Layer Upwards"

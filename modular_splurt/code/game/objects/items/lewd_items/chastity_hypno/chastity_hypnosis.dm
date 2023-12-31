@@ -46,7 +46,7 @@
 						trait_flag = TRAIT_HYPERSENS_ANUS
 
 				ADD_TRAIT(C, trait_flag, ORGAN_TRAIT)
-				to_chat(C, "<span class='hypnophrase'>Your anus is now <i>[lowertext(choices[G])]</i></span>")
+				to_chat(C, span_hypnophrase("Your anus is now <i>[lowertext(choices[G])]</i>."))
 				continue
 
 		var/obj/item/organ/genital/genital = C.getorganslot(lowertext(G))
@@ -88,7 +88,7 @@
 		if(!hypno_flag)
 			continue
 
-		to_chat(C, "<span class='hypnophrase'>Your [lowertext(G)] is now <i>[lowertext(choices[G])]</i></span>")
+		to_chat(C, span_hypnophrase("Your [lowertext(G)] is now <i>[lowertext(choices[G])]</i>."))
 
 		var/obj/item/organ/genital/genital_organ = genital
 		ENABLE_BITFIELD(genital_organ.genital_flags, hypno_flag)
@@ -188,7 +188,7 @@
 	if(!("hypno" in mood_comp.mood_events))
 		return ..()
 	C.remove_chastity_hypno_effects()
-	to_chat(C, "<span class='warning'>You manage to gain control over your genitals again.</span>")
+	to_chat(C, span_warning("You manage to gain control over your genitals again."))
 	. = ..()
 
 /datum/mood_event/hypnosis

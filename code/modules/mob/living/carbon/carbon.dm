@@ -200,6 +200,15 @@
 			if(start_T && end_T)
 				log_combat(src, throwable_mob, "thrown", addition="grab from tile in [AREACOORD(start_T)] towards tile at [AREACOORD(end_T)]")
 
+	else
+		thrown_thing = I.on_thrown(src, target)
+
+	if(isliving(thrown_thing))
+		var/turf/start_T = get_turf(loc)
+		var/turf/end_T = get_turf(target)
+		if(start_T && end_T)
+			log_combat(src, thrown_thing, "thrown", addition="grab from tile in [AREACOORD(start_T)] towards tile at [AREACOORD(end_T)]")
+
 	else if(!(I.item_flags & ABSTRACT) && !HAS_TRAIT(I, TRAIT_NODROP))
 		thrown_thing = I
 		dropItemToGround(I)
@@ -268,7 +277,7 @@
 		MarkResistTime()
 		visible_message("<span class='warning'>[src] attempts to unbuckle [p_them()]self!</span>", \
 					"<span class='notice'>You attempt to unbuckle yourself... (This will take around [round(buckle_cd/600,1)] minute\s, and you need to stay still.)</span>")
-		if(do_after(src, buckle_cd, src, timed_action_flags = IGNORE_HELD_ITEM))
+		if(do_after(src, buckle_cd, src, timed_action_flags = IGNORE_HELD_ITEM | IGNORE_INCAPACITATED, extra_checks = CALLBACK(src, .proc/cuff_resist_check)))
 			if(!buckled)
 				return
 			buckled.user_unbuckle_mob(src, src)

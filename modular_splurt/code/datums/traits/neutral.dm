@@ -44,6 +44,21 @@
 	lose_text = span_notice("Having your head pet doesn't sound so bad right about now...")
 	medical_record_text = "Patient cares little with or dislikes being touched."
 
+/datum/quirk/headpat_hater/add()
+
+	var/mob/living/carbon/human/quirk_mob = quirk_holder
+
+	var/datum/action/cooldown/toggle_distant/act_toggle = new
+	act_toggle.Grant(quirk_mob)
+
+/datum/quirk/headpat_hater/remove()
+
+	var/mob/living/carbon/human/quirk_mob = quirk_holder
+
+	var/datum/action/cooldown/toggle_distant/act_toggle = locate() in quirk_mob.actions
+	if(act_toggle)
+		act_toggle.Remove(quirk_mob)
+
 /datum/quirk/headpat_slut
 	name = "Headpat Slut"
 	desc = "You love the feeling of others touching your head! Maybe a little too much, actually... Others patting your head will provide a bigger mood boost and cause aroused reactions."
@@ -133,6 +148,8 @@
 			species.disliked_food &= ~MEAT
 
 //Zombies + Cumplus Fix\\
+
+/*
 /datum/quirk/undead
     name = "Undeath"
     desc = "Your body, be it anomalous, or just outright refusing to die - has indeed become undead. Due to this you may be more susceptible to burn-based weaponry."
@@ -169,6 +186,7 @@
         H.adjustFireLoss(-0.15, forced = TRUE)
     else if (H.getToxLoss() <= 90)
         H.adjustToxLoss(-0.3, forced = TRUE)
+*/
 
 /datum/quirk/cum_plus
 	name = "Extra-Productive Genitals"
@@ -885,7 +903,7 @@
 	. = ..()
 	var/mob/living/carbon/human/H = quirk_holder
 	var/obj/item/clothing/mask/gas/cosmetic/gasmask = new(get_turf(quirk_holder)) // Uses a custom gas mask
-	H.equip_to_slot(gasmask, ITEM_SLOT_MASK)
+	H.equip_to_slot_if_possible(gasmask, ITEM_SLOT_MASK) // If character have a loadout mask, the custom one will not overwrite it but instead will be dropped on floor
 	H.regenerate_icons()
 
 /datum/quirk/body_morpher

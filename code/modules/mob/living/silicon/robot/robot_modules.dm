@@ -413,6 +413,10 @@
 		"Drake" = image(icon = 'modular_sand/icons/mob/cyborg/drakemech.dmi', icon_state = "drakemedbox"),
 		"Assaultron" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "assaultron_medical"), // SPLURT Addon
 		"Meka" = image(icon = 'modular_splurt/icons/mob/robots_32x64.dmi', icon_state = "mekamed"), // SPLURT Addon
+		"Feline" = image(icon = 'modular_splurt/icons/mob/widerobot.dmi', icon_state = "vixmed-b"), // SPLURT Addon (ChompS Port)
+		"Raptor V-4" = image(icon = 'modular_splurt/icons/mob/robots_64x45.dmi', icon_state = "medraptor-b"), // SPLURT Addon (ChompS Port)
+		"Raptor V-4 (alt)" = image(icon = 'modular_splurt/icons/mob/robots_64x45.dmi', icon_state = "traumaraptor-b"), // SPLURT Addon (ChompS Port)
+		"Handy" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "handy_medical") // SPLURT Addon (Fallout 13)
 		)
 		var/list/L = list("Medihound" = "medihound", "Medihound Dark" = "medihounddark", "Vale" = "valemed")
 		for(var/a in L)
@@ -423,7 +427,7 @@
 			var/image/bad_snowflake = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = "alina-med")
 			bad_snowflake.pixel_x = -16
 			med_icons["Alina"] = bad_snowflake
-		med_icons = sortList(med_icons)
+		med_icons = sort_list(med_icons)
 	var/med_borg_icon = show_radial_menu(R, R , med_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
 	switch(med_borg_icon)
 		if("Default")
@@ -492,6 +496,10 @@
 			cyborg_base_icon = "haydeemedical"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots.dmi'
 			hat_offset = 3
+		if("Handy") // SPLURT Addon (Fallout 13)
+			cyborg_base_icon = "handy_medical"
+			cyborg_icon_override = 'modular_splurt/icons/mob/robots.dmi'
+			hat_offset = 3
 		if("Medihound")
 			cyborg_base_icon = "medihound"
 			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
@@ -543,6 +551,27 @@
 			cyborg_base_icon = "mekamed"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots_32x64.dmi'
 			hat_offset = 3
+		if("Feline") // SPLURT Addon (Chomp Port)
+			cyborg_base_icon = "vixmed"
+			cyborg_icon_override = 'modular_splurt/icons/mob/widerobot.dmi'
+			sleeper_overlay = "vixmed-sleeper"
+			moduleselect_icon = "medihound"
+			moduleselect_alternate_icon = 'modular_citadel/icons/ui/screen_cyborg.dmi'
+			dogborg = TRUE
+		if("Raptor V-4") // SPLURT Addon (ChompS Port)
+			cyborg_base_icon = "medraptor"
+			cyborg_icon_override = 'modular_splurt/icons/mob/robots_64x45.dmi'
+			sleeper_overlay = "medraptor_sleeper"
+			moduleselect_icon = "medihound"
+			moduleselect_alternate_icon = 'modular_citadel/icons/ui/screen_cyborg.dmi'
+			dogborg = TRUE
+		if("Raptor V-4 (alt)") // SPLURT Addon (ChompS Port)
+			cyborg_base_icon = "traumaraptor"
+			cyborg_icon_override = 'modular_splurt/icons/mob/robots_64x45.dmi'
+			sleeper_overlay = "traumaraptor_sleeper"
+			moduleselect_icon = "medihound"
+			moduleselect_alternate_icon = 'modular_citadel/icons/ui/screen_cyborg.dmi'
+			dogborg = TRUE
 		else
 			return FALSE
 	return ..()
@@ -617,7 +646,10 @@
 		"Otie" = image(icon = 'modular_splurt/icons/mob/widerobot.dmi', icon_state = "otiee-b"), // SPLURT Adoon (Skyrat Port)
 		"Drake" = image(icon = 'modular_sand/icons/mob/cyborg/drakemech.dmi', icon_state = "drakeengbox"),
 		"Assaultron" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "assaultron_engi"), // SPLURT Addon
-		"Haydee" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "haydeeengi") // SPLURT Addon
+		"Haydee" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "haydeeengi"), // SPLURT Addon
+		"Feline" = image(icon = 'modular_splurt/icons/mob/widerobot.dmi', icon_state = "vixengi-b"), // SPLURT Addon (ChompS Port)
+		"Raptor V-4" = image(icon = 'modular_splurt/icons/mob/robots_64x45.dmi', icon_state = "engiraptor-b"), // SPLURT Addon (ChompS Port)
+		"Handy" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "handy_engineer") // SPLURT Addon (Fallout 13)
 		)
 		var/list/L = list("Pup Dozer" = "pupdozer", "Vale" = "valeeng")
 		for(var/a in L)
@@ -628,7 +660,7 @@
 			var/image/bad_snowflake = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = "alina-eng")
 			bad_snowflake.pixel_x = -16
 			engi_icons["Alina"] = bad_snowflake
-		engi_icons = sortList(engi_icons)
+		engi_icons = sort_list(engi_icons)
 	var/engi_borg_icon = show_radial_menu(R, R , engi_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
 	switch(engi_borg_icon)
 		if("Default")
@@ -699,6 +731,10 @@
 			cyborg_base_icon = "bootyengineerS"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots.dmi'
 			hat_offset = 3
+		if("Handy") // SPLURT Addon (Fallout 13)
+			cyborg_base_icon = "handy_engineer"
+			cyborg_icon_override = 'modular_splurt/icons/mob/robots.dmi'
+			hat_offset = 3
 		if("Pup Dozer")
 			cyborg_base_icon = "pupdozer"
 			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
@@ -748,6 +784,16 @@
 			cyborg_base_icon = "haydeeengi"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots.dmi'
 			hat_offset = 3
+		if("Feline") // SPLURT Addon (ChompS Port)
+			cyborg_base_icon = "vixengi"
+			cyborg_icon_override = 'modular_splurt/icons/mob/widerobot.dmi'
+			sleeper_overlay = "vixengi-sleeper"
+			dogborg = TRUE
+		if("Raptor V-4") // SPLURT Addon (ChompS Port)
+			cyborg_base_icon = "engiraptor"
+			cyborg_icon_override = 'modular_splurt/icons/mob/robots_64x45.dmi'
+			sleeper_overlay = "engiraptor-sleeper"
+			dogborg = TRUE
 		else
 			return FALSE
 	return ..()
@@ -805,7 +851,12 @@
 		"EdgyGirl" = image(icon = 'modular_splurt/icons/mob/widerobot.dmi', icon_state = "prettyboi-b"), // SPLURT Addon (VIRGO Port)
 		"Drake" = image(icon = 'modular_sand/icons/mob/cyborg/drakemech.dmi', icon_state = "drakesecbox"),
 		"Assaultron" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "assaultron_sec"), // SPLURT Addon
-		"Haydee" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "haydeesec") // SPLURT Addon
+		"Haydee" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "haydeesec"), // SPLURT Addon
+		"Feline" = image(icon = 'modular_splurt/icons/mob/widerobot.dmi', icon_state = "vixsec-b"), // SPLURT Addon (ChompS Port)
+		"Raptor V-4" = image(icon = 'modular_splurt/icons/mob/robots_64x45.dmi', icon_state = "secraptor-b"), // SPLURT Addon (ChompS Port)
+		"Handy" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "handy_security"), // SPLURT Addon (Fallout 13)
+		"Sentry Bot" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "sentrybot"), // SPLURT Addon (Fallout 13)
+		"Securitron" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "securitron") // SPLURT Addon (Fallout 13)
 		)
 		var/list/L = list("K9" = "k9", "Vale" = "valesec", "K9 Dark" = "k9dark")
 		for(var/a in L)
@@ -816,7 +867,7 @@
 			var/image/bad_snowflake = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = "alina-sec")
 			bad_snowflake.pixel_x = -16
 			sec_icons["Alina"] = bad_snowflake
-		sec_icons = sortList(sec_icons)
+		sec_icons = sort_list(sec_icons)
 	var/sec_borg_icon = show_radial_menu(R, R , sec_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
 	switch(sec_borg_icon)
 		if("Default")
@@ -880,6 +931,18 @@
 			cyborg_base_icon = "bootysecurityS"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots.dmi'
 			hat_offset = 3
+		if("Handy") // SPLURT Addon (Fallout 13)
+			cyborg_base_icon = "handy_security"
+			cyborg_icon_override = 'modular_splurt/icons/mob/robots.dmi'
+			hat_offset = 3
+		if("Sentry Bot") // SPLURT Addon (Fallout 13)
+			cyborg_base_icon = "sentrybot"
+			cyborg_icon_override = 'modular_splurt/icons/mob/robots.dmi'
+			hat_offset = 3
+		if("Securitron") // SPLURT Addon (Fallout 13)
+			cyborg_base_icon = "securitron"
+			cyborg_icon_override = 'modular_splurt/icons/mob/robots.dmi'
+			hat_offset = 3
 		if("K9")
 			cyborg_base_icon = "k9"
 			sleeper_overlay = "ksleeper"
@@ -937,6 +1000,16 @@
 			cyborg_base_icon = "haydeesec"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots.dmi'
 			hat_offset = 3
+		if("Feline") // SPLURT Addon (ChompS Port)
+			cyborg_base_icon = "vixsec"
+			sleeper_overlay = "vixsec-sleeper"
+			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
+			dogborg = TRUE
+		if("Raptor V-4") // SPLURT Addon (ChompS Port)
+			cyborg_base_icon = "secraptor"
+			sleeper_overlay = "secraptor-sleeper"
+			cyborg_icon_override = 'modular_splurt/icons/mob/robots_64x45.dmi'
+			dogborg = TRUE
 		else
 			return FALSE
 	return ..()
@@ -978,7 +1051,7 @@
 
 /obj/item/robot_module/peacekeeper/be_transformed_to(obj/item/robot_module/old_module)
 	var/mob/living/silicon/robot/R = loc
-	var/static/list/peace_icons = sortList(list(
+	var/static/list/peace_icons = sort_list(list(
 		"Default" = image(icon = 'icons/mob/robots.dmi', icon_state = "peace"),
 		"Borgi" = image(icon = 'modular_citadel/icons/mob/robots.dmi', icon_state = "borgi"),
 		"Spider" = image(icon = 'modular_citadel/icons/mob/robots.dmi', icon_state = "whitespider"),
@@ -995,7 +1068,10 @@
 		"Assaultron" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "assaultron_peacekeeper"), // SPLURT Adoon
 		"Haydee" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "haydeepk"), // SPLURT Addon
 		"Meka" = image(icon = 'modular_splurt/icons/mob/robots_32x64.dmi', icon_state = "mekapeace"), // SPLURT Addon
-		))
+		"Feline" = image(icon = 'modular_splurt/icons/mob/widerobot.dmi', icon_state = "vixpk-b"), // SPLURT Addon (ChompS Port)
+		"Raptor V-4" = image(icon = 'modular_splurt/icons/mob/robots_64x45.dmi', icon_state = "peaceraptor-b"), // SPLURT Addon (ChompS Port)
+		"Handy" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "handy_peace") // SPLURT Addon (Fallout 13)
+	))
 	var/peace_borg_icon = show_radial_menu(R, R , peace_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
 	switch(peace_borg_icon)
 		if("Default")
@@ -1035,6 +1111,10 @@
 			cyborg_base_icon = "bootypeaceS"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots.dmi'
 			hat_offset = 3
+		if("Handy") // SPLURT Addon (Fallout 13)
+			cyborg_base_icon = "handy_peace"
+			cyborg_icon_override = 'modular_splurt/icons/mob/robots.dmi'
+			hat_offset = 3
 		if("Borgi")
 			cyborg_base_icon = "borgi"
 			moduleselect_icon = "borgi"
@@ -1064,6 +1144,16 @@
 			cyborg_base_icon = "mekapeace"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots_32x64.dmi'
 			hat_offset = 3
+		if("Feline") // SPLURT Addon (ChompS Port)
+			cyborg_base_icon = "vixpk"
+			cyborg_icon_override = 'modular_splurt/icons/mob/widerobot.dmi'
+			sleeper_overlay = "vixpk-sleeper"
+			dogborg = TRUE
+		if("Raptor V-4") // SPLURT Addon (ChompS Port)
+			cyborg_base_icon = "peaceraptor"
+			cyborg_icon_override = 'modular_splurt/icons/mob/robots_64x45.dmi'
+			sleeper_overlay = "peaceraptor-sleeper"
+			dogborg = TRUE
 		else
 			return FALSE
 	return ..()
@@ -1211,6 +1301,9 @@
 		"(Service) K69" = image(icon = 'modular_splurt/icons/mob/widerobot.dmi', icon_state = "k69-b"), // SPLURT Addon (Skyrat Port) // The Cursed One
 		"(Service) Borgi" = image(icon = 'modular_splurt/icons/mob/widerobot.dmi', icon_state = "borgi-serv-b"), // SPLURT Addon (Skyrat Port)
 		"(Service) Meka" = image(icon = 'modular_splurt/icons/mob/robots_32x64.dmi', icon_state = "mekaserve"), // SPLURT Addon
+		"(Service) Feline" = image(icon = 'modular_splurt/icons/mob/widerobot.dmi', icon_state = "vixserv-b"), // SPLURT Addon (ChompS Port)
+		"(Service) Raptor V-4" = image(icon = 'modular_splurt/icons/mob/robots_64x45.dmi', icon_state = "serviraptor-b"), // SPLURT Addon (ChompS Port)
+		"(Fancy) Raptor V-4" = image(icon = 'modular_splurt/icons/mob/robots_64x45.dmi', icon_state = "fancyraptor-b"), // SPLURT Addon (ChompS Port)
 		"(Janitor) Default" = image(icon = 'icons/mob/robots.dmi', icon_state = "janitor"),
 		"(Janitor) Marina" = image(icon = 'modular_citadel/icons/mob/robots.dmi', icon_state = "marinajan"),
 		"(Janitor) Sleek" = image(icon = 'modular_citadel/icons/mob/robots.dmi', icon_state = "sleekjan"),
@@ -1235,7 +1328,14 @@
 		"Assaultron" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "assaultron_service"), // SPLURT Addon
 		"(Janitor) Haydee" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "haydeejan"), // SPLURT Addon
 		"(Janitor) Meka" = image(icon = 'modular_splurt/icons/mob/robots_32x64.dmi', icon_state = "mekajani"), // SPLURT Addon
+		"(Janitor) Feline" = image(icon = 'modular_splurt/icons/mob/widerobot.dmi', icon_state = "vixjani-b"), // SPLURT Addon (ChompS Port)
+		"(Janitor Alt) Feline" = image(icon = 'modular_splurt/icons/mob/widerobot.dmi', icon_state = "vixsci-b"), // SPLURT Addon (ChompS Port)
+		"(Janitor) Raptor V-4" = image(icon = 'modular_splurt/icons/mob/robots_64x45.dmi', icon_state = "janiraptor-b"), // SPLURT Addon (ChompS Port)
+		"(Janitor Alt) Raptor V-4" = image(icon = 'modular_splurt/icons/mob/robots_64x45.dmi', icon_state = "sciraptor-b"), // SPLURT Addon (ChompS Port)
 		"(Waiter) Meka" = image(icon = 'modular_splurt/icons/mob/robots_32x64.dmi', icon_state = "mekaserve_alt"), // SPLURT Addon
+		"(Service) Handy" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "handy_service"), // SPLURT Addon (Fallout 13)
+		"(Janitor) Handy" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "handy_janitor"), // SPLURT Addon (Fallout 13)
+		"(Pleasure) Handy" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "handy_pleasure") // SPLURT Addon (Fallout 13)
 		)
 		var/list/L = list("(Service) DarkK9" = "k50", "(Service) Vale" = "valeserv", "(Service) ValeDark" = "valeservdark",
 						"(Janitor) Scrubpuppy" = "scrubpup")
@@ -1247,7 +1347,7 @@
 			var/image/bad_snowflake = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = "alina-sec")
 			bad_snowflake.pixel_x = -16
 			service_icons["Alina"] = bad_snowflake
-		service_icons = sortList(service_icons)
+		service_icons = sort_list(service_icons)
 	var/service_robot_icon = show_radial_menu(R, R , service_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
 	switch(service_robot_icon)
 		if("(Service) Waitress")
@@ -1305,6 +1405,10 @@
 			cyborg_base_icon = "bootyserviceS"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots.dmi'
 			hat_offset = 3
+		if("(Service) Handy") // SPLURT Addon (Fallout 13)
+			cyborg_base_icon = "handy_service"
+			cyborg_icon_override = 'modular_splurt/icons/mob/robots.dmi'
+			hat_offset = 3
 		if("(Service) DarkK9")
 			cyborg_base_icon = "k50"
 			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
@@ -1334,6 +1438,21 @@
 			cyborg_base_icon = "mekaserve"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots_32x64.dmi'
 			hat_offset = 3
+		if("(Service) Feline") // SPLURT Addon (ChompS Port)
+			cyborg_base_icon = "vixserv"
+			cyborg_icon_override = 'modular_splurt/icons/mob/widerobot.dmi'
+			sleeper_overlay = "vixserv-sleeper"
+			dogborg = TRUE
+		if("(Service) Raptor V-4") // SPLURT Addon (ChompS Port)
+			cyborg_base_icon = "serviraptor"
+			cyborg_icon_override = 'modular_splurt/icons/mob/robots_64x45.dmi'
+			sleeper_overlay = "serviraptor-sleeper"
+			dogborg = TRUE
+		if("(Fancy) Raptor V-4") // SPLURT Addon (ChompS Port)
+			cyborg_base_icon = "fancyraptor"
+			cyborg_icon_override = 'modular_splurt/icons/mob/robots_64x45.dmi'
+			sleeper_overlay = "fancyraptor-sleeper"
+			dogborg = TRUE
 		if("(Janitor) Default")
 			cyborg_base_icon = "janitor"
 		if("(Janitor) Marina")
@@ -1396,6 +1515,10 @@
 			cyborg_base_icon = "bootyjanitorS"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots.dmi'
 			hat_offset = 3
+		if("(Janitor) Handy") // SPLURT Addon (Fallout 13)
+			cyborg_base_icon = "handy_janitor"
+			cyborg_icon_override = 'modular_splurt/icons/mob/robots.dmi'
+			hat_offset = 3
 		if("(Janitor) Scrubpuppy")
 			cyborg_base_icon = "scrubpup"
 			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
@@ -1432,9 +1555,33 @@
 			cyborg_base_icon = "mekajani"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots_32x64.dmi'
 			hat_offset = 3
+		if("(Janitor) Feline") // SPLURT Addon (ChompS Port)
+			cyborg_base_icon = "vixjani"
+			cyborg_icon_override = 'modular_splurt/icons/mob/widerobot.dmi'
+			sleeper_overlay = "vixjani-sleeper"
+			dogborg = TRUE
+		if("(Janitor Alt) Feline") // SPLURT Addon (ChompS Port); If someone decide to make science module for SPLURT, just cut and paste it, then apply tweaks
+			cyborg_base_icon = "vixsci"
+			cyborg_icon_override = 'modular_splurt/icons/mob/widerobot.dmi'
+			sleeper_overlay = "vixsci-sleeper"
+			dogborg = TRUE
+		if("(Janitor) Raptor V-4") // SPLURT Addon (ChompS Port)
+			cyborg_base_icon = "janiraptor"
+			cyborg_icon_override = 'modular_splurt/icons/mob/robots_64x45.dmi'
+			sleeper_overlay = "janiraptor-sleeper"
+			dogborg = TRUE
+		if("(Janitor Alt) Raptor V-4") // SPLURT Addon (ChompS Port); Ditto with sci module thing.
+			cyborg_base_icon = "sciraptor"
+			cyborg_icon_override = 'modular_splurt/icons/mob/robots_64x45.dmi'
+			sleeper_overlay = "sciraptor-sleeper"
+			dogborg = TRUE
 		if("(Waiter) Meka")
 			cyborg_base_icon = "mekaserve_alt"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots_32x64.dmi'
+			hat_offset = 3
+		if("(Pleasure) Handy") // SPLURT Addon (Fallout 13)
+			cyborg_base_icon = "handy_pleasure"
+			cyborg_icon_override = 'modular_splurt/icons/mob/robots.dmi'
 			hat_offset = 3
 		else
 			return FALSE
@@ -1500,13 +1647,16 @@
 		"Assaultron" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "assaultron_mining"), // SPLURT Addon
 		"Haydee" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "haydeeminer"), // SPLURT Addon
 		"Meka" = image(icon = 'modular_splurt/icons/mob/robots_32x64.dmi', icon_state = "mekamine"), // SPLURT Addon
+		"Feline" = image(icon = 'modular_splurt/icons/mob/widerobot.dmi', icon_state = "vixmine-b"), // SPLURT Adoon (ChompS Port)
+		"Raptor V-4" = image(icon = 'modular_splurt/icons/mob/robots_64x45.dmi', icon_state = "mineraptor-b"), // SPLURT Adoon (ChompS Port)
+		"Handy" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "handy_miner") // SPLURT Addon (Fallout 13)
 		)
 		var/list/L = list("Blade" = "blade", "Vale" = "valemine")
 		for(var/a in L)
 			var/image/wide = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = L[a])
 			wide.pixel_x = -16
 			mining_icons[a] = wide
-		mining_icons = sortList(mining_icons)
+		mining_icons = sort_list(mining_icons)
 	var/mining_borg_icon = show_radial_menu(R, R , mining_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
 	switch(mining_borg_icon)
 		if("Lavaland")
@@ -1569,6 +1719,10 @@
 			cyborg_base_icon = "bootyminerS"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots.dmi'
 			hat_offset = 3
+		if("Handy") // SPLURT Addon (Fallout 13)
+			cyborg_base_icon = "handy_miner"
+			cyborg_icon_override = 'modular_splurt/icons/mob/robots.dmi'
+			hat_offset = 3
 		if("Blade")
 			cyborg_base_icon = "blade"
 			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
@@ -1611,6 +1765,16 @@
 			cyborg_base_icon = "mekamine"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots_32x64.dmi'
 			hat_offset = 3
+		if("Feline") // SPLURT Addon (ChompS Port)
+			cyborg_base_icon = "vixmine"
+			cyborg_icon_override = 'modular_splurt/icons/mob/widerobot.dmi'
+			sleeper_overlay = "vixmine-sleeper"
+			dogborg = TRUE
+		if("Raptor V-4") // SPLURT Addon (ChompS Port)
+			cyborg_base_icon = "mineraptor"
+			cyborg_icon_override = 'modular_splurt/icons/mob/robots_64x45.dmi'
+			sleeper_overlay = "mineraptor-sleeper"
+			dogborg = TRUE
 		else
 			return FALSE
 	return ..()

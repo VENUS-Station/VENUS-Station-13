@@ -47,7 +47,7 @@
 /datum/mood_event/delam //SM delamination
 	description = "<span class='boldwarning'>Those God damn engineers can't do anything right...</span>\n"
 	mood_change = -2
-	timeout = 2400
+	timeout = 4 MINUTES
 
 /datum/mood_event/depression
 	description = "<span class='warning'>I feel sad for no particular reason.</span>\n"
@@ -62,7 +62,7 @@
 /datum/mood_event/dismembered
 	description = "<span class='boldwarning'>AHH! I WAS USING THAT LIMB!</span>\n"
 	mood_change = -8
-	timeout = 2400
+	timeout = 4 MINUTES
 
 /datum/mood_event/noshoes
 	description = "<span class='warning'>I am a disgrace to comedy everywhere!</span>\n"
@@ -109,7 +109,7 @@
 /datum/mood_event/epilepsy //Only when the mutation causes a seizure
 	description = "<span class='warning'>I should have paid attention to the epilepsy warning.</span>\n"
 	mood_change = -3
-	timeout = 3000
+	timeout = 5 MINUTES
 
 /datum/mood_event/nyctophobia
 	description = "<span class='warning'>It sure is dark around here...</span>\n"
@@ -155,12 +155,12 @@
 /datum/mood_event/loud_gong
 	description = "<span class='warning'>That loud gong noise really hurt my ears!</span>\n"
 	mood_change = -3
-	timeout = 1200
+	timeout = 2 MINUTES
 
 /datum/mood_event/spooked
 	description = "<span class='warning'>The rattling of those bones...It still haunts me.</span>\n"
 	mood_change = -4
-	timeout = 2400
+	timeout = 4 MINUTES
 
 /datum/mood_event/graverobbing
 	description ="<span class='boldwarning'>I just desecrated someone's grave... I can't believe I did that...</span>\n"
@@ -187,7 +187,7 @@
 /datum/mood_event/sad_empath
 	description = "<span class='warning'>Someone seems upset...</span>\n"
 	mood_change = -2
-	timeout = 600
+	timeout = 1 MINUTES
 
 /datum/mood_event/sad_empath/add_effects(mob/sadtarget)
 	description = "<span class='warning'>[sadtarget.name] seems upset...</span>\n"
@@ -288,7 +288,7 @@
 /datum/mood_event/artbad
 	description = "<span class='warning'>I've produced better art than that from my ass.</span>\n"
 	mood_change = -2
-	timeout = 1200
+	timeout = 2 MINUTES
 
 /datum/mood_event/tripped
 	description = "<span class='boldwarning'>I can't believe I fell for the oldest trick in the book!</span>\n"

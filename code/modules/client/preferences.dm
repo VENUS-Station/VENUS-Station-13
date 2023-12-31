@@ -1,6 +1,7 @@
 #define DEFAULT_SLOT_AMT	2
 #define HANDS_SLOT_AMT		2
 #define BACKPACK_SLOT_AMT	4
+#define DEFAULT_QUIRK_BALANCE 2 // SPLURT EDIT: Starting quirk points balance.
 
 GLOBAL_LIST_EMPTY(preferences_datums)
 
@@ -2007,7 +2008,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	popup.open(FALSE)
 
 /datum/preferences/proc/GetQuirkBalance()
-	var/bal = 0
+	var/bal = DEFAULT_QUIRK_BALANCE
 	for(var/V in all_quirks)
 		var/datum/quirk/T = SSquirks.quirks[V]
 		bal -= initial(T.value)
@@ -4426,4 +4427,4 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 #undef DEFAULT_SLOT_AMT
 #undef HANDS_SLOT_AMT
 #undef BACKPACK_SLOT_AMT
-
+#undef DEFAULT_QUIRK_BALANCE

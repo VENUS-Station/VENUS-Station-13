@@ -17,7 +17,7 @@
 
 	layer = clamp(layer, MOB_LAYER_SHIFT_MIN, MOB_LAYER_SHIFT_MAX)
 	layer += MOB_LAYER_SHIFT_INCREMENT
-	var/layer_priority = FLOOR((layer - MOB_LAYER) * 100, 1) // Just for text feedback
+	var/layer_priority = (layer - MOB_LAYER) * 100 // Just for text feedback | SPLURT EDIT: Removed FLOOR calculation
 	to_chat(src, span_notice("Your layer priority is now [layer_priority]."))
 
 /mob/living/verb/layershift_down()
@@ -34,5 +34,20 @@
 
 	layer = clamp(layer, MOB_LAYER_SHIFT_MIN, MOB_LAYER_SHIFT_MAX)
 	layer -= MOB_LAYER_SHIFT_INCREMENT
-	var/layer_priority = FLOOR((layer - MOB_LAYER) * 100, 1) // Just for text feedback
+	var/layer_priority = (layer - MOB_LAYER) * 100 // Just for text feedback | SPLURT EDIT: Removed FLOOR calculation
+	to_chat(src, span_notice("Your layer priority is now [layer_priority]."))
+
+/mob/living/verb/layershift_reset() //SPLURT ADDITION
+	set name = "Reset Layer"
+	set category = "IC"
+
+	if(incapacitated())
+		to_chat(src, span_warning("You can't do that right now!"))
+		return
+
+	if(lying)
+		layer = LYING_MOB_LAYER //so mob lying always appear behind standing mobs
+	else
+		layer = initial(layer)
+	var/layer_priority = (layer - MOB_LAYER) * 100 // Just for text feedback
 	to_chat(src, span_notice("Your layer priority is now [layer_priority]."))

@@ -45,7 +45,7 @@
 		/obj/item/wirecutters/advanced,
 		/obj/item/wrench/advanced,
 		/obj/item/weldingtool/advanced,
-		/obj/effect/spawner/lootdrop/alien_glands_single,
+		/obj/effect/spawner/lootdrop/alien_glands/single,
 		/obj/effect/spawner/lootdrop/maintenance
 		//SPLURT EDIT END
 	)

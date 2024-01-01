@@ -219,7 +219,7 @@
 	quirk_mob.mind.isholy = TRUE
 
 	// Add examine text.
-	RegisterSignal(quirk_holder, COMSIG_PARENT_EXAMINE, .proc/quirk_examine_Hallowed)
+	RegisterSignal(quirk_holder, COMSIG_PARENT_EXAMINE, .proc/on_examine_holder)
 
 /datum/quirk/hallowed/remove()
 	// Define quirk mob.
@@ -238,7 +238,7 @@
 	UnregisterSignal(quirk_holder, COMSIG_PARENT_EXAMINE)
 
 // Quirk examine text.
-/datum/quirk/hallowed/proc/quirk_examine_Hallowed(atom/examine_target, mob/living/carbon/human/examiner, list/examine_list)
+/datum/quirk/hallowed/proc/on_examine_holder(atom/examine_target, mob/living/carbon/human/examiner, list/examine_list)
 	examine_list += "[quirk_holder.p_they(TRUE)] radiates divine power..."
 
 /datum/quirk/vacuum_resistance

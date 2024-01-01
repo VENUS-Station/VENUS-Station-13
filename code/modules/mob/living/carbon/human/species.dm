@@ -240,6 +240,8 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	/// List of family heirlooms this species can get with the family heirloom quirk. List of types.
 	var/list/family_heirlooms
 
+	COOLDOWN_DECLARE(ass) // SPLURT ADDITION: ASS-SMACK COOLDOWN
+
 ///////////
 // PROCS //
 ///////////
@@ -1935,7 +1937,34 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			playsound(target.loc, pick(ouchies), 50, 1, -1)
 			user.emote("scream")
 			return FALSE
-
+		//SPLURT ADDITION START
+		if(HAS_TRAIT(target, TRAIT_JIGGLY_ASS))
+			if(!COOLDOWN_FINISHED(src, ass))
+				if(user == target)
+					to_chat(user, span_alert("Your butt is still [pick("rippling","jiggling","sloshing","clapping","wobbling")] about way too much to get a good smack!"))
+				else
+					to_chat(user, span_alert("[target]'s big [pick("rippling","jiggling","sloshing","clapping","wobbling")] butt is still [pick("rippling","jiggling","sloshing","clapping","wobbling")] about way too much to get a good smack!"))
+			else
+				COOLDOWN_START(src, ass, 5 SECONDS)
+				if(user == target)
+					playsound(target.loc, 'sound/weapons/slap.ogg', 50, FALSE, -1) // deep bassy butt
+					user.adjustStaminaLoss(25)
+					user.visible_message(
+						span_notice("[user] gives [user.p_their()] butt a smack!"),
+						span_lewd("You give your big fat butt a smack! It [pick("ripples","jiggles","sloshes","claps","wobbles")] about and throws you off balance!"),
+					)
+					return
+				else
+					SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT, "ass", /datum/mood_event/butt_slap)
+					SEND_SIGNAL(target, COMSIG_ADD_MOOD_EVENT, "ass", /datum/mood_event/butt_slapped)
+					playsound(target.loc, 'sound/weapons/slap.ogg', 50, FALSE, -1) // deep bassy butt
+					target.adjustStaminaLoss(25)
+					user.visible_message(
+						span_notice("\The [user] slaps [target]'s butt!"),
+						target = target, 
+						target_message = span_lewd("[user] smacks your big fat butt and sends it [pick("rippling","jiggling","sloshing","clapping","wobbling")]! It [pick("ripples","jiggles","sloshes","claps","wobbles")] about and throws you off balance!"))
+				return FALSE
+		//SPLURT ADDITION END
 		target.adjust_arousal(20,"masochism", maso = TRUE)
 		if (ishuman(target) && HAS_TRAIT(target, TRAIT_MASO) && target.has_dna() && prob(10))
 			target.mob_climax(forced_climax=TRUE, cause = "masochism")

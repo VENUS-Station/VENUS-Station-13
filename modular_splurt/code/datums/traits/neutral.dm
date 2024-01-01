@@ -94,7 +94,7 @@
 	act_hypno.Grant(quirk_mob)
 
 	// Add examine text
-	RegisterSignal(quirk_holder, COMSIG_PARENT_EXAMINE, .proc/quirk_examine_Hypnotic_gaze)
+	RegisterSignal(quirk_holder, COMSIG_PARENT_EXAMINE, .proc/on_examine_holder)
 
 /datum/quirk/Hypnotic_gaze/remove()
 	// Define quirk mob
@@ -108,7 +108,7 @@
 	UnregisterSignal(quirk_holder, COMSIG_PARENT_EXAMINE)
 
 // Quirk examine text
-/datum/quirk/Hypnotic_gaze/proc/quirk_examine_Hypnotic_gaze(atom/examine_target, mob/living/carbon/human/examiner, list/examine_list)
+/datum/quirk/Hypnotic_gaze/proc/on_examine_holder(atom/examine_target, mob/living/carbon/human/examiner, list/examine_list)
 	examine_list += "[quirk_holder.p_their(TRUE)] eyes glimmer with an entrancing power..."
 
 /datum/quirk/overweight

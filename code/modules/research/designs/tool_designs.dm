@@ -246,7 +246,7 @@
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL | DEPARTMENTAL_FLAG_SCIENCE
 
 /datum/design/retractor_adv
-	name = "Mechanical Pinches"
+	name = "Advanced Retractor"
 	desc = "An almagation of rods and gears, able to function as both a surgical clamp and retractor. "
 	id = "retractor_adv"
 	build_type = PROTOLATHE
@@ -256,7 +256,7 @@
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL | DEPARTMENTAL_FLAG_SCIENCE
 
 /datum/design/surgicaldrill_adv
-	name = "Searing Tool"
+	name = "Surgical Laser Drill"
 	desc = "It projects a high power laser used for medical applications."
 	id = "surgicaldrill_adv"
 	build_type = PROTOLATHE

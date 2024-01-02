@@ -1,0 +1,4 @@
+author: Anonymous
+delete-after: true
+changes:
+  - bugfix: Standard assaultron should be now selectable again.

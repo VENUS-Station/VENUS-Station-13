@@ -1538,7 +1538,7 @@
 	},
 /obj/effect/turf_decal/tile/red,
 /obj/structure/table/reinforced,
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
 "baO" = (
@@ -8605,7 +8605,7 @@
 /turf/open/floor/mineral/titanium/blue,
 /area/commons/toilet)
 "gjE" = (
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -31190,7 +31190,7 @@
 /turf/open/floor/plasteel,
 /area/service/janitor)
 "xaq" = (
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/structure/table/wood,
 /obj/structure/cable{
 	icon_state = "1-2"

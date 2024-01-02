@@ -171,7 +171,7 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 
 /obj/item/stack/sheet/metal/cyborg
 	custom_materials = null
-	is_cyborg = 1
+	is_cyborg = TRUE
 	cost = 500
 
 /obj/item/stack/sheet/metal/get_main_recipes()
@@ -186,7 +186,7 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
  * Plasteel
  */
 GLOBAL_LIST_INIT(plasteel_recipes, list ( \
-	new/datum/stack_recipe("AI core", /obj/structure/AIcore, 4, time = 50, one_per_turf = TRUE), \
+	new/datum/stack_recipe("AI core", /obj/structure/ai_core, 4, time = 50, one_per_turf = TRUE), \
 	new/datum/stack_recipe("bomb assembly", /obj/machinery/syndicatebomb/empty, 10, time = 50), \
 	new/datum/stack_recipe("plasteel keg", /obj/structure/custom_keg, 10, time = 50), \
 	new/datum/stack_recipe("pressure tank", /obj/machinery/atmospherics/components/unary/tank, 15, time = 60, one_per_turf = TRUE, on_floor = TRUE), \

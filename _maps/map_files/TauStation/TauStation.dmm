@@ -24525,7 +24525,7 @@
 /area/command/heads_quarters/captain/private)
 "itY" = (
 /obj/structure/table/wood,
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/item/storage/secure/briefcase/permits,
 /obj/structure/window/reinforced,
 /turf/open/floor/carpet,
@@ -26097,7 +26097,7 @@
 	icon_state = "1-2"
 	},
 /obj/effect/landmark/event_spawn,
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /turf/open/floor/carpet,
 /area/command/heads_quarters/hos)
 "iVR" = (

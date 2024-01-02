@@ -1,3 +1,6 @@
 2024-01-02:
+  AyyRobotics:
+  - code_imp: Adds 'hasrest' variable to allow non-dogborg cyborg sprites to have
+      resting sprites. Currently only used by 'Mekas'.
   BongaTheProto:
   - tweak: The space law books use our wiki's space law now

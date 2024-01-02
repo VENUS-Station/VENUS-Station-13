@@ -239,6 +239,7 @@
 			cyborg_base_icon = "mekacargo"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots_32x64.dmi'
 			hat_offset = 3
+			hasrest = TRUE
 		if("Feline") // ChompS Port
 			cyborg_base_icon = "vixcargo"
 			cyborg_icon_override = 'modular_splurt/icons/mob/widerobots_cargo.dmi'

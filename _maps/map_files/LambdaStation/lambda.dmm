@@ -63553,7 +63553,7 @@
 "exP" = (
 /obj/structure/table/wood,
 /obj/item/paper/guides/jobs/security/courtroom,
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
@@ -64575,7 +64575,7 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/red,
-/obj/item/book/manual/splurt_space_law{
+/obj/item/book/manual/wiki/splurt/splurt_space_law{
 	pixel_x = -4;
 	pixel_y = 4
 	},
@@ -69009,15 +69009,15 @@
 /area/maintenance/aft)
 "oal" = (
 /obj/structure/table,
-/obj/item/book/manual/splurt_space_law{
+/obj/item/book/manual/wiki/splurt/splurt_space_law{
 	pixel_x = -3;
 	pixel_y = 5
 	},
-/obj/item/book/manual/splurt_space_law{
+/obj/item/book/manual/wiki/splurt/splurt_space_law{
 	pixel_x = -3;
 	pixel_y = 5
 	},
-/obj/item/book/manual/splurt_space_law{
+/obj/item/book/manual/wiki/splurt/splurt_space_law{
 	pixel_x = -3;
 	pixel_y = 5
 	},
@@ -69083,7 +69083,7 @@
 	dir = 4
 	},
 /obj/structure/table/wood,
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/item/paper/fluff/gateway,
 /obj/item/coin/plasma,
 /obj/item/melee/chainofcommand,
@@ -70123,7 +70123,7 @@
 /area/science/research)
 "qbG" = (
 /obj/structure/table/reinforced,
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -70253,7 +70253,7 @@
 /obj/item/storage/secure/briefcase{
 	pixel_x = -2
 	},
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/item/cartridge/detective,
 /obj/machinery/power/apc{
 	areastring = "/area/command/heads_quarters/hos";
@@ -70429,7 +70429,7 @@
 /area/engineering/break_room)
 "qYK" = (
 /obj/structure/table/wood,
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/item/pen/red,
 /turf/open/floor/plasteel/grimy,
 /area/service/lawoffice)
@@ -70720,7 +70720,7 @@
 /area/engineering/atmos)
 "rAz" = (
 /obj/structure/table/wood,
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/machinery/light/small,
 /obj/item/camera/detective,
 /turf/open/floor/plasteel/grimy,
@@ -71875,7 +71875,7 @@
 /area/asteroid/nearstation)
 "ueW" = (
 /obj/structure/table,
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
 	dir = 4
@@ -72463,7 +72463,7 @@
 /area/maintenance/solars/starboard/aft)
 "vgG" = (
 /obj/structure/table,
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/item/radio/intercom{
 	dir = 4;
 	pixel_x = 27
@@ -72515,7 +72515,7 @@
 	dir = 1
 	},
 /obj/structure/table,
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /turf/open/floor/plasteel,
 /area/security/checkpoint/medical)
 "vkS" = (
@@ -73693,7 +73693,7 @@
 /area/maintenance/disposal/incinerator)
 "xGq" = (
 /obj/structure/table/reinforced,
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/item/radio/intercom{
 	dir = 4;
 	pixel_x = 27

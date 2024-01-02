@@ -10,7 +10,7 @@
 	var/skin_overlay_layer = -(GENITALS_FRONT_LAYER - 0.01)
 
 /obj/item/genital_equipment/chastity_cage/metal/item_inserted(datum/source, obj/item/organ/genital/G, mob/user)
-	. = ..()
+	. = ..() // Call the parent proc
 
 	var/mob/living/carbon/human/H = G.owner
 	RegisterSignal(H, COMSIG_MOVABLE_MOVED, .proc/on_move)
@@ -31,3 +31,15 @@
 	UnregisterSignal(H, COMSIG_MOVABLE_MOVED)
 	H.cut_overlay(skin_overlay)
 	. = ..()
+
+/obj/item/genital_equipment/chastity_cage/metal/mob_equipped_item(datum/source, obj/item/I)
+	. = ..() // Call the parent proc
+	var/mob/living/carbon/human/H = source
+	if(istype(I, /obj/item/clothing/under))
+		H.cut_overlay(skin_overlay)
+
+/obj/item/genital_equipment/chastity_cage/metal/mob_dropped_item(datum/source, obj/item/I)
+	. = ..() // Call the parent proc
+	var/mob/living/carbon/human/H = source
+	if(istype(I, /obj/item/clothing/under))
+		H.add_overlay(skin_overlay)

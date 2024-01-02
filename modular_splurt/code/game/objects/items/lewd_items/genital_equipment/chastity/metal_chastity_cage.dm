@@ -7,7 +7,7 @@
 
 	var/jingle_chance = 1.25//in percentage
 	var/mutable_appearance/skin_overlay
-	var/skin_overlay_layer = -(GENITALS_FRONT_LAYER - 0.02)
+	var/skin_overlay_layer = -(GENITALS_FRONT_LAYER - 0.01)
 
 /obj/item/genital_equipment/chastity_cage/metal/item_inserted(datum/source, obj/item/organ/genital/G, mob/user)
 	. = ..()

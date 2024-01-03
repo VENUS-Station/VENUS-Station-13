@@ -12,15 +12,18 @@
     lootcount = 5
     loot = list(
         /obj/item/organ/heart/gland/electric = 10,
-        /obj/item/organ/heart/gland/trauma = 10,
         /obj/item/organ/heart/gland/egg = 10,
         /obj/item/organ/heart/gland/chem = 10,
         /obj/item/organ/heart/gland/mindshock = 10,
+        /obj/item/organ/heart/gland/mindshock/mind_control = 10,
         /obj/item/organ/heart/gland/plasma = 10,
-        /obj/item/organ/heart/gland/transform = 10,
         /obj/item/organ/heart/gland/slime = 10,
         /obj/item/organ/heart/gland/spiderman = 10,
         /obj/item/organ/heart/gland/ventcrawling = 10,
+        /obj/item/organ/heart/gland/heal = 10,
+        /obj/item/organ/heart/gland/quantum = 10,
+        /obj/item/organ/heart/gland/mindshock/mind_control = 10,
+        /obj/item/organ/heart/gland/access = 10
     )
 
 /obj/effect/spawner/lootdrop/alien_glands/single

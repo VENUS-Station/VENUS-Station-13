@@ -22,7 +22,6 @@
         /obj/item/organ/heart/gland/ventcrawling = 10,
         /obj/item/organ/heart/gland/heal = 10,
         /obj/item/organ/heart/gland/quantum = 10,
-        /obj/item/organ/heart/gland/mindshock/mind_control = 10,
         /obj/item/organ/heart/gland/access = 10
     )
 

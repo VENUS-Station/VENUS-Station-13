@@ -401,10 +401,11 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	else
 		control_computer.frozen_crew += list(crew_member)
 
-	// Make an announcement and log the person entering storage.
-	if(GLOB.announcement_systems.len)
-		var/obj/machinery/announcement_system/announcer = pick(GLOB.announcement_systems)
-		announcer.announce(is_teleporter ? "CRYOSTORAGE_TELE" : "CRYOSTORAGE", mob_occupant.real_name, announce_rank, list())
+	if(!isobserver(mob_occupant)) // Avoid announcing ghost getting cryo'd (SPLURT Addition)
+		// Make an announcement and log the person entering storage.
+		if(GLOB.announcement_systems.len)
+			var/obj/machinery/announcement_system/announcer = pick(GLOB.announcement_systems)
+			announcer.announce(is_teleporter ? "CRYOSTORAGE_TELE" : "CRYOSTORAGE", mob_occupant.real_name, announce_rank, list())
 
 	if (pod)
 		pod.visible_message(span_notice("\The [pod] hums and hisses as it [is_teleporter ? "teleports" : "moves"] [mob_occupant.real_name] [is_teleporter ? "to centcom" : "into storage"]."))

@@ -15,3 +15,15 @@
 
 // Should the system check for ghosts to delete too?
 /datum/config_entry/flag/ghost_checking
+
+//Max amount of mobs cryo'd per tick
+/datum/config_entry/number/max_cryo_per_tick
+	default = 1
+	min_val = 1
+	integer = TRUE
+
+//Max amount of mobs ghosts'd per tick
+/datum/config_entry/number/max_ghosts_culled_per_tick
+	default = 1
+	min_val = 1
+	integer = TRUE

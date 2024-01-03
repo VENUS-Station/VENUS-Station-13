@@ -3,6 +3,8 @@
 #define SUBSYSTEM_CRYO_CHECK_GHOSTS CONFIG_GET(flag/ghost_checking)
 #define SUBSYSTEM_CRYO_TIME CONFIG_GET(number/autocryo_time_trigger)
 #define SUBSYSTEM_CRYO_GHOST_PERIOD CONFIG_GET(number/ghost_check_time)
+#define MAX_CRYO_PER_TICK CONFIG_GET(number/max_cryo_per_tick)
+#define MAX_GHOSTS_CULLED_PER_TICK CONFIG_GET(number/max_ghosts_culled_per_tick)
 
 SUBSYSTEM_DEF(auto_cryo)
 	name = "Automated Cryogenics"
@@ -28,8 +30,15 @@ SUBSYSTEM_DEF(auto_cryo)
 		// No SSD mobs exist
 		return
 
+	// Initialize a counter for the number of mobs processed
+	var/processed_mobs = 0
+
 	// Check possible targets
 	for(var/mob/living/cryo_mob in GLOB.ssd_mob_list)
+		// Stop if we've hit the limit for this tick
+		if(processed_mobs >= MAX_CRYO_PER_TICK)
+			break
+
 		// Get SSD time
 		// This is set when disconnecting
 		var/afk_time = world.time - cryo_mob.lastclienttime
@@ -47,13 +56,23 @@ SUBSYSTEM_DEF(auto_cryo)
 		// Log cryo interaction
 		log_game("[cryo_mob] was sent to cryo after being SSD for [afk_time] ticks.")
 
+		// Increment the processed mobs counter
+		processed_mobs++
+
 /datum/controller/subsystem/auto_cryo/proc/cull_ghosts()
 	// Check for any targets
 	if(!LAZYLEN(GLOB.dead_mob_list))
 		return
+	
+	// Initialize a counter for the number of ghosts processed
+	var/processed_ghosts = 0
 
 	// Check possible targets
 	for(var/mob/dead/observer/ghost_mob in GLOB.dead_mob_list)
+		// Stop if we've hit the limit for this tick
+		if(processed_ghosts >= MAX_GHOSTS_CULLED_PER_TICK)
+			break
+		
 		// Get SSD time
 		// This is set when disconnecting
 		var/afk_time = world.time - ghost_mob.lastclienttime
@@ -68,8 +87,13 @@ SUBSYSTEM_DEF(auto_cryo)
 		// Send to valhalla
 		qdel(ghost_mob)
 
+		// Increment the processed ghosts counter
+		processed_ghosts++
+
 // Remove defines
 #undef SUBSYSTEM_CRYO_CAN_RUN
 #undef SUBSYSTEM_CRYO_CHECK_GHOSTS
 #undef SUBSYSTEM_CRYO_TIME
 #undef SUBSYSTEM_CRYO_GHOST_PERIOD
+#undef MAX_CRYO_PER_TICK
+#undef MAX_GHOSTS_CULLED_PER_TICK

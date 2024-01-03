@@ -9,3 +9,9 @@ AUTOCRYO_TIME_TRIGGER 24000
 
 ## Time in ticks before deleting a ghost whose client has disconnected
 GHOST_CHECK_TIME 6000
+
+## How many mobs are cryo'd per tick
+MAX_CRYO_PER_TICK 1
+
+## How many ghosts are cryo'd per tick
+MAX_GHOSTS_CULLED_PER_TICK 1

@@ -43875,7 +43875,7 @@
 /area/service/bar)
 "doX" = (
 /obj/structure/table,
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
 	dir = 4
@@ -45117,7 +45117,7 @@
 /turf/open/floor/plasteel,
 /area/engineering/atmos)
 "eAa" = (
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/structure/table,
 /obj/effect/turf_decal/tile/red{
 	dir = 1
@@ -47692,7 +47692,7 @@
 /turf/open/floor/wood,
 /area/maintenance/bar)
 "gBt" = (
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/structure/table/wood,
 /turf/open/floor/carpet,
 /area/command/meeting_room)
@@ -47891,7 +47891,7 @@
 /area/security/prison/cells)
 "gHq" = (
 /obj/structure/table,
-/obj/item/book/manual/splurt_space_law{
+/obj/item/book/manual/wiki/splurt/splurt_space_law{
 	pixel_x = -3;
 	pixel_y = 5
 	},
@@ -48912,7 +48912,7 @@
 	pixel_x = 1;
 	pixel_y = -1
 	},
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /turf/open/floor/plasteel,
 /area/security/brig)
 "hPt" = (
@@ -52246,7 +52246,7 @@
 /obj/item/book/manual/wiki/experimentor,
 /obj/item/book/manual/wiki/research_and_development,
 /obj/item/book/manual/wiki/robotics_cyborgs,
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/item/book/manual/wiki/medicine,
 /obj/item/book/manual/wiki/medical_cloning,
 /obj/item/book/manual/wiki/infections,
@@ -55757,8 +55757,8 @@
 /area/security/prison/upper)
 "nxx" = (
 /obj/structure/table,
-/obj/item/book/manual/splurt_space_law,
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel,
 /area/security/office)
@@ -58058,7 +58058,7 @@
 /area/hallway/secondary/exit)
 "pPr" = (
 /obj/structure/table/wood,
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -59228,8 +59228,8 @@
 /area/maintenance/starboard/aft)
 "qTj" = (
 /obj/structure/table/wood,
-/obj/item/book/manual/splurt_space_law,
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/item/pen/red,
 /turf/open/floor/wood,
 /area/service/lawoffice)
@@ -60914,7 +60914,7 @@
 /area/hallway/primary/starboard)
 "sts" = (
 /obj/structure/table/wood,
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/item/coin/plasma,
 /turf/open/floor/wood,
 /area/command/heads_quarters/captain)
@@ -61079,7 +61079,7 @@
 /turf/open/floor/plasteel,
 /area/security/brig)
 "sAl" = (
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/structure/table/wood,
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -67167,7 +67167,7 @@
 	pixel_y = 26;
 	req_access_txt = "5"
 	},
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
@@ -67682,7 +67682,7 @@
 /area/hallway/primary/central)
 "xYj" = (
 /obj/structure/table,
-/obj/item/book/manual/splurt_space_law,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{

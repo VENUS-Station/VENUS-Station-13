@@ -43,6 +43,7 @@
 	var/cyborg_pixel_offset
 	var/moduleselect_alternate_icon
 	var/dogborg = FALSE
+	var/hasrest = FALSE // If cyborgs have a rest sprite, but aren't dogborgs.
 
 /obj/item/robot_module/Initialize(mapload)
 	. = ..()
@@ -551,6 +552,7 @@
 			cyborg_base_icon = "mekamed"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots_32x64.dmi'
 			hat_offset = 3
+			hasrest = TRUE
 		if("Feline") // SPLURT Addon (Chomp Port)
 			cyborg_base_icon = "vixmed"
 			cyborg_icon_override = 'modular_splurt/icons/mob/widerobot.dmi'
@@ -1144,6 +1146,7 @@
 			cyborg_base_icon = "mekapeace"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots_32x64.dmi'
 			hat_offset = 3
+			hasrest = TRUE
 		if("Feline") // SPLURT Addon (ChompS Port)
 			cyborg_base_icon = "vixpk"
 			cyborg_icon_override = 'modular_splurt/icons/mob/widerobot.dmi'
@@ -1438,6 +1441,7 @@
 			cyborg_base_icon = "mekaserve"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots_32x64.dmi'
 			hat_offset = 3
+			hasrest = TRUE
 		if("(Service) Feline") // SPLURT Addon (ChompS Port)
 			cyborg_base_icon = "vixserv"
 			cyborg_icon_override = 'modular_splurt/icons/mob/widerobot.dmi'
@@ -1555,6 +1559,7 @@
 			cyborg_base_icon = "mekajani"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots_32x64.dmi'
 			hat_offset = 3
+			hasrest = TRUE
 		if("(Janitor) Feline") // SPLURT Addon (ChompS Port)
 			cyborg_base_icon = "vixjani"
 			cyborg_icon_override = 'modular_splurt/icons/mob/widerobot.dmi'
@@ -1579,6 +1584,7 @@
 			cyborg_base_icon = "mekaserve_alt"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots_32x64.dmi'
 			hat_offset = 3
+			hasrest = TRUE
 		if("(Pleasure) Handy") // SPLURT Addon (Fallout 13)
 			cyborg_base_icon = "handy_pleasure"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots.dmi'
@@ -1765,6 +1771,7 @@
 			cyborg_base_icon = "mekamine"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots_32x64.dmi'
 			hat_offset = 3
+			hasrest = TRUE
 		if("Feline") // SPLURT Addon (ChompS Port)
 			cyborg_base_icon = "vixmine"
 			cyborg_icon_override = 'modular_splurt/icons/mob/widerobot.dmi'

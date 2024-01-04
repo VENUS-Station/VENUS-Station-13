@@ -99,3 +99,14 @@
   - rscadd: Flavortext by default to Xenomorphs, OOC notes to xenomorphs
   ariaworld:
   - rscadd: 'Body morpher quirk: Gender and body model change option.'
+2023-12-27:
+  SandPoot:
+  - tweak: Adds some shiny buttons to admin select equipment.
+  - rscdel: Removes old quick spawn.
+2023-12-28:
+  battlestar-gafraktika:
+  - rscadd: New Silver Love Co. Shock Collar Kit Box.
+  - rscadd: The above is also in the loadout screen.
+2023-12-30:
+  ariaworld:
+  - bugfix: Wrong icon state triggering annoying errors in pull requests.

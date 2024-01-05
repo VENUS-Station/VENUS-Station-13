@@ -4832,6 +4832,7 @@
 #include "modular_splurt\code\modules\keybindings\keybind\communication.dm"
 #include "modular_splurt\code\modules\keybindings\keybind\human.dm"
 #include "modular_splurt\code\modules\keybindings\keybind\movement.dm"
+#include "modular_splurt\code\modules\language\avian.dm"
 #include "modular_splurt\code\modules\language\language_holder.dm"
 #include "modular_splurt\code\modules\language\signlanguage.dm"
 #include "modular_splurt\code\modules\language\xenocommon.dm"

@@ -1062,6 +1062,7 @@
 	key_third_person = "coos"
 	message = "coos."
 	message_mime = "acts like a cooing pidgeon."
+	emote_volume = 30
 	emote_sound = 'modular_splurt/sound/voice/coo.ogg'
 	emote_cooldown = 0.78 SECONDS
 

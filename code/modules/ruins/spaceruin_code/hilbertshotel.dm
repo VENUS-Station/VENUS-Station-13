@@ -7,6 +7,17 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	icon_state = "hilbertshotel"
 	w_class = WEIGHT_CLASS_SMALL
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+	//SPLURT EDIT START
+	var/list/static/hotel_maps = list("Hotel Room", "Apartment","Apartment-1", "Apartment-2", "Apartment-3", "Apartment-Bar", "Apartment-Garden", "Apartment-Sauna")
+	var/datum/map_template/hilbertshotel/apartment/hilberts_hotel_rooms_apartment
+	var/datum/map_template/hilbertshotel/apartment/one/hilberts_hotel_rooms_apartment_one
+	var/datum/map_template/hilbertshotel/apartment/two/hilberts_hotel_rooms_apartment_two
+	var/datum/map_template/hilbertshotel/apartment/three/hilberts_hotel_rooms_apartment_three
+	var/datum/map_template/hilbertshotel/apartment/bar/hilberts_hotel_rooms_apartment_bar
+	var/datum/map_template/hilbertshotel/apartment/garden/hilberts_hotel_rooms_apartment_garden
+	var/datum/map_template/hilbertshotel/apartment/syndie/hilberts_hotel_rooms_apartment_syndie
+	var/datum/map_template/hilbertshotel/apartment/sauna/hilberts_hotel_rooms_apartment_sauna
+	//SPLURT EDIT END
 	var/datum/map_template/hilbertshotel/hotelRoomTemp
 	var/datum/map_template/hilbertshotel/empty/hotelRoomTempEmpty
 	var/datum/map_template/hilbertshotel/lore/hotelRoomTempLore
@@ -27,6 +38,16 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	hotelRoomTemp = new()
 	hotelRoomTempEmpty = new()
 	hotelRoomTempLore = new()
+	//SPLURT EDIT START
+	hilberts_hotel_rooms_apartment = new()
+	hilberts_hotel_rooms_apartment_one = new()
+	hilberts_hotel_rooms_apartment_two = new()
+	hilberts_hotel_rooms_apartment_three = new()
+	hilberts_hotel_rooms_apartment_bar = new()
+	hilberts_hotel_rooms_apartment_garden = new()
+	hilberts_hotel_rooms_apartment_syndie = new()
+	hilberts_hotel_rooms_apartment_sauna = new()
+	//SPLURT EDIT END
 	var/area/currentArea = get_area(src)
 	if(currentArea.type == /area/ruin/space/has_grav/hilbertresearchfacility)
 		ruinSpawned = TRUE
@@ -38,13 +59,13 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 /obj/item/hilbertshotel/attack(mob/living/M, mob/living/user)
 	if(M.mind)
 		to_chat(user, "<span class='notice'>You invite [M] to the hotel.</span>")
-		promptAndCheckIn(M)
+		promptAndCheckIn(user, M)
 	else
 		to_chat(user, "<span class='warning'>[M] is not intelligent enough to understand how to use this device!</span>")
 
 /obj/item/hilbertshotel/attack_self(mob/user)
 	. = ..()
-	promptAndCheckIn(user)
+	promptAndCheckIn(user, user)
 
 /obj/item/hilbertshotel/proc/promptAndCheckIn(mob/user)
 	//SPLURT EDIT - max infinidorms rooms
@@ -72,6 +93,16 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	if(!isturf(loc))
 		if((loc == user) || (loc.loc == user) || (loc.loc in user.contents) || (loc in user.GetAllContents(type)))		//short circuit, first three checks are cheaper and covers almost all cases (loc.loc covers hotel in box in backpack).
 			forceMove(get_turf(user))
+
+	//SPLURT EDIT START
+	var/chosen_room = "Nothing"
+	if(istype(src, /obj/item/hilbertshotel) && (max_rooms <= 0 || mob_dorms[user]?.len < max_rooms))
+		// Only show the room type selection if the room limit has not been reached
+		chosen_room = tgui_input_list(user, "Choose your desired room:", "∼♦️ Time to choose a room ♦️∼!", hotel_maps)	
+	if(!chosen_room)
+		return FALSE
+	//SPLURT EDIT END
+
 	if(!storageTurf) //Blame subsystems for not allowing this to be in Initialize
 		if(!GLOB.hhStorageTurf)
 			var/datum/map_template/hilbertshotelstorage/storageTemp = new()
@@ -83,9 +114,9 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	checked_in_ckeys |= user.ckey		//if anything below runtimes, guess you're outta luck!
 	if(tryActiveRoom(chosenRoomNumber, user))
 		return
-	if(tryStoredRoom(chosenRoomNumber, user))
+	if(tryStoredRoom(chosenRoomNumber, user, chosen_room))
 		return
-	sendToNewRoom(chosenRoomNumber, user)
+	sendToNewRoom(chosenRoomNumber, user, chosen_room)
 
 /obj/item/hilbertshotel/proc/tryActiveRoom(var/roomNumber, var/mob/user)
 	if(activeRooms["[roomNumber]"])
@@ -96,44 +127,59 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	else
 		return FALSE
 
-/obj/item/hilbertshotel/proc/tryStoredRoom(var/roomNumber, var/mob/user)
-	if(storedRooms["[roomNumber]"])
-		var/datum/turf_reservation/roomReservation = SSmapping.RequestBlockReservation(hotelRoomTemp.width, hotelRoomTemp.height)
-		hotelRoomTempEmpty.load(locate(roomReservation.bottom_left_coords[1], roomReservation.bottom_left_coords[2], roomReservation.bottom_left_coords[3]))
+/obj/item/hilbertshotel/proc/tryStoredRoom(var/roomNumber, var/mob/user) //SPLURT EDIT - LOAD STORED ROOM TYPES
+	if(storedRooms[roomNumber]) // Access the stored room data using the room number as key
+		var/list/storedRoomData = storedRooms[roomNumber] // storedRoomData is now a list containing 'contents' and 'type'
+		var/datum/map_template/hilbertshotel/mapTemplate = get_room_type(storedRoomData["type"]) // Access the 'type' using ["type"]
+		var/datum/turf_reservation/roomReservation = SSmapping.RequestBlockReservation(mapTemplate.width, mapTemplate.height)
+		mapTemplate.load(locate(roomReservation.bottom_left_coords[1], roomReservation.bottom_left_coords[2], roomReservation.bottom_left_coords[3]))
 		var/turfNumber = 1
-		for(var/i=0, i<hotelRoomTemp.width, i++)
-			for(var/j=0, j<hotelRoomTemp.height, j++)
-				for(var/atom/movable/A in storedRooms["[roomNumber]"][turfNumber])
-					if(istype(A.loc, /obj/item/abstracthotelstorage))//Don't want to recall something thats been moved
+		for(var/i = 0, i < mapTemplate.width, i++)
+			for(var/j = 0, j < mapTemplate.height, j++)
+				for(var/atom/movable/A in storedRoomData["contents"][turfNumber]) // Access the 'contents' using ["contents"]
+					if(istype(A.loc, /obj/item/abstracthotelstorage)) // Don't want to recall something that's been moved
 						A.forceMove(locate(roomReservation.bottom_left_coords[1] + i, roomReservation.bottom_left_coords[2] + j, roomReservation.bottom_left_coords[3]))
 				turfNumber++
 		for(var/obj/item/abstracthotelstorage/S in storageTurf)
 			if((S.roomNumber == roomNumber) && (S.parentSphere == src))
 				qdel(S)
-		storedRooms -= "[roomNumber]"
-		activeRooms["[roomNumber]"] = roomReservation
+		storedRooms -= roomNumber // Remove the room from storedRooms using the room number as key
+		activeRooms[roomNumber] = roomReservation // Add the room to activeRooms using the room number as key
 		linkTurfs(roomReservation, roomNumber)
 		do_sparks(3, FALSE, get_turf(user))
-		user.forceMove(locate(roomReservation.bottom_left_coords[1] + hotelRoomTemp.landingZoneRelativeX, roomReservation.bottom_left_coords[2] + hotelRoomTemp.landingZoneRelativeY, roomReservation.bottom_left_coords[3]))
+		user.forceMove(locate(roomReservation.bottom_left_coords[1] + mapTemplate.landingZoneRelativeX, roomReservation.bottom_left_coords[2] + mapTemplate.landingZoneRelativeY, roomReservation.bottom_left_coords[3]))
 		return TRUE
 	else
-		return FALSE
+		return FALSE	
 
-/// This is a BLOCKING OPERATION. Note the room load call, and the block reservation calls.
-/obj/item/hilbertshotel/proc/sendToNewRoom(var/roomNumber, var/mob/user)
+//SPLURT EDIT START: HOTEL UPDATE. Was sendToNewRoom(chosenRoomNumber, target) | Added new selectable apartments
+/obj/item/hilbertshotel/proc/sendToNewRoom(roomNumber, mob/user, chosen_room)
 	var/datum/turf_reservation/roomReservation = SSmapping.RequestBlockReservation(hotelRoomTemp.width, hotelRoomTemp.height)
-	if(ruinSpawned)
-		mysteryRoom = GLOB.hhmysteryRoomNumber
-		if(roomNumber == mysteryRoom)
-			hotelRoomTempLore.load(locate(roomReservation.bottom_left_coords[1], roomReservation.bottom_left_coords[2], roomReservation.bottom_left_coords[3]))
-		else
-			hotelRoomTemp.load(locate(roomReservation.bottom_left_coords[1], roomReservation.bottom_left_coords[2], roomReservation.bottom_left_coords[3]))
+	mysteryRoom = GLOB.hhmysteryRoomNumber
+
+	var/datum/map_template/hilbertshotel/mapTemplate
+
+	if(ruinSpawned && roomNumber == mysteryRoom)
+		mapTemplate = hotelRoomTempLore
 	else
-		hotelRoomTemp.load(locate(roomReservation.bottom_left_coords[1], roomReservation.bottom_left_coords[2], roomReservation.bottom_left_coords[3]))
+		switch(chosen_room)
+			if("Apartment") mapTemplate = hilberts_hotel_rooms_apartment
+			if("Apartment-1") mapTemplate = hilberts_hotel_rooms_apartment_one
+			if("Apartment-2") mapTemplate = hilberts_hotel_rooms_apartment_two
+			if("Apartment-3") mapTemplate = hilberts_hotel_rooms_apartment_three
+			if("Apartment-Bar") mapTemplate = hilberts_hotel_rooms_apartment_bar
+			if("Apartment-Garden") mapTemplate = hilberts_hotel_rooms_apartment_garden
+			if("Apartment-Syndicate") mapTemplate = hilberts_hotel_rooms_apartment_syndie
+			if("Apartment-Sauna") mapTemplate = hilberts_hotel_rooms_apartment_sauna
+	if(!mapTemplate) 
+		mapTemplate = hotelRoomTemp //Default Hotel Room
+
+	mapTemplate.load(locate(roomReservation.bottom_left_coords[1], roomReservation.bottom_left_coords[2], roomReservation.bottom_left_coords[3]))
 	activeRooms["[roomNumber]"] = roomReservation
 	linkTurfs(roomReservation, roomNumber)
 	do_sparks(3, FALSE, get_turf(user))
-	user.forceMove(locate(roomReservation.bottom_left_coords[1] + hotelRoomTemp.landingZoneRelativeX, roomReservation.bottom_left_coords[2] + hotelRoomTemp.landingZoneRelativeY, roomReservation.bottom_left_coords[3]))
+	user.forceMove(locate(roomReservation.bottom_left_coords[1] + mapTemplate.landingZoneRelativeX, roomReservation.bottom_left_coords[2] + mapTemplate.landingZoneRelativeY, roomReservation.bottom_left_coords[3]))
+//SPLURT EDIT END
 
 /obj/item/hilbertshotel/proc/linkTurfs(var/datum/turf_reservation/currentReservation, var/currentRoomnumber)
 	var/area/hilbertshotel/currentArea = get_area(locate(currentReservation.bottom_left_coords[1], currentReservation.bottom_left_coords[2], currentReservation.bottom_left_coords[3]))
@@ -194,10 +240,6 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	name = "Infinite Dormitories"
 	anchored = TRUE
 	interaction_flags_atom = INTERACT_ATOM_ATTACK_HAND
-
-/obj/item/hilbertshotel/ghostdojo/interact(mob/user)
-	. = ..()
-	promptAndCheckIn(user)
 
 /obj/item/hilbertshotel/ghostdojo/linkTurfs(datum/turf_reservation/currentReservation, currentRoomnumber)
 	. = ..()
@@ -393,27 +435,39 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 			if(!stillPopulated)
 				storeRoom()
 
-/area/hilbertshotel/proc/storeRoom()
-	var/roomSize = (reservation.top_right_coords[1]-reservation.bottom_left_coords[1]+1)*(reservation.top_right_coords[2]-reservation.bottom_left_coords[2]+1)
-	var/storage[roomSize]
+/area/hilbertshotel/proc/storeRoom() //SPLURT EDIT - STORE ROOM TYPE
+	var/roomSize = (reservation.top_right_coords[1] - reservation.bottom_left_coords[1] + 1) * (reservation.top_right_coords[2] - reservation.bottom_left_coords[2] + 1)
+	var/storage = list() 
 	var/turfNumber = 1
 	var/obj/item/abstracthotelstorage/storageObj = new(storageTurf)
 	storageObj.roomNumber = roomnumber
 	storageObj.parentSphere = parentSphere
 	storageObj.name = "Room [roomnumber] Storage"
-	for(var/i=0, i<parentSphere.hotelRoomTemp.width, i++)
-		for(var/j=0, j<parentSphere.hotelRoomTemp.height, j++)
-			var/list/turfContents = list()
-			for(var/atom/movable/A in locate(reservation.bottom_left_coords[1] + i, reservation.bottom_left_coords[2] + j, reservation.bottom_left_coords[3]))
-				if(ismob(A) && !isliving(A))
-					continue //Don't want to store ghosts
-				turfContents += A
-				A.forceMove(storageObj)
-			storage[turfNumber] = turfContents
-			turfNumber++
-	parentSphere.storedRooms["[roomnumber]"] = storage
+	for(var/i=0, i<roomSize, i++)
+		var/list/turfContents = list()
+		for(var/atom/movable/A in locate(reservation.bottom_left_coords[1] + i, reservation.bottom_left_coords[2], reservation.bottom_left_coords[3]))
+			if(ismob(A) && !isliving(A))
+				continue // Don't want to store ghosts
+			turfContents += A
+			A.forceMove(storageObj)
+		storage[turfNumber] = turfContents
+		turfNumber++
+	var/roomType = parentSphere.get_room_type()
+	parentSphere.storedRooms["[roomnumber]"] = list("contents" = storage, "type" = roomType)
 	parentSphere.activeRooms -= "[roomnumber]"
 	qdel(reservation)
+
+/obj/item/hilbertshotel/proc/get_room_type(chosen_room)
+	switch(chosen_room)
+		if("Apartment") return "Apartment"
+		if("Apartment-1") return "Apartment-1"
+		if("Apartment-2") return "Apartment-2"
+		if("Apartment-3") return "Apartment-3"
+		if("Apartment-Bar") return "Apartment-Bar"
+		if("Apartment-Garden") return "Apartment-Garden"
+		if("Apartment-Syndicate") return "Apartment-Syndicate"
+		if("Apartment-Sauna") return "Apartment-Sauna"
+	return "Hotel Room"
 
 /area/hilbertshotelstorage
 	name = "Hilbert's Hotel Storage Room"

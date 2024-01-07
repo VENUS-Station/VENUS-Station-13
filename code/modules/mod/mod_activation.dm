@@ -17,7 +17,7 @@
 	var/obj/item/part = locate(part_reference) in mod_parts
 	if(!istype(part) || user.incapacitated())
 		return
-	if(active || activating)
+	if((active && part != helmet) || activating) // SKYRAT EDIT - Let the hair flow - ORIGINAL: if(active || activating)
 		balloon_alert(user, "deactivate the suit first!")
 		playsound(src, 'sound/machines/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
 		return
@@ -217,8 +217,9 @@
 
 /// Finishes the suit's activation, starts processing
 /obj/item/mod/control/proc/finish_activation(on)
-	active = on
-	if(active)
+	icon_state = "[skin]-control[on ? "-sealed" : ""]"
+	slowdown = on ? slowdown_active : slowdown_inactive
+	if(on)
 		for(var/obj/item/mod/module/module as anything in modules)
 			module.on_suit_activation()
 		START_PROCESSING(SSobj, src)
@@ -226,23 +227,19 @@
 		for(var/obj/item/mod/module/module as anything in modules)
 			module.on_suit_deactivation()
 		STOP_PROCESSING(SSobj, src)
-	update_speed()
-	update_icon_state()
+	wearer.update_equipment_speed_mods()
+	active = on
 	wearer.update_inv_back()
-
-/obj/item/mod/control/update_icon_state()
-	icon_state = "[skin]-control[active ? "-sealed" : ""]"
-	return ..()
 
 /// Quickly deploys all the suit parts and if successful, seals them and turns on the suit. Intended mostly for outfits.
 /obj/item/mod/control/proc/quick_activation()
 	var/seal = TRUE
-	for(var/obj/item/part as anything in mod_parts)
+	for(var/obj/item/part in mod_parts)
 		if(!deploy(null, part))
 			seal = FALSE
 	if(!seal)
 		return
-	for(var/obj/item/part as anything in mod_parts)
+	for(var/obj/item/part in mod_parts)
 		seal_part(part, seal = TRUE)
 	finish_activation(on = TRUE)
 

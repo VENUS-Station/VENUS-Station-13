@@ -1,18 +1,3 @@
-/// Create colored subtypes for sofas
-#define COLORED_SOFA(path, color_name, sofa_color) \
-path/middle/color_name {\
-	color = sofa_color; \
-} \
-path/right/color_name {\
-	color = sofa_color; \
-} \
-path/left/color_name {\
-	color = sofa_color; \
-} \
-path/corner/color_name {\
-	color = sofa_color; \
-}
-
 /obj/structure/chair/sofa
 	name = "old ratty sofa"
 	icon_state = "sofamiddle"
@@ -47,9 +32,6 @@ path/corner/color_name {\
 
 /obj/structure/chair/sofa/corner
 	icon_state = "sofacorner"
-
-COLORED_SOFA(/obj/structure/chair/sofa, brown, SOFA_BROWN)
-COLORED_SOFA(/obj/structure/chair/sofa, maroon, SOFA_MAROON)
 
 /obj/structure/chair/sofa/corner/handle_layer() //only the armrest/back of this chair should cover the mob.
 	return

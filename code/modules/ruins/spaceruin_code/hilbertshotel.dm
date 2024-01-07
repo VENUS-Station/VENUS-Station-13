@@ -96,7 +96,7 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 
 	//SPLURT EDIT START
 	var/chosen_room = "Nothing"
-	if(istype(src, /obj/item/hilbertshotel) && (max_rooms <= 0 || mob_dorms[user]?.len < max_rooms))
+	if(istype(src, /obj/item/hilbertshotel))
 		// Only show the room type selection if the room limit has not been reached
 		chosen_room = tgui_input_list(user, "Choose your desired room:", "♦️ Time to choose a room ♦️!", hotel_maps)	
 	if(!chosen_room)
@@ -114,11 +114,12 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	checked_in_ckeys |= user.ckey		//if anything below runtimes, guess you're outta luck!
 	if(tryActiveRoom(chosenRoomNumber, user))
 		return
-	if(tryStoredRoom(chosenRoomNumber, user, chosen_room))
-		return
+	//SPLURT EDIT: Commented out until a way to save turfs is found
+	// if(tryStoredRoom(chosenRoomNumber, user, chosen_room))
+	// 	return
 	sendToNewRoom(chosenRoomNumber, user, chosen_room)
 
-/obj/item/hilbertshotel/proc/get_room_type(chosen_room)
+/obj/item/hilbertshotel/proc/get_room_type(chosen_room) //Currently unused
 	switch(chosen_room)
 		if("Apartment") return "Apartment"
 		if("Apartment-1") return "Apartment-1"
@@ -161,6 +162,7 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	else
 		return FALSE
 
+// v SPLURT EDIT: Unused until a way to copy turfs is found, as copied over movable atoms would look like a mess v
 /obj/item/hilbertshotel/proc/tryStoredRoom(var/roomNumber, var/mob/user)
 	if(storedRooms["[roomNumber]"])
 		var/datum/turf_reservation/roomReservation = SSmapping.RequestBlockReservation(hotelRoomTemp.width, hotelRoomTemp.height)

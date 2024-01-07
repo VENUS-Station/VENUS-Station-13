@@ -282,7 +282,7 @@
 	icon_state = "wood"
 	mineral = /obj/item/stack/sheet/mineral/wood
 	walltype = /turf/closed/wall/mineral/wood
-	canSmoothWith = list(/obj/structure/falsewall/wood, /turf/closed/wall/mineral/wood)
+	canSmoothWith = list(/obj/structure/falsewall/wood, /turf/closed/wall/mineral/wood, /turf/closed/indestructible/wood)
 
 /obj/structure/falsewall/iron
 	name = "rough metal wall"

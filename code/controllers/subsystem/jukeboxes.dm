@@ -35,7 +35,7 @@ SUBSYSTEM_DEF(jukeboxes)
 	song_beat = beat
 	song_associated_id = assocID
 
-/datum/controller/subsystem/jukeboxes/proc/addjukebox(obj/jukebox, datum/track/T, jukefalloff = 1, one_area_play = FALSE) //SPLURT EDIT ADDITION: one_area_play
+/datum/controller/subsystem/jukeboxes/proc/addjukebox(obj/jukebox, datum/track/T, jukefalloff = 1, area_limited = FALSE) //SPLURT EDIT ADDITION: area_limited
 	if(!istype(T))
 		CRASH("[src] tried to play a song with a nonexistant track")
 	var/channeltoreserve = pick(freejukeboxchannels)
@@ -43,7 +43,7 @@ SUBSYSTEM_DEF(jukeboxes)
 		return FALSE
 	//SPLURT ADDITION START
 	var/area_play
-	if(one_area_play)
+	if(area_limited)
 		area_play = get_area(jukebox)
 	//SPLURT ADDITION END
 	var/sound/song_to_init = sound(T.song_path)
@@ -66,7 +66,7 @@ SUBSYSTEM_DEF(jukeboxes)
 		if(!(M.client.prefs.toggles & SOUND_INSTRUMENTS))
 			continue
 		//SPLURT ADDITION START
-		if(one_area_play && get_area(M) != area_play)
+		if(area_limited && get_area(M) != area_play)
 			continue
 		//SPLURT ADDITION END
 

@@ -409,7 +409,7 @@
 "bA" = (
 /obj/machinery/jukebox{
 	req_one_access = null;
-	one_area_play = 1
+	area_limited = 1
 	},
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/wood/wood_tiled,

@@ -739,7 +739,7 @@
 "MT" = (
 /obj/machinery/jukebox{
 	req_one_access = null;
-	one_area_play = 1
+	area_limited = 1
 	},
 /turf/open/floor/carpet/red,
 /area/hilbertshotel)

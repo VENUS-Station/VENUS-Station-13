@@ -187,7 +187,7 @@
 	if(playing || !queuedplaylist.len)
 		return FALSE
 	playing = queuedplaylist[1]
-	var/jukeboxslottotake = SSjukeboxes.addjukebox(src, playing, volume/35, area_limited) //SPLURT EDIT: one_area_play
+	var/jukeboxslottotake = SSjukeboxes.addjukebox(src, playing, volume/35, area_limited) //SPLURT EDIT: area_limited
 	if(jukeboxslottotake)
 		active = TRUE
 		update_icon()

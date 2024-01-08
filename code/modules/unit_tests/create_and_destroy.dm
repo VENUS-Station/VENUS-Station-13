@@ -135,6 +135,10 @@ GLOBAL_VAR_INIT(running_create_and_destroy, FALSE)
 	// This one sleeps too in it's AI code
 	ignore += typesof(/mob/living/simple_animal/hostile/swarmer)
 
+	for(var/obj/item/stack/stacktype in typesof(/obj/item/stack))
+		if(initial(stacktype.is_cyborg))
+			ignore += typesof(stacktype)
+
 	var/list/cached_contents = spawn_at.contents.Copy()
 	var/original_turf_type = spawn_at.type
 	var/original_baseturfs = islist(spawn_at.baseturfs) ? spawn_at.baseturfs.Copy() : spawn_at.baseturfs

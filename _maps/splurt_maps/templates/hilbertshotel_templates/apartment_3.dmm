@@ -439,11 +439,6 @@
 /obj/structure/chair/pew/left,
 /turf/open/floor/wood/wood_tiled,
 /area/hilbertshotel)
-"wG" = (
-/turf/closed/indestructible/wall{
-	icon_state = "iron"
-	},
-/area/hilbertshotel)
 "xn" = (
 /obj/structure/chair{
 	dir = 4
@@ -1257,7 +1252,7 @@ Zg
 Hp
 Fi
 dl
-wG
+Zg
 pu
 tm
 pH

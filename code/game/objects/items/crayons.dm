@@ -308,12 +308,24 @@
 	. = ..()
 	if(!proximity || !check_allowed_items(target))
 		return
-	//SPLURT EDIT START
-	if(toggle_change_light_color && !istype(target, /turf)) //Avoid changing turf light colors
+	// SPLURT EDIT START
+	// Check if we should only change the light color
+	if(toggle_change_light_color && can_change_light_color && !istype(target, /turf))
+		// First, check if the crayon is empty or doesn't have enough charges
+		if(check_empty(user, 2)) // We're checking for 2 charges here
+			return // Skip the light color change because it's out of charges
+
+		// If we have enough charges, change the light color
 		target.set_light_color(paint_color)
 		target.update_light()
-		to_chat(user,"<span class='notice'>You have successfully changed the innate light color of [target].</span>")
-	//SPLURT EDIT END 
+		to_chat(user, span_notice("You have successfully changed the innate light color of [target]."))
+
+		// Decrease the charges by 2
+		use_charges(user, 2)
+		return // Skip the normal drawing behavior
+
+	//Continue with normal drawing behavior if toggle_change_light_color is not true
+	//SPLURT EDIT END
 	draw_on(target, user, proximity, params)
 
 /obj/item/toy/crayon/proc/draw_on(atom/target, mob/user, proximity, params)

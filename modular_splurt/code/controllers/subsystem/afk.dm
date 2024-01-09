@@ -21,13 +21,13 @@ SUBSYSTEM_DEF(auto_cryo)
 
 /datum/controller/subsystem/auto_cryo/fire()
 	if(SUBSYSTEM_CRYO_CAN_RUN)
-		cryo_human_mobs()
+		cryo_carbon_mobs()
 	if(SUBSYSTEM_CRYO_CHECK_GHOSTS)
-		cryo_ghosts()
+		cull_ghosts()
 	if(SUBSYSTEM_CRYO_CHECK_SILICONS)
 		cryo_silicon_mobs()
 
-/datum/controller/subsystem/auto_cryo/proc/cryo_human_mobs()
+/datum/controller/subsystem/auto_cryo/proc/cryo_carbon_mobs()
 	// Check for any targets
 	if(!LAZYLEN(GLOB.ssd_mob_list))
 		// No SSD mobs exist
@@ -37,7 +37,7 @@ SUBSYSTEM_DEF(auto_cryo)
 	var/processed_mobs = 0
 
 	// Check possible targets
-	for(var/mob/living/human/cryo_mob in GLOB.ssd_mob_list)
+	for(var/mob/living/carbon/cryo_mob in GLOB.ssd_mob_list)
 		// Stop if we've hit the limit for this tick
 		if(processed_mobs >= MAX_CRYO_PER_TICK)
 			break

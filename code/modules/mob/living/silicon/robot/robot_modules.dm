@@ -614,6 +614,7 @@
 		"Otie" = image(icon = 'modular_splurt/icons/mob/widerobot.dmi', icon_state = "otiee-b"), // SPLURT Adoon (Skyrat Port)
 		"Drake" = image(icon = 'modular_sand/icons/mob/cyborg/drakemech.dmi', icon_state = "drakeengbox"),
 		"Assaultron" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "assaultron_engi"), // SPLURT Addon
+		"Meka" = image(icon = 'modular_splurt/icons/mob/robots_32x64.dmi', icon_state = "mekaengi"), // SPLURT Addon
 		"Haydee" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "haydeeengi"), // SPLURT Addon
 		"Feline" = image(icon = 'modular_splurt/icons/mob/widerobot.dmi', icon_state = "vixengi-b"), // SPLURT Addon (ChompS Port)
 		"Raptor V-4" = image(icon = 'modular_splurt/icons/mob/robots_64x45.dmi', icon_state = "engiraptor-b"), // SPLURT Addon (ChompS Port)
@@ -748,6 +749,11 @@
 			cyborg_base_icon = "assaultron_engi"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots.dmi'
 			hat_offset = 3
+		if("Meka")
+			cyborg_base_icon = "mekaengi"
+			cyborg_icon_override = 'modular_splurt/icons/mob/robots_32x64.dmi'
+			hat_offset = 3
+			hasrest = TRUE
 		if("Haydee") // SPLURT Addon
 			cyborg_base_icon = "haydeeengi"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots.dmi'

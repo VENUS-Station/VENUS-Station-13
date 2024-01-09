@@ -139,6 +139,9 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	storageObj.roomNumber = roomnumber
 	storageObj.parentSphere = parentSphere
 	storageObj.name = "Room [roomnumber] Storage"
+	/* SPLURT EDIT: Commented out the storing function of atoms, 
+	as it's more complex to load them with custom rooms, 
+	due to turfs not being able to be stored.
 	for(var/i=0, i<parentSphere.hotelRoomTemp.width, i++)
 		for(var/j=0, j<parentSphere.hotelRoomTemp.height, j++)
 			var/list/turfContents = list()
@@ -149,6 +152,7 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 				A.forceMove(storageObj)
 			storage[turfNumber] = turfContents
 			turfNumber++
+	*/
 	parentSphere.storedRooms["[roomnumber]"] = storage
 	parentSphere.activeRooms -= "[roomnumber]"
 	qdel(reservation)

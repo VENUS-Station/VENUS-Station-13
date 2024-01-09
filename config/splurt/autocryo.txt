@@ -7,6 +7,9 @@ AUTOCRYO_TIME_TRIGGER 24000
 # Uncomment to enable automatic disconnected ghost culling
 # GHOST_CHECKING
 
+# Uncomment to enable automatic SSD silicons being sent to cryo
+# SILICON_CHECKING
+
 ## Time in ticks before deleting a ghost whose client has disconnected
 GHOST_CHECK_TIME 6000
 

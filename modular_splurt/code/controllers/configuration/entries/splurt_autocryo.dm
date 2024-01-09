@@ -16,6 +16,9 @@
 // Should the system check for ghosts to delete too?
 /datum/config_entry/flag/ghost_checking
 
+// Should the system check for silicons to delete too?
+/datum/config_entry/flag/silicon_checking
+
 //Max amount of mobs cryo'd per tick
 /datum/config_entry/number/max_cryo_per_tick
 	default = 1

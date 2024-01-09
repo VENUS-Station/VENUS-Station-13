@@ -8,4 +8,4 @@
 
 		// Log mob ghost SSD removal
 		log_game("[src] was removed from the ghost SSD list.")
-        set_ssd_indicator(FALSE)
+        set_ghost_ssd_indicator(FALSE)

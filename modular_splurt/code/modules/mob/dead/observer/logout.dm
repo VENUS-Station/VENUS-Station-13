@@ -8,3 +8,4 @@
 
 	// Log mob SSD status
 	log_game("[src] was added to the ghost SSD list.")
+	set_ssd_indicator(TRUE)

@@ -87,51 +87,18 @@
 		if(!(m in R.held_items))
 			. += m
 
-/obj/item/robot_module/proc/get_or_create_estorage(var/storage_type)
+/obj/item/robot_module/proc/get_or_create_estorage(storage_type)
 	for(var/datum/robot_energy_storage/S in storages)
 		if(istype(S, storage_type))
 			return S
 
 	return new storage_type(src)
 
-/* /obj/item/robot_module/proc/add_module(obj/item/I, nonstandard, requires_rebuild)
+/obj/item/robot_module/proc/add_module(obj/item/I, nonstandard, requires_rebuild)
 	rad_flags |= RAD_NO_CONTAMINATE
-	if(istype(I, /obj/item/stack))
-		var/obj/item/stack/S = I
-
-		if(is_type_in_list(S, list(/obj/item/stack/sheet/metal, /obj/item/stack/rods, /obj/item/stack/tile/plasteel)))
-			if(S.custom_materials?.len && S.custom_materials[SSmaterials.GetMaterialRef(/datum/material/iron)])
-				S.cost = S.custom_materials[SSmaterials.GetMaterialRef(/datum/material/iron)] * 0.25
-			S.source = get_or_create_estorage(/datum/robot_energy_storage/metal)
-
-		else if(istype(S, /obj/item/stack/sheet/glass))
-			S.cost = 500
-			S.source = get_or_create_estorage(/datum/robot_energy_storage/glass)
-
-		else if(istype(S, /obj/item/stack/sheet/rglass/cyborg))
-			var/obj/item/stack/sheet/rglass/cyborg/G = S
-			G.source = get_or_create_estorage(/datum/robot_energy_storage/metal)
-			G.glasource = get_or_create_estorage(/datum/robot_energy_storage/glass)
-
-		else if(istype(S, /obj/item/stack/medical))
-			S.cost = 250
-			S.source = get_or_create_estorage(/datum/robot_energy_storage/medical)
-
-		else if(istype(S, /obj/item/stack/cable_coil))
-			S.cost = 1
-			S.source = get_or_create_estorage(/datum/robot_energy_storage/wire)
-
-		else if(istype(S, /obj/item/stack/marker_beacon))
-			S.cost = 1
-			S.source = get_or_create_estorage(/datum/robot_energy_storage/beacon)
-
-		else if(istype(S, /obj/item/stack/packageWrap))
-			S.cost = 1
-			S.source = get_or_create_estorage(/datum/robot_energy_storage/wrapping_paper)
-
-		if(S && S.source)
-			S.set_custom_materials(null)
-			S.is_cyborg = 1
+	var/obj/item/stack/S = I
+	if(istype(I, /obj/item/stack) && !S.is_cyborg) // Now handled in the type itself
+		stack_trace("Non-cyborg variant of /obj/item/stack added to a cyborg's modules.")
 
 	if(I.loc != src)
 		I.forceMove(src)
@@ -143,7 +110,6 @@
 	if(requires_rebuild)
 		rebuild_modules()
 	return I
-*/ //replaced by the one in modular_sand
 
 //Adds flavoursome dogborg items to dogborg variants optionally without mechanical benefits
 /obj/item/robot_module/proc/dogborg_equip()
@@ -648,6 +614,7 @@
 		"Otie" = image(icon = 'modular_splurt/icons/mob/widerobot.dmi', icon_state = "otiee-b"), // SPLURT Adoon (Skyrat Port)
 		"Drake" = image(icon = 'modular_sand/icons/mob/cyborg/drakemech.dmi', icon_state = "drakeengbox"),
 		"Assaultron" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "assaultron_engi"), // SPLURT Addon
+		"Meka" = image(icon = 'modular_splurt/icons/mob/robots_32x64.dmi', icon_state = "mekaengi"), // SPLURT Addon
 		"Haydee" = image(icon = 'modular_splurt/icons/mob/robots.dmi', icon_state = "haydeeengi"), // SPLURT Addon
 		"Feline" = image(icon = 'modular_splurt/icons/mob/widerobot.dmi', icon_state = "vixengi-b"), // SPLURT Addon (ChompS Port)
 		"Raptor V-4" = image(icon = 'modular_splurt/icons/mob/robots_64x45.dmi', icon_state = "engiraptor-b"), // SPLURT Addon (ChompS Port)
@@ -782,6 +749,11 @@
 			cyborg_base_icon = "assaultron_engi"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots.dmi'
 			hat_offset = 3
+		if("Meka")
+			cyborg_base_icon = "mekaengi"
+			cyborg_icon_override = 'modular_splurt/icons/mob/robots_32x64.dmi'
+			hat_offset = 3
+			hasrest = TRUE
 		if("Haydee") // SPLURT Addon
 			cyborg_base_icon = "haydeeengi"
 			cyborg_icon_override = 'modular_splurt/icons/mob/robots.dmi'
@@ -1612,9 +1584,9 @@
 		/obj/item/gps/cyborg,
 		/obj/item/gripper/mining,
 		/obj/item/cyborg_clamp,
-		/obj/item/stack/marker_beacon,
+		/obj/item/stack/marker_beacon/cyborg,
 		/obj/item/destTagger,
-		/obj/item/stack/packageWrap,
+		/obj/item/stack/packageWrap/cyborg,
 		/obj/item/card/id/miningborg)
 	emag_modules = list(/obj/item/borg/stun)
 	ratvar_modules = list(
@@ -1835,7 +1807,7 @@
 		/obj/item/surgicaldrill,
 		/obj/item/scalpel,
 		/obj/item/bonesetter,
-		/obj/item/stack/medical/bone_gel,
+		/obj/item/stack/medical/bone_gel/cyborg,
 		/obj/item/melee/transforming/energy/sword/cyborg/saw,
 		/obj/item/roller/robo,
 		/obj/item/card/emag,
@@ -1969,7 +1941,7 @@
 		/obj/item/surgicaldrill,
 		/obj/item/scalpel,
 		/obj/item/bonesetter,
-		/obj/item/stack/medical/bone_gel,
+		/obj/item/stack/medical/bone_gel/cyborg,
 		/obj/item/melee/transforming/energy/sword/cyborg/saw,
 		/obj/item/roller/robo,
 		/obj/item/stack/medical/gauze/cyborg,

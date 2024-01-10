@@ -117,5 +117,6 @@
 	var/obj/item/key/chastity_key/estim/estim_key = key
 	if(!estim_key && newkey)
 		estim_key = newkey
-	if(!estim_key.estim_cage)
-		estim_key.estim_cage = src
+	if(estim_key)
+		if(!estim_key.estim_cage)
+			estim_key.estim_cage = src

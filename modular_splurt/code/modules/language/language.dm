@@ -1,5 +1,11 @@
+// Note: Add the relevant language into code\modules\surgery\organs\tongue.dm list, else people could understand but not speak it when selected.
+// That's it unless you plan to limit the language to specific tongue.
+/datum/language/modular_splurt
+	icon = 'modular_splurt/icons/misc/language.dmi'
+	icon_state = null
+
 // I am not creative with this.
-/datum/language/avian
+/datum/language/modular_splurt/avian
 	name = "Avian"
 	desc = "A collection of bird songs and calls, mostly pleasant to human ears."
 	speech_verb = "chirps"
@@ -11,7 +17,5 @@
 	syllables = list("cheep", "peep", "beep")
 	default_priority = 70
 	flags = TONGUELESS_SPEECH
-
 	icon_state = "birb"
-	icon = 'modular_splurt/icons/misc/language.dmi'
 	restricted = FALSE

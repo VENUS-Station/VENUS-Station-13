@@ -95,9 +95,9 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 			forceMove(get_turf(user))
 	
 	//SPLURT EDIT START
-	// Check if the room is already active, if so, skip room type selection
+	// Check if the room is already active or stored, if so, skip room type selection
 	var/chosen_room = "Nothing"
-	if(!activeRooms["[chosenRoomNumber]"])
+	if(!activeRooms["[chosenRoomNumber]"] && !storedRooms["[chosenRoomNumber]"])
 		chosen_room = tgui_input_list(user, "Choose your desired room:", "♦️ Time to choose a room ♦️!", hotel_maps)
 		if(!chosen_room)
 			return FALSE
@@ -114,9 +114,8 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	checked_in_ckeys |= user.ckey		//if anything below runtimes, guess you're outta luck!
 	if(tryActiveRoom(chosenRoomNumber, user))
 		return
-	//SPLURT EDIT: Commented out until a way to save turfs is found
-	// if(tryStoredRoom(chosenRoomNumber, user, chosen_room))
-	// 	return
+	if(tryStoredRoom(chosenRoomNumber, user, chosen_room))
+		return
 	sendToNewRoom(chosenRoomNumber, user, chosen_room)
 
 /obj/item/hilbertshotel/proc/get_room_type(chosen_room) //Currently unused
@@ -138,6 +137,7 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	var/obj/item/abstracthotelstorage/storageObj = new(storageTurf)
 	storageObj.roomNumber = roomnumber
 	storageObj.parentSphere = parentSphere
+	storageObj.roomType = roomType // Save the room type here
 	storageObj.name = "Room [roomnumber] Storage"
 	for(var/i=0, i<parentSphere.hotelRoomTemp.width, i++)
 		for(var/j=0, j<parentSphere.hotelRoomTemp.height, j++)
@@ -165,13 +165,34 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 // v SPLURT EDIT: Unused until a way to copy turfs is found, as copied over movable atoms would look like a mess v
 /obj/item/hilbertshotel/proc/tryStoredRoom(var/roomNumber, var/mob/user)
 	if(storedRooms["[roomNumber]"])
-		var/datum/turf_reservation/roomReservation = SSmapping.RequestBlockReservation(hotelRoomTemp.width, hotelRoomTemp.height)
-		hotelRoomTempEmpty.load(locate(roomReservation.bottom_left_coords[1], roomReservation.bottom_left_coords[2], roomReservation.bottom_left_coords[3]))
+		// Find the storage object for the stored room
+		var/obj/item/abstracthotelstorage/storageObj
+		for(var/obj/item/abstracthotelstorage/S in storageTurf)
+			if(S.roomNumber == roomNumber)
+				storageObj = S
+				break
+
+		if(!storageObj)
+			return FALSE // No storage object found for this room number
+
+		// Use the stored roomType from the storage object
+		var/datum/map_template/hilbertshotel/mapTemplate = getMapTemplate(storageObj.roomType)	
+		var/datum/turf_reservation/roomReservation = SSmapping.RequestBlockReservation(mapTemplate.width, mapTemplate.height)
+		mapTemplate.load(locate(roomReservation.bottom_left_coords[1], roomReservation.bottom_left_coords[2], roomReservation.bottom_left_coords[3]))
+
+		// Clear all movable atoms from the loaded room template
+		for(var/i=0, i<mapTemplate.width, i++)
+			for(var/j=0, j<mapTemplate.height, j++)
+				var/turf/T = locate(roomReservation.bottom_left_coords[1] + i, roomReservation.bottom_left_coords[2] + j, roomReservation.bottom_left_coords[3])
+				for(var/atom/movable/A in T)
+					qdel(A)
+
+		// Place the STORED atoms back into the room
 		var/turfNumber = 1
-		for(var/i=0, i<hotelRoomTemp.width, i++)
-			for(var/j=0, j<hotelRoomTemp.height, j++)
+		for(var/i=0, i<mapTemplate.width, i++)
+			for(var/j=0, j<mapTemplate.height, j++)
 				for(var/atom/movable/A in storedRooms["[roomNumber]"][turfNumber])
-					if(istype(A.loc, /obj/item/abstracthotelstorage))//Don't want to recall something thats been moved
+					if(istype(A.loc, /obj/item/abstracthotelstorage)) // Don't want to recall something that's been moved
 						A.forceMove(locate(roomReservation.bottom_left_coords[1] + i, roomReservation.bottom_left_coords[2] + j, roomReservation.bottom_left_coords[3]))
 				turfNumber++
 		for(var/obj/item/abstracthotelstorage/S in storageTurf)
@@ -185,6 +206,19 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 		return TRUE
 	else
 		return FALSE
+
+/obj/item/hilbertshotel/proc/getMapTemplate(roomType) // To load a map and remove it's atoms
+	switch(roomType)
+		if("Hotel Room") return hotelRoomTemp
+		if("Apartment") return hilberts_hotel_rooms_apartment
+		if("Apartment-1") return hilberts_hotel_rooms_apartment_one
+		if("Apartment-2") return hilberts_hotel_rooms_apartment_two
+		if("Apartment-3") return hilberts_hotel_rooms_apartment_three
+		if("Apartment-Bar") return hilberts_hotel_rooms_apartment_bar
+		if("Apartment-Garden") return hilberts_hotel_rooms_apartment_garden
+		if("Apartment-Syndicate") return hilberts_hotel_rooms_apartment_syndie
+		if("Apartment-Sauna") return hilberts_hotel_rooms_apartment_sauna
+	return hotelRoomTemp // Default to Hotel Room if no match is found
 
 //SPLURT EDIT START: HOTEL UPDATE. Was sendToNewRoom(chosenRoomNumber, target) | Added new selectable apartments
 /obj/item/hilbertshotel/proc/sendToNewRoom(roomNumber, mob/user, chosen_room)
@@ -211,6 +245,11 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 
 	mapTemplate.load(locate(roomReservation.bottom_left_coords[1], roomReservation.bottom_left_coords[2], roomReservation.bottom_left_coords[3]))
 	activeRooms["[roomNumber]"] = roomReservation
+
+	// Set the room type for the newly created area
+	var/area/hilbertshotel/currentArea = get_area(locate(roomReservation.bottom_left_coords[1], roomReservation.bottom_left_coords[2], roomReservation.bottom_left_coords[3]))
+	currentArea.roomType = chosen_room // Sets the room type here
+
 	linkTurfs(roomReservation, roomNumber)
 	do_sparks(3, FALSE, get_turf(user))
 	user.forceMove(locate(roomReservation.bottom_left_coords[1] + mapTemplate.landingZoneRelativeX, roomReservation.bottom_left_coords[2] + mapTemplate.landingZoneRelativeY, roomReservation.bottom_left_coords[3]))
@@ -427,6 +466,7 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	var/obj/item/hilbertshotel/parentSphere
 	var/datum/turf_reservation/reservation
 	var/turf/storageTurf
+	var/roomType = "Hotel Room" // SPLURT ADDITION: Default room type
 
 /area/hilbertshotel/Entered(atom/movable/AM)
 	. = ..()
@@ -484,6 +524,7 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	item_flags = ABSTRACT
 	var/roomNumber
 	var/obj/item/hilbertshotel/parentSphere
+	var/roomType = "Hotel Room" // Default room type
 
 /obj/item/abstracthotelstorage/Entered(atom/movable/AM, atom/oldLoc)
 	. = ..()

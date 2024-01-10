@@ -281,7 +281,7 @@
 		Hello. This is Captain Mandela, recently appointed as the primary site manager of the ‘A.G.R Complex’. I am writing as I have some questions and concerns regarding the state of this facility, as numerous safety concerns have been relayed to me by other members of this facility’s command staff.<br><br>
 		What might be the most notable concern is the quality of this facility’s construction. It has been levied to me that the R&D Division has chosen to outsource construction to Theseus Contracting LLC, as they quote, 'Are specialty contractors primarily operating within this region of space, highly qualified in constructing facilities in hazardous environments.'<br>
 		Which is primarily true, however you had neglected to mention that this company specialized in space station construction, not planet-side construction, where they were only adequate at, given my research. As the likely result of this, the facility grounds are not properly optimized for this environment, with the electrical systems haphazardly placed in the elements, and heavily outdated telecommunications equipment.<br>
-		I have received numerous complaints from my Chief Engineer regarding constant maintenance, and we have not been given up-to-date equipment to replace the poorly functioning ones.<br><br>
+		I have received numerous complaints from my Chief Engineer regarding constant maintenance, and we have not been given modern atmospheric systems, rather just sets of space heaters!<br><br>
 		Furthermore, safety concerns have risen amongst the mining and research staff. Notably, a lack of proper weaponry and protective gear to deal with constant threats from mining hazards and wildlife in the area, with security forces being too stretched to secure the most heavily traveled routes among the complex.<br><br>
 		Lastly, we had been told that the archeological value of this site was due to a supposed religious presence in the area, of what kind I have not been informed of, however this facility has not been appointed a chaplain. While this may be a minor concern, it is odd to me that most stations are staffed with at least one chaplain at all times, however a facility researching apparent religious history would not be given one?<br><br>
 		In summary, I am concerned that this facility has not been built to Nanotrasen Standard, and has been woefully neglected proper equipment and staff that are present in many other stations.<br>
@@ -1254,7 +1254,7 @@
 	icon_state = "candlesalad"
 	trash = /obj/item/trash/plate
 	bonus_reagents = list(/datum/reagent/consumable/nutriment = 4, /datum/reagent/consumable/sugar = 2, /datum/reagent/iron = 2, /datum/reagent/consumable/nutriment/vitamin = 4)
-	tastes = list("iron" = 1, "sweet vanilla" = 1, "roasted berries" = 1)
+	tastes = list("iron" = 1, "sweet vanilla" = 1, "roasted pineapple" = 1)
 	foodtype = JUNKFOOD | SUGAR | FRUIT
 
 /datum/crafting_recipe/food/candlesalad

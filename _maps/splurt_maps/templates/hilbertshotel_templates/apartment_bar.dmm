@@ -19,15 +19,6 @@
 "ee" = (
 /turf/open/floor/carpet/royalblack,
 /area/hilbertshotel)
-"eG" = (
-/obj/structure/table/wood/poker,
-/obj/structure/table/wood/poker,
-/obj/item/toy/cards/deck,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 1
-	},
-/turf/open/floor/carpet/royalblack,
-/area/hilbertshotel)
 "fo" = (
 /obj/machinery/vending/boozeomat{
 	shut_up = 1
@@ -35,29 +26,32 @@
 /turf/open/floor/wood/wood_tiled,
 /area/hilbertshotel)
 "hi" = (
-/obj/structure/table/wood/poker,
-/turf/open/floor/carpet/royalblack,
-/area/hilbertshotel)
-"jj" = (
-/obj/machinery/atmospherics/components/unary/tank/air{
-	dir = 8
-	},
-/turf/open/floor/plating/airless,
-/area/hilbertshotel)
-"kr" = (
 /obj/structure/chair/stool/bar{
 	dir = 1
 	},
+/turf/open/floor/carpet/royalblack,
+/area/hilbertshotel)
+"jj" = (
+/obj/structure/mirror,
+/turf/closed/indestructible/wall,
+/area/hilbertshotel)
+"kp" = (
+/obj/structure/table/wood,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/carpet/royalblack,
+/area/hilbertshotel)
+"kr" = (
 /obj/effect/turf_decal/siding/wood,
+/obj/structure/chair/stool/bar{
+	dir = 1
+	},
 /turf/open/floor/carpet/royalblack,
 /area/hilbertshotel)
 "kB" = (
-/obj/structure/table/wood/poker,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	piping_layer = 3;
-	pixel_x = 5;
-	pixel_y = 5
-	},
+/obj/structure/table/wood/poker/shadow,
+/obj/item/toy/cards/deck,
 /turf/open/floor/carpet/royalblack,
 /area/hilbertshotel)
 "kC" = (
@@ -92,13 +86,6 @@
 /obj/item/reagent_containers/food/drinks/drinkingglass,
 /turf/open/floor/wood/wood_tiled,
 /area/hilbertshotel)
-"ln" = (
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
-	dir = 1
-	},
-/obj/machinery/meter,
-/turf/open/floor/plating/airless,
-/area/hilbertshotel)
 "lS" = (
 /obj/structure/table/wood,
 /obj/machinery/chem_dispenser/drinks/fullupgrade{
@@ -111,15 +98,8 @@
 /turf/open/indestructible/hoteltile,
 /area/hilbertshotel)
 "nj" = (
-/obj/structure/chair/stool/bar{
-	dir = 1
-	},
 /obj/effect/turf_decal/siding/wood,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	piping_layer = 3;
-	pixel_x = 5;
-	pixel_y = 5
-	},
+/obj/structure/table/wood/poker/shadow,
 /turf/open/floor/carpet/royalblack,
 /area/hilbertshotel)
 "oH" = (
@@ -133,12 +113,6 @@
 /obj/structure/chair/stool/bar,
 /turf/open/floor/carpet/royalblack,
 /area/hilbertshotel)
-"pv" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 1
-	},
-/turf/closed/indestructible/wall,
-/area/hilbertshotel)
 "qn" = (
 /obj/machinery/light{
 	dir = 1
@@ -146,21 +120,11 @@
 /turf/open/floor/carpet/royalblack,
 /area/hilbertshotel)
 "qQ" = (
-/obj/structure/table/wood/poker,
-/obj/structure/table/wood/poker,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	piping_layer = 3;
-	pixel_x = 5;
-	pixel_y = 5
-	},
+/obj/structure/table/wood/poker/shadow,
 /turf/open/floor/carpet/royalblack,
 /area/hilbertshotel)
-"sk" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	piping_layer = 3;
-	pixel_x = 5;
-	pixel_y = 5
-	},
+"rY" = (
+/obj/structure/sign/poster/random,
 /turf/closed/indestructible/wall,
 /area/hilbertshotel)
 "sm" = (
@@ -185,10 +149,8 @@
 /turf/open/indestructible/hoteltile,
 /area/hilbertshotel)
 "tx" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	piping_layer = 3;
-	pixel_x = 5;
-	pixel_y = 5
+/obj/machinery/door/window/survival_pod{
+	dir = 4
 	},
 /turf/open/floor/carpet/royalblack,
 /area/hilbertshotel)
@@ -207,17 +169,14 @@
 /area/hilbertshotel)
 "vU" = (
 /obj/machinery/telecomms/relay/preset/auto,
-/turf/open/floor/plating/airless,
+/turf/open/floor/catwalk_floor,
 /area/hilbertshotel)
 "vW" = (
 /obj/structure/table/wood,
 /turf/open/floor/carpet/royalblack,
 /area/hilbertshotel)
 "wB" = (
-/obj/structure/table/wood/poker,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 1
-	},
+/obj/machinery/computer/slot_machine,
 /turf/open/floor/carpet/royalblack,
 /area/hilbertshotel)
 "xI" = (
@@ -233,21 +192,11 @@
 "yz" = (
 /turf/open/floor/glass/reinforced,
 /area/hilbertshotel)
-"Ae" = (
-/obj/structure/urinal,
-/turf/closed/indestructible/wall,
-/area/hilbertshotel)
 "BL" = (
 /obj/machinery/light{
 	dir = 8
 	},
 /turf/open/indestructible/hoteltile,
-/area/hilbertshotel)
-"Ce" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/hilbertshotel/layer3{
-	dir = 1
-	},
-/turf/open/floor/carpet/black,
 /area/hilbertshotel)
 "DV" = (
 /obj/machinery/light{
@@ -327,26 +276,6 @@
 	},
 /turf/open/floor/carpet/black,
 /area/hilbertshotel)
-"Jy" = (
-/obj/machinery/atmospherics/components/unary/outlet_injector/hilbertshotel/layer3,
-/turf/open/floor/plating/airless,
-/area/hilbertshotel)
-"LE" = (
-/obj/structure/chair/stool/bar{
-	dir = 1
-	},
-/obj/effect/turf_decal/siding/wood,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 1
-	},
-/turf/open/floor/carpet/royalblack,
-/area/hilbertshotel)
-"Mk" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 1
-	},
-/turf/open/floor/carpet/royalblack,
-/area/hilbertshotel)
 "Mr" = (
 /obj/machinery/light{
 	dir = 1
@@ -399,10 +328,8 @@
 /turf/open/floor/wood/wood_tiled,
 /area/hilbertshotel)
 "RL" = (
-/obj/machinery/atmospherics/components/unary/tank/air{
-	dir = 4
-	},
-/turf/open/floor/plating/airless,
+/obj/structure/lattice,
+/turf/open/space/bluespace,
 /area/hilbertshotel)
 "SW" = (
 /obj/structure/sign/poster/contraband/random,
@@ -441,9 +368,6 @@
 /obj/machinery/vending/snack/orange{
 	shut_up = 1
 	},
-/obj/structure/sign/poster/contraband/random{
-	pixel_x = 32
-	},
 /turf/open/floor/carpet/black,
 /area/hilbertshotel)
 "Wg" = (
@@ -455,12 +379,6 @@
 "WO" = (
 /obj/structure/table,
 /turf/open/indestructible/hoteltile,
-/area/hilbertshotel)
-"Xq" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/hilbertshotel{
-	dir = 1
-	},
-/turf/open/floor/carpet/black,
 /area/hilbertshotel)
 "Xr" = (
 /turf/open/space/bluespace,
@@ -502,29 +420,29 @@ Xr
 Xr
 ZE
 ZE
-ZE
+SW
 ZE
 ZE
 ZE
 kQ
 ZE
 ZE
+rY
 ZE
-ZE
-ZE
+SW
 ZE
 Xr
 "}
 (3,1,1) = {"
 Xr
 vU
-ZE
+rY
 ee
 ee
-ee
-sm
+pr
+nj
 Wg
-cK
+yz
 cK
 dR
 TA
@@ -535,13 +453,13 @@ Xr
 "}
 (4,1,1) = {"
 Xr
-Jy
-sk
+RL
+ZE
 tx
 kB
 qQ
 nj
-Ce
+cK
 yz
 cK
 dR
@@ -556,7 +474,7 @@ Xr
 RL
 SW
 qn
-pr
+hi
 hi
 kr
 cK
@@ -566,18 +484,18 @@ dR
 dy
 af
 oH
-ZE
+rY
 Xr
 "}
 (6,1,1) = {"
 Xr
-ln
-pv
-Mk
-wB
-eG
-LE
-Xq
+RL
+ZE
+ee
+ee
+ee
+sm
+cK
 yz
 cK
 dR
@@ -589,10 +507,10 @@ Xr
 "}
 (7,1,1) = {"
 Xr
-jj
-ZE
-ee
-ee
+RL
+rY
+wB
+hi
 ee
 sm
 cK
@@ -609,7 +527,7 @@ Xr
 Xr
 Xr
 ZE
-Ae
+ZE
 ZE
 ZE
 ZE
@@ -620,13 +538,13 @@ EI
 UR
 UR
 QE
-ZE
+rY
 Xr
 "}
 (9,1,1) = {"
 Xr
 Xr
-ZE
+jj
 sU
 BL
 GV
@@ -644,7 +562,7 @@ Xr
 (10,1,1) = {"
 Xr
 Xr
-ZE
+jj
 sU
 lT
 GV
@@ -655,7 +573,7 @@ yz
 yz
 yz
 yz
-cK
+yz
 ZE
 Xr
 "}
@@ -663,8 +581,8 @@ Xr
 Xr
 Xr
 ZE
-Ae
 ZE
+SW
 GV
 ZE
 We
@@ -685,14 +603,14 @@ DV
 te
 GV
 ZE
-ZE
+rY
 ut
 sY
 Hs
 FA
 sY
 Zn
-ZE
+SW
 Xr
 "}
 (13,1,1) = {"
@@ -721,14 +639,14 @@ DV
 te
 GV
 WO
-ZE
+SW
 Fz
-kC
+kp
 Hy
 Mz
 kC
 OA
-ZE
+rY
 Xr
 "}
 (15,1,1) = {"
@@ -737,11 +655,11 @@ Xr
 ZE
 ZE
 ZE
+rY
 ZE
 ZE
 ZE
-ZE
-ZE
+rY
 ZE
 ZE
 ZE

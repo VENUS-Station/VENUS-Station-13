@@ -118,18 +118,6 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 		return
 	sendToNewRoom(chosenRoomNumber, user, chosen_room)
 
-/obj/item/hilbertshotel/proc/get_room_type(chosen_room) //Currently unused
-	switch(chosen_room)
-		if("Apartment") return "Apartment"
-		if("Apartment-1") return "Apartment-1"
-		if("Apartment-2") return "Apartment-2"
-		if("Apartment-3") return "Apartment-3"
-		if("Apartment-Bar") return "Apartment-Bar"
-		if("Apartment-Garden") return "Apartment-Garden"
-		if("Apartment-Syndicate") return "Apartment-Syndicate"
-		if("Apartment-Sauna") return "Apartment-Sauna"
-	return "Hotel Room"
-
 /area/hilbertshotel/proc/storeRoom()
 	var/roomSize = (reservation.top_right_coords[1]-reservation.bottom_left_coords[1]+1)*(reservation.top_right_coords[2]-reservation.bottom_left_coords[2]+1)
 	var/storage[roomSize]
@@ -162,8 +150,8 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	else
 		return FALSE
 
-// v SPLURT EDIT: Unused until a way to copy turfs is found, as copied over movable atoms would look like a mess v
 /obj/item/hilbertshotel/proc/tryStoredRoom(var/roomNumber, var/mob/user)
+// SPLURT EDIT START: Load the correct stored room by loading an empty template and adding stored atoms on top of it.
 	if(storedRooms["[roomNumber]"])
 		// Find the storage object for the stored room
 		var/obj/item/abstracthotelstorage/storageObj
@@ -198,8 +186,15 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 		for(var/obj/item/abstracthotelstorage/S in storageTurf)
 			if((S.roomNumber == roomNumber) && (S.parentSphere == src))
 				qdel(S)
+		
+		// Re-Set the room type
+		var/area/hilbertshotel/currentArea = get_area(locate(roomReservation.bottom_left_coords[1], roomReservation.bottom_left_coords[2], roomReservation.bottom_left_coords[3]))
+		if(storageObj)
+			currentArea.roomType = storageObj.roomType // Set the room type for the area
+
 		storedRooms -= "[roomNumber]"
 		activeRooms["[roomNumber]"] = roomReservation
+		// SPLURT EDIT END
 		linkTurfs(roomReservation, roomNumber)
 		do_sparks(3, FALSE, get_turf(user))
 		user.forceMove(locate(roomReservation.bottom_left_coords[1] + hotelRoomTemp.landingZoneRelativeX, roomReservation.bottom_left_coords[2] + hotelRoomTemp.landingZoneRelativeY, roomReservation.bottom_left_coords[3]))

@@ -21,28 +21,15 @@
 	},
 /turf/open/floor/wood/wood_tiled,
 /area/hilbertshotel)
-"eg" = (
-/obj/structure/flora/ausbushes/sparsegrass,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 5
-	},
-/obj/structure/flora/ausbushes/brflowers,
-/obj/structure/flora/biolumi/flower,
-/turf/open/floor/grass/grass0,
-/area/hilbertshotel)
 "fz" = (
 /obj/machinery/telecomms/relay/preset/auto,
 /turf/open/floor/catwalk_floor,
 /area/hilbertshotel)
 "gj" = (
-/obj/structure/lattice,
-/obj/machinery/atmospherics/components/unary/tank/air{
-	dir = 8
-	},
-/turf/open/space/bluespace,
+/obj/structure/flora/ausbushes/sparsegrass,
+/obj/structure/flora/ausbushes/ppflowers,
+/obj/structure/flora/biolumi/flower,
+/turf/open/floor/grass/grass0,
 /area/hilbertshotel)
 "gm" = (
 /obj/structure/lattice,
@@ -61,7 +48,6 @@
 /turf/open/floor/grass/grass0,
 /area/hilbertshotel)
 "hY" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/chair/pew/left{
 	dir = 1
 	},
@@ -119,15 +105,6 @@
 /obj/structure/flora/ausbushes/brflowers,
 /turf/open/floor/grass/grass0,
 /area/hilbertshotel)
-"mO" = (
-/obj/structure/flora/ausbushes/sparsegrass,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/obj/structure/flora/ausbushes/brflowers,
-/obj/structure/flora/biolumi,
-/turf/open/floor/grass/grass0,
-/area/hilbertshotel)
 "mQ" = (
 /obj/structure/chair/pew/left,
 /turf/open/floor/wood/wood_tiled,
@@ -138,11 +115,6 @@
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/ausbushes/brflowers,
 /turf/open/floor/grass/grass0,
-/area/hilbertshotel)
-"om" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/item/candle/infinite,
-/turf/open/floor/wood/wood_tiled,
 /area/hilbertshotel)
 "oy" = (
 /obj/structure/flora/ausbushes/sparsegrass,
@@ -183,8 +155,7 @@
 "th" = (
 /obj/structure/flora/tree/jungle{
 	pixel_x = -31;
-	pixel_y = 0;
-	light_range = 1
+	pixel_y = 0
 	},
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/ppflowers,
@@ -208,20 +179,10 @@
 /turf/open/floor/grass/grass0,
 /area/hilbertshotel)
 "uD" = (
-/obj/structure/flora/ausbushes/sparsegrass,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
+/obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/flora/ausbushes/brflowers,
+/obj/structure/flora/biolumi/mine,
 /turf/open/floor/grass/grass0,
-/area/hilbertshotel)
-"uP" = (
-/obj/structure/lattice,
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
-	dir = 4
-	},
-/obj/machinery/meter,
-/turf/open/space/bluespace,
 /area/hilbertshotel)
 "uV" = (
 /obj/structure/spacevine,
@@ -250,15 +211,11 @@
 /area/hilbertshotel)
 "wc" = (
 /obj/structure/flora/rock,
-/obj/machinery/atmospherics/components/unary/vent_scrubber/hilbertshotel/layer3,
 /obj/structure/flora/ausbushes/brflowers,
 /turf/open/floor/grass/grass0,
 /area/hilbertshotel)
 "wF" = (
 /obj/structure/flora/ausbushes/ywflowers,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
 /turf/open/floor/grass/grass0,
 /area/hilbertshotel)
 "wK" = (
@@ -267,8 +224,11 @@
 /turf/open/floor/grass/grass0,
 /area/hilbertshotel)
 "zi" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/wood/wood_tiled,
+/obj/structure/flora/ausbushes/sparsegrass,
+/obj/structure/flora/ausbushes/brflowers,
+/obj/structure/flora/ausbushes/brflowers,
+/obj/structure/flora/biolumi/flower,
+/turf/open/floor/grass/grass0,
 /area/hilbertshotel)
 "zn" = (
 /obj/structure/spacevine,
@@ -284,6 +244,7 @@
 "Aq" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/structure/flora/ausbushes/brflowers,
+/obj/structure/flora/biolumi/flower,
 /turf/open/floor/grass/grass0,
 /area/hilbertshotel)
 "AB" = (
@@ -317,15 +278,6 @@
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/open/floor/grass/grass0,
 /area/hilbertshotel)
-"CI" = (
-/obj/structure/flora/ausbushes/sparsegrass,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 5
-	},
-/obj/structure/flora/ausbushes/ppflowers,
-/obj/structure/flora/ausbushes/brflowers,
-/turf/open/floor/grass/grass0,
-/area/hilbertshotel)
 "Dd" = (
 /obj/structure/spacevine,
 /obj/structure/flora/ausbushes/ywflowers,
@@ -352,13 +304,6 @@
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/closed/indestructible/wood,
 /area/hilbertshotel)
-"FO" = (
-/obj/structure/lattice,
-/obj/machinery/atmospherics/components/unary/outlet_injector/hilbertshotel/layer3{
-	dir = 1
-	},
-/turf/open/space/bluespace,
-/area/hilbertshotel)
 "FZ" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/biolumi/flower,
@@ -380,7 +325,6 @@
 /area/hilbertshotel)
 "Kc" = (
 /obj/structure/flora/rock,
-/obj/machinery/atmospherics/components/unary/vent_pump/on,
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/grass/grass0,
@@ -394,17 +338,6 @@
 /obj/structure/flora/biolumi/mine,
 /turf/open/floor/grass/grass0,
 /area/hilbertshotel)
-"Ll" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 10
-	},
-/obj/structure/spacevine,
-/obj/structure/flora/ausbushes/ppflowers,
-/turf/closed/indestructible/wood,
-/area/hilbertshotel)
 "Lm" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/ywflowers,
@@ -412,13 +345,6 @@
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/biolumi/flower,
 /turf/open/floor/grass/grass0,
-/area/hilbertshotel)
-"LD" = (
-/obj/structure/lattice,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/turf/open/space/bluespace,
 /area/hilbertshotel)
 "Mo" = (
 /obj/structure/spacevine,
@@ -439,7 +365,6 @@
 /area/hilbertshotel)
 "Ox" = (
 /obj/structure/flora/ausbushes/lavendergrass,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/flora/ausbushes/brflowers,
@@ -531,9 +456,6 @@
 /area/hilbertshotel)
 "WY" = (
 /obj/structure/flora/ausbushes/ppflowers,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/biolumi,
@@ -679,15 +601,15 @@ oy
 mQ
 GQ
 tY
-Qc
+qX
 Cm
 Qc
 Kc
-zi
-om
+tY
+GQ
 hY
 Ox
-CI
+Ve
 uV
 "}
 (8,1,1) = {"
@@ -698,14 +620,14 @@ Gj
 Kj
 tY
 Qc
-qq
+gj
 th
-vA
+zi
 tY
 Kj
 dn
 RE
-uD
+Qc
 Dd
 "}
 (9,1,1) = {"
@@ -715,7 +637,7 @@ Qc
 Gj
 Kj
 tY
-Qc
+DQ
 qq
 Ve
 Xj
@@ -735,13 +657,13 @@ GQ
 tY
 Aq
 Qc
-wK
+uD
 Qc
 tY
 GQ
 zX
 qq
-mO
+Hx
 bg
 "}
 (11,1,1) = {"
@@ -777,7 +699,7 @@ tY
 tY
 aA
 kq
-uD
+Qc
 bg
 "}
 (13,1,1) = {"
@@ -795,7 +717,7 @@ tY
 mR
 kq
 wc
-eg
+qX
 zn
 "}
 (14,1,1) = {"
@@ -813,8 +735,8 @@ Qc
 Ve
 up
 vA
-Ll
-FO
+bg
+gm
 "}
 (15,1,1) = {"
 gm
@@ -831,7 +753,7 @@ OU
 DH
 vA
 bg
-LD
+gm
 fz
 "}
 (16,1,1) = {"
@@ -848,7 +770,7 @@ Ep
 zn
 Dd
 Ep
-gj
-uP
-gj
+gm
+gm
+gm
 "}

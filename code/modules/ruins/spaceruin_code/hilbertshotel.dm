@@ -95,9 +95,9 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 			forceMove(get_turf(user))
 	
 	//SPLURT EDIT START
-	// Check if the room is already active or stored, if so, skip room type selection
+	// Check if the room is already active, stored, or the secret room. If so, skip room type selection
 	var/chosen_room = "Nothing"
-	if(!activeRooms["[chosenRoomNumber]"] && !storedRooms["[chosenRoomNumber]"])
+	if(!activeRooms["[chosenRoomNumber]"] && !storedRooms["[chosenRoomNumber]"] && chosenRoomNumber != GLOB.hhmysteryRoomNumber)
 		chosen_room = tgui_input_list(user, "Choose your desired room:", "♦️ Time to choose a room ♦️!", hotel_maps)
 		if(!chosen_room)
 			return FALSE
@@ -119,7 +119,10 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	sendToNewRoom(chosenRoomNumber, user, chosen_room)
 
 /area/hilbertshotel/proc/storeRoom()
-	var/roomSize = (reservation.top_right_coords[1]-reservation.bottom_left_coords[1]+1)*(reservation.top_right_coords[2]-reservation.bottom_left_coords[2]+1)
+	// Calculate the actual room size based on the reservation coordinates
+	var/roomWidth = reservation.top_right_coords[1] - reservation.bottom_left_coords[1] + 1
+	var/roomHeight = reservation.top_right_coords[2] - reservation.bottom_left_coords[2] + 1
+	var/roomSize = roomWidth * roomHeight
 	var/storage[roomSize]
 	var/turfNumber = 1
 	var/obj/item/abstracthotelstorage/storageObj = new(storageTurf)
@@ -127,8 +130,8 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	storageObj.parentSphere = parentSphere
 	storageObj.roomType = roomType // Save the room type here
 	storageObj.name = "Room [roomnumber] Storage"
-	for(var/i=0, i<parentSphere.hotelRoomTemp.width, i++)
-		for(var/j=0, j<parentSphere.hotelRoomTemp.height, j++)
+	for(var/i=0, i<roomWidth, i++)
+		for(var/j=0, j<roomHeight, j++)
 			var/list/turfContents = list()
 			for(var/atom/movable/A in locate(reservation.bottom_left_coords[1] + i, reservation.bottom_left_coords[2] + j, reservation.bottom_left_coords[3]))
 				if(ismob(A) && !isliving(A))
@@ -164,7 +167,7 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 			return FALSE // No storage object found for this room number
 
 		// Use the stored roomType from the storage object
-		var/datum/map_template/hilbertshotel/mapTemplate = getMapTemplate(storageObj.roomType)	
+		var/datum/map_template/hilbertshotel/mapTemplate = getMapTemplate(storageObj.roomType)
 		var/datum/turf_reservation/roomReservation = SSmapping.RequestBlockReservation(mapTemplate.width, mapTemplate.height)
 		mapTemplate.load(locate(roomReservation.bottom_left_coords[1], roomReservation.bottom_left_coords[2], roomReservation.bottom_left_coords[3]))
 
@@ -194,10 +197,14 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 
 		storedRooms -= "[roomNumber]"
 		activeRooms["[roomNumber]"] = roomReservation
+
+		//To send the user one tile above default when teleported
+		var/additionalY = currentArea.roomType == "Apartment-Sauna" ? 1 : 0
+
 		// SPLURT EDIT END
 		linkTurfs(roomReservation, roomNumber)
 		do_sparks(3, FALSE, get_turf(user))
-		user.forceMove(locate(roomReservation.bottom_left_coords[1] + hotelRoomTemp.landingZoneRelativeX, roomReservation.bottom_left_coords[2] + hotelRoomTemp.landingZoneRelativeY, roomReservation.bottom_left_coords[3]))
+		user.forceMove(locate(roomReservation.bottom_left_coords[1] + hotelRoomTemp.landingZoneRelativeX, roomReservation.bottom_left_coords[2] + hotelRoomTemp.landingZoneRelativeY + additionalY, roomReservation.bottom_left_coords[3]))
 		return TRUE
 	else
 		return FALSE
@@ -245,12 +252,15 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	var/area/hilbertshotel/currentArea = get_area(locate(roomReservation.bottom_left_coords[1], roomReservation.bottom_left_coords[2], roomReservation.bottom_left_coords[3]))
 	currentArea.roomType = chosen_room // Sets the room type here
 
+	//To send the user one tile above default when teleported
+	var/additionalY = chosen_room == "Apartment-Sauna" ? 1 : 0
+
 	linkTurfs(roomReservation, roomNumber)
 	do_sparks(3, FALSE, get_turf(user))
-	user.forceMove(locate(roomReservation.bottom_left_coords[1] + mapTemplate.landingZoneRelativeX, roomReservation.bottom_left_coords[2] + mapTemplate.landingZoneRelativeY, roomReservation.bottom_left_coords[3]))
+	user.forceMove(locate(roomReservation.bottom_left_coords[1] + mapTemplate.landingZoneRelativeX, roomReservation.bottom_left_coords[2] + mapTemplate.landingZoneRelativeY + additionalY, roomReservation.bottom_left_coords[3]))
 //SPLURT EDIT END
 
-/obj/item/hilbertshotel/proc/linkTurfs(var/datum/turf_reservation/currentReservation, var/currentRoomnumber)
+/obj/item/hilbertshotel/proc/linkTurfs(var/datum/turf_reservation/currentReservation, var/currentRoomnumber, var/chosen_room)
 	var/area/hilbertshotel/currentArea = get_area(locate(currentReservation.bottom_left_coords[1], currentReservation.bottom_left_coords[2], currentReservation.bottom_left_coords[3]))
 	currentArea.name = "Hilbert's Hotel Room [currentRoomnumber]"
 	currentArea.parentSphere = src

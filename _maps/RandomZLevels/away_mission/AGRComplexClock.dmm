@@ -16609,6 +16609,16 @@
 /obj/structure/railing,
 /turf/open/floor/plating,
 /area/awaymission/complex/minerhouse)
+"oLZ" = (
+/obj/structure/table,
+/obj/effect/turf_decal/tile/purple{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/purple,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/item/disk/tech_disk/ratvar,
+/turf/open/floor/plasteel,
+/area/awaymission/complex/research)
 "oMo" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -20629,6 +20639,10 @@
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/awaymission/complex/thewall)
+"sdS" = (
+/obj/machinery/door/airlock/medical,
+/turf/open/floor/plasteel/white,
+/area/awaymission/complex/medical)
 "seW" = (
 /obj/structure/rack,
 /obj/item/electropack,
@@ -22026,6 +22040,11 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel,
 /area/awaymission/complex/research)
+"tvG" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/airlock/medical,
+/turf/open/floor/plasteel/white,
+/area/awaymission/complex/medical)
 "tvP" = (
 /obj/machinery/button/door{
 	id = "snowdinturbineoutlet";
@@ -59898,7 +59917,7 @@ kVK
 mKG
 pcC
 pcC
-rYP
+rXA
 spq
 gNB
 jQC
@@ -60669,7 +60688,7 @@ kVK
 wCa
 pcC
 pcC
-bpo
+myg
 sxl
 sxl
 sxl
@@ -60927,7 +60946,7 @@ meg
 fxz
 eTA
 uNU
-jQC
+tvG
 aZB
 fUj
 kVK
@@ -61440,8 +61459,8 @@ gIA
 gIA
 nfI
 pbG
-bpo
-sxl
+myg
+sdS
 kBw
 kBw
 kVK
@@ -91060,7 +91079,7 @@ fQp
 fQp
 nlp
 tWp
-eRc
+oLZ
 eRc
 xma
 dfP

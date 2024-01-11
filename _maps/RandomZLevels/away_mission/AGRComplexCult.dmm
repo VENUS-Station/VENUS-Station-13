@@ -1251,9 +1251,9 @@
 /turf/open/floor/wood,
 /area/awaymission/complex/miningcamp)
 "bdT" = (
-/obj/structure/grille,
-/turf/open/floor/plasteel/cult,
-/area/awaymission/complex/greenhouse)
+/obj/structure/table_frame,
+/turf/closed/mineral/snowmountain/cavern/complex,
+/area/awaymission/complex/cultfacility)
 "bec" = (
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/tile/red{
@@ -9910,6 +9910,16 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/clockwork,
 /area/awaymission/complex/cultfacility)
+"iMJ" = (
+/obj/structure/table,
+/obj/effect/turf_decal/tile/purple{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/purple,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/item/disk/tech_disk/narsie,
+/turf/open/floor/plasteel,
+/area/awaymission/complex/research)
 "iMK" = (
 /obj/structure/railing{
 	dir = 8
@@ -14844,8 +14854,8 @@
 "nhL" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/flora/tree/jungle/small,
-/obj/structure/table_frame/brass,
 /obj/structure/spacevine,
+/obj/structure/table_frame,
 /turf/open/floor/spooktime/nonspooktimegrass,
 /area/awaymission/complex/greenhouse)
 "nhR" = (
@@ -59943,7 +59953,7 @@ kVK
 mKG
 pcC
 pcC
-rYP
+rXA
 spq
 gNB
 jQC
@@ -60714,7 +60724,7 @@ kVK
 wCa
 pcC
 pcC
-bpo
+myg
 sxl
 sxl
 sxl
@@ -61485,7 +61495,7 @@ gIA
 gIA
 nfI
 pbG
-bpo
+myg
 sxl
 kBw
 kBw
@@ -85210,7 +85220,7 @@ mNm
 mNm
 mNm
 oFC
-gTy
+bdT
 sYZ
 oXP
 mNm
@@ -89850,7 +89860,7 @@ dMd
 eqP
 nbZ
 nbZ
-bdT
+kag
 epE
 nbz
 sFr
@@ -90107,7 +90117,7 @@ aIg
 nbZ
 nbZ
 nbZ
-bdT
+kag
 ksk
 nbz
 sFr
@@ -90364,7 +90374,7 @@ hHt
 nbZ
 nbZ
 eqY
-bdT
+kag
 rGD
 nbz
 sFr
@@ -90621,7 +90631,7 @@ lAg
 lIO
 nbZ
 joi
-bdT
+kag
 eEY
 nbz
 sFr
@@ -91105,7 +91115,7 @@ fQp
 fQp
 nlp
 tWp
-eRc
+iMJ
 eRc
 xma
 dfP

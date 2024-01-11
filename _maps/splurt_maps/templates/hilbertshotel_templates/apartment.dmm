@@ -47,6 +47,9 @@
 	},
 /turf/open/floor/wood/wood_large,
 /area/hilbertshotel)
+"bV" = (
+/turf/open/space/bluespace,
+/area/space)
 "cy" = (
 /obj/machinery/light_switch/directional/north{
 	pixel_x = 18
@@ -582,6 +585,7 @@
 /area/hilbertshotel)
 
 (1,1,1) = {"
+bV
 FN
 FN
 FN
@@ -599,6 +603,7 @@ FN
 FN
 "}
 (2,1,1) = {"
+bV
 FN
 xT
 xT
@@ -616,6 +621,7 @@ xT
 FN
 "}
 (3,1,1) = {"
+bV
 FN
 xT
 pm
@@ -633,6 +639,7 @@ xT
 FN
 "}
 (4,1,1) = {"
+bV
 FN
 xT
 eO
@@ -650,6 +657,7 @@ xT
 FN
 "}
 (5,1,1) = {"
+bV
 FN
 xT
 wS
@@ -667,6 +675,7 @@ xT
 FN
 "}
 (6,1,1) = {"
+bV
 FN
 QN
 Je
@@ -684,6 +693,7 @@ xT
 FN
 "}
 (7,1,1) = {"
+bV
 FN
 xT
 md
@@ -701,6 +711,7 @@ xT
 FN
 "}
 (8,1,1) = {"
+bV
 FN
 xT
 xT
@@ -718,6 +729,7 @@ xT
 FN
 "}
 (9,1,1) = {"
+bV
 oZ
 xT
 AE
@@ -735,6 +747,7 @@ xT
 FN
 "}
 (10,1,1) = {"
+bV
 FN
 xT
 AY
@@ -752,6 +765,7 @@ xT
 FN
 "}
 (11,1,1) = {"
+bV
 FN
 xT
 Vo
@@ -769,6 +783,7 @@ xT
 FN
 "}
 (12,1,1) = {"
+bV
 FN
 QN
 UQ
@@ -786,6 +801,7 @@ xT
 FN
 "}
 (13,1,1) = {"
+bV
 FN
 xT
 Gv
@@ -803,6 +819,7 @@ xT
 FN
 "}
 (14,1,1) = {"
+bV
 FN
 xT
 gQ
@@ -820,6 +837,7 @@ xT
 FN
 "}
 (15,1,1) = {"
+bV
 FN
 xT
 xT
@@ -837,6 +855,7 @@ xT
 FN
 "}
 (16,1,1) = {"
+bV
 FN
 FN
 FN

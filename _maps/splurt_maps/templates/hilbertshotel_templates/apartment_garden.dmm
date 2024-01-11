@@ -468,7 +468,6 @@
 /turf/open/floor/grass/grass0,
 /area/hilbertshotel)
 "XX" = (
-/obj/structure/spacevine,
 /turf/closed/indestructible/hoteldoor{
 	icon_state = "door_closed";
 	icon = 'icons/obj/doors/puzzledoor/default.dmi'

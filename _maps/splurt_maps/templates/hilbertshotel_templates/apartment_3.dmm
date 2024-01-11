@@ -536,6 +536,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 8
 	},
+/obj/structure/table,
 /turf/open/floor/carpet/royalblue,
 /area/hilbertshotel)
 "RP" = (

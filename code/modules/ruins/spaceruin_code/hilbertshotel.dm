@@ -220,6 +220,7 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 		if("Apartment-Garden") return hilberts_hotel_rooms_apartment_garden
 		if("Apartment-Syndicate") return hilberts_hotel_rooms_apartment_syndie
 		if("Apartment-Sauna") return hilberts_hotel_rooms_apartment_sauna
+		if("Mystery Room") return hotelRoomTempLore
 	return hotelRoomTemp // Default to Hotel Room if no match is found
 
 //SPLURT EDIT START: HOTEL UPDATE. Was sendToNewRoom(chosenRoomNumber, target) | Added new selectable apartments
@@ -230,6 +231,7 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	var/datum/map_template/hilbertshotel/mapTemplate
 
 	if(ruinSpawned && roomNumber == mysteryRoom)
+		chosen_room = "Mystery Room"
 		mapTemplate = hotelRoomTempLore
 	else
 		switch(chosen_room)

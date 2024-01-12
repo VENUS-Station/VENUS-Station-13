@@ -2,7 +2,7 @@
 // That's it unless you plan to limit the language to specific tongue.
 /datum/language/modular_splurt
 	icon = 'modular_splurt/icons/misc/language.dmi'
-	icon_state = null
+	icon_state = "whar"
 
 // I am not creative with this.
 /datum/language/modular_splurt/avian

@@ -14,7 +14,7 @@
 	whisper_verb = "coos"
 	key = "a"
 	space_chance = 42
-	syllables = list("cheep", "peep", "beep")
+	syllables = list("cheep", "peep", "beep", "tweet")
 	default_priority = 70
 	flags = TONGUELESS_SPEECH
 	icon_state = "birb"

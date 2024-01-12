@@ -4520,7 +4520,6 @@
 #include "modular_splurt\code\game\objects\items\crayons.dm"
 #include "modular_splurt\code\game\objects\items\gift.dm"
 #include "modular_splurt\code\game\objects\items\fluff.dm"
-#include "modular_splurt\code\game\objects\items\gift.dm"
 #include "modular_splurt\code\game\objects\items\granters.dm"
 #include "modular_splurt\code\game\objects\items\holy_weapons.dm"
 #include "modular_splurt\code\game\objects\items\manuals.dm"

@@ -109,8 +109,9 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 			var/datum/turf_reservation/storageReservation = SSmapping.RequestBlockReservation(3, 3)
 			storageTemp.load(locate(storageReservation.bottom_left_coords[1], storageReservation.bottom_left_coords[2], storageReservation.bottom_left_coords[3]))
 			GLOB.hhStorageTurf = locate(storageReservation.bottom_left_coords[1]+1, storageReservation.bottom_left_coords[2]+1, storageReservation.bottom_left_coords[3])
-		else
-			storageTurf = GLOB.hhStorageTurf
+		//SPLURT EDIT START: Removed else statement in this line (to fix first room not storing correctly)
+		storageTurf = GLOB.hhStorageTurf
+		//SPLURT EDIT END
 	checked_in_ckeys |= user.ckey		//if anything below runtimes, guess you're outta luck!
 	if(tryActiveRoom(chosenRoomNumber, user))
 		return
@@ -134,7 +135,7 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 		for(var/j=0, j<roomHeight, j++)
 			var/list/turfContents = list()
 			for(var/atom/movable/A in locate(reservation.bottom_left_coords[1] + i, reservation.bottom_left_coords[2] + j, reservation.bottom_left_coords[3]))
-				if(ismob(A) && !isliving(A))
+				if(ismob(A) && !isliving(A) || !isturf(A.loc)) // Turf check for items that are inside containers
 					continue //Don't want to store ghosts
 				turfContents += A
 				A.forceMove(storageObj)

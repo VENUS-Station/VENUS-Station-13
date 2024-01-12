@@ -1272,6 +1272,8 @@
 //Miscellaneous
 //These tiles need a special variation due to differing atmos.
 
+#define COLD_ATMOS					"o2=21.78;n2=82.36;TEMP=255" //snowturf for AGRcomplex as the environment is meant to be just cold, not uninhabitable.
+
 /turf/open/floor/plating/snowed/smoothed/warmer
 	initial_gas_mix = COLD_ATMOS
 	initial_temperature = 255

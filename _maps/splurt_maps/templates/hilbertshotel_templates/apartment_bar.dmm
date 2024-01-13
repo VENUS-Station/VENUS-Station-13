@@ -88,7 +88,7 @@
 /area/hilbertshotel)
 "lS" = (
 /obj/structure/table/wood,
-/obj/machinery/chem_dispenser/drinks/fullupgrade{
+/obj/machinery/chem_dispenser/drinks{
 	dir = 1
 	},
 /turf/open/floor/wood/wood_tiled,
@@ -104,7 +104,7 @@
 /area/hilbertshotel)
 "oH" = (
 /obj/structure/table/wood,
-/obj/machinery/chem_dispenser/drinks/beer/fullupgrade{
+/obj/machinery/chem_dispenser/drinks/beer{
 	dir = 1
 	},
 /turf/open/floor/wood/wood_tiled,
@@ -365,9 +365,7 @@
 /turf/open/floor/wood/wood_tiled,
 /area/hilbertshotel)
 "We" = (
-/obj/machinery/vending/snack/orange{
-	shut_up = 1
-	},
+/obj/machinery/vending/snack/random,
 /turf/open/floor/carpet/black,
 /area/hilbertshotel)
 "Wg" = (

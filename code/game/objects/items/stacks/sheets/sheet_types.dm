@@ -23,8 +23,14 @@
 GLOBAL_LIST_INIT(metal_recipes, list ( \
 	new/datum/stack_recipe("stool", /obj/structure/chair/stool, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("bar stool", /obj/structure/chair/stool/bar, one_per_turf = TRUE, on_floor = TRUE), \
-	new/datum/stack_recipe("bed", /obj/structure/bed, 2, one_per_turf = TRUE, on_floor = TRUE), \
-	new/datum/stack_recipe("double bed", /obj/structure/bed/double, 4, one_per_turf = TRUE, on_floor = TRUE), \
+	//SPLURT CHANGE: Add beds list and pod beds
+	new/datum/stack_recipe_list("beds", list( \
+		new/datum/stack_recipe("bed", /obj/structure/bed, 2, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("double bed", /obj/structure/bed/double, 4, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("pod bed", /obj/structure/bed/pod, 2, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("double pod bed", /obj/structure/bed/double/pod, 4, one_per_turf = TRUE, on_floor = TRUE), \
+	)), \
+		//SPLURT CHANGE END
 	//CIT CHANGE - adds sofas to metal recipe list
 	new/datum/stack_recipe_list("sofas", list( \
 		new /datum/stack_recipe("sofa (middle)", /obj/structure/chair/sofa, one_per_turf = TRUE, on_floor = TRUE), \
@@ -388,6 +394,13 @@ GLOBAL_LIST_INIT(cloth_recipes, list ( \
 	new/datum/stack_recipe("loincloth", /obj/item/clothing/under/costume/loincloth/cloth/sensor, 2), \
 	new/datum/stack_recipe("sensorless loincloth", /obj/item/clothing/under/costume/loincloth/cloth, 2), \
 	new/datum/stack_recipe("tunic", /obj/item/clothing/under/tunic, 3), \
+	//SPLURT CHANGE: ADD MATTRESSES
+	new/datum/stack_recipe_list("matresses", list( \
+		new/datum/stack_recipe("mattress (random)", /obj/structure/bed/matress, 2, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("mattress (clean)", /obj/structure/bed/matress/clean, 2, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("mattress (clean, pillowed)", /obj/structure/bed/matress/clean_pillowed, 2, one_per_turf = TRUE, on_floor = TRUE), \
+	)), \
+	//SPLURT CHANGE END
 	null, \
 	new/datum/stack_recipe("backpack", /obj/item/storage/backpack, 4), \
 	new/datum/stack_recipe("duffel bag", /obj/item/storage/backpack/duffelbag, 6), \

@@ -9,10 +9,10 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	//SPLURT EDIT START
 	var/list/static/hotel_maps = list("Hotel Room", "Apartment","Apartment-1", "Apartment-2", "Apartment-3", "Apartment-Bar", "Apartment-Garden", "Apartment-Sauna")
-	var/datum/map_template/hilbertshotel/apartment/hilberts_hotel_rooms_apartment
 	var/datum/map_template/hilbertshotel/apartment/one/hilberts_hotel_rooms_apartment_one
 	var/datum/map_template/hilbertshotel/apartment/two/hilberts_hotel_rooms_apartment_two
 	var/datum/map_template/hilbertshotel/apartment/three/hilberts_hotel_rooms_apartment_three
+	var/datum/map_template/hilbertshotel/apartment/four/hilberts_hotel_rooms_apartment_four
 	var/datum/map_template/hilbertshotel/apartment/bar/hilberts_hotel_rooms_apartment_bar
 	var/datum/map_template/hilbertshotel/apartment/garden/hilberts_hotel_rooms_apartment_garden
 	var/datum/map_template/hilbertshotel/apartment/syndie/hilberts_hotel_rooms_apartment_syndie
@@ -39,10 +39,10 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	hotelRoomTempEmpty = new()
 	hotelRoomTempLore = new()
 	//SPLURT EDIT START
-	hilberts_hotel_rooms_apartment = new()
 	hilberts_hotel_rooms_apartment_one = new()
 	hilberts_hotel_rooms_apartment_two = new()
 	hilberts_hotel_rooms_apartment_three = new()
+	hilberts_hotel_rooms_apartment_four = new()
 	hilberts_hotel_rooms_apartment_bar = new()
 	hilberts_hotel_rooms_apartment_garden = new()
 	hilberts_hotel_rooms_apartment_syndie = new()
@@ -213,10 +213,10 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 /obj/item/hilbertshotel/proc/getMapTemplate(roomType) // To load a map and remove it's atoms
 	switch(roomType)
 		if("Hotel Room") return hotelRoomTemp
-		if("Apartment") return hilberts_hotel_rooms_apartment
 		if("Apartment-1") return hilberts_hotel_rooms_apartment_one
 		if("Apartment-2") return hilberts_hotel_rooms_apartment_two
 		if("Apartment-3") return hilberts_hotel_rooms_apartment_three
+		if("Apartment-4") return hilberts_hotel_rooms_apartment_four
 		if("Apartment-Bar") return hilberts_hotel_rooms_apartment_bar
 		if("Apartment-Garden") return hilberts_hotel_rooms_apartment_garden
 		if("Apartment-Syndicate") return hilberts_hotel_rooms_apartment_syndie
@@ -237,10 +237,10 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	else
 		switch(chosen_room)
 			if("Hotel Room") mapTemplate = hotelRoomTemp
-			if("Apartment") mapTemplate = hilberts_hotel_rooms_apartment
 			if("Apartment-1") mapTemplate = hilberts_hotel_rooms_apartment_one
 			if("Apartment-2") mapTemplate = hilberts_hotel_rooms_apartment_two
 			if("Apartment-3") mapTemplate = hilberts_hotel_rooms_apartment_three
+			if("Apartment-4") mapTemplate = hilberts_hotel_rooms_apartment_four
 			if("Apartment-Bar") mapTemplate = hilberts_hotel_rooms_apartment_bar
 			if("Apartment-Garden") mapTemplate = hilberts_hotel_rooms_apartment_garden
 			if("Apartment-Syndicate") mapTemplate = hilberts_hotel_rooms_apartment_syndie

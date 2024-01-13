@@ -22,10 +22,6 @@
 	mappath = '_maps/splurt_maps/templates/hilbertshotelempty.dmm'
 
 // SELECTABLE APARTMENTS UPDATE
-/datum/map_template/hilbertshotel/apartment
-	name = "Apartment"
-	mappath = '_maps/splurt_maps/templates/hilbertshotel_templates/apartment.dmm'
-
 /datum/map_template/hilbertshotel/apartment/one
 	name = "Apartment_1"
 	mappath = '_maps/splurt_maps/templates/hilbertshotel_templates/apartment_1.dmm'
@@ -37,6 +33,10 @@
 /datum/map_template/hilbertshotel/apartment/three
 	name = "Apartment_3"
 	mappath = '_maps/splurt_maps/templates/hilbertshotel_templates/apartment_3.dmm'
+
+/datum/map_template/hilbertshotel/apartment/four
+	name = "Apartment_4"
+	mappath = '_maps/splurt_maps/templates/hilbertshotel_templates/apartment_4.dmm'
 
 /datum/map_template/hilbertshotel/apartment/bar
 	name = "Apartment_bar"

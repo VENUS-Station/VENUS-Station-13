@@ -163,7 +163,8 @@
 /obj/structure/table/wood/fancy,
 /obj/item/flashlight/lamp/green{
 	pixel_x = 5;
-	pixel_y = 14
+	pixel_y = 14;
+	layer = 4.1
 	},
 /obj/machinery/light_switch/directional/east,
 /turf/open/floor/carpet/purple,

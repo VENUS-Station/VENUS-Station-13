@@ -220,6 +220,15 @@
 	},
 /turf/open/floor/carpet,
 /area/hilbertshotel)
+"pX" = (
+/obj/machinery/jukebox{
+	icon_state = "telescreen";
+	name = "modern jukebox";
+	desc = "A modern music player.";
+	area_limited = 1
+	},
+/turf/closed/indestructible/wall,
+/area/hilbertshotel)
 "st" = (
 /obj/machinery/door/morgue,
 /turf/open/floor/plasteel/kitchen_coldroom,
@@ -788,7 +797,7 @@ Ib
 WN
 Ib
 Ib
-xT
+pX
 aS
 kh
 xT

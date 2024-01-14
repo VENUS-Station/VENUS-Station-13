@@ -145,6 +145,11 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	parentSphere.activeRooms -= "[roomnumber]"
 	qdel(reservation)
 
+/area/hilbertshotel/proc/update_light_switches() //SPLURT ADDITION: This will update all light switches in the given area
+	for(var/obj/machinery/light_switch/LS in src)
+		LS.area = src // Update the area reference for each light switch
+		LS.update_appearance() // Update the appearance of the light switch
+
 /obj/item/hilbertshotel/proc/tryActiveRoom(var/roomNumber, var/mob/user)
 	if(activeRooms["[roomNumber]"])
 		var/datum/turf_reservation/roomReservation = activeRooms["[roomNumber]"]
@@ -195,6 +200,7 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 		var/area/hilbertshotel/currentArea = get_area(locate(roomReservation.bottom_left_coords[1], roomReservation.bottom_left_coords[2], roomReservation.bottom_left_coords[3]))
 		if(storageObj)
 			currentArea.roomType = storageObj.roomType // Set the room type for the area
+			currentArea.update_light_switches() // Update all light switches in the area
 
 		storedRooms -= "[roomNumber]"
 		activeRooms["[roomNumber]"] = roomReservation

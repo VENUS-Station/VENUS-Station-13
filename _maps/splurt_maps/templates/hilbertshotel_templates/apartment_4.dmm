@@ -54,12 +54,6 @@
 /obj/item/sharpener{
 	pixel_x = 10
 	},
-/obj/item/reagent_containers/food/condiment/flour,
-/obj/item/storage/fancy/egg_box,
-/obj/item/reagent_containers/food/condiment/milk,
-/obj/item/reagent_containers/food/condiment/milk,
-/obj/item/reagent_containers/food/condiment/soymilk,
-/obj/item/reagent_containers/food/condiment/soymilk,
 /turf/open/floor/plasteel/cafeteria,
 /area/hilbertshotel)
 "cV" = (
@@ -492,6 +486,13 @@
 	layer = 2.9
 	},
 /obj/structure/closet/secure_closet/freezer/kitchen,
+/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/condiment/flour,
 /turf/open/floor/plasteel/cafeteria,
 /area/hilbertshotel)
 "OE" = (

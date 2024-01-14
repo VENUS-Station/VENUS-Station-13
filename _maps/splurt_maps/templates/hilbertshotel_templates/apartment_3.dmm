@@ -228,6 +228,15 @@
 /area/hilbertshotel)
 "bz" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
+/obj/item/reagent_containers/food/condiment/sugar,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/condiment/rice,
 /turf/open/floor/plasteel/cafeteria,
 /area/hilbertshotel)
 "bA" = (

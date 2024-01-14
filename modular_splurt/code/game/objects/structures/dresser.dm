@@ -15,7 +15,6 @@
 
 /obj/structure/dresser/empty/Initialize(mapload)
     . = ..()
-    // Do not call generate_underwear for the empty dresser.
 
 /obj/structure/dresser/empty/generate_underwear()
     // Override the generate_underwear proc to do nothing for the empty dresser.

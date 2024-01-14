@@ -26,7 +26,7 @@
 /turf/open/indestructible/hotelwood,
 /area/hilbertshotel)
 "aq" = (
-/obj/structure/dresser/empty,
+/obj/structure/dresser,
 /turf/open/floor/carpet,
 /area/hilbertshotel)
 "ar" = (
@@ -227,7 +227,7 @@
 /turf/open/floor/plasteel/cafeteria,
 /area/hilbertshotel)
 "bz" = (
-/obj/machinery/smartfridge/food,
+/obj/structure/closet/secure_closet/freezer/fridge,
 /turf/open/floor/plasteel/cafeteria,
 /area/hilbertshotel)
 "bA" = (
@@ -333,6 +333,10 @@
 	dir = 10
 	},
 /turf/open/indestructible/hotelwood,
+/area/hilbertshotel)
+"lo" = (
+/obj/machinery/smartfridge/food,
+/turf/closed/indestructible/wall,
 /area/hilbertshotel)
 "mf" = (
 /obj/effect/turf_decal/siding/thinplating/dark{
@@ -617,7 +621,7 @@ ZC
 yI
 bx
 bx
-XP
+lo
 aa
 "}
 (5,1,1) = {"

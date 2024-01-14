@@ -84,7 +84,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/structure/dresser/empty,
+/obj/structure/dresser,
 /turf/open/floor/carpet/purple,
 /area/hilbertshotel)
 "aX" = (
@@ -350,9 +350,8 @@
 /turf/open/pool,
 /area/hilbertshotel)
 "cw" = (
-/obj/structure/table/reinforced,
-/obj/structure/sink/kitchen,
-/turf/open/floor/plasteel/cafeteria,
+/obj/machinery/smartfridge/food,
+/turf/closed/indestructible/wall,
 /area/hilbertshotel)
 "cy" = (
 /obj/structure/sink{
@@ -366,7 +365,7 @@
 /turf/open/indestructible/hoteltile,
 /area/hilbertshotel)
 "cz" = (
-/obj/machinery/smartfridge/food,
+/obj/structure/closet/secure_closet/freezer/kitchen,
 /turf/open/floor/plasteel/cafeteria,
 /area/hilbertshotel)
 "cB" = (
@@ -469,8 +468,9 @@
 /turf/closed/indestructible/wall,
 /area/hilbertshotel)
 "Oe" = (
-/obj/machinery/vending/boozeomat{
-	shut_up = 1
+/obj/structure/table/reinforced,
+/obj/structure/sink/kitchen{
+	dir = 1
 	},
 /turf/open/floor/plasteel/cafeteria,
 /area/hilbertshotel)
@@ -519,6 +519,12 @@
 	},
 /turf/open/floor/wood/wood_tiled,
 /area/hilbertshotel)
+"Zy" = (
+/obj/machinery/vending/boozeomat{
+	shut_up = 1
+	},
+/turf/closed/indestructible/wall,
+/area/hilbertshotel)
 
 (1,1,1) = {"
 ab
@@ -550,8 +556,8 @@ ah
 ah
 ah
 ah
-ah
-ah
+Zy
+cw
 ah
 ah
 ab
@@ -569,7 +575,7 @@ Zh
 cb
 cg
 cq
-cw
+cq
 Oe
 ah
 ab

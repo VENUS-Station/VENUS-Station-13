@@ -135,7 +135,6 @@
 /obj/structure/fireplace{
 	dir = 8
 	},
-/obj/item/stack/sheet/mineral/wood/fifty,
 /turf/open/floor/wood/wood_tiled,
 /area/hilbertshotel)
 "kz" = (
@@ -249,6 +248,7 @@
 /area/hilbertshotel)
 "vv" = (
 /obj/structure/closet/crate/wooden,
+/obj/item/stack/sheet/mineral/wood/fifty,
 /turf/open/floor/wood/wood_tiled,
 /area/hilbertshotel)
 "vP" = (
@@ -359,10 +359,15 @@
 	dir = 1
 	},
 /obj/structure/closet/crate/wooden,
+/obj/item/stack/sheet/mineral/wood/fifty,
 /turf/open/floor/wood/wood_tiled,
 /area/hilbertshotel)
 "Fh" = (
 /obj/structure/closet/crate,
+/obj/item/stack/sheet/mineral/wood/fifty,
+/obj/item/reagent_containers/glass/bucket{
+	pixel_y = 7
+	},
 /turf/open/floor/wood/wood_tiled,
 /area/hilbertshotel)
 "Fi" = (
@@ -436,10 +441,12 @@
 /obj/item/bedsheet/black/double,
 /turf/open/floor/carpet/royalblack,
 /area/hilbertshotel)
-"Kj" = (
-/obj/item/kirbyplants/random,
-/obj/item/stack/sheet/mineral/wood/fifty,
-/turf/open/floor/wood/wood_tiled,
+"JK" = (
+/obj/machinery/vending/boozeomat{
+	onstation = 0;
+	shut_up = 1
+	},
+/turf/closed/indestructible/wall,
 /area/hilbertshotel)
 "Lp" = (
 /obj/item/newspaper{
@@ -481,13 +488,10 @@
 /area/hilbertshotel)
 "Of" = (
 /obj/structure/window/reinforced{
-	dir = 4;
+	dir = 8;
 	layer = 2.9
 	},
-/obj/machinery/vending/boozeomat{
-	onstation = 0;
-	shut_up = 1
-	},
+/obj/structure/closet/secure_closet/freezer/kitchen,
 /turf/open/floor/plasteel/cafeteria,
 /area/hilbertshotel)
 "OE" = (
@@ -557,7 +561,7 @@
 /turf/open/floor/festive/alleyway/safe,
 /area/hilbertshotel)
 "Si" = (
-/obj/structure/dresser/empty,
+/obj/structure/dresser,
 /turf/open/floor/carpet/royalblack,
 /area/hilbertshotel)
 "Sx" = (
@@ -622,13 +626,6 @@
 /obj/item/lighter/gold,
 /turf/open/floor/carpet/royalblue,
 /area/hilbertshotel)
-"Ud" = (
-/obj/item/stack/sheet/mineral/wood/fifty,
-/obj/item/reagent_containers/glass/bucket{
-	pixel_y = 7
-	},
-/turf/open/floor/wood/wood_tiled,
-/area/hilbertshotel)
 "Uh" = (
 /obj/structure/chair/sofa/corp/corner{
 	dir = 1
@@ -657,6 +654,13 @@
 	dir = 8
 	},
 /obj/structure/closet/crate/wooden,
+/obj/item/clothing/shoes/sandal,
+/obj/item/clothing/shoes/sandal,
+/obj/item/clothing/shoes/sandal,
+/obj/item/clothing/shoes/sandal,
+/obj/item/clothing/shoes/sandal,
+/obj/item/clothing/shoes/sandal,
+/obj/item/clothing/shoes/sandal,
 /turf/open/floor/wood/wood_tiled,
 /area/hilbertshotel)
 "VY" = (
@@ -689,15 +693,8 @@
 /turf/open/floor/carpet/royalblue,
 /area/hilbertshotel)
 "XI" = (
-/obj/structure/rack,
 /obj/machinery/light_switch/directional/north,
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
+/obj/structure/rack,
 /turf/open/floor/carpet/red,
 /area/hilbertshotel)
 "Ym" = (
@@ -873,7 +870,7 @@ pH
 Cf
 bU
 Zg
-Kj
+IJ
 bU
 tQ
 Zg
@@ -917,7 +914,7 @@ Zg
 "}
 (12,1,1) = {"
 Zg
-Ud
+bU
 Fh
 nA
 cV
@@ -999,7 +996,7 @@ Zg
 Zg
 Zg
 Zg
-Zg
+JK
 vZ
 Zg
 Zg

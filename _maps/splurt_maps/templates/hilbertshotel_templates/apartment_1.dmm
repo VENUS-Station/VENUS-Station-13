@@ -62,7 +62,9 @@
 /turf/open/floor/wood/wood_tiled,
 /area/hilbertshotel)
 "dw" = (
-/obj/machinery/smartfridge/food,
+/obj/item/reagent_containers/food/condiment/sugar,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/structure/closet/secure_closet/freezer/fridge,
 /turf/open/floor/plasteel/kitchen_coldroom,
 /area/hilbertshotel)
 "dT" = (
@@ -98,6 +100,12 @@
 "ik" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 4
+	},
+/obj/structure/sink/kitchen{
+	pixel_y = 24
+	},
+/obj/structure/mirror{
+	pixel_y = 34
 	},
 /turf/open/indestructible/hoteltile,
 /area/hilbertshotel)
@@ -214,6 +222,10 @@
 /area/hilbertshotel)
 "pX" = (
 /obj/machinery/jukebox,
+/turf/closed/indestructible/wall,
+/area/hilbertshotel)
+"qr" = (
+/obj/machinery/smartfridge/food,
 /turf/closed/indestructible/wall,
 /area/hilbertshotel)
 "st" = (
@@ -390,7 +402,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
-/obj/structure/dresser/empty,
+/obj/structure/dresser,
 /turf/open/floor/wood/wood_tiled,
 /area/hilbertshotel)
 "JW" = (
@@ -427,10 +439,6 @@
 	},
 /turf/open/floor/plasteel/kitchen_coldroom,
 /area/hilbertshotel)
-"Nb" = (
-/obj/structure/sink/kitchen,
-/turf/open/indestructible/hoteltile,
-/area/hilbertshotel)
 "Oh" = (
 /obj/machinery/vending/wallmed/directional/west{
 	shut_up = 1
@@ -447,13 +455,6 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/item/reagent_containers/food/condiment/milk,
-/obj/item/reagent_containers/food/condiment/milk,
-/obj/item/reagent_containers/food/condiment/soymilk,
-/obj/item/reagent_containers/food/condiment/soymilk,
-/obj/item/storage/fancy/egg_box,
-/obj/item/reagent_containers/food/condiment/flour,
-/obj/item/reagent_containers/food/condiment/sugar,
 /turf/open/floor/mineral/titanium/tiled/white,
 /area/hilbertshotel)
 "PK" = (
@@ -624,7 +625,7 @@ xT
 SS
 xT
 xT
-xT
+qr
 QN
 xT
 xT
@@ -807,7 +808,7 @@ aS
 kh
 Lf
 ik
-Nb
+ho
 xT
 FN
 "}

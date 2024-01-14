@@ -46,10 +46,6 @@
 	name = "Apartment_garden"
 	mappath = '_maps/splurt_maps/templates/hilbertshotel_templates/apartment_garden.dmm'
 
-/datum/map_template/hilbertshotel/apartment/syndie
-	name = "Apartment_syndie"
-	mappath = '_maps/splurt_maps/templates/hilbertshotel_templates/apartment_syndie.dmm'
-
 /datum/map_template/hilbertshotel/apartment/sauna
 	name = "Apartment_sauna"
 	mappath = '_maps/splurt_maps/templates/hilbertshotel_templates/apartment_sauna.dmm'

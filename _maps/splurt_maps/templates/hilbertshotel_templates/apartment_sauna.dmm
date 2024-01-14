@@ -1,7 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aN" = (
 /obj/machinery/light_switch/directional/east,
-/obj/structure/dresser/empty,
+/obj/structure/dresser,
 /turf/open/floor/carpet/red,
 /area/hilbertshotel)
 "bd" = (
@@ -64,7 +64,6 @@
 "gP" = (
 /obj/structure/table/glass,
 /obj/structure/bedsheetbin/towel,
-/obj/item/stack/sheet/mineral/wood/fifty,
 /turf/open/floor/plasteel/white,
 /area/hilbertshotel)
 "gS" = (
@@ -104,13 +103,6 @@
 	dir = 10
 	},
 /obj/structure/rack,
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
 /turf/open/floor/carpet/royalblue,
 /area/hilbertshotel)
 "jr" = (
@@ -127,10 +119,6 @@
 	dir = 4
 	},
 /turf/open/floor/wood/wood_tiled,
-/area/hilbertshotel)
-"jS" = (
-/obj/structure/dresser/empty,
-/turf/closed/indestructible/wood,
 /area/hilbertshotel)
 "jX" = (
 /obj/structure/mineral_door/paperframe{
@@ -149,6 +137,9 @@
 /area/hilbertshotel)
 "ly" = (
 /obj/structure/closet/crate/wooden,
+/obj/item/stack/sheet/mineral/wood/fifty,
+/obj/item/lighter/gold,
+/obj/item/wrench,
 /turf/open/floor/carpet/red,
 /area/hilbertshotel)
 "mc" = (
@@ -213,9 +204,6 @@
 /area/hilbertshotel)
 "qm" = (
 /obj/structure/table/wood,
-/obj/item/wrench,
-/obj/item/stack/sheet/mineral/wood/fifty,
-/obj/item/lighter/gold,
 /turf/open/floor/wood,
 /area/hilbertshotel)
 "qv" = (
@@ -265,6 +253,13 @@
 /obj/structure/closet/crate/wooden,
 /obj/effect/turf_decal/siding/wood,
 /obj/machinery/light,
+/obj/item/clothing/shoes/sandal,
+/obj/item/clothing/shoes/sandal,
+/obj/item/clothing/shoes/sandal,
+/obj/item/clothing/shoes/sandal,
+/obj/item/clothing/shoes/sandal,
+/obj/item/clothing/shoes/sandal,
+/obj/item/clothing/shoes/sandal,
 /turf/open/floor/carpet/royalblue,
 /area/hilbertshotel)
 "ut" = (
@@ -454,7 +449,7 @@
 /area/hilbertshotel)
 "HB" = (
 /obj/machinery/smartfridge/drinks,
-/turf/closed/wall/mineral/wood,
+/turf/closed/indestructible/wood,
 /area/hilbertshotel)
 "HN" = (
 /obj/structure/table/glass,
@@ -627,9 +622,6 @@
 /area/hilbertshotel)
 "Tp" = (
 /obj/structure/reagent_dispensers/watertank,
-/obj/item/reagent_containers/glass/bucket{
-	pixel_y = 7
-	},
 /turf/open/floor/plasteel/white,
 /area/hilbertshotel)
 "TH" = (
@@ -648,6 +640,10 @@
 /area/hilbertshotel)
 "UJ" = (
 /obj/structure/closet/crate/wooden,
+/obj/item/stack/sheet/mineral/wood/fifty,
+/obj/item/reagent_containers/glass/bucket{
+	pixel_y = 7
+	},
 /turf/open/floor/plasteel/white,
 /area/hilbertshotel)
 "UR" = (
@@ -699,7 +695,7 @@ OE
 OE
 OE
 OE
-OE
+HB
 OE
 OE
 OE
@@ -809,7 +805,7 @@ rX
 FQ
 FQ
 FQ
-HB
+FQ
 FQ
 OE
 "}
@@ -886,7 +882,7 @@ OE
 Si
 "}
 (12,1,1) = {"
-jS
+OE
 wD
 uG
 fb

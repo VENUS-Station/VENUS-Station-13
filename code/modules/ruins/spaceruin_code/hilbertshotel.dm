@@ -15,7 +15,6 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	var/datum/map_template/hilbertshotel/apartment/four/hilberts_hotel_rooms_apartment_four
 	var/datum/map_template/hilbertshotel/apartment/bar/hilberts_hotel_rooms_apartment_bar
 	var/datum/map_template/hilbertshotel/apartment/garden/hilberts_hotel_rooms_apartment_garden
-	var/datum/map_template/hilbertshotel/apartment/syndie/hilberts_hotel_rooms_apartment_syndie
 	var/datum/map_template/hilbertshotel/apartment/sauna/hilberts_hotel_rooms_apartment_sauna
 	//SPLURT EDIT END
 	var/datum/map_template/hilbertshotel/hotelRoomTemp
@@ -45,7 +44,6 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	hilberts_hotel_rooms_apartment_four = new()
 	hilberts_hotel_rooms_apartment_bar = new()
 	hilberts_hotel_rooms_apartment_garden = new()
-	hilberts_hotel_rooms_apartment_syndie = new()
 	hilberts_hotel_rooms_apartment_sauna = new()
 	//SPLURT EDIT END
 	var/area/currentArea = get_area(src)
@@ -187,6 +185,7 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 				for(var/atom/movable/A in T)
 					if(istype(A, /obj/effect/overlay/water) || istype(A, /obj/effect/overlay/water/top)) // Skip pool water overlays
 						continue
+					QDEL_LIST(A.contents)
 					qdel(A)
 
 		// Place the STORED atoms back into the room
@@ -230,7 +229,6 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 		if("Apartment-4") return hilberts_hotel_rooms_apartment_four
 		if("Apartment-Bar") return hilberts_hotel_rooms_apartment_bar
 		if("Apartment-Garden") return hilberts_hotel_rooms_apartment_garden
-		if("Apartment-Syndicate") return hilberts_hotel_rooms_apartment_syndie
 		if("Apartment-Sauna") return hilberts_hotel_rooms_apartment_sauna
 		if("Mystery Room") return hotelRoomTempLore
 	return hotelRoomTemp // Default to Hotel Room if no match is found
@@ -254,7 +252,6 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 			if("Apartment-4") mapTemplate = hilberts_hotel_rooms_apartment_four
 			if("Apartment-Bar") mapTemplate = hilberts_hotel_rooms_apartment_bar
 			if("Apartment-Garden") mapTemplate = hilberts_hotel_rooms_apartment_garden
-			if("Apartment-Syndicate") mapTemplate = hilberts_hotel_rooms_apartment_syndie
 			if("Apartment-Sauna") mapTemplate = hilberts_hotel_rooms_apartment_sauna
 	if(!mapTemplate)
 		mapTemplate = hotelRoomTemp //Default Hotel Room

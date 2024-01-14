@@ -133,10 +133,13 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	storageObj.name = "Room [roomnumber] Storage"
 	for(var/i=0, i<roomWidth, i++)
 		for(var/j=0, j<roomHeight, j++)
+			var/turf/T = locate(reservation.bottom_left_coords[1] + i, reservation.bottom_left_coords[2] + j, reservation.bottom_left_coords[3])
 			var/list/turfContents = list()
-			for(var/atom/movable/A in locate(reservation.bottom_left_coords[1] + i, reservation.bottom_left_coords[2] + j, reservation.bottom_left_coords[3]))
+			for(var/atom/movable/A in T)
+				if(istype(A, /obj/effect/overlay/water) || istype(A, /obj/effect/overlay/water/top)) // Skip pool water and effects
+					continue
 				if(ismob(A) && !isliving(A) || !isturf(A.loc)) // Turf check for items that are inside containers
-					continue //Don't want to store ghosts
+					continue // Don't want to store ghosts
 				turfContents += A
 				A.forceMove(storageObj)
 			storage[turfNumber] = turfContents
@@ -182,6 +185,8 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 			for(var/j=0, j<mapTemplate.height, j++)
 				var/turf/T = locate(roomReservation.bottom_left_coords[1] + i, roomReservation.bottom_left_coords[2] + j, roomReservation.bottom_left_coords[3])
 				for(var/atom/movable/A in T)
+					if(istype(A, /obj/effect/overlay/water) || istype(A, /obj/effect/overlay/water/top)) // Skip pool water overlays
+						continue
 					qdel(A)
 
 		// Place the STORED atoms back into the room

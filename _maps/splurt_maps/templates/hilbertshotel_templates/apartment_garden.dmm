@@ -25,11 +25,16 @@
 /obj/machinery/telecomms/relay/preset/auto,
 /turf/open/floor/catwalk_floor,
 /area/hilbertshotel)
+"ga" = (
+/obj/structure/flora/ausbushes/sparsegrass,
+/obj/structure/flora/ausbushes/ppflowers,
+/turf/open/floor/grass/fairy/purple,
+/area/hilbertshotel)
 "gj" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/structure/flora/biolumi/flower,
-/turf/open/floor/grass/grass0,
+/turf/open/floor/grass/fairy/purple,
 /area/hilbertshotel)
 "gm" = (
 /obj/structure/lattice,
@@ -72,6 +77,12 @@
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/structure/flora/ausbushes/brflowers,
 /turf/open/floor/grass/grass0,
+/area/hilbertshotel)
+"kh" = (
+/obj/structure/flora/ausbushes/sparsegrass,
+/obj/structure/flora/ausbushes/brflowers,
+/obj/structure/flora/biolumi/flower,
+/turf/open/floor/grass/fairy/purple,
 /area/hilbertshotel)
 "ko" = (
 /obj/structure/flora/rock,
@@ -159,7 +170,7 @@
 	},
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/ppflowers,
-/turf/open/floor/grass/grass0,
+/turf/open/floor/grass/fairy/purple,
 /area/hilbertshotel)
 "tu" = (
 /obj/structure/flora/ausbushes/sparsegrass,
@@ -182,7 +193,7 @@
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/biolumi/mine,
-/turf/open/floor/grass/grass0,
+/turf/open/floor/grass/fairy/purple,
 /area/hilbertshotel)
 "uV" = (
 /obj/structure/spacevine,
@@ -228,7 +239,7 @@
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/biolumi/flower,
-/turf/open/floor/grass/grass0,
+/turf/open/floor/grass/fairy/purple,
 /area/hilbertshotel)
 "zn" = (
 /obj/structure/spacevine,
@@ -245,7 +256,7 @@
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/biolumi/flower,
-/turf/open/floor/grass/grass0,
+/turf/open/floor/grass/fairy/purple,
 /area/hilbertshotel)
 "AB" = (
 /obj/structure/flora/ausbushes/sparsegrass,
@@ -254,6 +265,11 @@
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/biolumi/flower,
 /turf/open/floor/grass/grass0,
+/area/hilbertshotel)
+"BR" = (
+/obj/structure/flora/ausbushes/sparsegrass,
+/obj/structure/flora/ausbushes/brflowers,
+/turf/open/floor/grass/fairy/purple,
 /area/hilbertshotel)
 "Cd" = (
 /obj/structure/flora/ausbushes/sparsegrass,
@@ -271,7 +287,7 @@
 "Cm" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/structure/flora/ausbushes/brflowers,
-/turf/open/floor/grass/grass0,
+/turf/open/floor/grass/fairy/purple,
 /area/hilbertshotel)
 "CE" = (
 /obj/structure/flora/ausbushes/lavendergrass,
@@ -323,11 +339,17 @@
 /obj/structure/flora/biolumi,
 /turf/open/floor/grass/grass0,
 /area/hilbertshotel)
+"ID" = (
+/obj/structure/flora/ausbushes/sparsegrass,
+/obj/structure/flora/ausbushes/ppflowers,
+/obj/structure/flora/ausbushes/brflowers,
+/turf/open/floor/grass/fairy/purple,
+/area/hilbertshotel)
 "Kc" = (
 /obj/structure/flora/rock,
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/ausbushes/ppflowers,
-/turf/open/floor/grass/grass0,
+/turf/open/floor/grass/fairy/purple,
 /area/hilbertshotel)
 "Kj" = (
 /turf/open/floor/carpet/royalblue,
@@ -465,13 +487,19 @@
 "Xj" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/structure/flora/ausbushes/ppflowers,
-/turf/open/floor/grass/grass0,
+/turf/open/floor/grass/fairy/purple,
 /area/hilbertshotel)
 "XX" = (
 /turf/closed/indestructible/hoteldoor{
 	icon_state = "door_closed";
 	icon = 'icons/obj/doors/puzzledoor/default.dmi'
 	},
+/area/hilbertshotel)
+"YG" = (
+/obj/structure/flora/ausbushes/sparsegrass,
+/obj/structure/flora/ausbushes/brflowers,
+/obj/structure/flora/biolumi/lamp,
+/turf/open/floor/grass/fairy/purple,
 /area/hilbertshotel)
 "Zn" = (
 /obj/structure/flora/ausbushes/sparsegrass,
@@ -600,9 +628,9 @@ oy
 mQ
 GQ
 tY
-qX
+kh
 Cm
-Qc
+BR
 Kc
 tY
 GQ
@@ -618,7 +646,7 @@ vT
 Gj
 Kj
 tY
-Qc
+BR
 gj
 th
 zi
@@ -636,9 +664,9 @@ Qc
 Gj
 Kj
 tY
-DQ
-qq
-Ve
+YG
+ga
+ID
 Xj
 tY
 Kj
@@ -655,9 +683,9 @@ Qf
 GQ
 tY
 Aq
-Qc
+BR
 uD
-Qc
+BR
 tY
 GQ
 zX

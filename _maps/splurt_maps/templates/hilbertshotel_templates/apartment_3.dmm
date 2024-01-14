@@ -26,7 +26,7 @@
 /turf/open/indestructible/hotelwood,
 /area/hilbertshotel)
 "aq" = (
-/obj/structure/dresser,
+/obj/structure/dresser/empty,
 /turf/open/floor/carpet,
 /area/hilbertshotel)
 "ar" = (
@@ -410,6 +410,10 @@
 	},
 /turf/open/floor/wood/wood_tiled,
 /area/hilbertshotel)
+"IH" = (
+/obj/structure/sign/poster/contraband/random,
+/turf/closed/wall,
+/area/hilbertshotel)
 "Ka" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
@@ -540,6 +544,9 @@
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/hilbertshotel)
+"ZC" = (
+/turf/closed/wall,
+/area/hilbertshotel)
 
 (1,1,1) = {"
 aa
@@ -588,7 +595,7 @@ Vu
 KK
 GL
 Zq
-XP
+ZC
 bp
 bw
 bz
@@ -606,7 +613,7 @@ aV
 TK
 aV
 aZ
-XP
+ZC
 yI
 bx
 bx
@@ -624,7 +631,7 @@ PJ
 TK
 az
 aZ
-XP
+ZC
 bq
 bx
 bx
@@ -636,13 +643,13 @@ aa
 aj
 aj
 XP
-XP
-XP
-XP
-XP
+ZC
+ZC
+ZC
+ZC
 aW
 bc
-XP
+ZC
 bs
 by
 kR
@@ -657,7 +664,7 @@ XP
 aB
 aI
 aJ
-XP
+ZC
 Ka
 YK
 ag
@@ -671,11 +678,11 @@ aa
 aa
 XP
 am
-XP
+ZC
 aC
 aJ
 xS
-XP
+ZC
 Ka
 ax
 bk
@@ -689,11 +696,11 @@ aa
 aa
 XP
 an
-XP
-XP
+ZC
+ZC
 aK
-XP
-Xr
+ZC
+IH
 Ka
 Yw
 wX
@@ -711,7 +718,7 @@ Yf
 kT
 nE
 lm
-XP
+ZC
 Ka
 bg
 Rh
@@ -765,7 +772,7 @@ Oi
 aF
 Lo
 aQ
-XP
+ZC
 XQ
 gc
 dU

@@ -81,10 +81,10 @@
 /turf/open/floor/wood/wood_tiled,
 /area/hilbertshotel)
 "aW" = (
-/obj/structure/dresser,
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/dresser/empty,
 /turf/open/floor/carpet/purple,
 /area/hilbertshotel)
 "aX" = (
@@ -394,6 +394,9 @@
 	},
 /turf/open/floor/wood/wood_tiled,
 /area/hilbertshotel)
+"jn" = (
+/turf/closed/wall,
+/area/hilbertshotel)
 "ll" = (
 /turf/open/floor/plasteel/dark,
 /area/hilbertshotel)
@@ -620,8 +623,8 @@ aD
 cc
 ah
 cr
-ah
-ah
+jn
+jn
 ah
 ab
 "}
@@ -670,12 +673,12 @@ aV
 bi
 aE
 TU
-ah
-ah
-ah
+jn
+jn
+jn
 bb
-ah
-ah
+jn
+jn
 ah
 ab
 "}
@@ -683,14 +686,14 @@ ab
 ab
 ab
 ah
-ah
-ah
-ah
-ah
+jn
+jn
+jn
+jn
 cr
-ah
+jn
 ao
-ah
+jn
 ba
 cy
 cB
@@ -704,11 +707,11 @@ ah
 aJ
 aW
 bj
-ah
+jn
 bG
-ah
+jn
 ap
-ah
+jn
 cs
 ba
 ba
@@ -726,7 +729,7 @@ IT
 bH
 bP
 Fk
-ah
+jn
 ct
 ct
 ba
@@ -744,7 +747,7 @@ IT
 bH
 bP
 cd
-ah
+jn
 cu
 CV
 ba
@@ -762,7 +765,7 @@ IT
 bJ
 bQ
 Fk
-ah
+jn
 cv
 bZ
 uG

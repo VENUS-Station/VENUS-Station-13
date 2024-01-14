@@ -1,7 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aN" = (
-/obj/structure/dresser,
 /obj/machinery/light_switch/directional/east,
+/obj/structure/dresser/empty,
 /turf/open/floor/carpet/red,
 /area/hilbertshotel)
 "bd" = (
@@ -64,6 +64,7 @@
 "gP" = (
 /obj/structure/table/glass,
 /obj/structure/bedsheetbin/towel,
+/obj/item/stack/sheet/mineral/wood/fifty,
 /turf/open/floor/plasteel/white,
 /area/hilbertshotel)
 "gS" = (
@@ -103,6 +104,13 @@
 	dir = 10
 	},
 /obj/structure/rack,
+/obj/item/clothing/shoes/sandal,
+/obj/item/clothing/shoes/sandal,
+/obj/item/clothing/shoes/sandal,
+/obj/item/clothing/shoes/sandal,
+/obj/item/clothing/shoes/sandal,
+/obj/item/clothing/shoes/sandal,
+/obj/item/clothing/shoes/sandal,
 /turf/open/floor/carpet/royalblue,
 /area/hilbertshotel)
 "jr" = (
@@ -119,6 +127,10 @@
 	dir = 4
 	},
 /turf/open/floor/wood/wood_tiled,
+/area/hilbertshotel)
+"jS" = (
+/obj/structure/dresser/empty,
+/turf/closed/indestructible/wood,
 /area/hilbertshotel)
 "jX" = (
 /obj/structure/mineral_door/paperframe{
@@ -137,8 +149,6 @@
 /area/hilbertshotel)
 "ly" = (
 /obj/structure/closet/crate/wooden,
-/obj/item/stack/sheet/mineral/wood/fifty,
-/obj/item/lighter/gold,
 /turf/open/floor/carpet/red,
 /area/hilbertshotel)
 "mc" = (
@@ -204,6 +214,8 @@
 "qm" = (
 /obj/structure/table/wood,
 /obj/item/wrench,
+/obj/item/stack/sheet/mineral/wood/fifty,
+/obj/item/lighter/gold,
 /turf/open/floor/wood,
 /area/hilbertshotel)
 "qv" = (
@@ -252,19 +264,6 @@
 "tX" = (
 /obj/structure/closet/crate/wooden,
 /obj/effect/turf_decal/siding/wood,
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
-/obj/item/clothing/shoes/sandal,
 /obj/machinery/light,
 /turf/open/floor/carpet/royalblue,
 /area/hilbertshotel)
@@ -422,6 +421,9 @@
 	},
 /turf/open/floor/wood/wood_tiled,
 /area/hilbertshotel)
+"FQ" = (
+/turf/closed/wall/mineral/wood,
+/area/hilbertshotel)
 "Gf" = (
 /obj/machinery/pool/drain,
 /turf/open/pool,
@@ -450,6 +452,10 @@
 	icon = 'icons/obj/doors/puzzledoor/default.dmi'
 	},
 /area/hilbertshotel)
+"HB" = (
+/obj/machinery/smartfridge/drinks,
+/turf/closed/wall/mineral/wood,
+/area/hilbertshotel)
 "HN" = (
 /obj/structure/table/glass,
 /obj/machinery/light{
@@ -467,7 +473,7 @@
 /area/hilbertshotel)
 "Kt" = (
 /obj/structure/falsewall/wood,
-/turf/open/floor/carpet/royalblue,
+/turf/closed/wall/mineral/wood,
 /area/hilbertshotel)
 "Kz" = (
 /obj/structure/rack,
@@ -621,6 +627,9 @@
 /area/hilbertshotel)
 "Tp" = (
 /obj/structure/reagent_dispensers/watertank,
+/obj/item/reagent_containers/glass/bucket{
+	pixel_y = 7
+	},
 /turf/open/floor/plasteel/white,
 /area/hilbertshotel)
 "TH" = (
@@ -638,11 +647,6 @@
 /turf/open/floor/wood,
 /area/hilbertshotel)
 "UJ" = (
-/obj/item/stack/sheet/mineral/wood/fifty,
-/obj/item/stack/sheet/mineral/wood/fifty,
-/obj/item/reagent_containers/glass/bucket{
-	pixel_y = 7
-	},
 /obj/structure/closet/crate/wooden,
 /turf/open/floor/plasteel/white,
 /area/hilbertshotel)
@@ -706,10 +710,10 @@ OE
 Ur
 jr
 Kz
-OE
+FQ
 ne
 iJ
-OE
+FQ
 xp
 CU
 OQ
@@ -724,10 +728,10 @@ OE
 tS
 hJ
 hJ
-OE
+FQ
 gV
 Zm
-OE
+FQ
 Sv
 OY
 OY
@@ -742,10 +746,10 @@ OE
 KL
 hJ
 tB
-OE
+FQ
 vL
 tX
-OE
+FQ
 Ym
 CG
 vN
@@ -760,10 +764,10 @@ OE
 KL
 hJ
 hJ
-OE
+FQ
 vL
 Zm
-OE
+FQ
 QS
 kd
 zJ
@@ -778,10 +782,10 @@ OE
 oR
 hJ
 CY
-OE
+FQ
 vL
 Zm
-OE
+FQ
 DO
 zJ
 fW
@@ -793,20 +797,20 @@ OE
 "}
 (7,1,1) = {"
 OE
-OE
+FQ
 pw
-OE
-OE
+FQ
+FQ
 vL
 xD
-OE
-OE
+FQ
+FQ
 rX
-OE
-OE
-OE
-OE
-OE
+FQ
+FQ
+FQ
+HB
+FQ
 OE
 "}
 (8,1,1) = {"
@@ -847,19 +851,19 @@ OE
 "}
 (10,1,1) = {"
 OE
-OE
+FQ
 TH
-OE
-OE
+FQ
+FQ
 UR
 Zm
-OE
-OE
+FQ
+FQ
 jX
-OE
-OE
-OE
-OE
+FQ
+FQ
+FQ
+FQ
 OE
 OE
 "}
@@ -868,10 +872,10 @@ OE
 Rt
 hJ
 qm
-OE
+FQ
 Op
 Zm
-OE
+FQ
 zJ
 zJ
 zJ
@@ -882,14 +886,14 @@ OE
 Si
 "}
 (12,1,1) = {"
-OE
+jS
 wD
 uG
 fb
-OE
+FQ
 LP
 Zm
-OE
+FQ
 Gm
 zJ
 zJ
@@ -904,10 +908,10 @@ OE
 CZ
 PD
 ly
-OE
+FQ
 gS
 XH
-OE
+FQ
 fG
 WQ
 zJ
@@ -922,10 +926,10 @@ OE
 PD
 PD
 MT
-OE
+FQ
 tF
 Zm
-OE
+FQ
 Gm
 zJ
 zJ
@@ -940,10 +944,10 @@ OE
 aN
 Ml
 NC
-OE
+FQ
 Ph
 Au
-OE
+FQ
 gP
 UJ
 Tp

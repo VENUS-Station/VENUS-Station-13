@@ -468,7 +468,7 @@
 /area/hilbertshotel)
 "Kt" = (
 /obj/structure/falsewall/wood,
-/turf/closed/wall/mineral/wood,
+/turf/open/floor/carpet/royalblue,
 /area/hilbertshotel)
 "Kz" = (
 /obj/structure/rack,

@@ -116,10 +116,8 @@
 /turf/open/floor/carpet/royalblue,
 /area/hilbertshotel)
 "jC" = (
-/obj/structure/falsewall{
-	dir = 4
-	},
-/turf/closed/wall,
+/obj/structure/falsewall,
+/turf/open/floor/pod/light,
 /area/hilbertshotel)
 "kg" = (
 /obj/structure/closet/crate/bin,

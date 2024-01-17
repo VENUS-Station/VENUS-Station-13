@@ -6,9 +6,3 @@
 
 // Should this system be used?
 /datum/config_entry/flag/autocryo_enabled
-
-//Max amount of mobs cryo'd per tick
-/datum/config_entry/number/max_cryo_per_tick
-	default = 1
-	min_val = 1
-	integer = TRUE

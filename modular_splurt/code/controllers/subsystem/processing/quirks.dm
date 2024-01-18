@@ -17,4 +17,8 @@
 		// BLOCKED: Thematic, mechanic.
 		// Explains itself∼!
 		list("Buns of Steel","Buns of Thunder"),
+
+		// BLOCKED: Mechanic
+		// Bloodsuckers have NO_THIRST trait.
+		list("Thirsty","Bloodsucker Fledgling"),
 		))

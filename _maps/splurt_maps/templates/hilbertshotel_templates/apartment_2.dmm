@@ -365,7 +365,6 @@
 /turf/open/indestructible/hoteltile,
 /area/hilbertshotel)
 "cz" = (
-/obj/structure/closet/secure_closet/freezer/kitchen,
 /obj/item/reagent_containers/food/drinks/beer,
 /obj/item/reagent_containers/food/drinks/beer,
 /obj/item/reagent_containers/food/drinks/beer,
@@ -375,6 +374,7 @@
 /obj/item/reagent_containers/food/condiment/flour,
 /obj/item/reagent_containers/food/condiment/rice,
 /obj/item/reagent_containers/food/condiment/sugar,
+/obj/structure/closet/secure_closet/freezer/fridge,
 /turf/open/floor/plasteel/cafeteria,
 /area/hilbertshotel)
 "cB" = (

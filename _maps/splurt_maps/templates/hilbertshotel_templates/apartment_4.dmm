@@ -40,7 +40,7 @@
 /obj/structure/sign/poster/contraband/random{
 	pixel_x = 29
 	},
-/turf/open/floor/festive/alleyway/safe,
+/turf/open/floor/carpet/black,
 /area/hilbertshotel)
 "bU" = (
 /turf/open/floor/wood/wood_tiled,
@@ -146,7 +146,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/ash,
-/turf/open/floor/festive/alleyway/safe,
+/turf/open/floor/carpet/black,
 /area/hilbertshotel)
 "nA" = (
 /obj/structure/window/reinforced/tinted/frosted,
@@ -154,7 +154,7 @@
 /turf/open/floor/wood/wood_tiled,
 /area/hilbertshotel)
 "nF" = (
-/turf/open/floor/festive/alleyway/safe,
+/turf/open/floor/carpet/black,
 /area/hilbertshotel)
 "nH" = (
 /obj/machinery/light{
@@ -302,7 +302,7 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 30
 	},
-/turf/open/floor/festive/alleyway/safe,
+/turf/open/floor/carpet/black,
 /area/hilbertshotel)
 "Au" = (
 /obj/structure/sink/kitchen{
@@ -310,11 +310,6 @@
 	pixel_x = 11
 	},
 /turf/open/floor/plasteel/cafeteria,
-/area/hilbertshotel)
-"AI" = (
-/turf/open/floor/festive/white_alleyway{
-	initial_gas_mix = "o2=21.78;n2=82.36;TEMP=293.15"
-	},
 /area/hilbertshotel)
 "Cf" = (
 /obj/effect/turf_decal/siding/wood,
@@ -426,7 +421,7 @@
 /obj/machinery/vending/coffee{
 	shut_up = 1
 	},
-/turf/open/floor/festive/alleyway/safe,
+/turf/open/floor/carpet/black,
 /area/hilbertshotel)
 "Jy" = (
 /obj/structure/bed/double,
@@ -483,7 +478,6 @@
 	dir = 8;
 	layer = 2.9
 	},
-/obj/structure/closet/secure_closet/freezer/kitchen,
 /obj/item/reagent_containers/food/drinks/beer,
 /obj/item/reagent_containers/food/drinks/beer,
 /obj/item/reagent_containers/food/drinks/beer,
@@ -491,6 +485,7 @@
 /obj/item/reagent_containers/food/drinks/beer,
 /obj/item/reagent_containers/food/drinks/beer,
 /obj/item/reagent_containers/food/condiment/flour,
+/obj/structure/closet/secure_closet/freezer/fridge,
 /turf/open/floor/plasteel/cafeteria,
 /area/hilbertshotel)
 "OE" = (
@@ -557,7 +552,7 @@
 /obj/machinery/vending/cigarette{
 	shut_up = 1
 	},
-/turf/open/floor/festive/alleyway/safe,
+/turf/open/floor/carpet/black,
 /area/hilbertshotel)
 "Si" = (
 /obj/structure/dresser,
@@ -578,13 +573,13 @@
 /area/hilbertshotel)
 "SH" = (
 /obj/item/kirbyplants/random,
-/turf/open/floor/festive/alleyway/safe,
+/turf/open/floor/carpet/black,
 /area/hilbertshotel)
 "SZ" = (
 /obj/structure/closet/crate/bin{
 	pixel_x = 9
 	},
-/turf/open/floor/festive/alleyway/safe,
+/turf/open/floor/carpet/black,
 /area/hilbertshotel)
 "Ti" = (
 /obj/structure/window/reinforced,
@@ -683,7 +678,7 @@
 /obj/machinery/vending/games{
 	shut_up = 1
 	},
-/turf/open/floor/festive/alleyway/safe,
+/turf/open/floor/carpet/black,
 /area/hilbertshotel)
 "Wy" = (
 /obj/effect/turf_decal/siding/wood{
@@ -759,12 +754,12 @@ OE
 kz
 kz
 eH
-AI
-AI
-AI
-AI
-AI
-AI
+nF
+nF
+nF
+nF
+nF
+nF
 Zg
 "}
 (4,1,1) = {"

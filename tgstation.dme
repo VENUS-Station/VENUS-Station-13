@@ -4596,6 +4596,7 @@
 #include "modular_splurt\code\game\objects\structures\ladder.dm"
 #include "modular_splurt\code\game\objects\structures\micro_bricks.dm"
 #include "modular_splurt\code\game\objects\structures\pole.dm"
+#include "modular_splurt\code\game\objects\structures\sauna.dm"
 #include "modular_splurt\code\game\objects\structures\signs.dm"
 #include "modular_splurt\code\game\objects\structures\stairs.dm"
 #include "modular_splurt\code\game\objects\structures\statues.dm"

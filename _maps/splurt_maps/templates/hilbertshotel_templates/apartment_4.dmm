@@ -444,6 +444,10 @@
 	dir = 1
 	},
 /area/hilbertshotel)
+"Mo" = (
+/obj/structure/sauna_oven,
+/turf/open/floor/wood/wood_tiled,
+/area/hilbertshotel)
 "MJ" = (
 /obj/structure/table,
 /obj/item/reagent_containers/glass/bottle/hexacrocin{
@@ -908,7 +912,7 @@ Zg
 "}
 (12,1,1) = {"
 Zg
-bU
+Mo
 Fh
 nA
 cV

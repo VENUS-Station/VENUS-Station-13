@@ -620,6 +620,10 @@
 	},
 /turf/open/pool,
 /area/hilbertshotel)
+"Sx" = (
+/obj/structure/sauna_oven,
+/turf/open/floor/wood/wood_tiled,
+/area/hilbertshotel)
 "Tp" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/plasteel/white,
@@ -913,7 +917,7 @@ WQ
 zJ
 nJ
 qi
-hw
+Sx
 OE
 ki
 "}

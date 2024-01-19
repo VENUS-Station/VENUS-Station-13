@@ -56,10 +56,10 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 
 /obj/item/hilbertshotel/attack(mob/living/M, mob/living/user)
 	if(M.mind)
-		to_chat(user, "<span class='notice'>You invite [M] to the hotel.</span>")
+		to_chat(user, span_notice("You invite [M] to the hotel."))
 		promptAndCheckIn(user, M)
 	else
-		to_chat(user, "<span class='warning'>[M] is not intelligent enough to understand how to use this device!</span>")
+		to_chat(user, span_warning("[M] is not intelligent enough to understand how to use this device!"))
 
 /obj/item/hilbertshotel/attack_self(mob/user)
 	. = ..()
@@ -83,10 +83,10 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	if(!chosenRoomNumber || !user.CanReach(src))
 		return
 	if(chosenRoomNumber > SHORT_REAL_LIMIT)
-		to_chat(user, "<span class='warning'>You have to check out the first [SHORT_REAL_LIMIT] rooms before you can go to a higher numbered one!</span>")
+		to_chat(user, span_warning("You have to check out the first [SHORT_REAL_LIMIT] rooms before you can go to a higher numbered one!"))
 		return
 	if((chosenRoomNumber < 1) || (chosenRoomNumber != round(chosenRoomNumber)))
-		to_chat(user, "<span class='warning'>That is not a valid room number!</span>")
+		to_chat(user, span_warning("That is not a valid room number!"))
 		return
 	if(!isturf(loc))
 		if((loc == user) || (loc.loc == user) || (loc.loc in user.contents) || (loc in user.GetAllContents(type)))		//short circuit, first three checks are cheaper and covers almost all cases (loc.loc covers hotel in box in backpack).
@@ -96,7 +96,7 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	// Check if the room is already active, stored, or the secret room. If so, skip room type selection
 	var/chosen_room = "Nothing"
 	if(!activeRooms["[chosenRoomNumber]"] && !storedRooms["[chosenRoomNumber]"] && chosenRoomNumber != GLOB.hhmysteryRoomNumber)
-		chosen_room = tgui_input_list(user, "Choose your desired room:", "♦️ Time to choose a room ♦️!", hotel_maps)
+		chosen_room = tgui_input_list(user, "Choose your desired room:", "∼♦️ Time to choose a room ♦️∼!", hotel_maps)
 		if(!chosen_room)
 			return FALSE
 	//SPLURT EDIT END

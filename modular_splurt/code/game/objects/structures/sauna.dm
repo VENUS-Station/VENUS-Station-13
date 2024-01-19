@@ -6,7 +6,7 @@
 
 /obj/structure/sauna_oven
 	name = "\improper sauna oven"
-	desc = "A humble sauna oven adorned with stones. Add some fuel, pour water, and relish the tranquil moment."
+	desc = "A modest sauna oven adorned with stones. Add some fuel, pour water, and relish the tranquil moment."
 	icon = 'modular_splurt/icons/obj/sauna_oven.dmi'
 	icon_state = "sauna_oven"
 	density = TRUE

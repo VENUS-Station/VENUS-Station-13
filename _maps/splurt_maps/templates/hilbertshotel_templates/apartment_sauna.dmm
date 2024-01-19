@@ -199,7 +199,9 @@
 /turf/open/floor/carpet/royalblue,
 /area/hilbertshotel)
 "qi" = (
-/obj/machinery/light/floor,
+/obj/machinery/light/floor{
+	bulb_colour = "F27D0C"
+	},
 /turf/open/floor/wood/wood_tiled,
 /area/hilbertshotel)
 "qm" = (

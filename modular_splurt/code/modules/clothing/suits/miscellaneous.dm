@@ -272,5 +272,4 @@
 	icon_state = "jacket_transparent"
 	// I feel REALLY bad about doing this, but the default overlay is not transparent (null does not work either).
 	item_state = "jacket_transparent"
-	mutantrace_variation = NONE
-
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON

@@ -109,6 +109,7 @@
 		return INITIALIZE_HINT_QDEL
 
 /obj/effect/abstract/proximity_checker/Destroy()
+	LAZYREMOVE(monitor.checkers, src)
 	monitor = null
 	return ..()
 

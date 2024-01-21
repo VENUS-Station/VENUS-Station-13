@@ -9,8 +9,6 @@
 
 /obj/item/hilbertshotel/attack_hand(mob/user, list/modifiers)
 	. = ..()
-	if(.)
-		return
 	return promptAndCheckIn(user, user)
 
 // Better SPLURT version of hilbert's

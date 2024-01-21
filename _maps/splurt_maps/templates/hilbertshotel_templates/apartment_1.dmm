@@ -227,7 +227,9 @@
 /turf/open/floor/carpet,
 /area/hilbertshotel)
 "pX" = (
-/obj/machinery/jukebox,
+/obj/machinery/jukebox{
+	area_limited = 1
+	},
 /turf/closed/indestructible/wall,
 /area/hilbertshotel)
 "qr" = (

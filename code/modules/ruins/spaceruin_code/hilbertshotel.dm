@@ -154,8 +154,13 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 /obj/item/hilbertshotel/proc/tryActiveRoom(var/roomNumber, var/mob/user)
 	if(activeRooms["[roomNumber]"])
 		var/datum/turf_reservation/roomReservation = activeRooms["[roomNumber]"]
+		var/area/hilbertshotel/currentArea = get_area(locate(roomReservation.bottom_left_coords[1], roomReservation.bottom_left_coords[2], roomReservation.bottom_left_coords[3]))
+		
+		// Determine additional Y offset for teleportation
+		var/additionalY = currentArea.roomType == "Apartment-Sauna" ? 1 : 0
+
 		do_sparks(3, FALSE, get_turf(user))
-		user.forceMove(locate(roomReservation.bottom_left_coords[1] + hotelRoomTemp.landingZoneRelativeX, roomReservation.bottom_left_coords[2] + hotelRoomTemp.landingZoneRelativeY, roomReservation.bottom_left_coords[3]))
+		user.forceMove(locate(roomReservation.bottom_left_coords[1] + hotelRoomTemp.landingZoneRelativeX, roomReservation.bottom_left_coords[2] + hotelRoomTemp.landingZoneRelativeY + additionalY, roomReservation.bottom_left_coords[3]))
 		return TRUE
 	else
 		return FALSE

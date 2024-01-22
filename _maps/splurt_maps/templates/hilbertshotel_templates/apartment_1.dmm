@@ -148,9 +148,6 @@
 "kq" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/three_course_meal,
-/obj/machinery/atmospherics/components/unary/vent_pump/hilbertshotel{
-	dir = 4
-	},
 /obj/item/reagent_containers/food/condiment/peppermill,
 /turf/open/floor/plasteel/kitchen_coldroom,
 /area/hilbertshotel)

@@ -545,9 +545,6 @@
 	pixel_y = 11
 	},
 /obj/effect/turf_decal/siding/wood,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 8
-	},
 /obj/structure/table,
 /turf/open/floor/carpet/royalblue,
 /area/hilbertshotel)
@@ -632,16 +629,6 @@
 /area/hilbertshotel)
 "Ul" = (
 /obj/effect/turf_decal/siding{
-	dir = 4
-	},
-/turf/open/floor/wood/wood_tiled,
-/area/hilbertshotel)
-"Uv" = (
-/obj/structure/mineral_door/wood,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
 /turf/open/floor/wood/wood_tiled,
@@ -886,7 +873,7 @@ ix
 Gm
 Zg
 sr
-Uv
+gj
 sr
 Zg
 xt

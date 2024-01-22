@@ -93,22 +93,22 @@
 			fuel_amount += SAUNA_WOOD_FUEL * wood.amount
 			wood.use(wood.amount)
 			user.visible_message(span_notice("[user] throws wood chips \
-				into the firebox [src]."), span_notice("You throw wood chips \
-				into the firebox [src]."))
+				into the firebox of [src]."), span_notice("You throw wood chips \
+				into the firebox of [src]."))
 			return // Prevent the default attack behavior
 
 	else if(istype(used_item, /obj/item/paper_bin))
 		var/obj/item/paper_bin/paper_bin = used_item
-		user.visible_message(span_notice("[user] throws [used_item] into the firebox \
-			[src]."), span_notice("You add [used_item] to the firebox [src].\
+		user.visible_message(span_notice("[user] throws [used_item] into the firebox of \
+			[src]."), span_notice("You add [used_item] to the firebox of [src].\
 			"))
 		fuel_amount += SAUNA_PAPER_FUEL * paper_bin.total_paper
 		qdel(paper_bin)
 		return // Prevent the default attack behavior
 
 	else if(istype(used_item, /obj/item/paper))
-		user.visible_message(span_notice("[user] throws [used_item] into the firebox \
-			[src]."), span_notice("You add [used_item] to the firebox [src].\
+		user.visible_message(span_notice("[user] throws [used_item] into the firebox of \
+			[src]."), span_notice("You add [used_item] to the firebox of [src].\
 			"))
 		fuel_amount += SAUNA_PAPER_FUEL
 		qdel(used_item)

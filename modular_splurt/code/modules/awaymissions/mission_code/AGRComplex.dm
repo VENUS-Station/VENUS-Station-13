@@ -772,8 +772,7 @@
 	id = "borg_clockwork_module"
 	build_type = MECHFAB
 	build_path = /obj/item/borg/upgrade/clockwork
-	materials = list(/datum/material/iron=8000,/datum/material/glass=12000,/datum/material/gold = 10000)
-	reagents_list = list(/datum/reagent/empoweredzinc = 40)
+	materials = list(/datum/material/iron=10000,/datum/material/glass=14000,/datum/material/gold = 16000)
 	construction_time = 120
 	category = list("Cyborg Upgrade Modules")
 

@@ -78,3 +78,7 @@
 2024-01-21:
   Zattarra:
   - bugfix: Fixes the invisifiber jacket icon.
+2024-01-22:
+  Anonymous:
+  - rscadd: Added *coo, *facewing and *ruffle (wings' ruffle).
+  - rscadd: Added Avian language. It's quite basic, though.

@@ -41,8 +41,8 @@ const CrewList = (props, context) => {
         fill
         scrollable>
         <LabeledList>
-          {frozen_crew.map((person) => (
-            <LabeledList.Item key={person} label={person.name}>
+          {frozen_crew.map((person, index) => (
+            <LabeledList.Item key={index} label={person.name}>
               {person.job}
             </LabeledList.Item>
           ))}

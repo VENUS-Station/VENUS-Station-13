@@ -158,6 +158,11 @@
 	message = "squints their eyes." // i dumb
 	emote_type = EMOTE_VISIBLE
 
+/datum/emote/living/ruffle
+	key = "ruffle"
+	key_third_person = "ruffles"
+	message = "ruffles their wings for a moment."
+
 /datum/emote/living/fart
 	key = "fart"
 	key_third_person = "farts"
@@ -935,6 +940,11 @@
 	key_third_person = "faceclaws"
 	metacarpus_type = "claw"
 
+/datum/emote/living/audio/facemetacarpus/wing
+	key = "facewing" // For avians, harpies or just anyone with wings
+	key_third_person = "facewings"
+	metacarpus_type = "wing"
+
 /datum/emote/living/audio/facemetacarpus/hoof
 	key = "facehoof" // For horse enthusiasts
 	key_third_person = "facehoofs"
@@ -1046,6 +1056,15 @@
 	message_mime = "acts like a mooing cow."
 	emote_sound = 'modular_splurt/sound/voice/moo.ogg'
 	emote_cooldown = 1.7 SECONDS
+
+/datum/emote/living/audio/coo
+	key = "coo"
+	key_third_person = "coos"
+	message = "coos."
+	message_mime = "acts like a cooing pidgeon."
+	emote_volume = 30
+	emote_sound = 'modular_splurt/sound/voice/coo.ogg'
+	emote_cooldown = 0.78 SECONDS
 
 /datum/emote/living/audio/untitledgoose
 	key = "goosehonk"

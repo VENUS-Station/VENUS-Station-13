@@ -134,7 +134,7 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 			var/turf/T = locate(reservation.bottom_left_coords[1] + i, reservation.bottom_left_coords[2] + j, reservation.bottom_left_coords[3])
 			var/list/turfContents = list()
 			for(var/atom/movable/A in T)
-				if(istype(A, /obj/effect/overlay/water) || istype(A, /obj/effect/overlay/water/top)) // Skip pool water and effects
+				if(istype(A, /obj/effect/overlay/water) || istype(A, /obj/effect/overlay/water/top) || istype(A, /obj/machinery/atmospherics/components)) // Skip pool water and effects, and atmos components
 					continue
 				if(ismob(A) && !isliving(A) || !isturf(A.loc)) // Turf check for items that are inside containers
 					continue // Don't want to store ghosts

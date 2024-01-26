@@ -261,16 +261,16 @@
 	for(var/perk in perks)
 		REMOVE_TRAIT(H, perk, ROUNDSTART_TRAIT)
 
-/datum/quirk/healing_factor
-	name = "Healing Factor"
-	desc = "Your body possesses a differentiated reconstutitive ability, allowing you to slowly heal from injuries. Note, however, that critical injuries, wounds or genetic damage will still require medical attention."
+/datum/quirk/restorative_metabolism
+	name = "Restorative Metabolism"
+	desc = "Your body possesses a differentiated reconstutitive ability, allowing you to slowly recover from injuries. Note, however, that critical injuries, wounds or genetic damage will still require medical attention."
 	value = 3
-	mob_trait = TRAIT_HEALING_FACTOR
-	gain_text = span_notice("You feel a surge of reconstutitive vitality coursing through your body.")
+	mob_trait = TRAIT_RESTORATIVE_METABOLISM
+	gain_text = span_notice("You feel a surge of reconstutitive vitality coursing through your body...")
 	lose_text = span_notice("You sense your enhanced reconstutitive ability fading away...")
 	processing_quirk = TRUE
 
-/datum/quirk/healing_factor/on_process()
+/datum/quirk/restorative_metabolism/on_process()
 	. = ..()
 	var/mob/living/carbon/human/H = quirk_holder
 

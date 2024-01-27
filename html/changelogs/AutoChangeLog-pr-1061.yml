@@ -1,0 +1,9 @@
+author: ariaworld
+delete-after: true
+changes:
+  - rscadd: Unicode characters compatibility for books. (Write in non-ASCII characters,
+      for example other languages).
+  - bugfix: Books now showing apostrophes and other characters correctly (They'd break
+      and show &apos, for example).
+  - rscadd: An important sanitization check for the DNA Console.
+  - tweak: Books now have 10 extra characters available for their Title.

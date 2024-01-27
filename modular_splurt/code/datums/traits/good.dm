@@ -514,7 +514,7 @@
 
 /datum/quirk/breathless
 	name = "Breathless"
-	desc = "Whether due to genetic engineering, technology, or bluespace magic, you no longer require air to function. This also means that administering life-saving manuevers such as CPR is now impossible."
+	desc = "Whether due to genetic engineering, technology, or bluespace magic, you no longer require air to function. This also means that administering life-saving manuevers such as CPR would be impossible."
 	value = 3
 	medical_record_text = "Patient's biology demonstrates no need for breathing."
 	gain_text = span_notice("You no longer need to breathe.")

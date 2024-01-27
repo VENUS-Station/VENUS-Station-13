@@ -52,23 +52,21 @@
 
 /obj/structure/sauna_oven/attackby(obj/item/used_item, mob/user)
 	if(used_item.tool_behaviour == TOOL_SCREWDRIVER)
-		if(user.a_intent == INTENT_HELP)
-			balloon_alert(user, "Disassembling...")
-			if(used_item.use_tool(src, user, 60, volume = 50))
-				new /obj/item/stack/sheet/mineral/wood(get_turf(src), 30)
-				qdel(src)
-				return // Prevent the default attack behavior
+		balloon_alert(user, "Disassembling...")
+		if(used_item.use_tool(src, user, 60, volume = 50))
+			new /obj/item/stack/sheet/mineral/wood(get_turf(src), 30)
+			qdel(src)
+		return // Prevent the default attack behavior
 
 	else if(used_item.tool_behaviour == TOOL_WRENCH)
-		if(user.a_intent == INTENT_HELP)
-			if(anchored)
-				balloon_alert(user, "Unanchoring...")
-			else
-				balloon_alert(user, "Anchoring...")	
-			if(used_item.use_tool(src, user, 40, volume=50))
-				anchored = !anchored
-				balloon_alert(user, "You [anchored ? "anchor" : "unanchor"] the oven [anchored ? "to" : "from"] the ground.")
-				return // Prevent the default attack behavior
+		if(anchored)
+			balloon_alert(user, "Unanchoring...")
+		else
+			balloon_alert(user, "Anchoring...")	
+		if(used_item.use_tool(src, user, 40, volume=50))
+			anchored = !anchored
+			balloon_alert(user, "You [anchored ? "anchor" : "unanchor"] the oven [anchored ? "to" : "from"] the ground.")
+		return // Prevent the default attack behavior
 
 	else if(istype(used_item, /obj/item/reagent_containers))
 		var/obj/item/reagent_containers/reagent_container = used_item
@@ -86,16 +84,15 @@
 
 	else if(istype(used_item, /obj/item/stack/sheet/mineral/wood))
 		var/obj/item/stack/sheet/mineral/wood/wood = used_item
-		if(user.a_intent == INTENT_HELP)
-			if(fuel_amount > SAUNA_MAXIMUM_FUEL)
-				balloon_alert(user, "No room left in the firebox!")
-				return
-			fuel_amount += SAUNA_WOOD_FUEL * wood.amount
-			wood.use(wood.amount)
-			user.visible_message(span_notice("[user] throws wood chips \
-				into the firebox of [src]."), span_notice("You throw wood chips \
-				into the firebox of [src]."))
-			return // Prevent the default attack behavior
+		if(fuel_amount > SAUNA_MAXIMUM_FUEL)
+			balloon_alert(user, "No room left in the firebox!")
+			return
+		fuel_amount += SAUNA_WOOD_FUEL * wood.amount
+		wood.use(wood.amount)
+		user.visible_message(span_notice("[user] throws wood chips \
+			into the firebox of [src]."), span_notice("You throw wood chips \
+			into the firebox of [src]."))
+		return // Prevent the default attack behavior
 
 	else if(istype(used_item, /obj/item/paper_bin))
 		var/obj/item/paper_bin/paper_bin = used_item
@@ -113,7 +110,8 @@
 		fuel_amount += SAUNA_PAPER_FUEL
 		qdel(used_item)
 		return // Prevent the default attack behavior
-	return ..()
+	else
+		return ..()
 
 /obj/structure/sauna_oven/process()
 	if(water_amount)

@@ -167,7 +167,7 @@
 
 /obj/structure/reagent_dispensers/fueltank/bullet_act(obj/item/projectile/hitting_projectile)
 	if(hitting_projectile.damage > 0 && ((hitting_projectile.damage_type == BURN) || (hitting_projectile.damage_type == BRUTE)))
-		var/boom_message = "[ADMIN_LOOKUPFLW(P.firer)] triggered a fueltank explosion via projectile."
+		var/boom_message = "[ADMIN_LOOKUPFLW(hitting_projectile.firer)] triggered a fueltank explosion via projectile."
 		GLOB.bombers += boom_message
 		message_admins(boom_message)
 		hitting_projectile.firer.log_message("triggered a fueltank explosion via projectile.", LOG_ATTACK)

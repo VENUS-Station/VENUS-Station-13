@@ -1389,3 +1389,11 @@
 	message = "seems confused."
 	emote_sound = 'modular_splurt/sound/voice/nani.ogg'
 	emote_cooldown = 0.5 SECONDS
+
+/datum/emote/living/audio/canonevent
+	key = "2099"
+	key_third_person = "canons"
+	message = "thinks this is a canon event."
+	emote_sound = 'modular_splurt/sound/voice/canon_event.ogg'
+	emote_cooldown = 5.0 SECONDS
+	emote_volume = 27

@@ -1943,7 +1943,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 				if(user == target)
 					to_chat(user, span_alert("Your butt is still [pick("rippling","jiggling","sloshing","clapping","wobbling")] about way too much to get a good smack!"))
 				else
-					to_chat(user, span_alert("[target]'s big [pick("rippling","jiggling","sloshing","clapping","wobbling")] butt is still [pick("rippling","jiggling","sloshing","clapping","wobbling")] about way too much to get a good smack!"))
+					to_chat(user, span_alert("[target]'s big butt is still [pick("rippling","jiggling","sloshing","clapping","wobbling")] about way too much to get a good smack!"))
 			else
 				COOLDOWN_START(src, ass, 5 SECONDS)
 				if(user == target)

@@ -98,3 +98,9 @@
       and show &apos, for example).
   - rscadd: An important sanitization check for the DNA Console.
   - tweak: Books now have 10 extra characters available for their Title.
+2024-01-29:
+  ariaworld:
+  - bugfix: Fixes chastity cages rendering above clothing, metal not jingling, runtiming
+      and erroring, and e-stim chastity cages being utterly broken. This is what happens
+      when people don't test their code. (Goku vs SPLURT | Ep. 1) Thanks to Fabian272
+      for bringing this up and motivation <3

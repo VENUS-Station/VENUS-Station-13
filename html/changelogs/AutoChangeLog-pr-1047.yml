@@ -1,7 +1,0 @@
-author: ariaworld
-delete-after: true
-changes:
-  - bugfix: Fixes chastity cages rendering above clothing, metal not jingling, runtiming
-      and erroring, and e-stim chastity cages being utterly broken. This is what happens
-      when people don't test their code. (Goku vs SPLURT | Ep. 1) Thanks to Fabian272
-      for bringing this up and motivation <3

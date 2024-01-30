@@ -979,7 +979,6 @@
 	id = "construct_shell"
 	build_type = MECHFAB
 	materials = list(/datum/material/iron = 12000, /datum/material/glass = 350, /datum/material/titanium = 6000, /datum/material/diamond= 4000)
-	reagents_list = list(/datum/reagent/exaltedhemogen = 100)
 	construction_time = 150
 	build_path = /obj/structure/constructshell
 	category = list("Misc")

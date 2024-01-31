@@ -283,6 +283,14 @@
 	emote_sound = 'modular_splurt/sound/voice/caw.ogg'
 	emote_cooldown = 0.35 SECONDS
 
+/datum/emote/living/audio/mew
+	key = "mew"
+	key_third_person = "mews"
+	message = "mews hysterically!"
+	message_mime = "makes a cat face!"
+	emote_sound = 'modular_splurt/sound/voice/meow_meme.ogg'
+	emote_cooldown = 1 SECONDS
+
 /datum/emote/living/burp/run_emote(mob/user, params, type_override, intentional)
 	. = ..()
 	var/list/burp_noises = list(

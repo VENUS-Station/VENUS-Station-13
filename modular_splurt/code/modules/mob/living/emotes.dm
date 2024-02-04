@@ -1137,6 +1137,13 @@
 	emote_volume = 35
 	emote_cooldown = 0.4 SECONDS
 
+/datum/emote/living/audio/whatthehell/right
+	key = "wth2"
+	key_third_person = "wths2"
+	emote_sound = 'modular_splurt/sound/voice/gachi/wth2.ogg'
+	emote_volume = 100
+	emote_cooldown = 1.0 SECONDS
+
 /datum/emote/living/audio/pardon
 	key = "sorry"
 	key_third_person = "sorrys"
@@ -1164,6 +1171,22 @@
 	emote_sound = pick('modular_splurt/sound/voice/gachi/fockyou1.ogg', 'modular_splurt/sound/voice/gachi/fockyou2.ogg')
 	. = ..()
 
+/datum/emote/living/audio/letsgo
+	key = "go"
+	key_third_person = "goes"
+	message = "yells, \"Come on, lets go!\""
+	message_mime = "motions moving forward!"
+	emote_sound = 'modular_splurt/sound/voice/gachi/go.ogg'
+	emote_cooldown = 1.6 SECONDS
+
+/datum/emote/living/audio/chuckle2
+	key = "chuckle2"
+	key_third_person = "chuckles2"
+	message = "chuckles."
+	message_mime = "chuckles silently."
+	emote_sound = 'modular_splurt/sound/voice/gachi/chuckle.ogg'
+	emote_cooldown = 1.01 SECONDS
+
 /datum/emote/living/audio/fockslaves
 	key = "slaves"
 	key_third_person = "slaves"
@@ -1188,6 +1211,15 @@
 	message_mime = "stares at the potential boss of this place!"
 	emote_sound = 'modular_splurt/sound/voice/gachi/boss.ogg'
 	emote_cooldown = 1.68 SECONDS
+
+/datum/emote/living/audio/attention
+	key = "attention"
+	key_third_person = "attentions"
+	message = "demands an attention!"
+	message_mime = "seems to be looking for an attention."
+	emote_volume = 100
+	emote_sound = 'modular_splurt/sound/voice/gachi/attention.ogg'
+	emote_cooldown = 1.36 SECONDS
 
 /datum/emote/living/audio/ah
 	key = "ah"

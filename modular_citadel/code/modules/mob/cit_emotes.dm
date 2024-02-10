@@ -25,10 +25,6 @@
 	var/miming = user.mind ? user.mind.miming : 0
 	if(!user.is_muzzled() && !miming)
 		user.nextsoundemote = world.time + 7
-		if(iscatperson(user))	// Catpeople come first for they test positive for ishuman. Thanks Citadel.
-			sound = pick('modular_splurt/sound/voice/catpeople/cat_scream1.ogg',
-			'modular_splurt/sound/voice/catpeople/cat_scream2.ogg',
-			'modular_splurt/sound/voice/catpeople/cat_scream3.ogg') // Sound files from Nyanotrasen (https://github.com/Nyanotrasen/Nyanotrasen/)
 		if(issilicon(user))
 			sound = 'modular_citadel/sound/voice/scream_silicon.ogg'
 			if(iscyborg(user))
@@ -53,6 +49,10 @@
 					sound = pick('modular_citadel/sound/voice/scream_jelly_m1.ogg', 'modular_citadel/sound/voice/scream_jelly_m2.ogg')
 			if(is_species(user, /datum/species/android) || is_species(user, /datum/species/synth) || is_species(user, /datum/species/ipc))
 				sound = 'modular_citadel/sound/voice/scream_silicon.ogg'
+			if(is_species(user, /datum/species/felinid))
+				sound = pick('modular_splurt/sound/voice/catpeople/cat_scream1.ogg',
+				'modular_splurt/sound/voice/catpeople/cat_scream2.ogg',
+				'modular_splurt/sound/voice/catpeople/cat_scream3.ogg') // Sound files from Nyanotrasen (https://github.com/Nyanotrasen/Nyanotrasen/)
 			if(is_species(user, /datum/species/lizard))
 				sound = 'modular_citadel/sound/voice/scream_lizard.ogg'
 			if(is_species(user, /datum/species/skeleton))

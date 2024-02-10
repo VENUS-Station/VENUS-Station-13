@@ -1443,7 +1443,7 @@
 	key_third_person = "meows"
 	message = "meows!"
 	emote_sound = 'modular_splurt/sound/voice/catpeople/cat_meow1.ogg'
-	emote_cooldown = 0.5 SECONDS // the longest audio is 1 second but who gives a fuck mrrp mrrp meow
+	emote_cooldown = 0.8 SECONDS // the longest audio is 1 second but who gives a fuck mrrp mrrp meow
 	emote_pitch_variance = FALSE // why would you
 
 /datum/emote/living/audio/meow/run_emote(mob/user, params)

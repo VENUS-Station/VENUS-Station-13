@@ -50,7 +50,6 @@
 			if(is_species(user, /datum/species/android) || is_species(user, /datum/species/synth) || is_species(user, /datum/species/ipc))
 				sound = 'modular_citadel/sound/voice/scream_silicon.ogg'
 			if(is_species(user, /datum/species/human/felinid))
-				emote_pitch_variance = FALSE
 				sound = pick('modular_splurt/sound/voice/catpeople/cat_scream1.ogg',
 				'modular_splurt/sound/voice/catpeople/cat_scream2.ogg',
 				'modular_splurt/sound/voice/catpeople/cat_scream3.ogg') // Sound files from Nyanotrasen (https://github.com/Nyanotrasen/Nyanotrasen/)

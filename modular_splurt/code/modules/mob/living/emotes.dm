@@ -1437,3 +1437,15 @@
 	emote_sound = 'modular_splurt/sound/voice/canon_event.ogg'
 	emote_cooldown = 5.0 SECONDS
 	emote_volume = 27
+
+/datum/emote/living/audio/meow
+	key = "meow"
+	key_third_person = "meows"
+	message = "meows!"
+	emote_sound = 'modular_splurt/sound/voice/catpeople/cat_meow1.ogg'
+	emote_cooldown = 1 SECONDS // the longest audio is 1 second so mrrp mrrp meow away
+	emote_pitch_variance = FALSE // why would you
+
+/datum/emote/living/audio/meow/run_emote(mob/user, params)
+	emote_sound = pick('modular_splurt/sound/voice/catpeople/cat_meow1.ogg', 'modular_splurt/sound/voice/catpeople/cat_meow2.ogg', 'modular_splurt/sound/voice/catpeople/cat_meow3.ogg', 'modular_splurt/sound/voice/catpeople/cat_meow4.ogg', 'modular_splurt/sound/voice/catpeople/cat_meow5.ogg') // Credit to Nyanotrasen (https://github.com/Nyanotrasen/Nyanotrasen)
+	. = ..()

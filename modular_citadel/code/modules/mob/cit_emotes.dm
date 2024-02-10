@@ -25,6 +25,10 @@
 	var/miming = user.mind ? user.mind.miming : 0
 	if(!user.is_muzzled() && !miming)
 		user.nextsoundemote = world.time + 7
+		if(iscatperson(user))	// Catpeople come first for they test positive for ishuman. Thanks Citadel.
+			sound = pick('modular_splurt/sound/voice/catpeople/cat_scream1.ogg',
+			'modular_splurt/sound/voice/catpeople/cat_scream2.ogg',
+			'modular_splurt/sound/voice/catpeople/cat_scream3.ogg') // Sound files from Nyanotrasen (https://github.com/Nyanotrasen/Nyanotrasen/)
 		if(issilicon(user))
 			sound = 'modular_citadel/sound/voice/scream_silicon.ogg'
 			if(iscyborg(user))
@@ -152,23 +156,6 @@
 		return
 	user.nextsoundemote = world.time + 7
 	playsound(user, 'modular_citadel/sound/voice/hiss.ogg', 50, 1, -1)
-
-/datum/emote/living/meow
-	key = "meow"
-	key_third_person = "mrowls"
-	message = "mrowls!"
-	emote_type = EMOTE_AUDIBLE
-	muzzle_ignore = FALSE
-	restraint_check = FALSE
-
-/datum/emote/living/meow/run_emote(mob/living/user, params)
-	. = ..()
-	if(!.)
-		return
-	if(user.nextsoundemote >= world.time)
-		return
-	user.nextsoundemote = world.time + 7
-	playsound(user, 'modular_citadel/sound/voice/meow1.ogg', 50, 1, -1)
 
 /datum/emote/living/purr
 	key = "purr"

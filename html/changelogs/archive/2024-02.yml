@@ -14,3 +14,5 @@
   ariaworld:
   - rscdel: Old lavaland_old.dmm file (unused, bad practice), rename lavaland_novaya.dmm
       to Lavaland.dmm, as it includes Xenoarcheology on it's 2nd Z-Level.
+  - refactor: Welder tank explosion code, to stop infinitely-looping null explosions
+      and therefore spam-log for admins.

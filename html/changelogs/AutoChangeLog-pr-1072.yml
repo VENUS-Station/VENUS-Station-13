@@ -1,5 +1,0 @@
-author: ariaworld
-delete-after: true
-changes:
-  - rscdel: Old lavaland_old.dmm file (unused, bad practice), rename lavaland_novaya.dmm
-      to Lavaland.dmm, as it includes Xenoarcheology on it's 2nd Z-Level.

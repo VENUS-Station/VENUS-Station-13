@@ -4428,4 +4428,3 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 #undef DEFAULT_SLOT_AMT
 #undef HANDS_SLOT_AMT
 #undef BACKPACK_SLOT_AMT
-

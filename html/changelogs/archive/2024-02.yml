@@ -16,3 +16,8 @@
       to Lavaland.dmm, as it includes Xenoarcheology on it's 2nd Z-Level.
   - refactor: Welder tank explosion code, to stop infinitely-looping null explosions
       and therefore spam-log for admins.
+2024-02-16:
+  rin1l1:
+  - rscadd: Fermi expansion chems (breast/penis/butt) to universal genital fluid whitelist
+  - rscadd: Fermi reduction chems to universal genital fluid whitelist
+  - rscadd: AphrodisiacPlus (Hexacrocin) to universal genital fluid whitelist

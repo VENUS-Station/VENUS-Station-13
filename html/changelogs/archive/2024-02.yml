@@ -17,6 +17,8 @@
   - refactor: Welder tank explosion code, to stop infinitely-looping null explosions
       and therefore spam-log for admins.
 2024-02-16:
+  ariaworld:
+  - tweak: Stop Cryptocurrency miners from beeping every second.
   rin1l1:
   - rscadd: Fermi expansion chems (breast/penis/butt) to universal genital fluid whitelist
   - rscadd: Fermi reduction chems to universal genital fluid whitelist

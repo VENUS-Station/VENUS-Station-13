@@ -16,6 +16,7 @@
 	var/datum/track/selectedtrack = null
 	var/list/queuedplaylist = list()
 	var/queuecooldown //This var exists solely to prevent accidental repeats of John Mulaney's 'What's New Pussycat?' incident. Intentional, however......
+	var/area_limited = FALSE //SPLURT ADDITION: variable to let the jukebox only be hearable in the specific area it's located.
 
 /obj/machinery/jukebox/disco
 	name = "radiant dance machine mark IV"
@@ -186,7 +187,7 @@
 	if(playing || !queuedplaylist.len)
 		return FALSE
 	playing = queuedplaylist[1]
-	var/jukeboxslottotake = SSjukeboxes.addjukebox(src, playing, volume/35)
+	var/jukeboxslottotake = SSjukeboxes.addjukebox(src, playing, volume/35, area_limited) //SPLURT EDIT: area_limited
 	if(jukeboxslottotake)
 		active = TRUE
 		update_icon()

@@ -14,7 +14,7 @@
 	power_light = FALSE
 	requires_power = TRUE
 	ambientsounds = AWAY_MISSION
-	area_flags = UNIQUE_AREA | NO_ALERTS
+	area_flags = UNIQUE_AREA | NO_ALERTS | CULT_PERMITTED | CULTMAGIC_BYPASS
 	outdoors = FALSE
 
 /area/awaymission/complex/exterior
@@ -290,7 +290,7 @@
 /obj/item/paper/fluff/awaymissions/complex/madlogistician
 	name = "Security Notice - Theft"
 	info = {"Logistician Albert Terrace here, of the mining camp south of the main station. I’d like to file a complaint and/or request a formal investigation as to the amount of equipment and material that’s been lost recently. On a near daily basis, crates of highly valuable research material and some resources have been late to their scheduled delivery, or outright lost in transit!
-		There is ONE, SINGULAR, ROUTE. There is ONE ROAD between every single substation in this damned place! There is no way in hell these miners and research staff are getting LOST. I’ve even heard the absolutely ASININE excuse of being driven off by bears. BEARS! Every single miner in this facility has the capability and equipment to kill a few BEARS.<br>
+		There is ONE, SINGULAR, ROUTE. There is ONE ROAD between every single substation in this damned place! There is no way in hell these miners and research staff are getting LOST. We've even put those lamp signs up! I’ve even heard the absolutely ASININE excuse of being driven off by bears. BEARS! Every single miner in this facility has the capability and equipment to kill a few BEARS.<br>
 		90% of every shipment is sent by miners, or a team of miners and researchers. I am saddened to say I am not certain as to who specifically is continually doing this, as my shipment data doesn’t include names of the package handlers. I have no idea what these staff have to gain from smuggling ores and research data given how ALL of our supply shuttles land on the exterior grounds under heavy watch!<br><br>
 		Not only this, these continuous missteps have gotten me in hot water with the Quartermaster, when I have continuously ensured that every piece of documentation was correct, and every shipment had LEFT on time! It is not my responsibility to babysit grown adults who clearly cannot be trusted to hold a pickaxe right-side-up, let alone move a crate a mile down the road!<br><br>
 		I swear, if I hear of ONE more lost shipment, I’m tearing out the alcohol from these reward vendors with my bare hands. The withdrawal would kill them easier than I could.<br><br>
@@ -370,6 +370,8 @@
 	desc = "A calm-headed commander of the local cult forces. While clearly hostile, their demeanor is surprisingly neutral to you."
 	maxHealth = 200
 	health = 200
+	melee_damage_lower = 30
+	melee_damage_upper = 15
 	speak_chance = 15
 
 /mob/living/simple_animal/hostile/cultist_remnant/commander/clock

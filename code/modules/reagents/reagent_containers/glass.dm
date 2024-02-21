@@ -59,13 +59,18 @@
 					user.visible_message("<span class='notice'>[user] swallows a gulp of [src].</span>", \
 						"<span class='notice'>You swallow a gulp of [src].</span>")
 			else
-				M.visible_message("<span class='danger'>[user] attempts to feed the contents of [src] to [M].</span>", "<span class='userdanger'>[user] attempts to feed the contents of [src] to [M].</span>")
+				M.visible_message("<span class='danger'>[user] attempts to feed something to [M].</span>", \
+							"<span class='userdanger'>[user] attempts to feed something to you.</span>")
+				log_combat(user, M, "is attempting to feed", reagents.log_list())
 				if(!do_mob(user, M))
 					return
 				if(!reagents || !reagents.total_volume)
 					return // The drink might be empty after the delay, such as by spam-feeding
-				M.visible_message("<span class='danger'>[user] feeds the contents of [src] to [M].</span>", "<span class='userdanger'>[user] feeds the contents of [src] to [M].</span>")
+				var/turf/UT = get_turf(user)		// telekenesis memes
+				var/turf/MT = get_turf(M)
+				M.visible_message("<span class='danger'>[user] feeds something to [M].</span>", "<span class='userdanger'>[user] feeds something to you.</span>")
 				log_combat(user, M, "fed", reagents.log_list())
+				log_reagent("INGESTION: FED BY: [key_name(user)] (loc [user.loc] at [AREACOORD(UT)]) -> [key_name(M)] (loc [M.loc] at [AREACOORD(MT)]) - [reagents.log_list()]")
 			var/fraction = min(gulp_amount/reagents.total_volume, 1)
 			reagents.reaction(M, INGEST, fraction)
 			reagents.trans_to(M, gulp_amount, log = TRUE)

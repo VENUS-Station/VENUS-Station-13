@@ -23,14 +23,14 @@
 /obj/item/reagent_containers/food/drinks/attack(mob/living/M, mob/user, def_zone)
 	if(!reagents || !reagents.total_volume)
 		to_chat(user, "<span class='warning'>[src] is empty!</span>")
-		return FALSE
+		return
 
 	if(!canconsume(M, user))
-		return FALSE
+		return
 
 	if (!is_drainable())
 		to_chat(user, "<span class='warning'>[src]'s lid hasn't been opened!</span>")
-		return FALSE
+		return
 
 	var/gulp_amount = gulp_size
 	if(M == user)

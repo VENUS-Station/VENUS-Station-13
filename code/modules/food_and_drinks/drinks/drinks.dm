@@ -49,8 +49,7 @@
 				"<span class='notice'>You chug [src].</span>")
 			beingChugged = FALSE
 		else
-			user.visible_message("<span class='notice'>[user] swallows a gulp of [src].</span>", \
-				"<span class='notice'>You swallow a gulp of [src].</span>")
+			to_chat(user, "<span class='notice'>You swallow a gulp of [src].</span>")
 	else
 		M.visible_message("<span class='danger'>[user] attempts to feed the contents of [src] to [M].</span>", "<span class='userdanger'>[user] attempts to feed the contents of [src] to [M].</span>")
 		if(!do_mob(user, M))

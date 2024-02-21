@@ -56,8 +56,9 @@
 						span_notice("You chug [src]."))
 					beingChugged = FALSE
 				else
-					user.visible_message("<span class='notice'>[user] swallows a gulp of [src].</span>", \
-						"<span class='notice'>You swallow a gulp of [src].</span>")
+					var/turf/T = get_turf(user)
+					to_chat(user, "<span class='notice'>You swallow a gulp of [src].</span>")
+					log_reagent("INGESTION: SELF: [key_name(user)] (loc [user.loc] at [AREACOORD(T)]) - [reagents.log_list()]")
 			else
 				M.visible_message("<span class='danger'>[user] attempts to feed something to [M].</span>", \
 							"<span class='userdanger'>[user] attempts to feed something to you.</span>")

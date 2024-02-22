@@ -1117,6 +1117,11 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 			else
 				qdel(target)
 
+/obj/item/proc/can_trigger_gun(mob/living/user)
+	if(!user.can_use_guns(src))
+		return FALSE
+	return TRUE
+
 /obj/item/circlegame
 	name = "circled hand"
 	desc = "If somebody looks at this while it's below your waist, you get to bop them."
@@ -1240,10 +1245,6 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	"<span class='notice'>You slap [M]!</span>",\
 	"<span class='hear'>You hear a slap.</span>")
 	return
-/obj/item/proc/can_trigger_gun(mob/living/user)
-	if(!user.can_use_guns(src))
-		return FALSE
-	return TRUE
 
 /obj/item/slapper/on_offered(mob/living/carbon/offerer)
 	. = TRUE
@@ -1358,6 +1359,135 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	team_to_use = owner_gang_datum.my_gang
 	attempt_join_gang(taker)
 	qdel(src)
+
+/obj/item/hand_item/kisser
+	name = "kiss"
+	desc = "I want you all to know, everyone and anyone, to seal it with a kiss."
+	icon = 'icons/mob/animal.dmi'
+	icon_state = "heart"
+	/// The kind of projectile this version of the kiss blower fires
+	var/kiss_type = /obj/item/projectile/kiss
+	/// TRUE if the user was aiming anywhere but the mouth when they offer the kiss, if it's offered
+	var/cheek_kiss
+
+/obj/item/hand_item/kisser/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
+	. = ..()
+	// . |= AFTERATTACK_PROCESSED_ITEM
+	/*
+	if(HAS_TRAIT(user, TRAIT_GARLIC_BREATH))
+		kiss_type = /obj/projectile/kiss/french
+
+	if(HAS_TRAIT(user, TRAIT_CHEF_KISS))
+		kiss_type = /obj/projectile/kiss/chef
+	*/
+
+	var/obj/item/projectile/blown_kiss = new kiss_type(get_turf(user))
+	user.visible_message("<b>[user]</b> blows \a [blown_kiss] at [target]!", span_notice("You blow \a [blown_kiss] at [target]!"))
+
+	//Shooting Code:
+	blown_kiss.original = target
+	blown_kiss.fired_from = user
+	blown_kiss.firer = user // don't hit ourself that would be really annoying
+	blown_kiss.impacted = list(user = TRUE) // just to make sure we don't hit the wearer
+	blown_kiss.preparePixelProjectile(target, user)
+	blown_kiss.fire()
+	qdel(src)
+
+/obj/item/hand_item/kisser/death
+	name = "kiss of death"
+	desc = "If looks could kill, they'd be this."
+	color = COLOR_BLACK
+	kiss_type = /obj/item/projectile/kiss/death
+
+/obj/item/projectile/kiss
+	name = "kiss"
+	icon = 'icons/mob/animal.dmi'
+	icon_state = "heart"
+	hitsound = 'sound/effects/kiss.ogg'
+	hitsound_wall = 'sound/effects/kiss.ogg'
+	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE
+	damage_type = BRUTE
+	damage = 0
+	nodamage = TRUE // love can't actually hurt you
+	armour_penetration = 100 // but if it could, it would cut through even the thickest plate
+	flag = MAGIC // and most importantly, love is magic~
+
+/obj/item/projectile/kiss/fire(angle, atom/direct_target)
+	if(firer)
+		name = "[name] blown by [firer]"
+	return ..()
+
+/obj/item/projectile/kiss/Impact(atom/A)
+	if(damage > 0 || !isliving(A)) // if we do damage or we hit a nonliving thing, we don't have to worry about a harmless hit because we can't wrongly do damage anyway
+		return ..()
+
+	harmless_on_hit(A)
+	qdel(src)
+	return FALSE
+
+/**
+ * To get around shielded modsuits & such being set off by kisses when they shouldn't, we take a page from hallucination projectiles
+ * and simply fake our on hit effects. This lets kisses remain incorporeal without having to make some new trait for this one niche situation.
+ * This fake hit only happens if we can deal damage and if we hit a living thing. Otherwise, we just do normal on hit effects.
+ */
+/obj/item/projectile/kiss/proc/harmless_on_hit(mob/living/living_target)
+	playsound(get_turf(living_target), hitsound, 100, TRUE)
+	if(!suppressed)  // direct
+		living_target.visible_message(span_danger("[living_target] is hit by \a [src]."), span_userdanger("You're hit by \a [src]!"), vision_distance=COMBAT_MESSAGE_RANGE)
+
+	/*
+	living_target.add_mob_memory(/datum/memory/kissed, deuteragonist = firer)
+	living_target.add_mood_event("kiss", /datum/mood_event/kiss, firer, suppressed)
+	if(isliving(firer))
+		var/mob/living/kisser = firer
+		kisser.add_mob_memory(/datum/memory/kissed, protagonist = living_target, deuteragonist = firer) */
+
+	try_fluster(living_target)
+
+/obj/item/projectile/kiss/proc/try_fluster(mob/living/living_target)
+	// people with the social anxiety quirk can get flustered when hit by a kiss
+	if(!HAS_TRAIT(living_target, TRAIT_ANXIOUS) || (living_target.stat > SOFT_CRIT) || living_target.is_blind())
+		return
+
+	if(HAS_TRAIT(living_target, TRAIT_FEARLESS) || prob(50)) // 50% chance for it to apply, also immune while on meds
+		return
+
+		var/other_msg
+		var/self_msg
+		var/roll = rand(1, 3)
+		switch(roll)
+			if(1)
+				other_msg = "stumbles slightly, turning a bright red!"
+				self_msg = "You lose control of your limbs for a moment as your blood rushes to your face, turning it bright red!"
+				living_target.confused += (rand(5, 10))
+			if(2)
+				other_msg = "stammers softly for a moment before choking on something!"
+				self_msg = "You feel your tongue disappear down your throat as you fight to remember how to make words!"
+				addtimer(CALLBACK(living_target, /atom/movable.proc/say, pick("Uhhh...", "O-oh, uhm...", "I- uhhhhh??", "You too!!", "What?")), rand(0.5 SECONDS, 1.5 SECONDS))
+				living_target.stuttering += rand(5, 15)
+			if(3)
+				other_msg = "locks up with a stunned look on [living_target.p_their()] face, staring at [firer ? firer : "the ceiling"]!"
+				self_msg = "Your brain completely fails to process what just happened, leaving you rooted in place staring [firer ? "at [firer]" : "the ceiling"] for what feels like an eternity!"
+				living_target.face_atom(firer)
+				living_target.Stun(rand(3 SECONDS, 8 SECONDS))
+
+		living_target.visible_message("<b>[living_target]</b> [other_msg]", span_userdanger("Whoa! [self_msg]"))
+
+/obj/item/projectile/kiss/death
+	name = "kiss of death"
+	nodamage = FALSE // okay i kinda lied about love not being able to hurt you
+	damage = 15
+	wound_bonus = 0
+	sharpness = SHARP_POINTY
+	color = COLOR_BLACK
+
+/obj/item/projectile/kiss/death/on_hit(atom/target, blocked, pierce_hit)
+	. = ..()
+	if(!iscarbon(target))
+		return
+	var/mob/living/carbon/heartbreakee = target
+	var/obj/item/organ/heart/dont_go_breakin_my_heart = heartbreakee.getorganslot(ORGAN_SLOT_HEART)
+	dont_go_breakin_my_heart.applyOrganDamage(15)
 
 /obj/item/extendohand
 	name = "extendo-hand"

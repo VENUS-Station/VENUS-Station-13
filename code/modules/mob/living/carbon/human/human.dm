@@ -547,6 +547,41 @@
 		if(..())
 			dropItemToGround(I)
 
+/**
+ * Used to update the makeup on a human and apply/remove lipstick traits, then store/unstore them on the head object in case it gets severed
+ **/
+/mob/living/proc/update_lips(new_style, new_color, apply_trait, update = TRUE)
+	return
+
+/mob/living/carbon/human/update_lips(new_style, new_color, apply_trait, update = TRUE)
+	lip_style = new_style
+	lip_color = new_color
+
+	var/obj/item/bodypart/head/hopefully_a_head = get_bodypart(BODY_ZONE_HEAD)
+	REMOVE_TRAITS_IN(src, LIPSTICK_TRAIT)
+	if(hopefully_a_head)
+		hopefully_a_head.stored_lipstick_trait = null
+		hopefully_a_head.lip_style = new_style
+		hopefully_a_head.lip_color = new_color
+	if(new_style && apply_trait)
+		ADD_TRAIT(src, apply_trait, LIPSTICK_TRAIT)
+		hopefully_a_head?.stored_lipstick_trait = apply_trait
+
+	if(update)
+		update_body_parts()
+
+/**
+ * A wrapper for [mob/living/carbon/human/update_lips] that sets the lip style and color to null.
+ **/
+/mob/living/proc/clean_lips()
+	return
+
+/mob/living/carbon/human/clean_lips()
+	if(!lip_style)
+		return FALSE
+	update_lips(null, null, update = TRUE)
+	return TRUE
+
 /mob/living/carbon/human/clean_blood()
 	var/mob/living/carbon/human/H = src
 	if(H.gloves)

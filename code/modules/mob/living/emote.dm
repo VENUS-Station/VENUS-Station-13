@@ -195,6 +195,7 @@
 /datum/emote/living/kiss
 	key = "kiss"
 	key_third_person = "kisses"
+	emote_cooldown = 1 SECONDS
 
 /datum/emote/living/kiss/run_emote(mob/living/user, params, type_override, intentional)
 	. = ..()

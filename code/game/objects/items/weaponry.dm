@@ -1452,26 +1452,26 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	if(HAS_TRAIT(living_target, TRAIT_FEARLESS) || prob(50)) // 50% chance for it to apply, also immune while on meds
 		return
 
-		var/other_msg
-		var/self_msg
-		var/roll = rand(1, 3)
-		switch(roll)
-			if(1)
-				other_msg = "stumbles slightly, turning a bright red!"
-				self_msg = "You lose control of your limbs for a moment as your blood rushes to your face, turning it bright red!"
-				living_target.confused += (rand(5, 10))
-			if(2)
-				other_msg = "stammers softly for a moment before choking on something!"
-				self_msg = "You feel your tongue disappear down your throat as you fight to remember how to make words!"
-				addtimer(CALLBACK(living_target, /atom/movable.proc/say, pick("Uhhh...", "O-oh, uhm...", "I- uhhhhh??", "You too!!", "What?")), rand(0.5 SECONDS, 1.5 SECONDS))
-				living_target.stuttering += rand(5, 15)
-			if(3)
-				other_msg = "locks up with a stunned look on [living_target.p_their()] face, staring at [firer ? firer : "the ceiling"]!"
-				self_msg = "Your brain completely fails to process what just happened, leaving you rooted in place staring [firer ? "at [firer]" : "the ceiling"] for what feels like an eternity!"
-				living_target.face_atom(firer)
-				living_target.Stun(rand(3 SECONDS, 8 SECONDS))
+	var/other_msg
+	var/self_msg
+	var/roll = rand(1, 3)
+	switch(roll)
+		if(1)
+			other_msg = "stumbles slightly, turning a bright red!"
+			self_msg = "You lose control of your limbs for a moment as your blood rushes to your face, turning it bright red!"
+			living_target.confused += (rand(5, 10))
+		if(2)
+			other_msg = "stammers softly for a moment before choking on something!"
+			self_msg = "You feel your tongue disappear down your throat as you fight to remember how to make words!"
+			addtimer(CALLBACK(living_target, /atom/movable.proc/say, pick("Uhhh...", "O-oh, uhm...", "I- uhhhhh??", "You too!!", "What?")), rand(0.5 SECONDS, 1.5 SECONDS))
+			living_target.stuttering += rand(5, 15)
+		if(3)
+			other_msg = "locks up with a stunned look on [living_target.p_their()] face, staring at [firer ? firer : "the ceiling"]!"
+			self_msg = "Your brain completely fails to process what just happened, leaving you rooted in place staring [firer ? "at [firer]" : "the ceiling"] for what feels like an eternity!"
+			living_target.face_atom(firer)
+			living_target.Stun(rand(3 SECONDS, 8 SECONDS))
 
-		living_target.visible_message("<b>[living_target]</b> [other_msg]", span_userdanger("Whoa! [self_msg]"))
+	living_target.visible_message("<b>[living_target]</b> [other_msg]", span_userdanger("Whoa! [self_msg]"))
 
 /obj/item/projectile/kiss/death
 	name = "kiss of death"

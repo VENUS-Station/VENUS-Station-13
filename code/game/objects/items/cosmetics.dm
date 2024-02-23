@@ -87,7 +87,7 @@
 	var/mob/living/carbon/human/target = M
 	if(target == user)
 		to_chat(user, span_notice("You wipe off the lipstick with [src]."))
-		target.update_lips(null)
+		target.clean_lips()
 		return
 
 	user.visible_message(span_warning("[user] begins to wipe [target]'s lipstick off with \the [src]."), \
@@ -96,7 +96,7 @@
 		return
 	user.visible_message(span_notice("[user] wipes [target]'s lipstick off with \the [src]."), \
 		span_notice("You wipe off [target]'s lipstick."))
-	target.update_lips(null)
+	target.clean_lips()
 
 /obj/item/razor
 	name = "electric razor"

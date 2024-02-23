@@ -195,7 +195,6 @@
 /datum/emote/living/kiss
 	key = "kiss"
 	key_third_person = "kisses"
-	emote_cooldown = 1 SECONDS
 
 /datum/emote/living/kiss/run_emote(mob/living/user, params, type_override, intentional)
 	. = ..()
@@ -549,7 +548,7 @@
 	. = ..()
 	if(!.)
 		return
-	var/obj/item/circlegame/N = new(user)
+	var/obj/item/hand_item/circlegame/N = new(user)
 	if(user.put_in_hands(N))
 		to_chat(user, "<span class='notice'>You make a circle with your hand.</span>")
 	else
@@ -565,7 +564,7 @@
 	. = ..()
 	if(!.)
 		return
-	var/obj/item/slapper/N = new(user)
+	var/obj/item/hand_item/slapper/N = new(user)
 	if(user.put_in_hands(N))
 		to_chat(user, "<span class='notice'>You ready your slapping hand.</span>")
 	else

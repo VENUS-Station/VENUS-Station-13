@@ -264,7 +264,7 @@
 	//Shooting Code:
 	blown_kiss.original = target
 	blown_kiss.fired_from = user
-	blown_kiss.pixels_per_second = TILES_TO_PIXELS(8) // Speed of blown kiss
+	blown_kiss.pixels_per_second = TILES_TO_PIXELS(7) // Speed of blown kiss
 	blown_kiss.firer = user // don't hit ourself that would be really annoying
 	blown_kiss.impacted = list(user = TRUE) // just to make sure we don't hit the wearer
 	blown_kiss.preparePixelProjectile(target, user)

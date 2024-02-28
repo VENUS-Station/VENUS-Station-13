@@ -56,3 +56,5 @@
 2024-02-28:
   ariaworld:
   - tweak: Updates headshot input box to inform on how to make Discord links work.
+  - rscdel: Removed unused and abandoned Extools from ref-tracking to allow Coders
+      to go through reference tracking with less hurdles.

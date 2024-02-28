@@ -1,5 +1,0 @@
-author: CSDSP
-delete-after: true
-changes:
-  - tweak: Allow custom shuttles to move after round end
-  - tweak: Allow navigation consoles to see gigabeacons in CentCom after round end

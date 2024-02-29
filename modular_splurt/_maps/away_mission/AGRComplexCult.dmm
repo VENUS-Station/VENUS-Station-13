@@ -10838,8 +10838,8 @@
 /turf/open/floor/wood,
 /area/awaymission/complex/miningcamp)
 "juZ" = (
-/obj/machinery/power/smes,
 /obj/structure/cable,
+/obj/machinery/power/smes/magical,
 /turf/open/floor/plating,
 /area/awaymission/complex/gateway)
 "jvg" = (
@@ -23207,11 +23207,11 @@
 /turf/open/floor/plasteel,
 /area/awaymission/complex/security)
 "ufj" = (
-/obj/machinery/power/smes,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /obj/structure/cable,
+/obj/machinery/power/smes/magical,
 /turf/open/floor/plating,
 /area/awaymission/complex/gateway)
 "uft" = (
@@ -29241,7 +29241,7 @@ sFr
 sFr
 mlD
 mjY
-bDO
+jsy
 bDO
 bDO
 mlD
@@ -29754,7 +29754,7 @@ sFr
 sFr
 mlD
 owe
-jGk
+bDO
 bDO
 oFd
 ibf
@@ -31041,7 +31041,7 @@ mlD
 siS
 bDO
 bDO
-jsy
+bDO
 tAm
 anY
 fsY
@@ -31555,7 +31555,7 @@ mlD
 tAm
 bDO
 bDO
-bDO
+jGk
 tAm
 mlD
 nzu

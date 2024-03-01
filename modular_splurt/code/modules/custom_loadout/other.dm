@@ -7,6 +7,7 @@
 	throw_range = 5
 	attack_verb = list("bashed", "whacked", "educated")
 	w_class = WEIGHT_CLASS_TINY
+	var/obj/effect/proc_holder/spell/targeted/lewd_chems/spell = /obj/effect/proc_holder/spell/targeted/lewd_chems
 
 /obj/item/lewd_spellbook/equipped(mob/user, slot, initial)
 	. = ..()
@@ -14,7 +15,7 @@
 		return
 
 	var/mob/living/carbon/human/H = user
-	H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/lewd_chems)
+	H.mind.AddSpell(new spell(H))
 
 /obj/item/lewd_spellbook/dropped(mob/user, silent)
 	. = ..()
@@ -22,4 +23,4 @@
 		return
 
 	var/mob/living/carbon/human/H = user
-	H.mind.RemoveSpell(/obj/effect/proc_holder/spell/targeted/lewd_chems)
+	H.mind.RemoveSpell(spell)

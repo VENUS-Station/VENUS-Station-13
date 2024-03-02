@@ -32,6 +32,7 @@
 	var/banType = "lavaland"
 	var/ghost_usable = TRUE
 	var/skip_reentry_check = FALSE //Skips the ghost role blacklist time for people who ghost/suicide/cryo
+	var/can_load_appearance = FALSE
 
 ///override this to add special spawn conditions to a ghost role
 /obj/effect/mob_spawn/proc/allow_spawn(mob/user, silent = FALSE)
@@ -58,6 +59,13 @@
 	var/ghost_role = alert(latejoinercalling ? "Latejoin as [mob_name]? (This is a ghost role, and as such, it's very likely to be off-station.)" : "Become [mob_name]? (Warning, You can no longer be cloned!)",,"Yes","No")
 	if(ghost_role == "No" || !loc)
 		return
+	var/requested_char = FALSE
+	if(can_load_appearance == TRUE && ispath(mob_type, /mob/living/carbon/human)) // Can't just use if(can_load_appearance), 2 has a different behavior
+		switch(alert(user, "Load currently selected slot?", "Play as your character!", "Yes", "No", "Actually nevermind"))
+			if("Yes")
+				requested_char = TRUE
+			if("Actually nevermind")
+				return
 	if(QDELETED(src) || QDELETED(user))
 		return
 	if(latejoinercalling)
@@ -66,7 +74,7 @@
 			NP.close_spawn_windows()
 			NP.stop_sound_channel(CHANNEL_LOBBYMUSIC)
 	log_game("[key_name(user)] became [mob_name]")
-	create(ckey = user.ckey)
+	create(ckey = user.ckey, load_character = requested_char)
 	return TRUE
 
 /obj/effect/mob_spawn/Initialize(mapload)
@@ -95,7 +103,7 @@
 /obj/effect/mob_spawn/proc/equip(mob/M)
 	return
 
-/obj/effect/mob_spawn/proc/create(ckey, name)
+/obj/effect/mob_spawn/proc/create(ckey, name, load_character)
 	var/mob/living/M = new mob_type(get_turf(src)) //living mobs only
 	if(!random)
 		M.real_name = mob_name ? mob_name : M.name
@@ -113,6 +121,10 @@
 	M.adjustBruteLoss(brute_damage)
 	M.adjustFireLoss(burn_damage)
 	M.color = mob_color
+	if(ishuman(M) && load_character)
+		var/mob/living/carbon/human/H = M
+		var/mob/grab = get_mob_by_ckey(ckey)
+		H.load_client_appearance(grab.client)
 	equip(M)
 
 	if(ckey)
@@ -144,7 +156,6 @@
 			M.mind.assigned_role = assignedrole
 		special(M, name)
 		MM.name = M.real_name
-		M.checkloadappearance()
 	if(uses > 0)
 		uses--
 	if(!permanent && !uses)
@@ -189,7 +200,6 @@
 	var/hair_style
 	var/facial_hair_style
 	var/skin_tone
-	var/canloadappearance = FALSE
 
 /obj/effect/mob_spawn/human/Initialize(mapload)
 	if(ispath(outfit))
@@ -258,10 +268,6 @@
 			W.assignment = id_job
 		W.registered_name = H.real_name
 		W.update_label()
-	if (canloadappearance)
-		H.canloadappearance = TRUE
-	else
-		H.canloadappearance = FALSE
 
 //Instant version - use when spawning corpses during runtime
 /obj/effect/mob_spawn/human/corpse
@@ -283,7 +289,7 @@
 
 //Non-human spawners
 
-/obj/effect/mob_spawn/AICorpse/create(ckey, name) //Creates a corrupted AI
+/obj/effect/mob_spawn/AICorpse/create(ckey, name, load_character) //Creates a corrupted AI
 	var/A = locate(/mob/living/silicon/ai) in loc
 	if(A)
 		return
@@ -303,7 +309,7 @@
 /obj/effect/mob_spawn/slime/equip(mob/living/simple_animal/slime/S)
 	S.colour = mobcolour
 
-/obj/effect/mob_spawn/human/facehugger/create(ckey, name) //Creates a squashed facehugger
+/obj/effect/mob_spawn/human/facehugger/create(ckey, name, load_character) //Creates a squashed facehugger
 	var/obj/item/clothing/mask/facehugger/O = new(src.loc) //variable O is a new facehugger at the location of the landmark
 	O.name = src.name
 	O.Die() //call the facehugger's death proc
@@ -369,6 +375,7 @@
 	short_desc = "You are a space doctor!"
 	assignedrole = "Space Doctor"
 	job_description = "Off-station Doctor"
+	can_load_appearance = TRUE
 
 /obj/effect/mob_spawn/human/doctor/alive/equip(mob/living/carbon/human/H)
 	..()
@@ -427,7 +434,7 @@
 	flavour_text = "Time to mix drinks and change lives. Smoking space drugs makes it easier to understand your patrons' odd dialect."
 	assignedrole = "Space Bartender"
 	id_job = "Bartender"
-	canloadappearance = TRUE
+	can_load_appearance = TRUE
 
 /datum/outfit/spacebartender
 	name = "Space Bartender"
@@ -440,7 +447,7 @@
 
 /obj/effect/mob_spawn/human/beach
 	outfit = /datum/outfit/beachbum
-	canloadappearance = TRUE
+	can_load_appearance = TRUE
 
 /obj/effect/mob_spawn/human/beach/alive
 	death = FALSE
@@ -454,6 +461,7 @@
 	short_desc = "You're a spunky lifeguard!"
 	flavour_text = "It's up to you to make sure nobody drowns or gets eaten by sharks and stuff."
 	assignedrole = "Beach Bum"
+	can_load_appearance = TRUE
 
 /obj/effect/mob_spawn/human/beach/alive/lifeguard
 	flavour_text = "<span class='big bold'>You're a spunky lifeguard!</span><b> It's up to you to make sure nobody drowns or gets eaten by sharks and stuff.</b>"
@@ -462,6 +470,7 @@
 	id_job = "Lifeguard"
 	job_description = "Beach Biodome Lifeguard"
 	uniform = /obj/item/clothing/under/shorts/red
+	can_load_appearance = TRUE
 
 /datum/outfit/beachbum
 	name = "Beach Bum"
@@ -542,6 +551,7 @@
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	short_desc = "You are a Nanotrasen Commander!"
+	can_load_appearance = TRUE
 
 /obj/effect/mob_spawn/human/nanotrasensoldier/alive
 	death = FALSE
@@ -553,7 +563,7 @@
 	icon_state = "sleeper"
 	faction = "nanotrasenprivate"
 	short_desc = "You are a Nanotrasen Private Security Officer!"
-
+	can_load_appearance = TRUE
 
 /////////////////Spooky Undead//////////////////////
 
@@ -637,6 +647,7 @@
 	outfit = /datum/outfit/spacebartender
 	assignedrole = "Space Bar Patron"
 	job_description = "Space Bar Patron"
+	can_load_appearance = TRUE
 
 /obj/effect/mob_spawn/human/alive/space_bar_patron/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
 	var/despawn = alert("Return to cryosleep? (Warning, Your mob will be deleted!)",,"Yes","No")

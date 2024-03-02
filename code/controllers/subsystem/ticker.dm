@@ -250,7 +250,7 @@ SUBSYSTEM_DEF(ticker)
 		mode = null
 		SSjob.ResetOccupations()
 		emergency_swap++
-		return 0
+		return FALSE
 
 	CHECK_TICK
 	//Configure mode and assign player to special mode stuff
@@ -269,7 +269,7 @@ SUBSYSTEM_DEF(ticker)
 			to_chat(world, "<B>Error setting up [GLOB.master_mode].</B> Reverting to pre-game lobby.")
 			SSjob.ResetOccupations()
 			emergency_swap++
-			return 0
+			return FALSE
 	else
 		message_admins("<span class='notice'>DEBUG: Bypassing prestart checks...</span>")
 

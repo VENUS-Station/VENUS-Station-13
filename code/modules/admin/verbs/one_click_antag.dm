@@ -72,10 +72,10 @@
 			H.mind.make_Traitor()
 			candidates.Remove(H)
 
-		return 1
+		return TRUE
 
 
-	return 0
+	return FALSE
 
 
 /datum/admins/proc/makeChangelings()
@@ -104,9 +104,9 @@
 			H.mind.make_Changeling()
 			candidates.Remove(H)
 
-		return 1
+		return TRUE
 
-	return 0
+	return FALSE
 
 /datum/admins/proc/makeRevs()
 
@@ -133,9 +133,9 @@
 			H = pick(candidates)
 			H.mind.make_Rev()
 			candidates.Remove(H)
-		return 1
+		return TRUE
 
-	return 0
+	return FALSE
 
 /datum/admins/proc/makeWizard()
 
@@ -173,9 +173,9 @@
 			H.mind.make_Cultist()
 			candidates.Remove(H)
 
-		return 1
+		return TRUE
 
-	return 0
+	return FALSE
 
 
 /datum/admins/proc/makeClockCult()
@@ -208,9 +208,9 @@
 			SSticker.mode.equip_servant(H)
 			candidates.Remove(H)
 
-		return 1
+		return TRUE
 
-	return 0
+	return FALSE
 
 
 
@@ -238,7 +238,7 @@
 				break
 		//Making sure we have atleast 3 Nuke agents, because less than that is kinda bad
 		if(agentcount < 3)
-			return 0
+			return FALSE
 
 		//Let's find the spawn locations
 		var/leader_chosen = FALSE
@@ -251,9 +251,9 @@
 				nuke_team = N.nuke_team
 			else
 				new_character.mind.add_antag_datum(/datum/antagonist/nukeop,nuke_team)
-		return 1
+		return TRUE
 	else
-		return 0
+		return FALSE
 
 
 //Abductors
@@ -456,12 +456,12 @@
 //Abductors
 /datum/admins/proc/makeAbductorTeam()
 	new /datum/round_event/ghost_role/abductor
-	return 1
+	return TRUE
 
 /datum/admins/proc/makeRevenant()
 	new /datum/round_event/ghost_role/revenant(TRUE, TRUE)
-	return 1
+	return TRUE
 
 /datum/admins/proc/makeQareen()
 	new /datum/round_event/ghost_role/qareen(TRUE, TRUE)
-	return 1
+	return TRUE

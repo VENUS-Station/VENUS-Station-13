@@ -23,14 +23,14 @@
 /obj/item/reagent_containers/food/drinks/attack(mob/living/M, mob/user, def_zone)
 	if(!reagents || !reagents.total_volume)
 		to_chat(user, "<span class='warning'>[src] is empty!</span>")
-		return 0
+		return FALSE
 
 	if(!canconsume(M, user))
-		return 0
+		return FALSE
 
 	if (!is_drainable())
 		to_chat(user, "<span class='warning'>[src]'s lid hasn't been opened!</span>")
-		return 0
+		return FALSE
 
 	var/gulp_amount = gulp_size
 	if(M == user)
@@ -63,7 +63,7 @@
 	reagents.reaction(M, INGEST, fraction)
 	reagents.trans_to(M, gulp_amount, log = TRUE)
 	playsound(M.loc,'sound/items/drink.ogg', rand(10,50), 1)
-	return 1
+	return TRUE
 
 /obj/item/reagent_containers/food/drinks/CheckAttackCooldown(mob/user, atom/target)
 	var/fast = HAS_TRAIT(user, TRAIT_VORACIOUS) && (user == target)

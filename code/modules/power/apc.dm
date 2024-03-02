@@ -861,7 +861,7 @@
 
 /obj/machinery/power/apc/run_obj_armor(damage_amount, damage_type, damage_flag = 0, attack_dir)
 	if(damage_flag == MELEE && damage_amount < 10 && (!(stat & BROKEN) || malfai))
-		return 0
+		return FALSE
 	. = ..()
 
 
@@ -1345,7 +1345,7 @@
 	if(terminal)
 		return terminal.surplus()
 	else
-		return 0
+		return FALSE
 
 /obj/machinery/power/apc/add_load(amount)
 	if(terminal && terminal.powernet)
@@ -1355,7 +1355,7 @@
 	if(terminal)
 		return terminal.avail(amount)
 	else
-		return 0
+		return FALSE
 
 /obj/machinery/power/apc/process()
 	if(icon_update_needed)

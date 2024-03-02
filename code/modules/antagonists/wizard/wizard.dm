@@ -31,9 +31,9 @@
 	if(move_to_lair)
 		send_to_lair()
 	var/mob/living/carbon/human/H = owner.current
-	H.canloadappearance = TRUE
-	H.checkloadappearance()
-	. = ..()
+	var/load_character = alert(H.client, "Load currently selected slot?", "Play as your character!", "Yes", "No"))
+	if(load_character == "Yes")
+		H.load_client_appearance(H.client)
 	if(allow_rename)
 		rename_wizard()
 

@@ -487,6 +487,8 @@
 "Xj" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/structure/flora/ausbushes/ppflowers,
+/obj/item/storage/fancy/heart_box,
+/obj/item/paper/fluff/hilbertshotel/welcomeletter,
 /turf/open/floor/grass/fairy/purple,
 /area/hilbertshotel)
 "XX" = (

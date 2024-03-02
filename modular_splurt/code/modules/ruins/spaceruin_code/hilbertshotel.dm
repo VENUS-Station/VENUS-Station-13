@@ -47,3 +47,17 @@
 /datum/map_template/hilbertshotel/apartment/sauna
 	name = "Apartment_sauna"
 	mappath = '_maps/splurt_maps/templates/hilbertshotel_templates/apartment_sauna.dmm'
+
+// Fluff - Misc
+/obj/item/paper/fluff/hilbertshotel/welcomeletter
+	name = "Welcome Letter"
+	info = "Welcome to Hilbert's Hotel!<BR>\
+	<BR>\
+	We're delighted to have you here. Each room in our hotel is an unique pocket dimension. You can choose up to 5 rooms per shift, each room you select will remember your actions and belongings, allowing you to create your own personal space.<BR>\
+	Inside the complementary guest box, you'll find chocolates, each one as unique and delightful as our rooms. Enjoy them as you explore and relax.<BR>\
+	Remember, your rooms are always available for you to return to.<BR>\
+	<BR>\
+	Enjoy your stay∼!<BR>\
+	<BR>\
+	With love,<BR>\
+	Aniya"

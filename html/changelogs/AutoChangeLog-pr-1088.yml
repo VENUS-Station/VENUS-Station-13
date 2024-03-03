@@ -1,7 +1,0 @@
-author: ariaworld
-delete-after: true
-changes:
-  - rscadd: Added chugging to any type of liquid container, not just drinking glasses.
-  - tweak: Removed old citadelcode from reagent container drinking, for more clean
-      and readable code.
-  - bugfix: Fixes a few bugs related to chugging.

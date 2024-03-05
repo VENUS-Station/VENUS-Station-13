@@ -3996,11 +3996,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						features["headshot_link"] = null
 						return
 
-					var/static/link_regex = regex("https://i.gyazo.com|https://media.discordapp.net|https://cdn.discordapp.com|https://media.discordapp.net$") //Do not touch the damn duplicates.
+					var/static/link_regex = regex("https://i.gyazo.com|https://media.discordapp.net|https://cdn.discordapp.com|https://media.discordapp.net$|https://static1.e621.net") //Do not touch the damn duplicates.
 					var/static/end_regex = regex(".jpg|.jpg|.png|.jpeg|.jpeg") //Regex is terrible, don't touch the duplicate extensions
 
 					if(!findtext(usr_input, link_regex, 1, 29))
-						to_chat(usr, span_warning("The link needs to be an unshortened Gyazo or Discordapp link!"))
+						to_chat(usr, span_warning("The link needs to be an unshortened Gyazo, E621, or Discordapp link!"))
 						return
 					if(!findtext(usr_input, end_regex, -8))
 						to_chat(usr, span_warning("You need either \".png\", \".jpg\", or \".jpeg\" in the link!"))

@@ -13,6 +13,16 @@
 	if(partner.get_lust() < 5)
 		partner.set_lust(5)
 
+	//SPLURT EDIT START:
+	// Check if user has TRAIT_KISS_SLUT and increase their lust
+	if(HAS_TRAIT(user, TRAIT_KISS_SLUT))
+		user.handle_post_sex(NORMAL_LUST, null, partner)
+
+	// Check if partner has TRAIT_KISS_SLUT and increase their lust
+	if(HAS_TRAIT(partner, TRAIT_KISS_SLUT))
+		partner.handle_post_sex(NORMAL_LUST, null, user)
+	//SPLURT EDIT END
+
 /datum/interaction/lewd/kiss/display_interaction(mob/living/user, mob/living/partner)
 	if(user.get_lust() >= 3)
 		user.visible_message(span_lewd("\The <b>[user]</b> gives an intense, lingering kiss to \the <b>[partner]</b>."))

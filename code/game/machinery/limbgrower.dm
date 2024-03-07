@@ -492,6 +492,8 @@
 	limbs_id = SPECIES_XENOHYBRID
 	icon_limbs = 'icons/mob/human_parts_greyscale.dmi'
 
+// Splurt Edit: Extra species limbs found in modular_splurt\code\game\machinery\limbgrower.dm
+
 /datum/species/mammal/shadekin
 	limbs_id = SPECIES_SHADEKIN
 	icon_limbs = 'modular_splurt/icons/mob/human_parts_greyscale.dmi'

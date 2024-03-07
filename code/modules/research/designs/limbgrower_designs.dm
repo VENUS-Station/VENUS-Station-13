@@ -223,7 +223,7 @@
 	build_path = /obj/item/organ/genital/butt
 	category = list("initial","human","lizard","fly","insect","plasmaman","mammal","xeno")
 
-// fluids (idk bruh)
+// Splurt Edit: Synthetic semen and female ejaculate
 
 /datum/design/semen
 	name = "Synthetized Semen Uwu"

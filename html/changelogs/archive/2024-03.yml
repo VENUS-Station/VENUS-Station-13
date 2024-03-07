@@ -17,3 +17,9 @@
   - tweak: Removed old citadelcode from reagent container drinking, for more clean
       and readable code.
   - bugfix: Fixes a few bugs related to chugging.
+2024-03-07:
+  BongaTheProto:
+  - rscadd: Added a shark plushie for our donator
+  - rscadd: added the chameleon hat and mask to the donator tier 2 loadout
+  - rscadd: Adds a thicc rouny which behaves like deathclaws
+  - tweak: Ice wolf is now available in the pet capsule

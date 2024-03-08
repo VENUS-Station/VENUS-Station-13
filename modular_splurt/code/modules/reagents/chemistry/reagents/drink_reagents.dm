@@ -35,9 +35,9 @@
 	description = "A dash of a mother's desire in every silken-drop!~"
 	color = "#7b60c4" // rgb(123, 96, 196)
 	quality = DRINK_FANTASTIC
-	taste_description = "It tastes like vivid memories, love, and lucid dirty dreams!~"
+	taste_description = "vivid memories, love, and lucid dirty dreams!~"
 	glass_icon = 'modular_splurt/icons/obj/drinks.dmi'
-	glass_icon_state = "Honeystones Love"
+	glass_icon_state = "honeystones_love"
 	glass_name = "Honeystone's Love"
 	glass_desc = "A dash of a mother's desire in every silken-drop!~"
 
@@ -53,14 +53,9 @@
 	//checks for mindbreaker
 	if(holder.has_reagent(/datum/reagent/toxin/mindbreaker))
 		holder.remove_reagent(/datum/reagent/toxin/mindbreaker, 5)
-	//check for preferences
-	if(!M.client?.prefs.arousable)
-		// Log interaction and return
-		M.log_message("drank [src], but ignored it due to arousal preference.", LOG_EMOTE)
-		return
-
+	//applies horny effect
 	var/mob/living/carbon/human/H = M
-	var/list/genits = H.adjust_arousal(35, "hexacrocin", aphro = TRUE) // just in case.
+	var/list/genits = H.adjust_arousal(35, "hexacrocin", aphro = TRUE)//check for aphrosidiacs preferences
 	for(var/g in genits)
 		var/obj/item/organ/genital/G = g
 		to_chat(M, span_userlove("[G.arousal_verb]!"))

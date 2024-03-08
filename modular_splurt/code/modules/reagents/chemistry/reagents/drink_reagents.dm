@@ -32,18 +32,18 @@
 
 /datum/reagent/consumable/honeystones_love
 	name = "Honeystone's Love"
-	description = "Sample text"
+	description = "A dash of a mother's desire in every silken-drop!~"
 	color = "#7b60c4" // rgb(123, 96, 196)
 	quality = DRINK_FANTASTIC
 	taste_description = "It tastes like vivid memories, love, and lucid dirty dreams!~"
-	glass_icon = 'modular_splurt/icons/obj/Honeystones_Love.dmi'
+	glass_icon = 'modular_splurt/icons/obj/drinks.dmi'
 	glass_icon_state = "Honeystones Love"
 	glass_name = "Honeystone's Love"
 	glass_desc = "A dash of a mother's desire in every silken-drop!~"
 
 /datum/reagent/consumable/honeystones_love/on_mob_life(mob/living/carbon/M)
-	M.emote(pick("giggle"))
-	M.set_drugginess(75)
+	if((prob(min(current_cycle/2,5))))
+		M.emote(pick("giggle","grin"))
 	M.apply_status_effect(/datum/status_effect/throat_soothed)
 	// healing
 	M.adjustBruteLoss(-1.2, 0)
@@ -52,7 +52,7 @@
 	M.adjustOxyLoss(-1.2, 0)
 	//checks for mindbreaker
 	if(holder.has_reagent(/datum/reagent/toxin/mindbreaker))
-		holder.remove_reagent(/datum/reagent/toxin/mindbreaker, 100)
+		holder.remove_reagent(/datum/reagent/toxin/mindbreaker, 5)
 	//check for preferences
 	if(!M.client?.prefs.arousable)
 		// Log interaction and return
@@ -60,7 +60,7 @@
 		return
 
 	var/mob/living/carbon/human/H = M
-	var/list/genits = H.adjust_arousal(35, "hexacrocin", aphro = TRUE) // just in case bru
+	var/list/genits = H.adjust_arousal(35, "hexacrocin", aphro = TRUE) // just in case.
 	for(var/g in genits)
 		var/obj/item/organ/genital/G = g
 		to_chat(M, span_userlove("[G.arousal_verb]!"))

@@ -1399,7 +1399,9 @@
 	l_pocket = /obj/item/clockwork/slab
 	assignedrole = "Cultist Remnant"
 	job_description = "Cultist Survivor"
-	canloadappearance = TRUE
+	var/load_character = alert(H.client, "Load currently selected slot?", "Play as your character!", "Yes", "No")
+	if(load_character == "Yes")
+		H.load_client_appearance(H.client)
 
 /obj/effect/mob_spawn/human/clockremnant/Destroy()
 	new/obj/structure/showcase/machinery/oldpod/used(drop_location())
@@ -1431,7 +1433,9 @@
 	l_pocket = /obj/item/kitchen/knife/ritual
 	assignedrole = "Cultist Remnant"
 	job_description = "Cultist Survivor"
-	canloadappearance = TRUE
+	var/load_character = alert(H.client, "Load currently selected slot?", "Play as your character!", "Yes", "No")
+	if(load_character == "Yes")
+		H.load_client_appearance(H.client)
 
 /obj/effect/mob_spawn/human/bloodremnant/Destroy()
 	new/obj/structure/showcase/machinery/oldpod/used(drop_location())

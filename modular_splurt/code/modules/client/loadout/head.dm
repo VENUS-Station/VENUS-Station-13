@@ -43,6 +43,10 @@
 	loadout_flags = LOADOUT_CAN_NAME | LOADOUT_CAN_DESCRIPTION | LOADOUT_CAN_COLOR_POLYCHROMIC
 	loadout_initial_colors = list("#F2F2F2")
 
+/datum/gear/head/goneroffcap/classic
+	name = "polychromic trencher officer cap (classic)"
+	path = /obj/item/clothing/head/helmet/goner/officer/fake/poly/classic
+
 //Adds bowler hats
 /datum/gear/head/bowler
 	name = "Bowler-hat"
@@ -97,3 +101,7 @@
 	subcategory = LOADOUT_SUBCATEGORY_HEAD_JOBS
 	restricted_roles = list("Clown")
 	restricted_desc = "Clown"
+
+/datum/gear/head/hoodcowl
+	name = "Hood cowl"
+	path= /obj/item/clothing/head/hoodcowl

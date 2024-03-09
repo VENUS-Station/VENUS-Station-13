@@ -10,11 +10,12 @@
 	righthand_file = 'icons/mob/inhands/misc/food_righthand.dmi'
 	reagent_flags = OPENCONTAINER
 	reagent_value = DEFAULT_REAGENTS_VALUE
-	var/gulp_size = 5 //This is now officially broken ... need to think of a nice way to fix it.
+	var/gulp_size = 5
 	possible_transfer_amounts = list(5,10,15,20,25,30,50)
 	volume = 50
 	resistance_flags = NONE
 	var/isGlass = TRUE //Whether the 'bottle' is made of glass or not so that milk cartons dont shatter when someone gets hit by it
+	var/beingChugged = FALSE //We don't want people downing 100u super fast with drinking glasses
 
 /obj/item/reagent_containers/food/drinks/on_reagent_change(changetype)
 	gulp_size = max(round(reagents.total_volume / 5), 5)
@@ -22,17 +23,33 @@
 /obj/item/reagent_containers/food/drinks/attack(mob/living/M, mob/user, def_zone)
 	if(!reagents || !reagents.total_volume)
 		to_chat(user, "<span class='warning'>[src] is empty!</span>")
-		return 0
+		return
 
 	if(!canconsume(M, user))
-		return 0
+		return
 
 	if (!is_drainable())
 		to_chat(user, "<span class='warning'>[src]'s lid hasn't been opened!</span>")
-		return 0
+		return
 
+	var/gulp_amount = gulp_size
 	if(M == user)
-		user.visible_message("<span class='notice'>[user] swallows a gulp of [src].</span>", "<span class='notice'>You swallow a gulp of [src].</span>")
+		if(user.zone_selected == BODY_ZONE_PRECISE_MOUTH && !beingChugged)
+			beingChugged = TRUE
+			user.visible_message("<span class='notice'>[user] starts chugging [src].</span>", \
+				"<span class='notice'>You start chugging [src].</span>")
+			if(!do_mob(user, M))
+				beingChugged = FALSE
+				return
+			if(!reagents || !reagents.total_volume)
+				beingChugged = FALSE
+				return
+			gulp_amount = 50
+			user.visible_message("<span class='notice'>[user] chugs [src].</span>", \
+				"<span class='notice'>You chug [src].</span>")
+			beingChugged = FALSE
+		else
+			to_chat(user, "<span class='notice'>You swallow a gulp of [src].</span>")
 	else
 		M.visible_message("<span class='danger'>[user] attempts to feed the contents of [src] to [M].</span>", "<span class='userdanger'>[user] attempts to feed the contents of [src] to [M].</span>")
 		if(!do_mob(user, M))
@@ -42,12 +59,12 @@
 		M.visible_message("<span class='danger'>[user] feeds the contents of [src] to [M].</span>", "<span class='userdanger'>[user] feeds the contents of [src] to [M].</span>")
 		log_combat(user, M, "fed", reagents.log_list())
 
-	var/fraction = min(gulp_size/reagents.total_volume, 1)
+	var/fraction = min(gulp_amount/reagents.total_volume, 1)
 	checkLiked(fraction, M)
 	reagents.reaction(M, INGEST, fraction)
-	reagents.trans_to(M, gulp_size, log = TRUE)
+	reagents.trans_to(M, gulp_amount, log = TRUE)
 	playsound(M.loc,'sound/items/drink.ogg', rand(10,50), 1)
-	return 1
+	return TRUE
 
 /obj/item/reagent_containers/food/drinks/CheckAttackCooldown(mob/user, atom/target)
 	var/fast = HAS_TRAIT(user, TRAIT_VORACIOUS) && (user == target)

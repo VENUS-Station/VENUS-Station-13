@@ -59,6 +59,7 @@
 		"Division Leader",
 		"Cerberus Leader",
 		"Syndicate Field Commander",
+		"Head of Studcurity",
 		"Commissar"
 	)
 	if(SSevents.holidays && SSevents.holidays[HALLOWEEN])
@@ -95,6 +96,7 @@
 		"Specialist Of Interdyne",
 		"Healing Fleshlight Mistress",
 		"Healing Fleshlight Master",
+		"Chief Heal Stud",
 		"Chief Heal Slut"
 	) // Sandcode do not have alt titles for CMO at the moment.
 
@@ -209,7 +211,7 @@
 	. = ..()
 
 /datum/job/clown // Sorry, but no TWO entertainer titles.
-	alt_titles = list("Jester", "Comedian", "Cumedian", "Sexy Clown", "Performer") //Just another three tittle
+	alt_titles = list("Jester", "Comedian", "Cumedian", "Sexy Clown", "Performer") //Just another three title
 
 /datum/job/cook/New()
 	var/list/extra_titles = list(

@@ -805,7 +805,7 @@
 	multiorgasms += 1
 
 	COOLDOWN_START(src, refractory_period, (rand(300, 900) - get_sexual_potency()))//sex cooldown
-	if(get_sexual_potency() == -1 || (get_sexual_potency() != -1 && multiorgasms < get_sexual_potency())) //Splurt EDIT: Ignore multi-orgasms check if sexual potency is -1
+	if(multiorgasms < get_sexual_potency())
 		if(ishuman(src))
 			var/mob/living/carbon/human/H = src
 			if(!partner)

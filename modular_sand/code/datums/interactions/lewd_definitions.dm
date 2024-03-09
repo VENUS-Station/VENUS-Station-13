@@ -304,7 +304,7 @@
 	var/u_His = p_their()
 	var/u_He = p_they()
 	var/u_S = p_s()
-	//var/t_His = partner?.p_their() //SPLURT EDIT - unused
+	var/t_His = partner?.p_their()
 	var/cumin = cum_inside // SPLURT EDIT - defaults to argument `cum_inside` rather than FALSE
 	var/partner_carbon_check = FALSE
 	var/obj/item/organ/genital/target_gen = null

@@ -123,6 +123,28 @@
 		if("CentCom Bartender")
 			return list(ACCESS_CENT_GENERAL, ACCESS_CENT_LIVING, ACCESS_CENT_BAR)
 
+/proc/get_syndicate_access(job) // This is for Syndicate titles. Admins do /NOT/ spawn the ID's themselves and instead use Agent IDs
+	switch(job) //  so having them all on the same access doesn't make a difference.
+		if("Syndicate Admiral")
+			return get_all_centcom_access()
+		if("Syndicate Sector Commander")
+			return get_all_centcom_access()
+		if("Syndicate Commander")
+			return get_all_centcom_access()
+		if("Syndicate Warship Pilot")
+			return get_all_centcom_access()
+		if("Syndicate Guest")
+			return get_all_centcom_access()
+		if("Syndicate Intelligence Officer")
+			return get_all_centcom_access()
+		if("Draconian Agent")
+			return get_all_centcom_access()
+		if("Syndie Bun") // RuizTheFish's Custom title. Don't ask, I needed suggestions and this was one of them.
+			return get_all_centcom_access()
+		if("Syndicate Admiral")
+			return get_all_centcom_access()
+
+
 /proc/get_all_accesses()
 	return list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_FORENSICS_LOCKERS, ACCESS_COURT, ACCESS_ENTER_GENPOP, ACCESS_LEAVE_GENPOP,
 				ACCESS_MEDICAL, ACCESS_GENETICS, ACCESS_MORGUE, ACCESS_RD,
@@ -369,7 +391,10 @@
 	return get_all_jobs()
 
 /proc/get_all_centcom_jobs()
-	return list("VIP Guest","Custodian","Thunderdome Overseer","CentCom Official","Medical Officer","Death Commando","Research Officer","Special Ops Officer","Admiral","CentCom Commander","Emergency Response Team Commander","Security Response Officer","Engineer Response Officer", "Medical Response Officer","CentCom Bartender","Nuclear Waste Expert") //No idea how to modularly edit a global proc
+	return list("VIP Guest","Custodian","Thunderdome Overseer","CentCom Official","Medical Officer","Death Commando","Research Officer","Special Ops Officer","Admiral","CentCom Commander","Emergency Response Team Commander","Security Response Officer","Engineer Response Officer", "Medical Response Officer","CentCom Bartender","Nuclear Waste Expert","Giant Bun Liaison") //No idea how to modularly edit a global proc
+
+/proc/get_all_syndicate_jobs()
+	return list("Syndicate Admiral","Syndicate Sector Commander","Syndicate Warship Pilot","Syndicate Guest","Syndicate Intelligence Officer","Draconian Agent","Syndie Bun","Syndicate VIP","Gorlex Commander","Gorlex Operative","Cybersun Commander")
 
 /// Gets the job title, if the job name is an alt title, locates the original title using a prebuilt cache
 /proc/GetJobName(jobName)

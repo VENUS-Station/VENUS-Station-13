@@ -1,0 +1,7 @@
+author: ariaworld
+delete-after: true
+changes:
+  - bugfix: Proper lazylist support for vehicle occupants. NPC mecha pilots can board
+      mechas again. (And won't runtime when they try.) Mechs won't try to put themselves
+      into themselves as an occupant when boarded by simple animal mecha pilots.
+  - tweak: Removed 2 ugly pixels from the human penis size 4 erect size sprite.

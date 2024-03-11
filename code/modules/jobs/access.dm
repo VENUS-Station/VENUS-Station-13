@@ -123,6 +123,8 @@
 		if("CentCom Bartender")
 			return list(ACCESS_CENT_GENERAL, ACCESS_CENT_LIVING, ACCESS_CENT_BAR)
 
+
+// SPLURT Edit
 /proc/get_syndicate_access(job) // This is for Syndicate titles. Admins do /NOT/ spawn the ID's themselves and instead use Agent IDs
 	switch(job) //  so having them all on the same access doesn't make a difference.
 		if("Syndicate Admiral")
@@ -393,6 +395,7 @@
 /proc/get_all_centcom_jobs()
 	return list("VIP Guest","Custodian","Thunderdome Overseer","CentCom Official","Medical Officer","Death Commando","Research Officer","Special Ops Officer","Admiral","CentCom Commander","Emergency Response Team Commander","Security Response Officer","Engineer Response Officer", "Medical Response Officer","CentCom Bartender","Nuclear Waste Expert","Giant Bun Liaison") //No idea how to modularly edit a global proc
 
+// SPLURT Edit
 /proc/get_all_syndicate_jobs()
 	return list("Syndicate Admiral","Syndicate Sector Commander","Syndicate Warship Pilot","Syndicate Guest","Syndicate Intelligence Officer","Draconian Agent","Syndie Bun","Syndicate VIP","Gorlex Commander","Gorlex Operative","Cybersun Commander")
 

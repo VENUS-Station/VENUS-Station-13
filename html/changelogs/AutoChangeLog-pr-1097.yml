@@ -1,5 +1,0 @@
-author: ariaworld
-delete-after: true
-changes:
-  - bugfix: Refactor, clean and optimize tailbag code to not be a copy/paste of wallets
-      but a subtype of it.

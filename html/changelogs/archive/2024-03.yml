@@ -23,3 +23,7 @@
   - rscadd: added the chameleon hat and mask to the donator tier 2 loadout
   - rscadd: Adds a thicc rouny which behaves like deathclaws
   - tweak: Ice wolf is now available in the pet capsule
+2024-03-11:
+  ariaworld:
+  - bugfix: Refactor, clean and optimize tailbag code to not be a copy/paste of wallets
+      but a subtype of it.

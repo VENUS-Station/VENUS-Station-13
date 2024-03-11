@@ -1,6 +1,6 @@
 // Command
 /datum/job/captain/New()
-	var/list/extra_titles = list((
+	var/list/extra_titles = list(
 		"Station Director",
 		"Station Commander",
 		"Station Overseer",

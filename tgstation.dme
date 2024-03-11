@@ -4584,7 +4584,6 @@
 #include "modular_splurt\code\game\objects\items\storage\boxes.dm"
 #include "modular_splurt\code\game\objects\items\storage\firstaid.dm"
 #include "modular_splurt\code\game\objects\items\storage\secure.dm"
-#include "modular_splurt\code\game\objects\items\storage\tailbag.dm"
 #include "modular_splurt\code\game\objects\items\storage\wallets.dm"
 #include "modular_splurt\code\game\objects\items\tanks\tank_types.dm"
 #include "modular_splurt\code\game\objects\items\weaponry\armyknife.dm"

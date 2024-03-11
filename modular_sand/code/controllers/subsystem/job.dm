@@ -35,7 +35,7 @@
 
 	// Syndicate jobs are not in occupations either, but we need to handle them anyway
 	for(var/title in get_all_syndicate_jobs())
-		titles[title] = "Syndicate" //Return with the NT logo if it is a CentCom job
+		titles[title] = "Syndicate" //Return with the Syndicate logo if it is a Syndicate job
 
 
 	return titles

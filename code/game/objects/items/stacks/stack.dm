@@ -68,7 +68,7 @@
 	if(merge)
 		for(var/obj/item/stack/S in loc)
 			if(can_merge(S))
-				INVOKE_ASYNC(src, .proc/merge, S)
+				INVOKE_ASYNC(src, PROC_REF(merge), S)
 	var/list/temp_recipes = get_main_recipes()
 	recipes = temp_recipes.Copy()
 	if(material_type)
@@ -505,7 +505,7 @@
 		switch(option)
 			if("Custom")
 				var/list/sort_numbers = quick_split
-				sort_numbers = sort_list(sort_numbers, /proc/cmp_numeric_text_desc)
+				sort_numbers = sort_list(sort_numbers, GLOBAL_PROC_REF(cmp_numeric_text_desc))
 				option_display.maptext = MAPTEXT("?")
 				quick_split = list("Custom" = option_display)
 				quick_split += sort_numbers

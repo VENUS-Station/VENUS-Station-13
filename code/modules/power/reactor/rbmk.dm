@@ -550,7 +550,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 
 /obj/machinery/computer/reactor/Initialize(mapload, obj/item/circuitboard/C)
 	. = ..()
-	addtimer(CALLBACK(src, .proc/link_to_reactor), 10 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(link_to_reactor)), 10 SECONDS)
 
 /obj/machinery/computer/reactor/Destroy()
 	reactor = null

@@ -54,10 +54,10 @@
 	info = "Welcome to Hilbert's Hotel!<BR>\
 	<BR>\
 	Each room in the hotel is an unique pocket dimension: You can choose up to 5 rooms per shift, each room you select will remember your actions and belongings, allowing you to create your own personal space.<BR>\
-	Inside the complementary guest box you'll find some sweets, each one as unique and delightful as our rooms. Savour them as you relax∼<BR>\
+	Inside the complementary guest box you'll find some delightful sweets, savour them as you relax∼<BR>\
 	Remember, your rooms are always available for you to return to.<BR>\
 	<BR>\
 	Enjoy your stay∼!<BR>\
 	<BR>\
 	With love,<BR>\
-	Aniya ♥"
+	-Aniya ♥"

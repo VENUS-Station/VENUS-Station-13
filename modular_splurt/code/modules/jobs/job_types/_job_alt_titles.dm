@@ -7,6 +7,7 @@
 		"Sectorial Commander",
 		"Station Mistress",
 		"Station Master",
+		"Syndicate Admiral",
 		"Cockpitain",
 		"Cuntpitain",
 		"Senator",
@@ -23,6 +24,7 @@
 		"Construction Coordinator",
 		"Project Manager",
 		"Power Plant Director",
+		"Aunt Syndi Pet",
 		"Big Iron",
 		"Magos",
 		"Magos Biologis"
@@ -39,6 +41,8 @@
 		"Headpat Of Personnel",
 		"Headgiver To Personnel",
 		"Personnel Manager",
+		"Syndicate Administrator",
+		"Personnel Manager of Syndicate",
 		"Staff Administrator",
 		"Records Administrator",
 		"Captain Attachment"
@@ -51,6 +55,7 @@
 		"Security Commander",
 		"Head of Slutcurity",
 		"Division Leader",
+		"Syndicate Field Commander",
 		"Cerberus Leader",
 		"Head of Studcurity",
 		"Commissar"
@@ -65,6 +70,7 @@
 		"Supply Chief",
 		"Cargonia Chief",
 		"Brigadier",
+		"Logistics Syndicate Supervisor",
 		"Manager of Shipping Sex"
 	)
 	LAZYADD(alt_titles, extra_titles)
@@ -75,6 +81,7 @@
 		"Science Administrator",
 		"CEO of Sex",
 		"Sex Research Director",
+		"Cybersun Lead Specialist",
 		"Research Manager"
 	)
 	LAZYADD(alt_titles, extra_titles)
@@ -86,6 +93,7 @@
 		"Medical Administrator",
 		"Healing Fleshlight Mistress",
 		"Healing Fleshlight Master",
+		"Specialist Of Interdyne",
 		"Chief Heal Stud",
 		"Chief Heal Slut"
 	) // Sandcode do not have alt titles for CMO at the moment.
@@ -96,6 +104,7 @@
 	var/list/extra_titles = list(
 		"Atmos Plumber",
 		"Anal Plumber",
+		"Syndicate Atmospherics Master",
 		"Atmos-Slut",
 		"Buttplug",
 		"Disposals Technician"
@@ -109,6 +118,7 @@
 		"Astromechanic",
 		"Station Architect",
 		"Hazardous Material Operator",
+		"Syndicate Constructing Master",
 		"Junior Engineer",
 		"Engi-Slut",
 		"Apprentice Engineer",
@@ -186,10 +196,12 @@
 		"Priestess",
 		"Prior",
 		"Monk",
+		"Tiger Cooperative Disciple",
 		"Nun",
 		"Keeper of Cum",
 		"Counselor",
 		"Techpriest",
+		"Syndicate Techpriest"
 	)
 	LAZYADD(alt_titles, extra_titles)
 	LAZYREMOVE(alt_titles, rem_titles)
@@ -241,6 +253,7 @@
 /datum/job/lawyer/New()
 	var/list/extra_titles = list(
 		"Law-Slut",
+		"Syndicate Attorney",
 		"Internal Affairs Agent",
 		"Attorney"
 	)
@@ -350,6 +363,7 @@
 		"Emergency Horny Technical",
 		"Emergency Cum Receiver",
 		"Emergency Condom Team",
+		"Field Medic Of Interdyne",
 		"Para-Stud"
 	)
 	LAZYADD(alt_titles, extra_titles)
@@ -375,6 +389,7 @@
 		"Gumshoe",
 		"Slutective",
 		"Studective",
+		"Syndicate Survey Specialist",
 		"Van Dorn Agent",
 		"Forensic Investigator",
 		"Cinder Dick",
@@ -392,6 +407,10 @@
 		"Guardsman",
 		"Police Officer",
 		"Civil Protection",
+		"SAARE Operative",
+		"PCRC Operative",
+		"Syndicate Combatant",
+		"Gorlex Marauders Trainee",
 		"Tyranny Lover",
 		"Cerberus",
 		"Slutcurity Officer",
@@ -413,7 +432,9 @@
 		"Prison Administrator",
 		"Dungeon Master",
 		"Brig Superintendent",
+		"High-Ranked Security Officer",
 		"Brig Overwatch",
+		"Syndicate Supervisor",
 		"Slutcurity Captain",
 		"Voreden"
 	)

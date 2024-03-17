@@ -305,6 +305,12 @@
 		As for the compound it excretes, we’ve discovered various occult effects, such as violent reactions with holy water and psychosis when injected into human subjects. Further trials await regarding other species, as well as if it possesses any more beneficial effects.<br><br>
 		Currently, trials would indicate that, unless we find any value in spreading occult influence, it would be dangerous to invest significantly into this project without serious safety protocols that this facility does not possess."}
 
+/obj/item/paper/fluff/awaymissions/complex/cultresearchnotes
+	name = "Occult Research"
+	info = {"*Most of the page is a mix of botanical jargon and occult ramblings that don't seem important, but a portion on the bottom seems more legible.*<br><br>
+	We have finally recieved the package from another sect. It would seem as though our ideas were stolen by those filthy acolytes, as they attempt to replicate our success. Pitiful. The heinous magic inside this seed is dangerous and unpleasant, but we are not yet done studying it. If this is all those fools can produce, something so meek and ineffecient, then we have little to worry. But, it is still not without risk.<br>
+	Until it is needed again, or, I hope and pray, it needs to be destroyed, it shall be entombed here under the watch of our sigils and guardians."}
+
 /obj/item/paper/fluff/awaymissions/complex/ohidontneedagravitygenhere
 	name = "Notice to Command"
 	info = "E.M.C Research Subdivision to High Command, reporting new discoveries regarding the AGR Complex.<br><br>Research reveals that localized gravitational assistance is no longer necessary due to the presence of proper gravity on the planet’s surface."

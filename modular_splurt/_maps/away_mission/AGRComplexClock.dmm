@@ -1392,6 +1392,21 @@
 /obj/structure/lattice/clockwork,
 /turf/open/floor/plating/asteroid/snow/complex,
 /area/awaymission/complex/cultfacility)
+"bhh" = (
+/obj/structure/table/reinforced,
+/obj/item/seeds/sanguintare,
+/obj/structure/window/reinforced/clockwork,
+/obj/structure/window/reinforced/clockwork{
+	dir = 8
+	},
+/obj/structure/window/reinforced/clockwork{
+	dir = 1
+	},
+/obj/structure/window/reinforced/clockwork{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/awaymission/complex/greenhouse)
 "bhj" = (
 /obj/structure/railing{
 	dir = 1
@@ -1546,6 +1561,12 @@
 "bpo" = (
 /turf/open/floor/plating,
 /area/awaymission/complex/medical)
+"bpM" = (
+/obj/structure/table/reinforced/brass,
+/obj/structure/railing,
+/obj/item/paper/fluff/awaymissions/complex/cultresearchnotes,
+/turf/open/floor/plating,
+/area/awaymission/complex/greenhouse)
 "bqk" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -1731,6 +1752,12 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/awaymission/complex/medical)
+"bBp" = (
+/obj/structure/table,
+/obj/item/stack/sheet/mineral/plasma,
+/obj/item/stack/sheet/mineral/plasma,
+/turf/open/floor/plasteel,
+/area/awaymission/complex/gateway)
 "bBS" = (
 /obj/structure/bed/matress,
 /turf/open/floor/plasteel,
@@ -2968,6 +2995,10 @@
 /obj/effect/turf_decal/tile/purple,
 /turf/open/floor/plasteel/white,
 /area/awaymission/complex/facilityresearch)
+"cOq" = (
+/mob/living/simple_animal/hostile/clockwork/marauder,
+/turf/open/floor/clockwork,
+/area/awaymission/complex/greenhouse)
 "cOT" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -3160,6 +3191,14 @@
 /obj/item/toy/plush/box,
 /turf/open/floor/plating/asteroid/snow/complex,
 /area/awaymission/complex/exterior)
+"cZO" = (
+/obj/effect/decal/cleanable/blood/tracks,
+/turf/open/floor/plating/asteroid/snow/complex{
+	slowdown = 1;
+	icon_state = "snow_dug";
+	floor_variance = 0
+	},
+/area/awaymission/complex/greenhouse)
 "cZS" = (
 /obj/machinery/door/airlock/external,
 /turf/open/floor/plating,
@@ -4767,6 +4806,10 @@
 /obj/item/trash/plate,
 /turf/open/floor/plasteel/white,
 /area/awaymission/complex/medical)
+"ele" = (
+/obj/machinery/light,
+/turf/open/floor/clockwork,
+/area/awaymission/complex/greenhouse)
 "elG" = (
 /obj/effect/turf_decal/box,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -4867,6 +4910,7 @@
 	dir = 8
 	},
 /obj/structure/closet/crate,
+/obj/item/stack/sheet/mineral/plasma,
 /obj/item/stack/sheet/mineral/plasma,
 /obj/item/stack/sheet/mineral/plasma,
 /turf/open/floor/plating,
@@ -6042,6 +6086,14 @@
 /obj/structure/holosign/barrier/medical,
 /turf/open/floor/plasteel/dark,
 /area/awaymission/complex/janitorial)
+"fpO" = (
+/obj/machinery/light,
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/awaymission/complex/gateway)
 "fqj" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/light{
@@ -6751,6 +6803,14 @@
 /obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/plasteel,
 /area/awaymission/complex/engineering)
+"fRe" = (
+/obj/structure/window/plasma/reinforced/spawner/west,
+/turf/open/floor/plating/asteroid/snow/complex{
+	slowdown = 1;
+	icon_state = "snow_dug";
+	floor_variance = 0
+	},
+/area/awaymission/complex/cultfacility)
 "fRh" = (
 /turf/closed/wall/rust,
 /area/awaymission/complex/medical)
@@ -9570,13 +9630,6 @@
 /obj/item/solar_assembly,
 /turf/open/floor/plating/asteroid/snow/complex,
 /area/awaymission/complex/exterior)
-"ilX" = (
-/obj/machinery/atmospherics/components/binary/pump{
-	dir = 4
-	},
-/obj/structure/lattice/catwalk/clockwork,
-/turf/open/floor/plating/snowed/complex,
-/area/awaymission/complex/cultfacility)
 "imo" = (
 /obj/machinery/vending/cola/red,
 /turf/open/floor/wood,
@@ -10857,6 +10910,9 @@
 /area/awaymission/complex/miningcamp)
 "juZ" = (
 /obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /obj/machinery/power/smes/magical,
 /turf/open/floor/plating,
 /area/awaymission/complex/gateway)
@@ -13414,6 +13470,12 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/white,
 /area/awaymission/complex/medical)
+"lMp" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/clockwork,
+/area/awaymission/complex/greenhouse)
 "lMB" = (
 /obj/structure/bed,
 /obj/machinery/iv_drip,
@@ -13710,6 +13772,7 @@
 	dir = 4
 	},
 /obj/structure/table,
+/obj/item/stock_parts/cell/high,
 /turf/open/floor/plating,
 /area/awaymission/complex/gateway)
 "mfo" = (
@@ -15049,6 +15112,10 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/awaymission/complex/logistics)
+"njW" = (
+/obj/effect/clockwork/sigil/vitality/neutered,
+/turf/open/floor/clockwork,
+/area/awaymission/complex/greenhouse)
 "nkk" = (
 /obj/structure/filingcabinet/chestdrawer,
 /turf/open/floor/plasteel,
@@ -17632,6 +17699,11 @@
 /obj/machinery/airalarm/directional/west,
 /turf/open/floor/wood,
 /area/awaymission/complex/miningcamp)
+"pBI" = (
+/obj/machinery/door/airlock/clockwork,
+/obj/structure/barricade/wooden/crude,
+/turf/open/floor/clockwork,
+/area/awaymission/complex/greenhouse)
 "pBS" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 8
@@ -18941,6 +19013,15 @@
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /turf/open/floor/plasteel/white,
 /area/awaymission/complex/facilityresearch)
+"qIN" = (
+/obj/structure/grille/ratvar,
+/obj/structure/barricade/wooden/crude,
+/turf/open/floor/plating/asteroid/snow/complex{
+	slowdown = 1;
+	icon_state = "snow_dug";
+	floor_variance = 0
+	},
+/area/awaymission/complex/greenhouse)
 "qJb" = (
 /obj/machinery/door/airlock/security/glass,
 /obj/machinery/poweredfans,
@@ -22678,6 +22759,16 @@
 /obj/structure/mineral_door/wood,
 /turf/open/floor/wood,
 /area/awaymission/complex/thewall)
+"tNl" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	dir = 9
+	},
+/turf/open/floor/plating/asteroid/snow/complex{
+	slowdown = 1;
+	icon_state = "snow_dug";
+	floor_variance = 0
+	},
+/area/awaymission/complex/greenhouse)
 "tNq" = (
 /obj/item/gun/ballistic/automatic/fal,
 /turf/open/floor/plating/asteroid/snow/complex,
@@ -23190,6 +23281,16 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/awaymission/complex/logistics)
+"ukg" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	dir = 6
+	},
+/turf/open/floor/plating/asteroid/snow/complex{
+	slowdown = 1;
+	icon_state = "snow_dug";
+	floor_variance = 0
+	},
+/area/awaymission/complex/greenhouse)
 "ukn" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -23827,7 +23928,9 @@
 /area/awaymission/complex/cultfacility)
 "uMG" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/light,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plating,
 /area/awaymission/complex/gateway)
 "uMJ" = (
@@ -24462,6 +24565,11 @@
 /obj/effect/turf_decal/weather/snow/corner,
 /turf/open/floor/clockwork,
 /area/awaymission/complex/cultfacility)
+"vle" = (
+/obj/machinery/power/smes/magical,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/awaymission/complex/gateway)
 "vlo" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -25049,6 +25157,10 @@
 /obj/item/gun/energy/civilian/lethal,
 /turf/open/floor/plasteel/dark,
 /area/awaymission/complex/security)
+"vJB" = (
+/obj/structure/closet/l3closet,
+/turf/open/floor/plating,
+/area/awaymission/complex/greenhouse)
 "vKa" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/closet/secure_closet/security/engine,
@@ -25177,6 +25289,9 @@
 	dir = 8
 	},
 /obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plating,
 /area/awaymission/complex/gateway)
 "vOV" = (
@@ -27923,7 +28038,7 @@ mlD
 mlD
 mlD
 mlD
-sFr
+mlD
 sFr
 sFr
 sFr
@@ -28178,9 +28293,9 @@ gSy
 ufj
 hGm
 juZ
-gjy
+uMG
+vle
 mlD
-sFr
 sFr
 sFr
 sFr
@@ -28436,8 +28551,8 @@ rUd
 rnn
 vOt
 uMG
+fpO
 mlD
-sFr
 sFr
 sFr
 sFr
@@ -28693,8 +28808,8 @@ kyL
 qQk
 kho
 kho
+kho
 mlD
-sFr
 sFr
 sFr
 sFr
@@ -28950,8 +29065,8 @@ dUj
 xxc
 bDO
 aUB
+bBp
 mlD
-sFr
 sFr
 sFr
 sFr
@@ -29208,7 +29323,7 @@ yjH
 mlD
 mlD
 mlD
-jun
+mlD
 cLH
 jxV
 nzu
@@ -66166,7 +66281,7 @@ knU
 aJg
 pok
 tKl
-ilX
+tKl
 pzt
 tKl
 tKl
@@ -83663,7 +83778,7 @@ mNm
 mNm
 mNm
 mNm
-mNm
+fRe
 sYZ
 sFr
 "}
@@ -86233,7 +86348,7 @@ oFC
 oFC
 oFC
 oFC
-mNm
+oFC
 oFC
 sFr
 "}
@@ -86487,11 +86602,11 @@ mNm
 mNm
 cwv
 oFC
-sFr
-sFr
-sFr
-sFr
-sFr
+nbz
+nbz
+nbz
+nbz
+nbz
 sFr
 "}
 (230,1,1) = {"
@@ -86744,11 +86859,11 @@ cwv
 mNm
 gTy
 oFC
-sFr
-sFr
-sFr
-sFr
-sFr
+nbz
+njW
+nbZ
+njW
+nbz
 sFr
 "}
 (231,1,1) = {"
@@ -87001,11 +87116,11 @@ sYZ
 gTy
 oFC
 oFC
-sFr
-sFr
-sFr
-sFr
-sFr
+nbz
+lMp
+bhh
+ele
+nbz
 sFr
 "}
 (232,1,1) = {"
@@ -87258,11 +87373,11 @@ gTy
 oFC
 oFC
 oFC
-sFr
-sFr
-sFr
-sFr
-sFr
+nbz
+nbZ
+cOq
+nbZ
+nbz
 sFr
 "}
 (233,1,1) = {"
@@ -87515,11 +87630,11 @@ sFr
 sFr
 sFr
 sFr
-sFr
-sFr
-sFr
-sFr
-sFr
+nbz
+nbz
+kra
+nbz
+nbz
 sFr
 "}
 (234,1,1) = {"
@@ -87772,11 +87887,11 @@ sFr
 sFr
 sFr
 sFr
-sFr
-sFr
-sFr
-sFr
-sFr
+nbz
+bpM
+nbZ
+vJB
+nbz
 sFr
 "}
 (235,1,1) = {"
@@ -88029,11 +88144,11 @@ ayk
 sFr
 sFr
 sFr
-sFr
-sFr
-sFr
-sFr
-sFr
+nbz
+nbz
+pBI
+nbz
+nbz
 sFr
 "}
 (236,1,1) = {"
@@ -88276,19 +88391,19 @@ sFr
 sFr
 esj
 esj
+tNl
+cZO
+esj
+esj
+esj
+cZO
+qIN
 esj
 esj
 esj
 esj
-esj
-esj
-eAp
-esj
-esj
-esj
-esj
-esj
-bZr
+ukg
+kHv
 bZr
 bZr
 sFr

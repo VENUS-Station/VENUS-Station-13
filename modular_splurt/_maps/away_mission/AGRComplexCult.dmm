@@ -2080,6 +2080,11 @@
 /obj/structure/closet/firecloset,
 /turf/open/floor/plating,
 /area/awaymission/complex/janitorial)
+"bZo" = (
+/obj/machinery/door/airlock/cult/glass,
+/obj/structure/barricade/wooden/crude,
+/turf/open/floor/plasteel/cult,
+/area/awaymission/complex/greenhouse)
 "bZr" = (
 /turf/closed/indestructible/rock/snow,
 /area/awaymission/complex/greenhouse)
@@ -2874,6 +2879,21 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel,
 /area/awaymission/complex/miningcamp)
+"cJN" = (
+/obj/structure/table/reinforced,
+/obj/item/seeds/matrigrass,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/awaymission/complex/greenhouse)
 "cKa" = (
 /obj/machinery/door/airlock/research/glass,
 /obj/machinery/door/poddoor/shutters{
@@ -4857,6 +4877,7 @@
 /obj/structure/closet/crate,
 /obj/item/stack/sheet/mineral/plasma,
 /obj/item/stack/sheet/mineral/plasma,
+/obj/item/stack/sheet/mineral/plasma,
 /turf/open/floor/plating,
 /area/awaymission/complex/gateway)
 "eqP" = (
@@ -5365,6 +5386,10 @@
 /obj/structure/lattice/catwalk,
 /turf/open/floor/plasteel/cult,
 /area/awaymission/complex/research)
+"eIT" = (
+/obj/machinery/light,
+/turf/open/floor/plasteel/cult,
+/area/awaymission/complex/greenhouse)
 "eIX" = (
 /obj/structure/chair{
 	dir = 8
@@ -6094,6 +6119,12 @@
 /obj/effect/turf_decal/tile/red,
 /turf/open/floor/plasteel,
 /area/awaymission/complex/security)
+"frY" = (
+/obj/structure/table,
+/obj/item/stack/sheet/mineral/plasma,
+/obj/item/stack/sheet/mineral/plasma,
+/turf/open/floor/plasteel,
+/area/awaymission/complex/gateway)
 "fso" = (
 /obj/effect/turf_decal/tile/yellow,
 /obj/effect/turf_decal/tile/yellow{
@@ -6129,6 +6160,14 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/awaymission/complex/medical)
+"ftk" = (
+/obj/effect/decal/cleanable/oil,
+/turf/open/floor/plating/asteroid/snow/complex{
+	slowdown = 1;
+	icon_state = "snow_dug";
+	floor_variance = 0
+	},
+/area/awaymission/complex/greenhouse)
 "ftp" = (
 /obj/structure/table,
 /obj/item/paper/fluff/awaymissions/complex/journal,
@@ -6270,6 +6309,14 @@
 	},
 /turf/open/floor/plasteel,
 /area/awaymission/complex/medical)
+"fze" = (
+/obj/item/clockwork/alloy_shards/clockgolem_remains,
+/turf/open/floor/plating/asteroid/snow/complex{
+	slowdown = 1;
+	icon_state = "snow_dug";
+	floor_variance = 0
+	},
+/area/awaymission/complex/greenhouse)
 "fzH" = (
 /mob/living/simple_animal/hostile/russian/ranged/remnant,
 /obj/structure/cable{
@@ -9552,13 +9599,6 @@
 /obj/item/solar_assembly,
 /turf/open/floor/plating/asteroid/snow/complex,
 /area/awaymission/complex/exterior)
-"ilX" = (
-/obj/machinery/atmospherics/components/binary/pump{
-	dir = 4
-	},
-/obj/structure/lattice/catwalk,
-/turf/open/floor/plating/snowed/complex,
-/area/awaymission/complex/cultfacility)
 "imo" = (
 /obj/machinery/vending/cola/red,
 /turf/open/floor/wood,
@@ -9880,6 +9920,12 @@
 /obj/structure/bed/matress,
 /turf/open/floor/carpet,
 /area/awaymission/complex/janitorial)
+"iDO" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plasteel/cult,
+/area/awaymission/complex/greenhouse)
 "iDU" = (
 /obj/effect/turf_decal/siding/brown{
 	dir = 4
@@ -9927,6 +9973,14 @@
 	floor_variance = 0
 	},
 /area/awaymission/complex/medical)
+"iFi" = (
+/obj/item/clockwork/alloy_shards,
+/turf/open/floor/plating/asteroid/snow/complex{
+	slowdown = 1;
+	icon_state = "snow_dug";
+	floor_variance = 0
+	},
+/area/awaymission/complex/greenhouse)
 "iFV" = (
 /turf/open/floor/plasteel/dark,
 /area/awaymission/complex/hydroponics)
@@ -10839,6 +10893,9 @@
 /area/awaymission/complex/miningcamp)
 "juZ" = (
 /obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /obj/machinery/power/smes/magical,
 /turf/open/floor/plating,
 /area/awaymission/complex/gateway)
@@ -11589,6 +11646,12 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/awaymission/complex/prison)
+"kaL" = (
+/obj/structure/table/wood/fancy/blackred,
+/obj/structure/railing,
+/obj/item/paper/fluff/awaymissions/complex/cultresearchnotes,
+/turf/open/floor/plating,
+/area/awaymission/complex/greenhouse)
 "kbo" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -13722,6 +13785,7 @@
 	dir = 4
 	},
 /obj/structure/table,
+/obj/item/stock_parts/cell/high,
 /turf/open/floor/plating,
 /area/awaymission/complex/gateway)
 "mfo" = (
@@ -16215,6 +16279,14 @@
 /obj/effect/decal/cleanable/blood/splats,
 /turf/open/floor/wood,
 /area/awaymission/complex/hydroponics)
+"omC" = (
+/obj/machinery/light,
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/awaymission/complex/gateway)
 "omO" = (
 /obj/effect/turf_decal/siding/brown{
 	dir = 1
@@ -16495,6 +16567,15 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/awaymission/complex/engineering)
+"ozP" = (
+/obj/structure/grille,
+/obj/structure/barricade/wooden/crude,
+/turf/open/floor/plating/asteroid/snow/complex{
+	slowdown = 1;
+	icon_state = "snow_dug";
+	floor_variance = 0
+	},
+/area/awaymission/complex/greenhouse)
 "ozV" = (
 /obj/structure/chair/office/light{
 	dir = 4
@@ -22894,6 +22975,11 @@
 "tQH" = (
 /turf/open/floor/wood/damturf/broken1,
 /area/awaymission/complex/command)
+"tQY" = (
+/obj/machinery/power/smes/magical,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/awaymission/complex/gateway)
 "tRk" = (
 /obj/structure/fluff/broken_flooring,
 /turf/open/floor/plating,
@@ -23884,7 +23970,9 @@
 /area/awaymission/complex/cultfacility)
 "uMG" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/light,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plating,
 /area/awaymission/complex/gateway)
 "uNN" = (
@@ -24508,6 +24596,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/awaymission/complex/facilityresearch)
+"vkl" = (
+/mob/living/simple_animal/hostile/construct/armored/hostile,
+/turf/open/floor/plasteel/cult,
+/area/awaymission/complex/greenhouse)
 "vkR" = (
 /obj/effect/turf_decal/weather/snow/corner,
 /turf/open/floor/plasteel/cult,
@@ -25210,6 +25302,10 @@
 /obj/structure/closet/radiation,
 /turf/open/floor/plasteel,
 /area/awaymission/complex/logistics)
+"vOc" = (
+/obj/structure/closet/l3closet,
+/turf/open/floor/plating,
+/area/awaymission/complex/greenhouse)
 "vOn" = (
 /obj/machinery/door/airlock,
 /turf/open/floor/plating,
@@ -25219,6 +25315,9 @@
 	dir = 8
 	},
 /obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plating,
 /area/awaymission/complex/gateway)
 "vOV" = (
@@ -26739,6 +26838,10 @@
 /obj/machinery/light/small,
 /turf/open/floor/plating,
 /area/awaymission/complex/logistics)
+"xlq" = (
+/obj/effect/rune/wall,
+/turf/open/floor/plasteel/cult,
+/area/awaymission/complex/greenhouse)
 "xlC" = (
 /obj/vehicle/ridden/wheelchair,
 /turf/open/floor/plasteel/white,
@@ -27976,7 +28079,7 @@ mlD
 mlD
 mlD
 mlD
-sFr
+vel
 sFr
 sFr
 sFr
@@ -28231,9 +28334,9 @@ gSy
 ufj
 hGm
 juZ
-gjy
-mlD
-sFr
+uMG
+tQY
+vel
 sFr
 sFr
 sFr
@@ -28489,8 +28592,8 @@ rUd
 rnn
 vOt
 uMG
-mlD
-sFr
+omC
+vel
 sFr
 sFr
 sFr
@@ -28746,8 +28849,8 @@ kyL
 qQk
 kho
 kho
-mlD
-sFr
+kho
+vel
 sFr
 sFr
 sFr
@@ -29003,8 +29106,8 @@ dUj
 xxc
 bDO
 aUB
-mlD
-sFr
+frY
+vel
 sFr
 sFr
 sFr
@@ -29261,7 +29364,7 @@ yjH
 mlD
 mlD
 mlD
-jun
+mlD
 cLH
 jxV
 nzu
@@ -66219,7 +66322,7 @@ knU
 aJg
 pok
 tKl
-ilX
+tKl
 pzt
 tKl
 tKl
@@ -86286,7 +86389,7 @@ oFC
 oFC
 oFC
 oFC
-mNm
+oFC
 oFC
 sFr
 "}
@@ -86540,11 +86643,11 @@ mNm
 mNm
 cwv
 oFC
-sFr
-sFr
-sFr
-sFr
-sFr
+nbz
+nbz
+nbz
+nbz
+nbz
 sFr
 "}
 (230,1,1) = {"
@@ -86797,11 +86900,11 @@ cwv
 mNm
 gTy
 oFC
-sFr
-sFr
-sFr
-sFr
-sFr
+nbz
+xlq
+nbZ
+xlq
+nbz
 sFr
 "}
 (231,1,1) = {"
@@ -87054,11 +87157,11 @@ sYZ
 gTy
 oFC
 oFC
-sFr
-sFr
-sFr
-sFr
-sFr
+nbz
+iDO
+cJN
+eIT
+nbz
 sFr
 "}
 (232,1,1) = {"
@@ -87311,11 +87414,11 @@ gTy
 oFC
 oFC
 oFC
-sFr
-sFr
-sFr
-sFr
-sFr
+nbz
+nbZ
+vkl
+nbZ
+nbz
 sFr
 "}
 (233,1,1) = {"
@@ -87568,11 +87671,11 @@ sFr
 sFr
 sFr
 sFr
-sFr
-sFr
-sFr
-sFr
-sFr
+nbz
+nbz
+kra
+nbz
+nbz
 sFr
 "}
 (234,1,1) = {"
@@ -87825,11 +87928,11 @@ sFr
 sFr
 sFr
 sFr
-sFr
-sFr
-sFr
-sFr
-sFr
+nbz
+kaL
+nbZ
+vOc
+nbz
 sFr
 "}
 (235,1,1) = {"
@@ -88082,11 +88185,11 @@ ayk
 sFr
 sFr
 sFr
-sFr
-sFr
-sFr
-sFr
-sFr
+nbz
+nbz
+bZo
+nbz
+nbz
 sFr
 "}
 (236,1,1) = {"
@@ -88329,19 +88432,19 @@ sFr
 sFr
 esj
 esj
+ftk
 esj
 esj
 esj
 esj
-esj
-esj
-eAp
-esj
+fze
+ozP
 esj
 esj
 esj
 esj
-bZr
+iFi
+kHv
 bZr
 bZr
 sFr

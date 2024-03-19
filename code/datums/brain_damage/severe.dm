@@ -178,7 +178,7 @@
 		return FALSE
 	if(istype(owner.loc, /obj/item/clothing/head/mob_holder/micro))
 		return FALSE
-//SPLURT EDIT END
+//SPLURT EDIT End
 	if(istype(owner.loc, /obj/belly))
 		return FALSE
 	if(HAS_TRAIT(owner, TRAIT_BLIND))

@@ -458,6 +458,38 @@
 	name = "Half-shaved Hair"
 	icon_state = "hair_halfshaved"
 
+/datum/sprite_accessory/hair/halfshave_long
+	name = "Half-shaved Hair Long"
+	icon_state = "hair_halfshave_long"
+
+/datum/sprite_accessory/hair/halfshave_long_alt
+	name = "Half-shaved Hair Long Alt"
+	icon_state = "hair_halfshave_long_alt"
+
+/datum/sprite_accessory/hair/halfshave_messy
+	name = "Half-shaved Hair Messy"
+	icon_state = "hair_halfshave_messy"
+
+/datum/sprite_accessory/hair/halfshave_messy_alt
+	name = "Half-shaved Hair Messy Alt"
+	icon_state = "hair_halfshave_messy_alt"
+
+/datum/sprite_accessory/hair/halfshave_messylong
+	name = "Half-shaved Hair Messy Long"
+	icon_state = "hair_halfshave_messylong"
+
+/datum/sprite_accessory/hair/halfshave_messylong_alt
+	name = "Half-shaved Messy Long Alt"
+	icon_state = "hair_halfshave_messylong_alt"
+
+/datum/sprite_accessory/hair/hair_halfshave_glamorous
+	name = "Half-shaved Glamourous"
+	icon_state ="hair_halfshave_glamorous"
+
+/datum/sprite_accessory/hair/hair_halfshave_glamorous_alt
+	name = "Half-shaved Glamourous Alt"
+	icon_state ="hair_halfshave_glamorous_alt"
+
 /datum/sprite_accessory/hair/harold
 	name = "Harold"
 	icon_state = "hair_harold"

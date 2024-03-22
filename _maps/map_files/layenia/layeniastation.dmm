@@ -71764,13 +71764,13 @@
 	},
 /area/service/theater)
 "kAT" = (
-/obj/structure/cable/yellow{
-	icon_state = "2-4"
+/obj/effect/turf_decal{
+	icon_state = "box_red";
+	name = "decal"
 	},
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
+/turf/open/floor/plasteel/dark{
+	icon_state = "darkfull_whole"
 	},
-/turf/open/floor/plasteel/dark,
 /area/engineering/main)
 "kBa" = (
 /obj/effect/turf_decal/tile/neutral{
@@ -162265,6 +162265,15 @@
 /obj/machinery/camera/autoname,
 /turf/open/openspace,
 /area/space)
+"xKI" = (
+/obj/structure/table,
+/obj/item/paper{
+	info = "Hello Engineer! i have disconnected this six SMES'es to avoid power problems, if needed, you can reconnect them to the grid simply by reconnecting the wires, simple enough innit? -Ass. Alicey Marshall";
+	name = "Note from the Chief Architect";
+	pixel_y = 7
+	},
+/turf/open/floor/plasteel/dark,
+/area/engineering/main)
 "xKN" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 9
@@ -209970,10 +209979,10 @@ ylC
 iXn
 ppA
 hBZ
-jAx
+kAT
 bbE
 bbE
-bbE
+xKI
 jAx
 qRg
 mfg

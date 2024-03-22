@@ -43,12 +43,17 @@ GLOBAL_LIST_EMPTY(mobs_with_editable_flavor_text) //et tu, hacky code
 		LAZYOR(GLOB.mobs_with_editable_flavor_text[M], src)
 		add_verb(M, /mob/proc/manage_flavor_tests)
 
-	if(save_key && ishuman(target))
+	if(!save_key)
+		return
+	if(ishuman(target))
 		RegisterSignal(target, COMSIG_HUMAN_PREFS_COPIED_TO, .proc/update_prefs_flavor_text)
+	else if(iscyborg(target))
+		RegisterSignal(target, COMSIG_MOB_ON_NEW_MIND, .proc/borged_update_flavor_text)
+		RegisterSignal(target, COMSIG_MOB_CLIENT_JOINED_FROM_LOBBY, .proc/borged_update_flavor_text)
 
 /datum/element/flavor_text/Detach(atom/A)
 	. = ..()
-	UnregisterSignal(A, list(COMSIG_PARENT_EXAMINE, COMSIG_HUMAN_PREFS_COPIED_TO))
+	UnregisterSignal(A, list(COMSIG_PARENT_EXAMINE, COMSIG_HUMAN_PREFS_COPIED_TO, COMSIG_MOB_ON_NEW_MIND, COMSIG_MOB_CLIENT_JOINED_FROM_LOBBY))
 	texts_by_atom -= A
 	if(can_edit && ismob(A))
 		var/mob/M = A
@@ -105,6 +110,8 @@ GLOBAL_LIST_EMPTY(mobs_with_editable_flavor_text) //et tu, hacky code
 				else
 					content += "\n"
 
+				content += " <b>| Stomping Interactions:</b> [L.client.prefs.stomppref ? "Yes" : "No"]\n"
+
 				if(L.client.prefs.extremepref == "Yes")
 					content += "<br><b>Extreme content:</b> [L.client.prefs.extremepref] <b>| Extreme content harm:</b> [L.client.prefs.extremeharm]\n"
 
@@ -148,7 +155,39 @@ GLOBAL_LIST_EMPTY(mobs_with_editable_flavor_text) //et tu, hacky code
 	if(!chosen)
 		return
 	var/datum/element/flavor_text/F = choices[chosen]
-	F.set_flavor(src)
+	if(F.flavor_name == "Headshot")
+		handle_headshot_flavor(F) // Directly handle headshot flavor
+	else
+		F.set_flavor(src) // Handle all other flavor texts
+
+// New proc to handle headshot flavor text specifically (In manage-flavour-texts while in-game)
+/mob/proc/handle_headshot_flavor(datum/element/flavor_text/F)
+	var/old_headshot = F.texts_by_atom[src]
+	var/new_headshot = input(src, "Input the image link: (For Discord links, try putting the file's type at the end of the link, after the '&'. For example: '&.jpg/.png/.jpeg')", "Headshot Image", old_headshot) as text|null
+	if(isnull(new_headshot))
+		return
+	if(!new_headshot)
+		F.texts_by_atom[src] = null
+		to_chat(src, "Your headshot has been cleared.")
+		return
+
+	// Validate the headshot URL
+	var/static/link_regex = regex("https://i\\.gyazo\\.com|https://media\\.discordapp\\.net|https://cdn\\.discordapp\\.com|https://media\\.discordapp\\.net$|https://static1\\.e621\\.net")
+	var/static/end_regex = regex("\\.jpg|\\.png|\\.jpeg$")
+
+	if(!findtext(new_headshot, link_regex))
+		to_chat(src, span_warning("The link needs to be an unshortened Gyazo, E621, or Discordapp link!"))
+		return
+	if(!findtext(new_headshot, end_regex))
+		to_chat(src, span_warning("You need either \".png\", \".jpg\", or \".jpeg\" in the link!"))
+		return
+
+	// Update the headshot URL if it's different
+	if(old_headshot != new_headshot)
+		F.texts_by_atom[src] = new_headshot
+		to_chat(src, span_notice("Your headshot has been updated."))
+		to_chat(src, span_notice("If the photo doesn't show up properly in-game, ensure that it's a direct image link that opens properly in a browser."))
+		to_chat(src, span_notice("Keep in mind that the photo will be downsized to 250x250 pixels, so the more square the photo, the better it will look."))
 
 /mob/proc/set_pose()
 	set name = "Set Pose"
@@ -180,6 +219,20 @@ GLOBAL_LIST_EMPTY(mobs_with_editable_flavor_text) //et tu, hacky code
 /datum/element/flavor_text/proc/update_prefs_flavor_text(mob/living/carbon/human/H, datum/preferences/P, icon_updates = TRUE, roundstart_checks = TRUE)
 	if(P.features.Find(save_key))
 		texts_by_atom[H] = P.features[save_key]
+
+/datum/element/flavor_text/proc/borged_update_flavor_text(mob/new_character, client/C)
+	C = C || GET_CLIENT(new_character)
+	if(!C)
+		LAZYSET(texts_by_atom, new_character, "")
+		return
+	var/datum/preferences/P = C.prefs
+	if(!P)
+		LAZYSET(texts_by_atom, new_character, "")
+		return
+	if(P.custom_names["cyborg"] == new_character.real_name)
+		LAZYSET(texts_by_atom, new_character, P.features[save_key])
+	else
+		LAZYSET(texts_by_atom, new_character, "")
 
 //subtypes with additional hooks for DNA and preferences.
 /datum/element/flavor_text/carbon

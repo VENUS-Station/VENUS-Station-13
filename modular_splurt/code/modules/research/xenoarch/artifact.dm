@@ -8,12 +8,12 @@
 //
 
 /datum/export/artifacts
-	cost = 2000 //Big cash
+	cost = 2500 //Big cash
 	unit_name = "useless artifact"
 	export_types = list(/obj/item/ancientartifact/useless)
 
 /datum/export/artifacts
-	cost = 4000 //Big cash
+	cost = 4500 //Big cash
 	unit_name = "fossil artifact"
 	export_types = list(/obj/item/ancientartifact/faunafossil,/obj/item/ancientartifact/florafossil)
 
@@ -29,11 +29,11 @@
 
 /obj/item/ancientartifact/useless/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/xenoarch/help/research))
-		if(!do_after(user,100,target=src))
+		if(!do_after(user, 100, target=src))
 			to_chat(user,"You must stand still to analyze.")
 			return
-		SSresearch.science_tech.add_point_list(list(TECHWEB_POINT_TYPE_GENERIC = 2000))
-		to_chat(user,"You successfully researched the artifact. You have gained 2000 research points.")
+		SSresearch.science_tech.add_point_list(list(TECHWEB_POINT_TYPE_GENERIC = 2500))
+		to_chat(user,"You successfully researched the artifact. You have gained 2500 research points.")
 		qdel(src)
 
 /obj/item/ancientartifact/faunafossil
@@ -46,11 +46,11 @@
 
 /obj/item/ancientartifact/faunafossil/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/xenoarch/help/research))
-		if(!do_after(user,100,target=src))
+		if(!do_after(user, 100, target=src))
 			to_chat(user,"You must stand still to analyze.")
 			return
-		SSresearch.science_tech.add_point_list(list(TECHWEB_POINT_TYPE_GENERIC = 4000))
-		to_chat(user,"You successfully researched the artifact. You have gained 4000 research points.")
+		SSresearch.science_tech.add_point_list(list(TECHWEB_POINT_TYPE_GENERIC = 4500))
+		to_chat(user,"You successfully researched the artifact. You have gained 4500 research points.")
 		qdel(src)
 
 /obj/item/ancientartifact/florafossil
@@ -63,14 +63,14 @@
 
 /obj/item/ancientartifact/florafossil/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/xenoarch/help/research))
-		if(!do_after(user,100,target=src))
+		if(!do_after(user, 100, target=src))
 			to_chat(user,"You must stand still to analyze.")
 			return
-		SSresearch.science_tech.add_point_list(list(TECHWEB_POINT_TYPE_GENERIC = 4000))
-		to_chat(user,"You successfully researched the artifact. You have gained 4000 research points.")
+		SSresearch.science_tech.add_point_list(list(TECHWEB_POINT_TYPE_GENERIC = 4500))
+		to_chat(user,"You successfully researched the artifact. You have gained 4500 research points.")
 		qdel(src)
 	if(istype(W,/obj/item/xenoarch/help/plant))
-		if(!do_after(user,50,target=src))
+		if(!do_after(user, 50, target=src))
 			to_chat(user,"You need to stand still to extract the seeds.")
 			return
 		var/seed = pick(list(	/obj/item/seeds/amauri,

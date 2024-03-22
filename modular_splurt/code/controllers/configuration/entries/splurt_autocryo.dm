@@ -1,6 +1,6 @@
 // Time before sending the user to cryo
 /datum/config_entry/number/autocryo_time_trigger
-	config_entry_value = 24000
+	default = 40 MINUTES
 	min_val = 600
 	integer = TRUE
 

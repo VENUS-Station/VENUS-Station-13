@@ -110,7 +110,7 @@
 		balloon_alert(user, "Configuring new account...")
 
 		// Perform interaction timer
-		if(!do_after(user, 5 SECONDS, target = src))
+		if(!do_after(user, 5 SECONDS, src))
 			// Warn in local chat
 			user.visible_message(span_warning("[user] fails to link \the [src] to a new account!"), span_warning("You fail to link \the [src] to a new account!"))
 
@@ -149,7 +149,7 @@
 	balloon_alert(user, "Resetting account...")
 
 	// Perform interaction timer
-	if(!do_after(user, 5 SECONDS, target = src))
+	if(!do_after(user, 5 SECONDS, src))
 		// Warn in local chat
 		user.visible_message(span_warning("[user] fails to reset \the [src]."), span_warning("You fail to reset \the [src]."))
 
@@ -235,7 +235,6 @@
 	air_update_turf()
 
 /obj/machinery/cryptominer/proc/produce_points(number)
-	playsound(loc, 'sound/machines/ping.ogg', 50, TRUE, -1)
 	if(pay_me)
 		pay_me.adjust_money(FLOOR(miningpoints * number,1))
 

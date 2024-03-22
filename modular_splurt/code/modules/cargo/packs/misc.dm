@@ -533,7 +533,7 @@
 
 /datum/supply_pack/misc/goner_yellow
 	name = "Yellow Trencher Outfits"
-	desc = "Contains an import of five trench uniforms, coats, gas masks, jackboots, four helmets and one officer cap. Made by cursed Yellows."
+	desc = "Contains an import of five trench uniforms, coats, gas masks, jackboots, four helmets and one officer cap. Made by damn Yellows."
 	cost = 2000
 	contraband = TRUE
 	contains = list(
@@ -576,3 +576,9 @@
 	/obj/item/cane/plague
 	)
 	crate_name = "plague doctor crate"
+
+/datum/supply_pack/misc/sauna_oven
+	name = "Sauna Oven"
+	desc = "A humble sauna oven adorned with stones. Add some fuel, pour water, and relish the tranquil moment."
+	contains = list(/obj/structure/sauna_oven)
+	cost = 1000

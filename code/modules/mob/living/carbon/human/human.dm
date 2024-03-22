@@ -130,7 +130,7 @@
 	spreadFire(AM)
 
 /mob/living/carbon/human/Topic(href, href_list)
-	if(usr.canUseTopic(src, BE_CLOSE, NO_DEXTERY))
+	if(usr.canUseTopic(src, BE_CLOSE, NO_DEXTERY, check_resting = FALSE))
 		if(href_list["embedded_object"])
 			var/obj/item/bodypart/L = locate(href_list["embedded_limb"]) in bodyparts
 			if(!L)
@@ -547,6 +547,32 @@
 		if(..())
 			dropItemToGround(I)
 
+/**
+ * Used to update the makeup on a human and apply/remove lipstick traits, then store/unstore them on the head object in case it gets severed
+ */
+/mob/living/carbon/human/proc/update_lips(new_style, new_colour, apply_trait)
+	lip_style = new_style
+	lip_color = new_colour
+	update_body()
+
+	var/obj/item/bodypart/head/hopefully_a_head = get_bodypart(BODY_ZONE_HEAD)
+	REMOVE_TRAITS_IN(src, LIPSTICK_TRAIT)
+	hopefully_a_head?.stored_lipstick_trait = null
+
+	if(new_style && apply_trait)
+		ADD_TRAIT(src, apply_trait, LIPSTICK_TRAIT)
+		hopefully_a_head?.stored_lipstick_trait = apply_trait
+
+/**
+ * A wrapper for [mob/living/carbon/human/proc/update_lips] that tells us if there were lip styles to change
+ */
+
+/mob/living/carbon/human/proc/clean_lips()
+	if(isnull(lip_style) && lip_color == initial(lip_color))
+		return FALSE
+	update_lips(null)
+	return TRUE
+
 /mob/living/carbon/human/clean_blood()
 	var/mob/living/carbon/human/H = src
 	if(H.gloves)
@@ -792,7 +818,7 @@
 
 //src is the user that will be carrying, target is the mob to be carried
 /mob/living/carbon/human/proc/can_piggyback(mob/living/target)
-	return (iscarbon(target) || ispAI(target)) && target.stat == CONSCIOUS
+	return (iscarbon(target) || ispAI(target)) && target.stat == CONSCIOUS && CHECK_MOBILITY(src, MOBILITY_STAND)
 
 /mob/living/carbon/human/proc/can_be_firemanned(mob/living/carbon/target)
 	return (ishuman(target) && !CHECK_MOBILITY(target, MOBILITY_STAND)) || ispAI(target)
@@ -811,7 +837,7 @@
 		//Joe Medic starts quickly/expertly lifting Grey Tider onto their back..
 		"<span class='notice'>[carrydelay < 35 ? "Using your gloves' nanochips, you" : "You"] [skills_space]start to lift [target] onto your back[carrydelay == 40 ? ", while assisted by the nanochips in your gloves.." : "..."]</span>")
 		//(Using your gloves' nanochips, you/You) ( /quickly/expertly) start to lift Grey Tider onto your back(, while assisted by the nanochips in your gloves../...)
-		if(do_after(src, carrydelay, TRUE, target))
+		if(do_after(src, carrydelay, target, extra_checks = CALLBACK(src, PROC_REF(can_be_firemanned), target)))
 			//Second check to make sure they're still valid to be carried
 			if(can_be_firemanned(target) && !incapacitated(FALSE, TRUE))
 				buckle_mob(target, TRUE, TRUE, 90, 1, 0, TRUE)
@@ -826,7 +852,7 @@
 /mob/living/carbon/human/proc/piggyback(mob/living/carbon/target)
 	if(can_piggyback(target))
 		visible_message("<span class='notice'>[target] starts to climb onto [src]...</span>")
-		if(do_after(target, 15, target = src, required_mobility_flags = MOBILITY_STAND))
+		if(do_after(target, 1.5 SECONDS, src, IGNORE_INCAPACITATED, extra_checks = CALLBACK(src, PROC_REF(can_piggyback), target)))
 			if(can_piggyback(target))
 				if(target.incapacitated(FALSE, TRUE) || incapacitated(FALSE, TRUE))
 					target.visible_message("<span class='warning'>[target] can't hang onto [src]!</span>")

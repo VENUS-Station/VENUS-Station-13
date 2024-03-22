@@ -18,6 +18,10 @@
 	var/list/devillaws = list()
 	var/id = DEFAULT_AI_LAWID
 
+/datum/ai_laws/Destroy()
+	owner = null
+	return ..()
+
 /datum/ai_laws/proc/lawid_to_type(lawid)
 	var/all_ai_laws = subtypesof(/datum/ai_laws)
 	for(var/al in all_ai_laws)
@@ -410,10 +414,9 @@
 /datum/ai_laws/proc/clear_hacked_laws()
 	hacked = list()
 
-/datum/ai_laws/proc/show_laws(who)
+/datum/ai_laws/proc/show_laws(who, title = "<b>Obey these laws:</b>")
 	var/list/printable_laws = get_law_list(include_zeroth = TRUE)
-	for(var/law in printable_laws)
-		to_chat(who,law)
+	to_chat(who, examine_block("<center>[title]</center><br>[english_list(printable_laws, "No laws", "<br>", "<br>")]"))
 
 /datum/ai_laws/proc/clear_zeroth_law(force) //only removes zeroth from antag ai if force is 1
 	if(force)

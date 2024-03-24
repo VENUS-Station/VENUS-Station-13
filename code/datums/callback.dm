@@ -5,7 +5,7 @@
  * ## USAGE
  *
  * ```
- * var/datum/callback/C = new(object|null, /proc/type/path|"procstring", arg1, arg2, ... argn)
+ * var/datum/callback/C = new(object|null, GLOBAL_PROC_REF(type/path|"procstring"), arg1, arg2, ... argn)
  * var/timerid = addtimer(C, time, timertype)
  * you can also use the compiler define shorthand
  * var/timerid = addtimer(CALLBACK(object|null, PROC_REF(type/path|procstring), arg1, arg2, ... argn), time, timertype)

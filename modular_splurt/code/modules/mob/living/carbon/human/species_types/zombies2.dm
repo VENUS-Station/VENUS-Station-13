@@ -282,7 +282,7 @@
 	if(!owner)
 		return
 	if(!(src in owner.internal_organs))
-		INVOKE_ASYNC(src,.proc/Remove,owner)
+		INVOKE_ASYNC(src,PROC_REF(Remove),owner)
 	if(owner.mob_biotypes && MOB_MINERAL && MOB_UNDEAD)//We are already dead inside
 		. = ..()
 		STOP_PROCESSING(SSobj, src)
@@ -305,7 +305,7 @@
 		Your heart has stopped...</span>")
 		var/revive_time = rand(revive_time_min, revive_time_max)
 		var/flags = TIMER_STOPPABLE
-		timer_id = addtimer(CALLBACK(src, .proc/zombify), revive_time, flags)
+		timer_id = addtimer(CALLBACK(src, PROC_REF(zombify)), revive_time, flags)
 
 /obj/item/organ/undead_infection/proc/zombify(mob/living/M, mob/living/carbon/user)
 	timer_id = null

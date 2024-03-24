@@ -539,7 +539,7 @@
 	if(send_signal)
 		SEND_SIGNAL(src, COMSIG_MOB_KEY_CHANGE, new_mob, src)
 	//splurt changeh
-	INVOKE_ASYNC(GLOBAL_PROC, .proc/_paci_check, new_mob, src)
+	INVOKE_ASYNC(GLOBAL_PROC, PROC_REF(_paci_check), new_mob, src)
 	//
 	return TRUE
 

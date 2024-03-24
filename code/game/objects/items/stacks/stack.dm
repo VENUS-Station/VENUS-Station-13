@@ -505,7 +505,7 @@
 		switch(option)
 			if("Custom")
 				var/list/sort_numbers = quick_split
-				sort_numbers = sort_list(sort_numbers, /proc/cmp_numeric_text_desc)
+				sort_numbers = sort_list(sort_numbers, GLOBAL_PROC_REF(cmp_numeric_text_desc))
 				option_display.maptext = MAPTEXT("?")
 				quick_split = list("Custom" = option_display)
 				quick_split += sort_numbers

@@ -1,5 +1,5 @@
 /// The damage healed per tick while sleeping without any modifiers
-#define HEALING_SLEEP_DEFAULT 0.005 
+#define HEALING_SLEEP_DEFAULT 0.005
 
 //Largely negative status effects go here, even if they have small benificial effects
 //STUN EFFECTS
@@ -90,7 +90,7 @@
 		else if((locate(/obj/structure/chair) in owner.loc))
 			healing -= 0.0025
 		if(locate(/obj/item/bedsheet) in owner.loc)
-			healing -= 0.005	
+			healing -= 0.005
 		if(health_ratio > 0.75) // Only heal when above 75% health
 			owner.adjustBruteLoss(healing)
 			owner.adjustFireLoss(healing)

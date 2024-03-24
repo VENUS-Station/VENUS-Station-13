@@ -55,7 +55,7 @@
 				message_admins("[ADMIN_LOOKUPFLW(forced_mob)] was taken into a clown car with [reagent_amount] unit(s) of Irish Car Bomb, causing an ejection.")
 				forced_mob.log_message("was taken into a clown car with [reagent_amount] unit(s) of Irish Car Bomb, causing an ejection.", LOG_GAME)
 				audible_message(span_userdanger("You hear a rattling sound coming from the engine. That can't be good..."), null, 1)
-				addtimer(CALLBACK(src, .proc/irish_car_bomb), 5 SECONDS)
+				addtimer(CALLBACK(src, PROC_REF(irish_car_bomb)), 5 SECONDS)
 
 /obj/vehicle/sealed/car/clowncar/proc/irish_car_bomb()
 	dump_mobs()

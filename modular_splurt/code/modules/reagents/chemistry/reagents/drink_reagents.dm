@@ -48,7 +48,7 @@
 	// healing
 	M.adjustBruteLoss(-1.2, 0)
 	M.adjustFireLoss(-1.2, 0)
-	M.adjustToxLoss(-1.2, 0)
+	M.adjustToxLoss(-1.2, 0, TRUE)
 	M.adjustOxyLoss(-1.2, 0)
 	//checks for mindbreaker
 	if(holder.has_reagent(/datum/reagent/toxin/mindbreaker))

@@ -1398,7 +1398,7 @@
 	by the heretics that tried to steal what was rightfully yours. This stagnation cannot last forever, \
 	whether it be your hand or another, someone will try to reclaim what's left of this complex. As the cold sets in, the thought of sacrificing these relics \
 	seems more and more appealing..."
-	important_info = "Work alongside your brothers and sisters. Do not attack others without good reason, as there is no way to ressurect Ratvar in this state."
+	important_info = "Work alongside your brothers and sisters. Do not attack others without good reason, as there is no way to ressurect Ratvar in this state. You are a GHOST ROLE antagonist, and should act like one."
 	uniform = /obj/item/clothing/under/rank/civilian/util
 	shoes = /obj/item/clothing/shoes/laceup
 	id = /obj/item/card/id/away/mountain
@@ -1433,7 +1433,7 @@
 	by the heretics that tried to steal what was rightfully yours. This stagnation cannot last forever, \
 	whether it be your hand or another, someone will try to reclaim what's left of this complex. As the cold sets in, the thought of sacrificing these relics \
 	seems more and more appealing..."
-	important_info = "Work alongside your brothers and sisters. Do not attack others without good reason, as the veil is too strong to summon Nar'sie."
+	important_info = "Work alongside your brothers and sisters. Do not attack others without good reason, as the veil is too strong to summon Nar'sie. You are a GHOST ROLE antagonist, and should act like one."
 	uniform = /obj/item/clothing/under/rank/civilian/util
 	shoes = /obj/item/clothing/shoes/laceup
 	id = /obj/item/card/id/away/mountain

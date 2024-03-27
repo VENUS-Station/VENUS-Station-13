@@ -51,7 +51,7 @@
 // Fluff - Misc
 /obj/item/paper/fluff/hilbertshotel/welcomeletter
 	name = "Welcome Letter"
-	info = "Welcome to Hilbert's Hotel!<BR>\
+	info = "<b>Welcome to Hilbert's Hotel!</b><BR>\
 	<BR>\
 	Each room in the hotel is an unique pocket dimension: You can choose up to 5 rooms per shift, each room you select will remember your actions and belongings, allowing you to create your own personal space.<BR>\
 	<BR>\
@@ -61,4 +61,4 @@
 	Enjoy your stay∼!<BR>\
 	<BR>\
 	With love,<BR>\
-	-Aniya ♥"
+	<b>-Aniya ♥</b>"

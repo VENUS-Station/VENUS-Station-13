@@ -73,33 +73,35 @@
 /turf/proc/Spread(probability = 30, prob_loss = 25, whitelisted_area)
 	if(probability <= 0)
 		return
-	var/list/cardinal_turfs = list()
-	var/list/diagonal_turfs = list()
 	var/logged_turf_type
 	for(var/turf/T in orange(1, src))
 		var/area/new_area = get_area(T)
-		if(!T || (T.density && !ismineralturf(T)) || istype(T, /turf/open/indestructible) || (whitelisted_area && !istype(new_area, whitelisted_area)) || (T.flags_1 & NO_LAVA_GEN_1) )
+		if((T.density && !ismineralturf(T)) || istype(T, /turf/open/indestructible) || (whitelisted_area && !istype(new_area, whitelisted_area)) || (T.flags_1 & NO_LAVA_GEN_1) )
 			continue
 
 		if(!logged_turf_type && ismineralturf(T))
 			var/turf/closed/mineral/M = T
 			logged_turf_type = M.turf_type
 
-		if(get_dir(src, T) in GLOB.cardinals)
-			cardinal_turfs += T
-		else
-			diagonal_turfs += T
-
-	for(var/turf/T as anything in cardinal_turfs) //cardinal turfs are always changed but don't always spread
-		if(!istype(T, logged_turf_type) && T.ChangeTurf(type, baseturfs, CHANGETURF_IGNORE_AIR) && prob(probability))
-			T.Spread(probability - prob_loss, prob_loss, whitelisted_area)
-
-	for(var/turf/T as anything in diagonal_turfs) //diagonal turfs only sometimes change, but will always spread if changed
-		if(!istype(T, logged_turf_type) && prob(probability) && T.ChangeTurf(type, baseturfs, CHANGETURF_IGNORE_AIR))
-			T.Spread(probability - prob_loss, prob_loss, whitelisted_area)
-		else if(ismineralturf(T))
-			var/turf/closed/mineral/M = T
-			M.ChangeTurf(M.turf_type, M.baseturfs, CHANGETURF_IGNORE_AIR)
+	for(var/turf/T in orange(1, src))
+		var/area/new_area = get_area(T)
+		if((T.density && !ismineralturf(T)) || istype(T, /turf/open/indestructible) || (whitelisted_area && !istype(new_area, whitelisted_area)) || (T.flags_1 & NO_LAVA_GEN_1) )
+			continue
+		var/opponent_dir = get_dir(src, T) // Use some clever bitmath to check if the direction is diagonal.
+		if(opponent_dir & (opponent_dir - 1)) //diagonal turfs only sometimes change, but will always spread if changed
+			// NOTE: WE ARE SKIPPING CHANGETURF HERE
+			// The calls in this proc only serve to provide a satisfactory (if it's not ALREADY this) check. They do not actually call changeturf
+			// This is safe because this proc can only be run during mapload, and nothing has initialized by now so there's nothing to inherit or delete
+			if(!istype(T, logged_turf_type) && !istype(T, type) && prob(probability) && T.ChangeTurf(type, baseturfs, CHANGETURF_SKIP))
+				T.Spread(probability - prob_loss, prob_loss, whitelisted_area)
+			else if(ismineralturf(T))
+				var/turf/closed/mineral/M = T
+				// SEE ABOVE, THIS IS ONLY VERY RARELY SAFE
+				M.ChangeTurf(M.turf_type, M.baseturfs, CHANGETURF_SKIP)
+		else //cardinal turfs are always changed but don't always spread
+			// Important NOTE: SEE ABOVE
+			if(!istype(T, logged_turf_type) && !istype(T, type) && T.ChangeTurf(type, baseturfs, CHANGETURF_SKIP) && prob(probability))
+				T.Spread(probability - prob_loss, prob_loss, whitelisted_area)
 
 
 #undef RANDOM_UPPER_X

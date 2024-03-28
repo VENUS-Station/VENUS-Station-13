@@ -1,0 +1,5 @@
+author: ariaworld
+delete-after: true
+changes:
+  - bugfix: Fixes monophobia quirk/trauma increasing stress levels even when grabbed
+      by a macro character.

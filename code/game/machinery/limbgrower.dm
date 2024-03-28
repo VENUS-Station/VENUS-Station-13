@@ -491,17 +491,3 @@
 /datum/species/xeno
 	limbs_id = SPECIES_XENOHYBRID
 	icon_limbs = 'icons/mob/human_parts_greyscale.dmi'
-
-// Splurt Edit: Extra species limbs found in modular_splurt\code\game\machinery\limbgrower.dm
-
-/datum/species/mammal/shadekin
-	limbs_id = SPECIES_SHADEKIN
-	icon_limbs = 'modular_splurt/icons/mob/human_parts_greyscale.dmi'
-
-/datum/species/mammal/teshari
-	limbs_id = SPECIES_TESHARI
-	icon_limbs = 'modular_splurt/icons/mob/teshari.dmi'
-
-/datum/species/vox
-	limbs_id = SPECIES_VOX
-	icon_limbs = 'modular_splurt/icons/mob/vox.dmi'

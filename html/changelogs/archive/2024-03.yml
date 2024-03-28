@@ -57,3 +57,4 @@
   ariaworld:
   - bugfix: Fixes monophobia quirk/trauma increasing stress levels even when grabbed
       by a macro character.
+  - rscdel: Actually got rid of egg miscarriage code, forever.

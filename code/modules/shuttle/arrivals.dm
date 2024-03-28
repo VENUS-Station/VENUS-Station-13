@@ -33,6 +33,10 @@
 		WARNING("More than one arrivals docking_port placed on map! Ignoring duplicates.")
 	SSshuttle.arrivals = src
 
+/obj/docking_port/mobile/arrivals/proc/on_console_deleted(datum/source)
+	SIGNAL_HANDLER
+	console = null
+
 /obj/docking_port/mobile/arrivals/LateInitialize()
 	areas = list()
 

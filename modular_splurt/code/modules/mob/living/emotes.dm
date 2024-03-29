@@ -1446,8 +1446,8 @@
 	emote_cooldown = 0.6 SECONDS
 	emote_pitch_variance = FALSE
 
-/datum/emote/living/audio/meow1
-	key = "meow1"
+/datum/emote/living/audio/meow2
+	key = "meow2"
 	key_third_person = "meows"
 	message = "meows!"
 	emote_sound = 'modular_splurt/sound/voice/catpeople/cat_meow1.ogg'
@@ -1458,8 +1458,8 @@
 	emote_sound = pick('modular_splurt/sound/voice/catpeople/cat_meow1.ogg', 'modular_splurt/sound/voice/catpeople/cat_meow2.ogg', 'modular_splurt/sound/voice/catpeople/cat_meow3.ogg') // Credit to Nyanotrasen (https://github.com/Nyanotrasen/Nyanotrasen)
 	. = ..()
 
-/datum/emote/living/audio/meow2
-	key = "meow2"
+/datum/emote/living/audio/meow3
+	key = "meow3"
 	key_third_person = "mews!"
 	message = "mews!"
 	emote_sound = 'modular_splurt/sound/voice/catpeople/cat_mew1.ogg'

@@ -36,7 +36,6 @@
 		buckled.unbuckle_mob(src,force=1)
 	QDEL_LIST_ASSOC_VAL(ability_actions)
 	QDEL_LIST(abilities)
-
 	remove_from_all_data_huds()
 	cleanse_trait_datums()
 	GLOB.mob_living_list -= src
@@ -928,7 +927,7 @@
 	else
 		throw_alert("gravity", /atom/movable/screen/alert/weightless)
 	if(!override && !is_flying())
-		INVOKE_ASYNC(src, /atom/movable.proc/float, !has_gravity)
+		float(!has_gravity)
 
 /mob/living/float(on)
 	if(throwing)

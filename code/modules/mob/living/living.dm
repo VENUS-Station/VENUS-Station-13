@@ -38,6 +38,7 @@
 	QDEL_LIST(abilities)
 
 	remove_from_all_data_huds()
+	cleanse_trait_datums()
 	GLOB.mob_living_list -= src
 	GLOB.ssd_mob_list -= src
 	QDEL_LIST(diseases)

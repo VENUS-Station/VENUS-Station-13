@@ -184,9 +184,6 @@
 	if (T && AIStatus == AI_Z_OFF)
 		SSidlenpcpool.idle_mobs_by_zlevel[T.z] -= src
 
-	// Yes, this is defined on /living but not deleted on it. This deletion is also done on /carbon, after the parent call to avoid runtimes.
-	QDEL_NULL_LIST(implants)
-
 	return ..()
 
 /mob/living/simple_animal/updatehealth()

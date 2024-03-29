@@ -49,8 +49,6 @@ GLOBAL_VAR_INIT(running_create_and_destroy, FALSE)
 		/obj/item/grenade/clusterbuster/segment,
 		// With 10% Spawns `while() ... sleep()` proc that causes her hat to harddel // TODO rewrite helmet code attack_self() and port modern /tg/ helmet code
 		/mob/living/carbon/monkey/angry,
-		// The gibs spawned when this is destroyed cause runtimes occasionally.
-		/obj/structure/ash_walker_eggshell,
 	)
 	//Say it with me now, type template
 	ignore += typesof(/obj/effect/mapping_helpers)
@@ -138,8 +136,6 @@ GLOBAL_VAR_INIT(running_create_and_destroy, FALSE)
 	ignore += typesof(/mob/living/simple_animal/hostile/swarmer)
 	// Some stack objects can't be initialized outside a borg module
 	ignore += typesof(/obj/item/stack)
-	// Spawns eggs that cause runtimes via mob gibbing. CI does not play nice with it.
-	ignore += typesof(/obj/effect/mob_spawn/human/ash_walker)
 
 	var/list/cached_contents = spawn_at.contents.Copy()
 	var/original_turf_type = spawn_at.type

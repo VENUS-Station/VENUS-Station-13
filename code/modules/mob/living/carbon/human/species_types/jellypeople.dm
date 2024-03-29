@@ -321,17 +321,17 @@
 		L["name"] = body.name
 		L["ref"] = "[REF(body)]"
 		L["occupied"] = occupied
-		var/button
+		var/button_state
 		if(occupied == "owner")
-			button = "selected"
+			button_state = "selected"
 		else if(occupied == "stranger")
-			button = "danger"
+			button_state = "danger"
 		else if(can_swap(body))
-			button = null
+			button_state = null
 		else
-			button = "disabled"
+			button_state = "disabled"
 
-		L["swap_button_state"] = button
+		L["swap_button_state"] = button_state
 		L["swappable"] = (occupied == "available") && can_swap(body)
 
 		data["bodies"] += list(L)

@@ -770,7 +770,7 @@
 	..()
 	species = _species
 
-/datum/action/innate/linked_speech/Destroy()
+/datum/action/innate/link_minds/Destroy()
 	species = null
 	return ..()
 

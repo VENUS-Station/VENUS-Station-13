@@ -1,0 +1,6 @@
+author: KathrinBailey
+delete-after: true
+changes:
+  - tweak: New meowing sounds bumped to their own emote instead of overwriting the
+      original meow.
+  - soundadd: Original meow returned to its place.

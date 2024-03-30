@@ -34,19 +34,11 @@
  * ### global proc
  * GLOBAL_PROC_REF(procname)
  *
- * `CALLBACK(src, .some_proc_here)`
- *
- * ### when the above doesn't apply:
- *PROC_REF(procname)
- *
- * `CALLBACK(src, PROC_REF(some_proc_here))`
+ * `CALLBACK(src, GLOBAL_PROC_REF(some_proc_here))`
  *
  *
- * proc defined on a parent of a some type
- *
- * `TYPE_PROC_REF(/some/type, some_proc_here)`
- *
- * Otherwise you must always provide the full typepath of the proc (/type/of/thing/proc/procname)
+ * ### proc defined on some type
+ * TYPE_PROC_REF(/some/type, some_proc_here)
  */
 /datum/callback
 

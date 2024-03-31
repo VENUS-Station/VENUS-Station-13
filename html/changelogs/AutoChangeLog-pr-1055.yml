@@ -1,8 +1,0 @@
-author: AyyRobotics
-delete-after: true
-changes:
-  - rscadd: Added the A.G.R Complex, two gateway missions with cult-themed gameplay
-      and rewards.
-  - rscadd: Added the Cultist Survivor ghostrole, taking place on the AGRComplex gateway
-      mission.
-  - config: Adds AGRComplex file to config.

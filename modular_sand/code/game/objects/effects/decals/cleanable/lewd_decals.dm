@@ -10,15 +10,17 @@
 
 /obj/effect/decal/cleanable/semendrip/replace_decal(obj/effect/decal/cleanable/semendrip/C)
 	. = ..()
-	reagents.trans_to(src, C.reagents.total_volume)
+	if(!. || QDELETED(src))
+		return FALSE
+	reagents.trans_to(C, reagents.total_volume)
 	transfer_blood_dna(C.blood_DNA)
 	var/obj/effect/decal/cleanable/semen/S = (locate(/obj/effect/decal/cleanable/semen) in C.loc)
-	if(S)
-		C.reagents.trans_to(S, C.reagents.total_volume)
-		C.transfer_blood_dna(S.blood_DNA)
-		C.update_icon()
-		return
-	if(C.reagents.total_volume >= 10)
+	if(S) // Merge ourselves into this decal.
+		reagents.trans_to(S, C.reagents.total_volume)
+		transfer_blood_dna(S.blood_DNA)
+		update_icon()
+		return TRUE
+	if(C.reagents.total_volume >= 10) // Turn the drip into a puddle.
 		S = new(C.loc)
 		C.reagents.trans_to(S, C.reagents.total_volume)
 		C.transfer_blood_dna(S.blood_DNA)

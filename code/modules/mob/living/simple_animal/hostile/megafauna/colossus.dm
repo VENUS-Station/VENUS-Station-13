@@ -650,8 +650,8 @@ GLOBAL_VAR(blackbox_smartfridge)
 
 /mob/living/simple_animal/hostile/lightgeist/Initialize()
 	. = ..()
-	remove_verb(src, TYPE_VERB_REF(/mob/living, pulled))
-	remove_verb(src, TYPE_VERB_REF(/mob, me_verb))
+	remove_verb(src, /mob/living/verb/pulled)
+	remove_verb(src, /mob/verb/me_verb)
 	var/datum/atom_hud/medsensor = GLOB.huds[DATA_HUD_MEDICAL_ADVANCED]
 	medsensor.add_hud_to(src)
 
@@ -740,7 +740,7 @@ GLOBAL_VAR(blackbox_smartfridge)
 		L.mind.transfer_to(holder_animal)
 		var/obj/effect/proc_holder/spell/targeted/exit_possession/P = new /obj/effect/proc_holder/spell/targeted/exit_possession
 		holder_animal.mind.AddSpell(P)
-		remove_verb(holder_animal, TYPE_VERB_REF(/mob/living, pulled))
+		remove_verb(holder_animal, /mob/living/verb/pulled)
 
 /obj/structure/closet/stasis/dump_contents(override = TRUE, kill = 1)
 	STOP_PROCESSING(SSobj, src)

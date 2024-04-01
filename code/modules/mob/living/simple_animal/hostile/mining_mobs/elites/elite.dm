@@ -35,6 +35,10 @@
 		var/datum/action/innate/elite_attack/attack_action = new action_type()
 		attack_action.Grant(src)
 
+/mob/living/simple_animal/hostile/asteroid/elite/Destroy(force, ...)
+	owner = null
+	return ..()
+
 //Prevents elites from attacking members of their faction (can't hurt themselves either) and lets them mine rock with an attack despite not being able to smash walls.
 /mob/living/simple_animal/hostile/asteroid/elite/AttackingTarget()
 	if(istype(target, /mob/living/simple_animal/hostile))
@@ -105,10 +109,10 @@ While using this makes the system rely on OnFire, it still gives options for tim
 		button.maptext = "<b class='maptext'>[round(timeleft/10, 0.1)]</b>"
 
 /datum/action/innate/elite_attack/Grant(mob/living/L)
-	if(istype(L, /mob/living/simple_animal/hostile/asteroid/elite))
-		START_PROCESSING(SSfastprocess, src)
-		return ..()
-	return FALSE
+	if(!istype(L, /mob/living/simple_animal/hostile/asteroid/elite))
+		return FALSE
+	START_PROCESSING(SSfastprocess, src)
+	return ..()
 
 /datum/action/innate/elite_attack/Activate()
 	var/mob/living/simple_animal/hostile/asteroid/elite/elite_owner = owner

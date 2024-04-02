@@ -1,0 +1,4 @@
+author: ariaworld
+delete-after: true
+changes:
+  - bugfix: Sleep now heals instead of dealing damage.

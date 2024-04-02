@@ -176,7 +176,7 @@
 	SEND_SIGNAL(src, COMSIG_MIND_TRANSFER, new_character, old_character)
 	SEND_SIGNAL(new_character, COMSIG_MOB_ON_NEW_MIND)
 //splurt change
-	INVOKE_ASYNC(GLOBAL_PROC, PROC_REF(_paci_check), new_character, old_character)
+	INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(_paci_check), new_character, old_character)
 //end change
 
 /datum/mind/proc/store_memory(new_text)

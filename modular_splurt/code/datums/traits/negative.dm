@@ -80,15 +80,15 @@
 	value = -1
 	mob_trait = TRAIT_ILLITERATE
 	gain_text = span_notice("The knowledge of how to read seems to escape from you.")
-	lose_text = "<span class='notice'>Written words suddenly make sense again."
+	lose_text = span_notice("Written words suddenly make sense again.")
 
 /datum/quirk/flimsy
 	name = "Flimsy"
 	desc = "Your body is a little more fragile then most, decreasing total health by 20%."
 	value = -2
 	medical_record_text = "Patient has abnormally low capacity for injury."
-	gain_text = "<span class='notice'>You feel like you could break with a single hit."
-	lose_text = "<span class='notice'>You feel more durable."
+	gain_text = span_notice("You feel like you could break with a single hit.")
+	lose_text = span_notice("You feel more durable.")
 
 /datum/quirk/flimsy/add()
 	quirk_holder.maxHealth *= 0.8
@@ -166,7 +166,7 @@
 										"Urgh, you should really get some cum...",\
 										"Some jizz wouldn't be so bad right now!",\
 										"You're starting to long for some more cum..."
-									  )
+									)
 		// Alert user in chat
 		to_chat(quirk_holder, span_love("[pick(trigger_phrases)]"))
 

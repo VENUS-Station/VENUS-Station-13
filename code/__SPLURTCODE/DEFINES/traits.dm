@@ -9,11 +9,8 @@
 #define PREGNANCY_TRAIT			"pregnancy"
 #define DUMB_CUM_TRAIT			"dumb4cum"
 
-// Quirk traits
-#define TRAIT_HYPNOTIC_GAZE		"hypnotic_gaze"
-#define TRAIT_GFLUID_DETECT		"genital_fluid_detect"
-#define TRAIT_ASHRESISTANCE		"ash_resistance"
 
+// Chastity traits
 #define TRAIT_CHASTENED_ANUS "chastened_anus"
 #define TRAIT_IMPOTENT_ANUS "impotent_anus"
 #define TRAIT_EDGINGONLY_ANUS "edgingonly_anus"
@@ -21,7 +18,10 @@
 #define TRAIT_OVERSTIM_ANUS "overstim_anus"
 #define TRAIT_HYPERSENS_ANUS "hypersens_anus"
 
-// Hyperstation traits
+// Quirk traits
+#define TRAIT_HYPNOTIC_GAZE		"hypnotic_gaze"
+#define TRAIT_GFLUID_DETECT		"genital_fluid_detect"
+#define TRAIT_ASHRESISTANCE		"ash_resistance"
 #define TRAIT_PHARMA            "hepatic_pharmacokinesis"
 #define TRAIT_CHOKE_SLUT		"choke_slut"
 #define TRAIT_BLOODFLEDGE		"bloodfledge"
@@ -34,6 +34,7 @@
 #define TRAIT_WEREWOLF			"werewolf"
 #define TRAIT_PRIMITIVE			"primitive"
 #define TRAIT_STEEL_ASS			"steel_ass"
+#define TRAIT_JIGGLY_ASS        "jiggly_ass"
 #define TRAIT_CURSED_BLOOD		"cursed_blood"
 #define TRAIT_HEADPAT_SLUT		"headpat_slut"
 #define TRAIT_DISTANT			"headpat_hater"
@@ -47,3 +48,5 @@
 #define TRAIT_BODY_MORPHER		"body_morpher"
 #define TRAIT_HALLOWED			"hallowed"
 #define TRAIT_MESSY				"messy"
+#define TRAIT_RESTORATIVE_METABOLISM   "restorative_metabolism"
+#define TRAIT_KISS_SLUT			"kiss_slut"

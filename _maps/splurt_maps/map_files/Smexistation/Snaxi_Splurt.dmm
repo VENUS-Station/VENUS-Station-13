@@ -21585,6 +21585,10 @@
 	icon_state = "0-4"
 	},
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/preopen{
+	id = "Secure Brig Control";
+	name = "brig shutters"
+	},
 /turf/open/floor/plating,
 /area/security/warden)
 "hTY" = (
@@ -27275,6 +27279,10 @@
 	},
 /obj/structure/cable,
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/preopen{
+	id = "Secure Brig Control";
+	name = "brig shutters"
+	},
 /turf/open/floor/plating,
 /area/security/warden)
 "kqE" = (
@@ -37955,6 +37963,10 @@
 "pdc" = (
 /obj/structure/cable,
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/preopen{
+	id = "Secure Brig Control";
+	name = "brig shutters"
+	},
 /turf/open/floor/plating,
 /area/security/warden)
 "pdj" = (

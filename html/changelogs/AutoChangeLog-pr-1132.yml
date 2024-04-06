@@ -1,4 +1,0 @@
-author: ariaworld
-delete-after: true
-changes:
-  - bugfix: Ported monkey and slime xenobio GC fixes from Paradise Station.

@@ -1,5 +1,5 @@
 /// The damage healed per tick while sleeping without any modifiers
-#define HEALING_SLEEP_DEFAULT 0.005
+#define HEALING_SLEEP_DEFAULT -0.005
 
 //Largely negative status effects go here, even if they have small benificial effects
 //STUN EFFECTS

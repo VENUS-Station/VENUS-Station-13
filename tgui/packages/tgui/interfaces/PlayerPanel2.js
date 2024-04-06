@@ -460,7 +460,7 @@ const GeneralActions = (props, context) => {
             color="orange"
             content="Smite"
             confirmColor="average"
-            disabled={!mob_type.includes("/mob/living")}
+            disabled={!mob_type.includes("/mob/living/carbon/human")}
             onClick={() => act("smite")}
           />
         </Flex>

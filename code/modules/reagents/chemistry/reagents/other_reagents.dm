@@ -2568,6 +2568,8 @@
 
 /obj/effect/decal/cleanable/semen/update_icon()
 	. = ..()
+	if(QDELETED(src) || !reagents)
+		return
 	add_atom_colour(mix_color_from_reagents(reagents.reagent_list), FIXED_COLOUR_PRIORITY)
 
 /datum/reagent/consumable/semen/femcum

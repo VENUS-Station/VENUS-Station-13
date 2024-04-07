@@ -766,9 +766,9 @@
 	background_icon_state = "bg_alien"
 	var/datum/species/jelly/stargazer/species
 
-/datum/action/innate/link_minds/New(_species)
+/datum/action/innate/link_minds/New(species)
 	..()
-	species = _species
+	src.species = species
 
 /datum/action/innate/link_minds/Destroy()
 	species = null
@@ -796,3 +796,7 @@
 		else
 			to_chat(H, "<span class='warning'>You can't seem to link [target]'s mind...</span>")
 			to_chat(target, "<span class='warning'>The foreign presence leaves your mind.</span>")
+
+/datum/action/innate/link_minds/Destroy()
+	species = null
+	return ..()

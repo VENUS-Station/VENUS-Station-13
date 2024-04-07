@@ -88,7 +88,7 @@
 	/// A lazy list of statuses to add next to this mind in the traitor panel
 	var/list/special_statuses
 
-/datum/mind/New(var/key)
+/datum/mind/New(key)
 	skill_holder = new(src)
 	src.key = key
 	soulOwner = src

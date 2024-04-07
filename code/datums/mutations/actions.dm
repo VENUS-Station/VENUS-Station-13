@@ -479,7 +479,6 @@
 	been_places = TRUE
 	chems = new
 	chems.transfered = WEAKREF(embedded_mob)
-	chems.spikey = src
 	var/mob/fired_by_mob = fired_by.resolve()
 	if(fired_by_mob)
 		to_chat(fired_by_mob, span_notice("Link established! Use the \"Transfer Chemicals\" ability to send your chemicals to the linked target!"))
@@ -514,4 +513,3 @@
 	//this is where it would deal damage, if it transfers chems it removes itself so no damage
 	spikey.forceMove(get_turf(L))
 	transfered_mob.visible_message(span_notice("[spikey] falls out of [transfered_mob]!"))
-

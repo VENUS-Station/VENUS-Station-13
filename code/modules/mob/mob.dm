@@ -18,7 +18,9 @@
 	update_movespeed(TRUE)
 	initialize_actionspeed()
 	init_rendering()
-	hook_vr("mob_new",list(src))
+	var/list/hook_args = list(src)
+	hook_vr("mob_new", hook_args)
+	hook_args.Cut()
 
 /mob/Destroy()//This makes sure that mobs with clients/keys are not just deleted from the game.
 	// if(client)

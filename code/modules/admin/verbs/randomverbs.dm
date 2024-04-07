@@ -1518,7 +1518,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 				if (limb.body_part == HEAD || limb.body_part == CHEST)
 					continue
 				addtimer(CALLBACK(limb, TYPE_PROC_REF(/obj/item/bodypart, dismember)), timer)
-				addtimer(CALLBACK(GLOBAL_PROC, PROC_REF(playsound), carbon_target, 'modular_splurt/sound/effects/cartoon_pop.ogg', 70), timer)
+				addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), carbon_target, 'modular_splurt/sound/effects/cartoon_pop.ogg', 70), timer)
 				addtimer(CALLBACK(carbon_target, TYPE_PROC_REF(/mob/living, spin), 4, 1), timer - 0.4 SECONDS)
 				timer += 2 SECONDS
 		if(ADMIN_PUNISHMENT_BREADIFY)
@@ -1526,14 +1526,14 @@ Traitors and the like can also be revived with the previous role mostly intact.
 			var/mutable_appearance/bread_appearance = mutable_appearance('icons/obj/food/burgerbread.dmi', "bread")
 			var/mutable_appearance/transform_scanline = mutable_appearance('modular_splurt/icons/effects/effects.dmi', "transform_effect")
 			target.transformation_animation(bread_appearance, time = BREADIFY_TIME, transform_overlay=transform_scanline, reset_after=TRUE)
-			addtimer(CALLBACK(GLOBAL_PROC, PROC_REF(breadify), target), BREADIFY_TIME)
+			addtimer(CALLBACK(src, PROC_REF(breadify), target), BREADIFY_TIME)
 			#undef BREADIFY_TIME
 		if(ADMIN_PUNISHMENT_BOOKIFY)
 			#define BOOKIFY_TIME (2 SECONDS)
 			var/mutable_appearance/book_appearance = mutable_appearance('icons/obj/library.dmi', "book")
 			var/mutable_appearance/transform_scanline = mutable_appearance('modular_splurt/icons/effects/effects.dmi', "transform_effect")
 			target.transformation_animation(book_appearance, time = BOOKIFY_TIME, transform_overlay=transform_scanline, reset_after=TRUE)
-			addtimer(CALLBACK(GLOBAL_PROC, PROC_REF(bookify), target), BOOKIFY_TIME)
+			addtimer(CALLBACK(src, PROC_REF(bookify), target), BOOKIFY_TIME)
 			playsound(target, 'modular_splurt/sound/misc/bookify.ogg', 60, 1)
 			#undef BOOKIFY_TIME
 		if(ADMIN_PUNISHMENT_BONK)

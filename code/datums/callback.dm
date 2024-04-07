@@ -34,7 +34,7 @@
  * ### global proc
  * GLOBAL_PROC_REF(procname)
  *
- * `CALLBACK(src, GLOBAL_PROC_REF(some_proc_here))`
+ * `CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(some_proc_here))`
  *
  *
  * ### proc defined on some type

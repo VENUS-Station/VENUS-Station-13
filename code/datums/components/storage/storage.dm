@@ -436,7 +436,7 @@
 	if(over_object == M)
 		user_show_to_mob(M, trigger_on_found = TRUE)
 	if(isrevenant(M))
-		INVOKE_ASYNC(GLOBAL_PROC, PROC_REF(RevenantThrow), over_object, M, source)
+		INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(RevenantThrow), over_object, M, source)
 		return
 	if(check_locked(null, M) || !M.CanReach(A))
 		return

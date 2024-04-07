@@ -128,6 +128,11 @@
 			  /mob/living/simple_animal/parrot/proc/toggle_mode,
 			  /mob/living/simple_animal/parrot/proc/perch_mob_player))
 
+/mob/living/simple_animal/parrot/Destroy()
+	if(ears)
+		QDEL_NULL(ears)
+	return ..()
+
 /mob/living/simple_animal/parrot/ComponentInitialize()
 	. = ..()
 	AddElement(/datum/element/strippable, GLOB.strippable_parrot_items)

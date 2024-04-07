@@ -117,7 +117,7 @@ Difficulty: Normal
 		..()
 
 /mob/living/simple_animal/hostile/megafauna/hierophant/Destroy()
-	qdel(spawned_beacon)
+	QDEL_NULL(spawned_beacon)
 	. = ..()
 
 /mob/living/simple_animal/hostile/megafauna/hierophant/devour(mob/living/L)

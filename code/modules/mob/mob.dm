@@ -18,7 +18,9 @@
 	update_movespeed(TRUE)
 	initialize_actionspeed()
 	init_rendering()
-	hook_vr("mob_new",list(src))
+	var/list/hook_args = list(src)
+	hook_vr("mob_new", hook_args)
+	hook_args.Cut()
 
 /mob/Destroy()//This makes sure that mobs with clients/keys are not just deleted from the game.
 	// if(client)
@@ -540,7 +542,7 @@
 	if(send_signal)
 		SEND_SIGNAL(src, COMSIG_MOB_KEY_CHANGE, new_mob, src)
 	//splurt changeh
-	INVOKE_ASYNC(GLOBAL_PROC, PROC_REF(_paci_check), new_mob, src)
+	INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(_paci_check), new_mob, src)
 	//
 	return TRUE
 

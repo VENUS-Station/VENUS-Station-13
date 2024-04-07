@@ -365,7 +365,7 @@
 	if(iszombie(H))
 		metabolization_rate = 0 //We are born from it.
 		return
-	addtimer(CALLBACK(H, /mob/living/carbon/human/proc/undeath, "undeath"), 60 SECONDS)
+	addtimer(CALLBACK(H, TYPE_PROC_REF(/mob/living/carbon/human, undeath), "undeath"), 60 SECONDS)
 	if(!istype(H))
 		return
 	var/datum/disease/D = new /datum/disease/heart_failure/livingdeath

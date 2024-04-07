@@ -82,3 +82,6 @@
 	flight_x_offset = 0
 	flight_y_offset = -700
 	selfcharge = TRUE
+
+/obj/item/gun/energy/pulse/nerf
+	pin = /obj/item/firing_pin/kaiju

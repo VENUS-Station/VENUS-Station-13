@@ -934,8 +934,10 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		// so that the visual focus indicator matches reality.
 		winset(src, null, "input.background-color=[COLOR_INPUT_DISABLED]")
 
+	/* SPLURT EDIT - undoes the code that makes input mode switch back to the chat bar when clicking on the map.
 	else
 		winset(src, null, "input.focus=true input.background-color=[COLOR_INPUT_ENABLED]")
+	*/
 
 	SEND_SIGNAL(src, COMSIG_CLIENT_CLICK, object, location, control, params, usr)
 

@@ -642,6 +642,7 @@
 	icon = 'icons/obj/cigarettes.dmi'
 	icon_state = "matchbox"
 	item_state = "zippo"
+	illustration = null
 	w_class = WEIGHT_CLASS_TINY
 	slot_flags = ITEM_SLOT_BELT
 	drop_sound = 'sound/items/handling/matchbox_drop.ogg'
@@ -1471,7 +1472,7 @@
 
 /obj/item/storage/box/shipping/PopulateContents()
 	var/static/items_inside = list(
-		/obj/item/destTagger=1,\
+		/obj/item/dest_tagger=1,\
 		/obj/item/sales_tagger=1,\
 		/obj/item/export_scanner=1,\
 		/obj/item/stack/packageWrap/small=2,\

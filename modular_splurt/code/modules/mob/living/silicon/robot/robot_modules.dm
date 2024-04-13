@@ -160,7 +160,7 @@
 		/obj/item/stack/wrapping_paper/xmas/cyborg,
 		/obj/item/assembly/flash/cyborg,
 		/obj/item/hand_labeler/cyborg,
-		/obj/item/destTagger,
+		/obj/item/dest_tagger,
 		/obj/item/crowbar/cyborg,
 		/obj/item/extinguisher,
 		/obj/item/export_scanner,

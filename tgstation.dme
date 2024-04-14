@@ -4823,7 +4823,6 @@
 #include "modular_splurt\code\modules\food_and_drinks\recipes\tablecraft\recipes_donut.dm"
 #include "modular_splurt\code\modules\food_and_drinks\recipes\tablecraft\recipes_seafood.dm"
 #include "modular_splurt\code\modules\games\tarot.dm"
-#include "modular_splurt\code\modules\ghostcafe\ghostvr.dm"
 #include "modular_splurt\code\modules\holiday\holidays.dm"
 #include "modular_splurt\code\modules\holodeck\holo_effect.dm"
 #include "modular_splurt\code\modules\hydroponics\botany_flora.dm"

@@ -13,6 +13,7 @@
 	flight_x_offset = 15
 	flight_y_offset = 9
 	automatic_charge_overlays = FALSE
+	var/has_empty_icon = TRUE
 	var/overheat_time = 16
 	var/holds_charge = FALSE
 	var/unique_frequency = FALSE // modified by KA modkits
@@ -185,7 +186,7 @@
 
 /obj/item/gun/energy/kinetic_accelerator/update_overlays()
 	. = ..()
-	if(!can_shoot())
+	if(!can_shoot() && has_empty_icon)
 		. += "[icon_state]_empty"
 
 //Casing

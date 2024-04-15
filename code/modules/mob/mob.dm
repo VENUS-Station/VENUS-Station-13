@@ -1100,6 +1100,11 @@ GLOBAL_VAR_INIT(exploit_warn_spam_prevention, 0)
 		if(I.item_flags & SLOWS_WHILE_IN_HAND)
 			. += I.slowdown
 
+/**
+ * Used to wrap stat setting to trigger on-stat-change functionality.
+ * Must be used instead of directly setting a mob's stat var,
+ * so that the signal is sent properly.
+ */
 /mob/proc/set_stat(new_stat)
 	if(new_stat == stat)
 		return

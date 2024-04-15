@@ -916,9 +916,9 @@
 			toggle_headlamp(1)
 			return
 		if(IsUnconscious() || IsStun() || IsKnockdown() || IsParalyzed() || getOxyLoss() > maxHealth * 0.5)
-			stat = UNCONSCIOUS
+			set_stat(UNCONSCIOUS)
 		else
-			stat = CONSCIOUS
+			set_stat(CONSCIOUS)
 		update_mobility()
 	diag_hud_set_status()
 	diag_hud_set_health()

@@ -753,6 +753,7 @@
 	desc = "A small silver box with Silver Love Co embossed."
 	icon_state = "box"
 	custom_price = 15
+	illustration = null
 
 // portal fleshlight box
 /obj/item/storage/box/portallight/PopulateContents()

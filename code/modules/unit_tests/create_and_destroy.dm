@@ -53,6 +53,11 @@ GLOBAL_VAR_INIT(running_create_and_destroy, FALSE)
 		/mob/living/carbon/monkey/angry,
 		// Literally ends the world.
 		/obj/singularity/narsie/large/cult,
+		// These are base/template types.
+		/obj/item/gun/energy/plasma,
+		/obj/item/gun/energy/pumpaction,
+		/obj/item/gun/ballistic/automatic,
+		/obj/item/gun/ballistic/automatic/shotgun,
 	)
 	//Say it with me now, type template
 	ignore += typesof(/obj/effect/mapping_helpers)

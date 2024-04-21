@@ -1,5 +1,0 @@
-author: BongaTheProto
-delete-after: true
-changes:
-  - code_imp: Updates our code with upstream's commits
-  - code_imp: Makes the codebase compatible with byond 515

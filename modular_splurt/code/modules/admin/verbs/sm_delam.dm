@@ -11,5 +11,5 @@
 		else
 			GLOB.delam_override = TRUE
 
-	log_admin("[key_name(usr)] [isnull(GLOB.delam_override) ? "reset the SM delam to follow the config's rules. It is [check_sm_delam() ? "ON" : "OFF"] for the round" : "has forced the SM delam [GLOB.delam_override ? "ON" : "OFF"]"] for the round.")
-	message_admins("[ADMIN_LOOKUPFLW(usr)] [isnull(GLOB.delam_override) ? "reset the SM delam to follow the config's rules. It is [check_sm_delam() ? "ON" : "OFF"] for the round" : "has forced the SM delam [GLOB.delam_override ? "ON" : "OFF"]"] for the round.")
+	log_admin("[key_name(usr)] [isnull(GLOB.delam_override) ? "reset the SM delam to follow the config's rules. It is [check_sm_delam() ? "ON" : "OFF"]" : "has forced the SM delam [GLOB.delam_override ? "ON" : "OFF"]"] for the round.")
+	message_admins("[ADMIN_LOOKUPFLW(usr)] [isnull(GLOB.delam_override) ? "reset the SM delam to follow the config's rules. It is [check_sm_delam() ? "ON" : "OFF"]" : "has forced the SM delam [GLOB.delam_override ? "ON" : "OFF"]"] for the round.")

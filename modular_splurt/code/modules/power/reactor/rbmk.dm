@@ -1,5 +1,6 @@
 /obj/machinery/atmospherics/components/trinary/nuclear_reactor/meltdown()
-	if(CONFIG_GET(flag/sm_delamination))
+	if(check_sm_delam())
+		write_sm_delam()
 		return ..()
 	shut_down()
 	stop_relay(CHANNEL_REACTOR_ALERT)
@@ -19,7 +20,8 @@
 	qdel(src)
 
 /obj/machinery/atmospherics/components/trinary/nuclear_reactor/blowout()
-	if(CONFIG_GET(flag/sm_delamination))
+	if(check_sm_delam())
+		write_sm_delam()
 		return ..()
 	shut_down()
 	stop_relay(CHANNEL_REACTOR_ALERT)

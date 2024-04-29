@@ -62,7 +62,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		else
 			// Let's give it a little chance okay, change if you don't like still.
 			screentip_pref = SCREENTIP_PREFERENCE_CONTEXT_ONLY
-
 	// Input had a bad reception anyways, this way people won't even have to look into it.
 	if(current_version < 59)
 		hotkeys = TRUE

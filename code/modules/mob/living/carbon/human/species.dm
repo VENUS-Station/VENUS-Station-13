@@ -1619,7 +1619,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			H.update_inv_wear_suit()
 
 
-	//SPLURT: If you haven't walked into a different tile in 5 minutes, don't drain hunger.
+	//SPLURT: If you haven't walked into a different tile in 5 minutes, don't drain hunger/thirst.
 	if(H.client && (((world.time - H.client?.last_move)) > 5 MINUTES))
 		if(!H.insanelycomfy)
 			to_chat(H, span_notice("You feel comfy."))

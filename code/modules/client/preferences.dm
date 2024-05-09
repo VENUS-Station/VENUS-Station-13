@@ -110,7 +110,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	// Added by SPLURT (Custom Blood Color)
 	var/custom_blood_color = FALSE
-	var/blood_color = BLOOD_COLOR_HUMAN
+	var/blood_color = BLOOD_COLOR_UNIVERSAL
 	///
 
 	var/uses_glasses_colour = 0

@@ -1,0 +1,4 @@
+author: Fabian272
+delete-after: true
+changes:
+  - rscadd: Regular bounty console added to research, letting you print it.

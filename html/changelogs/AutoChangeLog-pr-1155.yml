@@ -1,5 +1,0 @@
-author: BongaTheProto
-delete-after: true
-changes:
-  - code_imp: updates auxmos
-  - code_imp: updates rust-g

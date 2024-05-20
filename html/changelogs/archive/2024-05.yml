@@ -16,3 +16,7 @@
 2024-05-17:
   ariaworld:
   - rscadd: 'New character creator setting: Custom blood color!'
+2024-05-20:
+  BongaTheProto:
+  - code_imp: updates auxmos
+  - code_imp: updates rust-g

@@ -1,0 +1,4 @@
+author: Anonymous
+delete-after: true
+changes:
+  - rscadd: Added new raptor-borg variant known as "SmollRaptor".

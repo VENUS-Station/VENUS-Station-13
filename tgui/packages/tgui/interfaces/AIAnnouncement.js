@@ -1,7 +1,6 @@
-import { filter } from 'common/collections';
 import { useBackend } from '../backend';
-import { Button, Icon, Input, Section, Stack, Tabs } from '../components';
 import { useLocalState } from '../backend';
+import { Button, Input, Section, Stack, Tabs } from '../components';
 import { Window } from '../layouts';
 
 export const AIAnnouncement = (props, context) => {

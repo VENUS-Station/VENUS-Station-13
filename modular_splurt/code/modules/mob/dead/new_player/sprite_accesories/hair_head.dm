@@ -83,6 +83,11 @@
 	icon_state = "hair_thick_(long)"
 	icon = 'modular_splurt/icons/mob/hair.dmi'
 
+/datum/sprite_accessory/hair/ThickCurly
+	name = "Thick (Curly)"
+	icon_state = "hair_thick_(curly)"
+	icon = 'modular_splurt/icons/mob/hair.dmi'
+
 //Podpeople hair
 /datum/sprite_accessory/hair/podmale
 	name = "Pod Male"

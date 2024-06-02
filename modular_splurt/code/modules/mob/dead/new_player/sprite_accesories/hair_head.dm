@@ -73,14 +73,14 @@
 	icon_state = "hair_glamourh"
 	icon = 'modular_splurt/icons/mob/hair.dmi'
 
-	/datum/sprite_accessory/hair/ThickShort
+/datum/sprite_accessory/hair/ThickShort
 	name = "Thick (Short)"
 	icon_state = "hair_thick_(short)"
 	icon = 'modular_splurt/icons/mob/hair.dmi'
 
-		/datum/sprite_accessory/hair/ThickLong
+/datum/sprite_accessory/hair/ThickLong
 	name = "Thick (Long)"
-	icon_state = "hair_thick_(short)"
+	icon_state = "hair_thick_(long)"
 	icon = 'modular_splurt/icons/mob/hair.dmi'
 
 //Podpeople hair

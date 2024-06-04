@@ -1,6 +1,7 @@
-import { filter, map, sortBy } from 'common/collections';
+import { filter, sortBy } from 'common/collections';
 import { flow } from 'common/fp';
 import { createSearch } from 'common/string';
+
 import { useBackend, useLocalState } from '../../../backend';
 import { Button, Flex, Section, Stack } from '../../../components';
 

@@ -1,6 +1,5 @@
 import { Stack } from '../../components';
 import { Window } from '../../layouts';
-
 import { InfoSection } from './InfoSection';
 import { MainContent } from './MainContent';
 

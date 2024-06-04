@@ -1,11 +1,10 @@
 import { useLocalState } from '../../backend';
-import { Icon, Input, Section, Tabs, Stack } from '../../components';
-
+import { Icon, Input, Section, Stack, Tabs } from '../../components';
 import {
-  InteractionsTab,
-  GenitalTab,
   CharacterPrefsTab,
   ContentPreferencesTab,
+  GenitalTab,
+  InteractionsTab,
 } from './tabs';
 
 export const MainContent = (props, context) => {

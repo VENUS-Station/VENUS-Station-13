@@ -6,6 +6,7 @@ type CharacterPrefsInfo = {
   noncon_pref: number,
   vore_pref: number,
   extreme_pref: number,
+  unholy_pref: number,
   extreme_harm: boolean,
 }
 
@@ -15,6 +16,7 @@ export const CharacterPrefsTab = (props, context) => {
     erp_pref,
     noncon_pref,
     vore_pref,
+    unholy_pref,
     extreme_pref,
     extreme_harm,
   } = data;
@@ -87,6 +89,29 @@ export const CharacterPrefsTab = (props, context) => {
             color={vore_pref === 0 ? "red" : "default"}
             onClick={() => act('char_pref', {
               char_pref: 'vore_pref',
+              value: 0,
+            })} />
+        </LabeledList.Item>
+        <LabeledList.Item label="Unholy Preference">
+          <Button
+            icon={"check"}
+            color={unholy_pref === 1 ? "green" : "default"}
+            onClick={() => act('char_pref', {
+              char_pref: 'unholy_pref',
+              value: 1,
+            })} />
+          <Button
+            icon={"question"}
+            color={unholy_pref === 2 ? "yellow" : "default"}
+            onClick={() => act('char_pref', {
+              char_pref: 'unholy_pref',
+              value: 2,
+            })} />
+          <Button
+            icon={"times"}
+            color={unholy_pref === 0 ? "red" : "default"}
+            onClick={() => act('char_pref', {
+              char_pref: 'unholy_pref',
               value: 0,
             })} />
         </LabeledList.Item>

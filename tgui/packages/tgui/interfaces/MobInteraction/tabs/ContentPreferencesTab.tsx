@@ -18,10 +18,15 @@ type ContentPrefsInfo = {
   breast_enlargement: boolean,
   penis_enlargement: boolean,
   butt_enlargement: boolean,
+  belly_inflation: boolean,
   never_hypno: boolean,
   no_aphro: boolean,
   no_ass_slap: boolean,
   no_auto_wag: boolean,
+  chastity_pref: boolean,
+  stimulation_pref: boolean,
+  edging_pref: boolean,
+  cum_onto_pref: boolean,
 }
 
 export const ContentPreferencesTab = (props, context) => {
@@ -43,10 +48,15 @@ export const ContentPreferencesTab = (props, context) => {
     breast_enlargement,
     penis_enlargement,
     butt_enlargement,
+    belly_inflation,
     never_hypno,
     no_aphro,
     no_ass_slap,
     no_auto_wag,
+    chastity_pref,
+    stimulation_pref,
+    edging_pref,
+    cum_onto_pref,
   } = data;
   return (
     <Stack vertical fill>
@@ -246,6 +256,18 @@ export const ContentPreferencesTab = (props, context) => {
         <Button
           fluid
           mb={-0.7}
+          content="Belly inflation"
+          icon={belly_inflation ? "toggle-on" : "toggle-off"}
+          selected={belly_inflation}
+          onClick={() => act('pref', {
+            pref: 'belly_inflation',
+          })}
+        />
+      </Stack.Item>
+      <Stack.Item>
+        <Button
+          fluid
+          mb={-0.7}
           content="Hypno"
           icon={never_hypno ? "toggle-on" : "toggle-off"}
           selected={never_hypno}
@@ -287,6 +309,54 @@ export const ContentPreferencesTab = (props, context) => {
           selected={no_auto_wag}
           onClick={() => act('pref', {
             pref: 'no_auto_wag',
+          })}
+        />
+      </Stack.Item>
+      <Stack.Item>
+        <Button
+          fluid
+          mb={-0.7}
+          content="Chastity Interactions"
+          icon={chastity_pref ? "toggle-on" : "toggle-off"}
+          selected={chastity_pref}
+          onClick={() => act('pref', {
+            pref: 'chastity_pref',
+          })}
+        />
+      </Stack.Item>
+      <Stack.Item>
+        <Button
+          fluid
+          mb={-0.7}
+          content="Genital Stimulation Modifiers"
+          icon={stimulation_pref ? "toggle-on" : "toggle-off"}
+          selected={stimulation_pref}
+          onClick={() => act('pref', {
+            pref: 'stimulation_pref',
+          })}
+        />
+      </Stack.Item>
+      <Stack.Item>
+        <Button
+          fluid
+          mb={-0.7}
+          content="Edging"
+          icon={edging_pref ? "toggle-on" : "toggle-off"}
+          selected={edging_pref}
+          onClick={() => act('pref', {
+            pref: 'edging_pref',
+          })}
+        />
+      </Stack.Item>
+      <Stack.Item>
+        <Button
+          fluid
+          mb={-0.7}
+          content="Receive Cum Covering"
+          icon={cum_onto_pref ? "toggle-on" : "toggle-off"}
+          selected={cum_onto_pref}
+          onClick={() => act('pref', {
+            pref: 'cum_onto_pref',
           })}
         />
       </Stack.Item>

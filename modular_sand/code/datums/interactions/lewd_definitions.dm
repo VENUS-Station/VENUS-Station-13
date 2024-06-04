@@ -295,7 +295,7 @@
 		audible_message(span_lewd("<B>[src]</B> [pick("mimes a pleasured moan","moans in silence")]."))
 	lastmoan = moan
 
-/mob/living/proc/cum(mob/living/partner, target_orifice)
+/mob/living/proc/cum(mob/living/partner, target_orifice, cum_inside = FALSE, anonymous = FALSE) //SPLURT EDIT - extra argument `cum_inside` and 'anonymous'
 	if(HAS_TRAIT(src, TRAIT_NEVERBONER))
 		return FALSE
 	if(SEND_SIGNAL(src, COMSIG_MOB_PRE_CAME, target_orifice, partner))
@@ -305,7 +305,7 @@
 	var/u_He = p_they()
 	var/u_S = p_s()
 	var/t_His = partner?.p_their()
-	var/cumin = FALSE
+	var/cumin = cum_inside // SPLURT EDIT - defaults to argument `cum_inside` rather than FALSE
 	var/partner_carbon_check = FALSE
 	var/obj/item/organ/genital/target_gen = null
 	var/mob/living/carbon/c_partner = null
@@ -318,6 +318,16 @@
 		c_partner = partner
 		partner_carbon_check = TRUE
 
+	// SPLURT EDIT- new variables that are used in place of [partner_t_His] and [partner] in message strings to support anonymity
+	var/partner_name
+	var/partner_t_His
+	if(anonymous)
+		partner_name = "<b>someone</b>"
+		partner_t_His = "their"
+	else
+		partner_name = "\the <b>[partner]</b>"
+		partner_t_His = partner?.p_their()
+
 	if(src != partner)
 		if(ismob(partner))
 			if(!last_genital)
@@ -327,82 +337,82 @@
 					switch(target_orifice)
 						if(CUM_TARGET_MOUTH)
 							if(partner.has_mouth() && partner.mouth_is_free())
-								message = "cums right in \the <b>[partner]</b>'s mouth."
+								message = "cums right in [partner_name]'s mouth."
 								cumin = TRUE
 							else
-								message = "cums on \the <b>[partner]</b>'s face."
+								message = "cums on [partner_name]'s face."
 						if(CUM_TARGET_THROAT)
 							if(partner.has_mouth() && partner.mouth_is_free())
-								message = "shoves deep into \the <b>[partner]</b>'s throat and cums."
+								message = "shoves deep into [partner_name]'s throat and cums."
 								cumin = TRUE
 							else
-								message = "cums on \the <b>[partner]</b>'s face."
+								message = "cums on [partner_name]'s face."
 						if(CUM_TARGET_VAGINA)
 							var/has_vagina = partner.has_vagina()
 							if(has_vagina == TRUE || has_vagina == HAS_EXPOSED_GENITAL)
 								if(partner_carbon_check)
 									target_gen = c_partner.getorganslot(ORGAN_SLOT_VAGINA)
-								message = "cums in \the <b>[partner]</b>'s pussy."
+								message = "cums in \the <b>[partner_name]</b>'s pussy."
 								cumin = TRUE
 							else
-								message = "cums on \the <b>[partner]</b>'s belly."
+								message = "cums on [partner_name]'s belly."
 						if(CUM_TARGET_ANUS)
 							var/has_anus = partner.has_anus()
 							if(has_anus == TRUE || has_anus == HAS_EXPOSED_GENITAL)
-								message = "cums in \the <b>[partner]</b>'s asshole."
+								message = "cums in \the <b>[partner_name]</b>'s asshole."
 								cumin = TRUE
 							else
-								message = "cums on \the <b>[partner]</b>'s backside."
+								message = "cums on [partner_name]'s backside."
 						if(CUM_TARGET_HAND)
 							if(partner.has_hand())
-								message = "cums in \the <b>[partner]</b>'s hand."
+								message = "cums in \the <b>[partner_name]</b>'s hand."
 							else
-								message = "cums on \the <b>[partner]</b>."
+								message = "cums on [partner_name]."
 						if(CUM_TARGET_BREASTS)
 							var/has_breasts = partner.has_breasts()
 							if(has_breasts == TRUE || has_breasts == HAS_EXPOSED_GENITAL)
-								message = "cums onto \the <b>[partner]</b>'s breasts."
+								message = "cums onto \the <b>[partner_name]</b>'s breasts."
 							else
-								message = "cums on \the <b>[partner]</b>'s chest and neck."
+								message = "cums on [partner_name]'s chest and neck."
 						if(NUTS_TO_FACE)
 							if(partner.has_mouth() && partner.mouth_is_free())
-								message = "vigorously ruts [u_His] nutsack into \the <b>[partner]</b>'s mouth before shooting [u_His] thick, sticky jizz all over [t_His] eyes and hair."
+								message = "vigorously ruts [u_His] nutsack into [partner_name]'s mouth before shooting [u_His] thick, sticky jizz all over [partner_t_His] eyes and hair."
 						if(THIGH_SMOTHERING)
 							var/has_penis = has_penis()
 							if(has_penis == TRUE || has_penis == HAS_EXPOSED_GENITAL) //it already checks for the cock before, why the hell would you do this redundant shit
-								message = "keeps \the <b>[partner]</b> locked in [u_His] thighs as [u_His] cock throbs, dumping its heavy load all over [t_His] face."
+								message = "keeps \the <b>[partner_name]</b> locked in [u_His] thighs as [u_His] cock throbs, dumping its heavy load all over [t_His] face."
 							else
-								message = "reaches [u_His] peak, locking [u_His] legs around \the <b>[partner]</b>'s head extra hard as [u_He] cum[u_S] straight onto the head stuck between [u_His] thighs"
+								message = "reaches [u_His] peak, locking [u_His] legs around [partner_name]'s head extra hard as [u_He] cum[u_S] straight onto the head stuck between [u_His] thighs"
 							cumin = TRUE
 						if(CUM_TARGET_FEET)
 							if(!last_lewd_datum.require_target_num_feet)
 								if(partner.has_feet())
-									message = "cums on \the <b>[partner]</b>'s [partner.has_feet() == 1 ? pick("foot", "sole") : pick("feet", "soles")]."
+									message = "cums on [partner_name]'s [partner.has_feet() == 1 ? pick("foot", "sole") : pick("feet", "soles")]."
 								else
 									message = "cums on the floor!"
 							else
 								if(partner.has_feet())
-									message = "cums on \the <b>[partner]</b>'s [last_lewd_datum.require_target_num_feet == 1 ? pick("foot", "sole") : pick("feet", "soles")]."
+									message = "cums on \the <b>[partner_name]</b>'s [last_lewd_datum.require_target_num_feet == 1 ? pick("foot", "sole") : pick("feet", "soles")]."
 								else
 									message = "cums on the floor!"
 						//weird shit goes here
 						if(CUM_TARGET_EARS)
 							if(partner.has_ears())
-								message = "cums inside \the <b>[partner]</b>'s ear."
+								message = "cums inside [partner_name]'s ear."
 							else
-								message = "cums inside \the <b>[partner]</b>'s earsocket."
+								message = "cums inside [partner_name]'s earsocket."
 							cumin = TRUE
 						if(CUM_TARGET_EYES)
 							if(partner.has_eyes())
-								message = "cums on \the <b>[partner]</b>'s eyeball."
+								message = "cums on [partner_name]'s eyeball."
 							else
-								message = "cums inside \the <b>[partner]</b>'s eyesocket."
+								message = "cums inside [partner_name]'s eyesocket."
 							cumin = TRUE
 						//
 						if(CUM_TARGET_PENIS)
 							var/has_penis = partner.has_penis()
 							if(has_penis == TRUE || has_penis == HAS_EXPOSED_GENITAL)
-								message = "cums on \the <b>[partner]</b>."
+								message = "cums on \the <b>[partner_name]</b>."
 							else
 								message = "cums on the floor!"
 						else
@@ -414,76 +424,79 @@
 					switch(target_orifice)
 						if(CUM_TARGET_MOUTH)
 							if(partner.has_mouth() && partner.mouth_is_free())
-								message = "squirts right in \the <b>[partner]</b>'s mouth."
+								message = "squirts right in [partner_name]'s mouth."
 								cumin = TRUE
 							else
-								message = "squirts on \the <b>[partner]</b>'s face."
+								message = "squirts on [partner_name]'s face."
 						if(CUM_TARGET_THROAT)
 							if(partner.has_mouth() && partner.mouth_is_free())
-								message = "rubs [u_His] vagina against \the <b>[partner]</b>'s mouth and cums."
+								message = "rubs [u_His] vagina against [partner_name]'s mouth and cums."
 								cumin = TRUE
 							else
-								message = "squirts on \the <b>[partner]</b>'s face."
+								message = "squirts on [partner_name]'s face."
 						if(CUM_TARGET_VAGINA)
+							if(partner.has_vagina(REQUIRE_EXPOSED))
+								message = "squirts on [partner_name]'s pussy."
 							var/has_vagina = partner.has_vagina()
 							if(has_vagina == TRUE || has_vagina == HAS_EXPOSED_GENITAL)
-								message = "squirts on \the <b>[partner]</b>'s pussy."
+								message = "squirts on \the <b>[partner_name]</b>'s pussy."
 								cumin = TRUE
 							else
-								message = "squirts on \the <b>[partner]</b>'s belly."
+								message = "squirts on [partner_name]'s belly."
 						if(CUM_TARGET_ANUS)
 							var/has_anus = partner.has_anus()
 							if(has_anus == TRUE || has_anus == HAS_EXPOSED_GENITAL)
-								message = "squirts on \the <b>[partner]</b>'s asshole."
+								message = "squirts on \the <b>[partner_name]</b>'s asshole."
 								cumin = TRUE
 							else
-								message = "squirts on \the <b>[partner]</b>'s backside."
+								message = "squirts on [partner_name]'s backside."
 						if(CUM_TARGET_HAND)
 							if(partner.has_hand())
-								message = "squirts on \the <b>[partner]</b>'s hand."
+								message = "squirts on \the <b>[partner_name]</b>'s hand."
 							else
-								message = "squirts on \the <b>[partner]</b>."
+								message = "squirts on [partner_name]."
 						if(CUM_TARGET_BREASTS)
 							var/has_breasts = partner.has_breasts()
 							if(has_breasts == TRUE || has_breasts == HAS_EXPOSED_GENITAL)
-								message = "squirts onto \the <b>[partner]</b>'s breasts."
+								message = "squirts onto \the <b>[partner_name]</b>'s breasts."
 							else
-								message = "squirts on \the <b>[partner]</b>'s chest and neck."
+								message = "squirts on [partner_name]'s chest and neck."
 						if(NUTS_TO_FACE)
 							if(partner.has_mouth() && partner.mouth_is_free())
-								message = "vigorously ruts [u_His] clit into \the <b>[partner]</b>'s mouth before shooting [u_His] femcum all over [t_His] eyes and hair."
+								message = "vigorously ruts [u_His] clit into [partner_name]'s mouth before shooting [u_His] femcum all over [partner_t_His] eyes and hair."
+
 						if(THIGH_SMOTHERING)
-							message = "keeps \the <b>[partner]</b> locked in [u_His] thighs as [u_He] orgasm[u_S], squirting over [t_His] face."
-							cumin = TRUE
+							message = "keeps \the <b>[partner_name]</b> locked in [u_His] thighs as [u_He] orgasm[u_S], squirting over [partner_t_His] face."
+
 						if(CUM_TARGET_FEET)
 							if(!last_lewd_datum.require_target_num_feet)
 								if(partner.has_feet())
-									message = "squirts on \the <b>[partner]</b>'s [partner.has_feet() == 1 ? pick("foot", "sole") : pick("feet", "soles")]."
+									message = "squirts on [partner_name]'s [partner.has_feet() == 1 ? pick("foot", "sole") : pick("feet", "soles")]."
 								else
 									message = "squirts on the floor!"
 							else
 								if(partner.has_feet())
-									message = "squirts on \the <b>[partner]</b>'s [last_lewd_datum.require_target_num_feet == 1 ? pick("foot", "sole") : pick("feet", "soles")]."
+									message = "squirts on \the <b>[partner_name]</b>'s [last_lewd_datum.require_target_num_feet == 1 ? pick("foot", "sole") : pick("feet", "soles")]."
 								else
 									message = "squirts on the floor!"
 						//weird shit goes here
 						if(CUM_TARGET_EARS)
 							if(partner.has_ears())
-								message = "squirts on \the <b>[partner]</b>'s ear."
+								message = "squirts on [partner_name]'s ear."
 							else
-								message = "squirts on \the <b>[partner]</b>'s earsocket."
+								message = "squirts on [partner_name]'s earsocket."
 							cumin = TRUE
 						if(CUM_TARGET_EYES)
 							if(partner.has_eyes())
-								message = "squirts on \the <b>[partner]</b>'s eyeball."
+								message = "squirts on [partner_name]'s eyeball."
 							else
-								message = "squirts on \the <b>[partner]</b>'s eyesocket."
+								message = "squirts on [partner_name]'s eyesocket."
 							cumin = TRUE
 						//
 						if(CUM_TARGET_PENIS)
 							var/has_penis = partner.has_penis()
 							if(has_penis == TRUE || has_penis == HAS_EXPOSED_GENITAL)
-								message = "squirts on \the <b>[partner]</b>'s penis"
+								message = "squirts on \the <b>[partner_name]</b>'s penis"
 							else
 								message = "squirts on the floor!"
 						else
@@ -500,80 +513,80 @@
 						switch(target_orifice)
 							if(CUM_TARGET_MOUTH)
 								if(partner.has_mouth() && partner.mouth_is_free())
-									message = "cums right in \the <b>[partner]</b>'s mouth."
+									message = "cums right in \the <b>[partner_name]</b>'s mouth."
 									cumin = TRUE
 								else
-									message = "cums on \the <b>[partner]</b>'s face."
+									message = "cums on \the <b>[partner_name]</b>'s face."
 							if(CUM_TARGET_THROAT)
 								if(partner.has_mouth() && partner.mouth_is_free())
-									message = "shoves deep into \the <b>[partner]</b>'s throat and cums."
+									message = "shoves deep into \the <b>[partner_name]</b>'s throat and cums."
 									cumin = TRUE
 								else
-									message = "cums on \the <b>[partner]</b>'s face."
+									message = "cums on \the <b>[partner_name]</b>'s face."
 							if(CUM_TARGET_VAGINA)
 								var/has_vagina = partner.has_vagina()
 								if(has_vagina == TRUE || has_vagina == HAS_EXPOSED_GENITAL)
 									if(partner_carbon_check)
 										target_gen = c_partner.getorganslot(ORGAN_SLOT_VAGINA)
-									message = "cums in \the <b>[partner]</b>'s pussy."
+									message = "cums in \the <b>[partner_name]</b>'s pussy."
 									cumin = TRUE
 								else
-									message = "cums on \the <b>[partner]</b>'s belly."
+									message = "cums on \the <b>[partner_name]</b>'s belly."
 							if(CUM_TARGET_ANUS)
 								var/has_anus = partner.has_anus()
 								if(has_anus == TRUE || has_anus == HAS_EXPOSED_GENITAL)
-									message = "cums in \the <b>[partner]</b>'s asshole."
+									message = "cums in \the <b>[partner_name]</b>'s asshole."
 									cumin = TRUE
 								else
-									message = "cums on \the <b>[partner]</b>'s backside."
+									message = "cums on \the <b>[partner_name]</b>'s backside."
 							if(CUM_TARGET_HAND)
 								if(partner.has_hand())
-									message = "cums in \the <b>[partner]</b>'s hand."
+									message = "cums in \the <b>[partner_name]</b>'s hand."
 								else
-									message = "cums on \the <b>[partner]</b>."
+									message = "cums on \the <b>[partner_name]</b>."
 							if(CUM_TARGET_BREASTS)
 								if(partner.is_topless() && partner.has_breasts())
-									message = "cums onto \the <b>[partner]</b>'s breasts."
+									message = "cums onto \the <b>[partner_name]</b>'s breasts."
 								else
-									message = "cums on \the <b>[partner]</b>'s chest and neck."
+									message = "cums on \the <b>[partner_name]</b>'s chest and neck."
 							if(NUTS_TO_FACE)
 								if(partner.has_mouth() && partner.mouth_is_free())
-									message = "vigorously ruts [u_His] nutsack into \the <b>[partner]</b>'s mouth before shooting [u_His] thick, sticky jizz all over [t_His] eyes and hair."
+									message = "vigorously ruts [u_His] nutsack into \the <b>[partner_name]</b>'s mouth before shooting [u_His] thick, sticky jizz all over [partner_t_His] eyes and hair."
 							if(THIGH_SMOTHERING)
 								if(has_penis()) //it already checks for the cock before, why the hell would you do this redundant shit
-									message = "keeps \the <b>[partner]</b> locked in [u_His] thighs as [u_His] cock throbs, dumping its heavy load all over [t_His] face."
+									message = "keeps \the <b>[partner_name]</b> locked in [u_His] thighs as [u_His] cock throbs, dumping its heavy load all over [partner_t_His] face."
 								else
-									message = "reaches [u_His] peak, locking [u_His] legs around \the <b>[partner]</b>'s head extra hard as [u_He] cum[u_S] straight onto the head stuck between [u_His] thighs"
+									message = "reaches [u_His] peak, locking [u_His] legs around \the <b>[partner_name]</b>'s head extra hard as [u_He] cum[u_S] straight onto the head stuck between [u_His] thighs"
 								cumin = TRUE
 							if(CUM_TARGET_FEET)
 								if(!last_lewd_datum || !last_lewd_datum.require_target_num_feet)
 									if(partner.has_feet())
-										message = "cums on \the <b>[partner]</b>'s [partner.has_feet() == 1 ? pick("foot", "sole") : pick("feet", "soles")]."
+										message = "cums on \the <b>[partner_name]</b>'s [partner.has_feet() == 1 ? pick("foot", "sole") : pick("feet", "soles")]."
 									else
 										message = "cums on the floor!"
 								else
 									if(partner.has_feet())
-										message = "cums on \the <b>[partner]</b>'s [last_lewd_datum.require_target_num_feet == 1 ? pick("foot", "sole") : pick("feet", "soles")]."
+										message = "cums on \the <b>[partner_name]</b>'s [last_lewd_datum.require_target_num_feet == 1 ? pick("foot", "sole") : pick("feet", "soles")]."
 									else
 										message = "cums on the floor!"
 							//weird shit goes here
 							if(CUM_TARGET_EARS)
 								if(partner.has_ears())
-									message = "cums inside \the <b>[partner]</b>'s ear."
+									message = "cums inside \the <b>[partner_name]</b>'s ear."
 								else
-									message = "cums inside \the <b>[partner]</b>'s earsocket."
+									message = "cums inside \the <b>[partner_name]</b>'s earsocket."
 								cumin = TRUE
 							if(CUM_TARGET_EYES)
 								if(partner.has_eyes())
-									message = "cums on \the <b>[partner]</b>'s eyeball."
+									message = "cums on \the <b>[partner_name]</b>'s eyeball."
 								else
-									message = "cums inside \the <b>[partner]</b>'s eyesocket."
+									message = "cums inside \the <b>[partner_name]</b>'s eyesocket."
 								cumin = TRUE
 							//
 							if(CUM_TARGET_PENIS)
 								var/has_penis = partner.has_penis()
 								if(has_penis == TRUE || has_penis == HAS_EXPOSED_GENITAL)
-									message = "cums on \the <b>[partner]</b>."
+									message = "cums on \the <b>[partner_name]</b>."
 								else
 									message = "cums on the floor!"
 							else
@@ -585,77 +598,77 @@
 						switch(target_orifice)
 							if(CUM_TARGET_MOUTH)
 								if(partner.has_mouth() && partner.mouth_is_free())
-									message = "squirts right in \the <b>[partner]</b>'s mouth."
+									message = "squirts right in \the <b>[partner_name]</b>'s mouth."
 									cumin = TRUE
 								else
-									message = "squirts on \the <b>[partner]</b>'s face."
+									message = "squirts on \the <b>[partner_name]</b>'s face."
 							if(CUM_TARGET_THROAT)
 								if(partner.has_mouth() && partner.mouth_is_free())
-									message = "rubs [u_His] vagina against \the <b>[partner]</b>'s mouth and cums."
+									message = "rubs [u_His] vagina against \the <b>[partner_name]</b>'s mouth and cums."
 									cumin = TRUE
 								else
-									message = "squirts on \the <b>[partner]</b>'s face."
+									message = "squirts on \the <b>[partner_name]</b>'s face."
 							if(CUM_TARGET_VAGINA)
 								var/has_vagina = partner.has_vagina()
 								if(has_vagina == TRUE || has_vagina == HAS_EXPOSED_GENITAL)
-									message = "squirts on \the <b>[partner]</b>'s pussy."
+									message = "squirts on \the <b>[partner_name]</b>'s pussy."
 									cumin = TRUE
 								else
-									message = "squirts on \the <b>[partner]</b>'s belly."
+									message = "squirts on \the <b>[partner_name]</b>'s belly."
 							if(CUM_TARGET_ANUS)
 								var/has_anus = partner.has_anus()
 								if(has_anus == TRUE || has_anus == HAS_EXPOSED_GENITAL)
-									message = "squirts on \the <b>[partner]</b>'s asshole."
+									message = "squirts on \the <b>[partner_name]</b>'s asshole."
 									cumin = TRUE
 								else
-									message = "squirts on \the <b>[partner]</b>'s backside."
+									message = "squirts on \the <b>[partner_name]</b>'s backside."
 							if(CUM_TARGET_HAND)
 								if(partner.has_hand())
-									message = "squirts on \the <b>[partner]</b>'s hand."
+									message = "squirts on \the <b>[partner_name]</b>'s hand."
 								else
-									message = "squirts on \the <b>[partner]</b>."
+									message = "squirts on \the <b>[partner_name]</b>."
 							if(CUM_TARGET_BREASTS)
 								var/has_breasts = partner.has_breasts()
 								if(has_breasts == TRUE || has_breasts == HAS_EXPOSED_GENITAL)
-									message = "squirts onto \the <b>[partner]</b>'s breasts."
+									message = "squirts onto \the <b>[partner_name]</b>'s breasts."
 								else
-									message = "squirts on \the <b>[partner]</b>'s chest and neck."
+									message = "squirts on \the <b>[partner_name]</b>'s chest and neck."
 							if(NUTS_TO_FACE)
 								if(partner.has_mouth() && partner.mouth_is_free())
-									message = "vigorously ruts [u_His] clit into \the <b>[partner]</b>'s mouth before shooting [u_His] femcum all over [t_His] eyes and hair."
+									message = "vigorously ruts [u_His] clit into \the <b>[partner_name]</b>'s mouth before shooting [u_His] femcum all over [partner_t_His] eyes and hair."
 
 							if(THIGH_SMOTHERING)
-								message = "keeps \the <b>[partner]</b> locked in [u_His] thighs as [u_He] orgasm[u_S], squirting over [t_His] face."
+								message = "keeps \the <b>[partner_name]</b> locked in [u_His] thighs as [u_He] orgasm[u_S], squirting over [partner_t_His] face."
 
 							if(CUM_TARGET_FEET)
 								if(!last_lewd_datum || !last_lewd_datum.require_target_num_feet)
 									if(partner.has_feet())
-										message = "squirts on \the <b>[partner]</b>'s [partner.has_feet() == 1 ? pick("foot", "sole") : pick("feet", "soles")]."
+										message = "squirts on \the <b>[partner_name]</b>'s [partner.has_feet() == 1 ? pick("foot", "sole") : pick("feet", "soles")]."
 									else
 										message = "squirts on the floor!"
 								else
 									if(partner.has_feet())
-										message = "squirts on \the <b>[partner]</b>'s [last_lewd_datum.require_target_num_feet == 1 ? pick("foot", "sole") : pick("feet", "soles")]."
+										message = "squirts on \the <b>[partner_name]</b>'s [last_lewd_datum.require_target_num_feet == 1 ? pick("foot", "sole") : pick("feet", "soles")]."
 									else
 										message = "squirts on the floor!"
 							//weird shit goes here
 							if(CUM_TARGET_EARS)
 								if(partner.has_ears())
-									message = "squirts on \the <b>[partner]</b>'s ear."
+									message = "squirts on \the <b>[partner_name]</b>'s ear."
 								else
-									message = "squirts on \the <b>[partner]</b>'s earsocket."
+									message = "squirts on \the <b>[partner_name]</b>'s earsocket."
 								cumin = TRUE
 							if(CUM_TARGET_EYES)
 								if(partner.has_eyes())
-									message = "squirts on \the <b>[partner]</b>'s eyeball."
+									message = "squirts on \the <b>[partner_name]</b>'s eyeball."
 								else
-									message = "squirts on \the <b>[partner]</b>'s eyesocket."
+									message = "squirts on \the <b>[partner_name]</b>'s eyesocket."
 								cumin = TRUE
 							//
 							if(CUM_TARGET_PENIS)
 								var/has_penis = partner.has_penis()
 								if(has_penis == TRUE || has_penis == HAS_EXPOSED_GENITAL)
-									message = "squirts on \the <b>[partner]</b>'s penis"
+									message = "squirts on \the <b>[partner_name]</b>'s penis"
 								else
 									message = "squirts on the floor!"
 							else
@@ -666,15 +679,27 @@
 			var/did_anything = TRUE
 			switch(last_genital.type)
 				if(/obj/item/organ/genital/penis)
-					message = "cums into \the <b>[partner]</b>!"
+					message = "cums into \the <b>[partner_name]</b>!"
 				if(/obj/item/organ/genital/vagina)
-					message = "squirts into \the <b>[partner]</b>!"
+					message = "squirts into \the <b>[partner_name]</b>!"
 				else
 					did_anything = FALSE
 			if(did_anything)
 				LAZYADD(obscure_to, src)
 	if(!message) //todo: better self cum messages
 		message = "cums all over themselves!"
+
+	if(partner_carbon_check && cumin)
+		switch(target_orifice)
+			if(CUM_TARGET_VAGINA)
+				target_gen = c_partner.getorganslot(ORGAN_SLOT_VAGINA)
+			if(CUM_TARGET_ANUS)
+				target_gen = c_partner.getorganslot(ORGAN_SLOT_ANUS)
+			if(CUM_TARGET_BREASTS)
+				target_gen = c_partner.getorganslot(ORGAN_SLOT_BREASTS)
+			if(CUM_TARGET_PENIS)
+				target_gen = c_partner.getorganslot(ORGAN_SLOT_PENIS)
+
 	if(gender == MALE)
 		playlewdinteractionsound(loc, pick('modular_sand/sound/interactions/final_m1.ogg',
 							'modular_sand/sound/interactions/final_m2.ogg',
@@ -697,7 +722,7 @@
 			else if(istype(partner, /obj/item/reagent_containers))
 				H.mob_fill_container(last_genital, partner, 0)
 			else
-				H.mob_climax(TRUE, "sex", partner, !cumin, target_gen)
+				H.mob_climax(TRUE, "sex", partner, !cumin, target_gen, anonymous)
 	set_lust(0)
 
 	SEND_SIGNAL(src, COMSIG_MOB_POST_CAME, target_orifice, partner, cumin, last_genital)
@@ -741,8 +766,8 @@
 				txt = copytext(A.name, 1, length(A.name))
 			return txt
 
-///Handles the sex, if cumming returns true.
-/mob/living/proc/handle_post_sex(amount, orifice, mob/living/partner)
+/// Handles the sex, if cumming returns true.
+/mob/living/proc/handle_post_sex(amount, orifice, mob/living/partner, organ = null, cum_inside = FALSE, anonymous = FALSE) //SPLURT EDIT - extra argument `cum_inside` and `anonymous`
 	if(stat != CONSCIOUS)
 		return FALSE
 
@@ -756,7 +781,7 @@
 			moan()
 			return FALSE
 		if(lust >= (lust_tolerance * 3))
-			if(cum(partner, orifice))
+			if(cum(partner, orifice, cum_inside, anonymous)) //SPLURT EDIT - extra argument `cum_inside` and `anonymous`
 				return TRUE
 	return FALSE
 

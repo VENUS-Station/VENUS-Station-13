@@ -1,0 +1,1901 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/turf/template_noop,
+/area/template_noop)
+"ad" = (
+/obj/structure/flora/ausbushes/leafybush,
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"ae" = (
+/obj/structure/table,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/stack/cable_coil,
+/obj/item/storage/box/lights/mixed,
+/turf/open/floor/plating,
+/area/ruin/lavaland/powered/beach)
+"af" = (
+/obj/structure/table,
+/obj/item/clothing/mask/gas,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/clothing/glasses/sunglasses/big,
+/obj/item/clothing/glasses/sunglasses/big,
+/obj/item/clothing/glasses/sunglasses/big,
+/turf/open/floor/plating,
+/area/ruin/lavaland/powered/beach)
+"ag" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/open/floor/plating,
+/area/ruin/lavaland/powered/beach)
+"ah" = (
+/obj/effect/mob_spawn/human/bartender/alive,
+/turf/open/floor/plating,
+/area/ruin/lavaland/powered/beach)
+"ai" = (
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/item/tank/internals/oxygen,
+/turf/open/floor/plating,
+/area/ruin/lavaland/powered/beach)
+"aj" = (
+/turf/closed/wall/mineral/sandstone,
+/area/ruin/lavaland/powered/beach)
+"ak" = (
+/obj/structure/toilet,
+/obj/effect/turf_decal/sand,
+/obj/item/reagent_containers/food/drinks/beer/light{
+	pixel_x = 9
+	},
+/obj/effect/decal/cleanable/vomit/old,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/ruin/lavaland/powered/beach)
+"al" = (
+/obj/structure/urinal{
+	pixel_y = 32
+	},
+/turf/open/floor/plating,
+/area/ruin/lavaland/powered/beach)
+"am" = (
+/obj/structure/urinal{
+	pixel_y = 32
+	},
+/obj/effect/turf_decal/sand,
+/turf/open/floor/plating,
+/area/ruin/lavaland/powered/beach)
+"an" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/portable_atmospherics/scrubber,
+/turf/open/floor/plating,
+/area/ruin/lavaland/powered/beach)
+"ao" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/effect/turf_decal/sand,
+/obj/structure/mirror{
+	pixel_x = 28
+	},
+/turf/open/floor/plating,
+/area/ruin/lavaland/powered/beach)
+"ap" = (
+/obj/structure/flora/ausbushes/sparsegrass,
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"aq" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/obj/structure/closet,
+/obj/item/stack/sheet/metal/twenty,
+/turf/open/floor/plating,
+/area/ruin/lavaland/powered/beach)
+"ar" = (
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"as" = (
+/turf/open/floor/plating,
+/area/ruin/lavaland/powered/beach)
+"at" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/open/floor/plating,
+/area/ruin/lavaland/powered/beach)
+"au" = (
+/obj/effect/turf_decal/sand,
+/turf/open/floor/plating,
+/area/ruin/lavaland/powered/beach)
+"av" = (
+/obj/machinery/door/airlock/sandstone{
+	name = "Lavatory"
+	},
+/turf/open/floor/plating,
+/area/ruin/lavaland/powered/beach)
+"aw" = (
+/obj/machinery/door/airlock/sandstone{
+	name = "Bar Storage"
+	},
+/turf/open/floor/wood,
+/area/ruin/lavaland/powered/beach)
+"ax" = (
+/obj/structure/extinguisher_cabinet,
+/turf/closed/wall/mineral/sandstone,
+/area/ruin/lavaland/powered/beach)
+"ay" = (
+/obj/effect/turf_decal/sand,
+/obj/machinery/door/airlock/sandstone{
+	name = "Restroom"
+	},
+/turf/open/floor/plating,
+/area/ruin/lavaland/powered/beach)
+"az" = (
+/obj/machinery/autolathe,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/ruin/lavaland/powered/beach)
+"aA" = (
+/obj/effect/turf_decal/sand,
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"aB" = (
+/obj/effect/turf_decal/stripes/asteroid/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/sand,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"aC" = (
+/turf/open/floor/wood,
+/area/ruin/lavaland/powered/beach)
+"aD" = (
+/obj/structure/table,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/chem_dispenser/drinks,
+/turf/open/floor/wood,
+/area/ruin/lavaland/powered/beach)
+"aE" = (
+/obj/structure/table,
+/obj/machinery/reagentgrinder,
+/turf/open/floor/wood,
+/area/ruin/lavaland/powered/beach)
+"aF" = (
+/obj/machinery/vending/boozeomat{
+	req_access_txt = "0";
+	set_obj_flags = "EMAGGED"
+	},
+/turf/open/floor/wood,
+/area/ruin/lavaland/powered/beach)
+"aH" = (
+/obj/structure/table,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/book/manual/wiki/barman_recipes,
+/obj/item/book/granter/action/drink_fling,
+/obj/item/reagent_containers/food/drinks/shaker,
+/obj/item/reagent_containers/rag,
+/turf/open/floor/wood,
+/area/ruin/lavaland/powered/beach)
+"aI" = (
+/obj/structure/table,
+/obj/machinery/microwave,
+/turf/open/floor/wood,
+/area/ruin/lavaland/powered/beach)
+"aJ" = (
+/obj/effect/turf_decal/stripes/asteroid/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/sand,
+/obj/structure/reagent_dispensers/keg/aphro/strong,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"aK" = (
+/obj/effect/turf_decal/sand,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"aM" = (
+/obj/structure/reagent_dispensers/beerkeg{
+	reagent_id = /datum/reagent/consumable/ethanol/beer/light
+	},
+/turf/open/floor/wood,
+/area/ruin/lavaland/powered/beach)
+"aN" = (
+/obj/machinery/vending/cigarette/beach,
+/obj/effect/turf_decal/sand,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"aO" = (
+/obj/structure/weightmachine/stacklifter,
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"aP" = (
+/obj/structure/table/wood,
+/obj/item/radio,
+/turf/open/floor/wood,
+/area/ruin/lavaland/powered/beach)
+"aQ" = (
+/obj/structure/table/wood,
+/obj/item/flashlight/lamp,
+/turf/open/floor/wood,
+/area/ruin/lavaland/powered/beach)
+"aR" = (
+/obj/structure/table/wood,
+/obj/item/reagent_containers/food/drinks/bottle/tequila,
+/turf/open/floor/wood,
+/area/ruin/lavaland/powered/beach)
+"aS" = (
+/obj/machinery/processor,
+/turf/open/floor/wood,
+/area/ruin/lavaland/powered/beach)
+"aT" = (
+/obj/machinery/vending/cola,
+/obj/effect/turf_decal/sand,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"aU" = (
+/obj/effect/overlay/palmtree_l,
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"aV" = (
+/obj/effect/mob_spawn/human/beach/alive,
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"aW" = (
+/obj/structure/chair/stool,
+/obj/effect/turf_decal/stripes/asteroid/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/sand,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"aX" = (
+/obj/structure/closet/secure_closet/freezer/meat,
+/turf/open/floor/wood,
+/area/ruin/lavaland/powered/beach)
+"aY" = (
+/obj/machinery/vending/snack,
+/obj/effect/turf_decal/sand,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"aZ" = (
+/obj/effect/overlay/coconut,
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"bb" = (
+/obj/structure/weightmachine/weightlifter,
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"bc" = (
+/obj/machinery/door/airlock/sandstone{
+	name = "Bar Access"
+	},
+/obj/effect/turf_decal/sand,
+/turf/open/floor/wood,
+/area/ruin/lavaland/powered/beach)
+"bd" = (
+/obj/structure/closet/secure_closet/freezer/kitchen{
+	req_access = null
+	},
+/turf/open/floor/wood,
+/area/ruin/lavaland/powered/beach)
+"be" = (
+/turf/open/pool,
+/area/ruin/lavaland/powered/beach)
+"bg" = (
+/obj/structure/sign/barsign,
+/turf/closed/wall/mineral/sandstone,
+/area/ruin/lavaland/powered/beach)
+"bl" = (
+/obj/effect/turf_decal/caution,
+/obj/effect/turf_decal/sand,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"bx" = (
+/obj/structure/flora/rock,
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"bz" = (
+/mob/living/simple_animal/crab,
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"bA" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/item/bikehorn/airhorn,
+/obj/structure/table/wood,
+/obj/item/storage/firstaid,
+/obj/item/storage/firstaid/brute,
+/obj/item/melee/classic_baton,
+/turf/open/floor/wood,
+/area/ruin/lavaland/powered/beach)
+"bB" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	layer = 2.9
+	},
+/obj/structure/chair/stool,
+/turf/open/floor/wood,
+/area/ruin/lavaland/powered/beach)
+"bE" = (
+/obj/item/reagent_containers/spray/spraytan,
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"bF" = (
+/obj/item/toy/beach_ball,
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"bG" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/item/megaphone,
+/turf/open/floor/wood,
+/area/ruin/lavaland/powered/beach)
+"bH" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/effect/mob_spawn/human/beach/alive/lifeguard,
+/turf/open/floor/wood,
+/area/ruin/lavaland/powered/beach)
+"bJ" = (
+/obj/structure/chair,
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"bK" = (
+/obj/item/storage/backpack/duffelbag,
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"bL" = (
+/obj/effect/turf_decal/sand{
+	density = 1
+	},
+/obj/effect/decal/fakelattice,
+/turf/open/floor/pod/light{
+	density = 1
+	},
+/area/ruin/lavaland/powered/beach)
+"bM" = (
+/turf/open/floor/plasteel/stairs/old,
+/area/ruin/lavaland/powered/beach)
+"bN" = (
+/obj/structure/flora/ausbushes/reedbush,
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"bO" = (
+/obj/item/camera,
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"bP" = (
+/obj/item/reagent_containers/food/drinks/beer/light,
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"bQ" = (
+/obj/structure/flora/ausbushes/reedbush,
+/turf/open/floor/plating/beach/coastline_t,
+/area/ruin/lavaland/powered/beach)
+"bR" = (
+/turf/open/floor/plating/beach/coastline_t,
+/area/ruin/lavaland/powered/beach)
+"bS" = (
+/obj/structure/flora/ausbushes/sparsegrass,
+/turf/open/floor/plating/beach/coastline_t,
+/area/ruin/lavaland/powered/beach)
+"bT" = (
+/turf/open/floor/plating/beach/coastline_b,
+/area/ruin/lavaland/powered/beach)
+"bU" = (
+/turf/open/floor/plating/beach/water,
+/area/ruin/lavaland/powered/beach)
+"bV" = (
+/obj/structure/flora/ausbushes/stalkybush,
+/turf/open/floor/plating/beach/water,
+/area/ruin/lavaland/powered/beach)
+"bW" = (
+/turf/closed/wall/r_wall,
+/area/ruin/lavaland/powered/beach)
+"cd" = (
+/obj/structure/table,
+/obj/item/storage/box/drinkingglasses,
+/obj/item/storage/box/drinkingglasses,
+/obj/item/storage/box/beakers,
+/obj/item/storage/box/donkpockets,
+/obj/item/soap,
+/turf/open/floor/plating,
+/area/ruin/lavaland/powered/beach)
+"ce" = (
+/obj/effect/turf_decal/sand,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/closet/secure_closet/personal,
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"cg" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"ch" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"cj" = (
+/obj/effect/turf_decal/stripes/asteroid/line{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/turf_decal/sand,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"cs" = (
+/obj/effect/overlay/palmtree_l,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"ct" = (
+/obj/machinery/light,
+/turf/open/floor/plating/beach/water,
+/area/ruin/lavaland/powered/beach)
+"cR" = (
+/obj/structure/table/wood,
+/obj/item/tank/internals/oxygen,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/tank/internals/oxygen,
+/obj/item/pickaxe/drill,
+/obj/item/pickaxe/drill,
+/obj/item/flashlight/lantern,
+/turf/open/floor/pod/dark,
+/area/ruin/lavaland/powered/beach)
+"dw" = (
+/obj/machinery/door/airlock/sandstone{
+	name = "Beach Access"
+	},
+/turf/open/floor/pod/dark,
+/area/ruin/lavaland/powered/beach)
+"fh" = (
+/turf/open/floor/plasteel/yellowsiding{
+	dir = 8
+	},
+/area/ruin/lavaland/powered/beach)
+"fr" = (
+/obj/effect/turf_decal/sand,
+/obj/structure/railing/corner{
+	dir = 4
+	},
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"fY" = (
+/obj/effect/spawner/structure/window/reinforced/indestructable{
+	desc = "These windows seem protected by a radical energy."
+	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "beach";
+	name = "Dome shutters"
+	},
+/turf/open/floor/plating,
+/area/ruin/lavaland/powered/beach)
+"gg" = (
+/obj/machinery/pool/controller,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"gt" = (
+/turf/open/floor/plasteel/yellowsiding/corner,
+/area/ruin/lavaland/powered/beach)
+"hv" = (
+/obj/item/stack/sheet/metal/fifty,
+/turf/open/floor/plating,
+/area/ruin/lavaland/powered/beach)
+"hY" = (
+/obj/structure/table,
+/obj/machinery/chem_dispenser/drinks/beer,
+/turf/open/floor/wood,
+/area/ruin/lavaland/powered/beach)
+"iv" = (
+/obj/structure/fluff/beach_umbrella/security,
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"iw" = (
+/obj/machinery/light/small{
+	brightness = 3;
+	dir = 8
+	},
+/turf/open/floor/pod/dark,
+/area/ruin/lavaland/powered/beach)
+"jF" = (
+/obj/effect/turf_decal/sand,
+/turf/open/floor/pod/dark,
+/area/ruin/lavaland/powered/beach)
+"kd" = (
+/obj/effect/turf_decal/sand,
+/obj/structure/table/wood,
+/obj/item/reagent_containers/spray/spraytan,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"kp" = (
+/obj/vehicle/ridden/scooter/skateboard{
+	dir = 4
+	},
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"lf" = (
+/obj/effect/turf_decal/sand,
+/obj/machinery/door/airlock/sandstone{
+	name = "Beach Access"
+	},
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"lF" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/pod/dark{
+	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+	},
+/area/ruin/lavaland/powered/beach)
+"lM" = (
+/obj/structure/dresser,
+/turf/open/floor/pod/dark,
+/area/ruin/lavaland/powered/beach)
+"lP" = (
+/obj/effect/turf_decal/sand,
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"mg" = (
+/obj/effect/turf_decal/sand,
+/obj/structure/chair{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"mh" = (
+/obj/effect/spawner/structure/window,
+/turf/open/floor/plating,
+/area/ruin/lavaland/powered/beach)
+"oK" = (
+/obj/effect/turf_decal/caution{
+	dir = 1
+	},
+/obj/effect/turf_decal/sand,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"oM" = (
+/obj/structure/bonfire/dense,
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"oN" = (
+/obj/effect/turf_decal/sand,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"oW" = (
+/obj/structure/bed{
+	dir = 1
+	},
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"pa" = (
+/obj/structure/bed,
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"pg" = (
+/obj/effect/turf_decal/sand,
+/obj/machinery/shower{
+	dir = 4
+	},
+/turf/open/floor/pod/light,
+/area/ruin/lavaland/powered/beach)
+"pI" = (
+/obj/machinery/door/airlock/hatch{
+	name = "Lava Beach Club"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/pod/dark,
+/area/ruin/lavaland/powered/beach)
+"pU" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/pod/dark,
+/area/ruin/lavaland/powered/beach)
+"qa" = (
+/obj/effect/turf_decal/sand,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/pod/dark,
+/area/ruin/lavaland/powered/beach)
+"qT" = (
+/obj/machinery/shower{
+	dir = 8
+	},
+/turf/open/floor/pod/light,
+/area/ruin/lavaland/powered/beach)
+"rV" = (
+/obj/effect/turf_decal/sand,
+/obj/item/reagent_containers/food/drinks/beer/light{
+	pixel_x = -9;
+	pixel_y = -3
+	},
+/turf/open/floor/plating,
+/area/ruin/lavaland/powered/beach)
+"sy" = (
+/obj/effect/turf_decal/caution{
+	dir = 4
+	},
+/obj/effect/turf_decal/sand,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"sO" = (
+/obj/machinery/jukebox/disco/indestructible,
+/turf/open/floor/light/colour_cycle,
+/area/ruin/lavaland/powered/beach)
+"sP" = (
+/obj/effect/turf_decal/stripes/asteroid/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/sand,
+/obj/structure/closet/secure_closet/personal,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"vl" = (
+/obj/structure/closet/athletic_mixed,
+/turf/open/floor/pod/dark,
+/area/ruin/lavaland/powered/beach)
+"vr" = (
+/obj/item/toy/poolnoodle/blue,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"wY" = (
+/turf/open/floor/pod/light,
+/area/ruin/lavaland/powered/beach)
+"yp" = (
+/obj/effect/turf_decal/sand,
+/obj/structure/chair{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"yZ" = (
+/turf/open/floor/plasteel/yellowsiding{
+	dir = 4
+	},
+/area/ruin/lavaland/powered/beach)
+"zw" = (
+/obj/structure/closet/athletic_mixed,
+/obj/effect/turf_decal/sand,
+/turf/open/floor/pod/dark,
+/area/ruin/lavaland/powered/beach)
+"zQ" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/dresser,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"Ae" = (
+/turf/open/floor/plasteel/yellowsiding,
+/area/ruin/lavaland/powered/beach)
+"Bl" = (
+/obj/effect/turf_decal/sand,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"BI" = (
+/obj/structure/pool/Rboard,
+/turf/open/floor/plasteel/yellowsiding{
+	dir = 8
+	},
+/area/ruin/lavaland/powered/beach)
+"Ec" = (
+/obj/machinery/door/airlock/sandstone{
+	name = "Beach Access"
+	},
+/obj/effect/turf_decal/sand,
+/turf/open/floor/pod/dark,
+/area/ruin/lavaland/powered/beach)
+"Fm" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/pod/dark{
+	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+	},
+/area/ruin/lavaland/powered/beach)
+"Ga" = (
+/obj/effect/turf_decal/caution{
+	dir = 8
+	},
+/obj/effect/turf_decal/sand,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"Gc" = (
+/obj/effect/turf_decal/sand,
+/turf/open/floor/pod/light,
+/area/ruin/lavaland/powered/beach)
+"Gk" = (
+/obj/structure/closet/wardrobe/mixed,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"Gu" = (
+/obj/structure/table/wood,
+/obj/item/reagent_containers/food/drinks/beer/light,
+/obj/item/gps/mining{
+	gpstag = "BEACH0"
+	},
+/obj/machinery/button/door{
+	id = "beach";
+	name = "Dome shutter control";
+	pixel_x = -22
+	},
+/turf/open/floor/wood,
+/area/ruin/lavaland/powered/beach)
+"HC" = (
+/obj/structure/rack,
+/obj/item/clothing/shoes/sandal,
+/obj/item/clothing/shoes/sandal,
+/obj/effect/turf_decal/sand,
+/turf/open/floor/pod/dark,
+/area/ruin/lavaland/powered/beach)
+"HE" = (
+/obj/item/toy/poolnoodle/yellow,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"Ii" = (
+/obj/effect/turf_decal/sand,
+/obj/machinery/vending/kink,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"Im" = (
+/turf/open/floor/plasteel/yellowsiding/corner{
+	dir = 8
+	},
+/area/ruin/lavaland/powered/beach)
+"IQ" = (
+/turf/open/floor/plasteel/yellowsiding{
+	dir = 1
+	},
+/area/ruin/lavaland/powered/beach)
+"Jd" = (
+/obj/machinery/light,
+/turf/open/floor/plasteel/yellowsiding/corner{
+	dir = 4
+	},
+/area/ruin/lavaland/powered/beach)
+"Jn" = (
+/obj/machinery/pool/drain,
+/turf/open/pool,
+/area/ruin/lavaland/powered/beach)
+"Kv" = (
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"KO" = (
+/obj/effect/turf_decal/sand,
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"Lj" = (
+/obj/structure/fluff/beach_umbrella,
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"LF" = (
+/obj/effect/turf_decal/sand,
+/obj/structure/table/wood,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"Mx" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/pod/dark{
+	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+	},
+/area/ruin/lavaland/powered/beach)
+"NC" = (
+/obj/item/clothing/neck/necklace/dope,
+/obj/item/clothing/head/collectable/petehat,
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"OF" = (
+/obj/effect/turf_decal/sand,
+/obj/structure/railing/corner{
+	dir = 1
+	},
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"Qj" = (
+/obj/effect/turf_decal/stripes/asteroid/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/sand,
+/obj/machinery/vending/autodrobe/all_access,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"Qz" = (
+/obj/structure/closet/crate/bin,
+/obj/item/tank/internals/emergency_oxygen,
+/obj/item/trash/candy,
+/obj/item/toy/talking/owl,
+/obj/effect/turf_decal/stripes/asteroid/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/sand,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"QS" = (
+/obj/effect/turf_decal/sand,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"Rg" = (
+/obj/structure/pool/Lboard,
+/turf/open/pool,
+/area/ruin/lavaland/powered/beach)
+"St" = (
+/turf/open/floor/plasteel/yellowsiding/corner{
+	dir = 1
+	},
+/area/ruin/lavaland/powered/beach)
+"SS" = (
+/obj/effect/turf_decal/sand,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"TP" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/pod/dark{
+	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+	},
+/area/ruin/lavaland/powered/beach)
+"Uj" = (
+/turf/open/floor/plasteel/yellowsiding{
+	dir = 10
+	},
+/area/ruin/lavaland/powered/beach)
+"Uv" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/item/toy/poolnoodle/red,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/powered/beach)
+"VO" = (
+/turf/open/floor/pod/dark,
+/area/ruin/lavaland/powered/beach)
+"Xp" = (
+/obj/effect/turf_decal/sand,
+/obj/machinery/light/small{
+	brightness = 3;
+	dir = 8
+	},
+/turf/open/floor/pod/dark,
+/area/ruin/lavaland/powered/beach)
+"XH" = (
+/obj/machinery/pool/filter{
+	pixel_y = 16
+	},
+/turf/open/pool,
+/area/ruin/lavaland/powered/beach)
+"Yn" = (
+/obj/structure/flora/ausbushes/sunnybush,
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+"YP" = (
+/obj/structure/pool/ladder{
+	dir = 8;
+	pixel_x = 4
+	},
+/turf/open/pool,
+/area/ruin/lavaland/powered/beach)
+"Zs" = (
+/obj/effect/overlay/palmtree_r,
+/turf/open/floor/plating/beach/sand,
+/area/ruin/lavaland/powered/beach)
+
+(1,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+bW
+aa
+bW
+lF
+bW
+bW
+bW
+bW
+pI
+bW
+pI
+bW
+bW
+bW
+bW
+lF
+bW
+aa
+bW
+aa
+aa
+aa
+aa
+aa
+"}
+(2,1,1) = {"
+aa
+aa
+aa
+aa
+bW
+bW
+bW
+fY
+bW
+bW
+bW
+bW
+vl
+iw
+wY
+pg
+wY
+Xp
+cR
+bW
+bW
+bW
+bW
+fY
+bW
+bW
+aa
+aa
+aa
+aa
+"}
+(3,1,1) = {"
+aa
+aa
+aa
+bW
+bW
+bW
+bW
+ap
+cg
+ar
+ad
+bW
+HC
+VO
+Gc
+Gc
+wY
+VO
+lM
+bW
+ad
+bQ
+bT
+bU
+bW
+bW
+bW
+aa
+aa
+aa
+"}
+(4,1,1) = {"
+aa
+aa
+bW
+bW
+bW
+ap
+Yn
+ar
+ar
+Zs
+ar
+bW
+mh
+mh
+bW
+dw
+bW
+mh
+mh
+bW
+ap
+bR
+bT
+bU
+ct
+bW
+bW
+bW
+aa
+aa
+"}
+(5,1,1) = {"
+aa
+bW
+bW
+bW
+bW
+ar
+ar
+aO
+bE
+bb
+ar
+cg
+ar
+ar
+Bl
+aA
+Bl
+ar
+ar
+cg
+bN
+bR
+bT
+bU
+bU
+bU
+bW
+bW
+bW
+aa
+"}
+(6,1,1) = {"
+aa
+bW
+bW
+aq
+bW
+ar
+ar
+NC
+aV
+ar
+ar
+ar
+ar
+ar
+ar
+ar
+ar
+bz
+ar
+bJ
+ar
+bS
+bT
+bU
+bU
+bU
+bU
+bW
+bW
+aa
+"}
+(7,1,1) = {"
+bW
+bW
+bW
+as
+bW
+ar
+ar
+aO
+ar
+bb
+ar
+ar
+ar
+aU
+aZ
+ar
+ar
+ar
+ar
+aV
+ar
+bR
+bT
+bU
+bU
+bU
+ct
+bW
+bW
+bW
+"}
+(8,1,1) = {"
+bW
+bW
+az
+as
+bW
+ar
+ar
+ar
+ar
+ar
+ar
+ar
+ar
+ar
+ar
+ar
+ar
+ar
+ar
+bJ
+bE
+bR
+bT
+bU
+bU
+bU
+bU
+bU
+bW
+bW
+"}
+(9,1,1) = {"
+bW
+bW
+cd
+as
+bW
+ce
+aA
+aA
+aA
+aA
+aA
+SS
+SS
+fr
+ar
+ar
+ar
+ap
+ar
+Lj
+bO
+bR
+bT
+bU
+bU
+bU
+bU
+bU
+fY
+aa
+"}
+(10,1,1) = {"
+bW
+bW
+ae
+as
+bW
+sP
+aK
+aK
+aK
+aK
+aK
+aK
+yp
+lP
+ar
+ar
+ap
+bx
+ar
+bJ
+ar
+bR
+bT
+bU
+bU
+bV
+bU
+bU
+fY
+aa
+"}
+(11,1,1) = {"
+bW
+bW
+af
+as
+aj
+aj
+aj
+aj
+Qj
+aK
+aK
+aK
+kd
+lP
+ar
+ar
+ar
+ar
+ar
+bP
+ar
+bR
+bT
+bU
+bU
+bU
+bU
+bU
+bW
+bW
+"}
+(12,1,1) = {"
+bW
+bW
+ag
+as
+aw
+aC
+aC
+Gu
+aW
+aK
+Ga
+aK
+mg
+lP
+ar
+ar
+ap
+ar
+ar
+bJ
+ar
+bR
+bT
+bU
+bU
+bU
+bU
+ct
+bW
+bW
+"}
+(13,1,1) = {"
+bW
+bW
+ah
+as
+aj
+aD
+aC
+aQ
+aW
+oK
+sO
+bl
+aK
+lP
+ar
+bx
+ar
+ar
+ar
+bK
+ar
+bR
+bT
+bU
+bU
+bU
+bU
+bU
+bW
+bW
+"}
+(14,1,1) = {"
+bW
+bW
+ai
+at
+ax
+hY
+aC
+aP
+aW
+aK
+sy
+aK
+yp
+lP
+ar
+ap
+ar
+ar
+ar
+bJ
+ar
+bR
+bT
+bU
+bU
+bU
+bU
+bU
+bW
+Mx
+"}
+(15,1,1) = {"
+bW
+bW
+aj
+aj
+aj
+aF
+aC
+aR
+aW
+aK
+aK
+aK
+LF
+lP
+ar
+ar
+ar
+ar
+bE
+Lj
+ar
+bR
+bT
+bU
+bU
+bU
+bU
+bU
+bW
+bW
+"}
+(16,1,1) = {"
+bW
+bW
+ak
+rV
+aj
+aE
+aC
+aj
+aj
+bc
+aj
+cj
+mg
+lP
+ar
+ar
+ar
+ar
+ar
+bJ
+ar
+bR
+bT
+bU
+bU
+bU
+bU
+bU
+bW
+bW
+"}
+(17,1,1) = {"
+bW
+bW
+aj
+av
+aj
+aH
+aC
+aC
+aC
+aC
+bg
+aB
+KO
+OF
+ar
+ar
+aU
+ar
+ar
+aV
+ar
+bR
+bT
+bU
+bV
+bU
+bU
+bU
+bW
+Fm
+"}
+(18,1,1) = {"
+bW
+bW
+al
+as
+aj
+aI
+aM
+aS
+aX
+bd
+aj
+aB
+aK
+aA
+ar
+aZ
+ar
+ar
+bF
+ar
+bz
+bR
+bT
+bU
+bU
+bU
+bU
+ct
+bW
+bW
+"}
+(19,1,1) = {"
+bW
+bW
+am
+hv
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+cj
+aK
+aA
+ar
+ar
+ar
+ar
+ch
+ar
+ar
+bR
+bT
+bU
+bU
+bU
+bU
+bU
+bW
+bW
+"}
+(20,1,1) = {"
+bW
+bW
+an
+au
+aj
+aJ
+aN
+aT
+aY
+Ii
+Qz
+aK
+aK
+aA
+ar
+ar
+ar
+bA
+bG
+bL
+ar
+bR
+bT
+bU
+bU
+bU
+bU
+bU
+bW
+bW
+"}
+(21,1,1) = {"
+bW
+bW
+ao
+au
+ay
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aA
+ar
+ar
+ar
+bB
+bH
+bM
+ar
+bR
+bT
+bU
+bU
+bU
+bU
+bU
+fY
+aa
+"}
+(22,1,1) = {"
+bW
+bW
+bW
+bW
+aj
+aj
+aj
+mh
+mh
+mh
+aj
+aj
+aA
+aA
+ar
+kp
+ar
+ar
+ar
+iv
+bP
+bR
+bT
+bU
+bU
+bU
+bV
+bU
+fY
+aa
+"}
+(23,1,1) = {"
+bW
+bW
+gg
+Kv
+gt
+yZ
+yZ
+yZ
+yZ
+yZ
+Jd
+aj
+oN
+oW
+ar
+oW
+ar
+Zs
+ar
+bJ
+ar
+bR
+bT
+bU
+bU
+bU
+bU
+bU
+bW
+bW
+"}
+(24,1,1) = {"
+bW
+bW
+bW
+Kv
+Ae
+XH
+be
+be
+be
+be
+IQ
+lf
+aA
+ar
+oM
+ar
+ar
+aZ
+ar
+ar
+ar
+bR
+bT
+bU
+bU
+bU
+ct
+bW
+bW
+bW
+"}
+(25,1,1) = {"
+aa
+bW
+bW
+zQ
+Ae
+YP
+be
+Jn
+be
+be
+IQ
+mh
+aA
+pa
+ar
+pa
+ar
+ar
+bz
+ar
+ar
+bS
+bT
+bU
+bU
+bU
+bU
+bW
+bW
+aa
+"}
+(26,1,1) = {"
+aa
+bW
+bW
+bW
+Im
+Uj
+be
+be
+Rg
+be
+IQ
+mh
+aA
+aA
+QS
+aA
+QS
+ar
+ar
+cs
+ar
+bR
+bT
+bU
+bU
+bU
+bW
+bW
+bW
+aa
+"}
+(27,1,1) = {"
+aa
+aa
+bW
+bW
+bW
+Im
+fh
+fh
+BI
+fh
+St
+bW
+mh
+mh
+bW
+Ec
+bW
+mh
+mh
+bW
+ap
+bR
+bT
+bU
+ct
+bW
+bW
+bW
+aa
+aa
+"}
+(28,1,1) = {"
+aa
+aa
+aa
+bW
+bW
+bW
+bW
+vr
+Uv
+HE
+Gk
+bW
+zw
+VO
+wY
+Gc
+Gc
+jF
+lM
+bW
+bN
+bR
+bT
+bU
+bW
+bW
+bW
+aa
+aa
+aa
+"}
+(29,1,1) = {"
+aa
+aa
+aa
+aa
+bW
+bW
+bW
+fY
+bW
+bW
+bW
+bW
+HC
+qa
+wY
+qT
+Gc
+pU
+cR
+bW
+bW
+bW
+bW
+fY
+bW
+bW
+aa
+aa
+aa
+aa
+"}
+(30,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+bW
+aa
+bW
+TP
+bW
+bW
+bW
+bW
+pI
+bW
+pI
+bW
+bW
+bW
+bW
+TP
+bW
+aa
+bW
+aa
+aa
+aa
+aa
+aa
+"}

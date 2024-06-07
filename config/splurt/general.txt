@@ -1,0 +1,35 @@
+# Enable global barks
+# Uncomment this to allow player's speech barks #
+ENABLE_GLOBAL_BARKS
+
+# Max number of infinidorms each mob can use
+# -1 for infinite, 0 to deactivate infinidorms as a whole
+MAX_INFINIDORMS 5
+
+# Weighted station traits
+# If uncommented, the server will pick random station traits according to their weight configuration
+WEIGHTED_STATION_TRAITS
+
+# Base amount of max save slots
+# Amount of character slots that players will have without modifiers being applied
+# default is 24
+#BASE_SAVE_SLOTS 24
+
+# SM delamination cooldown
+# Configures tha amount of rounds that need to pass from the previous delam for another to happen again
+# If commented or 0 will enable delaminations every round
+# If -1 disables delams indefinitely
+#SM_DELAMINATION_COOLDOWN 0
+
+# Protolathe access
+# Comment to make protolathes and mechfabs use their access locks
+PROTOLOCK_ALL_ACCESS
+
+# Character color limits
+# Uncomment to disallow players from making characters with colors that are too dark
+CHARACTER_COLOR_LIMITS
+
+# Jukebox song limit
+# Max amount of songs that can be added to the jukebox each round.
+# -1 or comment to unlimit
+#MAX_JUKEBOX_SONGS -1

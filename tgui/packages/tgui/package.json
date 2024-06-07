@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "name": "tgui",
+  "version": "4.3.0",
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "common": "workspace:*",
+    "dateformat": "^4.6.3",
+    "dompurify": "^2.4.7",
+    "inferno": "^7.4.11",
+    "inferno-vnode-flags": "^7.4.11",
+    "js-yaml": "^4.1.0",
+    "katex": "^0.15.6",
+    "marked": "^4.3.0",
+    "tgui-dev-server": "workspace:*",
+    "tgui-polyfill": "workspace:*"
+  }
+}

@@ -1,0 +1,5 @@
+author: Zattarra-Red
+delete-after: true
+changes:
+  - rscadd: Added anime eyes. Due to colouring limitations, this is a head marking.
+      This will likely not work well with eye shapes that are not the basic version.

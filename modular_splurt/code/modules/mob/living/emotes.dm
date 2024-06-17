@@ -1489,3 +1489,12 @@
 /datum/emote/living/audio/mrrp/run_emote(mob/user, params)
 	emote_sound = pick('modular_splurt/sound/voice/catpeople/cat_mrrp1.ogg', 'modular_splurt/sound/voice/catpeople/cat_mrrp2.ogg')
 	. = ..()
+
+/datum/emote/living/audio/gay
+	key = "gay"
+	key_third_person = "points at a player"
+	message = "saw something gay."
+	emote_sound = 'modular_splurt/sound/voice/gay-echo.ogg'
+	emote_cooldown = 0.95 SECONDS
+	emote_pitch_variance = FALSE
+

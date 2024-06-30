@@ -1,4 +1,0 @@
-author: Fabian272
-delete-after: true
-changes:
-  - bugfix: The colored jackets no longer force plantigrade legs on digitigrades.

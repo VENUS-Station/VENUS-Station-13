@@ -1,0 +1,6 @@
+author: Anonymous
+delete-after: true
+changes:
+  - rscadd: 'Mememotes: *flabbergast, *sadness.'
+  - rscadd: Added custom holographic pin with basic selection, available in loadout
+      - accessories and at clothesmate.

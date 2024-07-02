@@ -39,6 +39,7 @@
 		"purple"			= list("icon_state" = "pin_purple"),
 		"mute"				= list("icon_state" = "pin_mute"),
 		"xenophilia"		= list("icon_state" = "pin_xenophilia"),
+		"isolation"			= list("icon_state" = "pin_isolation"),
 		"peace"				= list("icon_state" = "pin_peace"),
 		"shy"				= list("icon_state" = "pin_shy"),
 		"sub"				= list("icon_state" = "pin_sub"),

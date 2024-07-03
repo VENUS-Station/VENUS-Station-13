@@ -1,7 +1,0 @@
-author: Anonymous
-delete-after: true
-changes:
-  - rscadd: Added MEKA variants.
-  - rscadd: Added K4T cyborgs. I think it's just tall, buff cat?
-  - tweak: Changes some default MEKA sprites. Few were kept with ported ones being
-      alternative.

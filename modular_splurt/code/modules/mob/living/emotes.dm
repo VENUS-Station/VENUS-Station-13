@@ -1486,9 +1486,13 @@
 	emote_cooldown = 0.8 SECONDS // mrrp mrrp meow
 	emote_pitch_variance = FALSE
 
-/datum/emote/living/audio/mrrp/run_emote(mob/user, params)
-	emote_sound = pick('modular_splurt/sound/voice/catpeople/cat_mrrp1.ogg', 'modular_splurt/sound/voice/catpeople/cat_mrrp2.ogg')
-	. = ..()
+/datum/emote/living/audio/mrrp2
+	key = "mrrp2"
+	key_third_person = "mrrps"
+	message = "trills like a cat!"
+	emote_sound = 'modular_splurt/sound/voice/catpeople/cat_mrrp2.ogg'
+	emote_cooldown = 0.8 SECONDS
+	emote_pitch_variance = FALSE
 
 /datum/emote/living/audio/gay
 	key = "gay"

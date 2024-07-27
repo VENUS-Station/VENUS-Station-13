@@ -31,3 +31,7 @@
       (your preferences have been automatically flipped to account for this)
   - tweak: Long strip menu is meant to be default on for sandstorm, and so it has
       been set so.
+2024-07-27:
+  Flvffi:
+  - imageadd: New Haydee Sprite for Service Job and fixes to mining, Engineering,
+      and Janitorial ones

@@ -70,9 +70,9 @@
 	ckeywhitelist = list()
 	donator_group_id = DONATOR_GROUP_TIER_1
 
-/datum/gear/donator/backpack/bdsm_whip
-	name = "BDSM Whip"
-	path = /obj/item/bdsm_whip
+/datum/gear/donator/backpack/riding_crop
+	name = "Riding Crop"
+	path = /obj/item/bdsm_whip/ridingcrop
 	ckeywhitelist = list()
 	donator_group_id = DONATOR_GROUP_TIER_1
 

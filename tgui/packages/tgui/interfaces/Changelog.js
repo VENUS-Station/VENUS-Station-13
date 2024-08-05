@@ -176,7 +176,7 @@ export class Changelog extends Component {
 
     const header = (
       <Section>
-        <h1>S.P.L.U.R.T. Station 13</h1>
+        <h1>V.E.N.U.S. Station 13</h1>
         <p>
           <b>Thanks to: </b>
           Citadel Station 13, /tg/station, Baystation 12, /vg/station,
@@ -187,11 +187,11 @@ export class Changelog extends Component {
         </p>
         <p>
           {'Current project maintainers can be found '}
-          <a href="https://github.com/SPLURT-Station/S.P.L.U.R.T-Station-13/graphs/contributors">
+          <a href="https://github.com/VENUS-Station/V.E.N.U.S-Station-13/graphs/contributors">
             here
           </a>
           {', recent GitHub contributors can be found '}
-          <a href="https://github.com/SPLURT-Station/S.P.L.U.R.T-Station-13/pulse/monthly">
+          <a href="https://github.com/VENUS-Station/V.E.N.U.S-Station-13/pulse/monthly">
             here
           </a>.
         </p>

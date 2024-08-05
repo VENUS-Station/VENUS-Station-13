@@ -4967,7 +4967,6 @@
 #include "modular_splurt\code\modules\mob\living\simple_animal\hostile\werewolves\funwolf.dm"
 #include "modular_splurt\code\modules\mob\living\simple_animal\hostile\werewolves\hellhound.dm"
 #include "modular_splurt\code\modules\mob\living\simple_animal\hostile\werewolves\icewolf.dm"
-#include "modular_splurt\code\modules\mob\living\simple_animal\hostile\werewolves\themosley.dm"
 #include "modular_splurt\code\modules\mob\living\simple_animal\hostile\werewolves\werewolf.dm"
 #include "modular_splurt\code\modules\paperwork\pen.dm"
 #include "modular_splurt\code\modules\power\cell.dm"

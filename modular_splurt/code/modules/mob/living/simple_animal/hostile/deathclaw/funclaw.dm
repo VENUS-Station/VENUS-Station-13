@@ -129,17 +129,8 @@
 			if(tearSlot(M, ITEM_SLOT_MASK))
 				return
 
-			// Abomination deathclaws do other stuff instead
-			if(deathclaw_mode == "abomination" && M.client?.prefs.unholypref == "Yes")
-				if(prob(1))
-					do_faceshit(M)
-				else
-					do_facefart(M)
-				handle_post_sex(25, null, M)
-				shake_camera(M, 6, 1)
-			else
-				I = SSinteractions.interactions["/datum/interaction/lewd/throatfuck"]
-				I.display_interaction(src, M)
+			I = SSinteractions.interactions["/datum/interaction/lewd/throatfuck"]
+			I.display_interaction(src, M)
 
 /mob/living/simple_animal/hostile/deathclaw/funclaw/cum(mob/living/M)
 

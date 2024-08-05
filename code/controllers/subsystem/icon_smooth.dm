@@ -40,3 +40,4 @@ SUBSYSTEM_DEF(icon_smooth)
 		CHECK_TICK
 
 	return ..()
+

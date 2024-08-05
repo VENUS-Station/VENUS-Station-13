@@ -282,7 +282,7 @@
 		H.adjustFireLoss(-0.25, forced = TRUE, only_organic = FALSE)
 	/* Doesn't heal robotic toxin damage (only_organic = FALSE not needed for tox),
 	another adjustToxLoss check with toxins_type = TOX_SYSCORRUPT,
-	(or just adding TOX_OMNI to the already existing one) could be added to heal robotic corruption, 
+	(or just adding TOX_OMNI to the already existing one) could be added to heal robotic corruption,
 	but would make robotic species unbalanced.
 	*/
 	else if (H.getToxLoss() <= 90)

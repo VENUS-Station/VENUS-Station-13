@@ -120,3 +120,7 @@
 	path = /obj/item/clothing/suit/invisijacket
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
 	loadout_flags = LOADOUT_CAN_NAME | LOADOUT_CAN_DESCRIPTION
+
+/datum/gear/suit/suspenders
+	name = "Suspenders"
+	path = /obj/item/clothing/suit/suspenders

@@ -1,9 +1,9 @@
-## V.E.N.U.S. Station 13
-Based and maintained from V.E.N.U.S. Station.
+## VENUS Station 13
+Based and maintained from VENUS Station.
 
-[![CI Suite](https://github.com/VENUS-Station/V.E.N.U.S-Station-13/workflows/CI%20Suite/badge.svg)](https://github.com/VENUS-Station/V.E.N.U.S-Station-13//actions?query=workflow%3A%22CI+Suite%22)
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/VENUS-Station/V.E.N.U.S-Station-13.svg)](http://isitmaintained.com/project/VENUS-Station/V.E.N.U.S-Station-13 "Percentage of issues still open")
-[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/VENUS-Station/V.E.N.U.S-Station-13.svg)](http://isitmaintained.com/project/VENUS-Station/V.E.N.U.S-Station-13 "Average time to resolve an issue")
+[![CI Suite](https://github.com/VENUS-Station/VENUS-Station-13/workflows/CI%20Suite/badge.svg)](https://github.com/VENUS-Station/VENUS-Station-13//actions?query=workflow%3A%22CI+Suite%22)
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/VENUS-Station/VENUS-Station-13.svg)](http://isitmaintained.com/project/VENUS-Station/VENUS-Station-13 "Percentage of issues still open")
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/VENUS-Station/VENUS-Station-13.svg)](http://isitmaintained.com/project/VENUS-Station/VENUS-Station-13 "Average time to resolve an issue")
 
 [![forthebadge](http://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](https://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/pretty-risque.svg)](https://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](http://forthebadge.com) [![forinfinityandbyond](https://user-images.githubusercontent.com/5211576/29499758-4efff304-85e6-11e7-8267-62919c3688a9.gif)](https://www.reddit.com/r/SS13/comments/5oplxp/what_is_the_main_problem_with_byond_as_an_engine/dclbu1a)
 
@@ -28,8 +28,8 @@ Based and maintained from V.E.N.U.S. Station.
 * **Code:** <https://github.com/SandPoot/Sandstorm-Station-13>
 * **Discord:**  <https://discord.gg/quXTqa6cp9> (updated 19/01/2022)
 
-**V.E.N.U.S. Station Information**
-* **Code:** https://github.com/VENUS-Station/V.E.N.U.S-Station-13
+**VENUS Station Information**
+* **Code:** https://github.com/VENUS-Station/VENUS-Station-13
 * **Discord:** https://discord.gg/wynHVMzHzC
 * **Patreon:** https://www.patreon.com/VENUSstation13
 * **Ko-fi:** https://ko-fi.com/VENUS

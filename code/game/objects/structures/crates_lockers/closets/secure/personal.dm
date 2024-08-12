@@ -3,6 +3,7 @@
 	name = "personal closet"
 	req_access = list(ACCESS_ALL_PERSONAL_LOCKERS)
 	var/registered_name = null
+	door_anim_time = 0 // no animation
 
 /obj/structure/closet/secure_closet/personal/PopulateContents()
 	..()

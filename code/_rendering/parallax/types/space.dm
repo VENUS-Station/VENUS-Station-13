@@ -43,7 +43,7 @@
 
 /atom/movable/screen/parallax_layer/space/random
 	blend_mode = BLEND_OVERLAY
-	speed = 3
+	speed = 2
 	layer = 3
 	parallax_intensity = PARALLAX_INSANE
 
@@ -56,7 +56,7 @@
 /atom/movable/screen/parallax_layer/space/planet
 	icon_state = "planet"
 	blend_mode = BLEND_OVERLAY
-	absolute = TRUE //Status of seperation
+	absolute = FALSE //Status of seperation
 	speed = 3
 	layer = 30
 	dynamic_self_tile = FALSE

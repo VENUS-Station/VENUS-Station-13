@@ -335,6 +335,8 @@
 #define SLEEP_CHECK_DEATH(X) sleep(X); if(QDELETED(src) || stat == DEAD) return;
 #define INTERACTING_WITH(X, Y) (Y in X.do_afters)
 
+#define DOING_INTERACTION_WITH_TARGET(user, target) (LAZYACCESS(user.do_afters, target))
+
 // / Field of vision defines.
 #define FOV_90_DEGREES	90
 #define FOV_180_DEGREES	180

@@ -1,4 +1,0 @@
-author: CSDSP
-delete-after: true
-changes:
-  - bugfix: NTNet broadcast to all

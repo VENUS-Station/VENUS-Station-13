@@ -14,3 +14,8 @@
   - soundadd: Added new kissing sounds
   - soundadd: Added new moaning sounds
   - soundadd: Added new male climax sounds
+2024-08-18:
+  personlized:
+  - code_imp: replaced all "/datum/species/jelly/roundstartslime" with "/datum/species/jelly/slime/roundstartslime"
+  - code_imp: replaced all "/mob/living/carbon/human/species/roundstartslime" with
+      "/mob/living/carbon/human/species/slime/roundstartslime"

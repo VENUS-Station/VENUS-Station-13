@@ -1,6 +1,0 @@
-author: personlized
-delete-after: true
-changes:
-  - code_imp: replaced all "/datum/species/jelly/roundstartslime" with "/datum/species/jelly/slime/roundstartslime"
-  - code_imp: replaced all "/mob/living/carbon/human/species/roundstartslime" with
-      "/mob/living/carbon/human/species/slime/roundstartslime"

@@ -245,7 +245,7 @@
 		else
 			. += "uv"
 	else if(state_open)
-		if(stat & BROKEN)
+		if(machine_stat & BROKEN)
 			. += "broken"
 		else
 			. += "open"

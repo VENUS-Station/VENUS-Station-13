@@ -1,6 +1,0 @@
-author: CSDSP
-delete-after: true
-changes:
-  - bugfix: Rounding in Problem Computer easy algebra
-  - bugfix: Expected answer in Problem Computer line intersection
-  - refactor: removes duplicated code

@@ -20625,7 +20625,7 @@
 	dir = 8;
 	dwidth = 10;
 	height = 15;
-	id = "slaver_away";
+	shuttle_id = "slaver_away";
 	name = "slave trader hideout";
 	roundstart_template = /datum/map_template/shuttle/slaveship/basic;
 	width = 22

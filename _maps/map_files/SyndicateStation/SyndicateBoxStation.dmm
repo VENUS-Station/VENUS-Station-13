@@ -33930,7 +33930,7 @@
 "jdj" = (
 /obj/docking_port/stationary/random{
 	dir = 4;
-	id = "pod_lavaland3";
+	shuttle_id = "pod_lavaland3";
 	name = "lavaland"
 	},
 /turf/open/space,
@@ -61329,7 +61329,7 @@
 	dir = 8;
 	dwidth = 4;
 	height = 9;
-	id = "aux_base_zone";
+	shuttle_id = "aux_base_zone";
 	name = "aux base zone";
 	roundstart_template = /datum/map_template/shuttle/aux_base/default;
 	width = 9

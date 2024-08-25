@@ -48823,7 +48823,7 @@
 /area/icemoon/surface/outdoors)
 "tLA" = (
 /obj/machinery/button/flasher{
-	shuttle_id = "PCell 1";
+	id = "PCell 1";
 	pixel_y = -24
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{

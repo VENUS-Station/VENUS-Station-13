@@ -19483,7 +19483,7 @@
 /area/syndicate_mothership)
 "Sj" = (
 /obj/structure/table/wood,
-/obj/item/toy/prize/mauler{
+/obj/item/toy/mecha/mauler{
 	pixel_x = -3;
 	pixel_y = 14
 	},

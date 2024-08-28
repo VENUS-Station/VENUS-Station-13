@@ -2521,27 +2521,6 @@
 	preferred_direction = 4;
 	width = 33
 	},
-/obj{
-	name = "---Merge conflict marker---"
-	},
-/obj/machinery/door/airlock/external,
-/obj/structure/fans/tiny,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper,
-/obj/docking_port/mobile{
-	callTime = 250;
-	can_move_docking_ports = 1;
-	dheight = 0;
-	dir = 2;
-	dwidth = 11;
-	height = 17;
-	shuttle_id = "whiteship";
-	launch_status = 0;
-	movement_force = list("KNOCKDOWN" = 0, "THROW" = 0);
-	name = "Salvage Ship";
-	port_direction = 8;
-	preferred_direction = 4;
-	width = 33
-	},
 /turf/open/floor/plating,
 /area/shuttle/abandoned/crew)
 "zn" = (

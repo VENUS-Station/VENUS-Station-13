@@ -65503,28 +65503,6 @@
 /obj/effect/spawner/lootdrop/ai_module_neutral,
 /obj/effect/spawner/lootdrop/ai_module_harmless,
 /obj/effect/spawner/lootdrop/ai_module_lewd,
-/obj{
-	name = "---Merge conflict marker---"
-	},
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/obj/structure/table,
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
-	},
-/obj/item/ai_module/core/full/asimov,
-/obj/item/ai_module/core/full/custom,
-/obj/item/ai_module/core/freeformcore,
-/obj/structure/window/reinforced,
-/obj/machinery/door/window{
-	dir = 4;
-	name = "Core Modules";
-	req_access_txt = "20"
-	},
-/obj/effect/spawner/lootdrop/ai_module_neutral,
-/obj/effect/spawner/lootdrop/ai_module_harmless,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai_upload)
 "hpU" = (
@@ -70343,7 +70321,6 @@
 	},
 /area/maintenance/department/electrical)
 "qIN" = (
-/turf/open/floor/plating,
 /turf/open/floor/plating{
 	icon_state = "platingdmg2"
 	},

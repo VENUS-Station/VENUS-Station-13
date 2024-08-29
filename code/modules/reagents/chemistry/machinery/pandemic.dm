@@ -129,8 +129,8 @@
 	playsound(src, 'sound/machines/ping.ogg', 30, TRUE)
 
 /obj/machinery/computer/pandemic/update_icon_state()
-	if(stat & BROKEN)
-		icon_state = (beaker ? "pandemic1_b" : "pandemic0_b")
+	if(machine_stat & BROKEN)
+		icon_state = (beaker ? "mixer1_b" : "mixer0_b")
 	else
 		icon_state = "pandemic[(beaker) ? "1" : "0"][powered() ? "" : "_nopower"]"
 
@@ -240,7 +240,7 @@
 /obj/machinery/computer/pandemic/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/reagent_containers) && !(I.item_flags & ABSTRACT) && I.is_open_container())
 		. = TRUE //no afterattack
-		if(stat & (NOPOWER|BROKEN))
+		if(machine_stat & (NOPOWER|BROKEN))
 			return
 		var/obj/item/reagent_containers/B
 		if(beaker)

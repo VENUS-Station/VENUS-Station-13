@@ -255,12 +255,27 @@
 "aaU" = (
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai_upload)
+"aaV" = (
+/obj/structure/table,
+/obj/item/ai_module/supplied/quarantine,
+/obj/machinery/camera/motion,
+/obj/machinery/light{
+	dir = 1;
+	light_color = "#706891"
+	},
+/turf/open/floor/plasteel/dark,
+/area/ai_monitored/turret_protected/ai_upload)
 "aaW" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 1
 	},
 /turf/open/floor/festive/sidewalk,
 /area/edina/street/secondary/command)
+"aaX" = (
+/obj/structure/table,
+/obj/item/ai_module/reset,
+/turf/open/floor/plasteel/dark,
+/area/ai_monitored/turret_protected/ai_upload)
 "aaY" = (
 /obj/machinery/porta_turret/ai{
 	dir = 4
@@ -605,6 +620,17 @@
 /obj/item/assembly/signaler,
 /turf/open/floor/plasteel,
 /area/command/bridge)
+"abS" = (
+/obj/structure/table,
+/obj/item/ai_module/supplied/freeform,
+/obj/machinery/camera/motion{
+	c_tag = "MiniSat Foyer";
+	dir = 1;
+	network = list("minisat")
+	},
+/obj/machinery/light,
+/turf/open/floor/plasteel/dark,
+/area/ai_monitored/turret_protected/ai_upload)
 "abT" = (
 /obj/structure/table,
 /turf/open/floor/plasteel/dark,
@@ -34383,18 +34409,6 @@
 	},
 /turf/open/floor/festive/alleyway,
 /area/edina/backstreet/med)
-"bId" = (
-/obj/docking_port/stationary{
-	dir = 8;
-	dwidth = 4;
-	height = 15;
-	id = "emergency_home";
-	name = "PubbyStation emergency evac bay";
-	width = 20
-	},
-/obj/structure/festive/trainplatform/edge_west,
-/turf/open/floor/plating/dirt/space,
-/area/edina)
 "bIe" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 4
@@ -35320,18 +35334,6 @@
 /obj/effect/turf_decal/tile/blue,
 /turf/open/floor/plasteel/white,
 /area/medical/storage)
-"bKf" = (
-/obj/docking_port/stationary{
-	dir = 4;
-	dwidth = 3;
-	height = 5;
-	id = "mining_home";
-	name = "mining shuttle bay";
-	roundstart_template = /datum/map_template/shuttle/mining/delta;
-	width = 7
-	},
-/turf/open/floor/plating/dirt/space,
-/area/edina)
 "bKg" = (
 /obj/structure/festive/greybrick/windowWELeftEnd,
 /turf/open/floor/festive/trainplatform,
@@ -39964,20 +39966,6 @@
 	},
 /turf/open/floor/festive/cobblestone,
 /area/edina/street/primary/servitor)
-"bTY" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 8
-	},
-/obj/docking_port/stationary{
-	dir = 4;
-	dwidth = 5;
-	height = 7;
-	id = "supply_home";
-	name = "Cargo Bay";
-	width = 12
-	},
-/turf/open/floor/plating/dirt/space,
-/area/edina)
 "bTZ" = (
 /obj/structure/toilet/secret/low_loot,
 /obj/structure/window/spawner/east,
@@ -53101,16 +53089,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/engineering/main)
-"cBD" = (
-/obj/effect/turf_decal/tile/brown{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/brown,
-/obj/machinery/piratepad/civilian{
-	dir = 8
-	},
-/turf/open/indestructible,
-/area/cargo/office)
 "cDt" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	color = "#FFFFFF";
@@ -53168,53 +53146,6 @@
 	},
 /turf/open/floor/carpet/red,
 /area/maintenance/bar)
-"cMN" = (
-/obj/structure/closet/crate/freezer{
-	desc = "A small crate with a cooling system, keeps fresh produce chilled.";
-	name = "Food Chiller"
-	},
-/obj/item/reagent_containers/food/condiment/flour{
-	desc = "A large sack of flour for restaurants, not the home-baker!";
-	list_reagents = list(/datum/reagent/consumable/flour=90);
-	name = "Large Flour Sack"
-	},
-/obj/item/reagent_containers/food/condiment/flour{
-	desc = "A large sack of flour for restaurants, not the home-baker!";
-	list_reagents = list(/datum/reagent/consumable/flour=90);
-	name = "Large Flour Sack"
-	},
-/obj/item/reagent_containers/food/condiment/flour{
-	desc = "A large sack of flour for restaurants, not the home-baker!";
-	list_reagents = list(/datum/reagent/consumable/flour=90);
-	name = "Large Flour Sack"
-	},
-/obj/item/reagent_containers/food/condiment/flour{
-	desc = "A large sack of flour for restaurants, not the home-baker!";
-	list_reagents = list(/datum/reagent/consumable/flour=90);
-	name = "Large Flour Sack"
-	},
-/obj/item/reagent_containers/food/condiment/rice{
-	desc = "A huge sack of rice. Probably for restaurants that actually go through such a huge volume of it easily, not for the home cook.";
-	list_reagents = list(/datum/reagent/consumable/rice=90);
-	name = "Large Rice Sack"
-	},
-/obj/item/reagent_containers/food/condiment/rice{
-	desc = "A huge sack of rice. Probably for restaurants that actually go through such a huge volume of it easily, not for the home cook.";
-	list_reagents = list(/datum/reagent/consumable/rice=90);
-	name = "Large Rice Sack"
-	},
-/obj/item/reagent_containers/food/condiment/rice{
-	desc = "A huge sack of rice. Probably for restaurants that actually go through such a huge volume of it easily, not for the home cook.";
-	list_reagents = list(/datum/reagent/consumable/rice=90);
-	name = "Large Rice Sack"
-	},
-/obj/item/reagent_containers/food/condiment/rice{
-	desc = "A huge sack of rice. Probably for restaurants that actually go through such a huge volume of it easily, not for the home cook.";
-	list_reagents = list(/datum/reagent/consumable/rice=90);
-	name = "Large Rice Sack"
-	},
-/turf/open/floor/plasteel/freezer,
-/area/service/kitchen/coldroom)
 "cNG" = (
 /obj/structure/mineral_door/woodrustic{
 	name = "Event Hall"
@@ -53302,6 +53233,18 @@
 /obj/machinery/nanite_chamber,
 /turf/open/floor/circuit/off,
 /area/science)
+"dqk" = (
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 4;
+	height = 15;
+	shuttle_id = "emergency_home";
+	name = "PubbyStation emergency evac bay";
+	width = 20
+	},
+/obj/structure/festive/trainplatform/edge_west,
+/turf/open/floor/plating/dirt/space,
+/area/edina)
 "dqG" = (
 /turf/open/floor/plasteel,
 /area/engineering/engine_smes)
@@ -53334,24 +53277,6 @@
 "dAt" = (
 /turf/open/floor/festive/wooden/wooden1,
 /area/service/theater)
-"dSk" = (
-/obj/structure/table/reinforced,
-/obj/item/book/manual/wiki/splurt/splurt_space_law,
-/obj/item/radio,
-/obj/machinery/camera{
-	c_tag = "Cargo Security Post"
-	},
-/obj/machinery/firealarm{
-	pixel_y = 26
-	},
-/obj/effect/turf_decal/tile/red{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/red{
-	dir = 1
-	},
-/turf/open/floor/plasteel,
-/area/security/checkpoint/supply)
 "dSL" = (
 /turf/open/floor/wood{
 	icon_state = "wood-broken2"
@@ -53394,18 +53319,6 @@
 /obj/item/chair/wood,
 /turf/open/floor/wood,
 /area/commons/dorms)
-"eiI" = (
-/obj/structure/table/wood/fancy/red,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/item/clothing/head/centhat{
-	armor = list("melee"=0,"bullet"=0,"laser"=0,"energy"=0,"bomb"=0,"bio"=0,"rad"=0);
-	desc = "A replica hat of a Central Commander's attire. It has a small tag on it saying, 'It's good to be emperor.'";
-	name = "Replica CentCom hat"
-	},
-/turf/open/floor/festive/wooden/wooden1,
-/area/command/corporate_showroom)
 "ejZ" = (
 /obj/structure/bookcase/random/reference,
 /obj/machinery/light{
@@ -53549,6 +53462,53 @@
 	},
 /turf/closed/wall/r_wall,
 /area/engineering/main)
+"eTF" = (
+/obj/structure/closet/crate/freezer{
+	desc = "A small crate with a cooling system, keeps fresh produce chilled.";
+	name = "Food Chiller"
+	},
+/obj/item/reagent_containers/food/condiment/flour{
+	desc = "A large sack of flour for restaurants, not the home-baker!";
+	list_reagents = list(/datum/reagent/consumable/flour=90);
+	name = "Large Flour Sack"
+	},
+/obj/item/reagent_containers/food/condiment/flour{
+	desc = "A large sack of flour for restaurants, not the home-baker!";
+	list_reagents = list(/datum/reagent/consumable/flour=90);
+	name = "Large Flour Sack"
+	},
+/obj/item/reagent_containers/food/condiment/flour{
+	desc = "A large sack of flour for restaurants, not the home-baker!";
+	list_reagents = list(/datum/reagent/consumable/flour=90);
+	name = "Large Flour Sack"
+	},
+/obj/item/reagent_containers/food/condiment/flour{
+	desc = "A large sack of flour for restaurants, not the home-baker!";
+	list_reagents = list(/datum/reagent/consumable/flour=90);
+	name = "Large Flour Sack"
+	},
+/obj/item/reagent_containers/food/condiment/rice{
+	desc = "A huge sack of rice. Probably for restaurants that actually go through such a huge volume of it easily, not for the home cook.";
+	list_reagents = list(/datum/reagent/consumable/rice=90);
+	name = "Large Rice Sack"
+	},
+/obj/item/reagent_containers/food/condiment/rice{
+	desc = "A huge sack of rice. Probably for restaurants that actually go through such a huge volume of it easily, not for the home cook.";
+	list_reagents = list(/datum/reagent/consumable/rice=90);
+	name = "Large Rice Sack"
+	},
+/obj/item/reagent_containers/food/condiment/rice{
+	desc = "A huge sack of rice. Probably for restaurants that actually go through such a huge volume of it easily, not for the home cook.";
+	list_reagents = list(/datum/reagent/consumable/rice=90);
+	name = "Large Rice Sack"
+	},
+/obj/item/reagent_containers/food/condiment/rice{
+	desc = "A huge sack of rice. Probably for restaurants that actually go through such a huge volume of it easily, not for the home cook.";
+	list_reagents = list(/datum/reagent/consumable/rice=90);
+	name = "Large Rice Sack"
+	},
+/turf/open/floor/plasteel/freezer,
+/area/service/kitchen/coldroom)
 "eYQ" = (
 /obj/structure/table/glass,
 /obj/item/clothing/gloves/mittens/random,
@@ -53721,6 +53681,18 @@
 	},
 /turf/open/floor/plating/dirt/space,
 /area/edina)
+"fXT" = (
+/obj/docking_port/stationary{
+	dir = 4;
+	dwidth = 2;
+	height = 5;
+	shuttle_id = "laborcamp_home";
+	name = "fore bay 1";
+	roundstart_template = /datum/map_template/shuttle/labour/delta;
+	width = 9
+	},
+/turf/open/floor/grass/snow/edina,
+/area/edina)
 "fZm" = (
 /obj/structure/chair/sofa/left{
 	dir = 1;
@@ -53741,19 +53713,6 @@
 	},
 /turf/open/floor/grass/fakebasalt,
 /area/edina)
-"ggW" = (
-/obj/effect/turf_decal/tile/blue,
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 1
-	},
-/obj/machinery/piratepad/civilian{
-	dir = 8
-	},
-/turf/open/floor/plasteel,
-/area/command/heads_quarters/hop/private)
 "gia" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	color = "#FFFFFE";
@@ -53792,29 +53751,6 @@
 /obj/item/reagent_containers/food/drinks/soda_cans/dr_gibb,
 /turf/open/floor/wood,
 /area/maintenance/bar)
-"gwy" = (
-/obj/structure/table,
-/obj/machinery/door/window{
-	base_state = "right";
-	dir = 4;
-	icon_state = "right";
-	name = "Core Modules";
-	req_access_txt = "20"
-	},
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/item/ai_module/supplied/oxygen,
-/obj/item/ai_module/zeroth/oneHuman,
-/obj/item/ai_module/reset/purge,
-/obj/effect/spawner/lootdrop/ai_module_harmful,
-/obj/item/ai_module/supplied/protectStation,
-/turf/open/floor/plasteel/dark,
-/area/ai_monitored/turret_protected/ai_upload)
 "gzG" = (
 /obj/structure/table/wood/fancy/red,
 /obj/item/reagent_containers/food/snacks/taco,
@@ -53838,6 +53774,13 @@
 /obj/item/reagent_containers/food/snacks/sausage,
 /turf/open/floor/carpet/royalblack,
 /area/maintenance/bar)
+"gDA" = (
+/obj/machinery/piratepad/civilian,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/festive/wooden/wooden2,
+/area/cargo/qm)
 "gFH" = (
 /obj/structure/table/wood,
 /obj/machinery/chem_dispenser/drinks/beer/fullupgrade,
@@ -53932,53 +53875,6 @@
 /mob/living/simple_animal/pet/penguin/emperor/shamebrero,
 /turf/open/floor/holofloor/ice,
 /area/edina)
-"hpw" = (
-/obj/structure/table,
-/obj/item/ai_module/core/full/asimov,
-/obj/item/ai_module/core/freeformcore,
-/obj/machinery/door/window{
-	base_state = "right";
-	dir = 4;
-	icon_state = "right";
-	name = "Core Modules";
-	req_access_txt = "20"
-	},
-/obj/structure/window/reinforced,
-/obj/effect/spawner/lootdrop/ai_module_harmless,
-/obj/effect/spawner/lootdrop/ai_module_lewd,
-/obj/effect/spawner/lootdrop/ai_module_neutral,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/item/ai_module/core/full/custom,
-/obj{
-	name = "---Merge conflict marker---"
-	},
-/obj/structure/table,
-/obj/item/ai_module/core/full/asimov,
-/obj/item/ai_module/core/freeformcore,
-/obj/machinery/door/window{
-	base_state = "right";
-	dir = 4;
-	icon_state = "right";
-	name = "Core Modules";
-	req_access_txt = "20"
-	},
-/obj/structure/window/reinforced,
-/obj/effect/spawner/lootdrop/ai_module_harmless,
-/obj/effect/spawner/lootdrop/ai_module_neutral,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/item/ai_module/core/full/custom,
-/turf/open/floor/plasteel/dark,
-/area/ai_monitored/turret_protected/ai_upload)
 "hqI" = (
 /obj/structure/closet/crate,
 /obj/item/storage/fancy/candle_box,
@@ -54039,18 +53935,6 @@
 /obj/item/hatchet,
 /turf/open/floor/carpet/orange,
 /area/commons/storage/tools)
-"hKj" = (
-/obj/docking_port/stationary{
-	dir = 4;
-	dwidth = 2;
-	height = 5;
-	id = "laborcamp_home";
-	name = "fore bay 1";
-	roundstart_template = /datum/map_template/shuttle/labour/delta;
-	width = 9
-	},
-/turf/open/floor/grass/snow/edina,
-/area/edina)
 "hLe" = (
 /obj/structure/chair/pew,
 /turf/open/floor/carpet/green,
@@ -54109,23 +53993,50 @@
 /obj/structure/statue/petrified,
 /turf/open/floor/festive/alleyway,
 /area/edina/street/secondary/castle)
+"iaH" = (
+/obj/structure/table/reinforced,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
+/obj/item/radio,
+/obj/machinery/camera{
+	c_tag = "Cargo Security Post"
+	},
+/obj/machinery/firealarm{
+	pixel_y = 26
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/security/checkpoint/supply)
 "ibM" = (
 /obj/effect/mob_spawn/human/bartender/alive,
 /turf/open/floor/wood,
 /area/maintenance/bar)
+"icu" = (
+/obj/structure/table/wood,
+/obj/item/pen/red,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
+/turf/open/floor/wood,
+/area/service/lawoffice)
 "ihe" = (
 /obj/machinery/autolathe/hacked,
 /turf/open/floor/circuit/off,
 /area/science)
-"ije" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
+"ijW" = (
+/obj/structure/table/wood/fancy/red,
+/obj/structure/window/reinforced{
+	dir = 4
 	},
-/obj/structure/sign/poster/contraband/yes_erp{
-	pixel_y = 32
+/obj/item/clothing/head/centhat{
+	armor = list("melee"=0,"bullet"=0,"laser"=0,"energy"=0,"bomb"=0,"bio"=0,"rad"=0);
+	desc = "A replica hat of a Central Commander's attire. It has a small tag on it saying, 'It's good to be emperor.'";
+	name = "Replica CentCom hat"
 	},
-/turf/open/floor/plasteel/white,
-/area/commons/fitness)
+/turf/open/floor/festive/wooden/wooden1,
+/area/command/corporate_showroom)
 "ikY" = (
 /obj/structure/table/glass,
 /obj/item/toy/fluff/tennis_poly,
@@ -54516,19 +54427,6 @@
 	},
 /turf/open/floor/festive/trainplatform/safe,
 /area/maintenance/bar)
-"kZi" = (
-/obj/structure/table/wood/fancy/green,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/item/clothing/under/syndicate/baseball,
-/obj/item/clothing/head/beret/sec{
-	armor = list("melee"=0,"bullet"=0,"laser"=0,"energy"=0,"bomb"=0,"bio"=0,"rad"=0);
-	desc = "A replica beret resembling that of a special operations officer under Nanotrasen.";
-	name = "replica officer's beret"
-	},
-/turf/open/floor/festive/wooden/wooden1,
-/area/command/corporate_showroom)
 "kZN" = (
 /obj/machinery/light,
 /turf/open/floor/plasteel/white/side{
@@ -54583,6 +54481,19 @@
 /obj/structure/chair/comfy/beige,
 /turf/open/floor/circuit/off,
 /area/science)
+"lBx" = (
+/obj/structure/table/wood/fancy/green,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/item/clothing/under/syndicate/baseball,
+/obj/item/clothing/head/beret/sec{
+	armor = list("melee"=0,"bullet"=0,"laser"=0,"energy"=0,"bomb"=0,"bio"=0,"rad"=0);
+	desc = "A replica beret resembling that of a special operations officer under Nanotrasen.";
+	name = "replica officer's beret"
+	},
+/turf/open/floor/festive/wooden/wooden1,
+/area/command/corporate_showroom)
 "lBE" = (
 /obj/structure/sink/kitchen{
 	pixel_y = 26
@@ -54604,13 +54515,6 @@
 /obj/structure/flora/tree/pine/xmas,
 /turf/open/floor/grass/snow/edina,
 /area/science)
-"lHF" = (
-/obj/machinery/piratepad/civilian,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
-	},
-/turf/open/floor/festive/wooden/wooden2,
-/area/cargo/qm)
 "lIt" = (
 /obj/item/flashlight/glowstick/cyan,
 /turf/open/floor/wood,
@@ -54642,6 +54546,10 @@
 "lPf" = (
 /obj/machinery/rnd/production/circuit_imprinter,
 /turf/open/floor/circuit/off,
+/area/science)
+"lQB" = (
+/obj/effect/landmark/start/stowaway,
+/turf/open/floor/festive/alleyway,
 /area/science)
 "lTb" = (
 /obj/machinery/door/airlock/maintenance,
@@ -54678,6 +54586,17 @@
 	},
 /turf/open/floor/circuit/off,
 /area/science)
+"mas" = (
+/obj/structure/table,
+/obj/item/folder/red,
+/obj/item/pen,
+/obj/item/hand_labeler,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/wood,
+/area/security/warden)
 "mdc" = (
 /obj/structure/table/wood/fancy/red,
 /obj/item/reagent_containers/food/snacks/soup/hotchili,
@@ -54691,17 +54610,6 @@
 /obj/item/clothing/gloves/mittens/random,
 /turf/open/floor/festive/wooden/wooden1,
 /area/edina/crew_quarters/store/clothes)
-"mjj" = (
-/obj/structure/table,
-/obj/item/folder/red,
-/obj/item/pen,
-/obj/item/hand_labeler,
-/obj/item/book/manual/wiki/splurt/splurt_space_law,
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/open/floor/wood,
-/area/security/warden)
 "mkV" = (
 /obj/item/grenade/chem_grenade/cleaner,
 /obj/item/grenade/chem_grenade/cleaner,
@@ -54751,18 +54659,6 @@
 "mua" = (
 /turf/open/floor/carpet/royalblack,
 /area/maintenance/bar)
-"mwE" = (
-/obj/structure/table/reinforced,
-/obj/item/book/manual/wiki/splurt/splurt_space_law,
-/obj/item/radio,
-/obj/machinery/camera{
-	c_tag = "Holodeck"
-	},
-/obj/machinery/firealarm{
-	pixel_y = 26
-	},
-/turf/open/floor/plasteel,
-/area/security/checkpoint/medical)
 "mwL" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -54847,6 +54743,20 @@
 "nbP" = (
 /turf/open/floor/carpet/orange,
 /area/commons/storage/tools)
+"ndC" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 8
+	},
+/obj/docking_port/stationary{
+	dir = 4;
+	dwidth = 5;
+	height = 7;
+	shuttle_id = "supply_home";
+	name = "Cargo Bay";
+	width = 12
+	},
+/turf/open/floor/plating/dirt/space,
+/area/edina)
 "nij" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 8
@@ -54883,10 +54793,18 @@
 /obj/effect/turf_decal/weather/snow/corner,
 /turf/open/floor/festive/alleyway,
 /area/edina)
-"nvg" = (
-/obj/effect/landmark/start/stowaway,
-/turf/open/floor/festive/cobblestone,
-/area/edina/street/primary/progress)
+"ntX" = (
+/obj/structure/table/reinforced,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
+/obj/item/radio,
+/obj/machinery/camera{
+	c_tag = "Holodeck"
+	},
+/obj/machinery/firealarm{
+	pixel_y = 26
+	},
+/turf/open/floor/plasteel,
+/area/security/checkpoint/medical)
 "nvy" = (
 /obj/structure/table/wood/fancy/red,
 /obj/machinery/chem_dispenser/drinks/beer/fullupgrade,
@@ -55026,41 +54944,12 @@
 	},
 /turf/open/floor/wood,
 /area/maintenance/bar)
-"oxP" = (
-/obj/structure/table,
-/obj/item/ai_module/supplied/quarantine,
-/obj/machinery/camera/motion,
-/obj/machinery/light{
-	dir = 1;
-	light_color = "#706891"
-	},
-/turf/open/floor/plasteel/dark,
-/area/ai_monitored/turret_protected/ai_upload)
 "oyS" = (
 /obj/structure/streetdecor/bigtree{
 	pixel_x = -16
 	},
 /turf/open/floor/festive/alleyway,
 /area/edina/street/secondary/castle)
-"ozg" = (
-/obj/structure/table/reinforced,
-/obj/item/book/manual/wiki/splurt/splurt_space_law,
-/obj/item/radio,
-/obj/machinery/status_display/ai{
-	pixel_y = 32
-	},
-/obj/structure/reagent_dispensers/peppertank{
-	pixel_x = 32
-	},
-/obj/effect/turf_decal/tile/red{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/red,
-/obj/effect/turf_decal/tile/red{
-	dir = 4
-	},
-/turf/open/floor/plasteel,
-/area/security/checkpoint/science)
 "oCy" = (
 /obj/structure/table/wood/fancy/red,
 /obj/machinery/light/small{
@@ -55203,10 +55092,6 @@
 /obj/structure/fluff/broken_flooring,
 /turf/open/floor/grass/fakebasalt,
 /area/edina)
-"prw" = (
-/obj/effect/landmark/start/stowaway,
-/turf/open/floor/festive/alleyway,
-/area/science)
 "prz" = (
 /mob/living/simple_animal/crab,
 /turf/open/floor/plating/beach/sand,
@@ -55267,10 +55152,6 @@
 	color = "#ffbb4d"
 	},
 /area/commons/storage/tools)
-"pDd" = (
-/obj/effect/landmark/start/stowaway,
-/turf/open/floor/festive/sidewalk,
-/area/edina/street/primary/progress)
 "pEv" = (
 /obj/structure/dresser,
 /obj/machinery/light{
@@ -55415,6 +55296,25 @@
 /obj/item/stack/sheet/bone,
 /turf/open/floor/carpet/royalblue,
 /area/edina/crew_quarters/store/pet)
+"qMR" = (
+/obj/structure/table/reinforced,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
+/obj/item/radio,
+/obj/machinery/status_display/ai{
+	pixel_y = 32
+	},
+/obj/structure/reagent_dispensers/peppertank{
+	pixel_x = 32
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/security/checkpoint/science)
 "qPh" = (
 /obj/structure/mineral_door/woodrustic,
 /turf/open/floor/wood,
@@ -55465,18 +55365,16 @@
 	dir = 8
 	},
 /area/commons/dorms)
+"rbs" = (
+/obj/effect/festive/street/sidewalke,
+/obj/effect/landmark/start/stowaway,
+/turf/open/floor/festive/cobblestone,
+/area/edina/street/primary/progress)
 "rcW" = (
 /obj/machinery/vending/wardrobe/jani_wardrobe,
 /obj/effect/decal/festive/christmas_ivy_string,
 /turf/open/floor/plasteel/white/corner,
 /area/commons/dorms)
-"rdN" = (
-/obj/machinery/computer/prisoner/management,
-/obj/structure/sign/poster/official/bless_this_spess{
-	pixel_y = 32
-	},
-/turf/open/floor/wood,
-/area/security/warden)
 "reC" = (
 /obj/structure/rack,
 /obj/item/gun/magic/staff/healing,
@@ -55527,7 +55425,7 @@
 /obj/machinery/microwave,
 /turf/open/floor/wood,
 /area/maintenance/bar)
-"rsH" = (
+"rsk" = (
 /obj/structure/dresser,
 /turf/open/floor/wood,
 /area/security/prison)
@@ -55556,11 +55454,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/edina)
-"rwG" = (
-/obj/effect/festive/street/sidewalke,
-/obj/effect/landmark/start/stowaway,
-/turf/open/floor/festive/cobblestone,
-/area/edina/street/primary/progress)
 "rxa" = (
 /obj/effect/landmark/start/janitor,
 /turf/open/floor/plasteel/white,
@@ -55745,6 +55638,10 @@
 /obj/item/reagent_containers/rag,
 /turf/open/floor/wood,
 /area/maintenance/bar)
+"sCz" = (
+/obj/effect/landmark/start/stowaway,
+/turf/open/floor/festive/cobblestone,
+/area/edina/street/primary/progress)
 "sEK" = (
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
@@ -55806,6 +55703,13 @@
 	},
 /turf/open/floor/grass/snow/edina,
 /area/edina)
+"sYa" = (
+/obj/machinery/computer/prisoner/management,
+/obj/structure/sign/poster/official/bless_this_spess{
+	pixel_y = 32
+	},
+/turf/open/floor/wood,
+/area/security/warden)
 "sYK" = (
 /obj/structure/chair/sofa/left{
 	dir = 1
@@ -55988,14 +55892,6 @@
 	},
 /turf/open/floor/plating/dirt/space,
 /area/edina)
-"udm" = (
-/obj/machinery/vending/dinnerware{
-	desc = "A vending machine stocked full of condiments to put on food.";
-	name = "\improper Condiments Dispenser";
-	products = list(/obj/item/storage/bag/tray=10,/obj/item/kitchen/fork=6,/obj/item/kitchen/knife=6,/obj/item/reagent_containers/food/drinks/drinkingglass=20,/obj/item/clothing/suit/apron/chef=2,/obj/item/storage/box/cups=10,/obj/item/reagent_containers/food/condiment/pack/ketchup=20,/obj/item/reagent_containers/food/condiment/pack/mustard=20,/obj/item/reagent_containers/food/condiment/pack/hotsauce=20,/obj/item/reagent_containers/food/condiment/pack/astrotame=20,/obj/item/reagent_containers/food/condiment/saltshaker=20,/obj/item/reagent_containers/food/condiment/peppermill=20,/obj/item/reagent_containers/glass/bowl=30)
-	},
-/turf/open/floor/wood,
-/area/service/bar/atrium)
 "udo" = (
 /obj/structure/chair,
 /turf/open/floor/plating/beach/sand,
@@ -56033,11 +55929,6 @@
 /obj/structure/bonfire,
 /turf/open/floor/wood,
 /area/commons/dorms)
-"usl" = (
-/obj/structure/table,
-/obj/item/ai_module/reset,
-/turf/open/floor/plasteel/dark,
-/area/ai_monitored/turret_protected/ai_upload)
 "uvz" = (
 /turf/open/floor/circuit/off,
 /area/science)
@@ -56055,23 +55946,24 @@
 /obj/effect/landmark/start/head_of_security,
 /turf/open/floor/carpet/red,
 /area/command/heads_quarters/hos)
-"uAJ" = (
-/obj/structure/table,
-/obj/item/ai_module/supplied/freeform,
-/obj/machinery/camera/motion{
-	c_tag = "MiniSat Foyer";
-	dir = 1;
-	network = list("minisat")
-	},
-/obj/machinery/light,
-/turf/open/floor/plasteel/dark,
-/area/ai_monitored/turret_protected/ai_upload)
 "uAY" = (
 /turf/closed/festive/redbrick/redbrickcornersw,
 /area/commons/dorms)
 "uBp" = (
 /obj/structure/flora/rock/pile/icy,
 /turf/open/floor/grass,
+/area/edina)
+"uBq" = (
+/obj/docking_port/stationary{
+	dir = 4;
+	dwidth = 3;
+	height = 5;
+	shuttle_id = "mining_home";
+	name = "mining shuttle bay";
+	roundstart_template = /datum/map_template/shuttle/mining/delta;
+	width = 7
+	},
+/turf/open/floor/plating/dirt/space,
 /area/edina)
 "uBB" = (
 /obj/structure/closet/crate/freezer{
@@ -56149,6 +56041,16 @@
 "vdN" = (
 /turf/open/floor/carpet/orange,
 /area/command/heads_quarters/ce)
+"veJ" = (
+/obj/effect/turf_decal/tile/brown{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/brown,
+/obj/machinery/piratepad/civilian{
+	dir = 8
+	},
+/turf/open/indestructible,
+/area/cargo/office)
 "vgD" = (
 /obj/structure/sign/directions/cells,
 /turf/closed/wall/mineral/iron,
@@ -56172,18 +56074,6 @@
 	},
 /turf/open/floor/plating/beach/sand,
 /area/edina)
-"vwe" = (
-/obj/structure/table/wood,
-/obj/item/book/manual/wiki/splurt/splurt_space_law,
-/obj/item/radio/off{
-	pixel_y = 3
-	},
-/obj/item/taperecorder{
-	pixel_x = -4
-	},
-/obj/item/cartridge/detective,
-/turf/open/floor/carpet,
-/area/command/heads_quarters/hos)
 "vyi" = (
 /obj/item/toy/cattoy,
 /obj/structure/bed/dogbed{
@@ -56257,6 +56147,15 @@
 	},
 /turf/open/floor/carpet/royalblue,
 /area/edina/crew_quarters/store/pet)
+"wcz" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/sign/poster/contraband/yes_erp{
+	pixel_y = 32
+	},
+/turf/open/floor/plasteel/white,
+/area/commons/fitness)
 "wcL" = (
 /obj/structure/table/wood,
 /obj/item/storage/box/donkpockets,
@@ -56455,6 +56354,65 @@
 /obj/item/clothing/shoes/winterboots,
 /turf/open/floor/festive/trainplatform,
 /area/edina/street/primary/perimeter)
+"wRl" = (
+/obj/structure/table,
+/obj/item/ai_module/core/full/asimov,
+/obj/item/ai_module/core/freeformcore,
+/obj/machinery/door/window{
+	base_state = "right";
+	dir = 4;
+	icon_state = "right";
+	name = "Core Modules";
+	req_access_txt = "20"
+	},
+/obj/structure/window/reinforced,
+/obj/effect/spawner/lootdrop/ai_module_harmless,
+/obj/effect/spawner/lootdrop/ai_module_lewd,
+/obj/effect/spawner/lootdrop/ai_module_neutral,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/item/ai_module/core/full/custom,
+/obj{
+	name = "---Merge conflict marker---"
+	},
+/obj/structure/table,
+/obj/item/ai_module/core/full/asimov,
+/obj/item/ai_module/core/freeformcore,
+/obj/machinery/door/window{
+	base_state = "right";
+	dir = 4;
+	icon_state = "right";
+	name = "Core Modules";
+	req_access_txt = "20"
+	},
+/obj/structure/window/reinforced,
+/obj/effect/spawner/lootdrop/ai_module_harmless,
+/obj/effect/spawner/lootdrop/ai_module_neutral,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/item/ai_module/core/full/custom,
+/turf/open/floor/plasteel/dark,
+/area/ai_monitored/turret_protected/ai_upload)
+"wWA" = (
+/obj/structure/table/wood,
+/obj/item/book/manual/wiki/splurt/splurt_space_law,
+/obj/item/radio/off{
+	pixel_y = 3
+	},
+/obj/item/taperecorder{
+	pixel_x = -4
+	},
+/obj/item/cartridge/detective,
+/turf/open/floor/carpet,
+/area/command/heads_quarters/hos)
 "wWV" = (
 /obj/item/toy/cattoy,
 /turf/open/floor/grass,
@@ -56536,6 +56494,19 @@
 	},
 /turf/open/floor/plating/beach/sand,
 /area/edina)
+"xwp" = (
+/obj/effect/turf_decal/tile/blue,
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/machinery/piratepad/civilian{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/command/heads_quarters/hop/private)
 "xyb" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -56562,12 +56533,6 @@
 /obj/structure/mineral_door/wood,
 /turf/open/floor/wood,
 /area/commons/dorms)
-"xAI" = (
-/obj/structure/table/wood,
-/obj/item/pen/red,
-/obj/item/book/manual/wiki/splurt/splurt_space_law,
-/turf/open/floor/wood,
-/area/service/lawoffice)
 "xEb" = (
 /obj/structure/table/wood,
 /obj/machinery/light{
@@ -56639,6 +56604,18 @@
 /obj/structure/reagent_dispensers/keg/gargle,
 /turf/open/floor/wood,
 /area/maintenance/bar)
+"ybc" = (
+/obj/effect/landmark/start/stowaway,
+/turf/open/floor/festive/sidewalk,
+/area/edina/street/primary/progress)
+"ybp" = (
+/obj/machinery/vending/dinnerware{
+	desc = "A vending machine stocked full of condiments to put on food.";
+	name = "\improper Condiments Dispenser";
+	products = list(/obj/item/storage/bag/tray=10,/obj/item/kitchen/fork=6,/obj/item/kitchen/knife=6,/obj/item/reagent_containers/food/drinks/drinkingglass=20,/obj/item/clothing/suit/apron/chef=2,/obj/item/storage/box/cups=10,/obj/item/reagent_containers/food/condiment/pack/ketchup=20,/obj/item/reagent_containers/food/condiment/pack/mustard=20,/obj/item/reagent_containers/food/condiment/pack/hotsauce=20,/obj/item/reagent_containers/food/condiment/pack/astrotame=20,/obj/item/reagent_containers/food/condiment/saltshaker=20,/obj/item/reagent_containers/food/condiment/peppermill=20,/obj/item/reagent_containers/glass/bowl=30)
+	},
+/turf/open/floor/wood,
+/area/service/bar/atrium)
 "ycr" = (
 /obj/item/reagent_containers/food/drinks/bottle/lizardwine,
 /turf/open/floor/wood,
@@ -56661,6 +56638,29 @@
 /obj/item/phone,
 /turf/open/floor/carpet/red,
 /area/maintenance/bar)
+"yio" = (
+/obj/structure/table,
+/obj/machinery/door/window{
+	base_state = "right";
+	dir = 4;
+	icon_state = "right";
+	name = "Core Modules";
+	req_access_txt = "20"
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/item/ai_module/supplied/oxygen,
+/obj/item/ai_module/zeroth/oneHuman,
+/obj/item/ai_module/reset/purge,
+/obj/effect/spawner/lootdrop/ai_module_harmful,
+/obj/item/ai_module/supplied/protectStation,
+/turf/open/floor/plasteel/dark,
+/area/ai_monitored/turret_protected/ai_upload)
 "yiY" = (
 /obj/structure/table/glass,
 /obj/item/reagent_containers/food/drinks/bottle/patron{
@@ -68738,7 +68738,7 @@ ams
 ams
 ams
 ams
-bId
+dqk
 ams
 ams
 ams
@@ -77216,7 +77216,7 @@ cjm
 cki
 bHZ
 bLi
-ije
+wcz
 cfl
 bLi
 cfO
@@ -84546,7 +84546,7 @@ afe
 afL
 agk
 agL
-ggW
+xwp
 ahS
 aip
 aeG
@@ -85038,13 +85038,13 @@ aaF
 aaI
 aal
 aaL
-hpw
+wRl
 aaY
 abp
 abh
 abE
 aaY
-gwy
+yio
 aaL
 alT
 alT
@@ -85552,13 +85552,13 @@ aaF
 aaI
 aal
 aaL
-oxP
+aaV
 abh
 aaU
 abw
 aaU
 abh
-uAJ
+abS
 aaL
 alT
 alT
@@ -85809,7 +85809,7 @@ aaF
 aaI
 acZ
 aaL
-usl
+aaX
 abh
 abh
 abx
@@ -86416,7 +86416,7 @@ cuQ
 cuT
 cuV
 hya
-prw
+lQB
 pqA
 aLX
 aLX
@@ -86712,7 +86712,7 @@ bDD
 bfm
 buz
 bFj
-mwE
+ntX
 bGP
 bIH
 bbc
@@ -87115,7 +87115,7 @@ aeJ
 afl
 afl
 ago
-kZi
+lBx
 ahu
 afl
 afl
@@ -87177,7 +87177,7 @@ aCn
 aKR
 aLv
 aLY
-ozg
+qMR
 aNr
 aOg
 aPd
@@ -87629,7 +87629,7 @@ aeJ
 afl
 afl
 agq
-eiI
+ijW
 ahw
 afl
 afl
@@ -88727,7 +88727,7 @@ aOl
 aQL
 aMG
 cuU
-pDd
+ybc
 bQz
 bTV
 bVm
@@ -94937,7 +94937,7 @@ cqT
 cli
 csd
 boV
-lHF
+gDA
 ciR
 bOs
 boV
@@ -96385,7 +96385,7 @@ alo
 amh
 amO
 anm
-rsH
+rsk
 aoI
 apu
 aqk
@@ -99276,7 +99276,7 @@ ccI
 bFS
 bHi
 bIR
-udm
+ybp
 aqp
 aqp
 bFS
@@ -100245,7 +100245,7 @@ anD
 apy
 aqr
 anl
-mjj
+mas
 asi
 asi
 atE
@@ -100759,7 +100759,7 @@ aoR
 aLE
 anQ
 anl
-rdN
+sYa
 arE
 asS
 atG
@@ -101879,7 +101879,7 @@ bGh
 bHO
 ciU
 bKO
-cBD
+veJ
 bNs
 bOK
 cjA
@@ -103174,7 +103174,7 @@ bTw
 bDN
 txb
 bVG
-dSk
+iaH
 ces
 cez
 bVJ
@@ -104176,7 +104176,7 @@ bWF
 bWH
 bWH
 cdK
-cMN
+eTF
 bTM
 bKV
 bWy
@@ -104614,7 +104614,7 @@ apc
 apL
 aqC
 ano
-vwe
+wWA
 asr
 arN
 atV
@@ -105138,7 +105138,7 @@ awg
 axb
 axK
 ayx
-xAI
+icu
 azx
 azO
 axI
@@ -105950,7 +105950,7 @@ bAF
 bAF
 bAF
 bAF
-nvg
+sCz
 bAF
 bWE
 bFg
@@ -106202,7 +106202,7 @@ aPA
 aQj
 bAJ
 bGa
-rwG
+rbs
 bAJ
 bAJ
 bAJ
@@ -107237,7 +107237,7 @@ bAF
 bAF
 bAF
 bAF
-nvg
+sCz
 bFg
 ccD
 bzs
@@ -107748,7 +107748,7 @@ bBU
 bFg
 bAF
 bAF
-nvg
+sCz
 bAF
 bAF
 bAF
@@ -108054,7 +108054,7 @@ fXg
 fXg
 fXg
 fXg
-bTY
+ndC
 fXg
 fXg
 fXg
@@ -108218,7 +108218,7 @@ aal
 aal
 aal
 aal
-hKj
+fXT
 aal
 aal
 aal
@@ -108542,7 +108542,7 @@ apI
 fXg
 fXg
 kld
-bKf
+uBq
 kld
 fXg
 fXg

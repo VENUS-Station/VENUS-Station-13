@@ -5191,15 +5191,6 @@
 	icon_state = "wood-broken5"
 	},
 /area/eventmap/inside)
-"apl" = (
-/obj/structure/closet/cabinet,
-/obj/item/clothing/head/helmet/space/hardsuit/deathsquad,
-/obj/item/clothing/suit/space/hardsuit/deathsquad,
-/obj/item/hand_item/circlegame,
-/obj/item/nullrod/scythe,
-/obj/item/card/id/silver/reaper,
-/turf/open/floor/wood,
-/area/eventmap/inside)
 "apm" = (
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
@@ -16092,21 +16083,6 @@
 	},
 /turf/open/floor/wood,
 /area/eventmap/inside)
-"bbi" = (
-/obj/effect/turf_decal/caution/stand_clear{
-	dir = 8;
-	pixel_x = -8
-	},
-/obj/docking_port/stationary{
-	dir = 4;
-	dwidth = 8;
-	height = 7;
-	id = "supply_home";
-	name = "Cargo Bay";
-	width = 20
-	},
-/turf/open/floor/plasteel,
-/area/eventmap/outside)
 "bbt" = (
 /obj/structure/fence/corner{
 	dir = 4
@@ -16575,22 +16551,6 @@
 	},
 /turf/open/floor/spooktime/cobble/sideN,
 /area/eventmap/outside)
-"bgA" = (
-/obj/effect/turf_decal/caution/stand_clear{
-	dir = 8;
-	pixel_x = -8
-	},
-/obj/docking_port/stationary{
-	dir = 4;
-	dwidth = 3;
-	height = 5;
-	id = "mining_home";
-	name = "mining shuttle bay";
-	roundstart_template = /datum/map_template/shuttle/mining/delta;
-	width = 7
-	},
-/turf/open/floor/plasteel,
-/area/eventmap/outside)
 "bjJ" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -17030,10 +16990,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/tcommsat/computer)
-"jdi" = (
-/obj/structure/dresser,
-/turf/open/floor/spooktime/dirtpatch,
-/area/eventmap/inside)
 "jox" = (
 /obj/machinery/telecomms/processor/preset_two,
 /turf/open/floor/plasteel/dark/telecomms,
@@ -17042,10 +16998,6 @@
 /obj/machinery/telecomms/processor/preset_one,
 /turf/open/floor/plasteel/dark,
 /area/eventmap/mountaininside)
-"jCf" = (
-/obj/structure/sign/poster/contraband/yes_erp,
-/turf/closed/wall/rust,
-/area/eventmap/mountaininside)
 "jEF" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
@@ -17053,6 +17005,21 @@
 	},
 /turf/open/floor/plating,
 /area/eventmap/mountaininside)
+"jMP" = (
+/obj/effect/turf_decal/caution/stand_clear{
+	dir = 8;
+	pixel_x = -8
+	},
+/obj/docking_port/stationary{
+	dir = 4;
+	dwidth = 8;
+	height = 7;
+	shuttle_id = "supply_home";
+	name = "Cargo Bay";
+	width = 20
+	},
+/turf/open/floor/plasteel,
+/area/eventmap/outside)
 "jNZ" = (
 /obj/machinery/computer/message_monitor{
 	dir = 4
@@ -17065,6 +17032,26 @@
 	},
 /turf/open/floor/plasteel,
 /area/eventmap/mountaininside)
+"jOB" = (
+/obj/structure/dresser,
+/turf/open/floor/spooktime/dirtpatch,
+/area/eventmap/inside)
+"jRw" = (
+/obj/effect/turf_decal/caution/stand_clear{
+	dir = 8;
+	pixel_x = -8
+	},
+/obj/docking_port/stationary{
+	dir = 4;
+	dwidth = 3;
+	height = 5;
+	shuttle_id = "mining_home";
+	name = "mining shuttle bay";
+	roundstart_template = /datum/map_template/shuttle/mining/delta;
+	width = 7
+	},
+/turf/open/floor/plasteel,
+/area/eventmap/outside)
 "jUY" = (
 /obj/machinery/telecomms/server/presets/science,
 /turf/open/floor/plasteel/dark/telecomms,
@@ -17116,6 +17103,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/tcommsat/computer)
+"liZ" = (
+/obj/item/ai_module/reset/purge,
+/turf/open/floor/plasteel,
+/area/eventmap/mountaininside)
 "lxA" = (
 /obj/machinery/blackbox_recorder,
 /turf/open/floor/plasteel/dark,
@@ -17152,14 +17143,18 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/tcommsat/computer)
-"miO" = (
+"mcN" = (
 /obj/effect/landmark/start/stowaway,
-/turf/open/floor/spooktime/cobble/roadmid,
+/turf/open/floor/spooktime/cobble/roadsideS,
 /area/eventmap/outside)
 "mpZ" = (
 /obj/machinery/telecomms/bus/preset_three,
 /turf/open/floor/plasteel/dark/telecomms,
 /area/tcommsat/server)
+"mrZ" = (
+/obj/structure/sign/poster/contraband/yes_erp,
+/turf/closed/wall/mineral/wood,
+/area/eventmap/inside)
 "mvm" = (
 /obj/machinery/telecomms/bus/preset_one,
 /turf/open/floor/plasteel/dark/telecomms,
@@ -17192,10 +17187,6 @@
 /obj/machinery/light,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/eventmap/mountaininside)
-"ncU" = (
-/obj/item/ai_module/supplied/freeform,
-/turf/open/floor/plasteel,
-/area/eventmap/mountaininside)
 "nxt" = (
 /obj/machinery/telecomms/server/presets/common,
 /turf/open/floor/plasteel/dark,
@@ -17218,10 +17209,6 @@
 	},
 /turf/open/floor/plasteel/dark/telecomms,
 /area/eventmap/mountaininside)
-"nYt" = (
-/obj/structure/sign/poster/contraband/yes_erp,
-/turf/closed/wall/r_wall,
-/area/eventmap/inside)
 "ooP" = (
 /obj/machinery/door/airlock/engineering{
 	name = "Telecommunications";
@@ -17242,6 +17229,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/eventmap/mountaininside)
+"ozC" = (
+/obj/structure/sign/poster/contraband/yes_erp,
+/turf/closed/wall/rust,
+/area/eventmap/mountaininside)
 "oBM" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -17252,10 +17243,6 @@
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
 /turf/open/floor/plasteel,
 /area/tcommsat/computer)
-"oOU" = (
-/obj/structure/sign/poster/contraband/yes_erp,
-/turf/closed/wall/mineral/wood,
-/area/eventmap/mountaininside)
 "oPH" = (
 /obj/machinery/telecomms/server/presets/supply,
 /turf/open/floor/plasteel/dark,
@@ -17269,10 +17256,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/tcommsat/computer)
-"oYP" = (
-/obj/effect/landmark/start/stowaway,
-/turf/open/floor/spooktime/cobble/roadsideS,
-/area/eventmap/outside)
 "paH" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/maintenance,
@@ -17398,6 +17381,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/eventmap/mountaininside)
+"qUm" = (
+/obj/item/ai_module/supplied/freeform,
+/turf/open/floor/plasteel,
+/area/eventmap/mountaininside)
 "qWJ" = (
 /obj/machinery/telecomms/receiver/preset_right,
 /turf/open/floor/plasteel/dark,
@@ -17423,6 +17410,10 @@
 	},
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/eventmap/mountaininside)
+"rnX" = (
+/obj/structure/sign/poster/contraband/yes_erp,
+/turf/closed/wall/r_wall,
+/area/eventmap/inside)
 "rwN" = (
 /obj/machinery/telecomms/receiver/preset_left,
 /turf/open/floor/plasteel/dark,
@@ -17483,10 +17474,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plating,
 /area/tcommsat/computer)
-"tlZ" = (
-/obj/item/ai_module/reset/purge,
-/turf/open/floor/plasteel,
-/area/eventmap/mountaininside)
 "tHV" = (
 /obj/machinery/light_switch{
 	pixel_x = 27
@@ -17582,6 +17569,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/eventmap/mountaininside)
+"vFD" = (
+/obj/structure/sign/poster/contraband/yes_erp,
+/turf/closed/wall/mineral/wood,
+/area/eventmap/mountaininside)
 "vFK" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
@@ -17661,9 +17652,14 @@
 	},
 /turf/closed/wall,
 /area/tcommsat/computer)
-"xkJ" = (
-/obj/structure/sign/poster/contraband/yes_erp,
-/turf/closed/wall/mineral/wood,
+"xjL" = (
+/obj/structure/closet/cabinet,
+/obj/item/clothing/head/helmet/space/hardsuit/deathsquad,
+/obj/item/clothing/suit/space/hardsuit/deathsquad,
+/obj/item/hand_item/circlegame,
+/obj/item/nullrod/scythe,
+/obj/item/card/id/silver/reaper,
+/turf/open/floor/wood,
 /area/eventmap/inside)
 "xmW" = (
 /obj/machinery/gear_painter,
@@ -17736,6 +17732,10 @@
 	},
 /turf/closed/wall/r_wall,
 /area/tcommsat/computer)
+"yaV" = (
+/obj/effect/landmark/start/stowaway,
+/turf/open/floor/spooktime/cobble/roadmid,
+/area/eventmap/outside)
 "yhC" = (
 /obj/machinery/telecomms/processor/preset_four,
 /turf/open/floor/plasteel/dark/telecomms,
@@ -19928,7 +19928,7 @@ aqr
 aqr
 aqr
 aqr
-xkJ
+mrZ
 aqr
 aOV
 aqr
@@ -23014,7 +23014,7 @@ aaN
 bbx
 bbx
 bbx
-bgA
+jRw
 bbx
 bbx
 bbx
@@ -24123,7 +24123,7 @@ aMz
 aED
 aED
 aED
-oOU
+vFD
 aKA
 ags
 ags
@@ -25825,7 +25825,7 @@ bbx
 bbx
 bbx
 bbx
-bbi
+jMP
 bbx
 bbD
 bbx
@@ -26241,7 +26241,7 @@ aac
 aac
 ags
 ags
-oOU
+vFD
 aKG
 aHj
 aAj
@@ -31791,7 +31791,7 @@ adN
 acy
 aLv
 aLv
-jdi
+jOB
 aMf
 aLv
 aLn
@@ -36880,7 +36880,7 @@ aqr
 aDI
 aDI
 aBm
-nYt
+rnX
 aDI
 alU
 aDI
@@ -37916,11 +37916,11 @@ aDI
 aDI
 arK
 aDI
-nYt
+rnX
 aDI
 aDI
 aDI
-nYt
+rnX
 aqI
 arF
 aqI
@@ -39252,8 +39252,8 @@ aRd
 aGM
 aRo
 aRD
-miO
-oYP
+yaV
+mcN
 aaN
 aaN
 aaN
@@ -39509,8 +39509,8 @@ apR
 ayO
 aWA
 aRt
-miO
-oYP
+yaV
+mcN
 aaN
 aaN
 aaN
@@ -39766,8 +39766,8 @@ apR
 ayO
 aWA
 aRt
-miO
-oYP
+yaV
+mcN
 aaN
 aaN
 aaN
@@ -40023,8 +40023,8 @@ awm
 ayO
 aWA
 aRt
-miO
-oYP
+yaV
+mcN
 aaN
 aaN
 aYI
@@ -40280,8 +40280,8 @@ apR
 ayO
 aWA
 aRt
-miO
-oYP
+yaV
+mcN
 aaN
 aaN
 aaN
@@ -40537,8 +40537,8 @@ apR
 ayO
 aWA
 aRt
-miO
-oYP
+yaV
+mcN
 aaN
 aaN
 aaN
@@ -42028,11 +42028,11 @@ aDI
 aDI
 asJ
 aDI
-nYt
+rnX
 alR
 aDU
 aDI
-nYt
+rnX
 aqI
 arF
 aqI
@@ -43048,7 +43048,7 @@ aqr
 aDI
 aDI
 aBm
-nYt
+rnX
 aDI
 anT
 aDI
@@ -43060,7 +43060,7 @@ aqr
 aqr
 aDY
 aqr
-xkJ
+mrZ
 aqr
 aIX
 aqr
@@ -48933,7 +48933,7 @@ abN
 acd
 aOE
 aOE
-xkJ
+mrZ
 adh
 adA
 aOE
@@ -49181,7 +49181,7 @@ aOE
 aOE
 aaH
 aaV
-xkJ
+mrZ
 aOE
 aOE
 abz
@@ -50469,10 +50469,10 @@ aOE
 aOE
 aFN
 abv
-xkJ
+mrZ
 aOE
 aOE
-xkJ
+mrZ
 ack
 acq
 aOE
@@ -50859,7 +50859,7 @@ aQx
 aNg
 aMp
 aMp
-oOU
+vFD
 aXF
 aac
 aac
@@ -51699,7 +51699,7 @@ aac
 aac
 ags
 alv
-oOU
+vFD
 aED
 aED
 aED
@@ -65003,7 +65003,7 @@ aaN
 aaN
 aaN
 aaN
-xkJ
+mrZ
 aqr
 aqr
 aqr
@@ -66031,7 +66031,7 @@ aaN
 aaN
 aaN
 aaN
-xkJ
+mrZ
 aay
 aOE
 aOE
@@ -66716,7 +66716,7 @@ amV
 aqr
 aol
 aoJ
-apl
+xjL
 aqr
 aqj
 aqj
@@ -67108,7 +67108,7 @@ aED
 aED
 aED
 aDy
-oOU
+vFD
 aac
 aac
 aZS
@@ -67316,13 +67316,13 @@ aaN
 aaN
 aaN
 aaN
-xkJ
+mrZ
 aqr
 aqr
 aOL
 aOL
 aqr
-xkJ
+mrZ
 aaN
 aac
 aac
@@ -71012,7 +71012,7 @@ aHf
 aHf
 aHf
 aqr
-xkJ
+mrZ
 aaN
 aaN
 aaN
@@ -79883,7 +79883,7 @@ aYr
 aME
 aRe
 aZA
-jCf
+ozC
 aEF
 ags
 ags
@@ -80172,7 +80172,7 @@ ags
 ags
 ags
 aac
-jCf
+ozC
 aGP
 aFw
 aFw
@@ -82525,7 +82525,7 @@ aZA
 aZA
 wcR
 aZA
-ncU
+qUm
 qtw
 azQ
 aJx
@@ -82782,7 +82782,7 @@ aZA
 qTn
 fRV
 qhF
-tlZ
+liZ
 slE
 azQ
 aJx

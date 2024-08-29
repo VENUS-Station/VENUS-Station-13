@@ -2,22 +2,22 @@
 "a" = (
 /turf/open/space/basic,
 /area/space)
-"b" = (
+"D" = (
+/obj/machinery/spaceship_navigation_beacon/invion,
+/turf/open/space/basic,
+/area/space)
+"R" = (
 /obj/docking_port/stationary{
 	dheight = 0;
 	dir = 2;
 	dwidth = 11;
 	height = 22;
-	id = "whiteship_away";
+	shuttle_id = "whiteship_away";
 	json_key = "whiteship";
 	name = "Deep Space";
 	width = 35
 	},
 /turf/open/space,
-/area/space)
-"Q" = (
-/obj/machinery/spaceship_navigation_beacon/invion,
-/turf/open/space/basic,
 /area/space)
 
 (1,1,1) = {"
@@ -275,7 +275,7 @@ a
 a
 a
 a
-Q
+D
 "}
 (2,1,1) = {"
 a
@@ -48361,7 +48361,7 @@ a
 a
 a
 a
-b
+R
 a
 a
 a

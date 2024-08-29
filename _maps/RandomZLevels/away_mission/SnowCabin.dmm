@@ -188,6 +188,23 @@
 	},
 /turf/open/floor/plasteel/freezer,
 /area/awaymission/cabin)
+"aD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/smes/magical,
+/turf/open/floor/plating,
+/area/awaymission/cabin)
+"aE" = (
+/obj/effect/decal/cleanable/cobweb/cobweb2,
+/obj/effect/baseturf_helper/asteroid/snow,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/port_gen/pacman,
+/turf/open/floor/plating{
+	icon_state = "panelscorched"
+	},
+/area/awaymission/cabin)
 "aF" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -628,17 +645,6 @@
 	},
 /obj/machinery/processor,
 /turf/open/floor/plasteel/freezer,
-/area/awaymission/cabin)
-"ca" = (
-/obj/structure/table/reinforced,
-/obj/item/clothing/head/welding{
-	pixel_y = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/item/stack/sheet/mineral/plasma{
-	amount = 26
-	},
-/turf/open/floor/plating,
 /area/awaymission/cabin)
 "ce" = (
 /obj/structure/chair/wood{
@@ -2832,6 +2838,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/awaymission/cabin)
+"hv" = (
+/obj/structure/table/reinforced,
+/obj/item/clothing/head/welding{
+	pixel_y = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stack/sheet/mineral/plasma{
+	amount = 26
+	},
+/turf/open/floor/plating,
+/area/awaymission/cabin)
 "hw" = (
 /obj/structure/closet/toolcloset,
 /obj/item/lightreplacer,
@@ -3132,14 +3149,6 @@
 	name = "soviet floor"
 	},
 /area/awaymission/cabin/caves/sovietcave)
-"il" = (
-/obj/item/toy/prize/deathripley{
-	desc = "The mining mecha of the exploration team.";
-	name = "exploraton squad Ripley";
-	pixel_y = 15
-	},
-/turf/open/floor/plating/ice/smooth,
-/area/awaymission/cabin/caves)
 "im" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/mineral/plastitanium/red{
@@ -5530,14 +5539,6 @@
 	},
 /turf/open/floor/plasteel/cafeteria,
 /area/awaymission/cabin)
-"pw" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
-/obj/machinery/power/smes/magical,
-/turf/open/floor/plating,
-/area/awaymission/cabin)
 "rn" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -5609,22 +5610,6 @@
 	},
 /turf/open/floor/plasteel/cafeteria,
 /area/awaymission/cabin)
-"CS" = (
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/blue,
-/obj/structure/sign/poster/contraband/yes_erp{
-	pixel_y = -32
-	},
-/turf/open/floor/plasteel/dark,
-/area/awaymission/cabin/caves/mountain)
 "DU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable{
@@ -5674,15 +5659,6 @@
 	},
 /turf/open/floor/carpet,
 /area/awaymission/cabin)
-"My" = (
-/obj/effect/decal/cleanable/cobweb/cobweb2,
-/obj/effect/baseturf_helper/asteroid/snow,
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/power/port_gen/pacman,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
-/area/awaymission/cabin)
 "MB" = (
 /obj/structure/chair/wood{
 	dir = 8
@@ -5715,6 +5691,14 @@
 	},
 /turf/open/floor/plasteel/freezer,
 /area/awaymission/cabin)
+"Vn" = (
+/obj/item/toy/mecha/deathripley{
+	desc = "The mining mecha of the exploration team.";
+	name = "exploraton squad Ripley";
+	pixel_y = 15
+	},
+/turf/open/floor/plating/ice/smooth,
+/area/awaymission/cabin/caves)
 "WD" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -5740,6 +5724,22 @@
 	},
 /turf/open/floor/wood,
 /area/awaymission/cabin)
+"Yt" = (
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/blue,
+/obj/structure/sign/poster/contraband/yes_erp{
+	pixel_y = -32
+	},
+/turf/open/floor/plasteel/dark,
+/area/awaymission/cabin/caves/mountain)
 
 (1,1,1) = {"
 ab
@@ -10390,7 +10390,7 @@ fp
 fp
 fp
 fP
-CS
+Yt
 fp
 fp
 fm
@@ -36478,7 +36478,7 @@ ax
 WX
 DU
 ed
-ca
+hv
 an
 hl
 bd
@@ -36732,7 +36732,7 @@ ac
 ac
 dB
 ax
-pw
+aD
 aM
 du
 hw
@@ -36989,7 +36989,7 @@ ac
 gP
 dB
 ax
-My
+aE
 aQ
 dv
 an
@@ -48967,7 +48967,7 @@ hQ
 hR
 hQ
 ig
-il
+Vn
 hO
 gx
 gx

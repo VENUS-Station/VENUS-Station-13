@@ -46,18 +46,6 @@
 	},
 /turf/template_noop,
 /area/template_noop)
-"aj" = (
-/obj/docking_port/stationary{
-	dir = 2;
-	dwidth = 14;
-	height = 13;
-	id = "caravanpirate_ambush";
-	name = "Trade Route";
-	roundstart_template = /datum/map_template/shuttle/ruin/pirate_cutter;
-	width = 22
-	},
-/turf/template_noop,
-/area/template_noop)
 "ak" = (
 /turf/open/floor/plating/airless{
 	icon_state = "platingdmg2"
@@ -1255,42 +1243,6 @@
 	},
 /turf/open/floor/plating/airless,
 /area/shuttle/caravan/freighter2)
-"kr" = (
-/obj/docking_port/stationary{
-	dir = 2;
-	dwidth = 6;
-	height = 7;
-	id = "caravansyndicate3_ambush";
-	name = "Trade Route";
-	roundstart_template = /datum/map_template/shuttle/ruin/syndicate_dropship;
-	width = 15
-	},
-/turf/template_noop,
-/area/template_noop)
-"kG" = (
-/obj/docking_port/stationary{
-	dir = 4;
-	dwidth = 4;
-	height = 5;
-	id = "caravansyndicate1_ambush";
-	name = "Trade Route";
-	roundstart_template = /datum/map_template/shuttle/ruin/syndicate_fighter_shiv;
-	width = 9
-	},
-/turf/template_noop,
-/area/template_noop)
-"kU" = (
-/obj/docking_port/stationary{
-	dir = 2;
-	dwidth = 11;
-	height = 11;
-	id = "caravantrade1_ambush";
-	name = "Trade Route";
-	roundstart_template = /datum/map_template/shuttle/ruin/caravan_victim;
-	width = 27
-	},
-/turf/template_noop,
-/area/template_noop)
 "lB" = (
 /turf/closed/mineral/random/high_chance,
 /area/ruin/unpowered)
@@ -1300,6 +1252,18 @@
 	icon_state = "platingdmg1"
 	},
 /area/ruin/unpowered)
+"mg" = (
+/obj/docking_port/stationary{
+	dir = 2;
+	dwidth = 6;
+	height = 7;
+	shuttle_id = "caravansyndicate3_ambush";
+	name = "Trade Route";
+	roundstart_template = /datum/map_template/shuttle/ruin/syndicate_dropship;
+	width = 15
+	},
+/turf/template_noop,
+/area/template_noop)
 "tH" = (
 /obj/structure/shuttle/engine/propulsion/burst{
 	dir = 8
@@ -1315,6 +1279,10 @@
 	},
 /turf/open/floor/plating/airless,
 /area/shuttle/caravan/freighter3)
+"Gj" = (
+/obj/machinery/spaceship_navigation_beacon/invion,
+/turf/closed/mineral/random,
+/area/ruin/unpowered)
 "GL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/external{
@@ -1325,10 +1293,42 @@
 	},
 /turf/open/floor/plating/airless,
 /area/shuttle/caravan/freighter2)
-"IG" = (
-/obj/machinery/spaceship_navigation_beacon/invion,
-/turf/closed/mineral/random,
-/area/ruin/unpowered)
+"KU" = (
+/obj/docking_port/stationary{
+	dir = 2;
+	dwidth = 11;
+	height = 11;
+	shuttle_id = "caravantrade1_ambush";
+	name = "Trade Route";
+	roundstart_template = /datum/map_template/shuttle/ruin/caravan_victim;
+	width = 27
+	},
+/turf/template_noop,
+/area/template_noop)
+"Nm" = (
+/obj/docking_port/stationary{
+	dir = 2;
+	dwidth = 14;
+	height = 13;
+	shuttle_id = "caravanpirate_ambush";
+	name = "Trade Route";
+	roundstart_template = /datum/map_template/shuttle/ruin/pirate_cutter;
+	width = 22
+	},
+/turf/template_noop,
+/area/template_noop)
+"VI" = (
+/obj/docking_port/stationary{
+	dir = 4;
+	dwidth = 4;
+	height = 5;
+	shuttle_id = "caravansyndicate1_ambush";
+	name = "Trade Route";
+	roundstart_template = /datum/map_template/shuttle/ruin/syndicate_fighter_shiv;
+	width = 9
+	},
+/turf/template_noop,
+/area/template_noop)
 
 (1,1,1) = {"
 aa
@@ -1732,7 +1732,7 @@ aa
 aa
 aa
 aa
-kG
+VI
 aa
 aa
 aa
@@ -2651,7 +2651,7 @@ aa
 aa
 aa
 aa
-kU
+KU
 aa
 aa
 aa
@@ -3726,7 +3726,7 @@ aa
 aa
 aa
 aa
-aj
+Nm
 aa
 aa
 aa
@@ -5057,7 +5057,7 @@ aa
 aa
 aa
 aa
-kr
+mg
 aa
 aa
 aa
@@ -5240,7 +5240,7 @@ aa
 bt
 bt
 bt
-IG
+Gj
 bt
 aa
 aa

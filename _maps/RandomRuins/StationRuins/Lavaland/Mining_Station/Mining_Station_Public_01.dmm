@@ -118,12 +118,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/mine/laborcamp)
-"ck" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/open/floor/plasteel,
-/area/mine/production)
 "cn" = (
 /obj/machinery/door/airlock{
 	id_tag = "miningdorm3";
@@ -160,18 +154,12 @@
 	},
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
-"dd" = (
-/obj/machinery/door/airlock/external{
-	glass = 1;
-	name = "Mining External Airlock";
-	opacity = 0
-	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+"cM" = (
+/obj/machinery/light/small{
 	dir = 1
 	},
-/obj/structure/fans/tiny,
-/turf/open/floor/plasteel,
-/area/mine/production)
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
 "dk" = (
 /obj/structure/table,
 /obj/item/stack/packageWrap,
@@ -183,6 +171,18 @@
 	},
 /turf/open/floor/plasteel,
 /area/mine/eva)
+"dC" = (
+/obj/docking_port/stationary{
+	area_type = /area/lavaland/surface/outdoors;
+	dir = 8;
+	dwidth = 2;
+	height = 5;
+	shuttle_id = "laborcamp_away";
+	name = "labor camp";
+	width = 9
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors/explored)
 "dL" = (
 /obj/machinery/atmospherics/components/binary/pump/on,
 /obj/structure/cable{
@@ -382,6 +382,12 @@
 	},
 /turf/open/floor/plasteel,
 /area/mine/laborcamp)
+"gM" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/mine/production)
 "gP" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Mining Station Communications";
@@ -494,6 +500,18 @@
 	},
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
+"ix" = (
+/obj/docking_port/stationary{
+	area_type = /area/lavaland/surface/outdoors;
+	dir = 8;
+	dwidth = 3;
+	height = 10;
+	shuttle_id = "mining_away";
+	name = "lavaland mine";
+	width = 7
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
 "iG" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -715,18 +733,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/mine/production)
-"mp" = (
-/obj/docking_port/stationary{
-	area_type = /area/lavaland/surface/outdoors;
-	dir = 8;
-	dwidth = 2;
-	height = 5;
-	id = "laborcamp_away";
-	name = "labor camp";
-	width = 9
-	},
-/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors/explored)
 "mv" = (
 /obj/machinery/door/window/southright,
 /obj/machinery/shower{
@@ -996,15 +1002,6 @@
 /obj/effect/turf_decal/tile/purple,
 /turf/open/floor/plasteel,
 /area/mine/eva)
-"qc" = (
-/obj/machinery/shower{
-	dir = 8
-	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 30
-	},
-/turf/open/floor/plasteel,
-/area/mine/production)
 "qg" = (
 /obj/structure/toilet{
 	dir = 8
@@ -1283,13 +1280,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
-"tx" = (
-/obj/effect/turf_decal/tile/purple{
-	dir = 8
-	},
-/obj/structure/ladder/teleport/xenoarch,
-/turf/open/floor/plasteel,
-/area/mine/production)
 "tK" = (
 /obj/structure/closet/crate,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
@@ -1576,18 +1566,6 @@
 	},
 /turf/open/floor/plasteel/freezer,
 /area/mine/living_quarters)
-"yZ" = (
-/obj/docking_port/stationary{
-	area_type = /area/lavaland/surface/outdoors;
-	dir = 8;
-	dwidth = 3;
-	height = 7;
-	id = "lavaland_common_away";
-	name = "Lavaland Mining Public Wing";
-	width = 7
-	},
-/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
 "zh" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
@@ -1920,6 +1898,13 @@
 	},
 /turf/open/floor/plating,
 /area/mine/laborcamp/security)
+"DJ" = (
+/obj/effect/turf_decal/tile/purple{
+	dir = 8
+	},
+/obj/structure/ladder/teleport/xenoarch,
+/turf/open/floor/plasteel,
+/area/mine/production)
 "Ed" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -1930,12 +1915,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/mine/production)
-"Ep" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
 "Ev" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -2000,6 +1979,18 @@
 	},
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
+"FQ" = (
+/obj/docking_port/stationary{
+	area_type = /area/lavaland/surface/outdoors;
+	dir = 8;
+	dwidth = 3;
+	height = 7;
+	shuttle_id = "lavaland_common_away";
+	name = "Lavaland Mining Public Wing";
+	width = 7
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
 "Ga" = (
 /obj/machinery/status_display/evac{
 	pixel_y = 32
@@ -2416,18 +2407,6 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/mine/living_quarters)
-"Lb" = (
-/obj/docking_port/stationary{
-	area_type = /area/lavaland/surface/outdoors;
-	dir = 8;
-	dwidth = 3;
-	height = 10;
-	id = "mining_away";
-	name = "lavaland mine";
-	width = 7
-	},
-/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
 "Lc" = (
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -2554,6 +2533,18 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3,
 /turf/open/floor/plasteel/white,
 /area/mine/living_quarters)
+"Mw" = (
+/obj/machinery/door/airlock/external{
+	glass = 1;
+	name = "Mining External Airlock";
+	opacity = 0
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/plasteel,
+/area/mine/production)
 "MD" = (
 /turf/closed/mineral/random/volcanic,
 /area/lavaland/surface/outdoors/unexplored)
@@ -3010,6 +3001,15 @@
 /obj/item/kitchen/fork,
 /turf/open/floor/plasteel,
 /area/mine/laborcamp)
+"Th" = (
+/obj/machinery/shower{
+	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 30
+	},
+/turf/open/floor/plasteel,
+/area/mine/production)
 "Tm" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
@@ -4360,7 +4360,7 @@ my
 my
 my
 my
-mp
+dC
 my
 my
 my
@@ -4778,7 +4778,7 @@ Lm
 Lm
 Lm
 Lm
-yZ
+FQ
 Lm
 Lm
 Lm
@@ -6471,7 +6471,7 @@ Lm
 Lm
 Lm
 Lm
-Lb
+ix
 Lm
 Lm
 Lm
@@ -6698,7 +6698,7 @@ VT
 VT
 Cd
 Ed
-tx
+DJ
 II
 Jo
 Ed
@@ -6887,7 +6887,7 @@ Cd
 Cd
 Cd
 Cd
-Ep
+cM
 Lm
 Lm
 VT
@@ -6941,7 +6941,7 @@ es
 Vs
 Ed
 tY
-ck
+gM
 tY
 Ed
 Lm
@@ -7000,7 +7000,7 @@ AS
 qR
 es
 lI
-dd
+Mw
 Lm
 Lm
 wz
@@ -7055,7 +7055,7 @@ es
 Wf
 Ed
 lS
-qc
+Th
 Wf
 Ed
 Lm
@@ -7115,7 +7115,7 @@ Cd
 Cd
 Cd
 Cd
-Ep
+cM
 Lm
 Lm
 Lm

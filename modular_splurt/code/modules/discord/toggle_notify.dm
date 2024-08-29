@@ -19,7 +19,7 @@
 
 	var/stored_id = SSdiscord.lookup_id(usr.ckey)
 	if(!stored_id) // Account is not linked
-		to_chat(src, span_warning("This requires you to link your Discord account with the \"Link Discord Account\" verb."))
+		to_chat(src, span_warning("This requires you to have your Discord account linked to your Ckey."))
 		return
 
 	else // Linked

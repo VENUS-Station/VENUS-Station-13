@@ -26,7 +26,7 @@
 /datum/round_event_control/vent_clog/female
 	name = "Clogged Vents: Girlcum"
 	typepath = /datum/round_event/vent_clog/female
-	max_occurrences = 1
+	max_occurrences = 0
 
 /datum/round_event/vent_clog/female
 	saferChems = list(
@@ -52,7 +52,7 @@
 /datum/round_event_control/vent_clog/male
 	name = "Clogged Vents: Semen"
 	typepath = /datum/round_event/vent_clog/male
-	max_occurrences = 1
+	max_occurrences = 0
 
 /datum/round_event/vent_clog/male
 	saferChems = list(
@@ -79,7 +79,7 @@
 	name = "Aphrodisiac Flood"
 	typepath = /datum/round_event/vent_clog/crocin
 	weight = 0
-	max_occurrences = 1
+	max_occurrences = 0
 
 /datum/round_event/vent_clog/crocin
 	saferChems = list(

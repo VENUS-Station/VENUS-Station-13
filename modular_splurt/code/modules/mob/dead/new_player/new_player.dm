@@ -86,11 +86,11 @@
 		var/tready = text2num(href_list["ready"])
 		if(tready != PLAYER_NOT_READY && !vibe_check)
 			ready = PLAYER_NOT_READY
-			to_chat(src, span_warning("You must link your discord account to your ckey in order to join the game. Join our <a style=\"color: #ff00ff;\" href=\"[CONFIG_GET(string/discordurl)]\">discord</a> and use the <span style=\"color: #ff00ff;\">[CONFIG_GET(string/discordbotcommandprefix)][CONFIG_GET(string/verification_command)]</span> command [CONFIG_GET(string/verification_channel) ? "as indicated in #[CONFIG_GET(string/verification_channel)] " : ""]. It won't take you more than two minutes :)<br>Ahelp or ask staff in the discord if this is an error."))
+			to_chat(usr, span_warning("You must link your discord account to your ckey in order to join the game. Join our <a style=\"color: #ff00ff;\" href=\"[CONFIG_GET(string/discordurl)]\">discord</a> and use open a Verification Request Ticket. It won't take you more than two minutes :)<br>Remember that to maintain in-game verification you MUST remain in the discord.<br>Ahelp or ask staff in the discord if this is an error."))
 			return
 	if(href_list["late_join"] || href_list["SelectedJob"] || href_list["JoinAsGhostRole"])
 		if(!vibe_check)
-			to_chat(src, span_warning("You must link your discord account to your ckey in order to join the game. Join our <a style=\"color: #ff00ff;\" href=\"[CONFIG_GET(string/discordurl)]\">discord</a> and use the <span style=\"color: #ff00ff;\">[CONFIG_GET(string/discordbotcommandprefix)][CONFIG_GET(string/verification_command)]</span> command [CONFIG_GET(string/verification_channel) ? "as indicated in #[CONFIG_GET(string/verification_channel)] " : ""]. It won't take you more than two minutes :)<br>Ahelp or ask staff in the discord if this is an error."))
+			to_chat(usr, span_warning("You must link your discord account to your ckey in order to join the game. Join our <a style=\"color: #ff00ff;\" href=\"[CONFIG_GET(string/discordurl)]\">discord</a> and use open a Verification Request Ticket. It won't take you more than two minutes :)<br>Remember that to maintain in-game verification you MUST remain in the discord.<br>Ahelp or ask staff in the discord if this is an error."))
 			return
 
 	if(client?.prefs.toggles & TG_PLAYER_PANEL)

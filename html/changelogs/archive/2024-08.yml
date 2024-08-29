@@ -30,3 +30,4 @@
   SaraSayomi:
   - rscdel: Removes merge conflict marker from aimodules rather than AI_modules
   - rscdel: Removes double layer on core modules
+  - bugfix: double layered map bug and merge conflict on whiteship for meta

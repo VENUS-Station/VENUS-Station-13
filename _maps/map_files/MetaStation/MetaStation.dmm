@@ -58176,27 +58176,6 @@
 	id = "AI";
 	pixel_y = 24
 	},
-/obj{
-	name = "---Merge conflict marker---"
-	},
-/obj/structure/table,
-/obj/item/ai_module/core/full/asimov,
-/obj/effect/spawner/lootdrop/ai_module_harmless,
-/obj/item/ai_module/core/freeformcore,
-/obj/machinery/door/window{
-	base_state = "right";
-	dir = 4;
-	icon_state = "right";
-	name = "Core Modules";
-	req_access_txt = "20"
-	},
-/obj/structure/window/reinforced,
-/obj/effect/spawner/lootdrop/ai_module_neutral,
-/obj/item/ai_module/core/full/custom,
-/obj/machinery/flasher{
-	id = "AI";
-	pixel_y = 24
-	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai_upload)
 "jmq" = (
@@ -80808,15 +80787,6 @@
 	pixel_x = -3;
 	pixel_y = 5
 	},
-/obj{
-	name = "---Merge conflict marker---"
-	},
-/obj/machinery/newscaster/security_unit{
-	pixel_y = -30
-	},
-/obj/item/folder/red,
-/obj/item/folder/red,
-/obj/structure/table,
 /obj/item/book/manual/wiki/security_space_law{
 	pixel_x = -3;
 	pixel_y = 5

@@ -1,5 +1,0 @@
-author: SaraSayomi
-delete-after: true
-changes:
-  - rscdel: Removes merge conflict marker from aimodules rather than AI_modules
-  - rscdel: Removes double layer on core modules

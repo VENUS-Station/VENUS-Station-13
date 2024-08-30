@@ -34586,6 +34586,7 @@
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plating,
 /area/maintenance/solars/starboard/fore)
 "dMl" = (
 /obj/structure/sign/warning/fire,

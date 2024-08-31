@@ -2,7 +2,7 @@
 	name = "Supernova"
 	typepath = /datum/round_event/supernova
 	weight = 5
-	max_occurrences = 1
+	max_occurrences = 0
 	min_players = 2
 	category = EVENT_CATEGORY_SPACE
 	description = "Several modified radstorms hit the station."

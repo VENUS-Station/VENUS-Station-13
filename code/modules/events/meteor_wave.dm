@@ -8,7 +8,7 @@
 	typepath = /datum/round_event/meteor_wave
 	weight = 4
 	min_players = 15
-	max_occurrences = 3
+	max_occurrences = 0
 	earliest_start = 25 MINUTES
 	category = EVENT_CATEGORY_SPACE
 	description = "A regular meteor wave."
@@ -87,7 +87,7 @@
 	typepath = /datum/round_event/meteor_wave/threatening
 	weight = 5
 	min_players = 20
-	max_occurrences = 3
+	max_occurrences = 0
 	earliest_start = 35 MINUTES
 	description = "A meteor wave with higher chance of big meteors."
 
@@ -100,7 +100,7 @@
 	typepath = /datum/round_event/meteor_wave/catastrophic
 	weight = 7
 	min_players = 25
-	max_occurrences = 3
+	max_occurrences = 0
 	earliest_start = 45 MINUTES
 	description = "A meteor wave that might summon a tunguska class meteor."
 

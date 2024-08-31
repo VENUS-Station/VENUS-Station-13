@@ -2,7 +2,7 @@
 	name = "Abductors"
 	typepath = /datum/round_event/ghost_role/abductor
 	weight = 3
-	max_occurrences = 1
+	max_occurrences = 0
 	min_players = 30
 	earliest_start = 30 MINUTES
 	dynamic_should_hijack = TRUE

@@ -2,7 +2,7 @@
 	name = "Random Heart Attack"
 	typepath = /datum/round_event/heart_attack
 	weight = 10
-	max_occurrences = 2
+	max_occurrences = 0
 	min_players = 10 // To avoid shafting lowpop
 	category = EVENT_CATEGORY_HEALTH
 	description = "A random crewmember's heart gives out."

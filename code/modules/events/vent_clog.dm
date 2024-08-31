@@ -2,7 +2,7 @@
 	name = "Clogged Vents: Normal"
 	typepath = /datum/round_event/vent_clog
 	weight = 10
-	max_occurrences = 3
+	max_occurrences = 0
 	category = EVENT_CATEGORY_HEALTH
 	description = "All the scrubbers onstation spit random chemicals in smoke form."
 
@@ -108,7 +108,7 @@
 	typepath = /datum/round_event/vent_clog/threatening
 	weight = 4
 	min_players = 15
-	max_occurrences = 1
+	max_occurrences = 0
 	earliest_start = 35 MINUTES
 	description = "Extra dangerous chemicals come out of the scrubbers."
 
@@ -121,7 +121,7 @@
 	typepath = /datum/round_event/vent_clog/catastrophic
 	weight = 2
 	min_players = 25
-	max_occurrences = 1
+	max_occurrences = 0
 	earliest_start = 45 MINUTES
 	description = "EXTREMELY dangerous chemicals come out of the scrubbers."
 

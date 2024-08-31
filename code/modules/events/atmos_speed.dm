@@ -1,7 +1,7 @@
 /datum/round_event_control/atmos_flux
 	name = "Atmospheric Flux"
 	typepath = /datum/round_event/atmos_flux
-	max_occurrences = 5
+	max_occurrences = 1
 	weight = 10
 	category = EVENT_CATEGORY_ENGINEERING
 	description = "Modifies the speed of the SSair randomly, ends after one minute."

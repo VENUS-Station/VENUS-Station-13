@@ -2,7 +2,7 @@
 	name = "Lone Operative"
 	typepath = /datum/round_event/ghost_role/operative
 	weight = 0 //Admin only
-	max_occurrences = 1
+	max_occurrences = 0
 	category = EVENT_CATEGORY_INVASION
 	description = "A single nuclear operative assaults the station."
 

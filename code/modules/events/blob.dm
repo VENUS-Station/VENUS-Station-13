@@ -2,7 +2,7 @@
 	name = "Blob"
 	typepath = /datum/round_event/ghost_role/blob
 	weight = 3
-	max_occurrences = 1
+	max_occurrences = 0
 
 	earliest_start = 60 MINUTES
 	min_players = 35

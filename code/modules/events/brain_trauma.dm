@@ -3,7 +3,7 @@
 	typepath = /datum/round_event/brain_trauma
 	weight = 25
 	min_players = 5
-	max_occurences = 0
+	max_occurrences = 0
 	category = EVENT_CATEGORY_HEALTH
 	description = "A crewmember gains a random trauma."
 

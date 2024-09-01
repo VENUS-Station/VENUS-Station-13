@@ -4,7 +4,7 @@
 	weight = 15
 	min_players = 2
 	earliest_start = 10 MINUTES
-	max_occurrences = 6
+	max_occurrences = 2
 	category = EVENT_CATEGORY_ENTITIES
 	description = "Summons a school of space carp."
 

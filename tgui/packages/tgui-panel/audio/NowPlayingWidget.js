@@ -5,27 +5,28 @@
  */
 
 import { toFixed } from 'common/math';
-import { useDispatch, useSelector } from 'common/redux';
-import { Button, Collapsible, Flex, Knob } from 'tgui/components';
+import { useDispatch, useSelector } from 'tgui/backend';
+import { Button, Collapsible, Flex, Knob, Section } from 'tgui/components';
+
 import { useSettings } from '../settings';
 import { selectAudio } from './selectors';
 
-export const NowPlayingWidget = (props, context) => {
-  const audio = useSelector(context, selectAudio),
-    dispatch = useDispatch(context),
-    settings = useSettings(context),
+export const NowPlayingWidget = (props) => {
+  const audio = useSelector(selectAudio),
+    dispatch = useDispatch(),
+    settings = useSettings(),
     title = audio.meta?.title,
     URL = audio.meta?.link,
     Artist = audio.meta?.artist || 'Unknown Artist',
-    upload_date = audio.meta?.upload_date || 'Date Unknown',
+    upload_date = audio.meta?.upload_date || 'Unknown Date',
     album = audio.meta?.album || 'Unknown Album',
     duration = audio.meta?.duration,
     date = !isNaN(upload_date)
       ? upload_date?.substring(0, 4) +
-      '-' +
-      upload_date?.substring(4, 6) +
-      '-' +
-      upload_date?.substring(6, 8)
+        '-' +
+        upload_date?.substring(4, 6) +
+        '-' +
+        upload_date?.substring(6, 8)
       : upload_date;
 
   return (
@@ -35,19 +36,40 @@ export const NowPlayingWidget = (props, context) => {
           mx={0.5}
           grow={1}
           style={{
-            'white-space': 'nowrap',
-            'overflow': 'hidden',
-            'text-overflow': 'ellipsis',
-          }}>
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+          }}
+        >
           {
             <Collapsible title={title || 'Unknown Track'} color={'blue'}>
-              <Flex.Item grow={1} color="label">
-                Url: {URL} <br />
-                Duration: {duration} <br />
-                Artist: {Artist} <br />
-                Album: {album} <br />
-                Uploaded: {date}
-              </Flex.Item>
+              <Section>
+                {URL !== 'Song Link Hidden' && (
+                  <Flex.Item grow={1} color="label">
+                    URL: {URL}
+                  </Flex.Item>
+                )}
+                <Flex.Item grow={1} color="label">
+                  Duration: {duration}
+                </Flex.Item>
+                {Artist !== 'Song Artist Hidden' &&
+                  Artist !== 'Unknown Artist' && (
+                    <Flex.Item grow={1} color="label">
+                      Artist: {Artist}
+                    </Flex.Item>
+                  )}
+                {album !== 'Song Album Hidden' && album !== 'Unknown Album' && (
+                  <Flex.Item grow={1} color="label">
+                    Album: {album}
+                  </Flex.Item>
+                )}
+                {upload_date !== 'Song Upload Date Hidden' &&
+                  upload_date !== 'Unknown Date' && (
+                    <Flex.Item grow={1} color="label">
+                      Uploaded: {date}
+                    </Flex.Item>
+                  )}
+              </Section>
             </Collapsible>
           }
         </Flex.Item>

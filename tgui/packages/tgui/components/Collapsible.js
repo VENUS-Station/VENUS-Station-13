@@ -29,7 +29,7 @@ export class Collapsible extends Component {
       ...rest
     } = props;
     return (
-      <Box mb={1}>
+      <Box mb={0}>
         <div className="Table">
           <div className="Table__cell">
             <Button

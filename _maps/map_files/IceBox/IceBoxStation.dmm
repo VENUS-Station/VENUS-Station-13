@@ -24107,7 +24107,7 @@
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
 "imF" = (
-/obj/structure/urinal/shit{
+/obj/structure/urinal{
 	pixel_y = 30
 	},
 /turf/open/floor/mineral/titanium/blue,

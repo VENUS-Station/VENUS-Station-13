@@ -62522,7 +62522,7 @@
 /turf/open/floor/plasteel,
 /area/service/bar)
 "tCL" = (
-/obj/structure/urinal/shit{
+/obj/structure/urinal{
 	pixel_y = 30
 	},
 /turf/open/floor/mineral/titanium/blue,

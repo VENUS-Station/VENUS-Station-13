@@ -174,12 +174,8 @@
 	var/exposed = 0 // can you currently put an item inside
 	var/obj/item/hiddenitem = null // what's in the urinal
 
-/obj/structure/urinal/Initialize(no_shit = FALSE)
+/obj/structure/urinal/Initialize()
 	. = ..()
-	if(!no_shit && prob(1))
-		new /obj/structure/urinal/shit(loc, dir)
-		qdel(src)
-		return
 	hiddenitem = new /obj/item/reagent_containers/food/urinalcake
 
 /obj/structure/urinal/Destroy()

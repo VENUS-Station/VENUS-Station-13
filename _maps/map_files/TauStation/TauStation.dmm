@@ -12365,7 +12365,7 @@
 	dir = 8;
 	pixel_x = -4
 	},
-/obj/structure/urinal/shit{
+/obj/structure/urinal{
 	pixel_y = 32
 	},
 /turf/open/floor/plasteel/freezer,

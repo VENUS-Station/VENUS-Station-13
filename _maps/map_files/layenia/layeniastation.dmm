@@ -8755,7 +8755,7 @@
 /area/ai_monitored/turret_protected/aisat/hallway)
 "bxg" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/urinal/shit{
+/obj/structure/urinal{
 	pixel_y = 4;
 	pixel_x = 26
 	},
@@ -101567,7 +101567,7 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc/auto_name/east,
-/obj/structure/urinal/shit{
+/obj/structure/urinal{
 	pixel_y = 34
 	},
 /turf/open/floor/plasteel/freezer,

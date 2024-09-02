@@ -285,7 +285,7 @@ SUBSYSTEM_DEF(vote)
 			text = "\n<b>[score_name]:</b> [display_votes & SHOW_RESULTS ? score : "???"]"
 			. = 1
 	else
-		text += "<b>Vote Result: Inconclusive - No Votes!</b>"
+		text += "<b> Result: Inconclusive - No Votes!</b>"
 	log_vote(text)
 	remove_action_buttons()
 	to_chat(world, "\n<font color='purple'>[text]</font>")

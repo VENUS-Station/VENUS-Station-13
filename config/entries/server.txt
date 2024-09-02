@@ -49,7 +49,7 @@ HOSTEDBY Yournamehere
 ## from https://github.com/yt-dlp/yt-dlp/releases
 ## or your package manager
 ## The default value assumes yt-dlp is in your system PATH
-# INVOKE_YOUTUBEDL yt-dlp
+INVOKE_YOUTUBEDL yt-dlp
 
 ###Master Controller High Pop Mode###
 

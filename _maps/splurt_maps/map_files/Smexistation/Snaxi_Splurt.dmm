@@ -4033,8 +4033,8 @@
 /area/maintenance/bar)
 "aUC" = (
 /obj/structure/closet/secure_closet/personal,
-/obj/item/toy/poolnoodle/yellow,
-/obj/item/toy/poolnoodle/red,
+/obj/item/toy/poolnoodle,
+/obj/item/toy/poolnoodle,
 /turf/open/floor/plasteel,
 /area/commons/fitness/pool)
 "aUG" = (
@@ -42424,8 +42424,8 @@
 	icon_state = "0-2"
 	},
 /obj/structure/closet/secure_closet/personal,
-/obj/item/toy/poolnoodle/yellow,
-/obj/item/toy/poolnoodle/blue,
+/obj/item/toy/poolnoodle,
+/obj/item/toy/poolnoodle,
 /turf/open/floor/plasteel,
 /area/commons/fitness/pool)
 "qTO" = (

@@ -7923,10 +7923,10 @@
 /area/science/research)
 "egR" = (
 /obj/structure/closet/secure_closet/personal,
-/obj/item/toy/poolnoodle/yellow,
-/obj/item/toy/poolnoodle/yellow,
-/obj/item/toy/poolnoodle/yellow,
-/obj/item/toy/poolnoodle/yellow,
+/obj/item/toy/poolnoodle,
+/obj/item/toy/poolnoodle,
+/obj/item/toy/poolnoodle,
+/obj/item/toy/poolnoodle,
 /turf/open/floor/plasteel,
 /area/commons/fitness/pool)
 "ehx" = (
@@ -13504,10 +13504,10 @@
 /area/service/library)
 "gZR" = (
 /obj/structure/closet/secure_closet/personal,
-/obj/item/toy/poolnoodle/red,
-/obj/item/toy/poolnoodle/red,
-/obj/item/toy/poolnoodle/red,
-/obj/item/toy/poolnoodle/red,
+/obj/item/toy/poolnoodle,
+/obj/item/toy/poolnoodle,
+/obj/item/toy/poolnoodle,
+/obj/item/toy/poolnoodle,
 /turf/open/floor/plasteel,
 /area/commons/fitness/pool)
 "gZX" = (
@@ -47303,10 +47303,10 @@
 /area/maintenance/central/secondary)
 "ykK" = (
 /obj/structure/closet/secure_closet/personal,
-/obj/item/toy/poolnoodle/blue,
-/obj/item/toy/poolnoodle/blue,
-/obj/item/toy/poolnoodle/blue,
-/obj/item/toy/poolnoodle/blue,
+/obj/item/toy/poolnoodle,
+/obj/item/toy/poolnoodle,
+/obj/item/toy/poolnoodle,
+/obj/item/toy/poolnoodle,
 /obj/machinery/light{
 	dir = 8
 	},

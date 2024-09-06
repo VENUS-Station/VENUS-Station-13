@@ -63308,7 +63308,7 @@
 /area/commons/dorms)
 "lRU" = (
 /obj/structure/closet/athletic_mixed,
-/obj/item/toy/poolnoodle/blue,
+/obj/item/toy/poolnoodle,
 /turf/open/floor/plating,
 /area/commons/fitness/pool)
 "lSH" = (

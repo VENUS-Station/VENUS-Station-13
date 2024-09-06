@@ -677,7 +677,7 @@
 /turf/open/floor/pod/dark,
 /area/ruin/lavaland/powered/beach)
 "vr" = (
-/obj/item/toy/poolnoodle/blue,
+/obj/item/toy/poolnoodle,
 /turf/open/floor/plasteel,
 /area/ruin/lavaland/powered/beach)
 "wY" = (
@@ -777,7 +777,7 @@
 /turf/open/floor/pod/dark,
 /area/ruin/lavaland/powered/beach)
 "HE" = (
-/obj/item/toy/poolnoodle/yellow,
+/obj/item/toy/poolnoodle,
 /turf/open/floor/plasteel,
 /area/ruin/lavaland/powered/beach)
 "Ii" = (
@@ -903,7 +903,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/item/toy/poolnoodle/red,
+/obj/item/toy/poolnoodle,
 /turf/open/floor/plasteel,
 /area/ruin/lavaland/powered/beach)
 "VO" = (

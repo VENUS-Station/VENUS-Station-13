@@ -7,6 +7,7 @@ SUBSYSTEM_DEF(title)
 	var/icon/icon
 	var/icon/previous_icon
 	var/turf/closed/indestructible/splashscreen/splash_turf
+	var/sound_path
 
 /datum/controller/subsystem/title/Initialize()
 	if(file_path && icon)
@@ -38,6 +39,16 @@ SUBSYSTEM_DEF(title)
 
 	icon = new(fcopy_rsc(file_path))
 
+	// Check for a corresponding sound file
+	var/list/L = splittext(file_path, "+")
+	if(L.len > 1)
+		var/sound_suffix = L[2]
+		var/sound_file = "[global.config.directory]/title_music/sounds/[sound_suffix].ogg"
+		if(fexists(sound_file))
+			sound_path = sound_file
+	else
+		sound_path = "[global.config.directory]/title_music/sounds/[pick(flist("[global.config.directory]/title_music/sounds/"))]"
+
 	if(splash_turf)
 		splash_turf.icon = icon
 		splash_turf.handle_generic_titlescreen_sizes()
@@ -63,8 +74,17 @@ SUBSYSTEM_DEF(title)
 		var/atom/movable/screen/splash/S = new(thing, FALSE)
 		S.Fade(FALSE,FALSE)
 
+	// Save the sound path
+	if(sound_path)
+		var/F = file("data/previous_title_sound.dat")
+		WRITE_FILE(F, sound_path)
+
 /datum/controller/subsystem/title/Recover()
 	icon = SStitle.icon
 	splash_turf = SStitle.splash_turf
 	file_path = SStitle.file_path
 	previous_icon = SStitle.previous_icon
+
+	// Recover the sound path
+	if(fexists("data/previous_title_sound.dat"))
+		sound_path = file2text("data/previous_title_sound.dat")

@@ -129,7 +129,11 @@ SUBSYSTEM_DEF(ticker)
 		music = world.file2list(ROUND_START_MUSIC_LIST, "\n")
 		login_music = pick(music)
 	else
-		login_music = "[global.config.directory]/title_music/sounds/[pick(music)]"
+		// Use the sound path from the title subsystem if it exists
+		if(SStitle.sound_path)
+			login_music = SStitle.sound_path
+		else
+			login_music = "[global.config.directory]/title_music/sounds/[pick(music)]"
 
 
 	if(!GLOB.syndicate_code_phrase)

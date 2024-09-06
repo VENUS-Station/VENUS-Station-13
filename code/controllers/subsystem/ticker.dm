@@ -111,7 +111,8 @@ SUBSYSTEM_DEF(ticker)
 				if((use_rare_music && L[1] == "rare") || (L[1] == SSmapping.config.map_name))
 					music += S
 			if(1) //sound.ogg -- common sound
-				music += S
+				if(!findtext(S, "{") && !findtext(S, "}")) // Exclude songs surrounded by parentheses
+					music += S
 
 	var/old_login_music = trim(file2text("data/last_round_lobby_music.txt"))
 	if(music.len > 1)

@@ -3,7 +3,7 @@
 	typepath = /datum/round_event/anomaly/anomaly_vortex
 
 	min_players = 20
-	max_occurrences = 2
+	max_occurrences = 0
 	weight = 5
 	description = "This anomaly sucks in and detonates items."
 

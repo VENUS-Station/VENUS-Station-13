@@ -3,7 +3,7 @@
 	typepath = /datum/round_event/anomaly/anomaly_pyro
 
 	min_players = 5
-	max_occurrences = 5
+	max_occurrences = 2
 	weight = 20
 	description = "This anomaly sets things on fire, and creates a pyroclastic slime."
 

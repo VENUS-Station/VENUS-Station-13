@@ -641,3 +641,24 @@
 	if (AIStatus == AI_Z_OFF)
 		SSidlenpcpool.idle_mobs_by_zlevel[old_z] -= src
 		toggle_ai(initial(AIStatus))
+
+/mob/living/simple_animal/examine(mob/user)
+	. = ..()
+	var/list/dat = list()
+	if(stat == DEAD)
+		dat += "<span class='deadsay'>[p_they(TRUE)] appears to be dead.</span>"
+	if(getBruteLoss())
+		if(getBruteLoss() < (maxHealth / 10))
+			dat += span_warning("[p_they(TRUE)] looks bruised.")
+		else if(getBruteLoss() < (maxHealth / 2))
+			dat += span_warning("<B>[p_they(TRUE)] looks severely bruised.</B>")
+		else
+			dat += span_warning("<B>[p_they(TRUE)] looks critically bruised and damaged.</B>")
+	if(getFireLoss())
+		if(getFireLoss() < (maxHealth / 10))
+			dat += span_warning("[p_they(TRUE)] looks burned.")
+		else if(getFireLoss() < (maxHealth / 2))
+			dat += span_warning("<B>[p_they(TRUE)] looks severely burned.</B>")
+		else
+			dat += span_warning("<B>[p_they(TRUE)] looks critically burned and blistered.</B>")
+	return dat

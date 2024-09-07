@@ -17,7 +17,7 @@
 	ranged_cooldown_time = 70
 	throw_message = "does nothing against the hardened skin of"
 	vision_range = 5
-	speed = 1
+	speed = 1.3
 	maxHealth = 150
 	health = 150
 	harm_intent_damage = 15
@@ -72,7 +72,7 @@
 	damage_type = BURN
 	nodamage = 0
 	armour_penetration = 20
-	var/firestacks = 5
+	var/firestacks = 3
 
 /obj/item/projectile/magic/impfireball/on_hit(target)
 	. = ..()

@@ -281,6 +281,13 @@
 	description = "Among civilian vessels the most common cause of tragedy is lack of food. \
 	This ship was outfited with a multitude of food generating features, then summarily ran into an asteroid shortly after takeoff."
 
+/datum/map_template/ruin/space/crashedufo
+	id = "crashedufo"
+	suffix = "crashedufo.dmm"
+	name = "Crashed UFO"
+	description = "Turns out even high-tech ships of abductors happen to crash into stray asteroids. \
+	Who knows what secrets might be unearthed from the wreckage?"
+
 /datum/map_template/ruin/space/listeningstation
 	id = "listeningstation"
 	suffix = "listeningstation.dmm"
@@ -379,6 +386,12 @@
 	suffix = "bigape.dmm"
 	name = "Big Ape"
 	description = "A gorilla? Out here? But why."
+
+/datum/map_template/ruin/space/cozy_apartment
+	id = "nicelittlenest"
+	suffix = "nicelittlenest.dmm"
+	name = "Cozy Home"
+	description = "A nice little place for travellers to rest. There is even a mint under the pillow!"
 
 /datum/map_template/ruin/space/space_arcade
 	id = "arcade"

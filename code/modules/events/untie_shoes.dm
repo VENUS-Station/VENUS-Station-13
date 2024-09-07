@@ -2,7 +2,7 @@
 	name = "Untied Shoes"
 	typepath = /datum/round_event/untied_shoes
 	weight = 50
-	max_occurrences = 10
+	max_occurrences = 5
 	alert_observers = FALSE
 	category = EVENT_CATEGORY_HEALTH
 	description = "Unties people's shoes, with a chance to knot them as well."

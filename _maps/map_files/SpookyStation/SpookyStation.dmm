@@ -16777,6 +16777,10 @@
 	},
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/tcommsat/server)
+"gDp" = (
+/obj/item/hilbertshotel/ghostdojo,
+/turf/open/floor/spooktime/cobble,
+/area/eventmap/outside)
 "gIM" = (
 /obj/machinery/computer/telecomms/server{
 	dir = 4;
@@ -40018,7 +40022,7 @@ aab
 aab
 aab
 aph
-apR
+gDp
 awm
 ayO
 aWA

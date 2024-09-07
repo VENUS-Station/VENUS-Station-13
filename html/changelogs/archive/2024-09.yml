@@ -1,6 +1,5 @@
-author: MosleyTheMalO
-delete-after: true
-changes:
+2024-09-07:
+  MosleyTheMalO:
   - bugfix: Fixes the overall sprite
   - rscadd: adds a new polychromic sprite
   - rscadd: donator item

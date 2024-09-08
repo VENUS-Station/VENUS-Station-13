@@ -47583,7 +47583,7 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/turf/open/water/decorative,
+/turf/open/water/safe,
 /area/hallway/secondary/entry)
 "dci" = (
 /obj/structure/cable{
@@ -56366,7 +56366,7 @@
 /turf/open/space/basic,
 /area/space/nearstation)
 "mJR" = (
-/turf/open/water/decorative,
+/turf/open/water/safe,
 /area/hallway/secondary/entry)
 "mKk" = (
 /obj/structure/cable{
@@ -57992,7 +57992,7 @@
 	pixel_x = -2;
 	pixel_y = 13
 	},
-/turf/open/water/decorative,
+/turf/open/water/safe,
 /area/hallway/secondary/entry)
 "ous" = (
 /obj/effect/turf_decal/stripes/line,
@@ -60391,7 +60391,7 @@
 	pixel_x = -60;
 	pixel_y = -60
 	},
-/turf/open/water/decorative,
+/turf/open/water/safe,
 /area/hallway/secondary/entry)
 "qVk" = (
 /obj/machinery/door/poddoor/incinerator_atmos_aux,
@@ -63236,7 +63236,7 @@
 /area/hallway/secondary/entry)
 "upX" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/turf/open/water/decorative,
+/turf/open/water/safe,
 /area/hallway/secondary/entry)
 "uqg" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -65639,7 +65639,7 @@
 	pixel_y = -4
 	},
 /obj/structure/flora/rock/pile,
-/turf/open/water/decorative,
+/turf/open/water/safe,
 /area/hallway/secondary/entry)
 "wTD" = (
 /obj/structure/table/wood,

@@ -483,7 +483,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<HR>"
 
 			dat += "<center>"
-			var/savefile/client_file = user.client.Import()
+			var/savefile/client_file = new(user.client.Import())
 			var/savefile_name
 			if(istype(client_file, /savefile))
 				if(!client_file["deleted"] || savefile_needs_update(client_file) != -2)

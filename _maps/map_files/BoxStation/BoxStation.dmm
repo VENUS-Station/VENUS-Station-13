@@ -17815,7 +17815,7 @@
 /obj/machinery/door/airlock/maintenance{
 	req_access_txt = "12"
 	},
-/turf/open/floor/plating,
+/turf/open/space/basic,
 /area/maintenance/starboard/aft)
 "bnu" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -33357,7 +33357,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
 	},
-/turf/open/floor/plating,
+/turf/template_noop,
 /area/maintenance/starboard/aft)
 "cae" = (
 /turf/open/floor/plating{
@@ -34451,8 +34451,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
 	},
-/obj/effect/landmark/stationroom/maint/threexthree,
-/turf/template_noop,
+/turf/open/floor/plating,
 /area/maintenance/starboard/aft)
 "ccX" = (
 /obj/structure/cable{
@@ -49661,6 +49660,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/effect/landmark/stationroom/maint/threexthree,
 /turf/template_noop,
 /area/maintenance/starboard/aft)
 "iyK" = (
@@ -55427,7 +55427,7 @@
 /area/maintenance/fore)
 "nnM" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
-/turf/open/floor/plating,
+/turf/template_noop,
 /area/maintenance/starboard/aft)
 "nnT" = (
 /obj/effect/turf_decal/trimline/brown/filled/line,
@@ -59311,7 +59311,7 @@
 	dir = 10
 	},
 /obj/effect/landmark/start/stowaway,
-/turf/template_noop,
+/turf/open/floor/plating,
 /area/maintenance/starboard/aft)
 "qYs" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -60291,7 +60291,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/turf/open/floor/plating,
+/turf/template_noop,
 /area/maintenance/starboard/aft)
 "rST" = (
 /obj/structure/window/reinforced{
@@ -114620,7 +114620,7 @@ ciJ
 cbf
 diq
 clr
-bnt
+cQw
 ckS
 shk
 ckS
@@ -115391,7 +115391,7 @@ cOT
 aaa
 cOT
 clt
-cQw
+bnt
 ckS
 ckS
 ckS
@@ -118979,7 +118979,7 @@ ccU
 nnM
 ckS
 wuO
-ckS
+cOe
 cNW
 ceT
 cNW

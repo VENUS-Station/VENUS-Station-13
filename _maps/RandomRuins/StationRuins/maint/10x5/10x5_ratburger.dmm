@@ -165,7 +165,7 @@
 /turf/open/floor/plasteel/cafeteria,
 /area/template_noop)
 "N" = (
-/obj/machinery/barsign{
+/obj/structure/sign/barsign{
 	pixel_y = 32
 	},
 /turf/open/floor/plating,

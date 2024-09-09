@@ -7,7 +7,7 @@
 	id = "junctionshutter";
 	name = "Shutters Control";
 	pixel_x = 26;
-	pixel_y = 4;
+	pixel_y = 4
 	},
 /obj/machinery/light{
 	dir = 8;
@@ -21,7 +21,7 @@
 	id = "junctionshutter";
 	name = "Shutters Control";
 	pixel_x = -4;
-	pixel_y = 26;
+	pixel_y = 26
 	},
 /obj/machinery/light{
 	dir = 2
@@ -52,7 +52,7 @@
 	id = "junctionshutter";
 	name = "Shutters Control";
 	pixel_x = -4;
-	pixel_y = -26;
+	pixel_y = -26
 	},
 /obj/machinery/light{
 	dir = 1
@@ -94,7 +94,7 @@
 	id = "junctionshutter";
 	name = "Shutters Control";
 	pixel_x = -26;
-	pixel_y = 4;
+	pixel_y = 4
 	},
 /obj/machinery/light{
 	dir = 4;
@@ -103,6 +103,10 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+/turf/open/floor/plating,
+/area/template_noop)
+"K" = (
+/obj/effect/spawner/structure/window/reinforced/shutter,
 /turf/open/floor/plating,
 /area/template_noop)
 "M" = (
@@ -141,9 +145,9 @@ a
 a
 G
 S
-S
+K
 s
-S
+K
 S
 S
 T
@@ -153,9 +157,9 @@ a
 a
 G
 S
+K
 S
-S
-S
+K
 G
 G
 B
@@ -181,8 +185,8 @@ a
 z
 a
 a
-S
-S
+K
+K
 S
 "}
 (6,1,1) = {"
@@ -205,8 +209,8 @@ a
 z
 a
 x
-S
-S
+K
+K
 S
 "}
 (8,1,1) = {"
@@ -225,9 +229,9 @@ S
 a
 G
 S
-S
+K
 s
-S
+K
 S
 G
 G

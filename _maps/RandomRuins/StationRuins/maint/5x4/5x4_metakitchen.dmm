@@ -74,9 +74,7 @@
 /area/template_noop)
 "p" = (
 /obj/structure/table,
-/obj/item/flashlight/lamp{
-	light_on = 0
-	},
+/obj/item/flashlight/lamp,
 /turf/open/floor/plating,
 /area/template_noop)
 "y" = (

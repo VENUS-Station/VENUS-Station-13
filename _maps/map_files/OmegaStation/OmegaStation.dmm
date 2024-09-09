@@ -36064,7 +36064,7 @@
 /area/maintenance/starboard/aft)
 "iSy" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-//obj/item/pool/pool_noodle,
+/obj/item/pool/pool_noodle,
 /turf/open/floor/wood,
 /area/maintenance/starboard/aft)
 "iUa" = (

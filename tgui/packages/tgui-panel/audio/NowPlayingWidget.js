@@ -40,7 +40,7 @@ export const NowPlayingWidget = (props, context) => {
             'text-overflow': 'ellipsis',
           }}>
           {
-            <Collapsible title={title || 'Unknown Track'} color={'blue'}>
+            <Collapsible title={title || 'Unknown Track'} color={'blue'} marginBottom={0}>
               <Flex.Item grow={1} color="label">
                 Url: {URL} <br />
                 Duration: {duration} <br />

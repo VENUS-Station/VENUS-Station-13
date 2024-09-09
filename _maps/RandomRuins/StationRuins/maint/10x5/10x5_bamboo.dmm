@@ -124,9 +124,7 @@
 /turf/open/floor/wood,
 /area/template_noop)
 "T" = (
-/obj/structure/window/paperframe{
-	can_atmos_pass = 0
-	},
+/obj/structure/window/paperframe,
 /turf/open/floor/wood,
 /area/template_noop)
 "U" = (

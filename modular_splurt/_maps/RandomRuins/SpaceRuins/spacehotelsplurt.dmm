@@ -1018,7 +1018,7 @@
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/hotel)
 "eX" = (
-/obj/item/toy/poolnoodle,
+/obj/item/pool/pool_noodle,
 /turf/open/pool,
 /area/ruin/space/has_grav/hotel)
 "eY" = (
@@ -7261,7 +7261,7 @@
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 4
 	},
-/obj/item/toy/poolnoodle,
+/obj/item/pool/pool_noodle,
 /turf/open/pool,
 /area/ruin/space/has_grav/hotel)
 "Iv" = (

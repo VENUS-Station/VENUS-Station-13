@@ -574,7 +574,7 @@
 	for(var/mob/living/mob in contents)
 		if(DOING_INTERACTION_WITH_TARGET(mob, src))
 			// Shake and queue another check_if_shake
-			Shake(x_shake_pixel_shift, y_shake_pixel_shift, shake_duration, shake_interval = 0.1 SECONDS)
+			Shake(x_shake_pixel_shift, y_shake_pixel_shift, shake_duration)
 			addtimer(CALLBACK(src, PROC_REF(check_if_shake)), next_check_time)
 			return TRUE
 

@@ -12235,7 +12235,7 @@
 /turf/open/floor/plasteel/grimy,
 /area/centcom/ferry)
 "Bq" = (
-/turf/open/water/decorative,
+/turf/open/water/safe,
 /area/slavers)
 "Br" = (
 /obj/effect/turf_decal/vg_decals/numbers/two,
@@ -13179,7 +13179,7 @@
 "CW" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/railing,
-/turf/open/water/decorative,
+/turf/open/water/safe,
 /area/slavers)
 "CX" = (
 /obj/structure/closet/secure_closet/security,
@@ -18438,7 +18438,7 @@
 /area/centcom/supplypod/loading/ert)
 "OF" = (
 /obj/structure/lattice,
-/turf/open/water/decorative,
+/turf/open/water/safe,
 /area/slavers)
 "OH" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -18507,7 +18507,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/open/water/decorative,
+/turf/open/water/safe,
 /area/slavers)
 "OQ" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -18571,7 +18571,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/open/water/decorative,
+/turf/open/water/safe,
 /area/slavers)
 "Pf" = (
 /obj/effect/turf_decal/stripes/white/line{
@@ -18668,7 +18668,7 @@
 /area/space)
 "Pu" = (
 /obj/structure/lattice/catwalk,
-/turf/open/water/decorative,
+/turf/open/water/safe,
 /area/slavers)
 "Pv" = (
 /obj/effect/turf_decal/tile/brown,
@@ -19851,7 +19851,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/open/water/decorative,
+/turf/open/water/safe,
 /area/slavers)
 "Tn" = (
 /obj/structure/table/wood/fancy,
@@ -21364,7 +21364,7 @@
 	dir = 4
 	},
 /obj/structure/fans/tiny/invisible,
-/turf/open/water/decorative,
+/turf/open/water/safe,
 /area/slavers)
 "Yp" = (
 /obj/effect/decal/cleanable/dirt,
@@ -21505,7 +21505,7 @@
 	dir = 1
 	},
 /obj/structure/fans/tiny/invisible,
-/turf/open/water/decorative,
+/turf/open/water/safe,
 /area/slavers)
 "YF" = (
 /obj/machinery/vending/clothing{
@@ -21874,7 +21874,7 @@
 /area/centcom/supply)
 "ZY" = (
 /obj/structure/railing,
-/turf/open/water/decorative,
+/turf/open/water/safe,
 /area/slavers)
 
 (1,1,1) = {"

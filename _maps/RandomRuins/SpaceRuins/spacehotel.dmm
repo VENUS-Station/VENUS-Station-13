@@ -5006,7 +5006,7 @@
 /turf/closed/wall,
 /area/ruin/space/has_grav/hotel/pool)
 "or" = (
-/obj/item/toy/poolnoodle,
+/obj/item/pool/pool_noodle,
 /turf/open/pool,
 /area/ruin/space/has_grav/hotel/pool)
 "oB" = (
@@ -5039,7 +5039,7 @@
 /turf/open/pool,
 /area/ruin/space/has_grav/hotel/pool)
 "yH" = (
-/obj/item/toy/poolnoodle,
+/obj/item/pool/pool_noodle,
 /turf/open/pool,
 /area/ruin/space/has_grav/hotel/pool)
 "DO" = (
@@ -5053,7 +5053,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/item/toy/poolnoodle,
+/obj/item/pool/pool_noodle,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/hotel/pool)
 "Fw" = (
@@ -5071,7 +5071,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/item/toy/poolnoodle,
+/obj/item/pool/pool_noodle,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/hotel/pool)
 "JS" = (
@@ -5096,7 +5096,7 @@
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/hotel/pool)
 "Nm" = (
-/obj/item/toy/poolnoodle,
+/obj/item/pool/pool_noodle,
 /turf/open/pool,
 /area/ruin/space/has_grav/hotel/pool)
 "Qo" = (

@@ -75394,7 +75394,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
-/obj/item/toy/poolnoodle,
+/obj/item/pool/pool_noodle,
 /turf/open/floor/plasteel/dark,
 /area/commons/fitness/pool)
 "gcq" = (
@@ -79150,7 +79150,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
-/obj/item/toy/poolnoodle,
+/obj/item/pool/pool_noodle,
 /obj/machinery/power/apc{
 	areastring = "/area/commons/fitness/pool";
 	dir = 1;
@@ -87035,7 +87035,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
-/obj/item/toy/poolnoodle,
+/obj/item/pool/pool_noodle,
 /turf/open/floor/plasteel/dark,
 /area/commons/fitness/pool)
 "jJr" = (
@@ -87242,7 +87242,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
-/obj/item/toy/poolnoodle,
+/obj/item/pool/pool_noodle,
 /turf/open/floor/plasteel/dark,
 /area/commons/fitness/pool)
 "jMx" = (
@@ -98989,7 +98989,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
-/obj/item/toy/poolnoodle,
+/obj/item/pool/pool_noodle,
 /turf/open/floor/plasteel/dark,
 /area/commons/fitness/pool)
 "nJV" = (
@@ -126140,7 +126140,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
-/obj/item/toy/poolnoodle,
+/obj/item/pool/pool_noodle,
 /turf/open/floor/plasteel/dark,
 /area/commons/fitness/pool)
 "xgM" = (

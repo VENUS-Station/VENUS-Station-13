@@ -47,7 +47,7 @@ SUBSYSTEM_DEF(title)
 		if(fexists(sound_file))
 			sound_path = sound_file
 	else
-		sound_path = "[global.config.directory]/title_music/sounds/[pick(flist("[global.config.directory]/title_music/sounds/"))]"
+		sound_path = null
 
 	if(splash_turf)
 		splash_turf.icon = icon

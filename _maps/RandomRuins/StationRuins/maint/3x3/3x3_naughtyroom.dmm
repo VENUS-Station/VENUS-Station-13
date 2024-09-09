@@ -11,7 +11,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/item/clothing/glasses/blindfold,
+/obj/item/clothing/glasses/sunglasses/blindfold,
 /obj/item/clothing/mask/muzzle,
 /turf/open/floor/carpet/purple,
 /area/template_noop)
@@ -22,7 +22,7 @@
 "q" = (
 /obj/structure/closet/crate/wooden,
 /obj/item/clothing/head/kitty,
-/obj/item/clothing/under/schoolgirl/red,
+/obj/item/clothing/under/costume/schoolgirl/red,
 /turf/open/floor/carpet/purple,
 /area/template_noop)
 "K" = (

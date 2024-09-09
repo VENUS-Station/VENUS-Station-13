@@ -89,9 +89,6 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "S" = (
-/obj/machinery/scanner_gate{
-	scangate_mode = "Guns"
-	},
 /turf/open/floor/plating,
 /area/template_noop)
 "Y" = (

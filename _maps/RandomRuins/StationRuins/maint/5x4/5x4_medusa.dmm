@@ -50,10 +50,10 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "x" = (
+/obj/effect/decal/cleanable/dirt/dust,
 /obj/item/statuebust{
 	desc = "This bust is of a woman, with snakes for hair. It's incredibly lifelike."
 	},
-/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/template_noop)
 "B" = (

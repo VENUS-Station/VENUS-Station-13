@@ -58,7 +58,7 @@
 	pixel_x = 11
 	},
 /obj/effect/turf_decal/bot,
-/obj/structure/sign/departments/minsky/supply/hydroponics{
+/obj/structure/sign/departments/botany{
 	pixel_x = 32
 	},
 /turf/open/floor/plasteel,

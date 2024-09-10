@@ -17815,7 +17815,7 @@
 /obj/machinery/door/airlock/maintenance{
 	req_access_txt = "12"
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/maintenance/starboard/aft)
 "bnu" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{

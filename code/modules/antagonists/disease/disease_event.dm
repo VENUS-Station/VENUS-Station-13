@@ -3,7 +3,7 @@
 	name = "Spawn Sentient Disease"
 	typepath = /datum/round_event/ghost_role/sentient_disease
 	weight = 7
-	max_occurrences = 1
+	max_occurrences = 0
 	min_players = 5
 	category = EVENT_CATEGORY_HEALTH
 	description = "Spawns a sentient disease, who wants to infect as many people as possible."

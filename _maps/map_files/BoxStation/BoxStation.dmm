@@ -60384,6 +60384,13 @@
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/carpet/royalblack,
 /area/command/bridge)
+"rVM" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/landmark/stationroom/maint/tenxfive,
+/turf/template_noop,
+/area/maintenance/starboard/fore)
 "rVN" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/atmospherics/pipe/simple/orange/visible{
@@ -110429,7 +110436,7 @@ arz
 arz
 arz
 arz
-arx
+rVM
 alP
 alP
 auF

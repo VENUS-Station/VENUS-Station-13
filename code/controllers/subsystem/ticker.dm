@@ -110,8 +110,10 @@ SUBSYSTEM_DEF(ticker)
 			if(2) //rare+sound.ogg or MAP+sound.ogg -- Rare sounds or Map-specific sounds
 				if((use_rare_music && L[1] == "rare") || (L[1] == SSmapping.config.map_name))
 					music += S
+				else if(findtext(S, "{") && findtext(S, "}")) // Include songs with curly braces if they are part of a specific category
+					music += S
 			if(1) //sound.ogg -- common sound
-				if(!findtext(S, "{") && !findtext(S, "}")) // Exclude songs surrounded by parentheses
+				if(!findtext(S, "{") && !findtext(S, "}")) // Exclude songs surrounded by curly braces
 					music += S
 
 	var/old_login_music = trim(file2text("data/last_round_lobby_music.txt"))

@@ -643,8 +643,7 @@
 		toggle_ai(initial(AIStatus))
 
 /mob/living/simple_animal/examine(mob/user)
-	. = ..()
-	var/list/dat = list()
+	var/list/dat = ..()
 	if(stat == DEAD)
 		dat += "<span class='deadsay'>[p_they(TRUE)] appears to be dead.</span>"
 	else if(getBruteLoss())

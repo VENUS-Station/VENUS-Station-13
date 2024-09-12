@@ -146,7 +146,7 @@
 			animate(door_obj, transform = door_transform, icon_state = door_state, layer = door_layer, time = world.tick_lag, flags = ANIMATION_END_NOW)
 		else
 			animate(transform = door_transform, icon_state = door_state, layer = door_layer, time = world.tick_lag)
-	addtimer(CALLBACK(src, .proc/end_door_animation), door_anim_time, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_CLIENT_TIME)
+	addtimer(CALLBACK(src, PROC_REF(end_door_animation)), door_anim_time, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_CLIENT_TIME)
 
 /// Ends the door animation and removes the animated overlay
 /obj/structure/closet/proc/end_door_animation()

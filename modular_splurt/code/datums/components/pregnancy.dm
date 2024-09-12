@@ -3,9 +3,6 @@
 	dupe_mode = COMPONENT_DUPE_UNIQUE
 	//can_transfer = TRUE
 
-	/// type of baby the mother will plop out - needs to be subtype of /mob/living
-	var/baby_type = /mob/living/carbon/human
-
 	var/obj/item/organ/container
 	var/mob/living/carrier
 
@@ -34,19 +31,13 @@
 	/// whether the pregnancy is revealed or not, scanners will reveal this no matter what
 	var/revealed = FALSE
 
-/datum/component/pregnancy/Initialize(mob/living/_mother, mob/living/_father, _baby_type = /mob/living/carbon/human)
+/datum/component/pregnancy/Initialize(mob/living/_mother, mob/living/_father)
 	if(!isobj(parent))
 		return COMPONENT_INCOMPATIBLE
 
 	var/obj/item/thing = parent
 
 	if(!isorgan(thing.loc))
-		return COMPONENT_INCOMPATIBLE
-
-	if(ispath(_baby_type, /mob/living))
-		baby_type = _baby_type
-	else
-		stack_trace("Invalid baby_type given to pregnancy component!")
 		return COMPONENT_INCOMPATIBLE
 
 	container = thing.loc
@@ -233,43 +224,7 @@
 
 	COOLDOWN_START(src, hatch_request_cooldown, 30 SECONDS)
 
-	var/poll_message = "Do you want to play as [mother_name]'s offspring?[egg_name ? " Your name will be [egg_name]" : ""]"
-	var/list/mob/candidates = pollGhostCandidates(poll_message, ROLE_RESPAWN, null, FALSE, 30 SECONDS, POLL_IGNORE_EGG)
-
-	if(!LAZYLEN(candidates))
-		to_chat(user, span_info("\The [parent] doesn't seems to hatch, try again later?"))
-		return
-
-	var/mob/player = pick(candidates)
-
 	playsound(parent, 'sound/effects/splat.ogg', 70, TRUE)
-	var/mob/living/babby = new baby_type(get_turf(parent))
-
-	if(ishuman(babby))
-		determine_baby_features(babby)
-		determine_baby_dna(babby)
-
-	player.transfer_ckey(babby, TRUE)
-
-	to_chat(babby, "You are the son (or daughter) of [mother_name ? mother_name : "someone"]!")
-
-	var/name
-	if(egg_name)
-		name = egg_name
-	else if(user)
-		name = input(user, "What will be your baby's name?", "Name the baby") as null|text
-	else
-		name = input(babby, "What will be your name?", "Name yourself") as null|text
-
-	if(!name)
-		babby.real_name = random_unique_name(babby.gender, )
-		babby.update_name()
-	else
-		babby.real_name = name
-		babby.update_name()
-
-	if(mother_name)
-		babby?.mind?.store_memory("[mother_name] is your mother!")
 
 	var/obj/item = parent
 	item.forceMove(get_turf(parent))
@@ -341,42 +296,6 @@
 	eggo.forceMove(location)
 
 	return TRUE
-
-//not how genetics work but okay
-/datum/component/pregnancy/proc/determine_baby_dna(mob/living/carbon/human/babby)
-	if(mother_dna && father_dna)
-		mother_dna.transfer_identity_random(father_dna, babby)
-	else if(mother_dna && !father_dna)
-		mother_dna.transfer_identity_random(babby.dna, babby)
-	else if(!mother_dna && father_dna)
-		father_dna.transfer_identity_random(babby.dna, babby)
-
-/datum/component/pregnancy/proc/determine_baby_features(mob/living/carbon/human/babby)
-
-	var/list/final_features = list()
-
-	transfer_randomized_list(final_features, mother_features, father_features)
-
-	if(final_features["skin_tone"])
-		babby.skin_tone = final_features["skin_tone"]
-	if(final_features["hair_color"])
-		babby.hair_color = final_features["hair_color"]
-	if(final_features["facial_hair_color"])
-		babby.facial_hair_color = final_features["facial_hair_color"]
-	if(final_features["left_eye_color"])
-		babby.left_eye_color = final_features["left_eye_color"]
-	if(final_features["right_eye_color"])
-		babby.right_eye_color = final_features["right_eye_color"]
-
-	babby.hair_style = pick("Bedhead", "Bedhead 2", "Bedhead 3")
-	babby.facial_hair_style = "Shaved"
-	babby.underwear = "Nude"
-	babby.undershirt = "Nude"
-	babby.socks = "Nude"
-
-	babby.saved_underwear = babby.underwear
-	babby.saved_undershirt = babby.undershirt
-	babby.saved_socks = babby.socks
 
 /datum/component/pregnancy/proc/generic_pragency_start()
 	if(revealed)

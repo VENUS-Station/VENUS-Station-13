@@ -699,6 +699,8 @@ Nothing else in the console has ID requirements.
 	return l
 
 /obj/machinery/computer/rdconsole/proc/machine_icon(atom/item)
+	if (!item || !item.icon || !item.icon_state)
+		return ""
 	return icon2html(initial(item.icon), usr, initial(item.icon_state), SOUTH)
 
 /obj/machinery/computer/rdconsole/proc/ui_techweb_single_node(datum/techweb_node/node, selflink=TRUE, minimal=FALSE)
@@ -725,7 +727,14 @@ Nothing else in the console has ID requirements.
 			l += "[node.description]"
 			for(var/i in node.design_ids)
 				var/datum/design/D = SSresearch.techweb_design_by_id(i)
-				l += "<span data-tooltip='[D.name]' onclick='location=\"?src=[REF(src)];view_design=[i];back_screen=[screen]\"'>[D.icon_html(usr)]</span>[RDSCREEN_NOBREAK]"
+				if(D)
+					var/icon_html = D.icon_html(usr)
+					if (icon_html && icon_html != "")
+						l += "<span data-tooltip='[D.name]' onclick='location=\"?src=[REF(src)];view_design=[i];back_screen=[screen]\"'>[icon_html]</span>[RDSCREEN_NOBREAK]"
+					else
+						continue
+				else
+					continue
 	l += "</div>[RDSCREEN_NOBREAK]"
 	return l
 
@@ -733,10 +742,12 @@ Nothing else in the console has ID requirements.
 	var/datum/techweb_node/selected_node = SSresearch.techweb_node_by_id(selected_node_id)
 	RDSCREEN_UI_SNODE_CHECK
 	var/list/l = list()
-	if(stored_research.hidden_nodes[selected_node.id])
+	if (!selected_node)
+		l += "<div><h3>ERROR: RESEARCH NODE NOT FOUND.</h3></div>"
+		return l
+	if (stored_research.hidden_nodes[selected_node.id])
 		l += "<div><h3>ERROR: RESEARCH NODE UNKNOWN.</h3></div>"
-		return
-
+		return l
 	l += "<table><tr>[RDSCREEN_NOBREAK]"
 	if (length(selected_node.prereq_ids))
 		l += "<th align='left'>Requires</th>[RDSCREEN_NOBREAK]"
@@ -748,7 +759,11 @@ Nothing else in the console has ID requirements.
 	if (length(selected_node.prereq_ids))
 		l += "<td valign='top'>[RDSCREEN_NOBREAK]"
 		for (var/i in selected_node.prereq_ids)
-			l += ui_techweb_single_node(SSresearch.techweb_node_by_id(i))
+			var/datum/techweb_node/prereq_node = SSresearch.techweb_node_by_id(i)
+			if (prereq_node)
+				l += ui_techweb_single_node(prereq_node)
+			else
+				continue
 		l += "</td>[RDSCREEN_NOBREAK]"
 	l += "<td valign='top'>[RDSCREEN_NOBREAK]"
 	l += ui_techweb_single_node(selected_node, selflink=FALSE)
@@ -756,7 +771,11 @@ Nothing else in the console has ID requirements.
 	if (length(selected_node.unlock_ids))
 		l += "<td valign='top'>[RDSCREEN_NOBREAK]"
 		for (var/i in selected_node.unlock_ids)
-			l += ui_techweb_single_node(SSresearch.techweb_node_by_id(i))
+			var/datum/techweb_node/unlock_node = SSresearch.techweb_node_by_id(i)
+			if (unlock_node)
+				l += ui_techweb_single_node(unlock_node)
+			else
+				continue
 		l += "</td>[RDSCREEN_NOBREAK]"
 
 	l += "</tr></table>[RDSCREEN_NOBREAK]"
@@ -766,7 +785,13 @@ Nothing else in the console has ID requirements.
 	var/datum/design/selected_design = SSresearch.techweb_design_by_id(selected_design_id)
 	RDSCREEN_UI_SDESIGN_CHECK
 	var/list/l = list()
-	l += "<div><table><tr><td>[selected_design.icon_html(usr)]</td><td><b>[selected_design.name]</b></td></tr></table>[RDSCREEN_NOBREAK]"
+	if (!selected_design)
+		return l
+	var/icon_html = selected_design.icon_html(usr)
+	if (icon_html && icon_html != "")
+		l += "<div><table><tr><td>[icon_html]</td><td><b>[selected_design.name]</b></td></tr></table>[RDSCREEN_NOBREAK]"
+	else
+		l += "<div><b>[selected_design.name]</b>[RDSCREEN_NOBREAK]"
 	if(selected_design.build_type)
 		var/lathes = list()
 		if(selected_design.build_type & IMPRINTER)

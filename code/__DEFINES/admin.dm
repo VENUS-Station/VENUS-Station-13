@@ -38,7 +38,7 @@
 #define R_DBRANKS		(1<<14)
 #define R_SENSITIVE		(1<<15)
 
-#define R_DEFAULT R_AUTOLOGIN | R_SENSITIVE
+#define R_DEFAULT R_AUTOLOGIN
 
 #define R_EVERYTHING ALL //the sum of all other rank permissions, used for +EVERYTHING
 

@@ -8835,7 +8835,7 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/lavaland/unpowered/ash_walkers)
 "Mp" = (
-/obj/structure/anvil/obtainable/basalt,
+/obj/structure/anvil/obtainable/bone,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/lavaland/unpowered/ash_walkers)
 "Ms" = (

@@ -114,6 +114,8 @@
 	else
 		to_chat(new_spawn, "<span class='userdanger'>You have been born outside of your natural home! Whether you decide to return home, or make due with your new home is your own decision.</span>")
 
+	new_spawn.add_quirk(/datum/quirk/body_morpher, TRUE)
+
 //Ash walkers on birth understand how to make bone bows, bone arrows and ashen arrows
 
 	if(ishuman(new_spawn))

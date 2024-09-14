@@ -3520,7 +3520,6 @@
 	pixel_y = 26;
 	req_access_txt = "5"
 	},
-/obj/item/book/manual/splurt_space_law,
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
@@ -8547,7 +8546,6 @@
 /area/medical/medbay/central)
 "cRn" = (
 /obj/structure/table/wood,
-/obj/item/book/manual/splurt_space_law,
 /obj/item/coin/plasma,
 /turf/open/floor/wood,
 /area/command/heads_quarters/captain)
@@ -10254,7 +10252,6 @@
 /area/command/teleporter)
 "dvj" = (
 /obj/structure/table,
-/obj/item/book/manual/splurt_space_law,
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
 	dir = 4
@@ -10302,7 +10299,6 @@
 /turf/open/floor/plating,
 /area/maintenance/aft)
 "dvO" = (
-/obj/item/book/manual/splurt_space_law,
 /obj/structure/table,
 /obj/effect/turf_decal/tile/red{
 	dir = 1
@@ -12008,7 +12004,6 @@
 /area/commons/dorms)
 "ebl" = (
 /obj/structure/table,
-/obj/item/book/manual/splurt_space_law,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
@@ -12194,7 +12189,6 @@
 "efp" = (
 /obj/structure/table,
 /obj/item/aicard,
-/obj/item/aiModule/reset,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -19422,8 +19416,6 @@
 /area/commons/locker)
 "gFl" = (
 /obj/structure/table/wood,
-/obj/item/book/manual/splurt_space_law,
-/obj/item/book/manual/splurt_space_law,
 /obj/item/pen/red,
 /turf/open/floor/wood,
 /area/service/lawoffice)
@@ -21361,7 +21353,6 @@
 /turf/open/floor/plating,
 /area/maintenance/port)
 "hog" = (
-/obj/item/book/manual/splurt_space_law,
 /obj/structure/table/wood,
 /turf/open/floor/carpet,
 /area/command/meeting_room)
@@ -23536,7 +23527,6 @@
 /obj/item/book/manual/wiki/experimentor,
 /obj/item/book/manual/wiki/research_and_development,
 /obj/item/book/manual/wiki/robotics_cyborgs,
-/obj/item/book/manual/splurt_space_law,
 /obj/item/book/manual/wiki/medicine,
 /obj/item/book/manual/wiki/medical_cloning,
 /obj/item/book/manual/wiki/infections,
@@ -27378,7 +27368,6 @@
 	pixel_x = 1;
 	pixel_y = -1
 	},
-/obj/item/book/manual/splurt_space_law,
 /turf/open/floor/plasteel,
 /area/security/brig)
 "jtx" = (
@@ -28084,7 +28073,6 @@
 /area/maintenance/fore)
 "jGw" = (
 /obj/structure/table,
-/obj/item/aiModule/supplied/quarantine,
 /obj/machinery/camera/motion{
 	c_tag = "AI Upload Chamber - West";
 	dir = 4;
@@ -41405,7 +41393,6 @@
 /area/command/bridge)
 "ovw" = (
 /obj/structure/table/wood,
-/obj/item/book/manual/splurt_space_law,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -47484,7 +47471,6 @@
 /turf/open/floor/plasteel,
 /area/engineering/main)
 "qyM" = (
-/obj/item/book/manual/splurt_space_law,
 /obj/structure/table/wood,
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -51165,8 +51151,6 @@
 /area/science/storage)
 "rKF" = (
 /obj/structure/table,
-/obj/item/book/manual/splurt_space_law,
-/obj/item/book/manual/splurt_space_law,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel,
 /area/security/office)
@@ -55602,7 +55586,6 @@
 /area/security/office)
 "tln" = (
 /obj/structure/table,
-/obj/item/aiModule/reset,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -57805,23 +57788,18 @@
 /area/commons/locker)
 "uaT" = (
 /obj/structure/table,
-/obj/item/aiModule/supplied/oxygen,
-/obj/item/aiModule/zeroth/oneHuman,
 /obj/machinery/door/window{
 	dir = 8;
 	name = "High-Risk Modules";
 	req_access_txt = "20"
 	},
-/obj/item/aiModule/reset/purge,
 /obj/structure/window/reinforced,
-/obj/effect/spawner/lootdrop/aimodule_harmful,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/aiModule/supplied/protectStation,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai_upload)
 "uaZ" = (
@@ -67378,7 +67356,6 @@
 /area/hallway/primary/central)
 "xvH" = (
 /obj/structure/table,
-/obj/item/aiModule/supplied/freeform,
 /obj/structure/sign/plaques/kiddie{
 	pixel_x = 32
 	},
@@ -69055,8 +69032,6 @@
 /area/security/warden)
 "xYh" = (
 /obj/structure/table,
-/obj/item/aiModule/core/full/asimov,
-/obj/item/aiModule/core/freeformcore,
 /obj/machinery/door/window{
 	base_state = "right";
 	dir = 4;
@@ -69065,16 +69040,12 @@
 	req_access_txt = "20"
 	},
 /obj/structure/window/reinforced,
-/obj/effect/spawner/lootdrop/aimodule_harmless,
-/obj/effect/spawner/lootdrop/aimodule_lewd,
-/obj/effect/spawner/lootdrop/aimodule_neutral,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/item/aiModule/core/full/custom,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai_upload)
 "xYt" = (
@@ -69656,10 +69627,6 @@
 /area/maintenance/fore/secondary)
 "yiR" = (
 /obj/structure/table,
-/obj/item/book/manual/splurt_space_law{
-	pixel_x = -3;
-	pixel_y = 5
-	},
 /turf/open/floor/plasteel/dark,
 /area/security/courtroom)
 "yiY" = (

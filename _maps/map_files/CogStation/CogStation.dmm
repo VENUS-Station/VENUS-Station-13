@@ -61042,31 +61042,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/prison/cells)
-"fSP" = (
-/obj/machinery/requests_console{
-	department = "Public Router";
-	name = "Public Router RC";
-	pixel_x = -32
-	},
-/obj/structure/lattice,
-/obj{
-	name = "---Merge conflict marker---"
-	},
-/obj/structure/table,
-/obj/item/stack/packageWrap,
-/obj/item/stack/packageWrap,
-/obj/item/hand_labeler,
-/obj/item/dest_tagger,
-/obj/machinery/requests_console{
-	department = "Public Router";
-	name = "Public Router RC";
-	pixel_x = -32
-	},
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
-	dir = 4
-	},
-/turf/open/space/basic,
-/area/space/nearstation)
 "fSU" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -61193,20 +61168,9 @@
 /turf/open/floor/plasteel,
 /area/security/prison/cells)
 "ghx" = (
-/obj{
-	name = "---Merge conflict marker---"
-	},
-/obj/structure/table/reinforced,
-/obj/effect/turf_decal/delivery,
 /obj/machinery/light/small{
 	dir = 1;
 	light_color = "#ffc1c1"
-	},
-/obj/item/dest_tagger,
-/obj/machinery/requests_console{
-	department = "Service Router";
-	name = "Service Router RC";
-	pixel_y = 28
 	},
 /turf/closed/wall/r_wall,
 /area/service/hydroponics/upper)
@@ -61608,15 +61572,6 @@
 	name = "Catering";
 	req_one_access_txt = "25;28"
 	},
-/obj{
-	name = "---Merge conflict marker---"
-	},
-/obj/structure/table,
-/obj/item/dest_tagger,
-/obj/machinery/airalarm{
-	pixel_y = 24
-	},
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on,
 /turf/open/floor/plasteel,
 /area/hallway/primary/aft)
 "gNr" = (
@@ -61990,14 +61945,7 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/port/fore)
 "hvF" = (
-/obj{
-	name = "---Merge conflict marker---"
-	},
 /obj/effect/turf_decal/bot,
-/obj/structure/table/reinforced,
-/obj/item/dest_tagger,
-/obj/item/dest_tagger,
-/obj/item/dest_tagger,
 /obj/structure/sign/warning{
 	name = "\improper KEEP CLEAR: HIGH SPEED DELIVERIES";
 	pixel_y = 32
@@ -62141,21 +62089,6 @@
 /obj/item/shovel/spade,
 /turf/open/floor/plasteel,
 /area/security/prison/garden)
-"hFN" = (
-/obj/effect/turf_decal/bot,
-/obj{
-	name = "---Merge conflict marker---"
-	},
-/obj/docking_port/stationary{
-	dir = 4;
-	dwidth = 5;
-	height = 7;
-	shuttle_id = "supply_home";
-	name = "Cargo Shuttle";
-	width = 12
-	},
-/turf/open/floor/plasteel,
-/area/cargo/storage)
 "hFX" = (
 /obj/machinery/vending/cola/red{
 	onstation = 0
@@ -64331,23 +64264,6 @@
 /obj/machinery/door/airlock/maintenance_hatch,
 /turf/open/floor/plating,
 /area/maintenance/disposal)
-"lPd" = (
-/obj/structure/lattice,
-/obj{
-	name = "---Merge conflict marker---"
-	},
-/obj/structure/table/reinforced,
-/obj/item/stack/packageWrap,
-/obj/item/hand_labeler,
-/obj/item/dest_tagger,
-/obj/machinery/light,
-/obj/machinery/requests_console{
-	department = "MedSci Router";
-	name = "MedSci Router RC";
-	pixel_y = -32
-	},
-/turf/open/space/basic,
-/area/space/nearstation)
 "lPL" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -66796,6 +66712,14 @@
 	},
 /turf/open/floor/carpet/green,
 /area/command/heads_quarters/hop)
+"pTN" = (
+/obj/machinery/requests_console{
+	department = "MedSci Router";
+	name = "MedSci Router RC";
+	pixel_y = -32
+	},
+/turf/open/floor/plasteel/dark,
+/area/science/robotics/lab)
 "pUo" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /turf/open/floor/plasteel,
@@ -67063,41 +66987,6 @@
 	},
 /obj/effect/spawner/lootdrop/ai_module_lewd{
 	pixel_y = 7
-	},
-/obj/item/ai_module/core/freeformcore{
-	pixel_x = -1;
-	pixel_y = 2
-	},
-/obj/item/ai_module/supplied/freeform{
-	pixel_x = -2
-	},
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/obj{
-	name = "---Merge conflict marker---"
-	},
-/obj/structure/table/reinforced,
-/obj/effect/turf_decal/tile/blue,
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
-/obj/item/ai_module/core/full/asimov{
-	pixel_x = 2;
-	pixel_y = 10
-	},
-/obj/effect/spawner/lootdrop/ai_module_neutral{
-	pixel_x = 1;
-	pixel_y = 8
-	},
-/obj/effect/spawner/lootdrop/ai_module_harmless{
-	pixel_y = 6
 	},
 /obj/item/ai_module/core/freeformcore{
 	pixel_x = -1;
@@ -67790,6 +67679,14 @@
 "rOL" = (
 /turf/closed/wall,
 /area/security/prison/shower)
+"rOM" = (
+/obj/machinery/requests_console{
+	department = "Engineering Router";
+	name = "Engineering Router RC";
+	pixel_y = -32
+	},
+/turf/open/floor/plasteel,
+/area/engineering/main)
 "rOP" = (
 /obj/machinery/atmospherics/pipe/manifold/cyan/hidden{
 	dir = 4
@@ -69608,19 +69505,6 @@
 "vgX" = (
 /turf/closed/wall,
 /area/service/hydroponics/garden)
-"vko" = (
-/obj/structure/lattice,
-/obj{
-	name = "---Merge conflict marker---"
-	},
-/obj/effect/turf_decal/delivery,
-/obj/structure/table,
-/obj/item/dest_tagger,
-/obj/machinery/atmospherics/components/unary/vent_pump/on{
-	dir = 4
-	},
-/turf/open/space/basic,
-/area/space/nearstation)
 "vlR" = (
 /obj/machinery/atmospherics/pipe/simple/orange/hidden{
 	dir = 8
@@ -69918,23 +69802,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/orange/hidden{
 	dir = 8
-	},
-/obj{
-	name = "---Merge conflict marker---"
-	},
-/obj/structure/table,
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/item/dest_tagger,
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
-	dir = 8
-	},
-/obj/machinery/button/massdriver{
-	id = "security_out";
-	name = "Security Driver Control";
-	pixel_x = 8;
-	pixel_y = 24
 	},
 /turf/open/floor/plasteel,
 /area/security/brig)
@@ -70746,24 +70613,6 @@
 /area/cargo/storage)
 "xqz" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
-/obj{
-	name = "---Merge conflict marker---"
-	},
-/obj/structure/table,
-/obj/item/stack/packageWrap,
-/obj/item/hand_labeler,
-/obj/item/dest_tagger,
-/obj/effect/turf_decal/bot,
-/obj/machinery/requests_console{
-	department = "EVA Router";
-	name = "EVA Router RC";
-	pixel_y = 28
-	},
-/obj/item/radio/intercom{
-	name = "Station Intercom (Common)";
-	pixel_x = 26
-	},
-/obj/machinery/atmospherics/components/unary/vent_pump/on,
 /turf/open/floor/carpet/red,
 /area/maintenance/department/eva)
 "xqI" = (
@@ -70976,11 +70825,6 @@
 /area/security/prison/cells)
 "xJJ" = (
 /obj/machinery/light/small,
-/obj/machinery/requests_console{
-	department = "Engineering Router";
-	name = "Engineering Router RC";
-	pixel_y = -32
-	},
 /turf/closed/wall/r_wall,
 /area/engineering/main)
 "xKr" = (
@@ -96310,7 +96154,7 @@ mwX
 xxy
 bsU
 tBp
-bsU
+pTN
 bIk
 aaU
 aaU
@@ -96826,7 +96670,7 @@ bsU
 idT
 rlV
 bIk
-lPd
+aaU
 aaa
 aaa
 aaU
@@ -106504,7 +106348,7 @@ aHO
 umH
 vvB
 aHt
-fSP
+aaU
 aaU
 ocZ
 aaU
@@ -106812,7 +106656,7 @@ dKl
 mvz
 oOH
 nws
-nws
+rOM
 aQC
 bEK
 bIQ
@@ -107310,7 +107154,7 @@ aaU
 aaa
 aaa
 aaa
-vko
+aaU
 xJJ
 aQC
 aQC
@@ -120699,7 +120543,7 @@ bgV
 lKy
 bhK
 bkn
-hFN
+bkn
 bkn
 bhK
 fvH

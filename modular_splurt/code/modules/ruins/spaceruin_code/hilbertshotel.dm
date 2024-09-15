@@ -48,6 +48,28 @@
 	name = "Apartment_sauna"
 	mappath = '_maps/splurt_maps/templates/hilbertshotel_templates/apartment_sauna.dmm'
 
+// VENUS STATION
+/datum/map_template/hilbertshotel/apartment/prison
+	name = "Apartment_prison"
+	mappath = '_maps/splurt_maps/templates/hilbertshotel_templates/apartment_prison.dmm'
+
+/datum/map_template/hilbertshotel/apartment/winter
+	name = "Apartment_winter"
+	mappath = '_maps/splurt_maps/templates/hilbertshotel_templates/apartment_winter.dmm'
+
+/datum/map_template/hilbertshotel/apartment/forest
+	name = "Apartment_forest"
+	mappath = '_maps/splurt_maps/templates/hilbertshotel_templates/apartment_forest.dmm'
+
+/datum/map_template/hilbertshotel/apartment/jungle
+	name = "Apartment_jungle"
+	mappath = '_maps/splurt_maps/templates/hilbertshotel_templates/apartment_jungle.dmm'
+
+/datum/map_template/hilbertshotel/apartment/beach
+	name = "Apartment_beach"
+	mappath = '_maps/splurt_maps/templates/hilbertshotel_templates/apartment_beach.dmm'
+// VENUS STATION
+
 // Fluff - Misc
 /obj/item/paper/fluff/hilbertshotel/welcomeletter
 	name = "Welcome Letter"

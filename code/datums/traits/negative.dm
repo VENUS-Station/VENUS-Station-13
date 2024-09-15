@@ -416,7 +416,7 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 
 /datum/mood_event/anxiety_eyecontact
 	description = "<span class='warning'>Sometimes eye contact makes me so nervous...</span>\n"
-	mood_change = -5
+	mood_change = -3
 	timeout = 3 MINUTES
 
 /datum/quirk/phobia

@@ -1,7 +1,0 @@
-author: SaraSayomi
-delete-after: true
-changes:
-  - bugfix: remove doubled up shuttle markers, causing shuttles to love up on the
-      station with murder
-  - bugfix: several spacelaw merge conflicts
-  - bugfix: Not sanity

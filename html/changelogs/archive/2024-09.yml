@@ -6,3 +6,9 @@
   SandPoot:
   - rscadd: Added Character offering system, exchange characters with people you want
       to!
+2024-09-15:
+  SaraSayomi:
+  - bugfix: remove doubled up shuttle markers, causing shuttles to love up on the
+      station with murder
+  - bugfix: several spacelaw merge conflicts
+  - bugfix: Not sanity

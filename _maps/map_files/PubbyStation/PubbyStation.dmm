@@ -59223,20 +59223,6 @@
 /obj/machinery/piratepad/civilian,
 /turf/open/floor/plasteel,
 /area/cargo/office)
-"pHz" = (
-/obj{
-	name = "---Merge conflict marker---"
-	},
-/obj/docking_port/stationary{
-	dwidth = 2;
-	height = 6;
-	shuttle_id = "monastery_shuttle_station";
-	name = "Station";
-	roundstart_template = /datum/map_template/shuttle/escape_pod/large;
-	width = 5
-	},
-/turf/closed/wall,
-/area/commons/dorms)
 "pHI" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -65116,9 +65102,6 @@
 /turf/open/floor/plasteel/dark,
 /area/service/library)
 "wnI" = (
-/obj{
-	name = "---Merge conflict marker---"
-	},
 /obj/docking_port/stationary{
 	dheight = 1;
 	dir = 8;
@@ -106611,7 +106594,7 @@ aaa
 apX
 apX
 apX
-pHz
+apX
 apX
 apX
 azA

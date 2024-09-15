@@ -345,7 +345,7 @@
 	pixel_x = 14
 	},
 /obj/structure/mirror{
-	pixel_x = 25
+	pixel_x = 32
 	},
 /turf/open/indestructible/hoteltile,
 /area/hilbertshotel)

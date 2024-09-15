@@ -1122,6 +1122,12 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/structure/sink{
+	pixel_y = 24
+	},
+/obj/structure/mirror{
+	pixel_y = 32
+	},
 /turf/open/floor/plasteel/freezer,
 /area/hilbertshotel)
 "Ms" = (
@@ -1379,7 +1385,7 @@
 /turf/open/floor/plasteel,
 /area/hilbertshotel)
 "Sr" = (
-/obj/effect/spawner/structure/window/reinforced/indestructable,
+/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/hilbertshotel)
 "St" = (
@@ -1533,11 +1539,11 @@
 	},
 /area/hilbertshotel)
 "WI" = (
-/obj/effect/spawner/structure/window/reinforced/indestructable,
 /obj/machinery/door/poddoor/preopen{
 	id = "prison-window_dorm";
 	name = "space shutters"
 	},
+/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/hilbertshotel)
 "WX" = (

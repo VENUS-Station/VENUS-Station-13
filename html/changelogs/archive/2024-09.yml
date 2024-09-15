@@ -9,3 +9,6 @@
 2024-09-09:
   ariaworld:
   - rscadd: 193 Randomly generated maintenance ruins to Box-Station.
+2024-09-15:
+  ariaworld:
+  - rscadd: Added some safeguards to RD console & design datums.

@@ -64482,9 +64482,6 @@
 /turf/open/floor/plasteel/dark,
 /area/service/library)
 "wnI" = (
-/obj{
-	name = "---Merge conflict marker---"
-	},
 /obj/docking_port/stationary{
 	dheight = 1;
 	dir = 8;

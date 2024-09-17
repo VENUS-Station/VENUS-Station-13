@@ -35167,18 +35167,6 @@
 /obj/structure/sign/poster/contraband/yes_erp{
 	pixel_x = 32
 	},
-/obj/effect/turf_decal/bot,
-/obj{
-	name = "---Merge conflict marker---"
-	},
-/obj/machinery/shower{
-	dir = 1
-	},
-/obj/structure/curtain,
-/obj/structure/window/spawner/north,
-/obj/structure/sign/poster/contraband/yes_erp{
-	pixel_x = 32
-	},
 /turf/open/floor/plasteel/freezer,
 /area/commons/toilet/restrooms)
 "fHF" = (
@@ -35960,16 +35948,6 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj{
-	name = "---Merge conflict marker---"
-	},
-/obj/item/folder/red,
-/obj/item/book/manual/wiki/security_space_law,
-/obj/item/taperecorder,
-/obj/structure/cable/white{
-	icon_state = "1-2"
-	},
-/obj/structure/table/reinforced,
 /turf/open/floor/plasteel/dark,
 /area/command/bridge)
 "ipZ" = (
@@ -37137,16 +37115,6 @@
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
-	},
-/obj{
-	name = "---Merge conflict marker---"
-	},
-/obj/structure/table/wood,
-/obj/item/book/manual/wiki/security_space_law,
-/obj/item/camera/detective,
-/obj/item/radio/intercom{
-	name = "Station Intercom";
-	pixel_x = -26
 	},
 /turf/open/floor/plasteel/dark/side{
 	dir = 8

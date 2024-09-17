@@ -47437,23 +47437,6 @@
 /obj/effect/landmark/navigate_destination/research,
 /turf/open/floor/plasteel/white,
 /area/science/research)
-"gEw" = (
-/obj{
-	name = "---Merge conflict marker---"
-	},
-/obj/docking_port/stationary{
-	area_type = /area/construction/mining/aux_base;
-	dheight = 4;
-	dir = 8;
-	dwidth = 4;
-	height = 9;
-	shuttle_id = "aux_base_zone";
-	name = "aux base zone";
-	roundstart_template = /datum/map_template/shuttle/aux_base/default;
-	width = 9
-	},
-/turf/open/floor/plating,
-/area/construction/mining/aux_base)
 "gER" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -60597,17 +60580,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plating,
 /area/service/hydroponics)
-"seT" = (
-/obj{
-	name = "---Merge conflict marker---"
-	},
-/obj/docking_port/stationary/random{
-	dir = 4;
-	shuttle_id = "pod_lavaland3";
-	name = "lavaland"
-	},
-/turf/open/space/basic,
-/area/space)
 "seV" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/bed{
@@ -67551,20 +67523,6 @@
 	},
 /turf/closed/wall/r_wall,
 /area/security/execution/transfer)
-"yfx" = (
-/obj{
-	name = "---Merge conflict marker---"
-	},
-/obj/docking_port/stationary{
-	dir = 4;
-	dwidth = 12;
-	height = 18;
-	shuttle_id = "emergency_home";
-	name = "BoxStation emergency evac bay";
-	width = 32
-	},
-/turf/open/floor/plating,
-/area/hallway/secondary/exit)
 "ygb" = (
 /obj/machinery/atmospherics/pipe/heat_exchanging/simple{
 	dir = 4
@@ -77794,7 +77752,7 @@ apN
 apN
 apN
 apN
-gEw
+apN
 apN
 apN
 apN
@@ -103731,7 +103689,7 @@ aaa
 aaa
 aaa
 gXs
-seT
+aaa
 aaa
 aaa
 aaa
@@ -118936,7 +118894,7 @@ aaa
 aNa
 aeR
 aNa
-yfx
+aQE
 aNa
 aaf
 aaa

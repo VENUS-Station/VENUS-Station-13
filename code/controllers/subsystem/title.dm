@@ -26,8 +26,13 @@ SUBSYSTEM_DEF(title)
 	SSmapping.HACK_LoadMapConfig()
 	for(var/S in provisional_title_screens)
 		var/list/L = splittext(S,"+")
-		if((L.len == 1 && (L[1] != "exclude" && L[1] != "blank.png"))|| (L.len > 1 && ((use_rare_screens && lowertext(L[1]) == "rare") || (lowertext(L[1]) == lowertext(SSmapping.config.map_name)))))
+		if(L.len == 1 && L[1] != "exclude" && L[1] != "blank.png")
 			title_screens += S
+		else if(L.len > 1)
+			if((use_rare_screens && lowertext(L[1]) == "rare") || (lowertext(L[1]) == lowertext(SSmapping.config.map_name)))
+				title_screens += S
+			else if(findtext(L[2], "{") && findtext(L[2], "}"))
+				title_screens += S
 
 	if(length(title_screens))
 		file_path = "[global.config.directory]/title_screens/images/[pick(title_screens)]"
@@ -42,7 +47,7 @@ SUBSYSTEM_DEF(title)
 	// Check for a corresponding sound file
 	var/list/L = splittext(file_path, "+")
 	if(L.len > 1)
-		var/sound_suffix = L[2]
+		var/sound_suffix = replacetext(L[2], ".dmi", "")
 		var/sound_file = "[global.config.directory]/title_music/sounds/[sound_suffix].ogg"
 		if(fexists(sound_file))
 			sound_path = sound_file

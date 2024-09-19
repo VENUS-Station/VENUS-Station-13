@@ -292,6 +292,11 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 	var/area/hilbertshotel/currentArea = get_area(locate(roomReservation.bottom_left_coords[1], roomReservation.bottom_left_coords[2], roomReservation.bottom_left_coords[3]))
 	currentArea.roomType = chosen_room // Sets the room type here
 
+	// Set up vending machines in the room to have prices instead of being free
+	for(var/obj/machinery/vending/V in currentArea)
+		V.onstation = TRUE
+		V.onstation_override = TRUE
+
 	//To send the user one tile above default when teleported
 	var/additionalY = chosen_room == "Apartment-Sauna" ? 1 : 0
 
@@ -385,6 +390,28 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 /datum/map_template/hilbertshotelstorage
 	name = "Hilbert's Hotel Storage"
 	mappath = '_maps/templates/hilbertshotelstorage.dmm'
+
+// VENUS STATION
+/datum/map_template/hilbertshotel/apartment/prison
+	name = "Apartment_prison"
+	mappath = '_maps/venus_maps/templates/hilbertshotel_templates/apartment_prison.dmm'
+
+/datum/map_template/hilbertshotel/apartment/winter
+	name = "Apartment_winter"
+	mappath = '_maps/venus_maps/templates/hilbertshotel_templates/apartment_winter.dmm'
+
+/datum/map_template/hilbertshotel/apartment/forest
+	name = "Apartment_forest"
+	mappath = '_maps/venus_maps/templates/hilbertshotel_templates/apartment_forest.dmm'
+
+/datum/map_template/hilbertshotel/apartment/jungle
+	name = "Apartment_jungle"
+	mappath = '_maps/venus_maps/templates/hilbertshotel_templates/apartment_jungle.dmm'
+
+/datum/map_template/hilbertshotel/apartment/beach
+	name = "Apartment_beach"
+	mappath = '_maps/venus_maps/templates/hilbertshotel_templates/apartment_beach.dmm'
+// VENUS STATION
 
 //Turfs and Areas
 /turf/closed/indestructible/hotelwall

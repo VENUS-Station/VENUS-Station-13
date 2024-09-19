@@ -446,7 +446,8 @@
 /area/hilbertshotel)
 "Oh" = (
 /obj/machinery/vending/wallmed/directional/west{
-	shut_up = 1
+	shut_up = 1;
+	default_price = 60
 	},
 /obj/structure/table,
 /obj/structure/bedsheetbin,

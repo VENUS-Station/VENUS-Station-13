@@ -3,7 +3,6 @@
 	name = "personal closet"
 	req_access = list(ACCESS_ALL_PERSONAL_LOCKERS)
 	var/registered_name = null
-	door_anim_time = 0 // no animation
 
 /obj/structure/closet/secure_closet/personal/PopulateContents()
 	..()
@@ -28,6 +27,7 @@
 	max_integrity = 70
 	material_drop = /obj/item/stack/sheet/mineral/wood
 	cutting_tool = TOOL_SCREWDRIVER
+	door_anim_time = 0 // no animation
 
 /obj/structure/closet/secure_closet/personal/cabinet/PopulateContents()
 	new /obj/item/storage/backpack/satchel/leather/withwallet( src )

@@ -205,7 +205,7 @@
 
 	for(var/mob/living/carbon/human/victim in viewers(1, src)) //Only for corpse right next to/on same tile
 		switch(victim.stat)
-			if(UNCONSCIOUS, DEAD) //We don't have HARD_CRIT, works well anyway
+			if(UNCONSCIOUS) //We don't have HARD_CRIT, works well anyway
 				infest(victim)
 				return //This will qdelete the legion.
 			if(DEAD)

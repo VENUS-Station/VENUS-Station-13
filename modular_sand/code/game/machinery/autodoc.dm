@@ -37,7 +37,7 @@
 /obj/machinery/autodoc/examine(mob/user)
 	. = ..()
 	if(get_dist(src, user) <= 1 || isobserver(user))
-		. += span_notice("A small screen on \the [src] displays, \"Surgery time: [DisplayTimeText(surgery_time)] second\s\"")
+		. += span_notice("A small screen on \the [src] displays, \"Surgery time: [DisplayTimeText(surgery_time)]\"")
 		if(processing)
 			. += span_notice("[src] is currently inserting [stored_organ] into [occupant].")
 		else if(stored_organ)

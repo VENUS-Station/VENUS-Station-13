@@ -33148,6 +33148,9 @@
 	pixel_y = -30
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible,
+/obj/machinery/computer/turbine_computer{
+	dir = 1
+	},
 /turf/open/floor/plasteel,
 /area/maintenance/disposal/incinerator)
 "lyh" = (
@@ -37720,25 +37723,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/engineering/main)
-"mZk" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/obj/structure/closet{
-	name = "pool toys"
-	},
-/obj/item/pool/pool_noodle,
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/open/floor/plasteel/white/corner,
-/area/commons/fitness/pool)
 "mZp" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
@@ -37752,25 +37736,6 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/science)
-"mZy" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/obj/structure/closet{
-	name = "pool toys"
-	},
-/obj/item/pool/pool_noodle,
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/open/floor/plasteel/white/corner,
-/area/commons/fitness/pool)
 "mZA" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -40646,7 +40611,6 @@
 	pixel_x = 5;
 	pixel_y = 30
 	},
-/obj/machinery/computer/turbine_computer,
 /turf/open/floor/plasteel,
 /area/maintenance/disposal/incinerator)
 "oae" = (
@@ -122327,7 +122291,7 @@ vbB
 vbB
 vbB
 mCp
-mZk
+nav
 vUt
 nSt
 hpl
@@ -122584,7 +122548,7 @@ vbB
 vbB
 vbB
 mCp
-mZy
+nav
 vUt
 hpl
 nSt

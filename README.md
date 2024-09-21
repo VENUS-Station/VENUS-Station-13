@@ -30,9 +30,9 @@ Based and maintained from VENUS Station.
 
 **VENUS Station Information**
 * **Code:** https://github.com/VENUS-Station/VENUS-Station-13
-* **Discord:** https://discord.gg/wynHVMzHzC
-* **Patreon:** https://www.patreon.com/VENUSstation13
-* **Ko-fi:** https://ko-fi.com/VENUS
+* **Discord:** https://discord.gg/kCuWJRdzb7
+<!-- * **Patreon:** https://www.patreon.com/VENUSstation13
+* **Ko-fi:** https://ko-fi.com/VENUS -->
 
 ## DOWNLOADING
 

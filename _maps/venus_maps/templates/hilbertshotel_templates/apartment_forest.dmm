@@ -400,6 +400,8 @@
 /turf/open/floor/spooktime/beach/coasts/innerN,
 /area/hilbertshotel)
 "XA" = (
+/obj/item/storage/fancy/heart_box,
+/obj/item/paper/fluff/hilbertshotel/welcomeletter,
 /turf/open/floor/carpet/blackred,
 /area/hilbertshotel)
 "Yd" = (

@@ -1223,6 +1223,8 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
+/obj/item/storage/fancy/heart_box,
+/obj/item/paper/fluff/hilbertshotel/welcomeletter,
 /turf/open/floor/plasteel,
 /area/hilbertshotel)
 "Na" = (

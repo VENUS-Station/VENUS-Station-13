@@ -413,6 +413,14 @@
 	},
 /turf/open/floor/wood/wood_tiled,
 /area/hilbertshotel)
+"ym" = (
+/obj/structure/window/reinforced,
+/obj/structure/table/wood,
+/obj/structure/curtain/goliath,
+/obj/item/storage/fancy/heart_box,
+/obj/item/paper/fluff/hilbertshotel/welcomeletter,
+/turf/open/floor/wood/wood_tiled,
+/area/hilbertshotel)
 "yr" = (
 /obj/structure/flora/tree/pine,
 /turf/closed/indestructible/rock/snow,
@@ -1084,7 +1092,7 @@ aO
 aO
 Mt
 dl
-lT
+ym
 TX
 yU
 xv

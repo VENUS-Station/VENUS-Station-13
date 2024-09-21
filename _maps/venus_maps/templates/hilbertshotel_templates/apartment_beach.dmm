@@ -217,6 +217,8 @@
 /area/hilbertshotel)
 "Et" = (
 /obj/structure/table,
+/obj/item/storage/fancy/heart_box,
+/obj/item/paper/fluff/hilbertshotel/welcomeletter,
 /turf/open/floor/carpet/royalblue,
 /area/hilbertshotel)
 "ED" = (

@@ -16,7 +16,7 @@
 <h1>clothing <aside>/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/clothing.html">clothing</a></aside>
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/e090a1452b7398f9a3791a4d64af97c544ce9e65/code/modules/clothing/clothing.dm#L1">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/68d2c7a616a615ab0d4a62debe1f2b6e369dd12a/code/modules/clothing/clothing.dm#L1">
         <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;clothing&#x2F;clothing.dm 1"/></a></h1>
 
 <table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
@@ -30,18 +30,18 @@
             <aside>&ndash; /list</aside>
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/e090a1452b7398f9a3791a4d64af97c544ce9e65/code/modules/clothing/clothing.dm#L62">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/68d2c7a616a615ab0d4a62debe1f2b6e369dd12a/code/modules/clothing/clothing.dm#L62">
         <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;clothing&#x2F;clothing.dm 62"/></a></h3>
         <p>These are armor values that protect the wearer, taken from the clothing's armor datum. List updates on examine because it's currently only used to print armor ratings to chat in Topic().</p><h3 id="var/durability_list"><aside class="declaration">var </aside>durability_list
             <aside>&ndash; /list</aside>
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/e090a1452b7398f9a3791a4d64af97c544ce9e65/code/modules/clothing/clothing.dm#L64">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/68d2c7a616a615ab0d4a62debe1f2b6e369dd12a/code/modules/clothing/clothing.dm#L64">
         <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;clothing&#x2F;clothing.dm 64"/></a></h3>
         <p>These are armor values that protect the clothing, taken from its armor datum. List updates on examine because it's currently only used to print armor ratings to chat in Topic().</p><h2 id="proc">Proc Details</h2><h3 id="proc/armor_to_protection_class"><aside class="declaration">proc </aside>armor_to_protection_class<aside>(armor_value) 
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/e090a1452b7398f9a3791a4d64af97c544ce9e65/code/modules/clothing/clothing.dm#L324">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/68d2c7a616a615ab0d4a62debe1f2b6e369dd12a/code/modules/clothing/clothing.dm#L324">
         <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;clothing&#x2F;clothing.dm 324"/></a></aside>
         </h3>
         <p>Rounds armor_value to nearest 10, divides it by 10 and then expresses it in roman numerals up to 10</p>
@@ -53,13 +53,13 @@ Arguments:</p>
 </ul><h3 id="proc/bristle"><aside class="declaration">proc </aside>bristle<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/L) 
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/e090a1452b7398f9a3791a4d64af97c544ce9e65/code/modules/clothing/clothing.dm#L487">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/68d2c7a616a615ab0d4a62debe1f2b6e369dd12a/code/modules/clothing/clothing.dm#L487">
         <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;clothing&#x2F;clothing.dm 487"/></a></aside>
         </h3>
         <p>If we're a clothing with at least 1 shredded/disabled zone, give the wearer a periodic heads up letting them know their clothes are damaged</p><h3 id="proc/disable_zone"><aside class="declaration">proc </aside>disable_zone<aside>(def_zone, damage_type) 
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/e090a1452b7398f9a3791a4d64af97c544ce9e65/code/modules/clothing/clothing.dm#L176">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/68d2c7a616a615ab0d4a62debe1f2b6e369dd12a/code/modules/clothing/clothing.dm#L176">
         <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;clothing&#x2F;clothing.dm 176"/></a></aside>
         </h3>
         <p>disable_zone() is used to disable a given bodypart's protection on our clothing item, mainly from [/obj/item/clothing/proc/take_damage_zone()]</p>
@@ -73,7 +73,7 @@ order to equip it again. Also note we only consider it damaged if there's more t
 </ul><h3 id="proc/take_damage_zone"><aside class="declaration">proc </aside>take_damage_zone<aside>(def_zone, damage_amount, damage_type, armour_penetration) 
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/e090a1452b7398f9a3791a4d64af97c544ce9e65/code/modules/clothing/clothing.dm#L152">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/68d2c7a616a615ab0d4a62debe1f2b6e369dd12a/code/modules/clothing/clothing.dm#L152">
         <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;clothing&#x2F;clothing.dm 152"/></a></aside>
         </h3>
         <p>take_damage_zone() is used for dealing damage to specific bodyparts on a worn piece of clothing, meant to be called from [/obj/item/bodypart/proc/check_woundings_mods()]</p>
@@ -90,7 +90,7 @@ Also if limb_integrity is 0, then this clothing doesn't have bodypart damage ena
 </ul></main>
 <footer>
     tgstation.dme
-    <a href="https://github.com/VENUS-Station/VENUS-Station-13/tree/e090a1452b7398f9a3791a4d64af97c544ce9e65">e090a14</a>
+    <a href="https://github.com/VENUS-Station/VENUS-Station-13/tree/68d2c7a616a615ab0d4a62debe1f2b6e369dd12a">68d2c7a</a>
         (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.8.0</a></footer>
 </body>
 </html>

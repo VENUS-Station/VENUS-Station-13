@@ -1442,7 +1442,7 @@
 	key = "meow"
 	key_third_person = "meows"
 	message = "meows!"
-	message_mime = "meows silently!"
+	emote_type = EMOTE_AUDIBLE // No reason mimes shouldn't meow.
 	emote_sound = 'modular_splurt/sound/voice/catpeople/cat_meow1.ogg'
 	emote_cooldown = 0.8 SECONDS // the longest audio is 1 second but who gives a fuck mrrp mrrp meow
 	emote_pitch_variance = FALSE // why would you
@@ -1453,10 +1453,11 @@
 
 /datum/emote/living/audio/meow2
 	key = "meow2"
-	key_third_person = "mews!"
+	key_third_person = "meows2"
 	message = "mews!"
 	message_mime = "mews silently!"
 	emote_sound = 'modular_splurt/sound/voice/catpeople/cat_mew1.ogg'
+	emote_type = EMOTE_AUDIBLE
 	emote_cooldown = 0.8 SECONDS // mrrp mrrp meow
 	emote_pitch_variance = FALSE
 
@@ -1470,6 +1471,7 @@
 	message = "trills like a cat!"
 	message_mime = "trills silently!"
 	emote_sound = 'modular_splurt/sound/voice/catpeople/cat_mrrp1.ogg'
+	emote_type = EMOTE_AUDIBLE
 	emote_cooldown = 0.8 SECONDS // mrrp mrrp meow
 	emote_pitch_variance = FALSE
 

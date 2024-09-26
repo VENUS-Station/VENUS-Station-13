@@ -1440,16 +1440,9 @@
 
 /datum/emote/living/audio/meow
 	key = "meow"
-	key_third_person = "mrowls"
-	message = "mrowls!"
-	emote_sound = 'modular_citadel/sound/voice/meow1.ogg'
-	emote_cooldown = 0.6 SECONDS
-	emote_pitch_variance = FALSE
-
-/datum/emote/living/audio/meow2
-	key = "meow2"
 	key_third_person = "meows"
 	message = "meows!"
+	emote_type = EMOTE_AUDIBLE // No reason mimes shouldn't meow.
 	emote_sound = 'modular_splurt/sound/voice/catpeople/cat_meow1.ogg'
 	emote_cooldown = 0.8 SECONDS // the longest audio is 1 second but who gives a fuck mrrp mrrp meow
 	emote_pitch_variance = FALSE // why would you
@@ -1458,16 +1451,32 @@
 	emote_sound = pick('modular_splurt/sound/voice/catpeople/cat_meow1.ogg', 'modular_splurt/sound/voice/catpeople/cat_meow2.ogg', 'modular_splurt/sound/voice/catpeople/cat_meow3.ogg') // Credit to Nyanotrasen (https://github.com/Nyanotrasen/Nyanotrasen)
 	. = ..()
 
-/datum/emote/living/audio/meow3
-	key = "meow3"
-	key_third_person = "mews!"
+/datum/emote/living/audio/meow2
+	key = "meow2"
+	key_third_person = "meows2"
 	message = "mews!"
+	message_mime = "mews silently!"
 	emote_sound = 'modular_splurt/sound/voice/catpeople/cat_mew1.ogg'
+	emote_type = EMOTE_AUDIBLE
 	emote_cooldown = 0.8 SECONDS // mrrp mrrp meow
 	emote_pitch_variance = FALSE
 
 /datum/emote/living/audio/meow2/run_emote(mob/user, params)
 	emote_sound = pick('modular_splurt/sound/voice/catpeople/cat_mew1.ogg', 'modular_splurt/sound/voice/catpeople/cat_mew2.ogg') // Credit to Nyanotrasen (https://github.com/Nyanotrasen/Nyanotrasen)
+	. = ..()
+
+/datum/emote/living/audio/mrrp
+	key = "mrrp"
+	key_third_person = "mrrps"
+	message = "trills like a cat!"
+	message_mime = "trills silently!"
+	emote_sound = 'modular_splurt/sound/voice/catpeople/cat_mrrp1.ogg'
+	emote_type = EMOTE_AUDIBLE
+	emote_cooldown = 0.8 SECONDS // mrrp mrrp meow
+	emote_pitch_variance = FALSE
+
+/datum/emote/living/audio/mrrp/run_emote(mob/user, params)
+	emote_sound = pick('modular_splurt/sound/voice/catpeople/cat_mrrp1.ogg', 'modular_splurt/sound/voice/catpeople/cat_mrrp2.ogg')
 	. = ..()
 
 /datum/emote/living/audio/mrowl
@@ -1476,22 +1485,6 @@
 	message = "mrowls."
 	emote_sound = 'modular_splurt/sound/voice/mrowl.ogg'
 	emote_cooldown = 0.95 SECONDS
-	emote_pitch_variance = FALSE
-
-/datum/emote/living/audio/mrrp
-	key = "mrrp"
-	key_third_person = "mrrps"
-	message = "trills like a cat!"
-	emote_sound = 'modular_splurt/sound/voice/catpeople/cat_mrrp1.ogg'
-	emote_cooldown = 0.8 SECONDS // mrrp mrrp meow
-	emote_pitch_variance = FALSE
-
-/datum/emote/living/audio/mrrp2
-	key = "mrrp2"
-	key_third_person = "mrrps"
-	message = "trills like a cat!"
-	emote_sound = 'modular_splurt/sound/voice/catpeople/cat_mrrp2.ogg'
-	emote_cooldown = 0.8 SECONDS
 	emote_pitch_variance = FALSE
 
 /datum/emote/living/audio/gay

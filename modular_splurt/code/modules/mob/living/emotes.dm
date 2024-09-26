@@ -355,7 +355,7 @@
 /datum/emote/living/audio/fafafail
 	key = "fafafail"
 	key_third_person = "fafafails"
-	message = "spews someting unintelligible."
+	message = "spews something unintelligible."
 	message_mime = "spews something silent."
 	emote_sound = 'modular_splurt/sound/voice/bababooey/ffffhvh.ogg'
 	emote_cooldown = 1.15 SECONDS
@@ -1346,7 +1346,7 @@
 
 /datum/emote/living/audio/gay
 	key = "gay"
-	key_third_person = "gays"
+	key_third_person = "gays" // *point [ref] is already an emote. Also "*points at a user" is a key nobody would ever use.
 	message = "saw something gay."
 	emote_sound = 'modular_splurt/sound/voice/gay-echo.ogg'
 	emote_cooldown = 0.95 SECONDS

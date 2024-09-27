@@ -1,6 +1,7 @@
 /datum/emote
 	var/key = "" //What calls the emote
 	var/key_third_person = "" //This will also call the emote
+	var/name = "" // Needed for more user-friendly emote names, so emotes with keys like "aflap" will show as "flap angry". Defaulted to key.
 	var/message = "" //Message displayed when emote is used
 	var/message_mime = "" //Message displayed if the user is a mime
 	var/message_alien = "" //Message displayed if the user is a grown alien
@@ -11,21 +12,19 @@
 	var/message_simple = "" //Message to display if the user is a simple_animal
 	var/message_param = "" //Message to display if a param was given
 	var/emote_type = EMOTE_VISIBLE //Whether the emote is visible or audible
+	var/sound
 	var/restraint_check = FALSE //Checks if the mob is restrained before performing the emote
 	var/muzzle_ignore = FALSE //Will only work if the emote is EMOTE_AUDIBLE
 	var/list/mob_type_allowed_typecache = /mob //Types that are allowed to use that emote
 	var/list/mob_type_blacklist_typecache //Types that are NOT allowed to use that emote
 	var/list/mob_type_ignore_stat_typecache
 	var/stat_allowed = CONSCIOUS
-	var/static/list/emote_list = list()
 	var/static/regex/stop_bad_mime = regex(@"says|exclaims|yells|asks")
 
 	var/chat_popup = TRUE //Skyrat edit
 	var/image_popup
 
 /datum/emote/New()
-	if(key_third_person)
-		emote_list[key_third_person] = src
 	if (ispath(mob_type_allowed_typecache))
 		switch (mob_type_allowed_typecache)
 			if (/mob)
@@ -38,6 +37,9 @@
 		mob_type_allowed_typecache = typecacheof(mob_type_allowed_typecache)
 	mob_type_blacklist_typecache = typecacheof(mob_type_blacklist_typecache)
 	mob_type_ignore_stat_typecache = typecacheof(mob_type_ignore_stat_typecache)
+
+	if(!name)
+		name = key
 
 /datum/emote/proc/run_emote(mob/user, params, type_override, intentional = FALSE)
 	. = TRUE
@@ -80,6 +82,9 @@
 	if(image_popup)
 		flick_emote_popup_on_mob(user, image_popup, 40)
 	//End of skyrat changes
+
+/datum/emote/proc/get_sound(mob/living/user)
+	return sound //by default just return this var.
 
 /datum/emote/proc/replace_pronoun(mob/user, message)
 	if(findtext(message, "their"))
@@ -149,7 +154,6 @@
 			return FALSE
 
 /datum/emote/sound
-	var/sound //Sound to play when emote is called
 	var/vary = FALSE	//used for the honk borg emote
 	var/volume = 50
 	mob_type_allowed_typecache = list(/mob/living/brain, /mob/living/silicon, /mob/camera/aiEye)

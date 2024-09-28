@@ -146,7 +146,7 @@
 	key_third_person = "ruffles"
 	message = "ruffles their wings for a moment."
 
-/datum/emote/living/fart
+/datum/emote/living/audio/fart
 	key = "fart"
 	key_third_person = "farts"
 	message = "farts."
@@ -228,6 +228,15 @@
 	message = "mews hysterically!"
 	message_mime = "makes a cat face!"
 	emote_sound = 'modular_splurt/sound/voice/meow_meme.ogg'
+	emote_cooldown = 1 SECONDS
+
+// Moved *burp to modular_splurt to use the emote_sound variables written here. Also removed the 14 other types of burp sounds.
+/datum/emote/living/audio/burp
+	key = "burp"
+	key_third_person = "burps"
+	message = "burps."
+	emote_type = EMOTE_AUDIBLE
+	emote_sound = 'modular_splurt/sound/voice/burp.ogg'
 	emote_cooldown = 1 SECONDS
 
 /datum/emote/living/audio/bleat
@@ -1360,3 +1369,10 @@
 	emote_cooldown = 3.0 SECONDS
 	emote_pitch_variance = FALSE
 	emote_volume = 70
+
+/datum/emote/living/audio/rawr
+	key = "rawr"
+	key_third_person = "rawrs"
+	message = "lets out a rawr!"
+	emote_sound = 'modular_sand/sound/voice/rawr.ogg'
+	emote_cooldown = 0.8 SECONDS

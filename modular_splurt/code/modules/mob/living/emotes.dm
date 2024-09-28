@@ -28,24 +28,7 @@
 			// Set laugh sound
 			laugh_sound = 'sound/voice/human/womanlaugh.ogg'
 
-		/*
-		 * Please add more gendered laughs
-		 *
-		// Male
-		if(MALE)
-			// Set laugh sound
-			laugh_sound = 'sound/voice/human/laugh_male.ogg'
-
-		// Non-binary
-		if(PLURAL)
-			// Set laugh sound
-			laugh_sound = 'sound/voice/human/laugh_nonbinary.ogg'
-
-		// Object
-		if(NEUTER)
-			// Set laugh sound
-			laugh_sound = 'sound/voice/human/laugh_object.ogg'
-		*/
+		//Gendered laughs were never added. A shame, trully.
 
 		// Other
 		else
@@ -155,7 +138,7 @@
 /datum/emote/living/squint
 	key = "squint"
 	key_third_person = "squints"
-	message = "squints their eyes." // i dumb
+	message = "squints their eyes."
 	emote_type = EMOTE_VISIBLE
 
 /datum/emote/living/ruffle
@@ -163,64 +146,15 @@
 	key_third_person = "ruffles"
 	message = "ruffles their wings for a moment."
 
-/datum/emote/living/fart
+/datum/emote/living/audio/fart
 	key = "fart"
 	key_third_person = "farts"
-	message = "farts out shitcode."
+	message = "farts."
+	emote_type = EMOTE_AUDIBLE // lets mimes fart
+	emote_sound = 'modular_splurt/sound/voice/fart.ogg'
+	emote_cooldown = 0.6 SECONDS
 
-/datum/emote/living/fart/run_emote(mob/living/user, params, type_override, intentional)
-	if(TIMER_COOLDOWN_CHECK(user, COOLDOWN_EMOTE_FART))
-		to_chat(user, span_warning("You try your hardest, but no shart comes out."))
-		return
-	var/list/fart_emotes = list( //cope goonies
-		"lets out a girly little 'toot' from [user.p_their()] butt.",
-		"farts loudly!",
-		"lets one rip!",
-		"farts! It sounds wet and smells like rotten eggs.",
-		"farts robustly!",
-		"farted! It smells like something died.",
-		"farts like a muppet!",
-		"defiles the station's air supply.",
-		"farts for a whole ten seconds.",
-		"groans and moans, farting like the world depended on it.",
-		"breaks wind!",
-		"expels intestinal gas through [user.p_their()] anus.",
-		"releases an audible discharge of intestinal gas.",
-		"is a farting motherfucker!!!",
-		"suffers from flatulence!",
-		"releases flatus.",
-		"releases methane.",
-		"farts up a storm.",
-		"farts. It smells like Soylent Surprise!",
-		"farts. It smells like pizza!",
-		"farts. It smells like George Melons' perfume!",
-		"farts. It smells like the kitchen!",
-		"farts. It smells like medbay in here now!",
-		"farts. It smells like the bridge in here now!",
-		"farts like a pubby!",
-		"farts like a goone!",
-		"sharts! That's just nasty.",
-		"farts delicately.",
-		"farts timidly.",
-		"farts very, very quietly. The stench is OVERPOWERING.",
-		"farts egregiously.",
-		"farts voraciously.",
-		"farts cantankerously.",
-		"farts in [user.p_their()] own mouth. A shameful \the <b>[user]</b>.",
-		"breaks wind noisily!",
-		"releases gas with the power of the gods! The very station trembles!!",
-		"<B><span style='color:red'>f</span><span style='color:blue'>a</span>r<span style='color:red'>t</span><span style='color:blue'>s</span>!</B>",
-		"laughs! [user.p_their(TRUE)] breath smells like a fart.",
-		"farts, and as such, blob cannot evoulate.",
-		"farts. It might have been the Citizen Kane of farts."
-	)
-	var/new_message = pick(fart_emotes)
-	//new_message = replacetext(new_message, "%OWNER", "\the [user]")
-	message = new_message
-	. = ..()
-	if(.)
-		playsound(user, pick(GLOB.brap_noises), 50, 1, -1)
-		TIMER_COOLDOWN_START(user, COOLDOWN_EMOTE_FART, 3 SECONDS)
+// Rest in Piss the SPLURT fart library.
 
 /datum/emote/living/audio/cackle
 	key = "cackle"
@@ -296,16 +230,14 @@
 	emote_sound = 'modular_splurt/sound/voice/meow_meme.ogg'
 	emote_cooldown = 1 SECONDS
 
-/datum/emote/living/burp/run_emote(mob/user, params, type_override, intentional)
-	. = ..()
-	var/list/burp_noises = list(
-		'modular_splurt/sound/voice/burps/belch1.ogg','modular_splurt/sound/voice/burps/belch2.ogg','modular_splurt/sound/voice/burps/belch3.ogg','modular_splurt/sound/voice/burps/belch4.ogg',
-		'modular_splurt/sound/voice/burps/belch5.ogg','modular_splurt/sound/voice/burps/belch6.ogg','modular_splurt/sound/voice/burps/belch7.ogg','modular_splurt/sound/voice/burps/belch8.ogg',
-		'modular_splurt/sound/voice/burps/belch9.ogg','modular_splurt/sound/voice/burps/belch10.ogg','modular_splurt/sound/voice/burps/belch11.ogg','modular_splurt/sound/voice/burps/belch12.ogg',
-		'modular_splurt/sound/voice/burps/belch13.ogg','modular_splurt/sound/voice/burps/belch14.ogg','modular_splurt/sound/voice/burps/belch15.ogg'
-	)
-	if(.)
-		playsound(user, pick(burp_noises), 50, 1)
+// Moved *burp to modular_splurt to use the emote_sound variables written here. Also removed the 14 other types of burp sounds.
+/datum/emote/living/audio/burp
+	key = "burp"
+	key_third_person = "burps"
+	message = "burps."
+	emote_type = EMOTE_AUDIBLE
+	emote_sound = 'modular_splurt/sound/voice/burp.ogg'
+	emote_cooldown = 0.6 SECONDS
 
 /datum/emote/living/audio/bleat
 	key = "bleat"
@@ -314,26 +246,6 @@
 	message_mime = "bleats silently!"
 	emote_sound = 'modular_splurt/sound/voice/bleat.ogg'
 	emote_cooldown = 0.7 SECONDS
-
-// /datum/emote/living/carbon/moan/run_emote(mob/user, params, type_override, intentional) //I can't not port this shit, come on.
-// 	if(user.nextsoundemote >= world.time || user.stat != CONSCIOUS)
-// 		return
-// 	var/sound
-// 	var/miming = user.mind ? user.mind.miming : 0
-// 	if(!user.is_muzzled() && !miming)
-// 		user.nextsoundemote = world.time + 7
-// 		sound = pick('modular_splurt/sound/voice/moan_m1.ogg', 'modular_splurt/sound/voice/moan_m2.ogg', 'modular_splurt/sound/voice/moan_m3.ogg')
-// 		if(user.gender == FEMALE)
-// 			sound = pick('modular_splurt/sound/voice/moan_f1.ogg', 'modular_splurt/sound/voice/moan_f2.ogg', 'modular_splurt/sound/voice/moan_f3.ogg', 'modular_splurt/sound/voice/moan_f4.ogg', 'modular_splurt/sound/voice/moan_f5.ogg', 'modular_splurt/sound/voice/moan_f6.ogg', 'modular_splurt/sound/voice/moan_f7.ogg')
-// 		if(isalien(user))
-// 			sound = 'sound/voice/hiss6.ogg'
-// 		playlewdinteractionsound(user.loc, sound, 50, 1, 4, 1.2)
-// 		message = "moans!"
-// 	else if(miming)
-// 		message = "acts out a moan."
-// 	else
-// 		message = "makes a very loud noise."
-// 	. = ..()
 
 /datum/emote/living/audio/chitter2
 	key = "chitter2"
@@ -699,13 +611,6 @@
 	emote_sound = 'modular_splurt/sound/voice/deathglare.ogg'
 	emote_cooldown = 4.4 SECONDS
 
-/datum/emote/living/audio/sicko
-	key = "sicko"
-	key_third_person = "sickos"
-	message = "briefly goes sicko mode!"
-	message_mime = "briefly imitates sicko mode!"
-	emote_sound = 'modular_splurt/sound/voice/sicko.ogg'
-	emote_cooldown = 0.8 SECONDS
 
 /datum/emote/living/audio/chill
 	key = "chill"
@@ -716,14 +621,14 @@
 	emote_cooldown = 3.4 SECONDS
 
 /datum/emote/living/audio/taunt
-	key = "tt"
+	key = "taunt"
 	key_third_person = "taunts"
 	message = "strikes a pose!"
 	message_param = "taunts %t!"
 	emote_sound = 'modular_splurt/sound/voice/phillyhit.ogg'
 
 /datum/emote/living/audio/taunt/alt
-	key = "tt2"
+	key = "taunts2"
 	key_third_person = "taunts2"
 	emote_volume = 100
 	emote_sound = 'modular_splurt/sound/voice/orchestrahit.ogg'
@@ -866,7 +771,7 @@
 		"pants!",
 		"pants like a dog.",
 		"lets out soft pants.",
-		"pulls [user.p_their()] tongue out, panting."
+		"pulls their tongue out, panting."
 	)
 	message = pick(pants)
 	. = ..()
@@ -916,47 +821,12 @@
 	. = ..()
 
 /datum/emote/living/audio/facemetacarpus
-	key = "facehand" // Facepalm was taken
+	key = "facehand"
 	key_third_person = "facepalms"
-	// Message is generated from metacarpus_type below. You shouldn't see this!
-	message = "creates an error in the code." // Hear a slapping sound
-	muzzle_ignore = TRUE // Not a spoken emote
-	restraint_check = TRUE // Uses your hands
+	message = "facepalms."
+	emote_type = EMOTE_VISIBLE
 	emote_sound = 'modular_splurt/sound/effects/slap.ogg'
-	// Defines appendage type for generated message
-	var/metacarpus_type = "palm" // Default to hands
 	emote_cooldown = 0.25 SECONDS
-
-/datum/emote/living/audio/facemetacarpus/run_emote(mob/user, params)
-	// Randomly pick a message using metacarpus_type for hand
-	message = pick(list(
-			"places [usr.p_their()] [metacarpus_type] across [usr.p_their()] face.",
-			"lowers [usr.p_their()] face into [usr.p_their()] [metacarpus_type].",
-			"face[metacarpus_type]s",
-		))
-
-	// Return normally
-	. = ..()
-
-/datum/emote/living/audio/facemetacarpus/paw
-	key = "facepaw" // For furries
-	key_third_person = "facepaws"
-	metacarpus_type = "paw"
-
-/datum/emote/living/audio/facemetacarpus/claw
-	key = "faceclaw" // For scalies and avians
-	key_third_person = "faceclaws"
-	metacarpus_type = "claw"
-
-/datum/emote/living/audio/facemetacarpus/wing
-	key = "facewing" // For avians, harpies or just anyone with wings
-	key_third_person = "facewings"
-	metacarpus_type = "wing"
-
-/datum/emote/living/audio/facemetacarpus/hoof
-	key = "facehoof" // For horse enthusiasts
-	key_third_person = "facehoofs"
-	metacarpus_type = "hoof"
 
 /datum/emote/living/audio/poyo
 	key = "poyo"
@@ -964,7 +834,8 @@
 	message = "%SAYS, \"Poyo!\""
 	message_mime = "acts out an excited motion!"
 	emote_sound = 'modular_splurt/sound/voice/barks/poyo.ogg'
-	// No cooldown var required
+	emote_cooldown = 1 SECONDS // Absolutely give this emote a cooldown.
+
 
 /datum/emote/living/audio/poyo/run_emote(mob/user, params)
 	var/datum/dna/D = user.has_dna()
@@ -1024,7 +895,7 @@
 	emote_sound = 'modular_splurt/sound/voice/warble.ogg'
 	emote_cooldown = 0.4 SECONDS
 
-// At the moment of adding it I just realized there's Tesh test-merge going on, so I've added numeral in case if that gets merged in the long run.
+//Teshari took *trill
 /datum/emote/living/audio/trill2
 	key = "trill2"
 	key_third_person = "trills2"
@@ -1083,19 +954,7 @@
 	emote_cooldown = 0.8 SECONDS
 
 /datum/emote/living/audio/untitledgoose/run_emote(mob/user, params)
-	emote_sound = pick('modular_splurt/sound/voice/goosehonk/sfx_goose_honk_b_01.ogg', 'modular_splurt/sound/voice/goosehonk/sfx_goose_honk_b_02.ogg','modular_splurt/sound/voice/goosehonk/sfx_goose_honk_b_03.ogg','modular_splurt/sound/voice/goosehonk/sfx_goose_honk_b_06.ogg')
-	. = ..()
-
-/datum/emote/living/audio/untitledgooseB
-	key = "goosehonkb"
-	key_third_person = "honks differently"
-	message = "honks differently!"
-	message_mime = "looks like a duck from hell!"
-	emote_sound = 'modular_splurt/sound/voice/goosehonk/sfx_goose_honk_b_01.ogg'
-	emote_cooldown = 0.8 SECONDS
-
-/datum/emote/living/audio/untitledgooseB/run_emote(mob/user, params)
-	emote_sound = pick('modular_splurt/sound/voice/goosehonk/sfx_gooseB_honk_02.ogg', 'modular_splurt/sound/voice/goosehonk/sfx_gooseB_honk_03.ogg', 'modular_splurt/sound/voice/goosehonk/sfx_gooseB_honk_04.ogg', 'modular_splurt/sound/voice/goosehonk/sfx_gooseB_honk_06.ogg', 'modular_splurt/sound/voice/goosehonk/sfx_gooseB_honk_07.ogg', 'modular_splurt/sound/voice/goosehonk/sfx_gooseB_honk_08.ogg', 'modular_splurt/sound/voice/goosehonk/sfx_gooseB_honk_09.ogg')
+	emote_sound = pick('modular_splurt/sound/voice/goosehonk/sfx_goose_honk_b_01.ogg', 'modular_splurt/sound/voice/goosehonk/sfx_goose_honk_b_02.ogg','modular_splurt/sound/voice/goosehonk/sfx_goose_honk_b_03.ogg','modular_splurt/sound/voice/goosehonk/sfx_goose_honk_b_06.ogg', 'modular_splurt/sound/voice/goosehonk/sfx_gooseB_honk_02.ogg', 'modular_splurt/sound/voice/goosehonk/sfx_gooseB_honk_03.ogg', 'modular_splurt/sound/voice/goosehonk/sfx_gooseB_honk_04.ogg', 'modular_splurt/sound/voice/goosehonk/sfx_gooseB_honk_06.ogg', 'modular_splurt/sound/voice/goosehonk/sfx_gooseB_honk_07.ogg', 'modular_splurt/sound/voice/goosehonk/sfx_gooseB_honk_08.ogg', 'modular_splurt/sound/voice/goosehonk/sfx_gooseB_honk_09.ogg')
 	. = ..()
 
 /datum/emote/living/audio/scream2
@@ -1489,7 +1348,7 @@
 
 /datum/emote/living/audio/gay
 	key = "gay"
-	key_third_person = "points at a player"
+	key_third_person = "gays" // *point [ref] is already an emote. Also "*points at a user" is a key nobody would ever use.
 	message = "saw something gay."
 	emote_sound = 'modular_splurt/sound/voice/gay-echo.ogg'
 	emote_cooldown = 0.95 SECONDS
@@ -1497,18 +1356,16 @@
 
 /datum/emote/living/audio/flabbergast
 	key = "flabbergast"
-	key_third_person = "is flabbergasted"
+	key_third_person = "flabbergasted"
 	message = "looks flabbergasted!"
 	emote_sound = 'modular_splurt/sound/voice/flabbergasted.ogg'
 	emote_cooldown = 3.0 SECONDS
 	emote_pitch_variance = FALSE
 	emote_volume = 70
 
-/datum/emote/living/audio/sadness
-	key = "sadness"
-	key_third_person = "feels sadness"
-	message = "is experiencing <b><i>Profound Sadness</i></b>!"
-	emote_sound = 'modular_splurt/sound/voice/sadness.ogg'
-	emote_cooldown = 4.0 SECONDS
-	emote_pitch_variance = FALSE
-	emote_volume = 30
+/datum/emote/living/audio/rawr
+	key = "rawr"
+	key_third_person = "rawrs"
+	message = "lets out a rawr!"
+	emote_sound = 'modular_sand/sound/voice/rawr.ogg'
+	emote_cooldown = 0.8 SECONDS

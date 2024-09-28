@@ -152,7 +152,7 @@
 	message = "farts."
 	emote_type = EMOTE_AUDIBLE // lets mimes fart
 	emote_sound = 'modular_splurt/sound/voice/fart.ogg'
-	emote_cooldown = 3 SECONDS
+	emote_cooldown = 0.6 SECONDS
 
 // Rest in Piss the SPLURT fart library.
 
@@ -237,7 +237,7 @@
 	message = "burps."
 	emote_type = EMOTE_AUDIBLE
 	emote_sound = 'modular_splurt/sound/voice/burp.ogg'
-	emote_cooldown = 1 SECONDS
+	emote_cooldown = 0.6 SECONDS
 
 /datum/emote/living/audio/bleat
 	key = "bleat"

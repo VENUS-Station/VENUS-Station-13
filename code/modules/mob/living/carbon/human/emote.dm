@@ -99,7 +99,7 @@
 	else
 		H.dna.species.stop_wagging_tail(H)
 
-/datum/emote/living/carbon/human/wag/can_run_emote(mob/user, status_check = TRUE)
+/datum/emote/living/carbon/human/wag/can_run_emote(mob/user, status_check = TRUE, intentional = FALSE)
 	if(!..() || !ishuman(user))
 		return FALSE
 	var/mob/living/carbon/human/H = user
@@ -135,7 +135,7 @@
 	else
 		. = "closes " + message
 
-/datum/emote/living/carbon/human/wing/can_run_emote(mob/user, status_check = TRUE)
+/datum/emote/living/carbon/human/wing/can_run_emote(mob/user, status_check = TRUE, intentional = FALSE)
 	if(!..() || !ishuman(user))
 		return FALSE
 	var/mob/living/carbon/human/H = user

@@ -216,7 +216,7 @@
 /datum/emote/living/audio_emote
 	emote_type = EMOTE_AUDIBLE
 
-/datum/emote/living/audio_emote/can_run_emote(mob/living/user, status_check = TRUE)
+/datum/emote/living/audio_emote/can_run_emote(mob/living/user, status_check = TRUE, intentional = FALSE)
 	. = ..()
 	if(. && iscarbon(user))
 		var/mob/living/carbon/C = user

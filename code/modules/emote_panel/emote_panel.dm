@@ -19,8 +19,8 @@
 					"key" = emote.key,
 					"name" = emote.name,
 					"hands" = emote.restraint_check,
-					"visible" = emote.emote_type & EMOTE_VISIBLE,
-					"audible" = emote.emote_type & EMOTE_AUDIBLE,
+					"visible" = emote.emote_type & (EMOTE_VISIBLE || EMOTE_BOTH || EMOTE_OMNI),
+					"audible" = emote.emote_type & (EMOTE_AUDIBLE || EMOTE_BOTH || EMOTE_OMNI),
 					"sound" = !isnull(emote.get_sound(user)),
 					"use_params" = emote.message_param,
 				))

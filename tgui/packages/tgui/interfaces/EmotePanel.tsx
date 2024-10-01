@@ -102,27 +102,28 @@ export const EmotePanelContent = (props, context) => {
             : `All Emotes`
         }
         buttons={
-          <Flex>
-            <Flex.Item>
-              <Button onClick={() => toggleShowNames(!showNames)}>
-                {showNames ? 'Show Names' : 'Show Keys'}
-              </Button>
-              <Button
-                selected={showIcons}
-                onClick={() => toggleShowIcons(!showIcons)}
-              >
-                Show Icons
-              </Button>
-            </Flex.Item>
-            <Flex.Item>
-              <Button
-                icon="crosshairs"
-                selected={useParams}
-                onClick={() => toggleUseParams(!useParams)}
-              >
-                Use Params
-              </Button>
-            </Flex.Item>
+          <Flex justify="end" inline width="100%">
+            <Button
+              onClick={() => toggleShowNames(!showNames)}
+              height="20px"
+            >
+              {showNames ? 'Show Names' : 'Show Keys'}
+            </Button>
+            <Button
+              selected={showIcons}
+              onClick={() => toggleShowIcons(!showIcons)}
+              height="20px"
+            >
+              Show Icons
+            </Button>
+            <Button
+              icon="crosshairs"
+              selected={useParams}
+              onClick={() => toggleUseParams(!useParams)}
+              height="20px" // God knows why classic tg just breaks this button, this is a patchwork solution.
+            >
+              Use Params
+            </Button>
           </Flex>
         }
       >
@@ -149,7 +150,7 @@ export const EmotePanelContent = (props, context) => {
               .sort((a, b) => (a.name > b.name ? 1 : -1))
               .map((emote) => (
                 <Button
-                  width={showIcons ? 16 : 8}
+                  width={showIcons ? 16 : 12 }
                   key={emote.name}
                   tooltip={
                     showIcons ? undefined : (

@@ -156,9 +156,59 @@
 /datum/emote/sound
 	var/vary = FALSE	//used for the honk borg emote
 	var/volume = 50
+	// Default time before using another audio emote
+	var/emote_cooldown = 1 SECONDS
+
+	// Default volume of the emote
+	var/emote_volume = 50
+
+	// Default range modifier
+	var/emote_range = -1
+	var/emote_distance_multiplier = SOUND_DEFAULT_DISTANCE_MULTIPLIER
+	var/emote_distance_multiplier_min_range = SOUND_DEFAULT_MULTIPLIER_EFFECT_RANGE
+
+	// Default pitch variance
+	var/emote_pitch_variance = 1
+
+	// Default audio falloff settings
+	var/emote_falloff_exponent = SOUND_FALLOFF_EXPONENT
+	var/emote_falloff_distance = SOUND_DEFAULT_FALLOFF_DISTANCE
+
+	// Default frequency
+	var/emote_frequency = null
+
+	// Default channel
+	var/emote_channel = 0
+
+	// Should the emote consider atmospheric pressure?
+	var/emote_check_pressure = TRUE
+
+	// Should the emote ignore walls?
+	var/emote_ignore_walls = FALSE
+
+	// Default wet and dry settings (???)
+	var/emote_wetness = -10000
+	var/emote_dryness = 0
 	mob_type_allowed_typecache = list(/mob/living/brain, /mob/living/silicon, /mob/camera/aiEye)
+
+/datum/emote/sound/can_run_emote(mob/living/user, status_check, intentional = FALSE)
+	. = ..()
+
+	// Check parent return
+	if(!.)
+		return FALSE
+
+	// Check cooldown
+	if(user?.nextsoundemote >= world.time)
+		return FALSE
+
+	// Allow use
+	return TRUE
 
 /datum/emote/sound/run_emote(mob/user, params)
 	. = ..()
 	if(.)
-		playsound(user.loc, sound, volume, vary)
+		playsound(user.loc, sound, emote_volume, emote_pitch_variance, emote_range, emote_falloff_exponent, emote_frequency, emote_channel, emote_check_pressure, emote_ignore_walls, emote_falloff_distance, emote_wetness, emote_dryness, emote_distance_multiplier, emote_distance_multiplier_min_range)
+
+		//Cooldown.
+		user.nextsoundemote = world.time + emote_cooldown

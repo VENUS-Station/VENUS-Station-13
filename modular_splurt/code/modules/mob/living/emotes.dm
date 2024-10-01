@@ -1393,6 +1393,7 @@
 	emote_type = EMOTE_AUDIBLE // No reason mimes shouldn't meow.
 	restraint_check = FALSE
 	sound = 'modular_splurt/sound/voice/catpeople/cat_meow1.ogg'
+
 	emote_cooldown = 0.8 SECONDS // the longest audio is 1 second but who gives a fuck mrrp mrrp meow
 	emote_pitch_variance = FALSE // why would you
 

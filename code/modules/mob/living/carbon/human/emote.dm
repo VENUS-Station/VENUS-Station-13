@@ -247,6 +247,7 @@
 
 //the actual emotes
 /datum/emote/living/carbon/human/rockpaperscissors
+	key = "rps" // Give rockpaperscissors a key so it STOPS RUNTIMING
 	message = "is attempting to play rock paper scissors!"
 
 /datum/emote/living/carbon/human/rockpaperscissors/rock

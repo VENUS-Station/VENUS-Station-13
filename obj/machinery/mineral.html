@@ -16,7 +16,7 @@
 <h1>mineral <aside>/<a href="obj.html">obj</a>/<a href="obj/machinery.html">machinery</a>/<a href="obj/machinery/mineral.html">mineral</a></aside>
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/0ed05ea49aa522a9bca8db8ca08601c02c1335a7/code/modules/mining/machine_processing.dm#L5">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/7d5a802257275e68921a9fb4bc812eeb98bd0c6c/code/modules/mining/machine_processing.dm#L5">
         <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mining&#x2F;machine_processing.dm 5"/></a></h1>
 
 <p>Mineral processing unit console</p><table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
@@ -32,30 +32,30 @@
             <aside>&ndash; </aside>
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/0ed05ea49aa522a9bca8db8ca08601c02c1335a7/code/modules/mining/machine_processing.dm#L9">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/7d5a802257275e68921a9fb4bc812eeb98bd0c6c/code/modules/mining/machine_processing.dm#L9">
         <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mining&#x2F;machine_processing.dm 9"/></a></h3>
         <p>The current direction of <code>input_turf</code>, in relation to the machine.</p><h3 id="var/input_turf"><aside class="declaration">var </aside>input_turf
             <aside>&ndash; /<a href="turf.html">turf</a></aside>
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/0ed05ea49aa522a9bca8db8ca08601c02c1335a7/code/modules/mining/machine_processing.dm#L13">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/7d5a802257275e68921a9fb4bc812eeb98bd0c6c/code/modules/mining/machine_processing.dm#L13">
         <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mining&#x2F;machine_processing.dm 13"/></a></h3>
         <p>The turf the machines listens to for items to pick up. Calls the <code>pickup_item()</code> proc.</p><h3 id="var/needs_item_input"><aside class="declaration">var </aside>needs_item_input
             <aside>&ndash; </aside>
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/0ed05ea49aa522a9bca8db8ca08601c02c1335a7/code/modules/mining/machine_processing.dm#L15">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/7d5a802257275e68921a9fb4bc812eeb98bd0c6c/code/modules/mining/machine_processing.dm#L15">
         <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mining&#x2F;machine_processing.dm 15"/></a></h3>
         <p>Determines if this machine needs to pick up items. Used to avoid registering signals to <code>/mineral</code> machines that don't pickup items.</p><h3 id="var/output_dir"><aside class="declaration">var </aside>output_dir
             <aside>&ndash; </aside>
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/0ed05ea49aa522a9bca8db8ca08601c02c1335a7/code/modules/mining/machine_processing.dm#L11">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/7d5a802257275e68921a9fb4bc812eeb98bd0c6c/code/modules/mining/machine_processing.dm#L11">
         <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mining&#x2F;machine_processing.dm 11"/></a></h3>
         <p>The current direction, in relation to the machine, that items will be output to.</p><h2 id="proc">Proc Details</h2><h3 id="proc/pickup_item"><aside class="declaration">proc </aside>pickup_item<aside>(/<a href="datum.html">datum</a>/source, /<a href="atom.html">atom</a>/<a href="atom/movable.html">movable</a>/target, /<a href="atom.html">atom</a>/oldLoc) 
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/0ed05ea49aa522a9bca8db8ca08601c02c1335a7/code/modules/mining/machine_processing.dm#L50">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/7d5a802257275e68921a9fb4bc812eeb98bd0c6c/code/modules/mining/machine_processing.dm#L50">
         <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mining&#x2F;machine_processing.dm 50"/></a></aside>
         </h3>
         <p>Base proc for all <code>/mineral</code> subtype machines to use. Place your item pickup behavior in this proc when you override it for your specific machine.</p>
@@ -68,25 +68,25 @@
 </ul><h3 id="proc/register_input_turf"><aside class="declaration">proc </aside>register_input_turf<aside>() 
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/0ed05ea49aa522a9bca8db8ca08601c02c1335a7/code/modules/mining/machine_processing.dm#L23">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/7d5a802257275e68921a9fb4bc812eeb98bd0c6c/code/modules/mining/machine_processing.dm#L23">
         <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mining&#x2F;machine_processing.dm 23"/></a></aside>
         </h3>
         <p>Gets the turf in the <code>input_dir</code> direction adjacent to the machine, and registers signals for ATOM_ENTERED and ATOM_CREATED. Calls the <code>pickup_item()</code> proc when it receives these signals.</p><h3 id="proc/unload_mineral"><aside class="declaration">proc </aside>unload_mineral<aside>(/<a href="atom.html">atom</a>/<a href="atom/movable.html">movable</a>/S) 
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/0ed05ea49aa522a9bca8db8ca08601c02c1335a7/code/modules/mining/machine_processing.dm#L54">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/7d5a802257275e68921a9fb4bc812eeb98bd0c6c/code/modules/mining/machine_processing.dm#L54">
         <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mining&#x2F;machine_processing.dm 54"/></a></aside>
         </h3>
         <p>Generic unloading proc. Takes an atom as an argument and forceMove's it to the turf adjacent to this machine in the <code>output_dir</code> direction.</p><h3 id="proc/unregister_input_turf"><aside class="declaration">proc </aside>unregister_input_turf<aside>() 
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/0ed05ea49aa522a9bca8db8ca08601c02c1335a7/code/modules/mining/machine_processing.dm#L29">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/7d5a802257275e68921a9fb4bc812eeb98bd0c6c/code/modules/mining/machine_processing.dm#L29">
         <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mining&#x2F;machine_processing.dm 29"/></a></aside>
         </h3>
         <p>Unregisters signals that are registered the machine's input turf, if it has one.</p></main>
 <footer>
     tgstation.dme
-    <a href="https://github.com/VENUS-Station/VENUS-Station-13/tree/0ed05ea49aa522a9bca8db8ca08601c02c1335a7">0ed05ea</a>
+    <a href="https://github.com/VENUS-Station/VENUS-Station-13/tree/7d5a802257275e68921a9fb4bc812eeb98bd0c6c">7d5a802</a>
         (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.8.0</a></footer>
 </body>
 </html>

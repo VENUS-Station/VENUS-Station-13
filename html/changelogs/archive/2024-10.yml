@@ -1,6 +1,5 @@
-author: Just-Sim
-delete-after: true
-changes:
+2024-10-01:
+  Just-Sim:
   - rscadd: Added Emote Panel
   - rscdel: Remove herobrine.
   - refactor: refactored emote code.

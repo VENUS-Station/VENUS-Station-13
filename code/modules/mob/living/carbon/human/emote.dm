@@ -162,7 +162,7 @@
 		T.Entered(src)
 
 /datum/emote/sound/human
-	mob_type_allowed_typecache = list(/mob/living/carbon/human)
+	mob_type_allowed_typecache = list(/mob/living/) // /sound/human/ became the global emote type, so this is now the only valid typecache
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/sound/human/buzz

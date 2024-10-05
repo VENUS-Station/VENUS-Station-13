@@ -1,4 +1,4 @@
-/* VENUS STATION Edit:
+/* VENUS STATION Guide:
 To create an emote, create a new /datum/emote/sound/human/ entry.
 	Here are the variables you can set:
 	- "key" is the command that a person will run to execute your emote.

@@ -1,3 +1,31 @@
+/* VENUS STATION Guide:
+To create an emote, create a new /datum/emote/sound/human/ entry.
+	Here are the variables you can set:
+	- "key" is the command that a person will run to execute your emote.
+	- "key_third_person" is another way the command can be run to execute your emote, but in case of third person. (Example: "laugh" & "laughs")
+	- "name" is the name that shows up in the emote panel.
+	- "message" is the message that gets displayed when your emote is executed.
+	- "message_mime" is the message that gets displayed when your emote is executed by a mime.
+	- "emote_cooldown" is the cooldown of your emote (in SECONDS).
+	- "sound" is the sound file that gets played when your emote is executed.
+	- "emote_type" is the type of emote that your emote is.
+		EMOTE_AUDIBLE: Your emote will be audible to everyone. (Except deaf people)
+		EMOTE_VISIBLE: Your emote will be visible to everyone. (Except people who are blind)
+		EMOTE_BOTH: Your emote will be both audible and visible to everyone.
+		EMOTE_OMNI: Your emote will be audible to everyone, and visible to everyone who can see the user.
+		!!! THESE ARE IMPORTANT. THE EMOTE PANEL USES THESE !!!
+	- "restraint_check" is a boolean. If true, the emote will not be able to be used if the user is restrained. Defaults to FALSE.
+	- "mob_type_allowed_typecache" is a list of mob types that are allowed to use your emote. Do not use this unless necessary. Defaults to list(/mob/living).
+	- "emote_volume" is the volume of your emote. Defaults to 50.
+	- "emote_pitch_variance" is a boolean. If true, the emote will have a random pitch. Defaults to FALSE.
+
+To add randomization to your emote, copy and paste this line of code:
+	/datum/emote/sound/human/your_emote_name/run_emote(mob/user, params)
+		sound = pick('sound1.ogg', 'sound2.ogg', 'sound3.ogg')
+		. = ..()
+*/
+
+
 //Main code edits
 /datum/emote/living/audio_emote/laugh/run_emote(mob/user, params)
 	. = ..()

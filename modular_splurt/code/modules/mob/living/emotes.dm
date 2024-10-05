@@ -1,4 +1,5 @@
-/* To create an emote, create a new /datum/emote/sound/human/ entry.
+/* VENUS STATION Edit:
+To create an emote, create a new /datum/emote/sound/human/ entry.
 	Here are the variables you can set:
 	- "key" is the command that a person will run to execute your emote.
 	- "key_third_person" is another way the command can be run to execute your emote, but in case of third person. (Example: "laugh" & "laughs")

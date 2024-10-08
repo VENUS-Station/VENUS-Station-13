@@ -64,8 +64,8 @@
 	layer = ADMIN_POPUP_LAYER
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	screen_loc = "TOP-5,LEFT"
-	maptext_height = 720
-	maptext_width = 720
+	maptext_height = 480
+	maptext_width = 480
 	maptext = ""
 
 	var/static/list/colors = list(

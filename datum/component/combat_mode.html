@@ -16,7 +16,7 @@
 <h1>combat_mode <aside>/<a href="datum.html">datum</a>/<a href="datum/component.html">component</a>/<a href="datum/component/combat_mode.html">combat_mode</a></aside>
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/4c4e482d22eb9cadd822d04bea7bdb50dd14b908/code/datums/components/combat_mode.dm#L6">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/9396a1189ca2da7ce8b9b7f95e4f62339cd1c579/code/datums/components/combat_mode.dm#L6">
         <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;components&#x2F;combat_mode.dm 6"/></a></h1>
 
 <p>Combat mode component. It makes the user face whichever atom the mouse pointer is hovering,
@@ -36,79 +36,79 @@ Can be toggled on and off by clicking the screen hud object or by pressing the a
             <tr><th><a href="datum/component/combat_mode.html#proc/user_toggle_intentional_combat_mode">user_toggle_intentional_combat_mode</a></th><td>Toggles whether the user is intentionally in combat mode. THIS should be the proc you generally use! Has built in visual/to other player feedback, as well as an audible cue to ourselves.</td></tr></table><h2 id="proc">Proc Details</h2><h3 id="proc/check_flags"><aside class="declaration">proc </aside>check_flags<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/source, flags) 
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/4c4e482d22eb9cadd822d04bea7bdb50dd14b908/code/datums/components/combat_mode.dm#L174">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/9396a1189ca2da7ce8b9b7f95e4f62339cd1c579/code/datums/components/combat_mode.dm#L174">
         <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;components&#x2F;combat_mode.dm 174"/></a></aside>
         </h3>
         <p>Returns a field of flags that are contained in both the second arg and our bitfield variable.</p><h3 id="proc/disable_combat_mode"><aside class="declaration">proc </aside>disable_combat_mode<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/source, silent, forced, visible, locked, playsound) 
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/4c4e482d22eb9cadd822d04bea7bdb50dd14b908/code/datums/components/combat_mode.dm#L101">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/9396a1189ca2da7ce8b9b7f95e4f62339cd1c579/code/datums/components/combat_mode.dm#L101">
         <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;components&#x2F;combat_mode.dm 101"/></a></aside>
         </h3>
         <p>Disables combat mode. Please use 'safe_disable_combat_mode' instead, if you wish to also disable the toggle flag.</p><h3 id="proc/enable_combat_mode"><aside class="declaration">proc </aside>enable_combat_mode<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/source, silent, forced, visible, locked, playsound) 
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/4c4e482d22eb9cadd822d04bea7bdb50dd14b908/code/datums/components/combat_mode.dm#L65">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/9396a1189ca2da7ce8b9b7f95e4f62339cd1c579/code/datums/components/combat_mode.dm#L65">
         <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;components&#x2F;combat_mode.dm 65"/></a></aside>
         </h3>
         <p>Enables combat mode. Please use 'safe_enable_combat_mode' instead, if you wish to also enable the toggle flag.</p><h3 id="proc/onMouseMove"><aside class="declaration">proc </aside>onMouseMove<aside>(/<a href="mob.html">mob</a>/source, object, location, control, params) 
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/4c4e482d22eb9cadd822d04bea7bdb50dd14b908/code/datums/components/combat_mode.dm#L136">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/9396a1189ca2da7ce8b9b7f95e4f62339cd1c579/code/datums/components/combat_mode.dm#L136">
         <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;components&#x2F;combat_mode.dm 136"/></a></aside>
         </h3>
         <p>Changes the user direction to (try) match the pointer.</p><h3 id="proc/on_death"><aside class="declaration">proc </aside>on_death<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/source) 
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/4c4e482d22eb9cadd822d04bea7bdb50dd14b908/code/datums/components/combat_mode.dm#L178">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/9396a1189ca2da7ce8b9b7f95e4f62339cd1c579/code/datums/components/combat_mode.dm#L178">
         <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;components&#x2F;combat_mode.dm 178"/></a></aside>
         </h3>
         <p>Disables combat mode upon death.</p><h3 id="proc/on_logout"><aside class="declaration">proc </aside>on_logout<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/source) 
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/4c4e482d22eb9cadd822d04bea7bdb50dd14b908/code/datums/components/combat_mode.dm#L182">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/9396a1189ca2da7ce8b9b7f95e4f62339cd1c579/code/datums/components/combat_mode.dm#L182">
         <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;components&#x2F;combat_mode.dm 182"/></a></aside>
         </h3>
         <p>Disables combat mode upon logout</p><h3 id="proc/on_mob_hud_created"><aside class="declaration">proc </aside>on_mob_hud_created<aside>(/<a href="mob.html">mob</a>/source) 
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/4c4e482d22eb9cadd822d04bea7bdb50dd14b908/code/datums/components/combat_mode.dm#L42">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/9396a1189ca2da7ce8b9b7f95e4f62339cd1c579/code/datums/components/combat_mode.dm#L42">
         <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;components&#x2F;combat_mode.dm 42"/></a></aside>
         </h3>
         <p>Creates the hud screen object.</p><h3 id="proc/on_move"><aside class="declaration">proc </aside>on_move<aside>(/<a href="atom.html">atom</a>/<a href="atom/movable.html">movable</a>/source, dir, /<a href="atom.html">atom</a>/oldloc, forced) 
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/4c4e482d22eb9cadd822d04bea7bdb50dd14b908/code/datums/components/combat_mode.dm#L130">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/9396a1189ca2da7ce8b9b7f95e4f62339cd1c579/code/datums/components/combat_mode.dm#L130">
         <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;components&#x2F;combat_mode.dm 130"/></a></aside>
         </h3>
         <p>Changes the user direction to (try) keep match the pointer.</p><h3 id="proc/safe_disable_combat_mode"><aside class="declaration">proc </aside>safe_disable_combat_mode<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/source, silent, visible) 
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/4c4e482d22eb9cadd822d04bea7bdb50dd14b908/code/datums/components/combat_mode.dm#L164">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/9396a1189ca2da7ce8b9b7f95e4f62339cd1c579/code/datums/components/combat_mode.dm#L164">
         <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;components&#x2F;combat_mode.dm 164"/></a></aside>
         </h3>
         <p>Disables intentionally being in combat mode. Please try to use the COMSIG_COMBAT_MODE_CHECK signal for feedback when possible.</p><h3 id="proc/safe_enable_combat_mode"><aside class="declaration">proc </aside>safe_enable_combat_mode<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/source, silent, visible) 
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/4c4e482d22eb9cadd822d04bea7bdb50dd14b908/code/datums/components/combat_mode.dm#L150">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/9396a1189ca2da7ce8b9b7f95e4f62339cd1c579/code/datums/components/combat_mode.dm#L150">
         <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;components&#x2F;combat_mode.dm 150"/></a></aside>
         </h3>
         <p>Enables intentionally being in combat mode. Please try to use the COMSIG_COMBAT_MODE_CHECK signal for feedback when possible.</p><h3 id="proc/update_combat_lock"><aside class="declaration">proc </aside>update_combat_lock<aside>() 
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/4c4e482d22eb9cadd822d04bea7bdb50dd14b908/code/datums/components/combat_mode.dm#L51">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/9396a1189ca2da7ce8b9b7f95e4f62339cd1c579/code/datums/components/combat_mode.dm#L51">
         <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;components&#x2F;combat_mode.dm 51"/></a></aside>
         </h3>
         <p>Combat mode can be locked out, forcibly disabled by a status trait.</p><h3 id="proc/user_toggle_intentional_combat_mode"><aside class="declaration">proc </aside>user_toggle_intentional_combat_mode<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/source) 
         
     
-            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/4c4e482d22eb9cadd822d04bea7bdb50dd14b908/code/datums/components/combat_mode.dm#L143">
+            <a href="https://github.com/VENUS-Station/VENUS-Station-13/blob/9396a1189ca2da7ce8b9b7f95e4f62339cd1c579/code/datums/components/combat_mode.dm#L143">
         <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;components&#x2F;combat_mode.dm 143"/></a></aside>
         </h3>
         <p>Toggles whether the user is intentionally in combat mode. THIS should be the proc you generally use! Has built in visual/to other player feedback, as well as an audible cue to ourselves.</p></main>
 <footer>
     tgstation.dme
-    <a href="https://github.com/VENUS-Station/VENUS-Station-13/tree/4c4e482d22eb9cadd822d04bea7bdb50dd14b908">4c4e482</a>
+    <a href="https://github.com/VENUS-Station/VENUS-Station-13/tree/9396a1189ca2da7ce8b9b7f95e4f62339cd1c579">9396a11</a>
         (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.8.0</a></footer>
 </body>
 </html>

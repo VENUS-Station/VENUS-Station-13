@@ -7,5 +7,10 @@
   Just-Sim:
   - bugfix: fixes bugs brought about by the emote panel
 2024-10-08:
+  Just-Sim:
+  - rscadd: popup notices
+  - rscadd: the ocky icky
+  - code_imp: added rejuvenation to the admin context menu
+  - refactor: refactored smites
   cyfause:
   - bugfix: allow facial hair on anthromorph species

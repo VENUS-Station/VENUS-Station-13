@@ -220,7 +220,8 @@
 
 /datum/emote/sound/human/clap1
 	key = "clap1"
-	key_third_person = "claps"
+	key_third_person = "clap1s"
+	name = "clap once"
 	message = "claps their hands together."
 	emote_type = EMOTE_AUDIBLE
 	muzzle_ignore = TRUE

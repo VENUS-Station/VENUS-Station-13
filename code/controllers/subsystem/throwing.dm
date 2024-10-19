@@ -87,7 +87,11 @@ SUBSYSTEM_DEF(throwing)
 	var/delayed_time = 0
 	///The last world.time value stored when the thrownthing was moving.
 	var/last_move = 0
-
+	/// always able to stablize / land, even without gravity
+	///
+	/// * this means that if this is set and it reaches the target turf / goes the
+	///   requisite distance, it lands even without gravity.
+	var/newtonian_stabilization = FALSE
 
 /datum/thrownthing/New(thrownthing, target, init_dir, maxrange, speed, thrower, diagonals_first, force, gentle, callback, target_zone)
 	. = ..()
@@ -157,7 +161,7 @@ SUBSYSTEM_DEF(throwing)
 	//calculate how many tiles to move, making up for any missed ticks.
 	var/tilestomove = CEILING(min(((((world.time+world.tick_lag) - start_time + delayed_time) * speed) - (dist_travelled ? dist_travelled : -1)), speed*MAX_TICKS_TO_MAKE_UP) * (world.tick_lag * SSthrowing.wait), 1)
 	while (tilestomove-- > 0)
-		if ((dist_travelled >= maxrange || AM.loc == target_turf) && AM.has_gravity(AM.loc))
+		if ((dist_travelled >= maxrange || AM.loc == target_turf) && (AM.has_gravity(AM.loc) || newtonian_stabilization))
 			finalize()
 			return
 
@@ -208,7 +212,10 @@ SUBSYSTEM_DEF(throwing)
 			thrownthing.throw_impact(get_turf(thrownthing), src)  // we haven't hit something yet and we still must, let's hit the ground.
 			if(QDELETED(thrownthing)) //throw_impact can delete things, such as glasses smashing
 				return //deletion should already be handled by on_thrownthing_qdel()
-			thrownthing.newtonian_move(init_dir)
+
+	// if it is stabilized from gravity, halt newtonian movement
+	if(newtonian_stabilization)
+		thrownthing.newtonian_move(NONE)
 	else
 		thrownthing.newtonian_move(init_dir)
 

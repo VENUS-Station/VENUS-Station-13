@@ -22,6 +22,7 @@
 	var/template_id = "shelter_alpha"
 	var/datum/map_template/shelter/template
 	var/used = FALSE
+	var/throw_impact_message_primed = FALSE
 
 /obj/item/survivalcapsule/proc/get_template()
 	if(template)
@@ -72,6 +73,23 @@
 		new /obj/effect/particle_effect/smoke(get_turf(src))
 		qdel(src)
 
+/obj/item/survivalcapsule/throw_at(atom/target, range, speed, mob/thrower, spin, diagonals_first, datum/callback/callback)
+	. = ..()
+	if(!.)
+		return
+	if(thrower) // mob throw
+		throwing?.newtonian_stabilization = TRUE
+		throw_impact_message_primed = TRUE
+
+/obj/item/survivalcapsule/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
+	. = ..()
+	// there's no good way to do this without a flag because
+	// the current throwing subsystem implementation unfortunately will
+	// call throw_impact twice if an impact is both a turf and the target
+	if(isturf(hit_atom) && throw_impact_message_primed && !has_gravity(hit_atom))
+		visible_message(span_notice("[src] slows to a halt, its momentum cancellation system kicking in."))
+	throw_impact_message_primed = FALSE
+
 //Non-default pods
 
 /obj/item/survivalcapsule/luxury
@@ -107,7 +125,7 @@
 	icon = 'icons/obj/device.dmi'
 	icon_state = "beacon"
 	template_id = "reactor"
-	
+
 //Pod objects
 
 //Window

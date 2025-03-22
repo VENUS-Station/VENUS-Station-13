@@ -62,7 +62,8 @@
 
 /datum/bodypart_overlay/mutant/genital/butt
 	feature_key = ORGAN_SLOT_BUTT
-	layers = EXTERNAL_ADJACENT
+	// layers = EXTERNAL_ADJACENT | EXTERNAL_FRONT //VENUS REMOVAL START
+	layers = EXTERNAL_ADJACENT //VENUS: Fix butt showing over clothing
 
 /datum/bodypart_overlay/mutant/genital/butt/get_global_feature_list()
 	return SSaccessories.sprite_accessories[ORGAN_SLOT_BUTT]

@@ -10007,4 +10007,5 @@
 #include "modular_zzplurt\code\modules\wiremod\core\integrated_circuit.dm"
 #include "modular_zzvenus\code\game\objects\effects\decals\turfdecal\markings.dm"
 #include "modular_zzvenus\code\modules\storyteller\storytellers\tellers\storyteller_7_action.dm"
+#include "modular_zzvenus\code\modules\storyteller\storytellers\tellers\mob\living\emote.dm"
 // END_INCLUDE

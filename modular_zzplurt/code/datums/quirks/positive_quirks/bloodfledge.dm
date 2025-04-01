@@ -1394,7 +1394,7 @@
 
 	// Condition: Insufficient blood volume
 	else
-		if(action_owner.blood_volume > BLOOD_VOLUME_SURVIVE)
+		if(action_owner.blood_volume < BLOOD_VOLUME_SURVIVE)
 			revive_failed += "\n- You don't have enough blood volume left!"
 
 	// Condition: Can be revived
@@ -1513,7 +1513,7 @@
 	// Blood volume mode
 	else
 		// Set dangerously low blood
-		action_owner.blood_volume = min(action_owner.blood_volume, BLOOD_VOLUME_SURVIVE)
+		action_owner.blood_volume = 250
 
 	// Apply dizzy effect
 	action_owner.adjust_dizzy_up_to(20 SECONDS, 60 SECONDS)

@@ -1399,7 +1399,7 @@
 
 	// Condition: Insufficient blood volume
 	else
-		if(action_owner.blood_volume > BLOOD_VOLUME_SURVIVE)
+		if(action_owner.blood_volume <= BLOOD_VOLUME_SURVIVE)
 			revive_failed += "\n- You don't have enough blood volume left!"
 
 	// Condition: Damage limit, brute

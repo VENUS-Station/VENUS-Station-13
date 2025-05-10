@@ -98,6 +98,11 @@
 			AltClickOn(A)
 		return
 	if(LAZYACCESS(modifiers, CTRL_CLICK))
+		//VENUS ADDITION START: Ctrl+Right Click
+		if(LAZYACCESS(modifiers, RIGHT_CLICK))
+			if(CtrlRightClickOn(A))
+				return
+		//VENUS ADDITION END
 		CtrlClickOn(A)
 		return
 

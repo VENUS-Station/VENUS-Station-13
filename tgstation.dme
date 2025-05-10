@@ -10195,5 +10195,7 @@
 #include "modular_zzvenus\code\game\objects\effects\decals\turfdecal\markings.dm"
 #include "modular_zzvenus\code\modules\asset_cache\asset_list.dm"
 #include "modular_zzvenus\code\modules\asset_cache\assets\tgui.dm"
+#include "modular_zzvenus\code\modules\client\click.dm"
+#include "modular_zzvenus\code\modules\mob\living\stats.dm"
 #include "modular_zzvenus\code\modules\storyteller\storytellers\tellers\storyteller_7_action.dm"
 // END_INCLUDE

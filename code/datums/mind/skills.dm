@@ -62,6 +62,8 @@
 	var/level = get_skill_level(skill)
 	return SSskills.level_names[level]
 
+//VENUS REMOVAL START: Use combined print_levels instead
+/*
 /datum/mind/proc/print_levels(user)
 	var/list/shown_skills = list()
 	for(var/i in known_skills)
@@ -76,3 +78,37 @@
 		msg += "[initial(the_skill.name)] - [get_skill_level_name(the_skill)]\n"
 	msg += "</span>"
 	to_chat(user, boxed_message(msg))
+*/
+//VENUS REMOVAL END
+
+//VENUS ADDITION START: Combined stats and skills display
+/datum/mind/proc/print_levels(user)
+	var/list/shown_skills = list()
+	var/mob/living/L = user
+
+	var/msg = "<span style='font-size: 120%;'>[span_info("<EM><b>Your Attributes</b></EM>")]</span>\n"
+	if(istype(L))
+		msg += "<b>STRENGTH:</b> \Roman[L.STASTR][(L.BUFSTR != 0) ? (L.BUFSTR > 0 ? " [span_green("(+[L.BUFSTR])")]" : " [span_red("([L.BUFSTR])")]") : ""]</b>\n"
+		msg += "<b>PERCEPTION:</b> \Roman[L.STAPER][(L.BUFPER != 0) ? (L.BUFPER > 0 ? " [span_green("(+[L.BUFPER])")]" : " [span_red("([L.BUFPER])")]") : ""]</b>\n"
+		msg += "<b>INTELLIGENCE:</b> \Roman[L.STAINT][(L.BUFINT != 0) ? (L.BUFINT > 0 ? " [span_green("(+[L.BUFINT])")]" : " [span_red("([L.BUFINT])")]") : ""]</b>\n"
+		msg += "<b>CONSTITUTION:</b> \Roman[L.STACON][(L.BUFCON != 0) ? (L.BUFCON > 0 ? " [span_green("(+[L.BUFCON])")]" : " [span_red("([L.BUFCON])")]") : ""]</b>\n"
+		msg += "<b>ENDURANCE:</b> \Roman[L.STAEND][(L.BUFEND != 0) ? (L.BUFEND > 0 ? " [span_green("(+[L.BUFEND])")]" : " [span_red("([L.BUFEND])")]") : ""]</b>\n"
+		msg += "<b>SPEED:</b> \Roman[L.STASPD][(L.BUFSPE != 0) ? (L.BUFSPE > 0 ? " [span_green("(+[L.BUFSPE])")]" : " [span_red("([L.BUFSPE])")]") : ""]</b>\n"
+		msg += "<b>FORTUNE:</b> \Roman[L.STALUC][(L.BUFLUC != 0) ? (L.BUFLUC > 0 ? " [span_green("(+[L.BUFLUC])")]" : " [span_red("([L.BUFLUC])")]") : ""]</b>\n"
+	msg += "</span>\n"
+
+	for(var/i in known_skills)
+		if(known_skills[i][SKILL_LVL] > SKILL_LEVEL_NONE) //Do we actually have a level in this?
+			shown_skills += i
+	if(!length(shown_skills))
+		msg += span_info("<b>You don't seem to have any particularly outstanding skills.</b>")
+		to_chat(user, boxed_message(msg))
+		return
+
+	msg += "<span style='font-size: 120%;'>[span_info("<EM><b>Your Skills</b></EM>")]</span>\n"
+	for(var/i in shown_skills)
+		var/datum/skill/the_skill = i
+		msg += "<b>[initial(the_skill.name)]</b> - [get_skill_level_name(the_skill)]\n"
+	msg += "</span>"
+	to_chat(user, boxed_message(msg))
+//VENUS ADDITION END

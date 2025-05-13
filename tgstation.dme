@@ -10210,6 +10210,7 @@
 #include "modular_zzvenus\code\modules\asset_cache\assets\tgui.dm"
 #include "modular_zzvenus\code\modules\client\click.dm"
 #include "modular_zzvenus\code\modules\events\cognomerge.dm"
+#include "modular_zzvenus\code\modules\events\portal_storm.dm"
 #include "modular_zzvenus\code\modules\experisci\experiment\experiments.dm"
 #include "modular_zzvenus\code\modules\mob\emotes.dm"
 #include "modular_zzvenus\code\modules\mob\living\stats.dm"

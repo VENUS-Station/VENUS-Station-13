@@ -11,3 +11,9 @@
 
 /datum/quirk/cursed/add(client/client_source)
 	quirk_holder.AddComponent(/datum/component/omen/quirk)
+
+//VENUS ADDITION BEGIN (IRIS PORT): COGNOMERGE_EVENT - Prevents people from becoming permanently cursed if the extreme cognomerge event rolls it
+/datum/quirk/cursed/remove(client/client_source)
+	var/datum/component/omen/quirk/omen_to_destroy = quirk_holder.GetExactComponent(/datum/component/omen/quirk)
+	omen_to_destroy.Destroy()
+//VENUS ADDITION END

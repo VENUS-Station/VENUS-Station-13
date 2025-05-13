@@ -7,3 +7,7 @@
 	medical_record_text = "Patient is not literate."
 	hardcore_value = 8
 	mail_goodies = list(/obj/item/pai_card) // can read things for you
+	//VENUS ADDITION BEGIN (IRIS PORT): COGNOMERGE_EVENT
+	gain_text = span_danger("You forget how to read.")
+	lose_text = span_notice("You remember how to read again.")
+	//VENUS ADDITION END

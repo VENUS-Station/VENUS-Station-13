@@ -63,9 +63,9 @@
 	if(stress >= 240)
 		human_owner.adjustStaminaLoss(30)
 		lust_message = "You body feels so very hot, almost unwilling to cooperate..."
-    if(stress >= 300)
-        owner.losebreath += 1 //suffocation
-        lust_message = "You feel your neck tightening, straining..."
+	if(stress >= 300)
+	owner.losebreath += 1 //suffocation
+	lust_message = "You feel your neck tightening, straining..."
 	to_chat(human_owner, span_purple(lust_message))
 	return TRUE
 

@@ -66,7 +66,7 @@
 		lust_message = "You begin to fantasize of what you could do to someone..." //VENUS EDIT: Removes hallucinations
 	if(stress >= 240)
 		human_owner.adjustStaminaLoss(30) //VENUS COMMENT: Bimbos can be vulnerable, as a treat
-		lust_message = "You body feels so very hot, almost unwilling to cooperate..."
+		lust_message = "Your body feels so very hot, almost unwilling to cooperate..."
 	if(stress >= 300)
 		owner.losebreath += 1 ////VENUS EDIT: Adjusts suffocation
 		//human_owner.adjustOxyLoss(40)

@@ -53,7 +53,6 @@
 	//the message that will be sent to the owner at the end
 	var/lust_message = "Your breath begins to feel warm..."
 	//we are using if statements so that it slowly becomes more and more to the person
-++
 	human_owner.manual_emote(pick(lust_emotes))
 	if(stress >= 60)
 		//human_owner.set_jitter_if_lower(40 SECONDS) VENUS REMOVAL

@@ -57,15 +57,15 @@
 	if(stress >= 60)
 		lust_message = "You feel a static sensation all across your skin..."
 	if(stress >= 120)
-		lust_message = "You vision begins to blur, the heat beginning to rise..."
+		lust_message = "You feel a heat beginning to rise..."
 	if(stress >= 180)
 		lust_message = "You begin to fantasize of what you could do to someone..."
 	if(stress >= 240)
 		human_owner.adjustStaminaLoss(30)
 		lust_message = "You body feels so very hot, almost unwilling to cooperate..."
 	if(stress >= 300)
-	owner.losebreath += 1 //suffocation
-	lust_message = "You feel your neck tightening, straining..."
+		owner.losebreath += 1 //suffocation
+		lust_message = "You feel your neck tightening, straining..."
 	to_chat(human_owner, span_purple(lust_message))
 	return TRUE
 

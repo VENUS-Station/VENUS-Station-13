@@ -53,25 +53,24 @@
 	//the message that will be sent to the owner at the end
 	var/lust_message = "Your breath begins to feel warm..."
 	//we are using if statements so that it slowly becomes more and more to the person
-	//VENUS EDIT START
+++
 	human_owner.manual_emote(pick(lust_emotes))
 	if(stress >= 60)
-		//human_owner.set_jitter_if_lower(40 SECONDS)
-		lust_message = "You feel a static sensation all across your skin..." //VENUS EDIT: Removed jitter
+		//human_owner.set_jitter_if_lower(40 SECONDS) VENUS REMOVAL
+		lust_message = "You feel a static sensation all across your skin..."
 	if(stress >= 120)
 		//human_owner.set_eye_blur_if_lower(20 SECONDS)
-		lust_message = "You feel a heat beginning to rise..." //VENUS EDIT: Removed eye blur
+		lust_message = "You feel the heat beginning to rise..." //VENUS EDIT - Original: "You vision begins to blur, the heat beginning to rise..."
 	if(stress >= 180)
-		//owner.adjust_hallucinations(60 SECONDS)
-		lust_message = "You begin to fantasize of what you could do to someone..." //VENUS EDIT: Removes hallucinations
+		//owner.adjust_hallucinations(60 SECONDS) VENUS REMOVAL
+		lust_message = "You begin to fantasize of what you could do to someone..."
 	if(stress >= 240)
-		human_owner.adjustStaminaLoss(30) //VENUS COMMENT: Bimbos can be vulnerable, as a treat
-		lust_message = "Your body feels so very hot, almost unwilling to cooperate..."
+		human_owner.adjustStaminaLoss(30)
+		lust_message = "Your body feels very hot, almost unwilling to cooperate..." //VENUS EDIT - Original: "You body feels so very hot, almost unwilling to cooperate..."
 	if(stress >= 300)
-		owner.losebreath += 1 ////VENUS EDIT: Adjusts suffocation
-		//human_owner.adjustOxyLoss(40)
+		owner.losebreath += 1//VENUS ADDITION: Added suffocation
+		//human_owner.adjustOxyLoss(40) VENUS REMOVAL
 		lust_message = "You feel your neck tightening, straining..."
-	//VENUS EDIT END
 	to_chat(human_owner, span_purple(lust_message))
 	return TRUE
 

@@ -237,3 +237,16 @@
 	user_arousal = 8
 	target_arousal = 8
 	target_pain = 4
+
+/*
+*	VENUS: BIMBO vulnerability
+*/
+
+/datum/interaction/lewd/fuck/post_interaction(mob/living/user, mob/living/target)	//VENUS ADDITION: Bimbo vulnerability to penetration
+	. = ..()																		//VENUS ADDITION
+	if(HAS_TRAIT(target, TRAIT_BIMBO))												//VENUS ADDITION: Checks if the person being penetrated is a bimbo
+		target.adjustStaminaLoss(40)												//VENUS ADDITION: Applies 40 stamina damage to the target being penetrated
+		to_chat(target, span_purple("You feel so helpless..."))						//VENUS ADDITION: Bimbo vulnerability chat message
+		if(target.getStaminaLoss() >= 100)											//VENUS ADDITION: Checks if stamina damage is greater or equal to 100
+			target.Stun(120)														//VENUS ADDITION: Once in stamina crit, you're stunlocked for intercourse
+			to_chat(target, span_purple("It feels too good..."))					//VENUS ADDITION: Bimbo vulnerability chat message

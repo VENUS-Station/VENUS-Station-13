@@ -33,13 +33,14 @@
 	///The time between each desire message within company
 	var/desire_cooldown_number = 30 SECONDS
 	///The list of manual emotes that will be done when unsatisfied
-	var/static/list/lust_emotes = list(
-		"pants as their body trembles lightly.",
-		"lightly touches themselves up and down, feeling every inch.",
-		"puts their finger in their mouth and slightly bites down.",
-		"places their hands on their hip as they slowly gyrate.",
-		"moans, their head tilted slightly."
-	)
+	//var/static/list/lust_emotes = list( VENUS REMOVAL: Removes emote spam
+		//"pants as their body trembles lightly.", VENUS REMOVAL
+		//"lightly touches themselves up and down, feeling every inch.", VENUS REMOVAL
+		//"puts their finger in their mouth and slightly bites down.", VENUS REMOVAL
+		//"places their hands on their hip as they slowly gyrate.", VENUS REMOVAL
+		//"moans, their head tilted slightly." VENUS REMOVAL
+	//) VENUS REMOVAL
+
 
 /**
  * If we are not satisfied, this will be ran through
@@ -53,7 +54,7 @@
 	//the message that will be sent to the owner at the end
 	var/lust_message = "Your breath begins to feel warm..."
 	//we are using if statements so that it slowly becomes more and more to the person
-	human_owner.manual_emote(pick(lust_emotes))
+	//human_owner.manual_emote(pick(lust_emotes)) VENUS REMOVAL
 	if(stress >= 60)
 		//human_owner.set_jitter_if_lower(40 SECONDS) VENUS REMOVAL
 		lust_message = "You feel a static sensation all across your skin..."
@@ -139,20 +140,20 @@
 		return TRUE
 	return FALSE
 
-/datum/brain_trauma/very_special/bimbo/handle_speech(datum/source, list/speech_args)
-	if(!HAS_TRAIT(owner, TRAIT_BIMBO)) //You have the trauma but not the trait, go ahead and fail here
-		return ..()
-	var/message = speech_args[SPEECH_MESSAGE]
-	var/list/split_message = splittext(message, " ") //List each word in the message
-	for (var/i in 1 to length(split_message))
-		if(findtext(split_message[i], "*") || findtext(split_message[i], ";") || findtext(split_message[i], ":"))
-			continue
-		if(prob(10))
-			var/insert_muffle = pick("... Mmmph...", "... Hmmphh...", "... Gmmmh...", "... Fmmmmph...")
-			split_message[i] = split_message[i] + insert_muffle
+///datum/brain_trauma/very_special/bimbo/handle_speech(datum/source, list/speech_args) VENUS REMOVAL: No text splitting
+	//if(!HAS_TRAIT(owner, TRAIT_BIMBO)) //You have the trauma but not the trait, go ahead and fail here VENUS REMOVAL
+		//return ..() VENUS REMOVAL
+	//var/message = speech_args[SPEECH_MESSAGE] VENUS REMOVAL
+	//var/list/split_message = splittext(message, " ") //List each word in the message VENUS REMOVAL
+	//for (var/i in 1 to length(split_message)) VENUS REMOVAL
+		//if(findtext(split_message[i], "*") || findtext(split_message[i], ";") || findtext(split_message[i], ":")) VENUS REMOVAL
+			//continue VENUS REMOVAL
+		//if(prob(10)) VENUS REMOVAL
+			//var/insert_muffle = pick("... Mmmph...", "... Hmmphh...", "... Gmmmh...", "... Fmmmmph...") VENUS REMOVAL
+			//split_message[i] = split_message[i] + insert_muffle VENUS REMOVAL
 
-	message = jointext(split_message, " ")
-	speech_args[SPEECH_MESSAGE] = message
+	//message = jointext(split_message, " ") VENUS REMOVAL
+	//speech_args[SPEECH_MESSAGE] = message VENUS REMOVAL
 
 /datum/brain_trauma/very_special/bimbo/on_gain()
 	. = ..()

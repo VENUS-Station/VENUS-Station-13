@@ -247,8 +247,8 @@
 	if(HAS_TRAIT(target, TRAIT_BIMBO))												//Checks if the person being penetrated is a bimbo
 		target.adjustStaminaLoss(40)												//Applies 40 stamina damage to the target being penetrated
 		if(SPT_PROB(10, 2.5))
-			to_chat(target, span_purple("You feel so helpless..."))						//Bimbo vulnerability chat message
+			to_chat(target, span_purple("You feel so helpless..."))					//Bimbo vulnerability chat message
 		if(target.getStaminaLoss() >= 100)											//Checks if stamina damage is greater or equal to 100
 			target.Stun(120)														//Once in stamina crit, you're stunlocked for intercourse
 			if(SPT_PROB(10, 2.5))
-				to_chat(target, span_purple("It feels too good..."))					//VENUS ADDITION END
+				to_chat(target, span_purple("It feels too good..."))				//VENUS ADDITION END

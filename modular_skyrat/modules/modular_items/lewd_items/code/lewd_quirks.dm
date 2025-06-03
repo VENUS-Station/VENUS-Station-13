@@ -141,10 +141,10 @@
 	return FALSE
 /* VENUS REMOVAL: No text splitting
 /datum/brain_trauma/very_special/bimbo/handle_speech(datum/source, list/speech_args)
-	if(!HAS_TRAIT(owner, TRAIT_BIMBO))
+	if(!HAS_TRAIT(owner, TRAIT_BIMBO)) //You have the trauma but not the trait, go ahead and fail here
 		return ..()
 	var/message = speech_args[SPEECH_MESSAGE]
-	var/list/split_message = splittext(message, " ")
+	var/list/split_message = splittext(message, " ") //List each word in the message
 	for (var/i in 1 to length(split_message))
 		if(findtext(split_message[i], "*") || findtext(split_message[i], ";") || findtext(split_message[i], ":"))
 			continue

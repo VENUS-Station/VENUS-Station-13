@@ -239,13 +239,13 @@
 	target_pain = 4
 
 //VENUS ADDITION START: Vulnerability to penetration
-/datum/interaction/lewd/fuck/post_interaction(mob/living/user, mob/living/target)	//VENUS ADDITION START: Bimbo vulnerability to penetration
+/datum/interaction/lewd/fuck/post_interaction(mob/living/user, mob/living/target)
 	. = ..()
-	if(HAS_TRAIT(target, TRAIT_BIMBO))												//Checks if the person being penetrated is a bimbo
-		target.adjustStaminaLoss(30)												//Applies 20 stamina damage to the target being penetrated
+	if(HAS_TRAIT(target, TRAIT_BIMBO))
+		target.adjustStaminaLoss(30)
 		if(prob(15))
-			to_chat(target, span_purple("You feel so helpless..."))					//Bimbo vulnerability chat message
-		if(target.has_status_effect(/datum/status_effect/incapacitating/stamcrit))	//Checks if target is in stamina critical state
+			to_chat(target, span_purple("You feel so helpless..."))
+		if(target.has_status_effect(/datum/status_effect/incapacitating/stamcrit))
 			if(prob(15))
-				to_chat(target, span_purple("It feels too good..."))				//VENUS ADDITION END
+				to_chat(target, span_purple("It feels too good..."))
 //VENUS ADDITION END

@@ -1,3 +1,4 @@
+/*
 /obj/item/clothing/under/stripper_outfit
 	name = "stripper outfit"
 	desc = "An item of clothing that leaves little to the imagination."
@@ -22,3 +23,4 @@
 						"Purple" = "stripper_purple",
 						"Black" = "stripper_black",
 						"Black-teal" = "stripper_tealblack")
+*/

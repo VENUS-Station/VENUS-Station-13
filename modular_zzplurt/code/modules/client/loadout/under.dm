@@ -43,9 +43,15 @@
 	name = "Blutigen Undergarments"
 	item_path = /obj/item/clothing/under/blutigen_undergarment
 
+/*
 /datum/loadout_item/uniform/colorablestriper
 	name = "Colorable stripper outfit"
 	item_path = /obj/item/clothing/under/stripper_outfit
+*/
+
+/datum/loadout_item/uniform/Stripper
+	name = "Colourable stripper outfit"
+	item_path = /obj/item/clothing/under/misc/stripper
 
 // Suggestion #151
 

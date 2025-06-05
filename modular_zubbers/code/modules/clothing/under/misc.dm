@@ -590,3 +590,20 @@
 	desc = "A salmon colored long-sleeved dress shirt with a white nametag, bearing the name of the employee. Along with some snazzy dark grey slacks held up by a belt with a gold buckle, a formal attire for a classy joint."
 	icon_state = "allamerican_manager"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+
+/obj/item/clothing/under/misc/stripper
+	desc = "An item of clothing that leaves little to the imagination."
+	name = "stripper outfit"
+	icon = 'icons/map_icons/clothing/under/_under.dmi'
+	icon_state = "/obj/item/clothing/under/misc/stripper"
+	worn_icon = 'modular_zubbers/icons/mob/clothing/under/stripper.dmi'
+	worn_icon_digi = 'modular_zubbers/icons/mob/clothing/under/stripper.dmi'
+	greyscale_config = /datum/greyscale_config/stripper
+	greyscale_config_worn = /datum/greyscale_config/stripper/worn
+	flags_1 = IS_PLAYER_COLORABLE_1
+	post_init_icon_state = "stripper"
+	body_parts_covered = CHEST|GROIN|LEGS
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
+	greyscale_colors = "#80b1ff"
+
+	can_adjust = FALSE

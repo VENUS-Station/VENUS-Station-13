@@ -43,15 +43,17 @@
 	name = "Blutigen Undergarments"
 	item_path = /obj/item/clothing/under/blutigen_undergarment
 
+//VENUS EDIT REMOVAL BEGIN - Colorable Stipper Outfit - (Made redundant with the improved colourable stripper outfit)
 /*
 /datum/loadout_item/uniform/colorablestriper
 	name = "Colorable stripper outfit"
 	item_path = /obj/item/clothing/under/stripper_outfit
 */
+//VENUS EDIT REMOVAL END
 
 /datum/loadout_item/uniform/Stripper
 	name = "Colourable stripper outfit"
-	item_path = /obj/item/clothing/under/misc/stripper
+	item_path = /obj/item/clothing/under/stripper_outfit
 
 // Suggestion #151
 

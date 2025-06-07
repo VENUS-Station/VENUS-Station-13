@@ -591,6 +591,7 @@
 	icon_state = "allamerican_manager"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 
+/*
 /obj/item/clothing/under/misc/stripper
 	desc = "An item of clothing that leaves little to the imagination."
 	name = "stripper outfit"
@@ -607,3 +608,4 @@
 	greyscale_colors = "#80b1ff"
 
 	can_adjust = FALSE
+*/

@@ -31,7 +31,7 @@
 	desc = "An item of clothing that leaves little to the imagination."
 	name = "stripper outfit"
 	icon = 'icons/map_icons/clothing/under/_under.dmi'
-	icon_state = "/obj/item/clothing/under/misc/stripper"
+	icon_state = "/obj/item/clothing/under/stripper_outfit"
 	worn_icon = 'modular_zubbers/icons/mob/clothing/under/stripper.dmi'
 	worn_icon_digi = 'modular_zubbers/icons/mob/clothing/under/stripper.dmi'
 	greyscale_config = /datum/greyscale_config/stripper

@@ -168,7 +168,8 @@
 		loot = list(/obj/item/storm_staff)
 		elimination = FALSE
 	else if(prob(20)) //20% chance for sick lootz.
-		loot = list(/obj/structure/closet/crate/necropolis/tendril)
+//		loot = list(/obj/structure/closet/crate/necropolis/tendril) // VENUS EDIT OLD
+		loot = list(/obj/structure/closet/crate/necropolis/tendril/legion) // VENUS EDIT NEW
 		if(!true_spawn)
 			loot = null
 	return ..()

@@ -10326,6 +10326,7 @@
 #include "modular_zzvenus\code\modules\events\cognomerge.dm"
 #include "modular_zzvenus\code\modules\events\portal_storm.dm"
 #include "modular_zzvenus\code\modules\experisci\experiment\experiments.dm"
+#include "modular_zzvenus\code\modules\mining\code\legion_chest.dm"
 #include "modular_zzvenus\code\modules\mob\emotes.dm"
 #include "modular_zzvenus\code\modules\mob\living\stats.dm"
 #include "modular_zzvenus\code\modules\research\quantum_parts.dm"

@@ -50,6 +50,8 @@ GLOBAL_LIST_INIT(available_erp_ui_styles, list(
 	var/inventory_shown = FALSE //Equipped item inventory
 	var/hotkey_ui_hidden = FALSE //This is to hide the buttons that can be used via hotkeys. (hotkeybuttons list of buttons)
 
+
+	var/atom/movable/screen/mapvote_hud/mapvote_hud // VENUS ADDITION
 	var/atom/movable/screen/ammo_counter //SKYRAT EDIT ADDITION
 	// var/atom/movable/screen/text/activation_text/activation // BUBBER EDIT ADDITION
 
@@ -158,7 +160,11 @@ GLOBAL_LIST_INIT(available_erp_ui_styles, list(
 
 	// activation = new(null, src) // BUBBER EDIT ADDITION
 	// static_inventory += activation // BUBBER EDIT ADDITION
-
+	// VENUS ADDITION START
+	if(preferences?.read_preference(/datum/preference/toggle/mapvote_hud))
+		mapvote_hud = new(null, src, preferences)
+		infodisplay += mapvote_hud
+	// VENUS ADDITION END
 	for(var/mytype in subtypesof(/atom/movable/plane_master_controller))
 		var/atom/movable/plane_master_controller/controller_instance = new mytype(null,src)
 		plane_master_controllers[controller_instance.name] = controller_instance
@@ -285,6 +291,7 @@ GLOBAL_LIST_INIT(available_erp_ui_styles, list(
 	ammo_counter = null
 	// activation = null
 	// SKYRAT EDIT ADDITION END - SKYRAT HUD
+	mapvote_hud = null // VENUS ADDITION
 
 	// SPLURT EDIT - FIX AMMO COUNTER HUD
 	ammo_counter = null

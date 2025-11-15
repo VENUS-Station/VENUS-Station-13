@@ -101,8 +101,17 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 	var/msg = pick(message)
 	if(!isnull(body_relay))
 		msg = replacetext(msg, "%TARGET%", "\the [body_relay.name]")
+	var/knot = "knot"
+	if(cum_genital[CLIMAX_POSITION_USER] == CLIMAX_PENIS)
+		if(iscarbon(user))
+			var/obj/item/organ/genital/penis/penis = user.get_organ_slot(ORGAN_SLOT_PENIS)
+			knot = penis.override_string_knot
+	else if(cum_genital[CLIMAX_POSITION_TARGET] == CLIMAX_PENIS)
+		if(iscarbon(target))
+			var/obj/item/organ/genital/penis/penis = target.get_organ_slot(ORGAN_SLOT_PENIS)
+			knot = penis.override_string_knot
 	// We replace %USER% with nothing because manual_emote already prepends it.
-	msg = trim(replacetext(replacetext(msg, "%TARGET%", "[target]"), "%USER%", ""), INTERACTION_MAX_CHAR)
+	msg = trim(replacetext(replacetext(replacetext(msg, "%TARGET%", "[target]"), "%USER%", ""), "%KNOT%", "[knot]"), INTERACTION_MAX_CHAR)
 	msg = autopunct_bare(msg) //VENUS ADDITION: Ensure punctuation for messages
 	if(lewd)
 		//VENUS EDIT: msg -> span_lewd(msg) to give it the lewd color
@@ -113,14 +122,14 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 		var/user_msg = pick(user_messages)
 		if(!isnull(body_relay))
 			user_msg = replacetext(user_msg, "%TARGET%", "\the [body_relay.name]")
-		user_msg = replacetext(replacetext(user_msg, "%TARGET%", "[target]"), "%USER%", "[user]")
+		user_msg = replacetext(replacetext(replacetext(user_msg, "%TARGET%", "[target]"), "%USER%", "[user]"), "%KNOT%", "[knot]")
 		user_msg = autopunct_bare(user_msg) //VENUS ADDITION: Ensure punctuation for messages
 		to_chat(user, span_love(user_msg)) //VENUS ADDITION: Added span_love to the user_messages
 	if(target_messages.len)
 		var/target_msg = pick(target_messages)
 		if(!isnull(body_relay))
 			target_msg = replacetext(target_msg, "%USER%", "Unknown")
-		target_msg = replacetext(replacetext(target_msg, "%TARGET%", "[target]"), "%USER%", "[user]")
+		target_msg = replacetext(replacetext(replacetext(target_msg, "%TARGET%", "[target]"), "%USER%", "[user]"), "%KNOT%", "[knot]")
 		target_msg = autopunct_bare(target_msg) //VENUS ADDITION: Ensure punctuation for messages
 		to_chat(target, span_love(target_msg)) //VENUS ADDITION: Added span_love to the target_messages
 	if(sound_use)

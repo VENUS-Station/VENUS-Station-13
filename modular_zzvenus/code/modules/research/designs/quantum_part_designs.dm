@@ -1,4 +1,5 @@
 //IRIS PORT START
+/* DISABLED
 // Note: The quantum materials are 3 times of what the part actually is made out of, very cost intensive process
 // Also unlike all other parts, they cannot be made from the away protolathes. Station-only
 /datum/design/quantum_capacitor
@@ -109,4 +110,5 @@
 	)
 	lathe_time_factor = 0.2
 	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING | DEPARTMENT_BITFLAG_SCIENCE
+*/
 //IRIS PORT END

@@ -1,4 +1,5 @@
 //IRIS PORT START
+/* DISABLED
 /obj/item/stock_parts/capacitor/quantum
 	name = "quantum Capacitor"
 	desc = "A capacitor engineered with a mix of bluespace and quantum technologies."
@@ -114,4 +115,5 @@
 		new /obj/item/stock_parts/micro_laser/quantum(src)
 		new /obj/item/stock_parts/matter_bin/quantum(src)
 		new /obj/item/stock_parts/power_store/cell/quantum(src)
+*/
 //IRIS PORT END

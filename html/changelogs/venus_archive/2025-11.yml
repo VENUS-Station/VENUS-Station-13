@@ -16,3 +16,6 @@
   Goku:
   - rscadd: Added drop-pod styles options for the Admin Spawn Panel.
   - tweak: Hilbert's Hotel items in lore rooms no longer have the hotel item component that stops you from leaving with them.
+2025-11-15:
+  ariaworld:
+  - rscdel: Quantum Parts, tier 5 stock parts. Disabled due to no real use for them.

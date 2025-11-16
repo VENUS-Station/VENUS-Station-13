@@ -12,5 +12,6 @@
 
 /datum/emote/run_emote(mob/user, params, type_override, intentional = FALSE)
 	. = ..()
-	if(should_play_sound(user, intentional))
+	var/tmp_sound = get_sound(user)
+	if(tmp_sound && should_play_sound(user, intentional))
 		ping_sound(user)

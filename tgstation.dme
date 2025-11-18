@@ -10556,6 +10556,8 @@
 #include "modular_zzvenus\code\modules\jobs\job_types\explorer.dm"
 #include "modular_zzvenus\code\modules\mining\code\legion_chest.dm"
 #include "modular_zzvenus\code\modules\mob\emotes.dm"
+#include "modular_zzvenus\code\modules\mob\living\damage_visuals.dm"
+#include "modular_zzvenus\code\modules\mob\living\living_defines.dm"
 #include "modular_zzvenus\code\modules\mob\living\stats.dm"
 #include "modular_zzvenus\code\modules\research\quantum_parts.dm"
 #include "modular_zzvenus\code\modules\research\designs\quantum_part_designs.dm"

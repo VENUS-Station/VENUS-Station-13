@@ -22,3 +22,8 @@
 2025-11-16:
   Goku:
   - bugfix: Fixed emotes always showing a sound ping visual effect.
+2025-11-18:
+  Goku:
+  - rscadd: Added damage-based overlays for non-carbon mobs so that players can see how hurt they are at a glance.
+  - rscadd: Added examine text for non-carbon mobs so players can see how hurt they are when they examine them.
+  - rscadd: Added a subtle shake effect to all mobs when they take damage, so that combat has more impact.

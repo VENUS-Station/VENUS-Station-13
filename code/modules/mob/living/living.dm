@@ -901,6 +901,7 @@
 	med_hud_set_status()
 	update_health_hud()
 	update_stamina()
+	update_damage_blood_overlay() //VENUS ADDITION
 	SEND_SIGNAL(src, COMSIG_LIVING_HEALTH_UPDATE)
 
 /mob/living/update_health_hud()

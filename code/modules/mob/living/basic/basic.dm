@@ -226,6 +226,18 @@
 
 /mob/living/basic/examine(mob/user)
 	. = ..()
+	//VENUS ADDITION START - Damage state examination text
+	if(health < maxHealth)
+		var/health_percentage = health / maxHealth
+		if(health_percentage < 0.15)
+			. += span_warning("[p_They()] look[p_s()] critically injured.")
+		else if(health_percentage < 0.5)
+			. += span_warning("[p_They()] look[p_s()] severely injured.")
+		else if(health_percentage < 0.85)
+			. += span_warning("[p_They()] look[p_s()] injured.")
+		else
+			. += span_warning("[p_They()] look[p_s()] slightly injured.")
+	//VENUS ADDITION END
 	if(stat != DEAD)
 		return
 	. += span_deadsay("Upon closer examination, [p_they()] appear[p_s()] to be [HAS_MIND_TRAIT(user, TRAIT_NAIVE) ? "asleep" : "dead"].")

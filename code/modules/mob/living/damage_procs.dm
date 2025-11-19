@@ -99,6 +99,10 @@
 			damage_dealt = -1 * adjustOrganLoss(ORGAN_SLOT_BRAIN, damage_amount)
 
 	SEND_SIGNAL(src, COMSIG_MOB_AFTER_APPLY_DAMAGE, damage_dealt, damagetype, def_zone, blocked, wound_bonus, exposed_wound_bonus, sharpness, attack_direction, attacking_item, wound_clothing)
+	//VENUS ADDITION START - Shake mob when damaged, but not by environmental/passive sources
+	if(attacking_item || attack_direction != null) //attack_direction makes sure this was a combat-related damage
+		impact_shake(damage_dealt)
+	//VENUS ADDITION END
 	return damage_dealt
 
 /**

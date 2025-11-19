@@ -82,11 +82,10 @@
 		add_overlay(blood_overlay)
 
 /// Make mobs shake when they take damage
-/mob/living/apply_damage(damage = 0, damagetype = BRUTE, def_zone = null, blocked = 0, forced = FALSE, spread_damage = FALSE, wound_bonus = 0, exposed_wound_bonus = 0, sharpness = NONE, attack_direction = null, attacking_item, wound_clothing = TRUE)
-	. = ..()
-	// Only shake if we actually took damage
-	if(. > 0)
-		var/shake_intensity = clamp(round(. / 10), 1, 2)
-		var/shake_duration = clamp(. * 0.05, 0.1, 0.3) SECONDS
-		Shake(pixelshiftx = shake_intensity, pixelshifty = shake_intensity, duration = shake_duration)
-
+/mob/living/proc/impact_shake(damage = 0)
+	// Only trigger shake on actual damage > 0
+	if(damage <= 0)
+		return
+	var/shake_intensity = 1
+	var/shake_duration = 0.15 SECONDS
+	Shake(pixelshiftx = shake_intensity, pixelshifty = shake_intensity, duration = shake_duration)

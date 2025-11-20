@@ -106,6 +106,8 @@
 		pregnancy_flags |= PREGNANCY_FLAG_BELLY_INFLATION
 	if(preference_source.prefs.read_preference(/datum/preference/toggle/pregnancy/inert))
 		pregnancy_flags |= PREGNANCY_FLAG_INERT
+	if(preference_source.prefs.read_preference(/datum/preference/toggle/pregnancy/nausea))
+		pregnancy_flags |= PREGNANCY_FLAG_NAUSEA
 
 	pregnancy_duration = preference_source.prefs.read_preference(/datum/preference/numeric/pregnancy/duration) * PREGNANCY_DURATION_MULTIPLIER
 
@@ -134,7 +136,7 @@
 		return
 
 	if(pregnancy_stage >= 5)
-		render_list += conditional_tooltip("<span class='alert ml-1'>Subject is ready to lay an egg!</span>", "Patient will suffer from extreme nausea and fatigue until they lay their egg.", tochat)
+		render_list += conditional_tooltip("<span class='alert ml-1'>Subject is going into labor!</span>", "Patient may suffer from extreme nausea and fatigue until they deliver their baby.", tochat)
 	else if((pregnancy_stage >= 2) || advanced)
 		render_list += conditional_tooltip("<span class='alert ml-1'>Subject is developing an egg[advanced ? " (Stage [pregnancy_stage])" : "."]</span>", "Wait until patient is ready to lay their egg.", tochat)
 	render_list += "<br>"
@@ -144,8 +146,9 @@
 
 	if(iscarbon(source))
 		var/mob/living/carbon/abortos = source
-		abortos.vomit(vomit_flags = MOB_VOMIT_STUN | MOB_VOMIT_HARM | MOB_VOMIT_BLOOD, lost_nutrition = 20)
-		to_chat(abortos, span_userdanger("Your developing egg fails and is reabsorbed!"))
+		if(pregnancy_flags & PREGNANCY_FLAG_NAUSEA) // This one is debateable
+			abortos.vomit(vomit_flags = MOB_VOMIT_STUN | MOB_VOMIT_HARM | MOB_VOMIT_BLOOD, lost_nutrition = 20)
+		to_chat(abortos, span_userdanger("Your belly shrivels up!"))
 	qdel(src)
 
 /datum/status_effect/pregnancy/tick(seconds_between_ticks)
@@ -161,8 +164,9 @@
 		//big wave of nausea every 40 seconds or so
 		else
 			if(SPT_PROB(1.5, seconds_between_ticks))
-				owner.adjust_disgust(30)
-				to_chat(owner, span_warning("Something [pick("shifts", "moves", "rolls")] inside you."))
+				if(pregnancy_flags & PREGNANCY_FLAG_NAUSEA)
+					owner.adjust_disgust(30)
+				to_chat(owner, span_warning("Something [pick("squirms", "shakes", "kicks")] inside you."))
 
 	if(pregnancy_stage >= 3)
 		if(previous_stage < 3)
@@ -190,7 +194,8 @@
 				can_deliver = (!covered || !length(human_momma.get_clothing_on_part(covered)))
 			if((owner.body_position != LYING_DOWN) || !SPT_PROB(5, seconds_between_ticks))
 				//constant nausea
-				owner.adjust_disgust(3 * seconds_between_ticks)
+				if(pregnancy_flags & PREGNANCY_FLAG_NAUSEA)
+					owner.adjust_disgust(3 * seconds_between_ticks)
 				if((owner.getStaminaLoss() < 100) && SPT_PROB(5, seconds_between_ticks))
 					owner.emote("scream")
 					to_chat(owner, "You REALLY need to lay this egg!")

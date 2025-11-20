@@ -69,15 +69,20 @@
 		if(damage_blood_overlay)
 			cut_overlay(damage_blood_overlay)
 			damage_blood_overlay = null
+			if(!(initial(appearance_flags) & KEEP_TOGETHER))
+				src.appearance_flags &= ~KEEP_TOGETHER
 		return
 
 	if(damage_blood_overlay)
 		cut_overlay(damage_blood_overlay)
 		damage_blood_overlay = null
+		if(!(initial(appearance_flags) & KEEP_TOGETHER))
+			src.appearance_flags &= ~KEEP_TOGETHER
 
 	var/mutable_appearance/blood_overlay = get_damage_blood_overlay()
 
 	if(blood_overlay)
+		src.appearance_flags |= KEEP_TOGETHER
 		damage_blood_overlay = blood_overlay
 		add_overlay(blood_overlay)
 

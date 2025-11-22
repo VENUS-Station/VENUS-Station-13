@@ -27,3 +27,6 @@
   - rscadd: Added damage-based overlays for non-carbon mobs so that players can see how hurt they are at a glance.
   - rscadd: Added examine text for non-carbon mobs so players can see how hurt they are when they examine them.
   - rscadd: Added a subtle shake effect to all mobs when they take damage, so that combat has more impact.
+2025-11-22:
+  Goku:
+  - tweak: Removed delay from deploying kinetic gauntlets, and using in hand will now undeploy instead of toggling the light.

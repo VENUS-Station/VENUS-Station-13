@@ -115,7 +115,8 @@
 		playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
 		to_chat(wearer, span_warning("You need both free hands to deploy [src]!"))
 		return
-
+	//VENUS REMOVAL START - Remove delay from deploying kinetic gauntles
+	/*
 	wearer.add_movespeed_modifier(/datum/movespeed_modifier/equipping_gauntlets)
 	if(!do_after(wearer, 1.5 SECONDS, src, IGNORE_USER_LOC_CHANGE, interaction_key = type))
 		playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
@@ -129,6 +130,8 @@
 		playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
 		to_chat(wearer, span_warning("You need both free hands to deploy [src]!"))
 		return
+	*/
+	//VENUS REMOVAL END
 
 	wearer.put_in_l_hand(left_gauntlet)
 	wearer.put_in_r_hand(right_gauntlet)
@@ -311,10 +314,14 @@
 /obj/item/kinetic_gauntlet/left/attack_self(mob/user, modifiers)
 	if(!linked_gauntlets)
 		return
-
+	//VENUS REMOVAL START - Remove light toggle on self attack, undeploy instead
+	/*
 	linked_gauntlets.set_light_on(!linked_gauntlets.light_on)
 	playsound(src, 'sound/items/weapons/empty.ogg', 100, TRUE)
 	update_appearance()
+	*/
+	//VENUS REMOVAL END
+	linked_gauntlets.toggle_gauntlets()
 
 /obj/item/kinetic_gauntlet/left/proc/do_saboteur(datum/source, disrupt_duration)
 	SIGNAL_HANDLER

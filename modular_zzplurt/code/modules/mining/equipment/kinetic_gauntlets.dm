@@ -157,6 +157,8 @@
 	if(!gauntlets_deployed())
 		return
 
+	//VENUS REMOVAL START - Remove delay from retracting kinetic gauntles
+	/*
 	wearer.add_movespeed_modifier(/datum/movespeed_modifier/equipping_gauntlets)
 	if(!do_after(wearer, 1.5 SECONDS, src, IGNORE_USER_LOC_CHANGE, interaction_key = type))
 		wearer.remove_movespeed_modifier(/datum/movespeed_modifier/equipping_gauntlets)
@@ -165,6 +167,8 @@
 		return
 
 	wearer.remove_movespeed_modifier(/datum/movespeed_modifier/equipping_gauntlets)
+	*/
+	//VENUS REMOVAL END
 
 	left_gauntlet?.forceMove(src)
 	right_gauntlet?.forceMove(src)

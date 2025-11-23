@@ -527,10 +527,10 @@ GLOBAL_LIST_INIT(non_persistent_cleanables, list(
 			new_item.pixel_y = trash_data["pixel_y"]
 
 		// Restore rounds persisted for janitor examine
-		if(!isnull(trash_data["rounds_persisted"]))
-			if(istype(new_item, /obj/item/trash))
-				var/obj/item/trash/trash_item = new_item
-				trash_item.rounds_persisted = trash_data["rounds_persisted"]
+			if(!isnull(trash_data["rounds_persisted"]))
+				if(istype(new_item, /obj/item/trash))
+					var/obj/item/trash/trash_item = new_item
+					trash_item.rounds_persisted = trash_data["rounds_persisted"]
 			else if(istype(new_item, /obj/item/bodypart))
 				var/obj/item/bodypart/limb = new_item
 				limb.rounds_persisted = trash_data["rounds_persisted"]
@@ -545,7 +545,7 @@ GLOBAL_LIST_INIT(non_persistent_cleanables, list(
 			limb.burn_dam = limb.max_damage
 			limb.update_disabled()
 			// Only add "decayed" prefix if it's not already there
-			if(findtext(limb.name, "decayed") != 1)
+			if(findtext(lowertext(limb.name), "decayed") != 1)
 				limb.name = "decayed [limb.name]"
 			limb.add_atom_colour(COLOR_SERVICE_LIME, FIXED_COLOUR_PRIORITY) // Green hue
 		else if(istype(new_item, /obj/item/organ))
@@ -554,7 +554,7 @@ GLOBAL_LIST_INIT(non_persistent_cleanables, list(
 			organ.organ_flags |= ORGAN_FAILING
 			organ.useable = FALSE
 			// Only add "decayed" prefix if it's not already there
-			if(findtext(organ.name, "decayed") != 1)
+			if(findtext(lowertext(organ.name), "decayed") != 1)
 				organ.name = "decayed [organ.name]"
 			organ.add_atom_colour(COLOR_SERVICE_LIME, FIXED_COLOUR_PRIORITY) // Green hue
 		loaded_count++

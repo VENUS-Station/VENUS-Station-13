@@ -146,7 +146,7 @@
 /datum/map_template/ghost_cafe_rooms/ss14_thing
 	name = "Deter's Lair"
 	mappath = "_maps/splurt/templates/apartment_donator_ss14.dmm"
-	ckeywhitelist = list("girko", "moldb")
+	// ckeywhitelist = list("girko", "moldb") VENUS REMOVAL
 	category = GHC_SPECIAL
 	landing_coords = list(13, 12)
 

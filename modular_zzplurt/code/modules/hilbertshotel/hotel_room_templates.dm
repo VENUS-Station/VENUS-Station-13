@@ -138,13 +138,13 @@
 	category = GHC_MISC
 
 /datum/map_template/ghost_cafe_rooms/dnd_house
-	name = "Zak's D&D House"
+	name = "D&D House" //VENUS EDIT - Original: "Zak's DnD House"
 	mappath = "_maps/splurt/templates/apartment_donator_zak_dnd_house.dmm"
 	// ckeywhitelist = list("drarielpro") VENUS REMOVAL
 	category = GHC_SPECIAL
 
 /datum/map_template/ghost_cafe_rooms/ss14_thing
-	name = "Deter's Lair"
+	name = "Coaxial Void" //VENUS EDIT - Original: "Deter's lair"
 	mappath = "_maps/splurt/templates/apartment_donator_ss14.dmm"
 	// ckeywhitelist = list("girko", "moldb") VENUS REMOVAL
 	category = GHC_SPECIAL

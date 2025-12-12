@@ -429,6 +429,9 @@ ROUNDSTART_RACES cursekin
 ## SPLURT BANDWAGON DOWN HERE
 ROUNDSTART_RACES arachnid
 
+## VENUS RACES DOWN HERE
+ROUNDSTART_RACES holosynth
+
 ##-------------------------------------------------------------------------------------------
 
 ## Roundstart no-reset races

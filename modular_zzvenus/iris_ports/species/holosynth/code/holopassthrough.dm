@@ -23,6 +23,10 @@
 
 	//We need to do this twice if it's a full window bc otherwise they could reach behind them for their items
 	var/dirToMove = get_dir(owner, bumpee)
+	//VENUS ADDITION START - Fix directional windows movement when on the same tile as them
+	if(!dirToMove && !wumpee.fulltile)
+		dirToMove = wumpee.dir
+	//VENUS ADDITION END
 	try_move_adjacent(owner, dirToMove)
 	if(wumpee.fulltile)
 		try_move_adjacent(owner, dirToMove)
@@ -31,9 +35,13 @@
 
 /// Make the window get wibbly filters without parent proc making them passable
 /datum/component/glass_passer/holosynth/blomperize(obj/structure/structure)
+	//VENUS REMOVAL START - Make sure everything gets distortion visual effect
+	/*
 	var/obj/structure/window/wumpee = structure
 	if(!istype(wumpee) || !wumpee.fulltile) //need to check for this otherwise we runtime when passing over grills or not full tile windows
 		return
+	*/
+	//VENUS REMOVAL END
 	apply_wibbly_filters(structure)
 	addtimer(CALLBACK(src, PROC_REF(unblomperize), structure), deform_glass)
 

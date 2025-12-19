@@ -1,7 +1,7 @@
 /// Holosynth Incoming Brute damage multiplier
 #define HOLOSYNTH_BRUTEMULT 3
 /// Holosynth Incoming Burn damage multiplier
-#define HOLOSYNTH_BURNMULT 5
+#define HOLOSYNTH_BURNMULT 3 //VENUS EDIT - Original: 5
 
 /datum/species/synthetic/holosynth
 	name = "Holosynth"
@@ -94,16 +94,18 @@
 // Lore Box
 /datum/species/synthetic/holosynth/get_species_lore()
 	return list(\
-		"Somewhere between an android and a hologram, these semi-physical autonomous units are extremely vulnerable to heat and electricity. \
+		"Somewhere between a synthetic and a hologram, these semi-physical autonomous units are extremely vulnerable to heat and electricity. \
 		A niche choice more popular among wealthy customers (silicon and uploaded organics alike) - their lack of robustness makes them somewhat inept for physical activity but they are excellent at scouting or clerical work.",
 
 		"As of late the design of the required holoprojection equipment has shrunk considerably. \
 		With an electromagnetic controller suite, hologram projection apparatus, and a ball point writing implement all fitting into the sleek pen chassis. Holosynths are traditionally once human, but any species can become a hologram."
 	)
 
+//VENUS REMOVAL START
+/*
 //Character creation Perks
 /datum/species/synthetic/holosynth/create_pref_traits_perks()
-	var/list/perks = list()
+	var/list/perks = ..() //VENUS EDIT: Make sure to inherit base unique perk descriptions - Original: var/list/perks = list()
 	perks += list(list(
 		SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 		SPECIES_PERK_ICON = FA_ICON_SHIELD_ALT,
@@ -118,8 +120,72 @@
 		SPECIES_PERK_NAME = "Not Human After All",
 		SPECIES_PERK_DESC = "There is no humanity behind the eyes of the synthetic, and as such, they have no DNA to genetically alter.",
 	))
-	return perks
 
+	return perks
+	*/
+//VENUS REMOVAL END
+
+//VENUS ADDITION START
+//Basically a copy/paste of the synthetic one but with modifications
+/datum/species/synthetic/holosynth/create_pref_unique_perks()
+	var/list/perk_descriptions = list()
+
+	perk_descriptions += list(list( //tryin to keep traits minimal since synths will get a lot of traits when my upstream traits pr is merged
+		SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
+		SPECIES_PERK_ICON = "robot",
+		SPECIES_PERK_NAME = "Synthetic Benefits",
+		SPECIES_PERK_DESC = "Unlike organics, you DON'T explode when faced with a vacuum! Additionally, your chassis is built with such strength as to \
+		grant you immunity to OVERpressure! Just make sure that the extreme cold or heat doesn't fry your circuitry."
+	))
+
+	perk_descriptions += list(list(
+		SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
+		SPECIES_PERK_ICON = "star-of-life",
+		SPECIES_PERK_NAME = "Unhuskable",
+		SPECIES_PERK_DESC = "[plural_form] can't be husked, disappointing changelings galaxy-wide.",
+	))
+
+	perk_descriptions += list(list(
+		SPECIES_PERK_TYPE = SPECIES_NEUTRAL_PERK,
+		SPECIES_PERK_ICON = "robot",
+		SPECIES_PERK_NAME = "Synthetic Oddities",
+		SPECIES_PERK_DESC = "[plural_form] are unable to gain nutrition from traditional foods. Instead, you must either consume welding fuel or extend a \
+		wire from your arm to draw power from an APC. In addition to this, welders and wires are your sutures and mesh and only specific chemicals even metabolize inside \
+		of you. This ranges from whiskey, to synthanol, to various obscure medicines. Finally, you suffer from a set of wounds exclusive to synthetics."
+	))
+
+	perk_descriptions += list(list(
+		SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
+		SPECIES_PERK_ICON = "music",
+		SPECIES_PERK_NAME = "Tone Synthesizer",
+		SPECIES_PERK_DESC = "[plural_form] can sing musical tones using an internal synthesizer.",
+	))
+
+	perk_descriptions += list(list(
+		SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
+		SPECIES_PERK_ICON = "band-aid",
+		SPECIES_PERK_NAME = "Extreme Structural Damage",
+		SPECIES_PERK_DESC = "[plural_form] are EXTREMELY weak to blunt and burn damage (3x more damage received).",
+	))
+
+	perk_descriptions += list(list(
+		SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
+		SPECIES_PERK_ICON = FA_ICON_MAGNIFYING_GLASS,
+		SPECIES_PERK_NAME = "Translucency",
+		SPECIES_PERK_DESC = "Holosynths can pass through glass, though they'll leave any physical items behind in their passage.",
+	))
+	perk_descriptions += list(list(
+		SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
+		SPECIES_PERK_ICON = FA_ICON_NOTES_MEDICAL,
+		SPECIES_PERK_NAME = "Regenerator",
+		SPECIES_PERK_DESC = "Being made of soft-light, their projector and controller will mend tears in their form and hologel.",
+	))
+
+	return perk_descriptions
+//VENUS ADDITION END
+
+//VENUS REMOVAL START - This was copied from androids
+/*
 /datum/species/synthetic/holosynth/create_pref_unique_perks()
 	var/list/perks = list()
 	perks += list(list(
@@ -148,6 +214,8 @@
 		SPECIES_PERK_DESC = "Being made of light, your projector and controller will mend tears in your form and aerogel.",
 	))
 	return perks
+*/
+//VENUS REMOVAL END
 
 /datum/species/synthetic/holosynth/get_species_description()
 	//VENUS EDIT: We use list(), we can't return a string directly (it crashes TGUI) due to some upstream species code

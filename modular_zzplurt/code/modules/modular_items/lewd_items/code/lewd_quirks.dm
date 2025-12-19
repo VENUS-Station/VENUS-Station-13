@@ -15,7 +15,7 @@
 	var/jitter_time = 0
 	var/lust_message = "You feel your body getting warmer as your arousal becomes visible to anyone around you..."
 	//we are using if statements so that it slowly becomes more and more to the person
-	human_owner.manual_emote(pick(lust_emotes))
+	// human_owner.manual_emote(pick(lust_emotes)) //VENUS REMOVAL - Too spammy
 	if(stress >= 60)
 		blur_time = 5 SECONDS
 		lust_message = "Lewd images and thoughts of sex flood your mind, making it hard to concentrate..."

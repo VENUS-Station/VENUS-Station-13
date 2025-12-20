@@ -2,3 +2,8 @@
   Goku:
   - rscadd: (IRIS PORT) Added Holosynth species.
   - rscadd: (IRIS PORT) Added hairstyles - Ruby, Ruby Long, Fluffy Longer, Fluffy Long Ponytail, Mia.
+2025-12-20:
+  Goku:
+  - rscadd: Added auto-memorizing wires when hacking.
+  - rscadd: Added collapsible memories in the memory panel.
+

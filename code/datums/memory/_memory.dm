@@ -366,6 +366,15 @@
 
 	return parsed_story
 
+// VENUS ADDITION START - Technical Memory Support
+/**
+ * Returns the text content of the memory for display in the memory panel.
+ * By default, this generates a story, but valid technical memories can override this.
+ */
+/datum/memory/proc/get_memory_text()
+	return generate_story()
+// VENUS ADDITION END
+
 /**
  * When passed a "character", returns the name of the character formatted for stories
  *

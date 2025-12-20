@@ -185,6 +185,10 @@
 		cut_wires += wire
 		SEND_SIGNAL(src, COMSIG_CUT_WIRE(wire), wire)
 		on_cut(wire, mend = FALSE, source = source)
+		// VENUS ADDITION START - Wire Knowledge
+		trigger_wire_knowledge(source, wire)
+		// VENUS ADDITION END
+
 
 /datum/wires/proc/cut_color(color, mob/living/source)
 	cut(get_wire(color), source)
@@ -201,6 +205,10 @@
 		return
 	SEND_SIGNAL(src, COMSIG_PULSE_WIRE, wire, user)
 	on_pulse(wire, user)
+	// VENUS ADDITION START - Wire Knowledge
+	trigger_wire_knowledge(user, wire)
+	// VENUS ADDITION END
+
 
 /datum/wires/proc/pulse_color(color, mob/living/user, force=FALSE)
 	pulse(get_wire(color), user, force)
@@ -360,17 +368,47 @@
 	var/colorblind = HAS_TRAIT(user, TRAIT_COLORBLIND)
 
 	for(var/color in colors)
+		// VENUS ADDITION START - Wire Knowledge
+		var/known = is_wire_known(user, color)
+		// VENUS ADDITION END
 		payload.Add(list(list(
 			"color" = color,
 			"shownColor" = colorblind ? default_possible_colors[color] : color,
-			"wire" = (((reveal_wires || always_reveal_wire(color)) && !is_dud_color(color)) ? get_wire(color) : null),
+			"wire" = (((reveal_wires || always_reveal_wire(color) || known) && !is_dud_color(color)) ? get_wire(color) : null), // VENUS ADDITION - Wire Knowledge - Added || known check
 			"cut" = is_color_cut(color),
-			"attached" = is_attached(color)
+			"attached" = is_attached(color),
+			"isKnown" = known // VENUS ADDITION - Wire Knowledge
 		)))
 	data["wires"] = payload
 	data["status"] = get_status()
 	data["proper_name"] = (proper_name != "Unknown") ? proper_name : null
 	return data
+
+// VENUS ADDITION START - Wire Knowledge
+/datum/wires/proc/trigger_wire_knowledge(mob/living/user, wire)
+	if(is_dud(wire))
+		return
+	if(!user || !user.mind)
+		return
+
+	var/datum/memory/wire_knowledge/mem = user.mind.memories[/datum/memory/wire_knowledge]
+	if(!mem)
+		mem = user.mind.add_memory(/datum/memory/wire_knowledge)
+
+	var/key = dictionary_key ? dictionary_key : holder_type
+	mem.learn_wire(key, get_color_of_wire(wire), wire, proper_name)
+
+/datum/wires/proc/is_wire_known(mob/living/user, color)
+	if(!user || !user.mind)
+		return FALSE
+
+	var/datum/memory/wire_knowledge/mem = user.mind.memories[/datum/memory/wire_knowledge]
+	if(!mem)
+		return FALSE
+
+	var/key = dictionary_key ? dictionary_key : holder_type
+	return mem.knows_wire(key, color, get_wire(color))
+// VENUS ADDITION END
 
 /datum/wires/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
 	. = ..()

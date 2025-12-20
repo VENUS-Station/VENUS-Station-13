@@ -1713,7 +1713,7 @@
 
 	for(var/memory_key in user?.mind.memories)
 		var/datum/memory/memory = user.mind.memories[memory_key]
-		memories += list(list("name" = memory.name, "quality" = memory.story_value))
+		memories += list(list("name" = memory.name, "quality" = memory.story_value, "memory_text" = memory.get_memory_text())) //VENUS EDIT - Added "memory_text" = memory.get_memory_text()
 
 	data["memories"] = memories
 	return data

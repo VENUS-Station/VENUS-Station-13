@@ -1,5 +1,5 @@
 import { Button, Dimmer, Section, Stack } from 'tgui-core/components';
-
+import { Collapsible, Box } from 'tgui-core/components'; //VENUS ADDITION - Wire knowledge
 import { useBackend } from '../backend';
 import { Window } from '../layouts';
 
@@ -160,9 +160,22 @@ export const MemoryPanel = (props) => {
           <Stack vertical>
             {memories.map((memory) => (
               <Stack.Item key={memory.name}>
-                <Section>
+                {/* VENUS EDIT START - Added collapsible memories */}
+                {/*ORIGINAL: <Section>
                   <MemoryQuality quality={memory.quality} /> {memory.name}
-                </Section>
+                </Section> */}
+                <Collapsible
+                  title={
+                    <>
+                      <MemoryQuality quality={memory.quality} />
+                      {memory.name}
+                    </>
+                  }>
+                  <Box color="label" m={1} style={{ whiteSpace: 'pre-wrap' }}>
+                    {memory.memory_text}
+                  </Box>
+                </Collapsible>
+                {/* VENUS EDIT END END */}
               </Stack.Item>
             ))}
           </Stack>

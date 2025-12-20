@@ -1,10 +1,12 @@
 import {
   Box,
   Button,
+  Icon, //VENUS ADDITION
   LabeledList,
   NoticeBox,
   Section,
   Stack,
+  Tooltip, //VENUS ADDITION
 } from 'tgui-core/components';
 import type { BooleanLike } from 'tgui-core/react';
 
@@ -23,6 +25,7 @@ type Wire = {
   cut: BooleanLike;
   attached: BooleanLike;
   wire: string;
+  isKnown: BooleanLike; //VENUS ADDITION
 };
 
 export const Wires = (props) => {
@@ -104,7 +107,24 @@ const WireMap = (props) => {
             </>
           }
         >
-          {!!wire.wire && <i>({wire.wire})</i>}
+          {/* VENUS EDIT START - Wire Knowledge Indicator */}
+          {/* ORIGINAL: */}
+          {/* {!!wire.wire && <i>({wire.wire})</i>} */}
+          {!!wire.wire && (
+            <>
+              <i>({wire.wire})</i>
+              {!!wire.isKnown && (
+                <Tooltip content="You found out what this wire does, and you'll remember it.">
+                  <Icon
+                    name="brain"
+                    color="grey"
+                    ml={1}
+                  />
+                </Tooltip>
+              )}
+            </>
+          )}
+          {/* VENUS EDIT END */}
         </LabeledList.Item>
       ))}
     </LabeledList>

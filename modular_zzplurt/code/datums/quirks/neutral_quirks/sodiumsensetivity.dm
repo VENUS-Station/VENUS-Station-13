@@ -44,7 +44,7 @@
 	playsound(affected_mob, SFX_SEAR, 30, TRUE)
 
 	// Do minor burn damage
-	affected_mob.adjustFireLoss(2 * REM * seconds_per_tick)
+	affected_mob.adjust_fire_loss(2 * REM * seconds_per_tick)
 
 /// Handle effects applied by being exposed to Salt
 /datum/quirk/sodium_sensetivity/proc/expose_salt(mob/living/carbon/affected_mob, datum/reagent/handled_reagent, methods, reac_volume, show_message, touch_protection)
@@ -60,7 +60,7 @@
 		return
 
 	// Cause burn damage based on amount
-	quirk_holder.adjustFireLoss(damage)
+	quirk_holder.adjust_fire_loss(damage)
 
 */
 //VENUS REMOVAL END

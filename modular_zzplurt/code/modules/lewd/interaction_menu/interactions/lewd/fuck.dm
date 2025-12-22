@@ -242,7 +242,7 @@
 /datum/interaction/lewd/fuck/post_interaction(mob/living/user, mob/living/target)
 	. = ..()
 	if(HAS_TRAIT(target, TRAIT_BIMBO))
-		target.adjustStaminaLoss(30)
+		target.adjust_stamina_loss(30)
 		if(prob(15))
 			to_chat(target, span_purple("You feel so helpless..."))
 		if(target.has_status_effect(/datum/status_effect/incapacitating/stamcrit))

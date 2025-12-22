@@ -9,7 +9,7 @@
 	// VENUS ADDITION START - Direct trait check for sodium sensitivity
 	if(HAS_TRAIT(affected_mob, TRAIT_SALT_SENSITIVE))
 		playsound(affected_mob, SFX_SEAR, 30, TRUE)
-		affected_mob.adjustFireLoss(1 * REM * seconds_per_tick)
+		affected_mob.adjust_fire_loss(1 * REM * seconds_per_tick)
 		if(SPT_PROB(10, seconds_per_tick))
 			to_chat(affected_mob, span_userdanger("The salt sears your insides!"))
 	//VENUS ADDITION END
@@ -28,7 +28,7 @@
 		if(methods & (TOUCH|VAPOR))
 			amount = round(amount * max(1 - touch_protection, 0), 0.1)
 		if(amount > 0)
-			affected_mob.adjustFireLoss(amount)
+			affected_mob.adjust_fire_loss(amount)
 			to_chat(affected_mob, span_userdanger("The salt [pick("sears", "singes", "scorches")] your body!"))
 	//VENUS ADDITION END
 

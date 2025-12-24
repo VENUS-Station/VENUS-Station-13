@@ -102,12 +102,28 @@
 /obj/machinery/nebula_shielding/radiation/examine(mob/user)
 	. = ..()
 
-	. += span_notice("Passively generates tritium. Provides [shielding_strength] levels of nebula shielding when active.")
+	// . += span_notice("Passively generates tritium. Provides [shielding_strength] levels of nebula shielding when active.") //VENUS REMOVAL
+	//VENUS ADDITION START - Show diagnostic information
+	var/datum/station_trait/nebula/hostile/radiation/nebula = locate(/datum/station_trait/nebula/hostile/radiation) in SSstation.station_traits
+	var/max_intensity = (/datum/station_trait/nebula/hostile/radiation::maximum_nebula_intensity) / (/datum/station_trait/nebula/hostile/radiation::intensity_increment_time)
+	var/gg_shield = /obj/machinery/gravity_generator/main::radioactive_nebula_shielding
+	var/current_total = nebula ? nebula.get_shielding_level() : gg_shield
+	var/required_shields = ceil((max_intensity - gg_shield) / shielding_strength)
 
+	. += span_notice("The diagnostic panel reads: Collective Output: [current_total] shielding levels.")
+	. += span_notice("Peak Nebula Intensity: [max_intensity] total levels.")
+	var/status_text = current_total >= max_intensity ? span_green("TOTAL MITIGATION ACHIEVED") : span_danger("RADIATION LEAK DETECTED - ACQUIRE MORE SHIELDING UNITS")
+	. += span_notice("STATION_STATUS: [status_text]")
+	. += span_notice("ESTIMATE: [required_shields] total unit\s (plus gravity generator) are required to fully block the nebula at its peak.")
+	//VENUS ADDITION END
 /obj/machinery/nebula_shielding/radiation/generate_reward()
+	//VENUS REMOVAL START - Remove Radioactive Nebula tritium generation
+	/*
 	var/turf/open/turf = get_turf(src)
 	if(isopenturf(turf))
 		turf.atmos_spawn_air("[GAS_TRITIUM]=1;[TURF_TEMPERATURE(T20C)]")
+	*/
+	//VENUS REMOVAL END
 
 /obj/machinery/nebula_shielding/radiation/attackby(obj/item/item, mob/user, list/modifiers, list/attack_modifiers)
 	if(default_deconstruction_screwdriver(user, initial(icon_state) + "_open", initial(icon_state), item))
@@ -136,6 +152,8 @@
 
 	..()
 
+//VENUS EDIT START
+/* ORIGINAL:
 /// Small explanation for engineering on how to set-up the radioactive nebula shielding
 /obj/item/paper/fluff/radiation_nebula
 	name = "radioactive nebula shielding"
@@ -144,6 +162,17 @@
 		Shielding units passively generate tritium, so make sure to properly ventilate/isolate the area before setting up a shielding unit!
 		More circuit boards can be ordered through cargo. Consider setting up auxiliary shielding units in-case of destruction, power loss or sabotage.
 	"}
+*/
+
+/// Small explanation for engineering on how to set-up the radioactive nebula shielding
+/obj/item/paper/fluff/radiation_nebula
+	name = "radioactive nebula shielding"
+	default_raw_text = {"EXTREME IMPORTANCE!!!! <br>
+		Set up these radioactive nebula shielding units before the gravity generator's native shielding is overwhelmed! <br>
+		At peak intensity, the station requires 10 levels of shielding. The gravity generator provides 4, and each of these units provide 4.
+		More circuit boards can be ordered through cargo. Consider setting up auxiliary shielding units in-case of destruction, power loss or sabotage.
+	"}
+//VENUS EDIT END
 
 /// Warns medical that they can't use radioactive resonance
 /obj/item/paper/fluff/radiation_nebula_virologist

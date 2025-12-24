@@ -6,4 +6,7 @@
   Goku:
   - rscadd: Added auto-memorizing wires when hacking.
   - rscadd: Added collapsible memories in the memory panel.
-
+2025-12-24:
+  Goku:
+  - rscadd: Added examine information for radioactive nebula shielding units.
+  - rscdel: Removed tritium generation from radioactive nebula shielding units.

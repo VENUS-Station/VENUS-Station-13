@@ -6,6 +6,16 @@
 	. = ..()
 	thirst = null
 
+/mob/living/proc/get_hydration()
+	var/hydration_val = water_level
+	if(!reagents)
+		return hydration_val
+	for(var/datum/reagent/bits in reagents.reagent_list)
+		if(bits.hydration)
+			// We use the same formula as hunger's get_fullness()
+			hydration_val += bits.hydration * bits.volume / bits.metabolization_rate
+	return hydration_val
+
 /atom/movable/screen/thirst
 	name = "thirst"
 	icon_state = "hungerbar"
@@ -13,8 +23,8 @@
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	/// What state of thirst are we in?
 	VAR_PRIVATE/state
-	/// What water level did we last record?
-	VAR_PRIVATE/water_level
+	/// What hydration level (processed + pending) did we last record?
+	VAR_PRIVATE/hydration
 	/// What icon do we show by the bar
 	var/food_icon = 'icons/obj/drinks/mixed_drinks.dmi'
 	/// What icon state do we show by the bar
@@ -51,13 +61,13 @@
 		return
 
 	if(HAS_TRAIT(thirsty, TRAIT_NOTHIRST) || !thirsty.get_organ_slot(ORGAN_SLOT_STOMACH))
-		water_level = THIRST_LEVEL_QUENCHED
+		hydration = THIRST_LEVEL_QUENCHED
 		state = THIRST_STATE_FINE
 		return
 
-	water_level = round(clamp(thirsty.water_level, 0, THIRST_LEVEL_THRESHOLD), 0.05)
+	hydration = round(clamp(thirsty.get_hydration(), 0, THIRST_LEVEL_THRESHOLD), 0.05)
 
-	switch(water_level)
+	switch(hydration)
 		if(1 + THIRST_LEVEL_THRESHOLD to INFINITY)
 			state = THIRST_STATE_FAT
 		if(1 + THIRST_LEVEL_FULL to THIRST_LEVEL_THRESHOLD)
@@ -79,19 +89,19 @@
 /// If `instant` is TRUE, the bar will update immediately rather than animating.
 /atom/movable/screen/thirst/proc/update_thirst_bar(instant = FALSE)
 	var/old_state = state
-	var/old_water_level = water_level
+	var/old_hydration = hydration
 	update_thirst_state()
 
-	if(old_state != state || old_water_level != water_level)
-		// Fades out if we ARE "fine" AND if our hydration isn't changing
+	if(old_state != state || old_hydration != hydration)
+		// Fades out if we ARE "fine" AND if our hydration isn't changing (processed == total)
 		var/mob/living/thirsty = hud?.mymob
-		if(alpha == 255 && (state == THIRST_STATE_FINE && abs(water_level - thirsty?.water_level) < 1))
+		if(alpha == 255 && (state == THIRST_STATE_FINE && abs(hydration - thirsty?.water_level) < 1))
 			if(instant)
 				alpha = 0
 			else
 				animate(src, alpha = 0, time = 1 SECONDS)
-		// Fades in if we WERE "fine" OR if hydration is changing
-		else if(alpha == 0 && (state != THIRST_STATE_FINE || abs(water_level - thirsty?.water_level) >= 1))
+		// Fades in if we WERE "fine" OR if hydration is changing (processed != total)
+		else if(alpha == 0 && (state != THIRST_STATE_FINE || abs(hydration - thirsty?.water_level) >= 1))
 			if(instant)
 				alpha = 255
 			else
@@ -113,8 +123,8 @@
 			underlays += food_image
 
 	// Update thirst bar
-	if(old_water_level != water_level)
-		thirst_bar.update_fullness(water_level, alpha == 0 || instant)
+	if(old_hydration != hydration)
+		thirst_bar.update_fullness(hydration, alpha == 0 || instant)
 
 /atom/movable/screen/thirst_bar
 	icon_state = "hungerbar_bar"

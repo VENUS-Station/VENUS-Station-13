@@ -1,3 +1,5 @@
+//VENUS REMOVAL START - Moved to modular_zzvenus screen_hud.dm
+/*
 /datum/hud
 	var/atom/movable/screen/thirst
 
@@ -87,3 +89,5 @@
 /atom/movable/screen/thirst/update_icon_state()
 	. = ..()
 	icon_state = "[base_icon_state][state]"
+*/
+//VENUS REMOVAL END

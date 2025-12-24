@@ -10,3 +10,4 @@
   Goku:
   - rscadd: Added examine information for radioactive nebula shielding units.
   - rscdel: Removed tritium generation from radioactive nebula shielding units.
+  - rscadd: Added an animated thirst bar HUD element, just like the hunger bar.

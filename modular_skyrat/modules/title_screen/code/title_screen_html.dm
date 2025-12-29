@@ -6,6 +6,19 @@ GLOBAL_LIST_EMPTY(startup_messages)
 
 /mob/dead/new_player/proc/get_title_html()
 	var/dat = SStitle.title_html
+	//VENUS ADDITION START - Add client chat styles to title screen
+	var/client/current_client = client
+	if(current_client?.script)
+		var/style_index = findtext(dat, "<style")
+		if(style_index)
+			dat = copytext(dat, 1, style_index) + current_client.script + copytext(dat, style_index)
+		else
+			var/head_index = findtext(dat, "</head>")
+			if(head_index)
+				dat = copytext(dat, 1, head_index) + current_client.script + copytext(dat, head_index)
+			else
+				dat = current_client.script + dat
+	//VENUS ADDITION END
 	if(SSticker.current_state == GAME_STATE_STARTUP)
 		dat += {"<img src="loading_screen.gif" class="bg" alt="">"}
 		dat += {"<div class="container_terminal" id="terminal"></div>"}

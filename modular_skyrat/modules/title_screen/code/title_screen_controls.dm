@@ -25,9 +25,22 @@ ADMIN_VERB(change_title_screen_notice, R_FUN, "Title Screen: Set Notice", "Sets 
 	message_admins("[key_name_admin(usr)] is setting the title screen notice.")
 
 	var/new_notice = input(usr, "Please input a notice to be displayed on the title screen:", "Titlescreen Notice") as text|null
+	//VENUS EDIT START - Title screen notice styles
+	/* ORIGINAL:
 	SStitle.set_notice(new_notice)
 	if(!new_notice)
 		return
+	*/
+	if(isnull(new_notice))
+		return
+	if(!new_notice)
+		SStitle.set_notice(null)
+		return
+	new_notice = user.reformat_narration(new_notice)
+	if(isnull(new_notice))
+		return
+	SStitle.set_notice(new_notice)
+	//VENUS EDIT END
 	for(var/mob/dead/new_player/new_player in GLOB.new_player_list)
 		to_chat(new_player, span_boldannounce("TITLE NOTICE UPDATED: [new_notice]"))
 		SEND_SOUND(new_player,  sound('modular_skyrat/modules/admin/sound/duckhonk.ogg'))

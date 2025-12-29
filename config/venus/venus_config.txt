@@ -1,0 +1,2 @@
+## Role ID for OPFOR request/closure pings
+OPFOR_ALERT_ROLE_ID

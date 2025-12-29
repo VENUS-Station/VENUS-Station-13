@@ -10575,6 +10575,7 @@
 #include "modular_zzplurt\code\modules\wiremod\core\integrated_circuit.dm"
 #include "modular_zzplurt\maps\offstation\seedvault.dm"
 #include "modular_zzplurt\modules\primitive_production\code\primitive.dm"
+#include "modular_zzvenus\code\controllers\configuration\entries\opfor.dm"
 #include "modular_zzvenus\code\controllers\subsystem\persistence\cleanables.dm"
 #include "modular_zzvenus\code\datums\components\hotel_item.dm"
 #include "modular_zzvenus\code\datums\memory\wire_knowledge.dm"

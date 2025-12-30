@@ -4,14 +4,14 @@
 #define OPFOR_LOBBY_NOTICE_OPEN "<span class='adminhelp'>ANTAG-ENABLED SHIFT - Apply via OPFOR to be an Antagonist.</span>"
 #define OPFOR_LOBBY_NOTICE_CLOSED null
 
-/proc/send_opfor_status_message(message)
+/proc/send_opfor_status_message(message, include_ping = TRUE)
 	if(!message)
 		return
 	var/list/channel_tags = CONFIG_GET(str_list/channel_announce_new_game)
 	if(!length(channel_tags))
 		return
 	var/role_id = CONFIG_GET(string/opfor_alert_role_id)
-	var/prefix = length(role_id) ? "<@&[role_id]> " : ""
+	var/prefix = (include_ping && length(role_id)) ? "<@&[role_id]> " : ""
 	var/datum/tgs_message_content/tgs_message = new("[prefix][message]")
 	for(var/channel_tag in channel_tags)
 		send2chat(tgs_message, channel_tag)
@@ -59,7 +59,7 @@ ADMIN_VERB(unrequest_opfor, R_FUN, "Unrequest OPFOR", "Stops requesting OPFOR an
 		return
 
 	SStitle.set_notice(OPFOR_LOBBY_NOTICE_CLOSED)
-	send_opfor_status_message(OPFOR_STATUS_MESSAGE_CLOSED)
+	send_opfor_status_message(OPFOR_STATUS_MESSAGE_CLOSED, FALSE)
 	message_admins("[ADMIN_LOOKUP(user)] has closed OPFOR requests.")
 //VENUS ADDITION END
 

@@ -1,7 +1,7 @@
 //VENUS ADDITION START
 #define OPFOR_STATUS_MESSAGE_OPEN "Antagonists have been requested for this shift. Apply via in-game OPFOR if interested."
 #define OPFOR_STATUS_MESSAGE_CLOSED "OPFOR requests are now closed, await the next chance if interested!"
-#define OPFOR_LOBBY_NOTICE_OPEN "<span class='admin'>ANTAG-ENABLED SHIFT — Apply via OPFOR to be an Antagonist.</span>"
+#define OPFOR_LOBBY_NOTICE_OPEN "<span class='adminhelp'>ANTAG-ENABLED SHIFT - Apply via OPFOR to be an Antagonist.</span>"
 #define OPFOR_LOBBY_NOTICE_CLOSED null
 
 /proc/send_opfor_status_message(message)
@@ -26,11 +26,18 @@ ADMIN_VERB(request_more_opfor, R_FUN, "Request OPFOR", "Request players sign up 
 	var/list/selected_options = tgui_input_checkboxes(user, "Select any optional broadcasts to send with the OPFOR request.", "Request OPFOR Options", notice_options, 0, notice_options.len)
 	if(isnull(selected_options))
 		return
-	if(!islist(selected_options))
-		selected_options = list(selected_options)
+	var/list/selected_labels = list()
+	if(islist(selected_options))
+		for(var/entry in selected_options)
+			if(islist(entry))
+				selected_labels += entry[1]
+			else
+				selected_labels += entry
+	else
+		selected_labels += selected_options
 
-	var/send_lobby_notice = ("Send lobby notice" in selected_options)
-	var/send_status_message = ("Send status message" in selected_options)
+	var/send_lobby_notice = ("Send lobby notice" in selected_labels)
+	var/send_status_message = ("Send status message" in selected_labels)
 
 	if(send_lobby_notice)
 		SStitle.set_notice(OPFOR_LOBBY_NOTICE_OPEN)

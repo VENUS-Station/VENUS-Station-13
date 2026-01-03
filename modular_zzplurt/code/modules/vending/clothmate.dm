@@ -7,6 +7,8 @@
 				/obj/item/clothing/shoes/invisiboots = 10,
 			)
 		),
+		//VENUS REMOVAL START
+		/*
 		list(
 			"name" = "Special",
 			"products" = list(
@@ -16,4 +18,6 @@
 				/obj/item/clothing/under/goner/fake = 20,
 			)
 		)
+		*/
+		//VENUS REMOVAL END
 	)

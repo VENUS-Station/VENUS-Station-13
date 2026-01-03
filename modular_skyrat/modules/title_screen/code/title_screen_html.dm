@@ -4,9 +4,20 @@ GLOBAL_LIST_EMPTY(startup_messages)
 
 #define MAX_STARTUP_MESSAGES 1
 
+//VENUS ADDITION START - Antag encounter preference
+/mob/dead/new_player/proc/get_title_encounter_pref_display()
+	var/pref = client?.prefs?.read_preference(/datum/preference/choiced/antagonist_encounters)
+	if (isnull(pref))
+		pref = ENCOUNTER_PREF_GREEN
+	var/pref_text = uppertext(encounter_pref_to_text(pref))
+	var/pref_color = encounter_pref_to_color(pref)
+	return "ANTAG ENCOUNTERS: \[<span style='color: [pref_color]'>[pref_text]</span>\]"
+//VENUS ADDITION END
+
 /mob/dead/new_player/proc/get_title_html()
 	var/dat = SStitle.title_html
-	//VENUS ADDITION START - Add client chat styles to title screen
+	//VENUS ADDITION START - Add client chat styles to title screen + antag encounter preference link
+	var/encounter_link = "<a id=\"antag_encounters\" class=\"menu_button\" href='byond://?src=[text_ref(src)];toggle_encounter=1'>[get_title_encounter_pref_display()]</a>"
 	var/client/current_client = client
 	if(current_client?.script)
 		var/style_index = findtext(dat, "<style")
@@ -127,6 +138,9 @@ GLOBAL_LIST_EMPTY(startup_messages)
 			<hr>
 			<a class="menu_button" href='byond://?src=[text_ref(src)];character_setup=1'>SETUP CHARACTER (<span id="character_slot">[uppertext(client.prefs.read_preference(/datum/preference/name/real_name))]</span>)</a>
 			<a class="menu_button" href='byond://?src=[text_ref(src)];game_options=1'>GAME OPTIONS</a>
+			<!-- VENUS ADDITION START - Antag Encounter preference link -->
+			[encounter_link]
+			<!-- VENUS ADDITION END -->
 			<a id="be_antag" class="menu_button" href='byond://?src=[text_ref(src)];toggle_antag=1'>[client.prefs.read_preference(/datum/preference/toggle/be_antag) ? "<span class='checked'>☑</span> BE ANTAGONIST" : "<span class='unchecked'>☒</span> BE ANTAGONIST"]</a>
 			<!-- SPLURT STATION EDIT: Server swap button removed - not needed for single server setup -->
 			<!-- <hr> -->
@@ -172,6 +186,14 @@ GLOBAL_LIST_EMPTY(startup_messages)
 					antag_mark.innerHTML = antag_marks\[antag_int\];
 				}
 			}
+			// VENUS ADDITION START - Antag Encounter preference link
+			var encounter_mark = document.getElementById("antag_encounters");
+			function set_encounter(display) {
+				if (encounter_mark) {
+					encounter_mark.innerHTML = display;
+				}
+			}
+			// VENUS ADDITION END
 
 			var character_name_slot = document.getElementById("character_slot");
 			function update_current_character(name) {

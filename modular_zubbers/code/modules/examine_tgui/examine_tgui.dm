@@ -126,14 +126,22 @@
 			if(show_nsfw_flavor_text != "Never")
 				flavor_text_nsfw = preferences.read_preference(/datum/preference/text/flavor_text_nsfw/silicon)
 				headshot_nsfw = preferences.read_preference(/datum/preference/text/headshot/silicon/nsfw)
-
+		//VENUS EDIT START - Antagonist encounter preference
+		/*ORIGINAL:
 		//Round Removal opt in stuff
 		if(CONFIG_GET(flag/use_rr_opt_in_preferences))
 			var/rr_prefs = preferences.read_preference(/datum/preference/toggle/be_round_removed)
 			ooc_notes += "\n"
 			ooc_notes += "Round Removal Opt-In Status: [rr_prefs ? "Yes" : "No"]\n"
 			ooc_notes += "\n"
-
+		*/
+		// Antagonist encounter preference
+		if(can_view_encounter_pref(user, holder))
+			var/encounter_pref = get_effective_encounter_pref(holder)
+			ooc_notes += "\n"
+			ooc_notes += "Antagonist Encounters: [encounter_pref_to_text(encounter_pref)]\n"
+			ooc_notes += "\n"
+		//VENUS EDIT END
 	if(ishuman(holder))
 		var/mob/living/carbon/human/holder_human = holder
 		obscured = (holder_human.covered_slots & HIDEFACE) && obscurity_examine_pref

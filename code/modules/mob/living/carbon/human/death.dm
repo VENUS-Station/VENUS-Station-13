@@ -29,7 +29,13 @@ GLOBAL_LIST_EMPTY(dead_players_during_shift)
 
 	if(SSticker.HasRoundStarted())
 		SSblackbox.ReportDeath(src)
+		//VENUS EDIT START - Log if encounter pref >= RED
+		/* ORIGINAL:
 		log_message("has died with Round Removal [client?.prefs.read_preference(/datum/preference/toggle/be_round_removed) ? "enabled" : "disabled or unavailable"] (BRUTE: [src.get_brute_loss()], BURN: [src.get_fire_loss()], TOX: [src.get_tox_loss()], OXY: [src.get_oxy_loss()]", LOG_ATTACK) // BUBBER EDIT - Round Removal OPT-IN LOGGING
+		*/
+		var/round_removal_allowed = get_effective_encounter_pref(src) >= ENCOUNTER_PREF_RED
+		log_message("has died with Round Removal [round_removal_allowed ? "enabled" : "disabled or unavailable"] (BRUTE: [src.get_brute_loss()], BURN: [src.get_fire_loss()], TOX: [src.get_tox_loss()], OXY: [src.get_oxy_loss()]", LOG_ATTACK)
+		//VENUS EDIT END
 		if(key) // Prevents log spamming of keyless mob deaths (like xenobio monkeys)
 			investigate_log("has died at [loc_name(src)].<br>\
 				BRUTE: [src.get_brute_loss()] BURN: [src.get_fire_loss()] TOX: [src.get_tox_loss()] OXY: [src.get_oxy_loss()] STAM: [src.get_stamina_loss()]<br>\

@@ -411,7 +411,7 @@
 /datum/opposing_force/proc/set_equipment_count(mob/user, datum/opposing_force_selected_equipment/equipment, new_count)
 	var/sanitized_newcount = sanitize_integer(new_count, 1, equipment.opposing_force_equipment.max_amount)
 	equipment.count = new_count
-	add_log(user.ckey, "Set equipment '[equipment.opposing_force_equipment.name] count to [sanitized_newcount]")
+	// add_log(user.ckey, "Set equipment '[equipment.opposing_force_equipment.name] count to [sanitized_newcount]") //VENUS REMOVAL
 
 /datum/opposing_force/proc/handle(mob/user)
 	if(handling_admin)
@@ -466,14 +466,14 @@
 	if(!incoming_equipment)
 		CRASH("set_equipment_reason tried to update a non existent opfor equipment datum!")
 	var/sanitized_reason = replacetext(STRIP_HTML_SIMPLE(new_reason, OPFOR_TEXT_LIMIT_DESCRIPTION), "\"", " ")
-	add_log(user.ckey, "Updated equipment([incoming_equipment.opposing_force_equipment.name]) REASON from: [incoming_equipment.reason] to: [sanitized_reason]")
+	// add_log(user.ckey, "Updated equipment([incoming_equipment.opposing_force_equipment.name]) REASON from: [incoming_equipment.reason] to: [sanitized_reason]") //VENUS REMOVAL
 	incoming_equipment.reason = sanitized_reason
 	return TRUE
 
 /datum/opposing_force/proc/remove_equipment(mob/user, datum/opposing_force_selected_equipment/incoming_equipment)
 	if(!can_edit)
 		return
-	add_log(user.ckey, "Removed equipment: [incoming_equipment.opposing_force_equipment.name]")
+	// add_log(user.ckey, "Removed equipment: [incoming_equipment.opposing_force_equipment.name]") //VENUS REMOVAL
 	selected_equipment -= incoming_equipment
 	qdel(incoming_equipment)
 
@@ -485,7 +485,7 @@
 		return
 	var/datum/opposing_force_selected_equipment/new_selected = new(incoming_equipment)
 	selected_equipment += new_selected
-	add_log(user.ckey, "Selected equipment: [incoming_equipment.name]")
+	// add_log(user.ckey, "Selected equipment: [incoming_equipment.name]") //VENUS REMOVAL
 	return new_selected
 
 /datum/opposing_force/proc/issue_gear(mob/user)
@@ -631,7 +631,7 @@
 	if(!can_edit)
 		return
 	var/sanitized_backstory = STRIP_HTML_SIMPLE(incoming_backstory, OPFOR_TEXT_LIMIT_BACKSTORY)
-	add_log(user.ckey, "Updated BACKSTORY from: [set_backstory] to: [sanitized_backstory]")
+	// add_log(user.ckey, "Updated BACKSTORY from: [set_backstory] to: [sanitized_backstory]") //VENUS REMOVAL
 	set_backstory = sanitized_backstory
 	return TRUE
 
@@ -681,7 +681,7 @@
 			opposing_force_objective.text_intensity = OPFOR_OBJECTIVE_INTENSITY_4
 		if(401 to 501)
 			opposing_force_objective.text_intensity = OPFOR_OBJECTIVE_INTENSITY_5
-	add_log(user.ckey, "Set updated an objective intensity from [opposing_force_objective.intensity] to [sanitized_intensity].")
+	// add_log(user.ckey, "Set updated an objective intensity from [opposing_force_objective.intensity] to [sanitized_intensity].") //VENUS REMOVAL
 	opposing_force_objective.intensity = sanitized_intensity
 	return TRUE
 
@@ -692,7 +692,7 @@
 		CRASH("set_objective_description tried to update a non existent opfor objective!")
 	var/sanitized_description = replacetext(STRIP_HTML_SIMPLE(new_description, OPFOR_TEXT_LIMIT_DESCRIPTION), "\"", " ")
 	opposing_force_objective.description = sanitized_description
-	add_log(user.ckey, "Updated objective([opposing_force_objective.title]) DESCRIPTION from: [opposing_force_objective.description] to: [sanitized_description]")
+	// add_log(user.ckey, "Updated objective([opposing_force_objective.title]) DESCRIPTION from: [opposing_force_objective.description] to: [sanitized_description]") //VENUS REMOVAL
 	return TRUE
 
 /datum/opposing_force/proc/set_objective_justification(mob/user, datum/opposing_force_objective/opposing_force_objective, new_justification)
@@ -702,7 +702,7 @@
 		CRASH("set_objective_description tried to update a non existent opfor objective!")
 	var/sanitize_justification = replacetext(STRIP_HTML_SIMPLE(new_justification, OPFOR_TEXT_LIMIT_JUSTIFICATION), "\"", " ")
 	opposing_force_objective.justification = sanitize_justification
-	add_log(user.ckey, "Updated objective([opposing_force_objective.title]) JUSTIFICATION from: [opposing_force_objective.justification] to: [sanitize_justification]")
+	// add_log(user.ckey, "Updated objective([opposing_force_objective.title]) JUSTIFICATION from: [opposing_force_objective.justification] to: [sanitize_justification]") //VENUS REMOVAL
 	return TRUE
 
 /datum/opposing_force/proc/remove_objective(mob/user, datum/opposing_force_objective/opposing_force_objective)
@@ -711,7 +711,7 @@
 	if(!opposing_force_objective)
 		CRASH("set_objective_description tried to remove a non existent opfor objective!")
 	objectives -= opposing_force_objective
-	add_log(user.ckey, "Removed the following objective from their OPFOR application: [opposing_force_objective.title]")
+	// add_log(user.ckey, "Removed the following objective from their OPFOR application: [opposing_force_objective.title]") //VENUS REMOVAL
 	qdel(opposing_force_objective)
 	return TRUE
 
@@ -723,7 +723,7 @@
 		return
 	var/datum/opposing_force_objective/opfor_objective = new
 	objectives += opfor_objective
-	add_log(user.ckey, "Added a new blank objective")
+	// add_log(user.ckey, "Added a new blank objective") //VENUS REMOVAL
 	return opfor_objective
 
 /datum/opposing_force/proc/set_objective_title(mob/user, datum/opposing_force_objective/opposing_force_objective, new_title)
@@ -732,7 +732,7 @@
 	var/sanitized_title = replacetext(STRIP_HTML_SIMPLE(new_title, OPFOR_TEXT_LIMIT_TITLE), "\"", " ")
 	if(!opposing_force_objective)
 		CRASH("set_objective_description tried to update a non existent opfor objective!")
-	add_log(user.ckey, "Updated objective([opposing_force_objective.title]) TITLE from: [opposing_force_objective.title] to: [sanitized_title]")
+	// add_log(user.ckey, "Updated objective([opposing_force_objective.title]) TITLE from: [opposing_force_objective.title] to: [sanitized_title]") //VENUS REMOVAL
 	opposing_force_objective.title = sanitized_title
 	return TRUE
 
@@ -1030,7 +1030,7 @@
 			"equipment_count" = iterating_equipment.count,
 		)
 
-	add_log(exporter.ckey, "Exported a json OPFOR.")
+	// add_log(exporter.ckey, "Exported a json OPFOR.") //VENUS REMOVAL
 
 	var/to_write_file = "data/opfor_temp/[REF(src)].json"
 	rustg_file_write(json_encode(exported_data), to_write_file)
@@ -1040,7 +1040,7 @@
 
 	catch
 		log_game("OPFOR by ckey: [exporter.ckey] attempted to export JSON data but ftp(file()) runtimed.")
-		add_log(exporter.ckey, "Attempted to export JSON data but ftp(file()) runtimed.")
+		// add_log(exporter.ckey, "Attempted to export JSON data but ftp(file()) runtimed.") //VENUS REMOVAL
 
 	fdel(to_write_file)
 

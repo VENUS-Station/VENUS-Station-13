@@ -1,7 +1,7 @@
 //VENUS ADDITION START
 #define OPFOR_STATUS_MESSAGE_OPEN "Antagonists have been requested for this shift. Apply via in-game OPFOR if interested."
 #define OPFOR_STATUS_MESSAGE_CLOSED "OPFOR requests are now closed, await the next chance if interested!"
-#define OPFOR_LOBBY_NOTICE_OPEN "<span class='adminhelp'>ANTAG-ENABLED SHIFT - Apply via OPFOR to be an Antagonist.</span>"
+#define OPFOR_LOBBY_NOTICE_OPEN "<span class='adminhelp'>ANTAG-ENABLED SHIFT - Apply via OPFOR to be an Antagonist.</span><br><br><span>Join as your character → press ESC to open the menu → click OPFOR button</span>"
 #define OPFOR_LOBBY_NOTICE_CLOSED null
 
 /proc/send_opfor_status_message(message, include_ping = TRUE)

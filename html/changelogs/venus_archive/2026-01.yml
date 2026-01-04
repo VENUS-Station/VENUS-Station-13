@@ -2,3 +2,7 @@
   Goku:
   - rscadd: Added an "Antag Encounter Preference" and its display to the title screen, showing
       the player's current preference for antagonist encounters.
+2026-01-04:
+  Goku:
+  - code_imp: Improved OPFOR panel, allowing players to select an antagonist.
+  - bugfix: Fixed ESC menu not showing OPFOR and Respawn buttons.

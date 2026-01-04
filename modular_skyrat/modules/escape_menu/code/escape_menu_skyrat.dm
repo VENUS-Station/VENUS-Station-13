@@ -6,7 +6,7 @@
 			/* hud_owner = */ null,
 			/* escape_menu = */ src,
 			/* button_text = */ "OPFOR",
-			/* offset = */ list(-311, -260),
+			/* offset = */ list(-311, 30), //VENUS EDIT (FIX ESC MENU LINKS) - Original: list(-311, -260),
 			/* font_size = */ 24,
 			/* on_click_callback = */ CALLBACK(src, PROC_REF(home_opfor)),
 		)
@@ -30,7 +30,7 @@
 			/* hud_owner = */ null,
 			/* escape_menu = */ src,
 			/* button_text = */ "Respawn",
-			/* offset = */ list(-276, -260),
+			/* offset = */ list(-381, 30), //VENUS EDIT (FIX ESC MENU LINKS) - Original: list(-276, -260),
 			/* font_size = */ 24,
 			/* on_click_callback = */ CALLBACK(src, PROC_REF(home_respawn)),
 		)

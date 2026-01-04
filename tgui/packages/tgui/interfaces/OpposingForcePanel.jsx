@@ -4,6 +4,7 @@ import {
   Box,
   Button,
   Collapsible,
+  Divider,
   Input,
   LabeledList,
   NoticeBox,
@@ -15,10 +16,30 @@ import {
   TextArea,
 } from 'tgui-core/components';
 import { round } from 'tgui-core/math';
+import { classes } from 'tgui-core/react'; //VENUS ADDITION - Antag Selection
 
 import { useBackend } from '../backend';
 import { Window } from '../layouts';
+//VENUS ADDITION START - Antag Selection
+const requireAntag = require.context(
+  './PreferencesMenu/antagonists/antagonists',
+  false,
+  /.ts$/,
+);
 
+const antagByKey = new Map();
+
+for (const antagKey of requireAntag.keys()) {
+  const antag = requireAntag(antagKey).default;
+
+  if (!antag) {
+    continue;
+  }
+
+  antagByKey.set(antag.key, antag);
+}
+const formatAntagDescription = (text) => text.replace(/\n\s+/g, '\n').trim();
+//VENUS ADDITION END
 export const OpposingForcePanel = (props) => {
   const [tab, setTab] = useState(1);
   const { act, data } = useBackend();
@@ -30,7 +51,8 @@ export const OpposingForcePanel = (props) => {
       height={860}
       theme={owner_antag ? 'syndicate' : 'admin'}
     >
-      <Window.Content scrollable>
+      {/* VENUS EDIT - Added className="OpposingForcePanel" */}
+      <Window.Content className="OpposingForcePanel" scrollable>
         <Stack vertical grow mb={1}>
           <Stack.Item>
             <Tabs fill>
@@ -107,11 +129,22 @@ export const OpposingForceTab = (props) => {
     request_updates_muted,
     can_edit,
     backstory,
+    //VENUS ADDITION START - Antag Selection
+    selected_antag_key,
+    selected_antag_name,
     handling_admin,
     blocked,
     approved,
     denied,
   } = data;
+  //VENUS ADDITION START - Antag Selection
+  const selectedAntag = selected_antag_key
+    ? antagByKey.get(selected_antag_key)
+    : null;
+  const selectedAntagLabel =
+    selected_antag_name || selected_antag_key || selectedAntag?.name;
+  const selectedDescription = selectedAntag?.description || [];
+  //VENUS ADDITION END
   return (
     <Stack vertical grow>
       <Stack.Item>
@@ -201,7 +234,78 @@ export const OpposingForceTab = (props) => {
         </Section>
       </Stack.Item>
       <Stack.Item>
-        <Section title="Backstory">
+        {/* VENUS EDIT START - Antag Selection (a bit messy if need to restore old, paste from upstream .jsx file) */}
+        <Section
+          title="Antag Preference"
+          buttons={
+            <Button
+              icon="external-link-alt"
+              content="Select Antag"
+              disabled={!can_edit}
+              onClick={() => act('open_antag_picker')}
+            />
+          }
+        >
+          {selectedAntagLabel ? (
+            <Stack align="flex-start">
+              <Stack.Item basis="180px">
+                <Stack vertical>
+                  <Stack.Item>
+                    <Box color="label">ANTAG SELECTED:</Box>
+                  </Stack.Item>
+                  <Stack.Item>
+                    <Stack align="center">
+                      {!!selected_antag_key && (
+                        <Stack.Item>
+                          <Box className="antagonist-icon-parent">
+                            <Box
+                              className={classes([
+                                'antagonists96x96',
+                                selected_antag_key,
+                                'antagonist-icon',
+                              ])}
+                            />
+                          </Box>
+                        </Stack.Item>
+                      )}
+                      <Stack.Item>
+                        <Box>{selectedAntagLabel}</Box>
+                      </Stack.Item>
+                    </Stack>
+                  </Stack.Item>
+                </Stack>
+              </Stack.Item>
+              <Stack.Item grow>
+                <Box className="OpposingForcePanel__AntagDetails">
+                  <Box color="label" mb={1}>
+                    Description
+                  </Box>
+                  {selectedDescription.length ? (
+                    selectedDescription.map((text, index) => (
+                      <Box key={`${selected_antag_key}-${index}`}>
+                        <Box preserveWhitespace>
+                          {formatAntagDescription(text)}
+                        </Box>
+                        {index !== selectedDescription.length - 1 && (
+                          <Divider />
+                        )}
+                      </Box>
+                    ))
+                  ) : (
+                    <Box color="label">No description available.</Box>
+                  )}
+                </Box>
+              </Stack.Item>
+            </Stack>
+          ) : (
+            <Box color="label">No antag selected.</Box>
+          )}
+        </Section>
+      </Stack.Item>
+      {/* VENUS EDIT END */}
+      <Stack.Item>
+        {/* VENUS EDIT - Added (Optional) */}
+        <Section title="Backstory (Optional)">
           <TextArea
             fluid
             disabled={!can_edit}
@@ -218,7 +322,8 @@ export const OpposingForceTab = (props) => {
       </Stack.Item>
       <Stack.Item>
         <Section
-          title="Objectives"
+          // VENUS EDIT - Added (Leave empty for Random Objectives)
+          title="Objectives (Leave empty for Random Objectives)"
           buttons={
             <Button
               icon="plus"
@@ -635,7 +740,12 @@ export const AdminTab = (props) => {
     owner_mob,
     owner_role,
     raw_status,
+    //VENUS ADDITION START
+    selected_antag_key,
+    selected_antag_name,
+    //VENUS ADDITION END
   } = data;
+  const selectedAntagLabel = selected_antag_name || selected_antag_key;
   return (
     <Stack vertical grow>
       <Stack.Item>
@@ -643,6 +753,30 @@ export const AdminTab = (props) => {
           <LabeledList>
             <LabeledList.Item label="Name">{owner_mob}</LabeledList.Item>
             <LabeledList.Item label="Role">{owner_role}</LabeledList.Item>
+            {/* VENUS ADDITION START - ANTAG SELECTION PANEL */}
+            <LabeledList.Item label="Antag Selected">
+              {selectedAntagLabel ? (
+                <Stack align="center">
+                  {!!selected_antag_key && (
+                    <Stack.Item>
+                      <Box className="antagonist-icon-parent antagonist-icon-parent--small">
+                        <Box
+                          className={classes([
+                            'antagonists96x96',
+                            selected_antag_key,
+                            'antagonist-icon',
+                          ])}
+                        />
+                      </Box>
+                    </Stack.Item>
+                  )}
+                  <Stack.Item>{selectedAntagLabel}</Stack.Item>
+                </Stack>
+              ) : (
+                <Box color="label">None</Box>
+              )}
+            </LabeledList.Item>
+            {/* VENUS ADDITION END */}
             <LabeledList.Item label="Application Status">
               {raw_status}
             </LabeledList.Item>

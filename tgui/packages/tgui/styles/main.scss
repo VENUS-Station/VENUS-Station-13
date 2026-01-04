@@ -52,7 +52,9 @@
 @include meta.load-css('./interfaces/VorePanel.scss');
 // SKYRAT EDIT ADDITION END
 @include meta.load-css('./interfaces/DetectiveBoard.scss');
-
+//VENUS ADDITION START
+@include meta.load-css('./interfaces/OpposingForcePanel.scss');
+//VENUS ADDITION END
 // Layouts
 @include meta.load-css('./layouts/Layout.scss');
 @include meta.load-css('./layouts/NtosHeader.scss');

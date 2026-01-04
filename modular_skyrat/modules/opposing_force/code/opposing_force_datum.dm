@@ -43,6 +43,12 @@
 	var/list/objectives = list()
 	/// Justification for wanting to do bad things.
 	var/set_backstory = ""
+	//VENUS ADDITION START - Antag Selection
+	/// Selected antag icon key for the OPFOR request.
+	var/selected_antag_key = ""
+	/// Selected antag name for the OPFOR request.
+	var/selected_antag_name = ""
+	//VENUS ADDITION END
 	/// Has this been approved?
 	var/status = OPFOR_STATUS_NOT_SUBMITTED
 	/// Hard ref to our mind.
@@ -116,6 +122,29 @@
 		ui = new(user, src, "OpposingForcePanel")
 		ui.open()
 
+//VENUS ADDITION START - Antag Selection
+/datum/opposing_force/proc/get_open_ui_by_interface(mob/user, interface_name)
+	if(!LAZYLEN(open_uis))
+		return null
+	for(var/datum/tgui/ui in open_uis)
+		if(ui.user == user && ui.interface == interface_name)
+			return ui
+	return null
+
+/datum/opposing_force/proc/ui_interact_antag_picker(mob/user, datum/tgui/ui)
+	if(!ui)
+		ui = get_open_ui_by_interface(user, "OpposingForceAntagPicker")
+	if(ui)
+		ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "OpposingForceAntagPicker")
+		ui.open()
+
+/datum/opposing_force/ui_assets(mob/user)
+	return list(
+		get_asset_datum(/datum/asset/spritesheet/antagonists),
+	)
+//VENUS ADDITION END
 /datum/opposing_force/ui_state(mob/user)
 	return GLOB.always_state
 
@@ -130,7 +159,11 @@
 	data["owner_antag"] = (mind_reference.current in GLOB.current_living_antags)
 
 	data["backstory"] = set_backstory
+	//VENUS ADDITION START - Antag Selection
+	data["selected_antag_key"] = selected_antag_key
 
+	data["selected_antag_name"] = selected_antag_name
+	//VENUS ADDITION END
 	data["raw_status"] = status
 
 	data["status"] = get_status_string()
@@ -236,6 +269,13 @@
 		// General control
 		if("set_backstory")
 			set_backstory(usr, params["backstory"])
+		//VENUS ADDITION START - Antag Selection
+		if("open_antag_picker")
+			ui_interact_antag_picker(usr)
+		if("set_selected_antag")
+			if(set_selected_antag(usr, params["antag_key"], params["antag_name"]) && ui?.interface == "OpposingForceAntagPicker")
+				ui.close()
+		//VENUS ADDITION END
 		if("request_update")
 			request_update(usr)
 		if("modify_request")
@@ -594,6 +634,21 @@
 	add_log(user.ckey, "Updated BACKSTORY from: [set_backstory] to: [sanitized_backstory]")
 	set_backstory = sanitized_backstory
 	return TRUE
+
+//VENUS ADDITION START - Antag Selection
+/datum/opposing_force/proc/set_selected_antag(mob/user, antag_key, antag_name)
+	if(!can_edit)
+		return
+	if(!antag_key || !antag_name)
+		return
+	var/sanitized_key = STRIP_HTML_SIMPLE(antag_key, OPFOR_TEXT_LIMIT_TITLE)
+	var/sanitized_name = STRIP_HTML_SIMPLE(antag_name, OPFOR_TEXT_LIMIT_TITLE)
+	if(!length(sanitized_key) || !length(sanitized_name))
+		return
+	selected_antag_key = sanitized_key
+	selected_antag_name = sanitized_name
+	return TRUE
+//VENUS ADDITION END
 
 /datum/opposing_force/proc/approve_all(mob/user)
 	if(SSopposing_force.approve(src, user))

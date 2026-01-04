@@ -1,0 +1,70 @@
+//THIS IS A VENUS SCSS FILE
+.OpposingForcePanel,
+.OpposingForceAntagPicker {
+  .OpposingForceAntagPicker__Scroll {
+    max-height: 320px;
+    overflow-y: auto;
+    padding-right: var(--space-s);
+  }
+
+  .OpposingForceAntagPicker__Grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-l);
+  }
+
+  .OpposingForceAntagPicker__Item {
+    margin-bottom: var(--space-s);
+  }
+
+  .OpposingForcePanel__AntagDetails {
+    border-left: var(--border-thickness-tiny) solid var(--color-border);
+    padding-left: var(--space-m);
+  }
+
+  .antagonist-icon-parent {
+    cursor: var(--cursor-pointer);
+    border-style: solid;
+    border-radius: var(--border-radius-circular);
+    border-width: var(--border-thickness-large);
+    box-sizing: content-box;
+    overflow: hidden;
+    position: relative;
+
+    height: 96px;
+    width: 96px;
+
+    border-color: var(--color-green);
+  }
+
+  .antagonist-icon-parent--small {
+    border-width: var(--border-thickness-medium);
+    height: 64px;
+    width: 64px;
+  }
+
+  .antagonist-icon-parent--selected {
+    border-color: var(--color-teal);
+  }
+
+  .antagonist-icon-parent--disabled {
+    cursor: var(--cursor-default);
+    border-color: var(--color-grey);
+  }
+
+  .antagonist-icon {
+    image-rendering: pixelated;
+    border-radius: var(--border-radius-circular);
+    overflow: hidden;
+    transition: transform var(--transition-time-fast) ease-in;
+  }
+
+  .antagonist-icon-parent:not(.antagonist-icon-parent--disabled)
+    .antagonist-icon:hover {
+    transform: scale(1.2);
+  }
+
+  .antagonist-icon-parent--disabled .antagonist-icon {
+    opacity: 0.5;
+  }
+}

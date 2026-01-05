@@ -1,3 +1,5 @@
+// VENUS REMOVAL START - Replaced with lunchbox quirk
+/*
 /obj/item/storage/lunchbox
 	name = "lunchbox"
 	icon = 'modular_zubbers/icons/obj/storage/lunchbox.dmi'
@@ -64,3 +66,5 @@
 	icon_state = "lunchbox_suspicious"
 	inhand_icon_state = "lunchbox_suspicious"
 	desc = "A plain red lunchbox... right?"
+*/
+// VENUS REMOVAL END

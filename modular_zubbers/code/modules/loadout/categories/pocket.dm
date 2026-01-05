@@ -102,6 +102,8 @@
 *	LUNCHBOX
 */
 
+// VENUS REMOVAL START - Replaced with lunchbox quirk
+/*
 /datum/loadout_item/pocket_items/lunchbox_nanotrasen
 	name = "Nanotrasen Lunchbox"
 	item_path = /obj/item/storage/lunchbox/nanotrasen
@@ -129,6 +131,8 @@
 /datum/loadout_item/pocket_items/lunchbox_amongus
 	name = "Suspicious Red Lunchbox"
 	item_path = /obj/item/storage/lunchbox/amongus
+*/
+// VENUS REMOVAL END
 
 /// Lustwish stuff
 

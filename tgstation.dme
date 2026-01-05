@@ -10607,6 +10607,8 @@
 #include "modular_zzvenus\code\datums\quirks\noitem_quirks.dm"
 #include "modular_zzvenus\code\datums\quirks\negative_quirks\convict.dm"
 #include "modular_zzvenus\code\datums\quirks\negative_quirks\void_touched.dm"
+#include "modular_zzvenus\code\datums\quirks\neutral_quirks\lunch_box\lunchbox.dm"
+#include "modular_zzvenus\code\datums\quirks\neutral_quirks\lunch_box\lunchbox_items.dm"
 #include "modular_zzvenus\code\datums\shuttles\arrival.dm"
 #include "modular_zzvenus\code\game\objects\effects\decals\turfdecal\markings.dm"
 #include "modular_zzvenus\code\game\objects\items\policetape.dm"

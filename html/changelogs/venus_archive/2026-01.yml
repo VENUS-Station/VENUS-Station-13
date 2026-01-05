@@ -6,3 +6,4 @@
   Goku:
   - code_imp: Improved OPFOR panel, allowing players to select an antagonist.
   - bugfix: Fixed ESC menu not showing OPFOR and Respawn buttons.
+  - rscadd: Added a Lunchbox quirk, giving players a lunchbox with pickable designs and foods.

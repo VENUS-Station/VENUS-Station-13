@@ -20,8 +20,12 @@
 	/// What is the first snack player wants?
 	var/lunchbox_first_snack_choice = NONE
 
+	//VENUS REMOVAL START - Remove second snack
+	/*
 	/// What is the second snack players want
 	var/lunchbox_second_snack_choice = NONE
+	*/
+	//VENUS REMOVAL END
 
 	/// What is the drink players want?
 	var/lunchbox_drink_choice = NONE
@@ -35,7 +39,7 @@
 		/datum/preference/choiced/lunchbox_design,
 		/datum/preference/choiced/lunchbox_meal_choice,
 		/datum/preference/choiced/lunchbox_first_snack_choice,
-		/datum/preference/choiced/lunchbox_second_snack_choice,
+		///datum/preference/choiced/lunchbox_second_snack_choice, //VENUS REMOVAL - Remove second snack
 		/datum/preference/choiced/lunchbox_drink_choice,
 		/datum/preference/choiced/lunchbox_desert_choice,
 	)
@@ -59,6 +63,8 @@
 	if(lunchbox_first_snack_choice == NONE)
 		lunchbox_first_snack_choice = pick(assoc_to_values(GLOB.possible_player_lunchbox_snack_choice))
 
+	//VENUS REMOVAL START - Remove second snack
+	/*
 	/// What snack does this character desire?
 	var/desired_snack_2 = client_source?.prefs.read_preference(/datum/preference/choiced/lunchbox_second_snack_choice) || "Random"
 	if(desired_snack_2 != "Random")
@@ -66,7 +72,8 @@
 	/// If no snack choice, WE PICKIN FOR EM!!
 	if(lunchbox_second_snack_choice == NONE)
 		lunchbox_second_snack_choice = pick(assoc_to_values(GLOB.possible_player_lunchbox_snack_choice))
-
+	*/
+	//VENUS REMOVAL END
 	/// What are they thirsty for?
 	var/desired_drink = client_source?.prefs.read_preference(/datum/preference/choiced/lunchbox_drink_choice) || "Random"
 	if(desired_drink != "Random")
@@ -93,7 +100,7 @@
 	// Spawn items directly inside the lunchbox
 	new lunchbox_meal_choice(lunchbox_base)
 	new lunchbox_first_snack_choice(lunchbox_base)
-	new lunchbox_second_snack_choice(lunchbox_base)
+	// new lunchbox_second_snack_choice(lunchbox_base) //VENUS REMOVAL - Remove second snack
 	new lunchbox_drink_choice(lunchbox_base)
 	new lunchbox_dessert_choice(lunchbox_base)
 
@@ -394,6 +401,8 @@ GLOBAL_LIST_INIT(possible_player_lunchbox_snack_choice, list(
 /datum/preference/choiced/lunchbox_first_snack_choice/apply_to_human(mob/living/carbon/human/target, value)
 	return
 
+//VENUS REMOVAL START - Remove second snack
+/*
 /// Snack choice 2 Electric Boogaloo
 
 /datum/preference/choiced/lunchbox_second_snack_choice
@@ -424,7 +433,8 @@ GLOBAL_LIST_INIT(possible_player_lunchbox_snack_choice, list(
 
 /datum/preference/choiced/lunchbox_second_snack_choice/apply_to_human(mob/living/carbon/human/target, value)
 	return
-
+*/
+//VENUS REMOVAL END
 /// Drink Choice
 
 /datum/preference/choiced/lunchbox_drink_choice

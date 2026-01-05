@@ -25,11 +25,15 @@ export const lunchbox_first_snack_choice: FeatureWithIcons<string> = {
   component: FeatureIconnedDropdownInput,
 };
 
+//VENUS REMOVAL START - Remove second snack
+/*
 export const lunchbox_second_snack_choice: FeatureWithIcons<string> = {
   name: 'Second Snack Choice',
   description: "What snack would you like inside the lunchbox",
   component: FeatureIconnedDropdownInput,
 };
+*/
+//VENUS REMOVAL END
 
 export const lunchbox_drink_choice: FeatureWithIcons<string> = {
   name: 'Drink Choice',

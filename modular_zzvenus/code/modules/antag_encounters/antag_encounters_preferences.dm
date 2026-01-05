@@ -10,9 +10,9 @@
 /datum/preference/choiced/antagonist_encounters/compile_constant_data()
 	var/list/data = ..()
 	data[CHOICED_PREFERENCE_DISPLAY_NAMES] = list(
-		ENCOUNTER_PREF_GREEN = "GREEN",
-		ENCOUNTER_PREF_AMBER = "AMBER",
-		ENCOUNTER_PREF_RED = "RED",
+		"[ENCOUNTER_PREF_GREEN]" = "GREEN",
+		"[ENCOUNTER_PREF_AMBER]" = "AMBER",
+		"[ENCOUNTER_PREF_RED]" = "RED",
 	)
 	return data
 

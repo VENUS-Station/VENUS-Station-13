@@ -121,7 +121,7 @@ GLOBAL_LIST_INIT(possible_player_lunchbox_design_choice, list(
 	"Nanotrasen (Gold)" = /obj/item/storage/lunchbox/nt_gold,
 	"Syndicate" = /obj/item/storage/lunchbox/syndicate,
 	"Interdyne" = /obj/item/storage/lunchbox/interdyne,
-	"SolFed" = /obj/item/storage/lunchbox/solfed,
+	"TerraGov" = /obj/item/storage/lunchbox/terragov, //VENUS EDIT - solfed -> terragov
 	"Space" = /obj/item/storage/lunchbox/space,
 	"Hearts" = /obj/item/storage/lunchbox/hearts,
 	"Heart" = /obj/item/storage/lunchbox/heart2, //VENUS EDIT - Renamed to heart2 for compatibility with bubber lunchbox

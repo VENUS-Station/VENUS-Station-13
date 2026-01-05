@@ -1,3 +1,5 @@
+//VENUS REMOVAL START - We already have aloof personality
+/*
 // Edit to update description
 /datum/quirk/bad_touch
 	medical_record_text = "Patient demonstrates a dislike for physical affection."
@@ -20,3 +22,5 @@
 // Set effect examine text
 /datum/status_effect/quirk_examine/bad_touch/get_examine_text()
 	return span_warning("[owner.p_They()] look[owner.p_s()] like someone who doesn't enjoy physical affection.")
+*/
+//VENUS REMOVAL END

@@ -1,5 +1,4 @@
-
-//skyrat PORT
+//NOVA PORT
 /datum/quirk/item_quirk/lunchbox_owner
 	name = "Lunchbox User"
 	desc = "You brought a lunch, homemade or not, you decided to pack one for yourself!"

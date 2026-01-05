@@ -51,8 +51,8 @@
 /obj/item/storage/lunchbox/interdyne
 	icon_state = "interdyne"
 
-/obj/item/storage/lunchbox/solfed
-	icon_state = "solfed"
+/obj/item/storage/lunchbox/terragov //VENUS EDIT - solfed -> terragov
+	icon_state = "terragov" //VENUS EDIT - solfed -> terragov
 
 /obj/item/storage/lunchbox/gold
 	icon_state = "gold"

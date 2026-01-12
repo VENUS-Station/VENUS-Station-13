@@ -10,3 +10,7 @@
 2026-01-05:
   Goku:
   - rscadd: Added the Underworld Connections quirk, granting access to a black market uplink and exploitable crew information, with the downside of being suspected by security.
+2026-01-12:
+  Goku:
+  - rscadd: Added the Dormant Healing Factor quirk, allowing players to heal more severe injuries while sleeping.
+  - rscdel: Removed the Restorative Metabolism quirk, replaced by Dormant Healing Factor.

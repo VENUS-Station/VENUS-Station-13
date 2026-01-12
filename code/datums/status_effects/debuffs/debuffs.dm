@@ -211,6 +211,7 @@
 		if(locate(/obj/item/pillow) in owner.loc)
 			sleep_quality += 0.1
 
+		var/ignore_sleep_heal_cap = HAS_TRAIT(owner, TRAIT_DORMANT_HEALING_FACTOR) //VENUS ADDITION - Dormant Healing Factor trait ignores the sleep healing cap
 		var/need_mob_update = FALSE
 		if(sleep_quality > 0)
 			if(iscarbon(owner))
@@ -232,7 +233,7 @@
 					if(prob(2))
 						to_chat(carbon_owner, span_notice("You feel your fitness improving!"))
 
-			if(health_ratio > 0.8) // only heals minor physical damage
+			if(health_ratio > 0.8 || ignore_sleep_heal_cap) // only heals minor physical damage //VENUS EDIT - added ignore_sleep_heal_cap - Dormant Healing Factor trait ignores the sleep healing cap
 				need_mob_update += owner.adjust_brute_loss(-0.4 * sleep_quality * seconds_between_ticks, updating_health = FALSE, required_bodytype = BODYTYPE_ORGANIC)
 				need_mob_update += owner.adjust_fire_loss(-0.4 * sleep_quality * seconds_between_ticks, updating_health = FALSE, required_bodytype = BODYTYPE_ORGANIC)
 				need_mob_update += owner.adjust_tox_loss(-0.2 * sleep_quality * seconds_between_ticks, updating_health = FALSE, forced = TRUE, required_biotype = MOB_ORGANIC)

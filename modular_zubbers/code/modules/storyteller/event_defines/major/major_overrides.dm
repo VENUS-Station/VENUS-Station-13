@@ -34,7 +34,8 @@
 
 /datum/round_event_control/anomaly/anomaly_vortex
 	track = EVENT_TRACK_MAJOR
-	// tags = list(TAG_DESTRUCTIVE) //VENUS REMOVAL: Already defined in parent path
+	tags = list(TAG_DESTRUCTIVE)
+	weight = 0 // SPLURT change: No more "haha fuck you" anomaly
 
 /datum/round_event_control/anomaly/anomaly_pyro
 	track = EVENT_TRACK_MAJOR

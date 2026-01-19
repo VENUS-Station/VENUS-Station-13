@@ -14,3 +14,8 @@
   Goku:
   - rscadd: Added the Dormant Healing Factor quirk, allowing players to heal more severe injuries while sleeping.
   - rscdel: Removed the Restorative Metabolism quirk, replaced by Dormant Healing Factor.
+2026-01-19:
+  Goku:
+  - rscadd: Added a voluntary sleep triggered by sleep verb and HUD button, also with a wake-up action.
+  - rscadd: Added sleep-quality info to the sleeping status tooltip.
+  - code_imp: Sleeping now takes time based on nearby beds/tables, with clearer messaging and a sleepy overlay.

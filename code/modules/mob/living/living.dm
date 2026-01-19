@@ -665,8 +665,45 @@
 		return
 	else
 		if(tgui_alert(usr, "You sure you want to sleep for a while?", "Sleep", list("Yes", "No")) == "Yes")
+		//VENUS EDIT START - Voluntary sleep
+		/* ORIGINAL:
 			SetSleeping(400) //Short nap
+		*/
+			var/turf/user_turf = get_turf(src)
+			var/obj/structure/bed/nearby_bed = user_turf ? (locate(/obj/structure/bed) in range(1, user_turf)) : null
+			var/obj/structure/table/nearby_table = user_turf ? (locate(/obj/structure/table) in range(1, user_turf)) : null
+			var/near_bed = !isnull(nearby_bed)
+			var/near_table = !near_bed && !isnull(nearby_table)
+			var/sleep_delay = near_bed ? 10 SECONDS : (near_table ? 15 SECONDS : 20 SECONDS)
+			var/obj/item/organ/eyes/eyes = null
+			var/closed_eyes = FALSE
+			set_resting(TRUE, TRUE)
 
+			if(iscarbon(src))
+				var/mob/living/carbon/carbon_mob = src
+				eyes = carbon_mob.get_organ_slot(ORGAN_SLOT_EYES)
+				if(eyes?.blink_animation && eyes.eyelid_left && eyes.eyelid_right)
+					var/eye_close_delay = sleep_delay * cached_multiplicative_actions_slowdown
+					eyes.blink(eye_close_delay, restart_animation = FALSE)
+					closed_eyes = TRUE
+
+			if(near_bed)
+				to_chat(src, span_notice("You settle into \the [nearby_bed]. It's comfortable, and you start to drift off..."))
+			else if(near_table)
+				to_chat(src, span_notice("You settle onto \the [nearby_table]. It's not a bed, but better than nothing..."))
+			else
+				to_chat(src, span_notice("You settle down on \the [user_turf]. It's uncomfortable, and it'll take a bit to drift off..."))
+
+			overlay_fullscreen("sleepy", /atom/movable/screen/fullscreen/impaired, 3)
+			if(!do_after(src, sleep_delay, src, hidden = near_bed))
+				if(closed_eyes)
+					eyes.animate_eyelids(src)
+				clear_fullscreen("sleepy", 0 SECONDS)
+				return
+
+			apply_status_effect(/datum/status_effect/incapacitating/sleeping/voluntary)
+			clear_fullscreen("sleepy", 0 SECONDS)
+		//VENUS EDIT END
 
 /mob/proc/get_contents()
 

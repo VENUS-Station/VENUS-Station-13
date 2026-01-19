@@ -487,6 +487,8 @@
 /atom/movable/screen/sleep/Click()
 	if(!isliving(usr) || HAS_TRAIT(usr, TRAIT_KNOCKEDOUT))
 		return
+	//VENUS EDIT START - Voluntary sleep
+	/* ORIGINAL:
 	if(usr.client?.prefs.read_preference(/datum/preference/toggle/remove_double_click))
 		var/tgui_answer = tgui_alert(usr, "You sure you want to sleep for a while?", "Sleeping", list("Yes", "No"))
 		if(tgui_answer == "Yes" && !HAS_TRAIT(usr, TRAIT_KNOCKEDOUT))
@@ -494,13 +496,26 @@
 			L.SetSleeping(400)
 	else
 		flick("[base_icon_state]_flick", src)
+	*/
+	var/mob/living/L = usr
+	if(L.IsSleeping())
+		var/datum/status_effect/incapacitating/sleeping/voluntary/voluntary_sleep = L.has_status_effect(/datum/status_effect/incapacitating/sleeping/voluntary)
+		voluntary_sleep?.linked_alert?.Click()
+		return
+	L.mob_sleep()
+	//VENUS EDIT END
 
 /atom/movable/screen/sleep/DblClick(location, control, params)
+	//VENUS EDIT START - Voluntary sleep
+	/* ORIGINAL:
 	if(!isliving(usr) || usr.client?.prefs.read_preference(/datum/preference/toggle/remove_double_click))
 		return
 	if(isliving(usr))
 		var/mob/living/L = usr
 		L.SetSleeping(400)
+	*/
+	return
+	//VENUS EDIT END
 
 /atom/movable/screen/storage
 	name = "storage"

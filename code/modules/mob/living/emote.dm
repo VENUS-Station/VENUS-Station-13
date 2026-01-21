@@ -760,7 +760,12 @@
 	return .|WITH_EMPHASIS_MESSAGE
 
 /datum/emote/living/custom/proc/get_custom_emote_from_user()
+	//VENUS EDIT START - Use tgui input box for me emotes
+	/* ORIGINAL:
 	return stripped_multiline_input(usr, "Choose an emote to display.", "Me" , null, MAX_MESSAGE_LEN) // SKYRAT EDIT CHANGE - ORIGINAL : return copytext(sanitize(input("Choose an emote to display.") as text|null), 1, MAX_MESSAGE_LEN)
+	*/
+	return tgui_input_text(usr, "Choose an emote to display.", "Me", null, MAX_MESSAGE_LEN, TRUE) // SKYRAT EDIT CHANGE - ORIGINAL : return copytext(sanitize(input("Choose an emote to display.") as text|null), 1, MAX_MESSAGE_LEN)
+	//VENUS EDIT END
 
 /datum/emote/living/custom/proc/get_custom_emote_type_from_user()
 	var/type = input("Is this a visible or hearable emote?") as null|anything in list("Visible", "Hearable", "Both")

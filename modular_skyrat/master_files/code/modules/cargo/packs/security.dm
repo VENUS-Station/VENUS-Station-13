@@ -33,9 +33,7 @@
 	desc = "Three 'Hoshi' modular laser carbines, compact energy weapons that can be rapidly reconfigured into different firing modes."
 	cost = CARGO_CRATE_VALUE * 12
 	contains = list(
-		/obj/item/gun/energy/modular_laser_rifle/carbine,
-		/obj/item/gun/energy/modular_laser_rifle/carbine,
-		/obj/item/gun/energy/modular_laser_rifle/carbine,
+		/obj/item/gun/energy/modular_laser_rifle/carbine = 3,
 	)
 	crate_name = "\improper Modular Laser Carbine Crate"
 
@@ -44,8 +42,7 @@
 	desc = "Two 'Hyeseong' modular laser rifles, bulky energy weapons that can be rapidly reconfigured into different firing modes."
 	cost = CARGO_CRATE_VALUE * 12
 	contains = list(
-		/obj/item/gun/energy/modular_laser_rifle,
-		/obj/item/gun/energy/modular_laser_rifle,
+		/obj/item/gun/energy/modular_laser_rifle = 2,
 	)
 	crate_name = "\improper Modular Laser Rifle Crate"
 

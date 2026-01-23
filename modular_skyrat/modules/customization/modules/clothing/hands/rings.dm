@@ -9,6 +9,7 @@
 	inhand_icon_state = null
 	worn_icon_state = "gring"
 	body_parts_covered = 0
+	resistance_flags = FIRE_PROOF //VENUS EDIT: Added by splurt, comment your fucking code
 	strip_delay = 4 SECONDS
 	clothing_traits = list(TRAIT_FINGERPRINT_PASSTHROUGH)
 

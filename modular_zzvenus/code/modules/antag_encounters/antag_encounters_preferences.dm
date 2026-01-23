@@ -87,16 +87,25 @@
 	return COLOR_EMERALD
 
 /proc/get_effective_encounter_pref(mob/player, notify = FALSE)
-	var/pref = player?.client?.prefs?.read_preference(/datum/preference/choiced/antagonist_encounters)
-	if (isnull(pref))
-		pref = ENCOUNTER_PREF_GREEN
+	var/pref = null
+	var/datum/mind/player_mind = player?.mind
+	if (!isnull(player_mind?.antag_encounter_pref))
+		pref = player_mind.antag_encounter_pref
+	else
+		pref = player?.client?.prefs?.read_preference(/datum/preference/choiced/antagonist_encounters)
+		if (isnull(pref))
+			pref = ENCOUNTER_PREF_GREEN
 
 	var/needs_amber = encounter_pref_requires_amber(player)
 
 	if (needs_amber && pref < ENCOUNTER_PREF_AMBER)
 		if (notify)
 			to_chat(player, span_notice("Your role forces Antagonist Encounters to at least [span_yellow("AMBER")]."))
-		return ENCOUNTER_PREF_AMBER
+		pref = ENCOUNTER_PREF_AMBER
+
+	// Snapshot the effective preference for in-round use, so in-game display isn't tied to live prefs.
+	if (isliving(player) && player_mind && (isnull(player_mind.antag_encounter_pref) || player_mind.antag_encounter_pref < pref))
+		player_mind.antag_encounter_pref = pref
 
 	return pref
 
@@ -117,14 +126,20 @@
 	var/datum/preferences/preferences = target_client?.prefs
 	if (!preferences)
 		return
-	if (!encounter_pref_requires_amber(player))
-		return
 
 	var/current_pref = preferences.read_preference(/datum/preference/choiced/antagonist_encounters)
-	if (isnull(current_pref) || current_pref < ENCOUNTER_PREF_AMBER)
-		preferences.write_preference(GLOB.preference_entries[/datum/preference/choiced/antagonist_encounters], ENCOUNTER_PREF_AMBER)
-		if (notify)
-			to_chat(target_client, span_notice("Your role forces Antagonist Encounters to at least AMBER."))
+	if (isnull(current_pref))
+		current_pref = ENCOUNTER_PREF_GREEN
+
+	if (encounter_pref_requires_amber(player))
+		if (current_pref < ENCOUNTER_PREF_AMBER)
+			if (notify)
+				to_chat(target_client, span_notice("Your role forces Antagonist Encounters to at least AMBER."))
+		current_pref = max(current_pref, ENCOUNTER_PREF_AMBER)
+
+	// Snapshot the preference for in-round use.
+	if (player?.mind && (isnull(player.mind.antag_encounter_pref) || player.mind.antag_encounter_pref < current_pref))
+		player.mind.antag_encounter_pref = current_pref
 
 /proc/can_view_encounter_pref(mob/viewer, mob/target)
 	if (!viewer || !target)

@@ -40,6 +40,10 @@
 	var/mob/living/current
 	/// Is this mind active?
 	var/active = FALSE
+	//VENUS ADDITION START - Antagonist Encounter Preference
+	/// Snapshot of the player's Antagonist Encounters preference for the current round.
+	var/antag_encounter_pref = null
+	//VENUS ADDITION END
 
 	/// a list of /datum/memories. assoc type of memory = memory datum. only one type of memory will be stored, new ones of the same type overriding the last.
 	var/list/memories = list()

@@ -59,7 +59,7 @@
 /datum/supply_pack/goody/modular_laser_single_rifle
 	name = "Modular Laser Rifle Single-Pack"
 	desc = "One 'Hyeseong' modular laser rifle, a bulky energy weapon that can be rapidly reconfigured into different firing modes."
-	cost = PAYCHECK_COMMAND * 9
+	cost = PAYCHECK_COMMAND * 12
 	access_view = ACCESS_WEAPONS
 	contains = list(/obj/item/gun/energy/modular_laser_rifle)
 //VENUS ADDITION END

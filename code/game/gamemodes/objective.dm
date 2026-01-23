@@ -234,6 +234,15 @@ GLOBAL_LIST_EMPTY(objectives) //SKYRAT EDIT ADDITION
 	admin_grantable = TRUE
 	var/target_role_type = FALSE
 
+//VENUS ADDITION START - Antag Encounter Preference
+/datum/objective/assassinate/is_valid_target(datum/mind/possible_target)
+	if(!..())
+		return FALSE
+	var/mob/living/target_mob = possible_target.current
+	if(!target_mob)
+		return FALSE
+	return get_effective_encounter_pref(target_mob) >= ENCOUNTER_PREF_AMBER
+//VENUS ADDITION END
 
 /datum/objective/assassinate/check_completion()
 	return completed || (!considered_alive(target) || considered_afk(target) || considered_exiled(target))
@@ -259,6 +268,16 @@ GLOBAL_LIST_EMPTY(objectives) //SKYRAT EDIT ADDITION
 	COOLDOWN_DECLARE(disconnect_timer)
 	/// Whether admins have been warned about the potentially AFK player
 	var/warned_admins = FALSE
+
+//VENUS ADDITION START - Antag Encounter Preference
+/datum/objective/mutiny/is_valid_target(datum/mind/possible_target)
+	if(!..())
+		return FALSE
+	var/mob/living/target_mob = possible_target.current
+	if(!target_mob)
+		return FALSE
+	return get_effective_encounter_pref(target_mob) >= ENCOUNTER_PREF_AMBER
+//VENUS ADDITION END
 
 /datum/objective/mutiny/proc/warn_admins()
 	message_admins("[ADMIN_LOOKUPFLW(target.current)] has gone AFK with a mutiny objective that involves them. They only have [COOLDOWN_TIMELEFT(src, disconnect_timer) / 10] seconds remaining before they are treated as if they were dead.")

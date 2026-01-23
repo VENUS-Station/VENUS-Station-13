@@ -6,7 +6,7 @@
 /area/shuttle/arrival)
 "b" = (
 /obj/machinery/light/directional/north,
-/obj/structure/table/reinforced,
+/obj/machinery/computer/shuttle/arrivals,
 /turf/open/floor/iron/shuttle/arrivals,
 /area/shuttle/arrival)
 "d" = (
@@ -55,7 +55,7 @@
 	},
 /area/shuttle/arrival)
 "m" = (
-/obj/structure/chair/comfy/shuttle,
+/obj/structure/chair/sofa/bench/right,
 /turf/open/floor/iron/shuttle/arrivals,
 /area/shuttle/arrival)
 "n" = (
@@ -140,6 +140,10 @@
 	icon_state = "12,0"
 	},
 /area/shuttle/arrival)
+"F" = (
+/obj/structure/chair/sofa/bench/left,
+/turf/open/floor/iron/shuttle/arrivals,
+/area/shuttle/arrival)
 "G" = (
 /turf/closed/wall/mineral/titanium/shuttle_wall/arrivals{
 	icon_state = "1,0"
@@ -183,7 +187,7 @@
 	},
 /area/shuttle/arrival)
 "O" = (
-/obj/structure/chair/comfy/shuttle{
+/obj/structure/chair/sofa/bench/left{
 	dir = 1
 	},
 /turf/open/floor/iron/shuttle/arrivals,
@@ -202,6 +206,12 @@
 /turf/closed/wall/mineral/titanium/shuttle_wall/arrivals{
 	icon_state = "0,1"
 	},
+/area/shuttle/arrival)
+"S" = (
+/obj/structure/chair/sofa/bench/right{
+	dir = 1
+	},
+/turf/open/floor/iron/shuttle/arrivals,
 /area/shuttle/arrival)
 "T" = (
 /turf/closed/wall/mineral/titanium/shuttle_wall/arrivals{
@@ -276,9 +286,9 @@ h
 "}
 (6,1,1) = {"
 P
-m
+F
 x
-O
+S
 t
 "}
 (7,1,1) = {"
@@ -297,9 +307,9 @@ J
 "}
 (9,1,1) = {"
 z
-m
+F
 x
-O
+S
 d
 "}
 (10,1,1) = {"

@@ -654,7 +654,7 @@ required_map = "wawastation.dmm"
 coordinates = [63, 127, 2]
 trait_name = "Station"
 
-# Wawastation Arrivals
+# Wawastation Arrivals VENUS AUTOMAPPER REMOVAL (FOR INTERLINK REMOVAL)
 #[templates.wawastation_arrivals]
 #map_files = ["wawastation_arrivals.dmm"]
 #directory = "_maps/bubber/automapper/templates/wawastation/"
@@ -1012,4 +1012,12 @@ map_files = ["voidraptor_arrivals.dmm"]
 directory = "_maps/venus/automapper/templates/VoidRaptor/"
 required_map = "VoidRaptor.dmm"
 coordinates = [85, 150, 1]
+trait_name = "Station"
+
+# Wawastation Arrivals (FOR INTERLINK REMOVAL, changes docking port to work with venus ferry and not interlink ferry)
+[templates.wawastation_arrivals]
+map_files = ["wawastation_arrivals.dmm"]
+directory = "_maps/venus/automapper/templates/wawastation/"
+required_map = "wawastation.dmm"
+coordinates = [69, 81, 2]
 trait_name = "Station"

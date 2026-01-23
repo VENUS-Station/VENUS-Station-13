@@ -3,7 +3,7 @@
 /datum/round_event_control/voidwalker
 	name = "Spawn Void Walker"
 	typepath = /datum/round_event/ghost_role/void_walker
-	max_occurrences = 0 //VENUS EVENT DISABLE (original: 1)
+	max_occurrences = 1
 	weight = 5
 	earliest_start = 20 MINUTES
 	min_players = 25

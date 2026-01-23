@@ -49,7 +49,6 @@
 
 /datum/round_event_control/obsessed
 	tags = list(TAG_TARGETED)
-	max_occurrences = 0 //VENUS EVENT DISABLE
 
 /datum/round_event_control/santa
 	tags = list(TAG_COMMUNAL, TAG_POSITIVE)
@@ -58,7 +57,6 @@
 
 /datum/round_event_control/operative
 	track = EVENT_TRACK_MODERATE
-	max_occurrences = 0 //VENUS EVENT DISABLE
 
 /datum/round_event_control/radiation_storm
 	track = EVENT_TRACK_MODERATE

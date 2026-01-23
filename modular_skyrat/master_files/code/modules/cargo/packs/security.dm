@@ -27,6 +27,43 @@
 	access_view = ACCESS_WEAPONS
 	contains = list(/obj/item/gun/energy/laser)
 
+//VENUS ADDITION START - Added modular laser rifles and carbines to cargo (inspired by Nova Sector)
+/datum/supply_pack/security/armory/short_mod_laser
+	name = "Modular Laser Carbine Crate"
+	desc = "Three 'Hoshi' modular laser carbines, compact energy weapons that can be rapidly reconfigured into different firing modes."
+	cost = CARGO_CRATE_VALUE * 12
+	contains = list(
+		/obj/item/gun/energy/modular_laser_rifle/carbine,
+		/obj/item/gun/energy/modular_laser_rifle/carbine,
+		/obj/item/gun/energy/modular_laser_rifle/carbine,
+	)
+	crate_name = "\improper Modular Laser Carbine Crate"
+
+/datum/supply_pack/security/armory/big_mod_laser
+	name = "Modular Laser Rifle Crate"
+	desc = "Two 'Hyeseong' modular laser rifles, bulky energy weapons that can be rapidly reconfigured into different firing modes."
+	cost = CARGO_CRATE_VALUE * 12
+	contains = list(
+		/obj/item/gun/energy/modular_laser_rifle,
+		/obj/item/gun/energy/modular_laser_rifle,
+	)
+	crate_name = "\improper Modular Laser Rifle Crate"
+
+/datum/supply_pack/goody/modular_laser_single_carbine
+	name = "Modular Laser Gun Single-Pack"
+	desc = "One 'Hoshi' modular laser carbine, a compact energy weapon that can be rapidly reconfigured into different firing modes."
+	cost = PAYCHECK_COMMAND * 8
+	access_view = ACCESS_WEAPONS
+	contains = list(/obj/item/gun/energy/modular_laser_rifle/carbine)
+
+/datum/supply_pack/goody/modular_laser_single_rifle
+	name = "Modular Laser Rifle Single-Pack"
+	desc = "One 'Hyeseong' modular laser rifle, a bulky energy weapon that can be rapidly reconfigured into different firing modes."
+	cost = PAYCHECK_COMMAND * 9
+	access_view = ACCESS_WEAPONS
+	contains = list(/obj/item/gun/energy/modular_laser_rifle)
+//VENUS ADDITION END
+
 /datum/supply_pack/security/armory/ionrifle
 	name = "Ion Carbine Crate"
 	cost = CARGO_CRATE_VALUE * 18 //Same as the energy gun crate

@@ -26,23 +26,3 @@
 	special = FALSE
 
 //This makes the Security ammo crate use the cool advanced ammo boxes instead of the old ones
-
-//VENUS ADDITION START - Re-added modular laser rifles and carbines to cargo (inspired by Nova Sector)
-/datum/supply_pack/security/armory/short_mod_laser
-	name = "Modular Laser Carbine Crate"
-	desc = "One 'Hoshi' modular laser carbine, a compact energy weapon that can be rapidly reconfigured into different firing modes."
-	cost = CARGO_CRATE_VALUE * 12
-	contains = list(
-		/obj/item/gun/energy/modular_laser_rifle/carbine,
-	)
-	crate_name = "\improper Modular Laser Carbine Crate"
-
-/datum/supply_pack/security/armory/big_mod_laser
-	name = "Modular Laser Rifle Crate"
-	desc = "One 'Hyeseong' modular laser rifle, a bulky energy weapon that can be rapidly reconfigured into different firing modes."
-	cost = CARGO_CRATE_VALUE * 12
-	contains = list(
-		/obj/item/gun/energy/modular_laser_rifle,
-	)
-	crate_name = "\improper Modular Laser Rifle Crate"
-//VENUS ADDITION END

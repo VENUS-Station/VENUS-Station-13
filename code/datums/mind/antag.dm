@@ -19,6 +19,11 @@
 		return
 	A.owner = src
 	LAZYADD(antag_datums, A)
+	//VENUS ADDITION START - Antag Encounter Prefs
+	// Antags are treated as RED for encounter prefs (in-round snapshot only).
+	if (isnull(antag_encounter_pref) || antag_encounter_pref < ENCOUNTER_PREF_RED)
+		antag_encounter_pref = ENCOUNTER_PREF_RED
+	//VENUS ADDITION END
 	A.create_team(team)
 	var/datum/team/antag_team = A.get_team()
 	if(antag_team)

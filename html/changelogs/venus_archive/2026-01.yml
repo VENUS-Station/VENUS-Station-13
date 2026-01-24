@@ -21,6 +21,5 @@
   - code_imp: Sleeping now takes time based on nearby beds/tables, with clearer messaging and a sleepy overlay.
 2026-01-21:
   Goku:
-  - qol: Changed "Me" emote input to be multi-paragraph.
   - rscadd: Added Modular Laser Rifle and Modular Laser Carbine crates and single packs to cargo.
   - rscadd: Added Modular Laser Carbine to armory spawns.

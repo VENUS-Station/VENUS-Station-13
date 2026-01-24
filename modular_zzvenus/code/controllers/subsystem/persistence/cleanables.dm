@@ -245,10 +245,27 @@ GLOBAL_LIST_INIT(non_persistent_cleanables, list(
 				STOP_PROCESSING(SSblood_drying, blood_decal)
 				// Reapply the saved dried color to override any DNA-based color from Initialize
 				blood_decal.color = cleanable_data["color"]
-			// Mark forensic DNA as too old to identify instead of wiping it completely
-			if(blood_decal.forensics && blood_decal.forensics.blood_DNA)
-				// Replace DNA with a "too old" marker that scanners can detect
-				blood_decal.forensics.blood_DNA = list("Too old to identify" = "Unknown")
+			// Mark forensic DNA as too old to identify while preserving blood type for naming
+			if(blood_decal.forensics)
+				var/list/old_blood = blood_decal.forensics.blood_DNA
+				var/list/new_blood = list()
+				var/too_old_index = 1
+				if(islist(old_blood))
+					for(var/blood_key in old_blood)
+						var/datum/blood_type/blood_type = old_blood[blood_key]
+						if(!istype(blood_type))
+							blood_type = get_blood_type(blood_type)
+						if(!istype(blood_type))
+							continue
+						var/label = (too_old_index == 1) ? "Too old to identify" : "Too old to identify #[too_old_index]"
+						new_blood[label] = blood_type
+						too_old_index++
+				if(!length(new_blood))
+					var/datum/blood_type/fallback_type = blood_decal.get_default_blood_type()
+					if(istype(fallback_type))
+						new_blood["Too old to identify"] = fallback_type
+				if(length(new_blood))
+					blood_decal.forensics.blood_DNA = new_blood
 			// Update appearance to apply dried names/descriptions and overlays
 			blood_decal.update_appearance()
 			// For non-drying blood, set color AFTER update_appearance to prevent darkening

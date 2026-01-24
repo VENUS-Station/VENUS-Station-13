@@ -23,3 +23,6 @@
   Goku:
   - rscadd: Added Modular Laser Rifle and Modular Laser Carbine crates and single packs to cargo.
   - rscadd: Added Modular Laser Carbine to armory spawns.
+2026-01-24:
+  Goku:
+  - rsdel: Mail crates no longer come packaged with packing peanuts, so that they are less messy to handle.

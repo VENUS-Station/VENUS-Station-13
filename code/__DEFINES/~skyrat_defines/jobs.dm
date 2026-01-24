@@ -8,8 +8,8 @@
 
 #define SEC_RESTRICTED_QUIRKS "Blind" = TRUE, "Brain Tumor" = TRUE, "Deaf" = TRUE, "Paraplegic" = TRUE, "Hemiplegic" = TRUE, "Mute" = TRUE, "Foreigner" = TRUE, "Pacifist" = TRUE, "No Guns" = TRUE, "Illiterate" = TRUE, "Nerve Stapled" = TRUE, "Paroled Convict" = TRUE, "Underworld Connections" //VENUS EDIT: Added Paroled Convict (IRIS PORT), Underworld Connections
 //#define HEAD_RESTRICTED_QUIRKS "Blind" = TRUE, "Deaf" = TRUE, "Mute" = TRUE, "Foreigner" = TRUE, "Brain Tumor" = TRUE, "Illiterate" = TRUE //Bubberstation edit original
-#define HEAD_RESTRICTED_QUIRKS "Deaf" = TRUE, "Mute" = TRUE, "Foreigner" = TRUE, "Brain Tumor" = TRUE, "Illiterate" = TRUE, "Paroled Convict" = TRUE, "Underworld Connections" //BUBBERSTATION edit! This is the the new one! the old one is up there //VENUS EDIT: Added Paroled Convict (IRIS PORT), Underworld Connections
-#define GUARD_RESTRICTED_QUIRKS "Blind" = TRUE, "Deaf" = TRUE, "Foreigner" = TRUE, "Pacifist" = TRUE, "Nerve Stapled" = TRUE, "Paroled Convict" = TRUE, "Underworld Connections", //VENUS EDIT: Added Paroled Convict (IRIS PORT), Underworld Connections
+#define HEAD_RESTRICTED_QUIRKS "Deaf" = TRUE, "Mute" = TRUE, "Foreigner" = TRUE, "Brain Tumor" = TRUE, "Illiterate" = TRUE, "Paroled Convict" = TRUE, "Underworld Connections" = TRUE, //BUBBERSTATION edit! This is the the new one! the old one is up there //VENUS EDIT: Added Paroled Convict (IRIS PORT), Underworld Connections
+#define GUARD_RESTRICTED_QUIRKS "Blind" = TRUE, "Deaf" = TRUE, "Foreigner" = TRUE, "Pacifist" = TRUE, "Nerve Stapled" = TRUE, "Paroled Convict" = TRUE, "Underworld Connections" = TRUE, //VENUS EDIT: Added Paroled Convict (IRIS PORT), Underworld Connections
 
 #define RESTRICTED_QUIRKS_EXCEPTIONS list("Mute" = "Signer")
 

@@ -44,7 +44,7 @@
 /// Helper that translates the bounty into UI data for TGUI
 /datum/spy_bounty/proc/to_ui_data(mob/user)
 	SHOULD_CALL_PARENT(TRUE)
-	return list(
+	var/list/data = list( //VENUS EDIT - Original: return list(
 		"name" = name,
 		"help" = help,
 		"difficulty" = difficulty,
@@ -52,6 +52,37 @@
 		"claimed" = claimed,
 		"can_claim" = can_claim(user),
 	)
+	//VENUS ADDITION START - Antag Encounter Preference notes for spy
+	var/encounter_notice = get_encounter_notice(user)
+	if(encounter_notice)
+		data["encounter_note"] = encounter_notice
+		data["encounter_color"] = get_encounter_notice_color(user)
+	return data
+	//VENUS ADDITION END
+
+//VENUS ADDITION START - Antag Encounter Preference notes for spy
+/// Optional note shown in the spy uplink UI, typically for person-target bounties.
+/datum/spy_bounty/proc/get_encounter_notice(mob/user)
+	return null
+
+/// Optional color for the encounter note in the spy uplink UI.
+/datum/spy_bounty/proc/get_encounter_notice_color(mob/user)
+	return null
+
+/// Formats encounter preference into spy-facing note text.
+/proc/spy_encounter_notice_text(value)
+	switch (value)
+		if (ENCOUNTER_PREF_GREEN)
+			return "NOTE: Target is a 'GREEN-TIER' ASSET. MAINTAIN ASSET INTEGRITY. Lethal force will result in contract breach. Utilize non-lethal compliance (Aggressive Grappling advised) to facilitate Uplink scan."
+	return null
+
+/// Maps encounter preference to tgui color tokens.
+/proc/spy_encounter_notice_color(value)
+	switch (value)
+		if (ENCOUNTER_PREF_GREEN)
+			return "good"
+	return null
+//VENUS ADDITION END
 
 /// Check if the passed mob can claim this bounty.
 /datum/spy_bounty/proc/can_claim(mob/user)
@@ -634,6 +665,16 @@
 	if(ispath(desired_type, /obj/item/organ))
 		return locate(desired_type) in crewmember.organs
 	return null
+
+//VENUS ADDITION START - Antag Encounter Preference for spy
+//Excludes green-tier people from being selected for organ bounties, except for appendix
+/datum/spy_bounty/targets_person/some_item/limb_or_organ/is_valid_crewmember(mob/living/carbon/human/crewmember)
+	if(!..())
+		return FALSE
+	if(get_effective_encounter_pref(crewmember) != ENCOUNTER_PREF_GREEN)
+		return TRUE
+	return desired_type == /obj/item/organ/appendix
+//VENUS ADDITION END
 
 /datum/spy_bounty/some_bot
 	theft_time = 10 SECONDS

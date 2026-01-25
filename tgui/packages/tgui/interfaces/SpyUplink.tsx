@@ -18,6 +18,10 @@ type Bounty = {
   reward: string;
   claimed: BooleanLike;
   can_claim: BooleanLike;
+  // VENUS ADDITION START - Antag Encounter Preference notes for spy
+  encounter_note?: string;
+  encounter_color?: string;
+  // VENUS ADDITION END
 };
 
 type Data = {
@@ -72,6 +76,15 @@ const BountyDisplay = (props: { bounty: Bounty }) => {
         <Stack.Item>
           <BlockQuote italic>{bounty.help}</BlockQuote>
         </Stack.Item>
+        {/* VENUS ADDITION START - Antag Encounter Preference notes for spy */}
+        {!!bounty.encounter_note && (
+          <Stack.Item>
+            <Box color={bounty.encounter_color}>
+              {bounty.encounter_note}
+            </Box>
+          </Stack.Item>
+        )}
+        {/* VENUS ADDITION END */}
         <Stack.Item italic>Reward: {bounty.reward}</Stack.Item>
       </Stack>
     </Section>

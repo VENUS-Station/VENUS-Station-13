@@ -667,13 +667,13 @@
 	return null
 
 //VENUS ADDITION START - Antag Encounter Preference for spy
-//Excludes green-tier people from being selected for organ bounties, except for appendix
+//Excludes green-tier people from being selected for organ bounties, except for appendix and stomach
 /datum/spy_bounty/targets_person/some_item/limb_or_organ/is_valid_crewmember(mob/living/carbon/human/crewmember)
 	if(!..())
 		return FALSE
 	if(get_effective_encounter_pref(crewmember) != ENCOUNTER_PREF_GREEN)
 		return TRUE
-	return desired_type == /obj/item/organ/appendix
+	return desired_type == /obj/item/organ/appendix || desired_type == /obj/item/organ/stomach
 //VENUS ADDITION END
 
 /datum/spy_bounty/some_bot

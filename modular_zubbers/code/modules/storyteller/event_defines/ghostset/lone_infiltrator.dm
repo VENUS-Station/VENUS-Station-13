@@ -1,7 +1,7 @@
 /datum/round_event_control/lone_infiltrator
 	name = "Spawn Lone Infiltrator"
 	typepath = /datum/round_event/ghost_role/lone_infiltrator
-	max_occurrences = 2
+	max_occurrences = 0 //VENUS EVENT DISABLE - Original: 2 - TODO: Make lone infiltrator not round-ending
 	min_players = 10
 	category = EVENT_CATEGORY_ENTITIES
 	description = "Spawns a lone infiltrator, a non-crew syndicate agent."

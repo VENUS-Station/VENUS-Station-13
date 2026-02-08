@@ -145,6 +145,8 @@
 		if(!unvetted_notified && !trigger_unvetted_warning())
 			return FALSE
 		ready = !ready
+		if(ready)
+			auto_deadmin_on_ready_or_latejoin() //VENUS ADDITION - Re-adds auto-deadmin for skyrat html lobby
 		client << output(ready, "title_browser:toggle_ready")
 		return
 
@@ -152,6 +154,7 @@
 		play_lobby_button_sound()
 		if(!unvetted_notified && !trigger_unvetted_warning())
 			return FALSE
+		auto_deadmin_on_ready_or_latejoin() //VENUS ADDITION - Re-adds auto-deadmin for skyrat html lobby
 		GLOB.latejoin_menu.ui_interact(usr)
 		return
 

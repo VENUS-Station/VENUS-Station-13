@@ -146,7 +146,7 @@
 		return FALSE
 	if (viewer == target)
 		return TRUE
-	if (is_admin(viewer.client))
+	if (viewer.client?.holder) // active admins only (deadmined should not see)
 		return TRUE
 	if (viewer.is_antag())
 		return TRUE

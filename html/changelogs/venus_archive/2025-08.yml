@@ -1,17 +1,17 @@
 2025-08-04:
-  Goku:
+  Aria:
   - rscadd: Solar panels now have an automatic control feature that scans for new solar equipment and enables auto tracking every 30 seconds.
   - rscadd: SMES inside solar maintenance areas will now automatically configure themselves for optimal solar charging on map load.
 2025-08-06:
-  Goku:
+  Aria:
   - balance: Solar panels on the station are now made of titanium glass by default, increasing their power generation efficiency.
   - rscadd: Solar panels now show their glass type in their examine text.
   - bugfix: Light fixtures' overlays color now matches the light's emitted color, enhancing visual consistency.
 2025-08-13:
-  Goku:
+  Aria:
   - rscadd: Limbs and heads can now be gibbed by brute damage, similar to sharp dismemberment.
   - rscadd: Unarmed combat now tells you and the attacker which limb is being targeted.
   - balance: Only head & chest brute/burn (plus normal oxy/blood loss) now determine crit/death; limb brute/burn no longer push you into crit.
 2025-08-24:
-  Goku:
+  Aria:
   - qol: Reduced Headset Radio Noise volume preference from 100% to 50% by default.

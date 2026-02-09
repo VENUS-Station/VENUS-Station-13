@@ -1,17 +1,17 @@
 2025-10-07:
-  Goku:
+  Aria:
   - bugfix: Sodium sensitivity has been fixed and renamed into Sodium Hypersensitivity. Its quirk icon, description, and medical record text have also been changed.
 2025-10-09:
-  Goku:
+  Aria:
   - rscadd: Added 9 flavors of protein bars, and added them to the snack vending machine and the NT sustenance vendors.
 2025-10-12:
-  Goku:
+  Aria:
   - rscadd: Persistent cleanables and trash system! Blood, graffiti, and trash now persist across rounds. Janitors can examine items to see how long they've been there and get disposal hints.
 2025-10-19:
-  Goku:
+  Aria:
   - rscadd: Added examine text to research scrap, showing what materials are required to complete it.
   - rscdel: Disabled cleanbot's ability to clean graffiti.
   - rscadd: Added CLEAN_TYPE_HARD_DECAL to graffiti to make them harder to clean.
 2025-10-29:
-  Goku:
+  Aria:
   - rscadd: Added a new negative quirk, Void-Touched. Applies a spacey limb texture and mutism.

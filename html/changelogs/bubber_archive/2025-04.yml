@@ -92,7 +92,7 @@
 2025-04-11:
   ArrisFairburne:
   - qol: Synthetic crew now spawn in with PDA apps relevant to their work station.
-  Goku:
+  Aria:
   - map: Kilo Station's Dormitories area type is now classified as dormitories, not
       as a Locker room.
   Kepteyn:
@@ -120,7 +120,7 @@
   - code_imp: We've noticed that the Radioscopical Bluespace Reactor Mark Two blueprints
       provided to our stations came with antiquated firmware. This issue has been
       rectified. (Significant rework of the RB-MK2 GUI)
-  Goku:
+  Aria:
   - bugfix: Fix wooden shelves turning into metal rack parts when broken.
   - balance: Robotic blessed lobotomy now also requires holy water (just like the
       organic surgery)

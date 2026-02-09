@@ -19,6 +19,12 @@
 
 /// Lets people walk into chasms.
 /turf/open/chasm/CanAllowThrough(atom/movable/mover, border_dir)
+	//VENUS ADDITION START - Walk mode stops you from falling
+	if(isliving(mover))
+		var/mob/living/L = mover
+		if(L.move_intent == MOVE_INTENT_WALK && !L.throwing && !L.moving_from_pull && !can_cross_safely(L))
+			return FALSE
+	//VENUS ADDITION END
 	. = ..()
 	return TRUE
 

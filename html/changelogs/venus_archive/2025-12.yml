@@ -1,13 +1,13 @@
 2025-12-12:
-  Goku:
+  Aria:
   - rscadd: (IRIS PORT) Added Holosynth species.
   - rscadd: (IRIS PORT) Added hairstyles - Ruby, Ruby Long, Fluffy Longer, Fluffy Long Ponytail, Mia.
 2025-12-20:
-  Goku:
+  Aria:
   - rscadd: Added auto-memorizing wires when hacking.
   - rscadd: Added collapsible memories in the memory panel.
 2025-12-24:
-  Goku:
+  Aria:
   - rscadd: Added examine information for radioactive nebula shielding units.
   - rscdel: Removed tritium generation from radioactive nebula shielding units.
   - rscadd: Added an animated thirst bar HUD element, just like the hunger bar.

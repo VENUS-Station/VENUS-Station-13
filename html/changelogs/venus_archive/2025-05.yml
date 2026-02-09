@@ -5,7 +5,7 @@
   ariaworld:
   - bugfix: Fixed hemophage revival ability.
 2025-05-11:
-  Goku:
+  Aria:
   - rscadd: Added Stats/Attributes, viewable in the IC tab -> View Skills.
   - rscadd: You can now look in the distance by Ctrl-RightClick-ing in the distance.
       Scales with Perception stat.

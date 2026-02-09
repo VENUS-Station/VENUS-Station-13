@@ -1,32 +1,32 @@
 2025-11-05:
-  Goku:
+  Aria:
   - rscadd: Added walk mode for wheelchairs, going slow will prevent crashing into things.
   - tweak: Changed Aurora Caelus event weight to 5, from 1.
 2025-11-07:
-  Goku:
+  Aria:
   - bugfix: Synths can no longer get the Immunodeficiency quirk.
 2025-11-08:
-  Goku:
+  Aria:
   - rscadd: Added 2 sounds for scrubbing.
   - rscadd: Xenoarch rocks now have sounds when they are picked/dropped, brushed, and hammered.
   - bugfix: Fixed hostile mobs not aggroing on the attacker when hit by explosions from the kinetic accelerator.
   - bugfix: Fixed strange rocks not having a scan icon in mineable turfs.
   - tweak: Changed wheelchair movement delay multiplier to 5.7, from 6.7, to adjust for Venus' new movement delay.
 2025-11-09:
-  Goku:
+  Aria:
   - rscadd: Added drop-pod styles options for the Admin Spawn Panel.
   - tweak: Hilbert's Hotel items in lore rooms no longer have the hotel item component that stops you from leaving with them.
 2025-11-15:
-  Goku:
+  Aria:
   - rscdel: Quantum Parts, tier 5 stock parts. Disabled due to no real use for them.
 2025-11-16:
-  Goku:
+  Aria:
   - bugfix: Fixed emotes always showing a sound ping visual effect.
 2025-11-18:
-  Goku:
+  Aria:
   - rscadd: Added damage-based overlays for non-carbon mobs so that players can see how hurt they are at a glance.
   - rscadd: Added examine text for non-carbon mobs so players can see how hurt they are when they examine them.
   - rscadd: Added a subtle shake effect to all mobs when they take damage, so that combat has more impact.
 2025-11-22:
-  Goku:
+  Aria:
   - tweak: Removed delay from deploying kinetic gauntlets, and using in hand will now undeploy instead of toggling the light.

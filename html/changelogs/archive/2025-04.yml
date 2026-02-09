@@ -596,7 +596,7 @@
   - bugfix: Constructs now have their proper factions, so Wizard constructs can't
       hit Wizard Apprentices.
   - bugfix: Juggernaut's Gauntlet echo spell now respects factions.
-  Goku:
+  Aria:
   - bugfix: All surgery initiator items can now be used while laying down (bedsheets,
       cloaks, towels...), and not just surgery drapes (fixes the surgery UI showing
       as not-interactable).

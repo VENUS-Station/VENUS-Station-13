@@ -1,13 +1,13 @@
 2025-04-08:
-  Goku:
+  Aria:
   - balance: Anomalies will no longer spawn in dorms and locker rooms.
 2025-04-11:
-  Goku:
+  Aria:
   - bugfix: Fixed HEV suit calibration and deactivation.
   - balance: Lifted minimum active players for Alien Infestation to 20 (like giant spiders and other ghostspawns)
   - balance: Removed weed planting ability from Ravagers and Warriors xenomorphs. (They now have a thin plasma vessel)
 2025-04-13:
-  Goku:
+  Aria:
   - rscadd: Added per-player room limit to Hilbert's Hotel.
   - balance: Limited per-player room ownership to 5 rooms.
   - balance: Reduced mood bonus from Hilbert's Hotel/Interlink Dorm Rooms/Centcom Holding from 25 to 10.
@@ -15,9 +15,9 @@
   - balance: Hilbert's Hotel nightclub money has no value.
   - rscadd: Hilbert's Hotel items now have a component that blocks them from being taken out of the hotel.
 2025-04-14:
-  Goku:
+  Aria:
   - balance: Locker rooms are no longer protected from anomaly spawns/radiation storms.
 2025-04-15:
-  Goku:
+  Aria:
   - rscadd: Added self-surgery capabilities for several organic surgery types, including soft organ manipulation, tend wounds, and various wounds repair surgeries.
   - balance: Organic self-surgery has a 2.0x negative modifier and can only be performed on accessible body parts.

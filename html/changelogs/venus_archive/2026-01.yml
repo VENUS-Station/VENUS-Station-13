@@ -1,28 +1,28 @@
 2026-01-03:
-  Goku:
+  Aria:
   - rscadd: Added an "Antag Encounter Preference" and its display to the title screen, showing
       the player's current preference for antagonist encounters.
 2026-01-04:
-  Goku:
+  Aria:
   - code_imp: Improved OPFOR panel, allowing players to select an antagonist.
   - bugfix: Fixed ESC menu not showing OPFOR and Respawn buttons.
   - rscadd: Added a Lunchbox quirk, giving players a lunchbox with pickable designs and foods.
 2026-01-05:
-  Goku:
+  Aria:
   - rscadd: Added the Underworld Connections quirk, granting access to a black market uplink and exploitable crew information, with the downside of being suspected by security.
 2026-01-12:
-  Goku:
+  Aria:
   - rscadd: Added the Dormant Healing Factor quirk, allowing players to heal more severe injuries while sleeping.
   - rscdel: Removed the Restorative Metabolism quirk, replaced by Dormant Healing Factor.
 2026-01-19:
-  Goku:
+  Aria:
   - rscadd: Added a voluntary sleep triggered by sleep verb and HUD button, also with a wake-up action.
   - rscadd: Added sleep-quality info to the sleeping status tooltip.
   - code_imp: Sleeping now takes time based on nearby beds/tables, with clearer messaging and a sleepy overlay.
 2026-01-21:
-  Goku:
+  Aria:
   - rscadd: Added Modular Laser Rifle and Modular Laser Carbine crates and single packs to cargo.
   - rscadd: Added Modular Laser Carbine to armory spawns.
 2026-01-24:
-  Goku:
+  Aria:
   - rsdel: Mail crates no longer come packaged with packing peanuts, so that they are less messy to handle.

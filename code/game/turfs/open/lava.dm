@@ -46,6 +46,16 @@
 	/// Lazy list of atoms that we've checked that can/cannot burn
 	var/list/checked_atoms = null
 
+// VENUS ADDITION START - Walk mode stops you from stepping into lava
+/turf/open/lava/CanAllowThrough(atom/movable/mover, border_dir)
+	if(isliving(mover))
+		var/mob/living/L = mover
+		if(L.move_intent == MOVE_INTENT_WALK && !L.throwing && !L.moving_from_pull && !can_cross_safely(L))
+			return FALSE
+	. = ..()
+	return TRUE
+// VENUS ADDITION END
+
 /turf/open/lava/Initialize(mapload)
 	. = ..()
 	if(fish_source_type)

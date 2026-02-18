@@ -20,6 +20,7 @@ type RoomsData = {
   selected_template: string;
   user_donator_tier: number;
   user_ckey: string;
+  checkin_in_progress: boolean; //VENUS ADDITION - Loading status for Hilbert's Hotel
   active_rooms: any[];
   conservated_rooms: any[];
   hotel_map_list: any[];
@@ -77,6 +78,7 @@ const OpenRooms = ({ data, act, selected_template }) => {
                       width: '100px',
                       textAlign: 'center',
                     }}
+                    disabled={Boolean(data.checkin_in_progress)} //VENUS ADDITION - Disable button while check-in is in progress
                     confirmContent={'Join?'}
                     confirmColor="green"
                     onClick={() =>
@@ -87,7 +89,9 @@ const OpenRooms = ({ data, act, selected_template }) => {
                     }
                     icon="right-to-bracket"
                   >
-                    Join
+                    {/* VENUS EDIT START - ORIGINAL: Join */}
+                    {data.checkin_in_progress ? 'Joining...' : 'Join'}
+                    {/* VENUS EDIT END */}
                   </Button.Confirm>
                 </Stack.Item>
                 <Stack vertical width={'100%'}>
@@ -242,6 +246,7 @@ const RoomCheckIn = ({
             maxValue={1000000000}
             step={1}
             value={current_room}
+            disabled={Boolean(data.checkin_in_progress)} //VENUS ADDITION - Loading status for Hilbert's Hotel
             format={(value) => String(Math.floor(value))}
             onChange={(value) =>
               act('update_room', {
@@ -255,9 +260,14 @@ const RoomCheckIn = ({
             style={{ cursor: 'pointer' }}
             width="100%"
             fluid
+            disabled={Boolean(data.checkin_in_progress)} //VENUS ADDITION - Loading status for Hilbert's Hotel
             textAlign="center"
             mt={1}
-            confirmContent={'Confirm?'}
+            // VENUS EDIT START - ORIGINAL: confirmContent={'Confirm?'}
+            confirmContent={
+              data.checkin_in_progress ? 'Working...' : 'Confirm?'
+            }
+            //VENUS EDIT END
             onClick={() =>
               act('checkin', {
                 room: current_room,
@@ -267,7 +277,9 @@ const RoomCheckIn = ({
             lineHeight={2}
             icon="right-to-bracket"
           >
-            Check-in
+            {/* VENUS EDIT START - ORIGINAL: Check-in */}
+            {data.checkin_in_progress ? 'Checking in...' : 'Check-in'}
+            {/* VENUS EDIT END */}
           </Button.Confirm>
         </Stack.Item>
       </Stack>

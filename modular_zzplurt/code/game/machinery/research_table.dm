@@ -141,7 +141,7 @@
 	// little bonus if you... if you have interesting body traits
 	// I don't stack these on purpose for "balancing"
 	// study the physiological effects of sex or something
-	if(buckled_mob.has_quirk(TRAIT_RESTORATIVE_METABOLISM) || buckled_mob.has_quirk(TRAIT_BODY_MORPHER) || buckled_mob.has_quirk(TRAIT_UNDEAD))
+	if(buckled_mob.has_quirk(TRAIT_BODY_MORPHER) || buckled_mob.has_quirk(TRAIT_UNDEAD)) //VENUS EDIT - Removed "buckled_mob.has_quirk(TRAIT_RESTORATIVE_METABOLISM) ||"
 		points_awarded += rand(1,5)
 
 	// study the psychological effects of sex or something

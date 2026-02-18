@@ -36,6 +36,10 @@ SUBSYSTEM_DEF(hilbertshotel)
 
 	/// List of ckey-based user preferences
 	var/list/user_data = list()
+	//VENUS ADDITION START - Loading status for Hilbert's Hotel
+	/// Tracks in-progress check-in requests keyed by ckey/ref.
+	var/list/checkin_locks = list()
+	//VENUS ADDITION END
 
 	var/hhMysteryroom_number
 
@@ -75,6 +79,34 @@ SUBSYSTEM_DEF(hilbertshotel)
 		hotel_map_list[this_template.name] = this_template
 
 	default_template = hotel_map_list[1]
+
+//VENUS ADDITION START - Loading status for Hilbert's Hotel
+/datum/controller/subsystem/hilbertshotel/proc/get_checkin_lock_key(mob/user)
+	if(!user)
+		return null
+	if(user.ckey)
+		return user.ckey
+	return REF(user)
+
+/datum/controller/subsystem/hilbertshotel/proc/is_checkin_locked(mob/user)
+	var/checkin_key = get_checkin_lock_key(user)
+	if(!checkin_key)
+		return FALSE
+	return !!checkin_locks[checkin_key]
+
+/datum/controller/subsystem/hilbertshotel/proc/begin_checkin(mob/user)
+	var/checkin_key = get_checkin_lock_key(user)
+	if(!checkin_key || checkin_locks[checkin_key])
+		return FALSE
+	checkin_locks[checkin_key] = TRUE
+	return TRUE
+
+/datum/controller/subsystem/hilbertshotel/proc/end_checkin(mob/user)
+	var/checkin_key = get_checkin_lock_key(user)
+	if(!checkin_key)
+		return
+	checkin_locks -= checkin_key
+//VENUS ADDITION END
 
 /// Attempts to join an existing active room. Returns TRUE if successful, FALSE otherwise. Requires `room_number` to be set.
 /datum/controller/subsystem/hilbertshotel/proc/try_join_active_room(room_number, mob/user, parentSphere)

@@ -1,3 +1,6 @@
 2026-02-09:
   Aria:
   - qol: Walk mode now protects you from falling into chasms and lava.
+2026-02-19:
+  Aria:
+  - bugfix: Added a loading status to the Hilbert's Hotel interface when checking in to fix bugs.

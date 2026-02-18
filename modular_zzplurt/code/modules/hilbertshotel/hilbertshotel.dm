@@ -69,6 +69,20 @@
 
 /// Runs all necessary checks before allowing a user to be moved to a room (or not). Requires `room_number` and `template` to be set.
 /obj/item/hilbertshotel/proc/prompt_check_in(mob/user, mob/target, room_number, template)
+//VENUS ADDITION START - Loading status for Hilbert's Hotel
+	if(!target)
+		return
+	if(!SShilbertshotel.begin_checkin(target))
+		to_chat(target, span_warning("Hilbert's Hotel is already processing your previous check-in request!"))
+		return
+
+	SEND_SIGNAL(SShilbertshotel, COMSIG_HILBERT_ROOM_UPDATED, list("action" = "checkin_start"))
+	. = _prompt_check_in(user, target, room_number, template)
+	SShilbertshotel.end_checkin(target)
+	SEND_SIGNAL(SShilbertshotel, COMSIG_HILBERT_ROOM_UPDATED, list("action" = "checkin_end"))
+
+/obj/item/hilbertshotel/proc/_prompt_check_in(mob/user, mob/target, room_number, template)
+//VENUS ADDITION END
 	var/max_rooms = CONFIG_GET(number/hilbertshotel_max_rooms)
 	var/hilbertshotel_enabled = CONFIG_GET(flag/hilbertshotel_enabled)
 
@@ -187,6 +201,7 @@
 	data["selected_template"] = SShilbertshotel.user_data[user.ckey]["template"]
 	data["user_donator_tier"] = SShilbertshotel.user_data[user.ckey]["donator_tier"]
 	data["user_ckey"] = user.ckey
+	data["checkin_in_progress"] = SShilbertshotel.is_checkin_locked(user) //VENUS ADDITION - Loading status for Hilbert's Hotel
 
 	data["active_rooms"] = list()
 	for(var/room_number in SShilbertshotel.room_data)

@@ -24,7 +24,6 @@ type Data = {
   tracking_state: number;
   connected_panels: number;
   connected_tracker: BooleanLike;
-  automatic_control: BooleanLike; // VENUS ADDITION: Automatic control
   history: History;
 };
 
@@ -44,7 +43,6 @@ export const SolarControl = (props) => {
     tracking_state,
     connected_panels,
     connected_tracker,
-    automatic_control, // VENUS ADDITION: Automatic control
     history,
   } = data;
   const supplyData = history.supply.map((value, i) => [i, value]);
@@ -129,18 +127,6 @@ export const SolarControl = (props) => {
           }
         >
           <LabeledList>
-            {/* VENUS ADDITION START: Automatic control */}
-            <LabeledList.Item label="Automatic Control">
-              <Button
-                icon={automatic_control ? 'check' : 'times'}
-                content={automatic_control ? 'Enabled' : 'Disabled'}
-                selected={automatic_control}
-                color={automatic_control ? 'good' : 'bad'}
-                tooltip="Automatically scans for new solar equipment and enables auto tracking every 30 seconds."
-                onClick={() => act('automatic_control')}
-              />
-            </LabeledList.Item>
-            {/* VENUS ADDITION END */}
             <LabeledList.Item label="Tracking">
               <Button
                 icon="times"

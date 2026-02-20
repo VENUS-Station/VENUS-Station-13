@@ -4,3 +4,6 @@
 2026-02-19:
   Aria:
   - bugfix: Added a loading status to the Hilbert's Hotel interface when checking in to fix bugs.
+2026-02-20:
+  Aria:
+  - rscdel: Removed solar panel auto-detection system.

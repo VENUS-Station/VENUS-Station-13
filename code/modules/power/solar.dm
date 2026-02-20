@@ -448,10 +448,6 @@
 	var/azimuth_rate = 1 ///degree change per minute
 
 	var/track = SOLAR_TRACK_OFF ///SOLAR_TRACK_OFF, SOLAR_TRACK_TIMED, SOLAR_TRACK_AUTO
-	//VENUS ADDITION START - Automatic control
-	var/automatic_control = TRUE
-	var/next_auto_scan = 0
-	//VENUS ADDITION END
 
 	var/obj/machinery/power/tracker/connected_tracker = null
 	var/list/connected_panels = list()
@@ -552,7 +548,6 @@
 	data["tracking_state"] = track
 	data["connected_panels"] = connected_panels.len
 	data["connected_tracker"] = (connected_tracker ? TRUE : FALSE)
-	data["automatic_control"] = automatic_control //VENUS ADDITION: Automatic control
 	data["history"] = history
 	return data
 
@@ -590,20 +585,6 @@
 	if(action == "refresh")
 		search_for_connected()
 		return TRUE
-	//VENUS ADDITION START
-	if(action == "automatic_control")
-		automatic_control = !automatic_control
-		if(automatic_control)
-			// When turning on automatic control, immediately scan for equipment
-			search_for_connected()
-			// Reset the timer to start the 30-second cycle
-			next_auto_scan = world.time + (30 SECONDS)
-			// If we have a tracker, enable auto tracking
-			if(connected_tracker && track == SOLAR_TRACK_OFF)
-				track = SOLAR_TRACK_AUTO
-				connected_tracker.sun_update(SSsun, SSsun.azimuth)
-		return TRUE
-	//VENUS ADDITION END
 	return FALSE
 
 /obj/machinery/power/solar_control/attackby(obj/item/I, mob/living/user, list/modifiers, list/attack_modifiers)
@@ -657,18 +638,6 @@
 	gen = 0
 	if(connected_tracker && (!powernet || connected_tracker.powernet != powernet))
 		connected_tracker.unset_control()
-	//VENUS ADDITION START: Automatic control - periodically scan for new equipment every 30 seconds
-	if(automatic_control && world.time >= next_auto_scan)
-		next_auto_scan = world.time + (30 SECONDS)
-		var/initial_panels = length(connected_panels)
-		var/initial_tracker = connected_tracker ? TRUE : FALSE
-		search_for_connected()
-		// If we found new equipment, enable auto tracking if we have a tracker
-		if((length(connected_panels) > initial_panels || (!initial_tracker && connected_tracker)) && connected_tracker)
-			if(track == SOLAR_TRACK_OFF)
-				track = SOLAR_TRACK_AUTO
-				connected_tracker.sun_update(SSsun, SSsun.azimuth)
-	//VENUS ADDITION END
 	record()
 
 ///Ran every time the sun updates.

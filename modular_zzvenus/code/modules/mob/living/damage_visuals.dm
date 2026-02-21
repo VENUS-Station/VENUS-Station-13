@@ -37,7 +37,7 @@
 	var/scale_factor_x = get_cached_width() / ICON_SIZE_X
 	var/scale_factor_y = get_cached_height() / ICON_SIZE_Y
 
-	var/mutable_appearance/blood_overlay = mutable_appearance('icons/effects/blood.dmi', "itemblood", appearance_flags = RESET_COLOR)
+	var/mutable_appearance/blood_overlay = mutable_appearance('modular_zzvenus/icons/effects/blood.dmi', "damageblood", appearance_flags = RESET_COLOR)
 	blood_overlay.transform = blood_overlay.transform.Scale(scale_factor_x, scale_factor_y)
 	blood_overlay.blend_mode = BLEND_INSET_OVERLAY
 	if(iscarbon(src) && has_dna())
@@ -46,12 +46,12 @@
 		blood_overlay.color = blood_type.get_color()
 
 	// Scale alpha based on damage percentage (more damage = more visible)
-	var/normalized_damage = (damage_percentage - 0.1) / 0.9
-	blood_overlay.alpha = clamp(77 + (normalized_damage * 178), 77, 255)
+	var/normalized_damage = clamp((damage_percentage - 0.1) / 0.9, 0, 1)
+	blood_overlay.alpha = clamp(100 + (normalized_damage * 130), 100, 230)
 
 	var/emissive_alpha = blood_type.get_emissive_alpha(src, is_worn = TRUE)
 	if(emissive_alpha)
-		var/mutable_appearance/emissive_overlay = emissive_appearance('icons/effects/blood.dmi', "itemblood", src, alpha = emissive_alpha, effect_type = EMISSIVE_NO_BLOOM)
+		var/mutable_appearance/emissive_overlay = emissive_appearance('modular_zzvenus/icons/effects/blood.dmi', "damageblood", src, alpha = emissive_alpha, effect_type = EMISSIVE_NO_BLOOM)
 		emissive_overlay.transform = emissive_overlay.transform.Scale(scale_factor_x, scale_factor_y)
 		emissive_overlay.blend_mode = BLEND_INSET_OVERLAY
 		emissive_overlay.alpha = blood_overlay.alpha

@@ -802,6 +802,11 @@
 
 /mob/living/proc/get_up(instant = FALSE)
 	set waitfor = FALSE
+	//VENUS ADDITION START
+	if(HAS_TRAIT(src, TRAIT_UNDER_CRAWLING))
+		to_chat(src, span_warning("You can't stand up while crawling under something!"))
+		return
+	//VENUS ADDITION END
 	var/get_up_time = 1 SECONDS
 
 	var/obj/item/organ/cyberimp/chest/spine/potential_spine = get_organ_slot(ORGAN_SLOT_SPINE)
@@ -839,7 +844,7 @@
 
 
 /mob/living/proc/rest_checks_callback()
-	if(resting || body_position == STANDING_UP || HAS_TRAIT(src, TRAIT_FLOORED))
+	if(resting || body_position == STANDING_UP || HAS_TRAIT(src, TRAIT_FLOORED) || HAS_TRAIT(src, TRAIT_UNDER_CRAWLING)) //VENUS EDIT - Added "|| HAS_TRAIT(src, TRAIT_UNDER_CRAWLING)"
 		return FALSE
 	return TRUE
 
@@ -864,6 +869,16 @@
 		layer = initial(layer)
 	remove_traits(list(TRAIT_UI_BLOCKED, TRAIT_PULL_BLOCKED, TRAIT_UNDENSE), LYING_DOWN_TRAIT)
 	remove_offsets(LYING_DOWN_TRAIT)
+	update_under_table_layer()
+
+/// Updates mob layer while lying down so crawl-under surfaces render above the mob.
+/mob/living/proc/update_under_table_layer()
+	if(body_position == LYING_DOWN && HAS_TRAIT(src, TRAIT_UNDER_CRAWLING))
+		layer = PROJECTILE_HIT_THRESHHOLD_LAYER
+		return
+
+	if(layer == PROJECTILE_HIT_THRESHHOLD_LAYER)
+		layer = body_position == LYING_DOWN ? LYING_MOB_LAYER : initial(layer)
 
 /mob/living/proc/update_density()
 	if(HAS_TRAIT(src, TRAIT_UNDENSE))

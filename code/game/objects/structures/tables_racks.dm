@@ -110,6 +110,7 @@
 ///Adds the element used to make the object climbable, and also the one that shift the mob buckled to it up.
 /obj/structure/table/proc/make_climbable()
 	AddComponent(/datum/component/climb_walkable)
+	AddComponent(/datum/component/crawl_under) //VENUS ADDITION
 	AddElement(/datum/element/climbable)
 	AddElement(/datum/element/elevation, pixel_shift = 12)
 
@@ -137,6 +138,7 @@
 /obj/structure/table/proc/flip_table(new_dir = SOUTH)
 	playsound(src, flipped_table_sound, 100)
 	qdel(GetComponent(/datum/component/climb_walkable))
+	qdel(GetComponent(/datum/component/crawl_under)) //VENUS ADDITION
 	RemoveElement(/datum/element/climbable)
 	RemoveElement(/datum/element/footstep_override, priority = STEP_SOUND_TABLE_PRIORITY)
 	RemoveElement(/datum/element/give_turf_traits, turf_traits)

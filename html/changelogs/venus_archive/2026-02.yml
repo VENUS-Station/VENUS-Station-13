@@ -7,3 +7,8 @@
 2026-02-20:
   Aria:
   - rscdel: Removed solar panel auto-detection system.
+2026-02-22:
+  Aria:
+  - rscadd: You can now crawl under things such as tables and beds.
+  - rscadd: Having your identity obscured will now obscure your name when speaking.
+  - rscdel: Removed army crawl verb and keybind.

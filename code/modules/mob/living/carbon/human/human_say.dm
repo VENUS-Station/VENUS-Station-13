@@ -43,8 +43,17 @@
 
 /mob/living/carbon/human/get_message_voice(visible_name)
 	. = ..()
+	//VENUS EDIT START - If identity is obscured, avoid leaking name
+	/* ORIGINAL:
 	if(. != name)
 		. += " (as [get_id_name("Unknown", honorifics = TRUE)])"
+	*/
+	if(!get_face_name("") || . == "Unknown")
+		. = "Unknown [get_visible_gender() == MALE ? "Male" : (get_visible_gender() == FEMALE ? "Female" : "Voice")]"
+	var/id_name = get_id_name("", honorifics = TRUE)
+	if(. != name && id_name)
+		. += " (as [id_name])"
+	//VENUS EDIT END
 
 /mob/living/carbon/human/binarycheck()
 	if(stat >= SOFT_CRIT)

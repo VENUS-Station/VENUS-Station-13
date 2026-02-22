@@ -1,3 +1,5 @@
+// VENUS REMOVAL START - Replaced with crawl under component
+/*
 /mob/living/carbon/verb/army_crawl()
 	set name = "Army Crawl"
 	set category = "IC"
@@ -21,3 +23,5 @@
 
 /mob/living/carbon/proc/can_army_crawl()
 	return resting
+*/
+// VENUS REMOVAL END

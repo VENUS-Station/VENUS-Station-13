@@ -10651,6 +10651,7 @@
 #include "modular_zzplurt\modules\primitive_production\code\primitive.dm"
 #include "modular_zzplurt\modules\synthx\code\bodyparts\internal_computer\internal_computer.dm"
 #include "modular_zzvenus\code\controllers\configuration\entries\opfor.dm"
+#include "modular_zzvenus\code\datums\components\crawl_under.dm"
 #include "modular_zzvenus\code\controllers\subsystem\persistence\cleanables.dm"
 #include "modular_zzvenus\code\datums\components\hotel_item.dm"
 #include "modular_zzvenus\code\datums\memory\wire_knowledge.dm"

@@ -574,6 +574,10 @@
 /obj/structure/table/glass/proc/check_break(mob/living/M)
 	if(is_flipped)
 		return FALSE
+	//VENUS ADDITION START
+	if(HAS_TRAIT(M, TRAIT_UNDER_CRAWLING))
+		return FALSE
+	//VENUS ADDITION END
 	if(M.has_gravity() && M.mob_size > MOB_SIZE_SMALL && !(M.movement_type & MOVETYPES_NOT_TOUCHING_GROUND) && (!isteshari(M))) //SKYRAT EDIT ADDITION - Allows Teshari to climb on glassies safely. - This should be a component
 		table_shatter(M)
 

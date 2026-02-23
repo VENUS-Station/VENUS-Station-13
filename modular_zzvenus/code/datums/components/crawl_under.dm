@@ -46,7 +46,6 @@
 	if(tracked_living_mobs[living_mob])
 		return
 	tracked_living_mobs[living_mob] = TRUE
-	ADD_TRAIT(living_mob, TRAIT_UNDER_CRAWLING, REF(src))
 	RegisterSignals(living_mob, list(COMSIG_LIVING_SET_BODY_POSITION, COMSIG_QDELETING), PROC_REF(on_living_state_changed))
 	living_mob.update_under_table_layer()
 
@@ -54,10 +53,23 @@
 	if(!tracked_living_mobs[living_mob])
 		return
 	tracked_living_mobs.Remove(living_mob)
-	REMOVE_TRAIT(living_mob, TRAIT_UNDER_CRAWLING, REF(src))
 	UnregisterSignal(living_mob, list(COMSIG_LIVING_SET_BODY_POSITION, COMSIG_QDELETING))
 	if(!QDELETED(living_mob))
+		// Only remove the trait if the mob isn't moving to another crawlable turf.
+		if(HAS_TRAIT(living_mob, TRAIT_UNDER_CRAWLING) && !turf_has_other_crawl_under(get_turf(living_mob)))
+			REMOVE_TRAIT(living_mob, TRAIT_UNDER_CRAWLING, TRAIT_UNDER_CRAWLING)
+			REMOVE_TRAIT(living_mob, TRAIT_IGNORE_ELEVATION, TRAIT_UNDER_CRAWLING)
 		living_mob.update_under_table_layer()
+
+/// Returns TRUE if the given turf contains any crawl_under component other than this one.
+/datum/component/crawl_under/proc/turf_has_other_crawl_under(turf/check_turf)
+	if(!check_turf)
+		return FALSE
+	for(var/atom/thing in check_turf)
+		var/datum/component/crawl_under/other = thing.GetComponent(/datum/component/crawl_under)
+		if(other && other != src)
+			return TRUE
+	return FALSE
 
 /datum/component/crawl_under/proc/on_living_state_changed(mob/living/source)
 	SIGNAL_HANDLER
@@ -66,6 +78,10 @@
 	if(QDELETED(source))
 		tracked_living_mobs.Remove(source)
 		return
+	// If the mob stands up, they're no longer crawling under.
+	if(source.body_position == STANDING_UP && HAS_TRAIT(source, TRAIT_UNDER_CRAWLING))
+		REMOVE_TRAIT(source, TRAIT_UNDER_CRAWLING, TRAIT_UNDER_CRAWLING)
+		REMOVE_TRAIT(source, TRAIT_IGNORE_ELEVATION, TRAIT_UNDER_CRAWLING)
 	source.update_under_table_layer()
 
 /datum/component/crawl_under/proc/get_examine_tags(atom/source, mob/user, list/examine_list)
@@ -88,6 +104,7 @@
 /datum/component/crawl_under/proc/do_crawl_under(atom/source, mob/living/user, params)
 	if(!can_crawl_under(source, user))
 		return FALSE
+	var/original_density = source.density
 	source.set_density(FALSE)
 	var/dir_step = get_dir(user, source.loc)
 	var/same_loc = source.loc == user.loc
@@ -101,7 +118,11 @@
 		else
 			dir_step = get_dir(user, get_step(source, source.dir))
 	. = step(user, dir_step)
-	source.set_density(TRUE)
+	source.set_density(original_density) //We don't set to true unlike TG does because we allow crawling under non-dense things
+	if(.)
+		ADD_TRAIT(user, TRAIT_UNDER_CRAWLING, TRAIT_UNDER_CRAWLING)
+		ADD_TRAIT(user, TRAIT_IGNORE_ELEVATION, TRAIT_UNDER_CRAWLING)
+		user.update_under_table_layer()
 
 /datum/component/crawl_under/proc/crawl_under(atom/source, mob/living/user, params)
 	if(!can_crawl_under(source, user))
@@ -138,3 +159,12 @@
 		return
 	INVOKE_ASYNC(src, PROC_REF(crawl_under), source, living_target, params)
 	return COMPONENT_CANCEL_MOUSEDROPPED_ONTO
+
+/// Updates mob layer while lying down so crawl-under surfaces render above the mob.
+/mob/living/proc/update_under_table_layer()
+	if(body_position == LYING_DOWN && HAS_TRAIT(src, TRAIT_UNDER_CRAWLING))
+		layer = PROJECTILE_HIT_THRESHHOLD_LAYER
+		return
+
+	if(layer == PROJECTILE_HIT_THRESHHOLD_LAYER)
+		layer = body_position == LYING_DOWN ? LYING_MOB_LAYER : initial(layer)

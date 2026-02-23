@@ -869,16 +869,6 @@
 		layer = initial(layer)
 	remove_traits(list(TRAIT_UI_BLOCKED, TRAIT_PULL_BLOCKED, TRAIT_UNDENSE), LYING_DOWN_TRAIT)
 	remove_offsets(LYING_DOWN_TRAIT)
-	update_under_table_layer()
-
-/// Updates mob layer while lying down so crawl-under surfaces render above the mob.
-/mob/living/proc/update_under_table_layer()
-	if(body_position == LYING_DOWN && HAS_TRAIT(src, TRAIT_UNDER_CRAWLING))
-		layer = PROJECTILE_HIT_THRESHHOLD_LAYER
-		return
-
-	if(layer == PROJECTILE_HIT_THRESHHOLD_LAYER)
-		layer = body_position == LYING_DOWN ? LYING_MOB_LAYER : initial(layer)
 
 /mob/living/proc/update_density()
 	if(HAS_TRAIT(src, TRAIT_UNDENSE))

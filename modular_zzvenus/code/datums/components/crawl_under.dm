@@ -21,6 +21,7 @@
 
 	RegisterSignal(parent, COMSIG_ATOM_EXAMINE_TAGS, PROC_REF(get_examine_tags))
 	RegisterSignal(parent, COMSIG_MOUSEDROPPED_ONTO, PROC_REF(on_mouse_drop))
+	RegisterSignal(parent, COMSIG_ATOM_TRIED_PASS, PROC_REF(can_crawl_through))
 
 	var/turf/current_turf = get_turf(parent)
 	if(current_turf)
@@ -28,7 +29,7 @@
 			register_living_mob(living_mob)
 
 /datum/component/crawl_under/UnregisterFromParent()
-	UnregisterSignal(parent, list(COMSIG_ATOM_EXAMINE_TAGS, COMSIG_MOUSEDROPPED_ONTO))
+	UnregisterSignal(parent, list(COMSIG_ATOM_EXAMINE_TAGS, COMSIG_MOUSEDROPPED_ONTO, COMSIG_ATOM_TRIED_PASS))
 	for(var/mob/living/living_mob as anything in tracked_living_mobs.Copy())
 		unregister_living_mob(living_mob)
 
@@ -83,6 +84,12 @@
 		REMOVE_TRAIT(source, TRAIT_UNDER_CRAWLING, TRAIT_UNDER_CRAWLING)
 		REMOVE_TRAIT(source, TRAIT_IGNORE_ELEVATION, TRAIT_UNDER_CRAWLING)
 	source.update_under_table_layer()
+
+/// Allows mobs that are actively under-crawling to pass through this object.
+/datum/component/crawl_under/proc/can_crawl_through(datum/source, atom/movable/mover, border_dir)
+	SIGNAL_HANDLER
+	if(isliving(mover) && HAS_TRAIT(mover, TRAIT_UNDER_CRAWLING))
+		return COMSIG_COMPONENT_PERMIT_PASSAGE
 
 /datum/component/crawl_under/proc/get_examine_tags(atom/source, mob/user, list/examine_list)
 	SIGNAL_HANDLER

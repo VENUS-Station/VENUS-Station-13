@@ -17,6 +17,12 @@
 
 /datum/component/climb_walkable/proc/on_enter(datum/source, atom/movable/arrived)
 	SIGNAL_HANDLER
+	//VENUS ADDITION START - Crawling under has its own signal check
+	if(isliving(arrived))
+		var/mob/living/living_arrived = arrived
+		if(living_arrived.body_position == LYING_DOWN && HAS_TRAIT(living_arrived, TRAIT_UNDER_CRAWLING))
+			return
+	//VENUS ADDITION END
 	ADD_TRAIT(arrived, TRAIT_ON_CLIMBABLE, REF(src))
 
 /datum/component/climb_walkable/proc/on_exit(datum/source, atom/movable/gone, direction)

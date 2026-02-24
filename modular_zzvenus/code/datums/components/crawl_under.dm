@@ -124,12 +124,15 @@
 				dir_step = (x_dist >= y_dist ? (EAST|WEST) : (NORTH|SOUTH)) & source.dir
 		else
 			dir_step = get_dir(user, get_step(source, source.dir))
+	ADD_TRAIT(user, TRAIT_UNDER_CRAWLING, TRAIT_UNDER_CRAWLING)
+	ADD_TRAIT(user, TRAIT_IGNORE_ELEVATION, TRAIT_UNDER_CRAWLING)
 	. = step(user, dir_step)
 	source.set_density(original_density) //We don't set to true unlike TG does because we allow crawling under non-dense things
 	if(.)
-		ADD_TRAIT(user, TRAIT_UNDER_CRAWLING, TRAIT_UNDER_CRAWLING)
-		ADD_TRAIT(user, TRAIT_IGNORE_ELEVATION, TRAIT_UNDER_CRAWLING)
 		user.update_under_table_layer()
+	else
+		REMOVE_TRAIT(user, TRAIT_UNDER_CRAWLING, TRAIT_UNDER_CRAWLING)
+		REMOVE_TRAIT(user, TRAIT_IGNORE_ELEVATION, TRAIT_UNDER_CRAWLING)
 
 /datum/component/crawl_under/proc/crawl_under(atom/source, mob/living/user, params)
 	if(!can_crawl_under(source, user))

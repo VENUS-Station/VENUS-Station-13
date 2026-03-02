@@ -286,6 +286,10 @@
 	// These are picked from the json
 	var/list/forewords = strings(MEMORY_FILE, story_type + "_forewords")
 	var/list/somethings = strings(MEMORY_FILE, story_type + "_somethings")
+	//VENUS ADDITION START - Expandable memories
+	if(!length(forewords) || !length(somethings))
+		return name
+	//VENUS ADDITION END
 	var/list/styles
 	if(!(story_flags & STORY_FLAG_NO_STYLE))
 		styles = strings(MEMORY_FILE, "styles")

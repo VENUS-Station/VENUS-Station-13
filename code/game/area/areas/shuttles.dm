@@ -129,7 +129,7 @@
 	if(SSshuttle.arrivals?.mode == SHUTTLE_CALL)
 		var/atom/movable/screen/splash/Spl = new(null, null, boarder.client, TRUE)
 		Spl.fade(TRUE)
-		boarder.playsound_local(get_turf(boarder), 'modular_zzvenus/sound/announcer/approachingVENUS.ogg', 25) //VENUS EDIT - Original: 'sound/announcer/ApproachingTG.ogg'
+		boarder.playsound_local(get_turf(boarder), 'modular_zzvenus/sound/announcer/approachingVENUS.ogg', 75) //VENUS EDIT - Original: 'sound/announcer/ApproachingTG.ogg' - original audio: 25
 	boarder.update_parallax_teleport()
 
 /area/shuttle/pod_1

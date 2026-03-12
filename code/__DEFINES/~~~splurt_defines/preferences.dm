@@ -6,8 +6,12 @@
 
 GLOBAL_LIST_INIT(announcer_type_keys, list(
 		"Use Station Default" = null,
-		"Tibbets" = /datum/centcom_announcer/intern/tibbets,
-		"Lait" = /datum/centcom_announcer/default/lait,
+		//VENUS REMOVAL START
+		/*
+		// "Tibbets" = /datum/centcom_announcer/intern/tibbets,
+		// "Lait" = /datum/centcom_announcer/default/lait,
+		*/
+		//VENUS REMOVAL END
 		"Dagoth Ur" = /datum/centcom_announcer/dagoth_ur,
 		"Bubber" = /datum/centcom_announcer/default,
 		"TG Intern" = /datum/centcom_announcer/intern,

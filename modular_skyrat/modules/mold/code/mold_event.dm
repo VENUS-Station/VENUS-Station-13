@@ -1,18 +1,13 @@
-#define MOLDIES_SPAWN_LOWPOP_MIN 1
-#define MOLDIES_SPAWN_LOWPOP_MAX 1
-#define MOLDIES_SPAWN_HIGHPOP_MIN 1
-#define MOLDIES_SPAWN_HIGHPOP_MAX 2
-#define EVENT_LOWPOP_THRESHOLD 45
-#define EVENT_MIDPOP_THRESHOLD 75
-#define EVENT_HIGHPOP_THRESHOLD 90
+/// VENUS EVENT: REVERT ON 16/03, whatevre idc Biohazard Infestation - Always spawns 5 mold cores on round start
+#define MOLDIES_SPAWN_COUNT 5
 
 /datum/round_event_control/mold
 	name = "Moldies"
 	description = "A mold outbreak on the station. The mold will spread across the station if not contained."
 	typepath = /datum/round_event/mold
-	max_occurrences = 1
-	earliest_start = 30 MINUTES
-	min_players = EVENT_LOWPOP_THRESHOLD
+	max_occurrences = 3
+	earliest_start = 0
+	min_players = 0
 	category = EVENT_CATEGORY_ENTITIES
 
 /datum/round_event/mold
@@ -28,17 +23,7 @@
 
 /datum/round_event/mold/start()
 	var/list/turfs = list() //list of all the empty floor turfs in the hallway areas
-	var/mold_spawns = MOLDIES_SPAWN_LOWPOP_MIN
-	var/active_players = get_active_player_count(alive_check = TRUE, afk_check = TRUE, human_check = FALSE)
-
-	if(active_players > EVENT_HIGHPOP_THRESHOLD)
-		mold_spawns = MOLDIES_SPAWN_HIGHPOP_MAX
-
-	else if(active_players >= EVENT_MIDPOP_THRESHOLD && prob((active_players - EVENT_MIDPOP_THRESHOLD) * (100 / (EVENT_HIGHPOP_THRESHOLD - EVENT_MIDPOP_THRESHOLD))))
-		mold_spawns = MOLDIES_SPAWN_HIGHPOP_MAX
-
-	else if(active_players < EVENT_MIDPOP_THRESHOLD && prob((active_players - EVENT_LOWPOP_THRESHOLD) * (100 / (EVENT_MIDPOP_THRESHOLD - EVENT_LOWPOP_THRESHOLD))))
-		mold_spawns = MOLDIES_SPAWN_LOWPOP_MAX
+	var/mold_spawns = MOLDIES_SPAWN_COUNT
 
 	var/obj/structure/mold/resin/test/test_resin = new()
 
@@ -67,14 +52,11 @@
 	qdel(test_resin)
 
 	for(var/i in 1 to mold_spawns)
-		var/threat_level = active_players >= EVENT_MIDPOP_THRESHOLD ? MOLD_TIER_HIGH_THREAT : MOLD_TIER_LOW_THREAT
 		var/list/possible_mold_types = list()
 
 		for(var/iterated_type in subtypesof(/datum/mold_type))
 			var/datum/mold_type/mold_type = new iterated_type()
-
-			if(mold_type.tier <= threat_level)
-				possible_mold_types += mold_type
+			possible_mold_types += mold_type
 
 		if(!possible_mold_types)
 			log_game("Event: Moldies failed to spawn due to lack of possible types.")
@@ -90,8 +72,7 @@
 				turfs -= picked_turf
 				continue
 
-			if(picked_type.tier > MOLD_TIER_LOW_THREAT)
-				announce_chance = 100
+			announce_chance = 100
 
 			var/obj/structure/mold/structure/core/new_core = new (picked_turf, picked_type)
 			announce_to_ghosts(new_core)
@@ -102,10 +83,10 @@
 			message_admins("Moldies failed to spawn due to lack of available turfs.")
 			break
 
-#undef MOLDIES_SPAWN_LOWPOP_MIN
-#undef MOLDIES_SPAWN_LOWPOP_MAX
-#undef MOLDIES_SPAWN_HIGHPOP_MIN
-#undef MOLDIES_SPAWN_HIGHPOP_MAX
-#undef EVENT_LOWPOP_THRESHOLD
-#undef EVENT_MIDPOP_THRESHOLD
-#undef EVENT_HIGHPOP_THRESHOLD
+/// Auto-fires the moldies event on round start (called from SSPersistence)
+/proc/spawn_moldies_on_start()
+	var/datum/round_event_control/mold/event_control = new
+	event_control.run_event(random = FALSE, admin_forced = TRUE)
+	log_game("VENUS EVENT: Auto-fired Moldies biohazard event on round start ([MOLDIES_SPAWN_COUNT] cores)")
+
+#undef MOLDIES_SPAWN_COUNT

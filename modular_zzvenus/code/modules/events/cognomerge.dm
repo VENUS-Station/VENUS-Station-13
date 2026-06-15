@@ -125,7 +125,7 @@
 /datum/event_admin_setup/listed_options/cognomerge/quirk_selection/get_list()
 	return list(
 		/datum/quirk/item_quirk/allergic/noitem,
-		/datum/quirk/bighands,
+		// /datum/quirk/bighands,
 		/datum/quirk/clumsy,
 		/datum/quirk/frail,
 		/datum/quirk/illiterate,

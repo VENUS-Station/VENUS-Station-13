@@ -1,3 +1,4 @@
+/* DISABLE
 /**
  * MODULAR VENUS: Component for items that belong in a Hilbert's Hotel room
  *
@@ -45,3 +46,4 @@
 		if(hotel_area.room_number && !GetComponent(/datum/component/hotel_item))
 			if(!(SShilbertshotel.lore_room_spawned && hotel_area.room_number == SShilbertshotel.hhMysteryroom_number))
 				AddComponent(/datum/component/hotel_item, hotel_area.room_number)
+*/

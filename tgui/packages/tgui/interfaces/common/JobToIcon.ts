@@ -31,6 +31,7 @@ const BASEICONS = {
   Curator: 'book',
   'Cyber Police': 'qrcode',
   Cyborg: 'robot',
+  'Security Cyborg': 'robot', //SPLURT ADDITION
   Detective: 'user-secret',
   Explorer: 'user-astronaut', // VENUS ADDITION - IRIS PORT (Explorer Job)
   Geneticist: 'dna',

@@ -49,7 +49,12 @@
 	name = "crusader helmet"
 	desc = "Helfen, Wehren, Heilen."
 	icon_state = "knight_horned"
-	unique_reskin = null
+
+/obj/item/clothing/head/helmet/chaplain/bland/hospitaller/Initialize(mapload)
+	. = ..()
+	var/list/reskin_components = GetComponents(/datum/component/reskinable_item)
+	for(var/datum/component/reskinable_item/reskin_component as anything in reskin_components)
+		qdel(reskin_component)
 
 /obj/item/clothing/head/helmet/chaplain/bland/hospitaller/no_armor
 	armor_type = /datum/armor/none
@@ -132,3 +137,8 @@
 	name = "yellow trencher officer cap"
 	desc = "An army officer cap with yellow pin."
 	icon_state = "goner_offcap_y"
+
+/obj/item/clothing/head/helmet/novisor
+	desc = "Standard Security gear. Protects the head from impacts, this one lacks a visor over the eyes."
+	icon_state = "helmet-novisor"
+	flags_cover = EARS_COVERED

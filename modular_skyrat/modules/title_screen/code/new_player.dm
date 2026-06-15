@@ -144,9 +144,7 @@
 
 		if(!unvetted_notified && !trigger_unvetted_warning())
 			return FALSE
-		ready = !ready
-		if(ready)
-			auto_deadmin_on_ready_or_latejoin() //VENUS ADDITION - Re-adds auto-deadmin for skyrat html lobby
+		ready = is_ready_to_play() ? PLAYER_NOT_READY : PLAYER_READY_TO_PLAY
 		client << output(ready, "title_browser:toggle_ready")
 		return
 

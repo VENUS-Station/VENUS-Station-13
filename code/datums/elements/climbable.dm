@@ -99,7 +99,7 @@
 				user.Stun(adjusted_climb_stun)
 			var/atom/movable/buckle_target = climbed_thing
 			if(istype(buckle_target))
-				if(buckle_target.is_buckle_possible(user))
+				if(buckle_target.is_buckle_possible(user) && !(istype(buckle_target, /obj/structure/table) && HAS_TRAIT(user, TRAIT_OVERSIZED))) // BUBBER EDIT CHANGE - Skip buckling if this is an Oversized player on a table (they should use Alt+drag to sit) - Original: if(buckle_target.is_buckle_possible(user))
 					buckle_target.buckle_mob(user)
 			user.mind?.adjust_experience(/datum/skill/athletics, round(ATHLETICS_SKILL_MISC_EXP/(fitness_level || 1), 1)) //Get a bit fitter with every climb. But it has diminishing returns at a certain point.
 		else
@@ -141,6 +141,16 @@
 	if(living_target.body_position == LYING_DOWN && climbed_thing.GetComponent(/datum/component/crawl_under))
 		return
 	//VENUS ADDITION END
+
+	// BUBBER EDIT ADDITION BEGIN - OVERSIZED QUIRK
+	// Check if this is an Oversized player trying to sit on a table with Alt held
+	var/list/modifiers = params2list(params)
+	if(istype(climbed_thing, /obj/structure/table) && HAS_TRAIT(living_target, TRAIT_OVERSIZED) && LAZYACCESS(modifiers, ALT_CLICK))
+		if(living_target.mobility_flags & MOBILITY_MOVE)
+			INVOKE_ASYNC(src, PROC_REF(sit_on_table), climbed_thing, living_target)
+		return COMPONENT_CANCEL_MOUSEDROPPED_ONTO
+	// BUBBER EDIT ADDITION END - OVERSIZED QUIRK
+
 	if(living_target.mobility_flags & MOBILITY_MOVE)
 		INVOKE_ASYNC(src, PROC_REF(climb_structure), climbed_thing, living_target, params)
 	return COMPONENT_CANCEL_MOUSEDROPPED_ONTO

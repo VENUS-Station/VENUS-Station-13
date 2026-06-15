@@ -3,7 +3,12 @@
 	worn_icon = 'modular_skyrat/master_files/icons/mob/clothing/suits/chaplain.dmi'
 	desc = "Protect the weak and defenceless, live by honor and glory, and fight for the welfare of all!"
 	icon_state = "knight_hospitaller"
-	unique_reskin = null
+
+/obj/item/clothing/suit/chaplainsuit/armor/templar/hospitaller/Initialize(mapload)
+	. = ..()
+	var/list/reskin_components = GetComponents(/datum/component/reskinable_item)
+	for(var/datum/component/reskinable_item/reskin_component as anything in reskin_components)
+		qdel(reskin_component)
 
 /obj/item/clothing/suit/chaplainsuit/armor/templar/hospitaller/no_armor
 	armor_type = /datum/armor/none
@@ -71,6 +76,10 @@
 	worn_icon_state = "suit_harness"
 	inhand_icon_state = "armor"
 	body_parts_covered = NONE
+	custom_materials = list(
+		/datum/material/iron = SMALL_MATERIAL_AMOUNT * 1.5,
+		/datum/material/glass = SMALL_MATERIAL_AMOUNT * 1.5,
+	)
 
 /obj/item/clothing/suit/hooded/explorer/explorerharness
 	name = "explorer suit harness"

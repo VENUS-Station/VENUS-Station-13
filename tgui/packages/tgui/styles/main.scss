@@ -55,6 +55,9 @@
 //VENUS ADDITION START
 @include meta.load-css('./interfaces/OpposingForcePanel.scss');
 //VENUS ADDITION END
+@include meta.load-css('./interfaces/ColorPicker.scss');
+@include meta.load-css('./interfaces/AnomalyTower.scss');
+
 // Layouts
 @include meta.load-css('./layouts/Layout.scss');
 @include meta.load-css('./layouts/NtosHeader.scss');
@@ -62,7 +65,7 @@
 @include meta.load-css('./layouts/TitleBar.scss');
 @include meta.load-css('./layouts/Window.scss');
 
-@include meta.load-css('highlight.js/scss/github-dark.scss');
+@include meta.load-css('~highlight.js/scss/a11y-dark.scss');
 
 // NT Theme
 .Layout__content {
